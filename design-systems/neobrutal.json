@@ -1,0 +1,576 @@
+{
+  "slug": "neobrutal",
+  "name": "Необрутализм",
+  "kind": "style",
+  "version": "1.2.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Толстые чёрные рамки 3px, жёсткие тени без размытия со сдвигом 6px и насыщенные заливки — жёлтая, коралловая, лаймовая, голубая — на кремовом фоне. Широкий гротеск 800 заглавными, наклонённые стикеры, бегущая строка с условием акции, слово под жёлтым маркером. Кнопка при нажатии «вдавливается» в свою тень. Текст на цветном — только чёрный, контраст от 7:1.",
+  "summary_en": "Thick 3px black outlines, hard unblurred shadows offset by 6px and saturated fills — yellow, coral, lime, sky — on a cream background. A wide 800-weight grotesque in capitals, tilted stickers, a ticker strip with the offer terms and a word under a yellow marker. The button sinks into its own shadow when pressed. Text on colour is always black, with contrast from 7:1.",
+  "best_for": [
+    "промо-акции и распродажи",
+    "ивенты, фестивали и вечеринки",
+    "молодёжные курсы и интенсивы",
+    "мерч, стритвир и кроссовки",
+    "кофейни, бургерные и фастфуд с характером",
+    "квесты, игровые клубы и киберспорт",
+    "креативные студии и агентства"
+  ],
+  "goals": [
+    "покупка билета или регистрация на ивент",
+    "заявка на акцию до дедлайна",
+    "запись на курс",
+    "промокод и первый заказ"
+  ],
+  "mood": [
+    "дерзкий",
+    "игривый",
+    "громкий",
+    "молодёжный",
+    "честный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#fff6e5",
+        "surface": "#ffffff",
+        "text": "#0a0a0a",
+        "text_muted": "#3f3a33",
+        "border": "#0a0a0a",
+        "primary": "#ffd23f",
+        "on_primary": "#0a0a0a",
+        "accent": "#5b3df5",
+        "on_accent": "#ffffff",
+        "link": "#4a2ee0",
+        "success": "#0f7b3f",
+        "error": "#c4271c",
+        "fill_coral": "#ff7a59",
+        "fill_lime": "#c5f23a",
+        "fill_sky": "#8fd3ff",
+        "fill_mint": "#7ee8b5",
+        "on_fill": "#0a0a0a",
+        "shadow_color": "#0a0a0a",
+        "marker": "#ffd23f",
+        "on_marker": "#0a0a0a",
+        "band_ink": "#0a0a0a",
+        "on_band_ink": "#ffd23f",
+        "focus": "#5b3df5"
+      },
+      "dark": {
+        "background": "#141312",
+        "surface": "#1f1d1b",
+        "text": "#fff6e5",
+        "text_muted": "#d6cfc2",
+        "border": "#fff6e5",
+        "primary": "#ffd23f",
+        "on_primary": "#0a0a0a",
+        "accent": "#a18cff",
+        "on_accent": "#0a0a0a",
+        "link": "#c9bbff",
+        "success": "#57e08f",
+        "error": "#ff7a70",
+        "fill_coral": "#ff7a59",
+        "fill_lime": "#c5f23a",
+        "fill_sky": "#8fd3ff",
+        "fill_mint": "#7ee8b5",
+        "on_fill": "#0a0a0a",
+        "shadow_color": "#fff6e5",
+        "marker": "#ffd23f",
+        "on_marker": "#0a0a0a",
+        "band_ink": "#ffd23f",
+        "on_band_ink": "#0a0a0a",
+        "focus": "#ffd23f"
+      },
+      "notes": "Заливки fill_* одинаковы в обеих темах и несут только чёрный текст on_fill: жёлтый 13.71, коралловый 7.71, лаймовый 15.21, голубой 12.19, мятный 13.29. text_muted на цветных заливках не ставится — на коралловом он даёт 4.39; внутри цветной карточки вторичный текст — тот же on_fill весом 400 вместо 500. text_muted #3f3a33 держит 10.49 на кремовом фоне и 11.26 на белом — приглушённый здесь только по весу и размеру, не по контрасту. accent — фиолетовая заливка: с белым 6.12 в светлой теме, в тёмной светлее #a18cff с чёрным 7.27. link — отдельный фиолетовый текст (7.09 на креме, 10.64 в тёмной). В тёмной теме рамки и жёсткие тени становятся кремовыми (shadow_color #fff6e5), а маркер под словом всегда жёлтый с чёрным текстом on_marker — иначе кремовое слово на жёлтом пропадает (1.25). band_ink — бегущая строка: чёрная с жёлтыми заглавными в светлой теме, жёлтая с чёрными в тёмной (13.71 в обоих случаях)."
+    },
+    "typography": {
+      "display": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "72px",
+        "size_mobile": "34px",
+        "line_height": 1.02,
+        "letter_spacing": "-0.02em",
+        "text_transform": "uppercase",
+        "note": "широкий гротеск: самое длинное слово на телефоне — до 10 букв при 34px (замер: «ПОДКЛЮЧИТЕ» 44px = 418px, при 34px ≈ 323px в колонке 328px экрана 360); если самое длинное слово слогана до 7 букв («ЛЕТО ЕЩЁ НЕ ВСЁ»), на телефоне можно 44px — на демо 34px для коротких слов выглядел робко"
+      },
+      "h2": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "44px",
+        "size_mobile": "26px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.02em"
+      },
+      "h3": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "22px",
+        "size_mobile": "18px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.01em"
+      },
+      "lead": {
+        "family": "Rubik",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Rubik",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Rubik",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.4,
+        "letter_spacing": "0"
+      },
+      "label": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.2,
+        "letter_spacing": "0.02em",
+        "text_transform": "uppercase",
+        "note": "стикеры, метки, бегущая строка, надзаголовки"
+      },
+      "button": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "15px",
+        "size_mobile": "14px",
+        "line_height": 1.2,
+        "letter_spacing": "0.02em",
+        "text_transform": "uppercase"
+      },
+      "price": {
+        "family": "Unbounded",
+        "fallback": "'Arial Black', system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "52px",
+        "size_mobile": "36px",
+        "line_height": 1.0,
+        "letter_spacing": "-0.03em",
+        "note": "цена билета и скидка «−50%»; старая цена — Rubik 500 зачёркнутая рядом"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "pill": "999px",
+      "note": "sm — кнопки и поля, md — карточки, lg — большие панели и фото, pill — стикеры и чипы. Радиус маленький намеренно: рамка 3px и жёсткая тень читаются как «вырезанная наклейка», большой радиус превращает их в мягкий стиль."
+    },
+    "stroke": {
+      "thick": "3px",
+      "thin": "2px",
+      "note": "3px — кнопки, поля, карточки, фото, полосы; 2px — стикеры, чипы, разделители в таблице и на телефоне у мелких элементов"
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "container": "1200px",
+      "gutter_mobile": "16px",
+      "card_padding": "28px",
+      "card_padding_mobile": "20px",
+      "card_gap": "24px",
+      "marquee_height": "56px"
+    },
+    "shadow": {
+      "card": "6px 6px 0 0 #0a0a0a",
+      "raised": "8px 8px 0 0 #0a0a0a",
+      "small": "4px 4px 0 0 #0a0a0a",
+      "pressed": "0 0 0 0 #0a0a0a",
+      "card_dark": "6px 6px 0 0 #fff6e5",
+      "raised_dark": "8px 8px 0 0 #fff6e5",
+      "small_dark": "4px 4px 0 0 #fff6e5",
+      "focus": "0 0 0 3px #fff6e5, 0 0 0 6px #5b3df5",
+      "focus_dark": "0 0 0 3px #141312, 0 0 0 6px #ffd23f",
+      "note": "Тени только жёсткие, размытие 0 — всегда. Цвет тени = shadow_color. Нажатие убирает тень и сдвигает элемент на её длину: translate(4px,4px) для small, (6px,6px) для card."
+    },
+    "motion": {
+      "fast": "90ms",
+      "base": "160ms",
+      "slow": "320ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.34,1.56,.64,1)",
+      "note": "Короткие механические движения: подъём на 2px и тень длиннее при наведении, вдавливание при нажатии; ease_emphasized с перелётом — только для стикеров при наведении (поворот −4° → 0°)."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Unbounded",
+      "fontsource": "unbounded",
+      "role": "display+headings+labels",
+      "weights": [
+        700,
+        800
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/unbounded — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "why": "широкий гротеск с плоскими овалами и крупным очком — «громкий» рисунок, который держит заглавные без трекинга; кириллица родная (гарнитура создана под русский). Заголовки только короткие: широкий шрифт съедает строку"
+    },
+    {
+      "family": "Rubik",
+      "fontsource": "rubik",
+      "role": "body",
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/rubik — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "why": "слегка скруглённые углы знаков смягчают жёсткие рамки и читаются дружелюбно для молодой аудитории; узкий по сравнению с Unbounded — длинный текст и условия акции помещаются без переносов"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "border": "3px solid border",
+      "radius": "sm",
+      "shadow": "small",
+      "height": "56px",
+      "padding": "0 28px",
+      "font": "button",
+      "hover": "translate(-2px,-2px) и тень card (6px) за 90ms",
+      "active": "translate(4px,4px) и тень pressed — кнопка «вдавливается» в свою тень",
+      "use": "одна главная на экран: «ЗАБРАТЬ БИЛЕТ», «ХОЧУ СКИДКУ», «ЗАПИСАТЬСЯ»"
+    },
+    "button_secondary": {
+      "bg": "surface",
+      "color": "text",
+      "border": "3px solid border",
+      "radius": "sm",
+      "shadow": "small",
+      "height": "56px",
+      "padding": "0 28px",
+      "font": "button",
+      "hover": "как у главной: подъём на 2px и тень 6px",
+      "use": "«ПРОГРАММА», «КАК ДОБРАТЬСЯ», «ВСЕ ТОВАРЫ»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "border": "3px solid border",
+      "radius": "sm",
+      "shadow": "small",
+      "height": "56px",
+      "font": "button",
+      "use": "кнопка на жёлтой карточке или полосе и вариант cta_color_role=accent"
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "border": "3px solid border",
+      "radius": "md",
+      "shadow": "card",
+      "padding": "28px",
+      "hover": "у кликабельной карточки: translate(-3px,-3px) и тень raised",
+      "use": "преимущества, спикеры, товары, тарифы"
+    },
+    "card_fill": {
+      "bg": "fill_coral | fill_lime | fill_sky | fill_mint | primary",
+      "color": "on_fill",
+      "border": "3px solid border",
+      "radius": "md",
+      "shadow": "card",
+      "rule": "в ряду из 3–4 карточек цвета чередуются, одинаковые рядом не стоят; вторичный текст на заливке — on_fill весом 400, не text_muted"
+    },
+    "sticker": {
+      "bg": "fill_lime или primary",
+      "color": "on_fill",
+      "border": "2px solid #0a0a0a",
+      "radius": "pill",
+      "padding": "8px 16px",
+      "font": "label",
+      "rotate": "−4° (или +3° у второго стикера на экране)",
+      "hover": "поворот к 0° по ease_emphasized за 320ms",
+      "use": "«ДО 30.09», «−50%», «ОСТАЛОСЬ 37 МЕСТ» — не больше двух на экран, у края фото или над заголовком"
+    },
+    "marker": {
+      "bg": "marker",
+      "color": "on_marker",
+      "shape": "плашка под словом: padding 0 .12em, box-decoration-break: clone, лёгкий поворот −1°",
+      "use": "одно слово в H1 или h2 — главное обещание («СКИДКИ», «БЕСПЛАТНО»)"
+    },
+    "marquee_strip": {
+      "bg": "band_ink",
+      "color": "on_band_ink",
+      "border": "3px solid border сверху и снизу",
+      "height": "56px",
+      "font": "label 18px",
+      "separator": "звезда-искра SVG 16px цветом on_band_ink между фразами",
+      "content": "условие акции и дедлайн словами: «ТОЛЬКО ДО 30 СЕНТЯБРЯ · −50% НА ВСЁ · ДОСТАВКА 0 ₽ ОТ 3 000 ₽»",
+      "use": "сразу под первым экраном и, при желании, перед формой; рецепт marquee-logos с кнопкой паузы"
+    },
+    "ticket": {
+      "bg": "surface",
+      "border": "3px solid border",
+      "radius": "md",
+      "shadow": "card",
+      "layout": "слева — дата крупно (price 800) и место, справа — цена и кнопка; между частями пунктирная линия 3px и полукруглые вырезы 20px сверху и снизу (mask: radial-gradient)",
+      "use": "билеты на ивент, тариф курса, «пропуск» на распродажу"
+    },
+    "countdown": {
+      "layout": "4 квадрата 72×72 (телефон 60×60) с рамкой 3px и тенью small: число price 32px + подпись label «ДНЕЙ», «ЧАСОВ»",
+      "rule": "только для реального дедлайна из условий акции; после окончания блок заменяется текстом «Акция закончилась 30.09», а не обнуляется в цикле",
+      "a11y": "число обновляется раз в минуту, а не каждую секунду; aria-live не ставить"
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "3px solid border",
+      "radius": "sm",
+      "height": "56px",
+      "padding": "0 16px",
+      "label": "над полем, label 13px заглавными, отступ 8px",
+      "placeholder": "text_muted",
+      "focus": "тень small цвета accent (4px 4px 0 0 #5b3df5; в тёмной — primary) вместо чёрной и видимое кольцо shadow.focus с клавиатуры"
+    },
+    "checkbox": {
+      "size": "24px",
+      "radius": "4px",
+      "border": "3px solid border",
+      "checked": "фон primary, галочка on_primary толщиной 3px"
+    },
+    "badge": {
+      "bg": "surface",
+      "color": "text",
+      "border": "2px solid border",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "label",
+      "use": "метки в карточках: «ОНЛАЙН», «18+», «ХИТ»"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "72px",
+      "border_bottom": "3px solid border",
+      "left": "текстовое название Unbounded 800 20px",
+      "center": "3–4 пункта Rubik 500 16px, активный — под маркером",
+      "right": "button_primary высотой 48px «БИЛЕТЫ»",
+      "mobile": "название и квадратная кнопка-бургер 48px с рамкой 3px и тенью small"
+    },
+    "sticky_cta": {
+      "bg": "background",
+      "border_top": "3px solid border",
+      "content": "слева цена или «ДО 30.09» label, справа button_primary 52px во всю оставшуюся ширину"
+    },
+    "footer": {
+      "bg": "band_ink",
+      "color": "on_band_ink",
+      "note": "в светлой теме чёрный подвал: заголовки жёлтые (on_band_ink), ссылки и правовой текст — #fff6e5 (18.45 на #0a0a0a); в тёмной — жёлтый подвал с чёрным текстом",
+      "padding": "56px 16px 32px"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Вариант split_sticker (по умолчанию): кремовый фон, колонки 1–7 — стикер «ДО 30.09» с поворотом −4° над заголовком, H1 display 72px ЗАГЛАВНЫМИ в 2–3 строки, одно слово под жёлтым маркером; лид Rubik 20px в 2 строки; кнопки button_primary «ЗАБРАТЬ БИЛЕТ» (id=hero-cta) и button_secondary «ПРОГРАММА»; под кнопками строка caption «Уже купили 1 240 человек». Колонки 8–12 — фото или афиша в рамке 3px с радиусом 16px и тенью raised, в правом верхнем углу второй стикер-цена «−50%» (fill_coral, +3°), за фото смещённая на 16px плашка fill_sky. Сразу под героем — marquee_strip во всю ширину. Вариант poster: H1 во всю ширину 96px в жёлтом блоке с рамкой, под ним ряд из трёх card_fill с фактами (дата, место, цена) и кнопка.",
+    "section_order": [
+      "nav",
+      "hero",
+      "marquee",
+      "facts",
+      "program_or_products",
+      "why",
+      "speakers_or_reviews",
+      "tickets",
+      "countdown",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "facts": "3–4 card_fill в ряд разных цветов: число price + подпись («3 ДНЯ», «40 СПИКЕРОВ», «1 500 ГОСТЕЙ»)",
+      "program_or_products": "для ивента — расписание строками в card: время label слева, тема h3, спикер caption; для распродажи — товары card с фото 1:1 в рамке, цена price, старая цена зачёркнутая",
+      "why": "h2 с маркером на одном слове, 3 card с иконкой в квадрате 56px fill_* с рамкой 3px",
+      "speakers_or_reviews": "фото-портреты 4:5 в рамке 3px с тенью card, подпись под фото в белой плашке с рамкой, наезжающей на фото на 16px",
+      "tickets": "2–3 ticket, рекомендуемый — на жёлтом фоне с sticker «ХИТ»",
+      "countdown": "полоса fill_sky с рамками сверху и снизу: countdown по центру, под ним кнопка — только при реальном дедлайне",
+      "faq": "вопросы card без тени, раскрытый — с тенью card",
+      "lead_form": "card на фоне fill_lime-полосы: слева h2 и 3 пункта, справа форма"
+    },
+    "grid": "12 колонок, контейнер 1200px, зазор 24px; карточки — 3 в ряд (4 для фактов), 2 в ряд на 768–1023px, 1 на телефоне; отступ под тень — карточке нужно 6px свободного места справа и снизу, в сетке это учтено зазором 24px",
+    "mobile_notes": "До 767px: H1 34px, 2–4 строки, слово до 10 букв; маркер остаётся на одном слове. Стикер над заголовком — поворот −3°, не больше одного на экран. Фото героя — под текстом, во всю ширину колонки, рамка 3px и тень 6px (отступ справа 6px, чтобы тень не резалась краем экрана). Кнопки во всю ширину 56px столбиком. marquee_strip — высота 48px, текст 15px. Карточки фактов — 2×2. ticket на телефоне становится вертикальным: дата сверху, пунктир горизонтально. Липкая нижняя панель sticky_cta с первой прокрутки. Рамки у мелких элементов 2px, у кнопок и карточек остаются 3px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "card с рамкой 3px и тенью card на полосе fill_lime. Заголовок h3 «ЗАБРОНИРУЙ МЕСТО». Поля «Имя» и «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) — рамка 3px, радиус 8px, высота 56px, подпись над полем заглавными label. Кнопка button_primary во всю ширину «ОТПРАВИТЬ» с тенью small и вдавливанием при нажатии. Ниже чекбокс 24px с рамкой 3px (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» цветом link. Кнопка активна всегда: пустое поле или нет галочки — поле получает рамку error, под ним видимый текст 14px error с иконкой «!» в квадрате, фокус на первое проблемное поле. Сбой сети — card с текстом «Не отправилось — попробуй ещё раз» и кнопкой повтора, данные остаются.",
+    "success_state": "Card меняет содержимое на месте: квадрат 64px fill_mint с рамкой 3px и чёрной галочкой, заголовок h3 «ЗАЯВКА У НАС», строка «Напишем в Telegram или позвоним на +7 … сегодня до 20:00», button_secondary «ИЗМЕНИТЬ НОМЕР». Фокус на заголовке, aria-live=polite. Без конфетти."
+  },
+  "motion_recipes": [
+    "marquee-logos",
+    "cta-attention",
+    "counter-up",
+    "sticky-cta-mobile",
+    "marker-highlight",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "только функциональное: sticky-cta-mobile, наведение и вдавливание кнопок; бегущая строка стоит неподвижно (класс без анимации)",
+      "subtle": "по умолчанию: marquee-logos, counter-up, sticky-cta-mobile; + marker-highlight; + form-field-feedback",
+      "rich": "subtle + cta-attention на кнопке первого экрана"
+    },
+    "marquee-logos": "не логотипы, а marquee_strip с фразами: элементы .mq__word (Unbounded 700 заглавными 18px, цвет on_band_ink) и между ними SVG-искра 16px; --mq-bg: band_ink; --mq-text и --mq-muted: on_band_ink; --mq-border: border; --mq-gap: 32px; --mq-fade: 0px (края не растворять — у стиля резкие границы); data-speed=\"40\"; рамка 3px сверху и снизу полосы. Кнопку паузы .mq__toggle не убирать: перекрасить в рамку 2px on_band_ink, радиус 8px. Не больше двух полос на страницу",
+    "cta-attention": "уровень rich, только главная кнопка первого экрана: --cta-radius: 8px; --cta-glow: var(--color-accent) (жёсткое кольцо 6px, без размытия); --cta-glow-shadow: transparent; --cta-shine: rgba(255,255,255,.6) — тёмная надпись на жёлтом, блик только поднимает контраст; у .cta-attn__btn рамка 3px border и тень small; нажатие — translate(4px,4px) вместо scale(.97) рецепта. На кнопку формы и в липкой панели не ставить",
+    "counter-up": "только полоса facts: числа в card_fill, размер из typography.price (52/36px, 800), полоса .stat__label::before — чёрная on_fill высотой 3px; единицы («ДНЯ», «СПИКЕРОВ») — отдельным span label, а не в data-count-suffix. Цены и скидки не считать никогда, countdown — не этот рецепт",
+    "sticky-cta-mobile": "по компоненту sticky_cta: data-after=\"#hero-cta\", data-hide-on=\"#lead\"; .scta { background: var(--color-background); border-top: 3px solid var(--color-border); box-shadow: none }; --radius-pill: 8px; .scta__btn с рамкой 3px и тенью small",
+    "marker-highlight": "одно слово оффера жёлтым маркером толщиной 0.45em, без скругления; data-mh-delay 200",
+    "form-field-feedback": "рамка 3px error и жёсткая тень цвета error; встряска разрешена — стиль громкий",
+    "not_for_this_style": "fade-up-stagger и image-reveal-clip — карточки и фото стоят сразу: жёсткий стиль не «проявляется»; parallax-soft и gradient-drift — ни глубины, ни градиентов; tilt-card — наклон по 3D спорит с плоской жёсткой тенью; magnetic-button — пружина конкурирует с вдавливанием; hero-text-reveal — заголовок первого экрана стоит сразу, иначе теряется маркер"
+  },
+  "media": {
+    "hero": "Фото или афиша в рамке 3px с жёсткой тенью: человек в движении, продукт крупно на однотонном ярком фоне, кадр с прошлого ивента. Поверх угла — стикер с ценой или датой. Можно вырезанный объект без фона на цветной плашке.",
+    "video_in_flow": "Короткий ролик с прошлого ивента или распаковки 15–30 с в рамке 3px по кнопке ▶ в квадрате 64px; беззвучная петля 4–6 с допустима в карточке товара с кнопкой паузы. Звук на автозапуске запрещён.",
+    "imagery": "Яркая предметка на однотонных цветных фонах в тон заливок, вырезанные объекты, репортаж с ивентов с высоким контрастом. Иконки — толстые линии 2.5px с квадратными концами.",
+    "character": "Уместен рисованный персонаж с толстым чёрным контуром и плоской заливкой цветами fill_* — один и тот же на стикерах, в пустых состояниях и в ролике.",
+    "audio": "Аудиоверсия не нужна; для ивента — кнопка «Послушать анонс 30 с» у программы.",
+    "avoid": [
+      "мягкие размытые тени и стекло",
+      "пастель и приглушённые тона",
+      "градиенты на кнопках и фонах",
+      "тонкие рамки 1px",
+      "фото без рамки встык к краю"
+    ],
+    "geometry": {
+      "hero_desktop": "4:5 в рамке 3px, радиус 16px, тень 8px",
+      "hero_mobile": "4:3 во всю ширину колонки с отступом 6px под тень",
+      "card": "1:1 — товары",
+      "portrait": "4:5 — спикеры",
+      "gallery": "3:2 с рамкой и тенью small",
+      "sticker": "пилюля или круг 88–120px, поворот −4…+3°",
+      "logo_strip": "монохромные чёрные (в тёмной — кремовые), высота 28px, в карточке с рамкой 3px"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "translate(-2px,-2px) и тень 6px 6px 0 0 shadow_color за 90ms; цвет заливки не меняется",
+      "focus_visible": "shadow.focus: кольцо 3px фона + 3px accent (в тёмной — primary) поверх жёсткой тени",
+      "active": "translate(4px,4px) и тень 0 — кнопка вдавлена в свою тень",
+      "disabled": "фон #e8e1d3 (в тёмной #2c2a27), рамка 3px пунктиром, текст text_muted, без тени; кнопку формы заявки не блокировать",
+      "loading": "подпись «ОТПРАВЛЯЕМ…», справа три квадрата 6px, мигающие по очереди не дольше 3 циклов; кнопка остаётся вдавленной (translate 4px, без тени), aria-busy=true"
+    },
+    "input": {
+      "focus": "жёсткая тень 4px 4px 0 0 accent (в тёмной — primary) и кольцо с клавиатуры; рамка остаётся 3px",
+      "error": "рамка 3px error, тень 4px 4px 0 0 error, под полем текст 14px error с иконкой «!» в квадрате, aria-invalid=true",
+      "disabled": "фон background, рамка 3px пунктиром, текст text_muted"
+    },
+    "card": {
+      "hover": "translate(-3px,-3px) и тень raised — только у кликабельных",
+      "active": "translate(6px,6px) и тень 0"
+    }
+  },
+  "signature": [
+    "Рамки 3px и жёсткие тени без размытия со сдвигом 4–8px; при нажатии элемент вдавливается в свою тень",
+    "Насыщенные плоские заливки — жёлтая, коралловая, лаймовая, голубая, мятная — с только чёрным текстом на них",
+    "Широкий гротеск 800 заглавными и одно слово под жёлтым маркером; наклонённые стикеры с датой и ценой",
+    "Бегущая строка во всю ширину с условием акции и дедлайном, с кнопкой паузы"
+  ],
+  "voice": "Разговор на «ты», коротко и с вызовом: «ЗАБЕРИ МЕСТО», «СКИДКИ ДО ПЯТНИЦЫ». Одна мысль — одна строка, цифры и даты конкретно; без канцелярита, без «уникальной возможности» и без поддельной срочности — таймер и «осталось N мест» только по реальным данным.",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; старая цена — Rubik 500 с text-decoration: line-through 2px; неразрывный пробел перед ₽",
+    "dates": "дата и время — tabular-nums, формат «30.09 · 19:00»",
+    "display": "text-transform: uppercase; letter-spacing: -0.02em; text-wrap: balance; hyphens: none",
+    "labels": "text-transform: uppercase; letter-spacing: 0.02em — стикеры, метки, кнопки"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_sticker",
+        "poster"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "urgency_block": [
+        "marquee",
+        "countdown"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "stroke_3px",
+      "hard_shadows",
+      "black_text_on_fills",
+      "press_effect"
+    ],
+    "default": {
+      "hero_layout": "split_sticker",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "urgency_block": "marquee"
+    },
+    "legend": {
+      "hero_layout": "split_sticker — текст слева, фото в рамке со стикером справа; poster — заголовок во всю ширину в жёлтом блоке, факты карточками под ним",
+      "cta_color_role": "primary — жёлтая кнопка с чёрным текстом; accent — фиолетовая с белым (в тёмной теме — светло-фиолетовая с чёрным)",
+      "headline_scale": "xl — 72/34px, заголовок до 30 знаков; l — 56/30px, до 42 знаков",
+      "urgency_block": "marquee — бегущая строка с дедлайном под героем; countdown — счётчик дней и часов вместо неё (только при реальном дедлайне)",
+      "social_proof_position": "under_hero — факты и счётчик купивших сразу после бегущей строки; before_form — перед формой"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для распродаж первой проверять urgency_block, для ивентов — hero_layout. Таймер без реального дедлайна в тест не ставить: поддельная срочность — недостоверная реклама (38-ФЗ, ст. 5)."
+  },
+  "do": [
+    "Обводить кнопки, поля, карточки и фото рамкой 3px и давать им жёсткую тень без размытия; при нажатии — вдавливать элемент в тень.",
+    "Ставить на цветные заливки только чёрный текст; вторичный текст на заливке — тем же чёрным весом 400.",
+    "Держать заголовки короткими: 2–4 строки по 1–3 слова, самое длинное слово на телефоне до 10 букв.",
+    "Выделять маркером одно слово на экран и ставить не больше двух стикеров на экран.",
+    "Писать условия акции и дедлайн прямо в бегущей строке и рядом с ценой, а бегущую строку снабжать кнопкой паузы.",
+    "Оставлять справа и снизу у карточек 6px под тень — на телефоне тоже.",
+    "Если ниша совпадает с брендом, известным этим стилем (маркетплейсы цифровых товаров, крупные медиа), брать другой набор заливок и не повторять его фирменных иллюстраций — 135-ФЗ ст. 14.6."
+  ],
+  "dont": [
+    "Не размывать тени, не добавлять стекло, градиенты и пастель.",
+    "Не ставить text_muted или белый текст на жёлтую, лаймовую и коралловую заливки.",
+    "Не набирать длинные абзацы широким Unbounded — только заголовки, метки и кнопки.",
+    "Не делать поддельную срочность: таймер, который перезапускается, и «осталось 3 места» без реальных данных.",
+    "Не ставить больше одного жёлтого маркера и больше двух стикеров на экран — стиль превращается в шум.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не отключать кнопку паузы у бегущей строки."
+  ],
+  "prompt_snippet": "Build a neo-brutalist promo lead landing. Light: cream background #fff6e5, white cards, black text #0a0a0a, muted #3f3a33, black 3px outlines. Dark: #141312 with cream #fff6e5 outlines and shadows. Saturated fills with black text only: yellow #ffd23f (main CTA), coral #ff7a59, lime #c5f23a, sky #8fd3ff, mint #7ee8b5; violet accent #5b3df5 with white text. Hard shadows with zero blur (4–8px offset); hover lifts 2px, active sinks the element into its shadow. Radii 8/12/16px, pills for tilted stickers. Self-hosted Unbounded 700/800 (Cyrillic) for UPPERCASE headlines 72/34px, labels and buttons; Rubik 400–700 for body 18px. Hero: sticker with the deadline, headline with one word under a yellow marker, framed photo with a price sticker; a full-width black ticker strip with the offer terms and a pause button below. Unchecked 152-FZ consent, no fake urgency, no blur.",
+  "source": {
+    "inspired_by": "собственная разработка; идея — bergside/awesome-design-skills (MIT), skills/neobrutalism: только общий принцип «жирные рамки, яркие акценты на тёплом фоне»",
+    "notes": "У bergside в skills/neobrutalism — семь hex-токенов (жёлтый #FDC800, синий #432DD7, фон #FBFBF9), шрифт Inter и радиусы 4/8px; ни теней, ни рамок, ни тёмной темы, ни раскладки. Здесь своё: кремовый фон и пять заливок с проверенным контрастом чёрного текста (7.71–15.21), фиолетовый акцент для второй кнопки, тёмная тема с кремовыми рамками и тенями, правило «текст на заливке только чёрный», шкала жёстких теней и эффект вдавливания, пара Unbounded + Rubik (OFL-1.1, кириллица) вместо Inter, стикеры с поворотом, маркер под словом, бегущая строка с условием акции через рецепт marquee-logos, билет с перфорацией, честный countdown, раскладка ивента и распродажи, форма заявки по 152-ФЗ, запрет поддельной срочности по 38-ФЗ."
+  }
+}

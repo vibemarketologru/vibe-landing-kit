@@ -513,17 +513,36 @@
     "cta-attention",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "result-bars",
+    "tabs-indicator",
+    "hero-word-rotator",
+    "form-field-feedback"
   ],
   "motion_map": {
     "hero-text-reveal": "лозунг первого экрана построчно, каждая строка — .htr-line; --htr-ease: cubic-bezier(.16,1,.3,1) (ease_emphasized), --htr-step: 70ms. Запас маски .15em из рецепта не уменьшать — при интерлиньяже 0.92 он спасает «Й», «Ё», «Щ». Строка lead и белая пилюля — штатным follow; фото под лозунгом не анимировать (это LCP).",
     "image-reveal-clip": "фото второй плитки-кампании (campaign_band) и фото 4:5 в преимуществах, не больше 4 на страницу; --irc-radius: 0px, --irc-zoom: 1.04, --irc-dur: 640ms. У плитки-кампании --irc-bg: #111111 — белый лозунг поверх читается и до открытия фото; у фото преимуществ --irc-bg: var(--color-surface). Фото первого экрана и лента gallery — без шторки.",
     "fade-up-stagger": "текстовые плитки card без фото, шаги how и тарифы; строгий вариант: --reveal-dist: 16px, --reveal-dur: 360ms, --reveal-step: 60ms. В ленте gallery data-reveal — на саму ленту. Один приём на секцию: где фото открываются шторкой, карточки не выезжают.",
     "counter-up": "только цифры ниже первого экрана — чёрная полоса перед формой (вариант social_proof_position = before_form). Под первым экраном цифры стоят итогом без счёта: на телефоне это ещё первый экран. Поверх рецепта: .stat__num — typography.stat (Sofia Sans Condensed 900, 72/40px, letter-spacing 0, uppercase), полосу-акцент .stat__label::before удалить — декоративных линий в стиле нет.",
+    "cta-attention": "уровень subtle: финальная чёрная пилюля перед формой и кнопка у товара со скидкой в pricing (цель «продажа товара по акции») — не больше двух на страницу. На белую пилюлю поверх фото первого экрана и на кнопку отправки формы не ставить. Свечения в стиле нет: --cta-glow: transparent; --cta-glow-shadow: transparent — остаются «вдох» до 1.03 и блик. На чёрной пилюле с белой надписью (18.88:1) блик по умолчанию .18; в тёмной теме пилюля белая с чёрной надписью — --cta-shine: transparent, остаётся только вдох.",
     "accordion-smooth": "частые вопросы строками без карточек: .faq__item { border: 0; border-bottom: 1px solid var(--color-border); border-radius: 0; background: transparent }, .faq__a { padding: 0 0 24px; color: var(--color-text-body) }; вместо плюса — шеврон 20px, поворот на 180° за 150ms.",
     "form-success": "ответ в белой плитке формы: .lead { border: 0; border-radius: 0; background: var(--color-background); max-width: none; padding: 32px }; поля — высота 56px, border-radius 24px, рамка var(--color-border-strong), подписи цветом text и весом 500; кнопка — чёрная пилюля 56px. Значок — круг цвета text с галочкой цвета background вместо зелёного (--color-success: var(--color-text) внутри .lead__done): зелёный в стиле не появляется.",
     "sticky-cta-mobile": "чёрная пилюля 56px во всю ширину на белой панели: .scta { background: var(--color-background); border-top-color: var(--color-border-soft) } — это линия sticky_bottom_bar, без размытия и теней; панель прячется, когда форма в кадре.",
-    "cta-attention": "уровень subtle: финальная чёрная пилюля перед формой и кнопка у товара со скидкой в pricing (цель «продажа товара по акции») — не больше двух на страницу. На белую пилюлю поверх фото первого экрана и на кнопку отправки формы не ставить. Свечения в стиле нет: --cta-glow: transparent; --cta-glow-shadow: transparent — остаются «вдох» до 1.03 и блик. На чёрной пилюле с белой надписью (18.88:1) блик по умолчанию .18; в тёмной теме пилюля белая с чёрной надписью — --cta-shine: transparent, остаётся только вдох."
+    "result-bars": "фитнес и школы, блок перед формой «5 км: было 32 мин → 26»; --rb-now-color: var(--text), .rb__bar{border-radius:0}",
+    "tabs-indicator": "абонемент «месяц / год», пилюля, --tbi-edge: var(--text)",
+    "hero-word-rotator": "только rich и ВМЕСТО hero-text-reveal: последнее слово лозунга «Тренировки для [бега | зала | футбола]»; --hwr-ease-in cubic-bezier(.16,1,.3,1)",
+    "form-field-feedback": "поля radius 24px"
+  },
+  "media": {
+    "hero": "Во всю ширину — энергичная петля движения или тренировки, плотный сжатый заголовок поверх, высокий контраст.",
+    "video_in_flow": "Полоса-кампания во всю ширину с кадром героя, истории людей с роликами по кнопке.",
+    "imagery": "Люди в движении, пот, фактура, резкий свет.",
+    "character": "Реальные люди-герои (спортсмен, тренер), один герой на всю страницу.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "статичные интерьеры",
+      "мягкая пастель"
+    ]
   },
   "ab_axes": {
     "vary": {

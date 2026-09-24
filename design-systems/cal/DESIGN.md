@@ -103,7 +103,21 @@
 
 ## Анимации
 
-`fade-up-stagger`, `hero-text-reveal`, `counter-up`, `marquee-logos`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`fade-up-stagger`, `hero-text-reveal`, `counter-up`, `marquee-logos`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `tabs-indicator`, `steps-progress-line`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Интерфейс продукта вместо фото: скриншот или живая петля записи экрана в спокойной монохромной рамке.
+
+**Видео ниже.** Короткие записи экрана по сценариям (15–30 с) у каждого преимущества.
+
+**Картинки.** Скриншоты, схемы, минимум фотографий.
+
+**Персонаж или маскот.** Не нужен.
+
+**Аудиоверсия.** Не нужна.
+
+**Избегать:** постановочные фото; яркие иллюстрации.
 
 ## A/B-тест
 

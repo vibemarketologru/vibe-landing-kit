@@ -470,7 +470,11 @@
     "counter-up",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "media-zoom-scroll",
+    "text-scroll-highlight",
+    "tabs-indicator",
+    "form-field-feedback"
   ],
   "motion_map": {
     "hero-text-reveal": "Только при motion_level = subtle: строки H1 первого экрана, следом лид и кнопки. --htr-dur 700ms, --htr-step 70ms, --htr-ease cubic-bezier(.16,1,.3,1) (ease_emphasized). Бейдж и product_panel первого экрана видны сразу и не анимируются: рецепт запрещает второй вход на первом экране одновременно с заголовком.",
@@ -480,7 +484,22 @@
     "counter-up": "Ряд stat в блоке proof: только число, tabular-nums, --cu-dur 1000ms. Полосу-акцент ::before удалить — у стиля её нет.",
     "accordion-smooth": "faq_item: раскрытие ответа и поворот шеврона на 180°, в темпе motion.base 200ms.",
     "form-success": "Ответ формы заявки. Переменные --color-* = токены текущей темы. Радиусы рецепта заменить токенами: панель 12px (lg), поля и кнопка 8px (md) вместо 20/12/999px; круг 48px вместо 64px; фокус — outline 2px focus_ring.",
-    "sticky-cta-mobile": "Липкая полоса на телефоне после hero, прячется, когда форма #lead в кадре. На .scta задать --radius-pill: 8px (не в :root — пилюля нужна бейджам): в рецепте кнопка-пилюля, а главной кнопке стиля пилюля запрещена."
+    "sticky-cta-mobile": "Липкая полоса на телефоне после hero, прячется, когда форма #lead в кадре. На .scta задать --radius-pill: 8px (не в :root — пилюля нужна бейджам): в рецепте кнопка-пилюля, а главной кнопке стиля пилюля запрещена.",
+    "media-zoom-scroll": "product_panel в features; --mzs-img-from 1 — мелкий текст интерфейса не мылится; --mzs-from .88, --mzs-radius 16px; image-reveal-clip на этом скрине не ставить",
+    "text-scroll-highlight": "блок problem, --tsh-dim .3 на тёмной теме",
+    "tabs-indicator": "pricing: радиусы 8px вместо пилюли, --tbi-dur 200ms",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Тёмное поле, интерфейс продукта со свечением по краю или беззвучная петля продукта; крупный плотный заголовок.",
+    "video_in_flow": "Записи экрана в тёмных рамках, мягкое свечение, ролик-обращение по кнопке.",
+    "imagery": "Скриншоты, мягкие градиенты свечения, никаких стоковых фото.",
+    "character": "Обычно нет; для продукта-сотрудника допустим фирменный маскот как «лицо» продукта в ролике.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "светлые фото людей",
+      "пёстрые иллюстрации"
+    ]
   },
   "ab_axes": {
     "vary": {

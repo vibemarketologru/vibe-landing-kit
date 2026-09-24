@@ -131,7 +131,6 @@
   --radius-xl: 16px;
   --radius-pill: 9999px;
   --radius-full: 50%;
-  --radius-usage: md — кнопки, поля, ячейки календаря, слоты; lg — карточки; xl — только главный макет первого экрана и карточка формы; pill — переключатель «пилюля в пилюле» и бейджи; full — аватары и круглые кнопки-стрелки;
   --space-unit: 4;
   --space-section-desktop: 96px;
   --space-section-mobile: 64px;
@@ -151,13 +150,11 @@
   --shadow-mockup-dark: 0 0 0 1px #2a2a2a, 0 24px 48px -12px rgba(0,0,0,0.7);
   --shadow-pill-active-dark: 0 0 0 1px #333333;
   --shadow-focus: 0 0 0 2px var(--background), 0 0 0 4px var(--focus_ring);
-  --shadow-note: Серые карточки теней не имеют вовсе; тень card — только у белых карточек с рамкой, raised — у тарифов и при наведении на кликабельную карточку. В тёмной теме глубину даёт рамка 1px, а не тень;
   --motion-fast: 150ms;
   --motion-base: 200ms;
   --motion-slow: 400ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.16,1,.3,1);
-  --motion-note: Движение тихое: появление снизу на 16–24px, смена фона кнопки за 150ms. Без пружин, свечения, увеличения карточек и параллакса;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

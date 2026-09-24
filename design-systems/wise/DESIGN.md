@@ -83,7 +83,21 @@
 
 ## Анимации
 
-`hero-text-reveal`, `fade-up-stagger`, `counter-up`, `cta-attention`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`hero-text-reveal`, `fade-up-stagger`, `counter-up`, `cta-attention`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `marker-highlight`, `result-bars`, `tabs-indicator`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Яркое поле, крупный простой заголовок, фото реального клиента или флаги/иллюстрации.
+
+**Видео ниже.** Короткое объясняющее видео с субтитрами по кнопке.
+
+**Картинки.** Реальные люди, яркие плоские иллюстрации, прозрачные цифры.
+
+**Персонаж или маскот.** Реальные клиенты в историях.
+
+**Аудиоверсия.** Аудиоверсия объяснения условий уместна.
+
+**Избегать:** мрачные тона; мелкий шрифт в условиях.
 
 ## A/B-тест
 

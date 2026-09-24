@@ -110,7 +110,6 @@
   --shadow-card: none;
   --shadow-raised: 0 2px 4px rgba(14,15,12,.06), 0 12px 32px rgba(14,15,12,.10);
   --shadow-raised-dark: 0 0 0 1px #3a3e36, 0 16px 40px rgba(0,0,0,.55);
-  --shadow-notes: Карточки без теней: белая карточка на шалфейном фоне уже «приподнята». Тень raised — только у всплывающего: липкая кнопка на телефоне, уведомление, модальное окно.;
   --motion-fast: 150ms;
   --motion-base: 240ms;
   --motion-slow: 450ms;

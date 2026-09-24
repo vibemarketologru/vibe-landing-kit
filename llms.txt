@@ -1,17 +1,32 @@
 # Vibe Landing Kit
 
-> Каталог для ИИ-агентов: дизайн-системы в духе мировых брендов и собственные стили (токены светлой и тёмной темы с проверенным контрастом, OFL-шрифты с кириллицей, секции рекламного лендинга, оси A/B-теста), анимационные рецепты с prefers-reduced-motion и плагин Claude Code, который собирает лендинг для A/B-теста одной командой вместе с семантикой из Яндекс Вордстата через MCP Вайб-Маркетолога.
+> Каталог, навыки и плагин для ИИ-агентов, которые собирают рекламные лендинги под A/B-тест и проверку гипотез: дизайн-системы в духе мировых брендов и собственные стили (токены светлой и тёмной темы с проверенным контрастом, OFL-шрифты с кириллицей, секции лендинга, оси A/B, правила медиа, состояния, голос текста), анимационные рецепты с prefers-reduced-motion, мобильная адаптация под iOS 26/27 и Android, закон РФ для лендингов, медиа и чат-боты с ИИ через MCP Вайб-Маркетолога и запуск гипотезы одной командой: адрес, заявки, A/B-тест, паспорт качества.
 
 ## Каталог
 - [catalog.json](catalog.json): список дизайн-систем и анимаций
 - [design-systems/](design-systems/): записи JSON, theme.css, DESIGN.md
 - [motion/](motion/): рецепты анимаций
+- [SCHEMA.md](SCHEMA.md): схема записи
 
-## Для агента
-- [skills/landing-ab/SKILL.md](skills/landing-ab/SKILL.md): маршрут и чек-лист качества
+## Навыки
+- [skills/landing-ab/SKILL.md](skills/landing-ab/SKILL.md): маршрут от гипотезы до запущенного теста, чек-лист качества
+- [skills/hypothesis-lab/SKILL.md](skills/hypothesis-lab/SKILL.md): гипотеза, ICE/PIE, выборка и бюджет, A/A, z-тест, журнал гипотез
+- [skills/landing-brief/SKILL.md](skills/landing-brief/SKILL.md): бриф A–G, зерно дизайна, каталог раскладок, ревью по 14 пунктам
+- [skills/landing-media/SKILL.md](skills/landing-media/SKILL.md): кадр первого экрана, персонаж, видео, аудиоверсия, против нейрослопа
+- [skills/landing-mobile/SKILL.md](skills/landing-mobile/SKILL.md): телефон — чек-лист из 30 пунктов, iOS 26/27, Android, встроенные браузеры
+- [skills/landing-law-ru/SKILL.md](skills/landing-law-ru/SKILL.md): 152-ФЗ, закон о рекламе, модерация Директа и ВК
+- [skills/landing-chatbot/SKILL.md](skills/landing-chatbot/SKILL.md): чат-бот с ИИ на лендинге
+- [skills/ad-match/SKILL.md](skills/ad-match/SKILL.md): реклама под варианты, автостоп
+- [skills/brand-to-system/SKILL.md](skills/brand-to-system/SKILL.md): свой стиль из брендбука клиента
+- [skills/motion/SKILL.md](skills/motion/SKILL.md): характер движения, длительности, хореография, reduce; [skills/motion/gsap-lottie.md](skills/motion/gsap-lottie.md): когда нужен GSAP или Lottie и как подключить под строгий CSP
+- [skills/design-system/SKILL.md](skills/design-system/SKILL.md), [skills/semantics/SKILL.md](skills/semantics/SKILL.md)
 - [AGENTS.md](AGENTS.md)
+
+## Инструменты
+- tools/check.mjs: проверка каталога
+- tools/passport.mjs: паспорт лендинга в Playwright (те же блокирующие проверки, что landing_check, плюс мобильные)
 
 ## API и MCP
 - MCP: https://lk.vibemarketolog.ru/mcp (OAuth 2.1 или ключ oc_)
-- REST: https://lk.vibemarketolog.ru/api/agent/design-systems, /api/agent/motion, /api/agent/semantics
+- REST: https://lk.vibemarketolog.ru/api/agent/design-systems, /motion, /semantics, /landings, /landings/check, /chatbots
 - Документация: https://lk.vibemarketolog.ru/docs/agent-api

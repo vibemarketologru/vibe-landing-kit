@@ -19,7 +19,13 @@ for (const f of (fs.existsSync(dsDir) ? fs.readdirSync(dsDir) : []).filter(f => 
   const contrast = {};
   for (const mode of ['light','dark']) { const c = d.tokens?.color?.[mode] || {};
     for (const k of KEYS) if (!hex(c[k])) errs.push(`${mode}.${k}: нет или не hex`);
-    for (const [fg, bg, min] of PAIRS) { const r = ratio(c[fg], c[bg]); contrast[`${mode}:${fg}/${bg}`] = +r.toFixed(2); if (r < min) errs.push(`контраст ${mode} ${fg}/${bg} = ${r.toFixed(2)} < ${min}`); } }
+    for (const [fg, bg, min] of PAIRS) { const r = ratio(c[fg], c[bg]); contrast[`${mode}:${fg}/${bg}`] = +r.toFixed(2); if (r < min) errs.push(`контраст ${mode} ${fg}/${bg} = ${r.toFixed(2)} < ${min}`); }
+    // Дополнительные пары: on_X[_muted] на X и подпись кнопки в hover/active. Неактивные (disabled) WCAG 1.4.3 не требует.
+    for (const k of Object.keys(c)) { if (!k.startsWith('on_') || /disabled/.test(k) || k === 'on_primary' || k === 'on_accent') continue;
+      let base = k.slice(3); if (!(base in c)) base = base.replace(/_muted$/, ''); if (!(base in c)) base = base.replace(/_hover$/, '');
+      if (hex(c[base]) && hex(c[k])) { const r = ratio(c[k], c[base]); if (r < 4.5) errs.push(`контраст ${mode} ${k}/${base} = ${r.toFixed(2)} < 4.5`); } }
+    for (const st of ['hover', 'active']) { const bg = c['primary_' + st]; const fg = c['on_primary_' + st] || c.on_primary;
+      if (hex(bg) && hex(fg)) { const r = ratio(fg, bg); if (r < 4.5) errs.push(`контраст ${mode} подпись кнопки на primary_${st} = ${r.toFixed(2)} < 4.5`); } } }
   for (const t of ['display','h2','h3','body','caption']) if (!d.tokens?.typography?.[t]?.family) errs.push('typography.' + t + ' без family');
   for (const fo of d.fonts || []) { const m = await font(fo.fontsource);
     if (!m) { errs.push(`шрифт ${fo.fontsource}: нет в Fontsource`); continue; }
@@ -39,6 +45,19 @@ for (const f of (fs.existsSync(dsDir) ? fs.readdirSync(dsDir) : []).filter(f => 
   for (const axis of Object.keys(ab.default || {})) if (!(axis in (ab.vary || {}))) errs.push('ab_axes.default: лишняя ось ' + axis);
   if (ab.legend !== undefined && (typeof ab.legend !== 'object' || Array.isArray(ab.legend))) errs.push('ab_axes.legend должен быть объектом');
   if (ab.notes !== undefined && typeof ab.notes !== 'string') errs.push('ab_axes.notes должен быть строкой');
+  const MEDIA = ['hero', 'video_in_flow', 'imagery', 'character', 'audio', 'avoid'];
+  if (!d.media || typeof d.media !== 'object') errs.push('нет media (как бренд ставит кадр первого экрана, видео, персонажа, аудио)');
+  else { for (const k of MEDIA) if (!d.media[k] || (k === 'avoid' ? !Array.isArray(d.media[k]) || !d.media[k].length : typeof d.media[k] !== 'string')) errs.push('media.' + k + ': пусто или не того типа'); }
+  // Необязательные поля 1.2.0: если есть — должны быть правильной формы.
+  const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
+  if (d.media?.geometry !== undefined && !isObj(d.media.geometry)) errs.push('media.geometry должен быть объектом «место → пропорция»');
+  if (d.states !== undefined) { if (!isObj(d.states?.button) || !isObj(d.states?.input)) errs.push('states: нужны объекты button и input');
+    else { for (const s of ['hover', 'focus_visible', 'disabled']) if (!d.states.button[s]) errs.push('states.button.' + s + ': пусто');
+      for (const s of ['focus', 'error']) if (!d.states.input[s]) errs.push('states.input.' + s + ': пусто'); } }
+  if (d.signature !== undefined && (!Array.isArray(d.signature) || d.signature.length < 2 || d.signature.length > 4 || d.signature.some(x => typeof x !== 'string'))) errs.push('signature: 2–4 строки');
+  if (d.voice !== undefined && !(typeof d.voice === 'string' ? d.voice.trim() : isObj(d.voice) && typeof d.voice.tone === 'string')) errs.push('voice: строка или объект с tone');
+  if (d.type_features !== undefined && !isObj(d.type_features)) errs.push('type_features должен быть объектом');
+  const words = (d.prompt_snippet || '').trim().split(/\s+/).filter(Boolean).length; if (words < 80 || words > 150) errs.push(`prompt_snippet: ${words} слов, нужно 80–150`);
   if ((d.summary || '').length > 400) errs.push('summary длиннее 400');
   for (const k of ['do','dont']) if (!Array.isArray(d[k]) || d[k].length < 4 || d[k].length > 7) errs.push(k + ': нужно 4–7 пунктов');
   report[slug] = errs.length ? errs : ['OK ' + JSON.stringify(contrast)]; if (errs.length) bad++;

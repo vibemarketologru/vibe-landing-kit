@@ -1,0 +1,183 @@
+/* Vodafone — Vibe Landing Kit 1.2.0
+ * Эстетика в духе Vodafone. Не аффилировано с Vodafone; без логотипов и фирменных шрифтов.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Geologica — npm i @fontsource-variable/geologica (или @fontsource/geologica), OFL; заменяет Vodafone / Vodafone Rg (проприетарный шрифт бренда)
+ */
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f2f2f2;
+  --color-text: #25282b;
+  --color-text-muted: #5e6166;
+  --color-border: #d9d9d9;
+  --color-primary: #e60000;
+  --color-on-primary: #ffffff;
+  --color-accent: #25282b;
+  --color-on-accent: #ffffff;
+  --color-link: #cc0000;
+  --color-success: #0a7a3e;
+  --color-error: #bd0000;
+  --color-primary-hover: #c80000;
+  --color-border-strong: #25282b;
+  --color-hero-band: #25282b;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #c3c6ca;
+  --color-promo-band: #e60000;
+  --color-on-promo: #ffffff;
+  --color-scrim: #000000;
+  --font-display: 'Geologica', 'Arial Black', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --display-size: 104px;
+  --display-weight: 800;
+  --display-size-desktop: 104px;
+  --display-size-mobile: 44px;
+  --display-line-height: 0.9;
+  --display-letter-spacing: -0.02em;
+  --display-text-transform: uppercase;
+  --font-display_light: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --display_light-size: 40px;
+  --display_light-weight: 300;
+  --display_light-size-desktop: 40px;
+  --display_light-size-mobile: 24px;
+  --display_light-line-height: 1.15;
+  --display_light-letter-spacing: -0.01em;
+  --font-h2: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --h2-size: 52px;
+  --h2-weight: 300;
+  --h2-size-desktop: 52px;
+  --h2-size-mobile: 32px;
+  --h2-line-height: 1.06;
+  --h2-letter-spacing: -0.015em;
+  --font-h3: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --h3-size: 26px;
+  --h3-weight: 700;
+  --h3-size-desktop: 26px;
+  --h3-size-mobile: 21px;
+  --h3-line-height: 1.15;
+  --h3-letter-spacing: -0.005em;
+  --font-eyebrow: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --eyebrow-size: 15px;
+  --eyebrow-weight: 800;
+  --eyebrow-size-desktop: 15px;
+  --eyebrow-size-mobile: 13px;
+  --eyebrow-line-height: 1.3;
+  --eyebrow-letter-spacing: 0.04em;
+  --eyebrow-text-transform: uppercase;
+  --font-lead: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --lead-size: 21px;
+  --lead-weight: 400;
+  --lead-size-desktop: 21px;
+  --lead-size-mobile: 18px;
+  --lead-line-height: 1.45;
+  --lead-letter-spacing: 0;
+  --font-body: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --body-size: 18px;
+  --body-weight: 400;
+  --body-size-desktop: 18px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.55;
+  --body-letter-spacing: 0;
+  --font-caption: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 400;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.45;
+  --caption-letter-spacing: 0;
+  --font-button: 'Geologica', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --button-size: 18px;
+  --button-weight: 500;
+  --button-size-desktop: 18px;
+  --button-size-mobile: 17px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --font-price: 'Geologica', 'Arial Black', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --price-size: 56px;
+  --price-weight: 800;
+  --price-size-desktop: 56px;
+  --price-size-mobile: 40px;
+  --price-line-height: 1;
+  --price-letter-spacing: -0.02em;
+  --radius-none: 0px;
+  --radius-sm: 6px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-chip: 32px;
+  --radius-pill: 999px;
+  --space-unit: 8;
+  --space-section-desktop: 96px;
+  --space-section-mobile: 56px;
+  --space-container: 1360px;
+  --space-gutter-mobile: 20px;
+  --space-gutter-desktop: 32px;
+  --space-card-padding: 20px;
+  --space-card-gap: 24px;
+  --space-headline-to-line: 16px;
+  --shadow-card: none;
+  --shadow-raised: 0 8px 24px rgba(0,0,0,0.18);
+  --shadow-focus: 0 0 0 2px #ffffff, 0 0 0 4px #25282b;
+  --shadow-focus-dark: 0 0 0 2px #16181a, 0 0 0 4px #ffffff;
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+  --motion-slow: 640ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.05,.7,.1,1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #16181a;
+    --color-surface: #25282b;
+    --color-text: #ffffff;
+    --color-text-muted: #b4b8bc;
+    --color-border: #3a3e42;
+    --color-primary: #e60000;
+    --color-on-primary: #ffffff;
+    --color-accent: #ffffff;
+    --color-on-accent: #25282b;
+    --color-link: #ff6666;
+    --color-success: #3ccf7e;
+    --color-error: #ff6b6b;
+    --color-primary-hover: #c80000;
+    --color-border-strong: #b4b8bc;
+    --color-hero-band: #0e0f10;
+    --color-on-hero: #ffffff;
+    --color-on-hero-muted: #c3c6ca;
+    --color-promo-band: #e60000;
+    --color-on-promo: #ffffff;
+    --color-scrim: #000000;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #16181a;
+  --color-surface: #25282b;
+  --color-text: #ffffff;
+  --color-text-muted: #b4b8bc;
+  --color-border: #3a3e42;
+  --color-primary: #e60000;
+  --color-on-primary: #ffffff;
+  --color-accent: #ffffff;
+  --color-on-accent: #25282b;
+  --color-link: #ff6666;
+  --color-success: #3ccf7e;
+  --color-error: #ff6b6b;
+  --color-primary-hover: #c80000;
+  --color-border-strong: #b4b8bc;
+  --color-hero-band: #0e0f10;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #c3c6ca;
+  --color-promo-band: #e60000;
+  --color-on-promo: #ffffff;
+  --color-scrim: #000000;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 44px;
+    --display_light-size: 24px;
+    --h2-size: 32px;
+    --h3-size: 21px;
+    --eyebrow-size: 13px;
+    --lead-size: 18px;
+    --body-size: 16px;
+    --caption-size: 14px;
+    --button-size: 17px;
+    --price-size: 40px;
+  }
+}

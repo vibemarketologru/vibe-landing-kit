@@ -63,6 +63,14 @@
     "marquee-logos": "полоса клиентов под первым экраном"
     // служебные ключи рядом со слагами: levels, speed, not_for_this_style
   },
+  "media": {                                                 // как бренд ставит медиа (с 1.1.0); навык landing-media
+    "hero": "что на первом экране: кадр, петля, интерфейс продукта — и как",
+    "video_in_flow": "где видео ниже первого экрана и как оно запускается",
+    "imagery": "какие кадры и иллюстрации",
+    "character": "уместен ли персонаж или маскот и как он повторяется",
+    "audio": "уместна ли аудиоверсия страницы и где кнопка",
+    "avoid": ["чего не ставить"]
+  },
   "ab_axes": {
     "vary": { "hero_layout": ["split", "centered"], "cta_color_role": ["primary", "accent"], "headline_scale": ["xl", "l"], "motion_level": ["none", "subtle", "rich"], "social_proof_position": ["under_hero", "before_form"] },
     "fixed": ["palette", "fonts", "radius"],
@@ -85,7 +93,37 @@
 - motion_map описывает каждый рецепт из motion_recipes и не называет чужих (кроме служебных levels/speed/not_for_this_style);
 - ab_axes.default задан для каждой оси из vary, и его значение есть в списке этой оси; пояснения — только в legend (объект) и notes (строка);
 - каждый рецепт из motion/ используется хотя бы одной дизайн-системой (при проверке всего каталога);
-- summary ≤ 400 символов, do/dont по 4–7 пунктов.
+- media: непустые строки hero, video_in_flow, imagery, character, audio и непустой список avoid;
+- summary ≤ 400 символов, do/dont по 4–7 пунктов, prompt_snippet 80–150 слов;
+- дополнительные пары цветов: любой ключ `on_X` (и `on_X_muted`) читается по заливке `X` не ниже 4.5; подпись кнопки на `primary_hover` / `primary_active` (или свой `on_primary_hover`) — тоже 4.5. Неактивные состояния (`*_disabled`) WCAG 1.4.3 от контраста освобождает.
+
+### Необязательные поля (с 1.2.0)
+
+Старые записи их не имеют; если поле есть — `check.mjs` проверяет его форму.
+
+```json
+{
+  "media": { "geometry": { "hero_desktop": "16:9", "hero_mobile": "9:16", "card": "4:5", "portrait": "3:4", "gallery": "3:2", "logo_strip": "монохромные, высота 24px" } },
+  "states": {
+    "button": { "hover": "…", "focus_visible": "…", "active": "…", "disabled": "…", "loading": "…" },   // hover, focus_visible, disabled — обязательны
+    "input":  { "focus": "…", "error": "…", "disabled": "…" }                                           // focus, error — обязательны
+  },
+  "signature": ["2–4 приёма, по которым стиль узнают, — словами, без логотипов и того, что из них выросло"],
+  "voice": "голос текста: тон, длина фраз, чего не писать",   // строка ИЛИ объект { "tone": "…", "headline_formula": "…", … }
+  "type_features": { "prices": "font-variant-numeric: tabular-nums" },
+  "color_presets": { "amber": { "light": { "primary": "#…", "on_primary": "#…" }, "dark": { … } } },   // сдвиг основного цвета для совпадающей ниши (135-ФЗ ст. 14.6); проще — пара primary_alt / on_primary_alt в цветах обеих тем
+  "fonts": [ { "family": "Alegreya", "styles": ["normal", "italic"] } ],   // курсив нужен — подключайте его файл
+  "tokens": {
+    "stroke":  { "width": "3px" },                          // рамки неоэкспрессии
+    "glass":   { "bg": "rgba(…)", "blur": "16px" },          // значения rgba и градиенты, не hex
+    "overlay": { "hero": "linear-gradient(…)" }             // затемнение под белым текстом на кадре
+  }
+}
+```
+
+Дополнительные ключи цветов (`band`, `on_band`, `card_*`, `tile_*`, `sticky_*`, `primary_alt`…) допустимы в обеих темах; сборщик `theme.css` выводит каждый в переменную `--color-<ключ>`.
+
+Число рецептов анимации: у новых записей 2–4 «характерных» рецепта. Служебные (`form-success`, `accordion-smooth`, `sticky-cta-mobile`) можно добавлять сверх этого — это поведение формы и навигации, а не характер стиля.
 
 Сводка для выбора — `catalog.json` в корне каталога (слаг, имя, вид, summary, best_for, goals, mood; у анимаций — категория, reduced_motion, lcp_risk, use_for). Пересобирается из файлов, руками не правится.
 
@@ -113,5 +151,5 @@
   "source": { "inspired_by": "…(MIT)", "notes": "…" }
 }
 ```
-Требования: css содержит `prefers-reduced-motion`; анимируются только transform/opacity/filter/clip-path;
+Требования: css содержит `prefers-reduced-motion`; анимируются только transform/opacity/filter/clip-path (исключение — `stroke-dashoffset` тонкой SVG-линии, с пометкой в `perf`); анимации по прокрутке (`animation-timeline`) — только внутри `@supports` и с запасным путём в `js`; `gsap_alt` может быть текстом, если на GSAP делать нечего;
 бесконечные анимации имеют паузу (hover/focus/кнопка) — WCAG 2.2.2; js без внешних зависимостей.

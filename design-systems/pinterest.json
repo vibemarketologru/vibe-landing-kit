@@ -1,0 +1,652 @@
+{
+  "slug": "pinterest",
+  "name": "Pinterest",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Pinterest. Не аффилировано с Pinterest; без логотипов и фирменных шрифтов.",
+  "summary": "Снимок и есть карточка: работы стоят кладкой в родных пропорциях 2:3, 3:4, 4:5 с радиусом 16px и зазором 8px, в углу кадра — белая подпись-пилюля. Вокруг тихий тёплый интерфейс (#f6f6f3 и чернила), красный — только на главной кнопке в липкой шапке, чипы-фильтры пилюлями, крупный заголовок 600 с отрицательным трекингом, радиусы строго 16/32/пилюля.",
+  "summary_en": "The photo is the card: works tile in a masonry grid at their natural 2:3, 3:4 and 4:5 ratios with 16px corners and 8px gutters, a white label pill in the corner of the frame. Around them a quiet warm interface (#f6f6f3 and ink), red only on the main button in the sticky header, pill filter chips, a large 600-weight headline with negative tracking, and strictly three radii: 16, 32 and pill.",
+  "best_for": [
+    "ремонт и дизайн интерьера",
+    "кухни и мебель на заказ",
+    "маникюр, брови, визаж и другие бьюти-мастера",
+    "фотографы и видеографы",
+    "флористика и оформление событий",
+    "свадебные агентства и декор",
+    "ландшафтный дизайн и озеленение"
+  ],
+  "goals": [
+    "заявка на расчёт по понравившейся работе",
+    "запись к мастеру",
+    "консультация по проекту",
+    "просмотр портфолио до заявки"
+  ],
+  "mood": [
+    "вдохновляющий",
+    "тёплый",
+    "визуальный",
+    "дружелюбный",
+    "спокойный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f6f6f3",
+        "text": "#111111",
+        "text_muted": "#62625b",
+        "border": "#dadad3",
+        "primary": "#e0062a",
+        "on_primary": "#ffffff",
+        "accent": "#111111",
+        "on_accent": "#ffffff",
+        "link": "#211922",
+        "success": "#0b7a43",
+        "error": "#b00f1f",
+        "primary_hover": "#c20025",
+        "primary_active": "#a8001c",
+        "surface_soft": "#fbfbf9",
+        "secondary_bg": "#e5e5e0",
+        "on_secondary": "#111111",
+        "secondary_pressed": "#c8c8c1",
+        "border_input": "#91918c",
+        "text_disabled": "#91918c",
+        "focus_ring": "#435ee5",
+        "focus_gap": "#ffffff",
+        "pill_on_photo": "#ffffff",
+        "on_pill_on_photo": "#111111",
+        "scrim": "#000000",
+        "primary_alt": "#8a2f5c",
+        "on_primary_alt": "#ffffff"
+      },
+      "dark": {
+        "background": "#141413",
+        "surface": "#232320",
+        "text": "#f6f6f3",
+        "text_muted": "#a9a9a1",
+        "border": "#3a3a35",
+        "primary": "#e0062a",
+        "on_primary": "#ffffff",
+        "accent": "#f6f6f3",
+        "on_accent": "#111111",
+        "link": "#f6f6f3",
+        "success": "#5fd394",
+        "error": "#ff8a8a",
+        "primary_hover": "#c20025",
+        "primary_active": "#a8001c",
+        "surface_soft": "#1b1b19",
+        "secondary_bg": "#33332f",
+        "on_secondary": "#f6f6f3",
+        "secondary_pressed": "#46463f",
+        "border_input": "#77776f",
+        "text_disabled": "#77776f",
+        "focus_ring": "#8fa2ff",
+        "focus_gap": "#141413",
+        "pill_on_photo": "#ffffff",
+        "on_pill_on_photo": "#111111",
+        "scrim": "#000000",
+        "primary_alt": "#8a2f5c",
+        "on_primary_alt": "#ffffff"
+      },
+      "notes": "primary #e0062a — фирменный красный, сдвинутый на шаг от цвета знака (#e60023): белый текст 4.97:1 вместо 4.78, оттенок тот же. Это заливка главной кнопки и только она: текстом по фону красный не ставится. primary_hover #c20025 (6.32) и primary_active #a8001c (7.83) — на шаг и два темнее, как у бренда между красным и нажатым. accent — «чернильная» кнопка (как активный чип бренда): #111111 с белым в светлой теме, #f6f6f3 с чёрным в тёмной. link #211922 — тёплые чернила бренда для ссылок в тексте (17.1:1), ссылка всегда подчёркнута. border_input #91918c даёт рамке поля 3.17:1 (WCAG 1.4.11). focus_ring #435ee5 — синее кольцо фокуса бренда (5.29 на белом), в тёмной теме #8fa2ff (7.71). pill_on_photo — белая подпись-пилюля на снимке в обеих темах, текст на ней всегда #111111. Тёмной темы у веб-сайта бренда нет — спроектирована в тех же тёплых серых: #141413 / #232320 / #f6f6f3. primary_alt #8a2f5c (7.95 с белым) — основной цвет для совпадающей ниши (подборки идей, мудборды, фотостоки)."
+    },
+    "typography": {
+      "display": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "64px",
+        "size_mobile": "38px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.025em",
+        "note": "у бренда 70px/600/-1.2px; для кириллицы 64px, трекинг сохранён относительным"
+      },
+      "h2": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "36px",
+        "size_mobile": "28px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.02em"
+      },
+      "h3": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.3,
+        "letter_spacing": "0"
+      },
+      "lead": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body_strong": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.4,
+        "letter_spacing": "0",
+        "note": "пункты шапки, подписи полей, вопросы FAQ"
+      },
+      "pin_title": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.35,
+        "letter_spacing": "0",
+        "note": "строка под снимком в кладке"
+      },
+      "pill_label": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.2,
+        "letter_spacing": "0",
+        "note": "подпись-пилюля на снимке, одна строка"
+      },
+      "button": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.25,
+        "letter_spacing": "0",
+        "note": "«от 186 000 ₽» в лайтбоксе и карточках цен"
+      },
+      "caption": {
+        "family": "Golos Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      }
+    },
+    "radius": {
+      "sm": "8px",
+      "md": "16px",
+      "lg": "32px",
+      "pill": "9999px",
+      "note": "Три значения в работе: 16px — кнопки, поля, снимки в кладке, карточки; 32px — крупные снимки, форма-окно, лайтбокс, шторка на телефоне; пилюля — чипы, подписи на снимках, круглые кнопки, аватары. 8px — только чекбокс и подсказка. Острых углов у нажимаемого и у снимков нет."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "64px",
+      "section_mobile": "40px",
+      "container": "1280px",
+      "gutter_desktop": "24px",
+      "gutter_mobile": "16px",
+      "masonry_gap": "8px",
+      "masonry_gap_mobile": "6px",
+      "card_padding": "32px",
+      "pill_inset": "12px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 0 16px rgba(0,0,0,0.12)",
+      "pill": "0 1px 4px rgba(0,0,0,0.16)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #435ee5",
+      "focus_dark": "0 0 0 2px #141413, 0 0 0 4px #8fa2ff",
+      "note": "Снимки и карточки плоские. raised — только форма-окно, лайтбокс и шторка; pill — только белая подпись-пилюля и круглые кнопки поверх снимка, чтобы они читались на любом кадре. Подложка окна — scrim 50% (70% в тёмной теме)."
+    },
+    "motion": {
+      "fast": "100ms",
+      "base": "200ms",
+      "slow": "300ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "note": "Тихо и тактильно: снимок при наведении темнеет на 10%, при нажатии — scale(.98) за 100ms; кнопки при нажатии scale(.97). Кладка при догрузке проявляется снизу на 12px."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Golos Text",
+      "fontsource": "golos-text",
+      "role": "display+body",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/golos-text — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Pin Sans (проприетарный)",
+      "why": "дружелюбный гротеск с округлыми овалами и компактной шириной, спроектированный с кириллицей в основе; одна гарнитура на всю шкалу, как у бренда; на 600 с отрицательным трекингом даёт тот же плотный «тёплый» заголовок"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 20px",
+      "font": "button",
+      "hover": "фон primary_hover за 100ms",
+      "active": "фон primary_active и scale(.97)",
+      "use": "одна красная кнопка в кадре, считая шапку: «Рассчитать кухню», «Хочу так же»"
+    },
+    "button_secondary": {
+      "bg": "secondary_bg",
+      "color": "on_secondary",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 20px",
+      "font": "button",
+      "active": "фон secondary_pressed",
+      "use": "«Смотреть все работы», «Показать ещё», «Отмена»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 20px",
+      "font": "button",
+      "use": "вариант главной кнопки для A/B (cta_color_role=accent) — чернильная, как выбранный чип"
+    },
+    "button_tertiary": {
+      "bg": "transparent",
+      "color": "text",
+      "radius": "md",
+      "padding": "12px 8px",
+      "font": "button",
+      "decoration": "подчёркивание 1px при наведении и всегда внутри текста",
+      "use": "«Как считаем цену →»"
+    },
+    "icon_button": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "size": "40px",
+      "on_photo": "фон pill_on_photo и тень pill",
+      "hit_area": "48px",
+      "use": "стрелки ленты, закрыть, развернуть снимок"
+    },
+    "pin": {
+      "bg": "surface",
+      "radius": "md",
+      "padding": "0",
+      "ratio": "родная пропорция файла (атрибуты width/height, aspect-ratio); object-fit: cover только внутри этой пропорции",
+      "overlay": "pill_label в левом нижнем углу с отступом 12px — у 2–3 снимков из 7",
+      "below": "по желанию одна строка pin_title под снимком и строка caption text_muted («Угловая · 9 м² · 21 день»)",
+      "hover": "снимок темнеет на 10% слоем scrim, курсор zoom-in",
+      "active": "scale(.98)",
+      "click": "открывает lightbox",
+      "use": "работа в кладке"
+    },
+    "pin_large": {
+      "base": "pin",
+      "radius": "lg",
+      "use": "крупные снимки в коллаже первого экрана и в feature_row"
+    },
+    "pill_label": {
+      "bg": "pill_on_photo",
+      "color": "on_pill_on_photo",
+      "radius": "pill",
+      "padding": "6px 12px",
+      "font": "pill_label",
+      "shadow": "pill",
+      "max_width": "ширина снимка минус 24px, одна строка с многоточием",
+      "use": "подпись на снимке: тип работы, площадь или срок — без цены"
+    },
+    "filter_chip": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "height": "40px",
+      "padding": "8px 16px",
+      "font": "button",
+      "active": "фон accent, текст on_accent — чип переворачивается целиком",
+      "hit_area": "44px",
+      "use": "фильтр кладки: «Все · Угловые · Прямые · П-образные · С островом»"
+    },
+    "masonry": {
+      "columns": "4 (≥1024px), 3 (768–1023px), 2 (<768px)",
+      "gap": "masonry_gap 8px, на телефоне 6px",
+      "implementation": "CSS columns с break-inside: avoid или grid с рядами по 8px; порядок чтения — по колонкам сверху вниз",
+      "load_more": "button_secondary «Показать ещё 12 работ» по центру, без бесконечной прокрутки"
+    },
+    "feature_row": {
+      "layout": "2 колонки с чередованием сторон: pin_large 4:5 и текст (h2, 2–3 строки body, button_primary или button_secondary)",
+      "bg": "background или surface через ряд",
+      "use": "выгоды через работы, а не через иконки"
+    },
+    "category_tile": {
+      "bg": "surface",
+      "radius": "md",
+      "padding": "16px",
+      "content": "снимок 1:1 с радиусом 16px + подпись body_strong",
+      "use": "виды работ, шаги"
+    },
+    "lightbox": {
+      "element": "<dialog>",
+      "bg": "background",
+      "radius": "lg",
+      "shadow": "raised",
+      "backdrop": "scrim 50% (70% в тёмной теме)",
+      "layout": "снимок в родной пропорции слева, справа панель: h3, строка «Угловая · 9 м² · 21 день», цена price «от 186 000 ₽», button_primary «Хочу так же» — открывает форму с номером работы, icon_button «Закрыть»",
+      "close": "Esc, крестик и клик по подложке",
+      "mobile": "шторка снизу во всю ширину с радиусом 32px сверху"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 16px",
+      "label": "над полем body_strong 14px, зазор 8px",
+      "placeholder": "text_muted",
+      "focus": "рамка 2px text внутри + внешнее кольцо 2px focus_ring через зазор 2px",
+      "error": "рамка 2px error, под полем 14px error"
+    },
+    "checkbox": {
+      "size": "24px",
+      "radius": "sm",
+      "border": "2px solid border_input",
+      "checked": "фон accent, галочка on_accent",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных"
+    },
+    "modal_card": {
+      "bg": "background",
+      "radius": "lg",
+      "padding": "32px",
+      "shadow": "raised",
+      "width": "до 480px",
+      "use": "форма заявки в окне и на полосе surface"
+    },
+    "review_pin": {
+      "base": "pin",
+      "content": "снимок результата клиента + под ним цитата body до 4 строк, аватар-круг 32px и имя pin_title",
+      "use": "отзывы живут в той же кладке, что и работы"
+    },
+    "price_card": {
+      "bg": "surface",
+      "radius": "md",
+      "padding": "24px",
+      "content": "h3, price «от 186 000 ₽», 3–4 строки что входит, button_secondary",
+      "featured": "фон accent, текст on_accent, кнопка button_primary",
+      "use": "пакеты: «Проект», «Проект + производство», «Под ключ»"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "question": "body_strong 17px",
+      "chevron": "в icon_button 40px справа",
+      "answer": "body text_muted"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "64px",
+      "sticky": "да, на любой ширине; линия 1px border снизу появляется после прокрутки",
+      "left": "текстовый логотип клиента 20px/700 цвета text (не красный)",
+      "center": "3–4 якорные ссылки body_strong",
+      "right": "телефон body_strong + button_primary 40px «Рассчитать» — красная кнопка видна всегда",
+      "mobile": "56px: логотип, button_primary 40px, icon_button меню"
+    },
+    "footer": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "padding": "32px 24px",
+      "columns": "4 колонки ссылок 14px text_muted, заголовки 14px/700 text; на телефоне — аккордеон",
+      "legal": "caption text_muted: реквизиты, «Политика обработки персональных данных», год"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Контейнер 1280px, 12 колонок. Колонки 1–5: H1 display 64px/600 с трекингом -0.025em в 2–3 строки («Кухни, которые хочется сохранить»), лид 18px text_muted, button_primary «Рассчитать мою кухню» и button_secondary «Смотреть 240 работ», строка доверия body_strong «4,9 · 312 отзывов · 12 лет». Колонки 6–12: коллаж из 5–7 работ кладкой в 3 колонки с зазором 8px, средняя колонка опущена на 48px, один снимок pin_large с радиусом 32px, у 2–3 снимков — белые подписи-пилюли («Угловая, 9 м²», «Лофт», «Остров»). Нижний край коллажа уходит под край экрана — видно, что ниже есть ещё. Вариант centered_wall: заголовок и две кнопки по центру поверх верхней части стены из 12–16 работ во всю ширину; стена затухает к фону маской сверху вниз под текстом, а текст стоит на чистом фоне.",
+    "section_order": [
+      "nav",
+      "hero",
+      "filter_gallery",
+      "feature_rows",
+      "before_after",
+      "how",
+      "reviews",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "filter_gallery": "ряд filter_chip над кладкой из 12–20 работ; клик по работе — lightbox с ценой, сроком и «Хочу так же»; внизу button_secondary «Показать ещё 12 работ»",
+      "feature_rows": "2–3 feature_row: «Проект за 3 дня — с визуализацией», «Производство 21 день», «Монтаж за 1 день» — каждую выгоду показывает снимок 4:5",
+      "before_after": "только для ремонта, химчистки, маникюра и ландшафта: 1–2 сравнения «до/после» в рамке 4:5 с радиусом 32px",
+      "how": "4 category_tile: «Шаг 1» caption text_muted, h3, две строки",
+      "reviews": "review_pin в той же кладке, 6–9 отзывов со снимком результата",
+      "pricing": "2–3 price_card, средняя — featured",
+      "faq": "5–7 faq_item в колонке 760px",
+      "lead_form": "modal_card по центру на полосе surface: слева мини-коллаж из 3 работ, справа поля; если человек пришёл из лайтбокса — наверху карточки номер и снимок работы 64px"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор 24px; кладка — 4 колонки (≥1024px), 3 (768–1023px), 2 (<768px), зазор 8px; пропорции снимков родные",
+    "mobile_notes": "Меньше 768px: липкая шапка 56px, в ней красная кнопка «Рассчитать» 40px на любом экране — отдельная липкая кнопка снизу не нужна. H1 38px/600, трекинг -0.02em. Коллаж первого экрана — 2 колонки по 2 снимка, правая опущена на 32px, под кнопками. Чипы-фильтры — горизонтальная лента с прокруткой и затуханием правого края. Кладка — 2 колонки с зазором 6px, подпись-пилюля 12px. Лайтбокс и форма — шторка снизу с радиусом 32px сверху, кнопка во всю ширину 48px. Поля страницы 16px, секции 40px, подвал — аккордеон.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px",
+      "desktop": "≥1024px",
+      "wide": "≥1440px — кладка 5 колонок"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "work_ref",
+      "photo"
+    ],
+    "consent_152fz": true,
+    "style": "modal_card с радиусом 32px: заголовок h3 «Рассчитаем вашу кухню за 30 минут», поля «Имя» и «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) — обязательные; скрытое work_ref — номер работы, из лайтбокса которой пришёл человек (показывается снимком 64px и подписью «Как на работе №118»); необязательное «Фото помещения или пример» — кнопка button_secondary со значком скрепки. Чекбокс 24px «Я согласен(на) на обработку персональных данных по 152-ФЗ» не отмечен заранее, ссылка «Политика обработки данных» подчёркнута цветом link. Красная кнопка «Получить расчёт» во всю ширину 48px, под ней caption text_muted «Пришлём 3 похожих проекта с ценами». Кнопка активна всегда, ошибки — видимым текстом цветом error под полем; при сбое сети — текст и кнопка «Отправить ещё раз», введённое и приложенное фото не теряются.",
+    "success_state": "Содержимое карточки меняется на месте: круг 56px фона surface с галочкой цвета success, h3 «Заявка принята», строка «Пришлём 3 похожих проекта с ценами в течение 30 минут», button_secondary «Смотреть ещё работы» (закрывает окно и возвращает к кладке). Фокус — на заголовок, aria-live=polite. Рецепт form-success."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "before-after-slider",
+    "accordion-smooth",
+    "form-success",
+    "scroll-story-steps",
+    "tabs-indicator",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "всё статично; «до/после» — две картинки рядом с подписями",
+      "subtle": "по умолчанию: все четыре рецепта с настройками ниже; + scroll-story-steps; + tabs-indicator; + form-field-feedback",
+      "rich": "subtle + fade-up-stagger у feature_row и price_card"
+    },
+    "fade-up-stagger": "снимки кладки при догрузке «Показать ещё» и отзывы; --reveal-dist 12px, --reveal-dur 300ms, --reveal-step 40ms, --reveal-max 8; первые 8 снимков и коллаж первого экрана стоят сразу — это LCP",
+    "before-after-slider": "только в нишах ремонта, химчистки, маникюра и ландшафта: кадр 4:5 или 3:4 с радиусом 32px, ручка — белый круг 40px с тенью pill, «До» и «После» — белые подписи-пилюли в верхних углах; --ba-ratio 4/5",
+    "accordion-smooth": "faq_item на линиях 1px border без карточек, вопрос 17px/600, шеврон в круглой кнопке 40px фона surface, раскрытие 200ms",
+    "form-success": "ответ в modal_card: круг 56px фона surface с галочкой цвета success, «Заявка принята», обещание трёх похожих проектов и button_secondary «Смотреть ещё работы»",
+    "scroll-story-steps": "how «от идеи до готового»: кадры из кладки работ, --sst-radius 16px",
+    "tabs-indicator": "filter_gallery: вкладки категорий работ, пилюля, --tbi-edge: var(--text)",
+    "form-field-feedback": "поля radius 16px"
+  },
+  "media": {
+    "hero": "Коллаж из 5–7 настоящих работ кладкой рядом с заголовком — не один кадр на весь экран: разные пропорции (2:3, 3:4, 4:5, 1:1), у двух-трёх снимков подпись-пилюля в углу; нижний край коллажа уходит за край экрана.",
+    "video_in_flow": "Беззвучные петли 3–6 с стоят прямо в кладке как обычные снимки (сборка кухни, сбор букета, нанесение покрытия), пропорция 9:16 или 4:5; играют, пока в кадре, и останавливаются вне кадра; видео со звуком — в лайтбоксе по нажатию, с субтитрами.",
+    "imagery": "Настоящие работы мастера при естественном свете: интерьеры, крупные планы деталей и материалов, руки в работе. Разные пропорции — достоинство, всё в квадрат не резать. Светлые живые кадры, текста поверх снимка нет — кроме подписи-пилюли.",
+    "character": "Мастер или дизайнер лицом — в одном-двух снимках кладки (портрет 4:5) и рядом с отзывами; маскоты не нужны.",
+    "audio": "Аудиоверсия не нужна; голосовой отзыв клиента допустим внутри лайтбокса по кнопке.",
+    "avoid": [
+      "стоковые интерьеры и чужие работы из соцсетей",
+      "одинаковая квадратная обрезка всех снимков",
+      "тёмные драматичные кадры",
+      "цены и тексты поверх снимка, кроме подписи-пилюли",
+      "значок-булавка и кнопка «Сохранить» — приёмы самой соцсети"
+    ],
+    "geometry": {
+      "hero_desktop": "коллаж: 5–7 снимков 2:3, 3:4, 4:5 и 1:1 в 3 колонки",
+      "hero_mobile": "коллаж: 4 снимка в 2 колонки",
+      "card": "родная пропорция файла, обычно 2:3, 3:4 или 4:5",
+      "gallery": "родные пропорции в кладке, без обрезки в квадрат",
+      "portrait": "4:5",
+      "feature_row": "4:5",
+      "category_tile": "1:1",
+      "before_after": "4:5 или 3:4",
+      "video_pin": "9:16 или 4:5",
+      "avatar": "1:1 круг 32–48px",
+      "logo_strip": "не используется"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "красная → primary_hover #c20025, серая → #dadad3, чернильная → #333333 (в тёмной #dadad3); 100ms, без сдвига",
+      "focus_visible": "двойное кольцо бренда: зазор 2px цвета фона + кольцо 2px focus_ring (#435ee5, в тёмной теме #8fa2ff)",
+      "active": "фон на шаг темнее (красная #a8001c, серая #c8c8c1) и scale(.97) за 100ms",
+      "disabled": "фон surface, текст text_disabled, cursor: not-allowed; в форме заявки не применяется",
+      "loading": "подпись заменяется кругом-индикатором 18px цвета on_primary по центру, ширина кнопки фиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "рамка 2px text внутри поля и внешнее кольцо 2px focus_ring через зазор 2px — двойное кольцо",
+      "error": "рамка 2px error, под полем текст 14px error с пояснением",
+      "disabled": "фон surface, рамка border, текст text_disabled"
+    },
+    "pin": {
+      "hover": "затемнение снимка 10% слоем scrim, курсор zoom-in, подпись-пилюля остаётся",
+      "focus_visible": "двойное кольцо focus_ring вокруг снимка с радиусом 16px",
+      "active": "scale(.98) за 100ms"
+    },
+    "chip": {
+      "hover": "фон secondary_bg",
+      "active": "фон accent, текст on_accent",
+      "focus_visible": "двойное кольцо focus_ring"
+    }
+  },
+  "signature": [
+    "Кладка работ в родных пропорциях с зазором 8px: снимок и есть карточка — без полей, рамок и теней.",
+    "Белая подпись-пилюля в углу снимка («Угловая, 9 м²», «Нюд, 2 часа») — единственный текст поверх фото.",
+    "Один красный на экране — главная кнопка, которая живёт в липкой шапке на любой ширине; всё остальное тёплые серые и чернила.",
+    "Три радиуса и ничего между (16px, 32px, пилюля) и крупный заголовок 600 с отрицательным трекингом."
+  ],
+  "voice": "Тепло и конкретно, как подпись под своей работой: что сделано, для кого, за какой срок и сколько стоит («Угловая кухня 9 м² · 21 день · от 186 000 ₽»). Короткие фразы, без «идей для вдохновения» и превосходных степеней; кнопки — действие с выгодой: «Рассчитать мою кухню», «Хочу так же».",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; «от 186 000 ₽» с неразрывными пробелами",
+    "display": "letter-spacing: -0.025em на display (-0.02em на телефоне) и -0.02em на h2; основной текст без трекинга",
+    "pill_labels": "white-space: nowrap; text-overflow: ellipsis — подпись на снимке всегда в одну строку"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_collage",
+        "centered_wall"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "gallery_filter": [
+        "chips",
+        "none"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "in_gallery"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "masonry_gap",
+      "natural_ratios"
+    ],
+    "default": {
+      "hero_layout": "split_collage",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "gallery_filter": "chips",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero"
+    },
+    "legend": {
+      "hero_layout": {
+        "split_collage": "заголовок слева, коллаж кладкой справа",
+        "centered_wall": "заголовок по центру над стеной работ во всю ширину"
+      },
+      "cta_color_role": {
+        "primary": "красная главная кнопка",
+        "accent": "чернильная главная кнопка, красного на странице нет"
+      },
+      "headline_scale": {
+        "xl": "64px / 38px",
+        "l": "48px / 32px"
+      },
+      "gallery_filter": {
+        "chips": "чипы-фильтры над кладкой",
+        "none": "кладка без фильтров"
+      },
+      "social_proof_position": {
+        "under_hero": "строка «4,9 · 312 отзывов» в первом экране",
+        "in_gallery": "отзывы-снимки вперемешку с работами в кладке"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первая гипотеза для портфолио — gallery_filter: помогают ли фильтры дойти до лайтбокса и «Хочу так же»."
+  },
+  "do": [
+    "Давать работам стоять в родных пропорциях кладкой с зазором 8px — снимок и есть карточка, без полей, рамок и теней.",
+    "Держать красный только заливкой главной кнопки: не больше одной красной кнопки в кадре, считая шапку; чипы и вторичные кнопки — тёплые серые и чернила.",
+    "Подписывать 2–3 снимка из 7 белой пилюлей в углу: тип работы, площадь или срок — коротко и в одну строку.",
+    "Использовать ровно три радиуса: 16px, 32px и пилюлю.",
+    "Показывать в лайтбоксе цену и срок каждой работы и кнопку «Хочу так же», которая переносит номер работы в форму.",
+    "Делать фокус двойным кольцом: зазор 2px цвета фона и кольцо 2px #435ee5 (в тёмной теме #8fa2ff).",
+    "В совпадающей нише (подборки идей, мудборды, фотостоки, соцсети с досками) сдвинуть красный на primary_alt #8a2f5c и не брать значок-булавку, кнопку «Сохранить» и поиск-пилюлю в центре шапки (135-ФЗ, ст. 14.6)."
+  ],
+  "dont": [
+    "Не резать все снимки в квадрат и не выравнивать кладку по высоте — ровная сетка убивает стиль.",
+    "Не класть тени на снимки и карточки: тень только у окна, лайтбокса и подписи-пилюли на фото.",
+    "Не вводить третий радиус между 16 и 32px и не делать острых углов у кнопок и снимков.",
+    "Не ставить красный текстом по фону и под мелкие подписи — он живёт только заливкой кнопки.",
+    "Не использовать логотип, красную букву-знак, фирменный шрифт и чужие снимки из соцсети — только работы клиента.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не сбрасывать форму и приложенное фото при ошибке."
+  ],
+  "prompt_snippet": "Build a Russian portfolio lead landing in a Pinterest-like style. Warm quiet chrome: white #ffffff page, cream #f6f6f3 surfaces, ink #111111, muted #62625b, hairlines #dadad3; dark theme #141413 / #232320 / #f6f6f3. One red, #e0062a with white text, only on the main button, kept in the sticky header at every width. Self-hosted Golos Text: H1 64/38px weight 600 with -0.025em tracking, body 16px. Works tile in a masonry grid at natural ratios (2:3, 3:4, 4:5), 16px corners, 8px gutters; the photo is the card, no padding or shadows. Two or three photos carry a white pill label in the corner. Pill filter chips invert to ink when active. Radii are only 16px, 32px and pill. A lightbox shows price, lead time and a \"Хочу так же\" button that carries the work number into a 32px-radius form with name, phone and an unchecked 152-FZ consent. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/pinterest/DESIGN.md, commit f696123",
+    "notes": "Pin Sans заменён на Golos Text (OFL-1.1, кириллица в основе): Inter и Manrope уже заняты в каталоге, а Golos даёт тот же тёплый плотный заголовок на 600 с отрицательным трекингом. Фирменный красный #e60023 сдвинут на #e0062a (4.97 с белым), чтобы не совпадать с цветом знака; добавлены наведение и нажатие на шаг темнее. Тёмной темы у сайта бренда нет — спроектирована в тех же тёплых серых. Серый #91918c оставлен только для рамок полей (3.17:1) и неактивного текста; подсказки в полях — text_muted. Добавлены success и error под текст ошибок. Заголовок 70px уменьшен до 64px ради длинных русских слов. Поиск в центре шапки, значок-булавка и «Сохранить» убраны; кладка стала портфолио с лайтбоксом «Хочу так же» и формой с номером работы и согласием по 152-ФЗ. Добавлены primary_alt для совпадающей ниши, состояния, геометрия медиа и голос текста."
+  }
+}

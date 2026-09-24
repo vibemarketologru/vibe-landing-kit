@@ -1,0 +1,601 @@
+{
+  "slug": "tesla",
+  "name": "Tesla",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Tesla. Не аффилировано с Tesla; без логотипов и фирменных шрифтов.",
+  "summary": "Интерфейс почти исчезает: каждый крупный блок — кинокадр во весь экран (100vh), сверху по центру название и одна строка, снизу две кнопки одинаковой ширины. Один синий только на главной кнопке, углы 4px, ни теней, ни градиентов, ни рамок; матовая шапка поверх снимка, внизу строка «Задать вопрос», переходы 0,33 с только цветом, насыщенность текста 400–500.",
+  "summary_en": "The interface all but disappears: every major block is a full-viewport cinematic shot (100vh) with the name and one line centred at the top and two equal-width buttons at the bottom. One blue only on the main button, 4px corners, no shadows, gradients or borders; a frosted header over the photo, a persistent \"Ask a question\" bar at the bottom, 0.33s colour-only transitions and type weights of 400–500.",
+  "best_for": [
+    "автосалоны, автоподбор и продажа авто с пробегом",
+    "новостройки и коттеджные посёлки",
+    "загородные дома под ключ",
+    "электромобили и зарядные станции — с другим основным цветом",
+    "солнечные электростанции и накопители — с другим основным цветом",
+    "катера, мототехника, премиальная техника"
+  ],
+  "goals": [
+    "запись на тест-драйв или показ",
+    "заявка на расчёт",
+    "бронирование с предоплатой",
+    "подбор по параметрам"
+  ],
+  "mood": [
+    "минималистичный",
+    "кинематографичный",
+    "технологичный",
+    "сдержанный",
+    "премиальный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f4f4f4",
+        "text": "#171a20",
+        "text_muted": "#5c5e62",
+        "border": "#d0d1d2",
+        "primary": "#3e6ae1",
+        "on_primary": "#ffffff",
+        "accent": "#171a20",
+        "on_accent": "#ffffff",
+        "link": "#393c41",
+        "success": "#1f7a4d",
+        "error": "#b3261e",
+        "primary_hover": "#3457b1",
+        "primary_active": "#2c4a9e",
+        "text_body": "#393c41",
+        "text_placeholder": "#6b6e73",
+        "secondary_bg": "#f4f4f4",
+        "on_secondary": "#393c41",
+        "secondary_hover": "#e8e8e8",
+        "border_soft": "#eeeeee",
+        "on_photo": "#ffffff",
+        "focus_ring": "#171a20",
+        "primary_alt": "#1e6b52",
+        "on_primary_alt": "#ffffff"
+      },
+      "dark": {
+        "background": "#171a20",
+        "surface": "#22252c",
+        "text": "#ffffff",
+        "text_muted": "#a2a3a5",
+        "border": "#393c41",
+        "primary": "#3e6ae1",
+        "on_primary": "#ffffff",
+        "accent": "#ffffff",
+        "on_accent": "#171a20",
+        "link": "#d0d1d2",
+        "success": "#4cc38a",
+        "error": "#ff7b72",
+        "primary_hover": "#3457b1",
+        "primary_active": "#2c4a9e",
+        "text_body": "#d0d1d2",
+        "text_placeholder": "#a2a3a5",
+        "secondary_bg": "#393c41",
+        "on_secondary": "#ffffff",
+        "secondary_hover": "#4a4e55",
+        "border_soft": "#2c3038",
+        "on_photo": "#ffffff",
+        "focus_ring": "#ffffff",
+        "primary_alt": "#1e6b52",
+        "on_primary_alt": "#ffffff"
+      },
+      "notes": "primary #3e6ae1 — синий главной кнопки бренда (4.82 с белым) и единственный хроматический цвет интерфейса; наведение #3457b1 (6.68). accent — «угольная» кнопка #171a20 с белым в светлой теме и белая с угольным текстом в тёмной — вариант главной для A/B. Вторая кнопка всегда светлая: secondary_bg #f4f4f4 с графитовым текстом #393c41 (10.07:1), а поверх снимка — матовое стекло tokens.glass.button_on_photo с угольным текстом. text_placeholder #6b6e73 (4.65 на #f4f4f4) вместо фирменного #8e8e8e (3.3 — нечитаемо). on_photo — белый текст поверх кадра: он держит 4.5:1 только на тёмной зоне снимка, поэтому зона под заголовком и под кнопками проверяется, а при нужде затемняется слоем tokens.overlay. Красный цвет знака не используется нигде, error — #b3261e. Тёмная тема построена на фирменном угольном #171a20 (у бренда это цвет текста и тёмных панелей). primary_alt #1e6b52 (6.4 с белым) — основной цвет для совпадающей ниши (электромобили, зарядные и солнечные станции)."
+    },
+    "glass": {
+      "nav": "rgba(255,255,255,0.75)",
+      "nav_dark": "rgba(23,26,32,0.75)",
+      "button_on_photo": "rgba(244,244,244,0.65)",
+      "blur": "backdrop-filter: blur(20px) saturate(1.2)",
+      "note": "Матовое стекло — единственный слой глубины: шапка после первой прокрутки и светлая кнопка поверх снимка. Без поддержки backdrop-filter — сплошной #ffffff (шапка) и #f4f4f4 (кнопка)."
+    },
+    "overlay": {
+      "photo_top": "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 32%)",
+      "photo_bottom": "linear-gradient(to top, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 32%)",
+      "scrim": "rgba(128,128,128,0.65)",
+      "note": "Не декор, а страховка контраста: слой ставится только под белым текстом и только если сам кадр не даёт 4.5:1 (проверять по самой светлой точке под буквами). Глазом он не должен читаться как градиент; максимум — 35% чёрного. scrim — подложка модального окна, как у бренда."
+    },
+    "typography": {
+      "display": {
+        "family": "Montserrat",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "44px",
+        "size_mobile": "30px",
+        "line_height": 1.2,
+        "letter_spacing": "0",
+        "note": "название над снимком; у бренда 40px/500 — для кириллицы 44/30, трекинг не трогается, жирнее 500 не бывает"
+      },
+      "h2": {
+        "family": "Montserrat",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "32px",
+        "size_mobile": "24px",
+        "line_height": 1.25,
+        "letter_spacing": "0"
+      },
+      "h3": {
+        "family": "Montserrat",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "20px",
+        "size_mobile": "17px",
+        "line_height": 1.3,
+        "letter_spacing": "0",
+        "note": "название модели, планировки, карточки"
+      },
+      "stat": {
+        "family": "Montserrat",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "28px",
+        "size_mobile": "22px",
+        "line_height": 1.1,
+        "letter_spacing": "0",
+        "note": "характеристики над кнопками: «520 км», «3,9 с», «146 м²»"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.45,
+        "letter_spacing": "0",
+        "note": "строка под названием; над снимком — цвет on_photo"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "15px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "nav": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "15px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.45,
+        "letter_spacing": "0",
+        "note": "подписи характеристик, юридический текст, подвал"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "4px",
+      "md": "12px",
+      "dot": "50%",
+      "note": "4px — кнопки, поля, пункты шапки: «почти прямые». 12px — только карточки категорий со снимком. Всё остальное, включая снимки во весь экран, — без скругления. Пилюль нет."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "64px",
+      "panel_height": "100vh; на телефоне 100svh",
+      "container": "1280px",
+      "gutter_desktop": "40px",
+      "gutter_mobile": "24px",
+      "button_width": "264px",
+      "button_gap": "24px",
+      "hero_title_top": "12vh",
+      "hero_buttons_bottom": "calc(8vh + 72px) при ask_bar=on (строка вопроса 56px + отступ 16px не накрывает кнопки); 8vh при ask_bar=off",
+      "card_gap": "16px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "none",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #171a20",
+      "focus_on_photo": "0 0 0 2px #ffffff",
+      "note": "Теней нет вообще. Слои показываются матовым стеклом (tokens.glass) и подложкой окна (overlay.scrim). Единственное кольцо — фокус с клавиатуры."
+    },
+    "motion": {
+      "fast": "250ms",
+      "base": "330ms",
+      "slow": "500ms",
+      "ease_standard": "cubic-bezier(.5,0,0,.75)",
+      "ease_emphasized": "cubic-bezier(.2,0,0,1)",
+      "note": "Единая длительность 0,33 с для любых смен цвета фона, рамки и текста; наведение и нажатие — только цветом, без масштаба и сдвига. Шапка становится матовой за 330ms при первой прокрутке."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Montserrat",
+      "fontsource": "montserrat",
+      "role": "display",
+      "weights": [
+        500
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/montserrat — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Universal Sans Display (проприетарный)",
+      "why": "геометрический гротеск с круглыми овалами и ровной шириной — ближе всего к прежнему Gotham и нынешнему заголовочному шрифту бренда; на 500 даёт тот же спокойный инженерный заголовок; полноценная кириллица"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body+ui",
+      "weights": [
+        400,
+        500
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/inter",
+      "replaces": "Universal Sans Text (проприетарный)",
+      "why": "у бренда текстовое начертание уже и нейтральнее заголовочного; Montserrat в абзацах слишком широк для длинного русского текста, Inter держит 15–16px и кнопки 15px"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "sm",
+      "height": "40px (48px на телефоне)",
+      "min_width": "button_width 264px; пара кнопок — одной ширины",
+      "padding": "0 24px",
+      "font": "button",
+      "border": "3px solid transparent — место под рамку фокуса, чтобы кнопка не прыгала",
+      "transition": "background-color, border-color, color 330ms cubic-bezier(.5,0,0,.75)",
+      "hover": "фон primary_hover",
+      "use": "«Записаться на просмотр», «Записаться на тест-драйв»"
+    },
+    "button_secondary": {
+      "bg": "secondary_bg",
+      "color": "on_secondary",
+      "radius": "sm",
+      "height": "40px (48px на телефоне)",
+      "min_width": "264px",
+      "font": "button",
+      "on_photo": "фон glass.button_on_photo + blur, текст #171a20",
+      "hover": "фон secondary_hover (на снимке — rgba(244,244,244,0.8))",
+      "use": "«Смотреть планировки», «Наличие»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "sm",
+      "height": "40px (48px на телефоне)",
+      "min_width": "264px",
+      "font": "button",
+      "use": "вариант главной кнопки для A/B (cta_color_role=accent) и кнопка в тёмных панелях"
+    },
+    "text_link": {
+      "color": "link",
+      "font": "body 14–16px",
+      "decoration": "подчёркивание 1px всегда, при наведении 2px — через box-shadow за 330ms",
+      "use": "«Подробнее», «Забронировать» под карточками модельного ряда"
+    },
+    "panel": {
+      "height": "panel_height",
+      "media": "снимок или беззвучная петля во весь экран, object-fit: cover, без отступов и радиуса",
+      "top": "по центру на hero_title_top: display цвета on_photo (или text на светлом кадре) + lead одной строкой",
+      "bottom": "по центру на hero_buttons_bottom: stat_row (по желанию) и пара кнопок одной ширины с зазором 24px",
+      "contrast": "белый текст держит 4.5:1 на самой светлой точке под буквами; если нет — overlay.photo_top / photo_bottom",
+      "use": "первый экран и 2–3 следующих «одно сообщение на экран»"
+    },
+    "stat_row": {
+      "layout": "3 ячейки по центру с зазором 48px, без разделителей",
+      "number": "stat цвета on_photo",
+      "label": "caption цвета on_photo под числом",
+      "use": "характеристики над кнопками первого экрана"
+    },
+    "nav": {
+      "position": "fixed сверху, height 56px",
+      "over_hero": "прозрачная, текст on_photo или text — по яркости кадра",
+      "scrolled": "фон glass.nav с blur, текст text; переход 330ms",
+      "left": "текстовый логотип клиента 18px/500 обычным регистром (не разреженными прописными)",
+      "center": "4–5 пунктов nav 14px/500 в кнопках с радиусом 4px, наведение — фон rgba(0,0,0,0.05)",
+      "right": "телефон nav + пункт «Записаться» тем же видом",
+      "mobile": "логотип + кнопка «Меню» словом 14px/500 в рамке 4px; меню — белая шторка во весь экран"
+    },
+    "ask_bar": {
+      "position": "fixed снизу по центру, отступ 16px",
+      "width": "640px на десктопе",
+      "first_screen": "в первой панели стоит под парой кнопок — кнопки подняты на 72px (spacing.hero_buttons_bottom), ничего не перекрывается",
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "sm",
+      "height": "56px",
+      "content": "значок чата 20px, поле с короткой подсказкой в одну строку («Задайте вопрос о доме»), значок отправки, справа вертикальная линия и text_link «Записаться на показ»",
+      "behaviour": "отправка вопроса открывает в той же панели второй шаг: «Куда ответить?» — имя и телефон с согласием; вопрос сохраняется и уходит вместе с заявкой",
+      "mobile": "заменяется липкой кнопкой (sticky-cta-mobile) со значком чата слева",
+      "use": "вопрос покупателя становится заявкой"
+    },
+    "category_card": {
+      "radius": "md",
+      "ratio": "2:1 (на телефоне 4:3)",
+      "media": "снимок object-fit: cover, overflow: hidden",
+      "label": "белая подпись h3 в левом верхнем углу с отступом 24px; под ней — overlay.photo_top, если кадр светлый",
+      "shadow": "none",
+      "border": "none",
+      "hover": "нет — нажимается подпись-ссылка",
+      "layout": "2 в ряд с зазором 16px",
+      "use": "«Дома из клеёного бруса», «Дома из газобетона»"
+    },
+    "lineup_card": {
+      "bg": "background",
+      "media": "предмет без фона 4:3 на белом (авто, дом-рендер, планировка)",
+      "title": "h3 по центру",
+      "meta": "одна строка caption text_muted: «146 м² · 4 спальни · от 9,8 млн ₽»",
+      "links": "две text_link через точку: «Подробнее» · «Забронировать»",
+      "border": "none",
+      "shadow": "none",
+      "use": "модельный ряд, планировки"
+    },
+    "spec_table": {
+      "layout": "2 колонки: подпись 14px text_muted слева, значение 16px/500 text справа",
+      "row": "высота 56px, линия 1px border_soft снизу",
+      "use": "характеристики, комплектация, что входит"
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "none",
+      "radius": "sm",
+      "height": "40px (48px на телефоне)",
+      "padding": "0 12px",
+      "label": "над полем 14px/500 text_muted, зазор 8px",
+      "placeholder": "text_placeholder",
+      "focus": "рамка inset 0 0 0 1px text",
+      "error": "рамка inset 0 0 0 1px error, текст 13px error под полем"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "sm",
+      "border": "1px solid text_muted",
+      "checked": "фон accent, галочка on_accent",
+      "focus": "shadow.focus"
+    },
+    "carousel_dots": {
+      "size": "8px",
+      "radius": "dot",
+      "color": "rgba(255,255,255,0.5), активная — on_photo",
+      "arrows": "квадраты 44px со стеклом glass.button_on_photo и радиусом 4px у краёв кадра",
+      "use": "смена кадров в панели"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "question": "body 16px/500 text",
+      "chevron": "16px справа",
+      "answer": "body text_body"
+    },
+    "footer": {
+      "bg": "background",
+      "padding": "32px 24px 96px",
+      "layout": "одна строка ссылок caption text_muted по центру через зазор 24px: © год, реквизиты, «Политика обработки персональных данных», телефон, адрес; нижний отступ оставляет место для ask_bar; на телефоне ссылки столбиком по центру",
+      "use": "подвал без колонок"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Панель во весь экран (100vh, на телефоне 100svh): кинокадр или беззвучная петля object-fit: cover без отступов и радиуса. Сверху по центру на 12vh: название display 44px/500 («Коттедж 146 м² в 20 минутах от МКАД») и одна строка lead («от 9,8 млн ₽ · сдача IV кв. 2027»). Снизу по центру (на 8vh, а при включённой строке вопроса — на 8vh + 72px): stat_row из трёх характеристик и под ним две кнопки одной ширины 264px с зазором 24px — синяя «Записаться на показ» и матовая светлая «Смотреть планировки». Шапка прозрачная поверх кадра, внизу экрана — ask_bar. Вариант split_form: кадр на 7 колонок слева, справа белая колонка — название, одна строка, spec_table из 4 строк и форма из двух полей с синей кнопкой во всю ширину; для холодного трафика, которому нужна заявка без прокрутки.",
+    "section_order": [
+      "nav",
+      "hero",
+      "feature_panels",
+      "category_cards",
+      "lineup",
+      "specs",
+      "how",
+      "faq",
+      "lead_form",
+      "footer",
+      "ask_bar"
+    ],
+    "sections": {
+      "feature_panels": "2–3 panel подряд, одно сообщение на экран: «Тёплый контур — счёт за отопление 2 400 ₽ зимой», «Участок 12 соток с лесом» — название, строка, одна-две кнопки",
+      "category_cards": "две category_card 2:1 рядом",
+      "lineup": "3 lineup_card в ряд на белом: предметы без фона, названия и по две ссылки",
+      "specs": "spec_table на полосе surface в колонке 880px, справа или сверху — снимок детали без рамки",
+      "how": "4 шага строкой: номер stat text_muted, заголовок h3, две строки body — без значков",
+      "faq": "5–7 faq_item в колонке 760px",
+      "lead_form": "панель: слева кадр 50% ширины на всю высоту блока, справа белая колонка с формой шириной до 440px (на телефоне — только форма)",
+      "ask_bar": "закреплён внизу экрана на всех секциях, кроме формы (там прячется)"
+    },
+    "grid": "Панели — во всю ширину без контейнера. Содержимое остальных секций — 12 колонок, контейнер 1280px, поля 40px; карточки модельного ряда 3 в ряд (2 на 768–1023px), категории 2 в ряд",
+    "mobile_notes": "Меньше 768px: панели 100svh (не 100vh — адресная строка съедает низ), у снимков своя вертикальная кадровка 9:16 с предметом в средней трети; название 30px/500, строка 16px. Кнопки — стопкой во всю ширину минус 24px по краям, 48px, зазор 12px. stat_row — три ячейки с зазором 24px и подписями в одну строку не длиннее 10 знаков («площадь», «участок», «зимой»); длиннее — оставить две ячейки. Шапка 56px: текстовый логотип и кнопка «Меню» словом, меню — белая шторка во весь экран. ask_bar заменяется липкой синей кнопкой «Записаться на показ» 48px со значком чата 44px слева (sticky-cta-mobile). Категории — столбиком 4:3, модельный ряд — горизонтальная лента с прилипанием. Поля страницы 24px, секции без снимков 64px.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px",
+      "desktop": "1024–1440px",
+      "wide": ">1440px — кадры растут, содержимое остаётся в 1280px"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "preferred_date"
+    ],
+    "consent_152fz": true,
+    "style": "Белая колонка до 440px: h2 «Запись на показ», строка body text_muted «Покажем дом и посёлок за 40 минут». Поля с подписью над ними: «Имя», «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) — обязательные; «Удобный день» — необязательный ряд из 4 кнопок-вариантов с радиусом 4px («Сегодня», «Завтра», «Выходные», «Другой»), выбранный — фон accent. Поля — заливка surface без рамок, 40px (48px на телефоне), радиус 4px. Чекбокс 20px «Я согласен(на) на обработку персональных данных по 152-ФЗ» не отмечен заранее, ссылка «Политика обработки данных» подчёркнута. Синяя кнопка во всю ширину «Записаться», под ней caption text_muted «Перезвоним в течение 15 минут в рабочее время». Кнопка активна всегда, ошибки — видимым текстом цветом error под полем; при сбое сети — текст и кнопка «Отправить ещё раз», введённое не стирается. Вопрос из ask_bar, если он был, показан над полями строкой «Ваш вопрос: …» и уходит вместе с заявкой.",
+    "success_state": "Колонка формы меняется на месте без зелёного круга: галочка 24px цвета success слева от h2 «Вы записаны», строка «Позвоним сегодня до 20:00 и подтвердим время показа», text_link «Добавить в календарь» (.ics). Фокус — на заголовок, aria-live=polite. Рецепт form-success."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "sticky-cta-mobile",
+    "accordion-smooth",
+    "form-success",
+    "media-zoom-scroll",
+    "scroll-story-steps",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "всё стоит сразу, шапка меняет фон без перехода",
+      "subtle": "по умолчанию: hero-text-reveal только в первой панели, остальные три рецепта; + scroll-story-steps; + form-field-feedback",
+      "rich": "subtle + hero-text-reveal у названий следующих панелей при входе в кадр; + media-zoom-scroll"
+    },
+    "hero-text-reveal": "название и строка первой панели: --htr-dur 660ms (две длительности 0,33 с), --htr-step 80ms, --htr-ease cubic-bezier(.5,0,0,.75), --htr-follow 200ms; кнопки проявляются следом без сдвига; кадр — это LCP, он стоит сразу и не анимируется",
+    "sticky-cta-mobile": "на телефоне заменяет ask_bar: белая полоса с линией 1px border сверху, синяя кнопка 48px «Записаться на показ» с радиусом 4px и квадратная кнопка чата 44px слева; data-after — кнопки первой панели, data-hide-on — форма",
+    "accordion-smooth": "faq_item на линиях 1px border без карточек и радиусов, раскрытие 330ms кривой (.5,0,0,.75)",
+    "form-success": "ответ в колонке формы: без круга и волны — галочка 24px цвета success у заголовка «Вы записаны», строка с временем звонка и ссылка «Добавить в календарь»",
+    "media-zoom-scroll": "только rich: снимок модели или объекта в feature_panels растёт до полного кадра; --mzs-radius 0, --mzs-from .9",
+    "scroll-story-steps": "how: 3–4 шага покупки с кадрами, --sst-radius 4px, --sst-in 330ms",
+    "form-field-feedback": "поля radius 4px; без встряски — движение только цветом"
+  },
+  "media": {
+    "hero": "Кинокадр или беззвучная петля во весь экран (100vh): предмет продажи в среде — дом на закате, машина на пустой дороге, станция на крыше; мягкий рассеянный свет, тёмное небо или тень в верхней трети под названием и спокойная тёмная зона внизу под кнопками.",
+    "video_in_flow": "Любая следующая панель может быть беззвучной петлёй 6–10 с вместо снимка (проезд, облёт дома, смена дня и ночи): запуск при входе в кадр, пауза вне кадра и квадратная кнопка паузы 44px в углу. Ролик со звуком — только по ссылке «Смотреть видео» в окне во весь экран, с субтитрами.",
+    "imagery": "Широкие пейзажные кадры с одним объектом, много воздуха и неба, спокойные холодные цвета, людей нет или одна фигура вдали. Для карточек модельного ряда — студийные изображения предмета без фона на чистом белом.",
+    "character": "Персонаж не нужен: герой — объект. Если продаёт человек (эксперт по подбору, менеджер посёлка), он появляется только в блоке формы небольшим портретом 1:1.",
+    "audio": "Аудиоверсия не нужна.",
+    "avoid": [
+      "коллажи и несколько объектов в кадре",
+      "текст, плашки и значки поверх снимка, кроме названия, строки и кнопок",
+      "градиентные и цветные фоны секций",
+      "автомобили и рендеры узнаваемых марок",
+      "красный цвет знака и логотип из разреженных прописных букв"
+    ],
+    "geometry": {
+      "hero_desktop": "16:9 во весь экран, 100vh, object-fit: cover",
+      "hero_mobile": "9:16 — отдельная кадровка, 100svh",
+      "panel": "16:9 и 9:16, как у первого экрана",
+      "card": "4:3 — модельный ряд, предмет без фона на белом",
+      "gallery": "16:9",
+      "category_card": "2:1, на телефоне 4:3",
+      "lineup_card": "4:3, предмет без фона на белом",
+      "lead_panel": "4:5 слева от формы",
+      "portrait": "1:1",
+      "logo_strip": "не используется"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "синяя → #3457b1, светлая → #e8e8e8, матовая на снимке → rgba(244,244,244,0.8); 330ms кривой (.5,0,0,.75); только цвет — без сдвига, масштаба и тени",
+      "focus_visible": "кольцо 2px цвета focus_ring через зазор 2px цвета фона (box-shadow 0 0 0 2px #ffffff, 0 0 0 4px #171a20); на снимке и в тёмной теме кольцо белое",
+      "active": "синяя → #2c4a9e, светлая → #d0d1d2, за 100ms",
+      "disabled": "фон surface, текст text_placeholder, cursor: not-allowed; в форме заявки не применяется",
+      "loading": "подпись меняется на «Отправляем…», слева круговой индикатор 16px цвета on_primary; ширина кнопки не меняется, aria-busy=true"
+    },
+    "input": {
+      "focus": "заливка остаётся, появляется рамка inset 0 0 0 1px text (в тёмной теме белая) за 330ms",
+      "error": "рамка inset 0 0 0 1px error, под полем текст 13px error",
+      "disabled": "заливка surface, текст text_placeholder"
+    }
+  },
+  "signature": [
+    "Одно сообщение на экран: панель 100vh с кинокадром, название и одна строка сверху по центру, две кнопки одной ширины снизу.",
+    "Интерфейс без украшений: ни теней, ни градиентных фонов, ни рамок у карточек; один синий только заливкой главной кнопки, углы 4px.",
+    "Матовая шапка: прозрачная над первым кадром, после прокрутки — белое стекло с размытием; все переходы только цветом за 0,33 с.",
+    "Постоянная строка «Задать вопрос» внизу экрана — вопрос покупателя становится заявкой."
+  ],
+  "voice": "Спокойно и по-инженерному: название, одна строка с цифрами и два действия («Коттедж 146 м²» — «от 9,8 млн ₽ · сдача IV кв. 2027»). Без восторженных прилагательных, восклицательных знаков и прописных; кнопки — 2–3 слова, без «Узнать подробнее».",
+  "type_features": {
+    "stats": "font-variant-numeric: tabular-nums; число и единица через неразрывный пробел («520 км», «146 м²»), единица тем же кеглем",
+    "prices": "tabular-nums; «от 9,8 млн ₽» — десятичная запятая, неразрывные пробелы",
+    "display": "letter-spacing: 0 на всех уровнях; насыщенность только 400 и 500",
+    "case": "прописные не используются ни в шапке, ни в кнопках"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "full_bleed",
+        "split_form"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "l",
+        "m"
+      ],
+      "ask_bar": [
+        "on",
+        "off"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "in_hero_stats",
+        "before_form"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "no_shadows",
+      "panel_height"
+    ],
+    "default": {
+      "hero_layout": "full_bleed",
+      "cta_color_role": "primary",
+      "headline_scale": "l",
+      "ask_bar": "on",
+      "motion_level": "subtle",
+      "social_proof_position": "in_hero_stats"
+    },
+    "legend": {
+      "hero_layout": {
+        "full_bleed": "кадр во весь экран, название сверху, кнопки снизу",
+        "split_form": "кадр 7 колонок, справа белая колонка с характеристиками и формой"
+      },
+      "cta_color_role": {
+        "primary": "синяя главная кнопка",
+        "accent": "угольная главная кнопка (в тёмной теме — белая)"
+      },
+      "headline_scale": {
+        "l": "44px / 30px",
+        "m": "36px / 28px"
+      },
+      "ask_bar": {
+        "on": "строка «Задать вопрос» внизу экрана",
+        "off": "без строки, только кнопки панелей"
+      },
+      "social_proof_position": {
+        "in_hero_stats": "три цифры над кнопками первого экрана",
+        "before_form": "цифры и отзывы строкой над формой"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первая гипотеза для дорогих покупок — ask_bar: вопрос вместо заявки снижает порог первого шага."
+  },
+  "do": [
+    "Отдавать каждому крупному блоку весь экран: один кадр, одно название, одна строка, не больше двух кнопок.",
+    "Держать синий только заливкой главной кнопки; вторая кнопка — светлая или матовая, ссылки — графит с подчёркиванием.",
+    "Скруглять кнопки и поля на 4px, карточки категорий — на 12px, всё остальное оставлять прямым.",
+    "Проверять белый текст на каждом кадре по самой светлой точке под буквами (≥4.5:1); не хватает — слой overlay до 35% только под текстом.",
+    "Менять состояния только цветом за 0,33 с кривой cubic-bezier(.5,0,0,.75).",
+    "В совпадающей нише (электромобили, зарядные и солнечные станции, накопители) сдвинуть синий на primary_alt #1e6b52 и не брать пару «Заказать / Смотреть в наличии» над машиной и строку «Задать вопрос» с приглашением на тест-драйв в том же виде (135-ФЗ, ст. 14.6)."
+  ],
+  "dont": [
+    "Не добавлять тени, градиентные фоны, рамки карточек и цветные подложки секций.",
+    "Не делать заголовки жирнее 500, крупнее 44px и прописными, не разрежать буквы.",
+    "Не ставить третью кнопку, плашки «Акция» и значки поверх кадра.",
+    "Не использовать логотип, красный цвет знака, логотип из разреженных прописных букв, фирменный шрифт и снимки машин бренда.",
+    "Не анимировать масштабом и сдвигом при наведении и не делать параллакс кадров.",
+    "Не прятать согласие на обработку данных и не отмечать его заранее; вопрос из строки «Задать вопрос» не терять, если телефон ещё не оставлен, — спросить его следующим шагом."
+  ],
+  "prompt_snippet": "Build a Russian lead landing in a Tesla-like cinematic style. Every major block is a full-viewport panel (100vh, 100svh on phones) with one photo or muted loop: name and one line centred near the top, two equal-width 264px buttons centred near the bottom. Light: white #ffffff, surface #f4f4f4, text #171a20, body #393c41, muted #5c5e62; dark uses carbon #171a20 with #22252c surfaces. One blue, #3e6ae1 with white text, only on the main button; the second button is light #f4f4f4 or frosted glass over photos. 4px corners on buttons and inputs, 12px only on category photo cards, no shadows, gradient backgrounds or card borders. Montserrat 500 for headings (44/30px, no tracking), Inter 400/500 for text. Frosted header after scroll, colour-only 0.33s transitions, a persistent \"Задать вопрос\" bar that turns a question into a lead with name, phone and an unchecked 152-FZ consent. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/tesla/DESIGN.md, commit f696123",
+    "notes": "Universal Sans Display / Text заменены парой Montserrat 500 (заголовки — геометрия прежнего Gotham) и Inter 400/500 (текст — Montserrat слишком широк для длинных русских абзацев). Заголовок 40px поднят до 44px ради рекламного первого экрана, основной текст 14px — до 15–16px. Серый #8e8e8e для подсказок (3.3:1) заменён на #6b6e73 (4.65 на заливке поля); добавлены success и error без красного цвета знака. Тёмная тема спроектирована на фирменном угольном #171a20. Добавлены страховочные слои затемнения под белым текстом на кадре — у бренда их нет, но без них 4.5:1 на светлом небе не гарантирован. Строка «Ask a Question» стала формой «Задать вопрос → куда ответить» с согласием по 152-ФЗ. Разреженный прописной логотип, красный цвет знака и снимки машин бренда не используются. Добавлены primary_alt для совпадающей ниши, матовое стекло, состояния, геометрия медиа и голос текста."
+  }
+}

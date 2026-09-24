@@ -94,19 +94,16 @@
   --space-gutter-mobile: 16px;
   --space-card-padding: 32px;
   --space-card-padding-mobile: 24px;
-  --space-notes: section_* — вертикальные отступы белых каталожных полос, band_* — полос-историй и первого экрана: у историй воздуха больше, это часть ритма.;
   --shadow-card: none;
   --shadow-raised: none;
   --shadow-focus: 0 0 0 2px #ffffff, 0 0 0 4px #494fdf;
   --shadow-focus-dark: 0 0 0 2px #000000, 0 0 0 4px #ffffff;
   --shadow-focus-on-primary: 0 0 0 2px #494fdf, 0 0 0 4px #ffffff;
-  --shadow-notes: Теневого языка у стиля нет: глубина — смена полосы (чёрная/белая) и светлоты поверхности (#000000 → #16181a). Единственное кольцо — фокус с клавиатуры (:focus-visible), и оно выбирается по фону: focus — на белых полосах (кобальт 6.06 к белому), focus_dark — на чёрных полосах и в тёмной теме (кобальт на #16181a даёт только 2.94, поэтому кольцо белое), focus_on_primary — внутри кобальтовой карточки (иначе кольцо сливается с кобальтом, а белая кнопка формы теряет видимый фокус).;
   --motion-fast: 160ms;
   --motion-base: 280ms;
   --motion-slow: 560ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.16,1,.3,1);
-  --motion-notes: Движение сдержанное и уверенное: проявления и сдвиги, без пружин и подпрыгиваний.;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

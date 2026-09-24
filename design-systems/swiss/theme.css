@@ -132,13 +132,11 @@
   --radius-md: 0px;
   --radius-lg: 0px;
   --radius-pill: 999px;
-  --radius-note: Скруглений нет ни у кнопок, ни у полей, ни у фото. pill — только точка статуса 8px и радиокнопка, и пишется в их собственном правиле (border-radius: 50%). CSS-переменную --radius-pill при этом объявлять 0px: из неё рецепт sticky-cta-mobile берёт радиус кнопок (см. tokens.css_vars).;
   --space-unit: 8;
   --space-baseline: 4px;
   --space-section-desktop: 144px;
   --space-section-tablet: 112px;
   --space-section-mobile: 80px;
-  --space-section-header-gap: 64px (от линейки раздела до первого ряда содержимого; на телефоне 40px);
   --space-container: 1280px;
   --space-content: 1184px;
   --space-gutter-desktop: 48px;
@@ -146,18 +144,13 @@
   --space-gutter-mobile: 16px;
   --space-grid-gap: 24px;
   --space-grid-gap-mobile: 16px;
-  --space-cell-padding: 24px 0 0 — ячейка сетки начинается от линейки сверху, боковых отступов нет;
-  --space-panel-padding: 40px (на телефоне 24px) — только у формы и выделенного тарифа;
   --shadow-card: none;
   --shadow-raised: none;
-  --shadow-sticky-bar: 0 -1px 0 #DADAD6 (в тёмной теме 0 -1px 0 #2F2F2C);
-  --shadow-note: Глубины нет: иерархию держат размер, вес, линейки и белое поле.;
   --motion-fast: 120ms;
   --motion-base: 200ms;
   --motion-slow: 360ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.05,.7,.1,1);
-  --motion-note: Движение короткое и прямое: без пружин, перелётов, наклонов и параллакса. Смещения не больше 16px — кроме строк H1 в рецепте hero-text-reveal: они выезжают из-под своей маски, и за её пределами движения не видно.;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

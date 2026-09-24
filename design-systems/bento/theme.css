@@ -1,0 +1,188 @@
+/* Бенто — Vibe Landing Kit 1.2.0
+ * Собственный стиль Вайб-Маркетолога.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Commissioner — npm i @fontsource-variable/commissioner (или @fontsource/commissioner), OFL
+ */
+:root {
+  --color-background: #f3f2ee;
+  --color-surface: #ffffff;
+  --color-text: #15171c;
+  --color-text-muted: #585d68;
+  --color-border: #e3e1db;
+  --color-primary: #3a36e0;
+  --color-on-primary: #ffffff;
+  --color-accent: #15171c;
+  --color-on-accent: #ffffff;
+  --color-link: #3531c9;
+  --color-success: #15703c;
+  --color-error: #c0352b;
+  --color-primary-hover: #2f2bd0;
+  --color-border-strong: #858a94;
+  --color-tile-lilac: #e4e2ff;
+  --color-tile-mint: #d6f2e3;
+  --color-tile-peach: #ffe2d1;
+  --color-tile-lemon: #fbf0bf;
+  --color-tile-ink: #15171c;
+  --color-on-tile-ink: #ffffff;
+  --color-on-tile-ink-muted: #b9bdc6;
+  --color-focus: #3a36e0;
+  --font-display: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-size: 56px;
+  --display-weight: 700;
+  --display-size-desktop: 56px;
+  --display-size-mobile: 36px;
+  --display-line-height: 1.02;
+  --display-letter-spacing: -0.03em;
+  --font-h2: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h2-size: 40px;
+  --h2-weight: 700;
+  --h2-size-desktop: 40px;
+  --h2-size-mobile: 28px;
+  --h2-line-height: 1.08;
+  --h2-letter-spacing: -0.025em;
+  --font-h3: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h3-size: 21px;
+  --h3-weight: 600;
+  --h3-size-desktop: 21px;
+  --h3-size-mobile: 19px;
+  --h3-line-height: 1.22;
+  --h3-letter-spacing: -0.01em;
+  --font-tile_stat: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --tile_stat-size: 64px;
+  --tile_stat-weight: 700;
+  --tile_stat-size-desktop: 64px;
+  --tile_stat-size-mobile: 48px;
+  --tile_stat-line-height: 1;
+  --tile_stat-letter-spacing: -0.035em;
+  --font-lead: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lead-size: 19px;
+  --lead-weight: 400;
+  --lead-size-desktop: 19px;
+  --lead-size-mobile: 17px;
+  --lead-line-height: 1.5;
+  --lead-letter-spacing: 0;
+  --font-body: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 16px;
+  --body-weight: 400;
+  --body-size-desktop: 16px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.55;
+  --body-letter-spacing: 0;
+  --font-caption: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 500;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 13px;
+  --caption-line-height: 1.4;
+  --caption-letter-spacing: 0;
+  --font-eyebrow: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --eyebrow-size: 14px;
+  --eyebrow-weight: 600;
+  --eyebrow-size-desktop: 14px;
+  --eyebrow-size-mobile: 13px;
+  --eyebrow-line-height: 1.2;
+  --eyebrow-letter-spacing: 0;
+  --font-button: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --button-size: 16px;
+  --button-weight: 600;
+  --button-size-desktop: 16px;
+  --button-size-mobile: 16px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --font-price: 'Commissioner', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --price-size: 44px;
+  --price-weight: 700;
+  --price-size-desktop: 44px;
+  --price-size-mobile: 36px;
+  --price-line-height: 1;
+  --price-letter-spacing: -0.03em;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --space-unit: 4;
+  --space-section-desktop: 96px;
+  --space-section-mobile: 56px;
+  --space-container: 1200px;
+  --space-gutter-mobile: 16px;
+  --space-tile-gap: 12px;
+  --space-tile-gap-mobile: 10px;
+  --space-tile-padding: 24px;
+  --space-tile-padding-mobile: 20px;
+  --space-row-height: 220px;
+  --shadow-card: 0 1px 2px rgba(21,23,28,0.06);
+  --shadow-raised: 0 16px 32px -16px rgba(21,23,28,0.22);
+  --shadow-card-dark: none;
+  --shadow-raised-dark: 0 16px 32px -16px rgba(0,0,0,0.6);
+  --shadow-focus: 0 0 0 2px #f3f2ee, 0 0 0 4px #3a36e0;
+  --shadow-focus-dark: 0 0 0 2px #0d0e11, 0 0 0 4px #a09eff;
+  --motion-fast: 140ms;
+  --motion-base: 240ms;
+  --motion-slow: 480ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.05,.7,.1,1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #0d0e11;
+    --color-surface: #17191e;
+    --color-text: #f1f2f4;
+    --color-text-muted: #a0a5b0;
+    --color-border: #262930;
+    --color-primary: #5a56f0;
+    --color-on-primary: #ffffff;
+    --color-accent: #f1f2f4;
+    --color-on-accent: #15171c;
+    --color-link: #a09eff;
+    --color-success: #4ad08a;
+    --color-error: #ff7a70;
+    --color-primary-hover: #4a46e6;
+    --color-border-strong: #6b7080;
+    --color-tile-lilac: #1e1c3a;
+    --color-tile-mint: #13291f;
+    --color-tile-peach: #33211a;
+    --color-tile-lemon: #2e2912;
+    --color-tile-ink: #f1f2f4;
+    --color-on-tile-ink: #15171c;
+    --color-on-tile-ink-muted: #4a4f5a;
+    --color-focus: #a09eff;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #0d0e11;
+  --color-surface: #17191e;
+  --color-text: #f1f2f4;
+  --color-text-muted: #a0a5b0;
+  --color-border: #262930;
+  --color-primary: #5a56f0;
+  --color-on-primary: #ffffff;
+  --color-accent: #f1f2f4;
+  --color-on-accent: #15171c;
+  --color-link: #a09eff;
+  --color-success: #4ad08a;
+  --color-error: #ff7a70;
+  --color-primary-hover: #4a46e6;
+  --color-border-strong: #6b7080;
+  --color-tile-lilac: #1e1c3a;
+  --color-tile-mint: #13291f;
+  --color-tile-peach: #33211a;
+  --color-tile-lemon: #2e2912;
+  --color-tile-ink: #f1f2f4;
+  --color-on-tile-ink: #15171c;
+  --color-on-tile-ink-muted: #4a4f5a;
+  --color-focus: #a09eff;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 36px;
+    --h2-size: 28px;
+    --h3-size: 19px;
+    --tile_stat-size: 48px;
+    --lead-size: 17px;
+    --body-size: 16px;
+    --caption-size: 13px;
+    --eyebrow-size: 13px;
+    --button-size: 16px;
+    --price-size: 36px;
+  }
+}

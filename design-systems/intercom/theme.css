@@ -115,7 +115,6 @@
   --radius-xl: 16px;
   --radius-xxl: 24px;
   --radius-pill: 999px;
-  --radius-notes: md — все кнопки и поля; lg — карточки; xl — рамки макетов продукта; xxl — большая карточка с формой; pill — только переключатели и аватары. Строки FAQ не скругляются: это список с линиями-разделителями.;
   --space-unit: 8;
   --space-section-desktop: 96px;
   --space-section-mobile: 56px;
@@ -131,14 +130,11 @@
   --shadow-card: none;
   --shadow-raised: 0 1px 2px rgba(17,17,17,.06), 0 12px 32px rgba(17,17,17,.10);
   --shadow-raised-dark: 0 0 0 1px #3a3834, 0 16px 40px rgba(0,0,0,.55);
-  --shadow-notes: Бренд сопротивляется теням: глубина — это белая карточка на кремовом фоне плюс линия 1px border. Тень raised — только у всплывающего: липкая кнопка на телефоне, модальное окно, выпадающий список.;
   --motion-fast: 150ms;
   --motion-base: 220ms;
   --motion-slow: 420ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.3,0,0,1);
-  --motion-press: без масштаба: фон уходит в primary_press;
-  --motion-notes: Движение редкое и короткое, как в журнале: появление по прокрутке и проявление макетов. Никаких парящих, наклоняющихся и магнитных элементов.;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

@@ -93,7 +93,21 @@
 
 ## Анимации
 
-`gradient-drift`, `fade-up-stagger`, `counter-up`, `tilt-card`, `marquee-logos`, `parallax-soft`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`gradient-drift`, `fade-up-stagger`, `counter-up`, `tilt-card`, `marquee-logos`, `parallax-soft`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `tabs-indicator`, `media-zoom-scroll`, `steps-progress-line`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Анимированный градиент-сетка и карточки интерфейса, без фотографий.
+
+**Видео ниже.** Анимации интерфейса и схем, ролики не нужны.
+
+**Картинки.** Схемы, код, карточки продукта.
+
+**Персонаж или маскот.** Не нужен.
+
+**Аудиоверсия.** Не нужна.
+
+**Избегать:** стоковые фото; маскоты.
 
 ## A/B-тест
 

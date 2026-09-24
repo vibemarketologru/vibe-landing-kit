@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<!-- 1. Масштаб 1:1 и страница под вырезом/полосой жестов. Без maximum-scale=1 и user-scalable=no -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- iOS не превращает цены, годы и артикулы в синие телефонные ссылки -->
+<meta name="format-detection" content="telephone=no">
+<!-- Цвет панелей Chrome на Android. Safari в iOS 26+ это поле не использует -->
+<meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Пример мобильного каркаса лендинга из Vibe Landing Kit: первый экран, липкая кнопка, форма, медиа.">
+<title>Остекление балконов — пример мобильного каркаса</title>
+<style>
+/* 2. Фон корня: в iOS 26 цвет панелей Safari берётся из фона html/body и fixed-слоёв у края */
+:root{
+  color-scheme:light dark;
+  --bg:#f6f3ee; --fg:#17181b; --muted:#565a61; --line:#d9d2c6; --field:#ffffff; --field-line:#8a8478;
+  --accent:#1f5f4a; --on-accent:#ffffff;
+  --glass:rgb(246 243 238 / .72);
+  --bar-h:64px;
+  --sa-max:env(safe-area-max-inset-bottom, 36px);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#121316; --fg:#eeebe6; --muted:#a9acb2; --line:#2c2e33; --field:#1b1d21; --field-line:#6c7078;
+    --accent:#7fd0b0; --on-accent:#0b1512; --glass:rgb(18 19 22 / .7)}
+}
+html,body{background-color:var(--bg);color:var(--fg)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font:400 17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+[hidden]{display:none !important}
+img,video{max-width:100%;height:auto}
+h2{font-size:clamp(24px,5.5vw,36px);line-height:1.15;margin:0 0 12px;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{padding:56px max(16px,env(safe-area-inset-right)) 56px max(16px,env(safe-area-inset-left));max-width:64rem;margin:0 auto}
+.muted{color:var(--muted)}
+
+/* Кнопки: зона касания не меньше 48 px */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;box-sizing:border-box;
+  border:0;border-radius:12px;background:var(--accent);color:var(--on-accent);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn--block{width:100%}
+.btn--ghost{background:transparent;color:var(--fg);border:1px solid var(--field-line)}
+.btn--icon{flex:none;width:48px;padding:0}
+
+/* 3. Первый экран: 100svh — высота при ПОКАЗАННЫХ панелях браузера, кнопка не уезжает под них */
+.hero{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;box-sizing:border-box;display:grid;align-content:end;
+  padding:max(24px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 32px max(16px,env(safe-area-inset-left));color:#fff}
+.hero__media,.hero__media img,.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(0 0 0 / 0) 25%,rgb(0 0 0 / .68))}
+.hero h1{margin:0 0 12px;font-size:clamp(32px,8.4vw,64px);line-height:1.06;text-wrap:balance;max-width:14em}
+.hero__lead{margin:0 0 20px;font-size:clamp(17px,2.4vw,21px);max-width:34rem}
+.hero .btn{min-width:min(100%,20rem)}
+.hero__pause{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));width:44px;height:44px;border:0;border-radius:50%;
+  background:rgb(0 0 0 / .45);color:#fff;display:grid;place-items:center;cursor:pointer}
+.hero.is-still .hero__video,.hero.is-still .hero__pause{display:none}
+@media (min-width:768px){
+  .hero{min-height:88vh;min-height:88svh;padding-inline:max(48px,env(safe-area-inset-left))}
+}
+
+/* 9. Ландшафт на телефоне: высоты всего ~390 px, первый экран по содержимому */
+@media (orientation:landscape) and (max-height:500px){
+  .hero{min-height:auto;padding-block:max(20px,env(safe-area-inset-top)) 20px}
+  .hero h1{font-size:clamp(26px,5vw,36px)}
+  .hero__lead{margin-bottom:12px}
+  :root{--bar-h:52px}
+}
+
+/* 4. Липкая кнопка: образец Chrome для полосы жестов (Chrome 135+) + запасное значение для iOS */
+.cta-bar{position:fixed;left:0;right:0;z-index:30;display:flex;gap:8px;align-items:center;
+  box-sizing:content-box;height:var(--bar-h);
+  padding:0 max(16px,env(safe-area-inset-right)) var(--sa-max) max(16px,env(safe-area-inset-left));
+  bottom:calc(env(safe-area-inset-bottom, 0px) - var(--sa-max));
+  background:var(--bg);border-top:1px solid var(--line)}
+body:has(:is(input,textarea,select):focus) .cta-bar{display:none}
+@media (max-width:767px){ body{padding-bottom:calc(var(--bar-h) + var(--sa-max))} }
+@media (min-width:768px){ .cta-bar{display:none} }
+
+/* 5. Форма: поля 16 px и выше (иначе iOS увеличивает страницу при фокусе), одна колонка */
+.lead{display:grid;gap:16px;max-width:30rem}
+.field{display:grid;gap:6px}
+.field label{font-weight:600}
+.field input,.field textarea,.field select{box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;
+  font:inherit;font-size:max(16px,1rem);color:var(--fg);background:var(--field);border:1px solid var(--field-line);border-radius:12px;
+  scroll-margin-block:96px}
+.field input:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.field__hint{margin:0;font-size:15px;color:var(--muted)}
+.consent{display:flex;gap:12px;align-items:flex-start;min-height:44px;padding-block:8px;box-sizing:border-box;cursor:pointer}
+.consent input{flex:none;width:22px;height:22px;margin:2px 0 0;accent-color:var(--accent)}
+.lead__status{margin:0;min-height:1.5em;font-weight:600}
+.lead__status[data-state=error]{color:#b3261e}
+@media (prefers-color-scheme: dark){ .lead__status[data-state=error]{color:#ffb4ab} }
+
+/* 6. Контакты */
+.contacts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+
+/* 7. Картинки ниже первого экрана */
+.photo{margin:24px 0 0}
+.photo img{display:block;width:100%;height:auto;border-radius:16px}
+
+/* 10. Стекло с запасным сплошным фоном */
+.glass{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:8px max(16px,env(safe-area-inset-right)) 8px max(16px,env(safe-area-inset-left));
+  background:var(--bg);border-bottom:1px solid var(--line)}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .glass{background:var(--glass);-webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px)}
+}
+@media (prefers-reduced-transparency:reduce){
+  .glass{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+.glass__name{font-weight:700}
+
+@media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto !important} }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <!-- 7. Кадр первого экрана: AVIF → WebP → JPEG, отдельный вертикальный кадр для телефона -->
+  <picture class="hero__media">
+    <source media="(max-width: 700px)" type="image/avif" srcset="media/hero-m.avif">
+    <source media="(max-width: 700px)" type="image/webp" srcset="media/hero-m.webp">
+    <source type="image/avif" srcset="media/hero-1600.avif">
+    <source type="image/webp" srcset="media/hero-1600.webp">
+    <img src="media/hero-1600.jpg" width="1600" height="900" fetchpriority="high"
+         alt="Тёплый вечерний свет за стеклом нового балкона">
+  </picture>
+  <!-- 8. Фоновое видео: src ставит скрипт, только если движение уместно; иначе остаётся кадр -->
+  <video class="hero__video" muted playsinline loop preload="none" poster="media/hero-poster.jpg"
+         data-src="media/hero-loop.mp4" disableremoteplayback aria-hidden="true" tabindex="-1"></video>
+  <button class="hero__pause" type="button" aria-label="Остановить фоновое видео" aria-pressed="false" hidden>
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 3h3v12H4zM11 3h3v12h-3z" fill="currentColor"/></svg>
+  </button>
+  <div class="hero__text">
+    <h1>Остекление балконов с ценой в договоре</h1>
+    <p class="hero__lead">Замер бесплатно, монтаж за один день. Цена после монтажа не меняется.</p>
+    <a class="btn" href="#lead" data-hero-cta>Вызвать замерщика</a>
+  </div>
+</header>
+
+<nav class="glass" aria-label="Контакты">
+  <span class="glass__name">Ясный вид</span>
+  <a class="btn btn--ghost" href="tel:+79000000000">+7 900 000-00-00</a>
+</nav>
+
+<main>
+  <section class="wrap">
+    <h2>Как проходит монтаж</h2>
+    <p>Замерщик приезжает в удобное время, считает стоимость при вас и фиксирует её в договоре. Монтаж занимает один день, мусор увозим сами.</p>
+    <figure class="photo">
+      <picture>
+        <source type="image/avif" srcset="media/room-800.avif 800w, media/room-1600.avif 1600w" sizes="auto, (max-width: 700px) 100vw, 64rem">
+        <img src="media/room-800.jpg" srcset="media/room-800.webp 800w, media/room-1600.webp 1600w"
+             sizes="auto, (max-width: 700px) 100vw, 64rem" width="1600" height="1200" loading="lazy" decoding="async"
+             alt="Остеклённый балкон в тёплых вечерних тонах">
+      </picture>
+    </figure>
+  </section>
+
+  <section class="wrap" aria-labelledby="lead-title">
+    <h2 id="lead-title">Замер бесплатно</h2>
+    <p class="muted">Оставьте телефон — перезвоним в течение 15 минут в рабочее время.</p>
+    <!-- 5. Форма без action: отправку делает ваш приёмник заявок -->
+    <form class="lead" id="lead" method="post">
+      <div class="field">
+        <label for="f-name">Как к вам обращаться</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Телефон</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" enterkeyhint="send"
+               placeholder="+7 900 000-00-00" aria-describedby="f-phone-hint" required>
+        <p class="field__hint" id="f-phone-hint">Можно с 8, с +7, со скобками и пробелами</p>
+      </div>
+      <label class="consent">
+        <input type="checkbox" name="consent" required>
+        <span>Согласен на обработку персональных данных по <a href="privacy.html">политике конфиденциальности</a></span>
+      </label>
+      <button class="btn btn--block" type="submit">Жду звонка замерщика</button>
+      <p class="lead__status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section class="wrap">
+    <h2>Удобнее написать</h2>
+    <!-- 6. Звонок и мессенджеры -->
+    <p class="contacts">
+      <a class="btn btn--ghost" href="tel:+79000000000">Позвонить</a>
+      <a class="btn btn--ghost" href="https://telegram.me/yasnyi_vid_example">Telegram</a>
+      <a class="btn btn--ghost" href="https://vk.me/yasnyi_vid_example">ВКонтакте</a>
+    </p>
+  </section>
+</main>
+
+<!-- 4. Липкая панель: скрыта, пока видна кнопка первого экрана или форма -->
+<div class="cta-bar" data-cta-bar hidden>
+  <a class="btn btn--block" href="#lead">Вызвать замерщика</a>
+  <a class="btn btn--ghost btn--icon" href="tel:+79000000000" aria-label="Позвонить: +7 900 000-00-00">
+    <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.6 2.5 4 3.2c-.7.2-1.2 1-1 1.8 1.3 5.5 5.5 9.7 11 11 .8.2 1.6-.3 1.8-1l.7-2.6-3.6-1.6-1.6 1.6a9.5 9.5 0 0 1-4.1-4.1l1.6-1.6z" fill="currentColor"/></svg>
+  </a>
+</div>
+
+<script>
+/* 4. Липкая панель появляется, когда кнопка первого экрана ушла вверх, и прячется,
+   когда форма поднялась выше нижней трети экрана (край формы внизу панель не прячет) */
+(() => {
+  const bar = document.querySelector('[data-cta-bar]');
+  if (!bar || !('IntersectionObserver' in window)) return;
+  const inView = new Set();
+  const track = e => { e.isIntersecting ? inView.add(e.target) : inView.delete(e.target); bar.hidden = inView.size > 0; };
+  const heroCta = document.querySelector('[data-hero-cta]'), form = document.getElementById('lead');
+  if (heroCta) new IntersectionObserver(es => es.forEach(track)).observe(heroCta);
+  if (form) new IntersectionObserver(es => es.forEach(track), { rootMargin: '0px 0px -35% 0px' }).observe(form);
+})();
+
+/* 5. Телефон: не мешаем вводу и вставке, приводим к виду +7 900 000-00-00 при уходе с поля.
+   Отказ всегда пишем словами на том же экране. */
+(() => {
+  const form = document.getElementById('lead');
+  if (!form) return;
+  const phone = form.elements.phone, status = form.querySelector('.lead__status');
+  const digits = v => v.replace(/\D/g, '');
+  const pretty = v => {
+    let d = digits(v);
+    if (d.length === 11 && (d[0] === '7' || d[0] === '8')) d = d.slice(1);
+    return d.length === 10 ? `+7 ${d.slice(0, 3)} ${d.slice(3, 6)}-${d.slice(6, 8)}-${d.slice(8)}` : v.trim();
+  };
+  const checkPhone = () => phone.setCustomValidity(phone.value && digits(phone.value).length < 10 ? 'Нужно 10 цифр после +7' : '');
+  phone.addEventListener('input', checkPhone);
+  phone.addEventListener('blur', () => { phone.value = pretty(phone.value); checkPhone(); });
+  const say = {
+    name: 'Напишите, как к вам обращаться',
+    phone: 'Проверьте телефон: нужно 10 цифр после +7',
+    consent: 'Отметьте согласие на обработку данных — без него мы не вправе перезвонить',
+  };
+  let first = null;
+  form.addEventListener('invalid', e => {
+    if (first) return;
+    first = e.target;
+    status.dataset.state = 'error';
+    status.textContent = say[e.target.name] || 'Проверьте поле «' + (e.target.labels?.[0]?.textContent.trim() || e.target.name) + '»';
+    requestAnimationFrame(() => { first = null; });
+  }, true);
+  form.addEventListener('submit', () => { status.dataset.state = ''; status.textContent = 'Отправляем…'; });
+})();
+
+/* 8. Фоновое видео: без движения при «меньше движения» и экономии трафика,
+   а если автозапуск запрещён (энергосбережение iOS) — остаётся постер */
+(() => {
+  const hero = document.querySelector('.hero'), v = hero && hero.querySelector('.hero__video');
+  if (!v) return;
+  const btn = hero.querySelector('.hero__pause');
+  const still = () => { v.pause(); v.removeAttribute('src'); v.load(); hero.classList.add('is-still'); };
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || saveData) { hero.classList.add('is-still'); return; }
+  v.src = v.dataset.src;
+  const p = v.play();
+  if (p && p.catch) p.then(() => { btn.hidden = false; }, still);
+  btn.addEventListener('click', () => {
+    const paused = btn.getAttribute('aria-pressed') === 'true';
+    paused ? v.play() : v.pause();
+    btn.setAttribute('aria-pressed', String(!paused));
+    btn.setAttribute('aria-label', paused ? 'Остановить фоновое видео' : 'Включить фоновое видео');
+  });
+})();
+</script>
+</body>
+</html>

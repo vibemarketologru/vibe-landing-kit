@@ -401,13 +401,17 @@
     "counter-up",
     "sticky-cta-mobile",
     "accordion-smooth",
-    "form-success"
+    "form-success",
+    "media-zoom-scroll",
+    "scroll-story-steps",
+    "tabs-indicator",
+    "form-field-feedback"
   ],
   "motion_map": {
     "levels": {
       "none": "без анимаций",
-      "subtle": "по умолчанию: fade-up-stagger, counter-up, accordion-smooth, form-success, sticky-cta-mobile",
-      "rich": "subtle + hero-text-reveal на заголовке, image-reveal-clip на фото ниже первого экрана и parallax-soft на одном крупном фото ниже первого экрана. Фото первого экрана — LCP, его не двигать. Один приём появления на секцию"
+      "subtle": "по умолчанию: fade-up-stagger, counter-up, accordion-smooth, form-success, sticky-cta-mobile; + tabs-indicator; + form-field-feedback",
+      "rich": "subtle + hero-text-reveal на заголовке, image-reveal-clip на фото ниже первого экрана и parallax-soft на одном крупном фото ниже первого экрана. Фото первого экрана — LCP, его не двигать. Один приём появления на секцию; + media-zoom-scroll; + scroll-story-steps"
     },
     "hero-text-reveal": "только rich: строки заголовка первого экрана; фото под ним не анимировать",
     "fade-up-stagger": "subtle и выше: плитки highlights, карточки преимуществ, шаги how, тарифы; один приём появления на секцию",
@@ -416,7 +420,23 @@
     "counter-up": "subtle и выше: короткие цифры в highlight («до 2 раз быстрее», «14 дней», «0 ₽ за выезд»), подпись в одну строку",
     "sticky-cta-mobile": "компонент sticky_bar: только на 767px и уже; выезжает, когда кнопки первого экрана ушли из кадра, прячется, когда форма в кадре и пока человек печатает, и насовсем после отправки",
     "accordion-smooth": "частые вопросы (компонент faq)",
-    "form-success": "ответ в той же плитке: круг 56px цвета success с галочкой цвета background, заголовок «Заявка принята» — полностью в lead_form.success_state"
+    "form-success": "ответ в той же плитке: круг 56px цвета success с галочкой цвета background, заголовок «Заявка принята» — полностью в lead_form.success_state",
+    "media-zoom-scroll": "только rich: одно крупное фото в highlights ниже первого экрана, вместо parallax-soft на этом кадре; --mzs-radius 18px, --mzs-img-from 1.08",
+    "scroll-story-steps": "rich: how в 3–4 шага с кадрами продукта; --sst-radius 18px, --sst-in 640ms, --sst-ease-in cubic-bezier(.28,.11,.32,1)",
+    "tabs-indicator": "subtle и выше: pricing «помесячно / за год», --tbi-dur 320ms",
+    "form-field-feedback": "на любом уровне; поля radius 11px"
+  },
+  "media": {
+    "hero": "Продукт — герой кадра. Первый экран: крупный заголовок по центру над или под предметом, сам предмет — кадр или беззвучная петля во всю ширину на чистом белом или чёрном поле. Фон спокойный, без людей и без декора.",
+    "video_in_flow": "Кнопка «Смотреть ролик» открывает фильм со звуком в окне. Ниже — липкие секции: кадр держится на месте, а тексты преимуществ сменяются прокруткой. Чередование светлых и тёмных плиток с крупными деталями продукта.",
+    "imagery": "Студийные кадры предмета и деталей: мягкий свет, много воздуха, ни одного лишнего предмета.",
+    "character": "Персонаж и маскот неуместны: говорит продукт. Если нужен голос — закадровый в ролике по кнопке.",
+    "audio": "Аудиоверсия — тихая ссылка «Послушать за 1 минуту» под главной кнопкой.",
+    "avoid": [
+      "стоковые люди с ноутбуками",
+      "градиенты-«неон»",
+      "много картинок на одном экране"
+    ]
   },
   "ab_axes": {
     "vary": {

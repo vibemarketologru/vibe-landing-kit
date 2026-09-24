@@ -1,0 +1,697 @@
+{
+  "slug": "ibm",
+  "name": "IBM",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе IBM. Не аффилировано с IBM; без логотипов и фирменных закрытых шрифтов: семейство IBM Plex распространяется по открытой лицензии SIL OFL 1.1 и используется без изменений.",
+  "summary": "Инженерная строгость Carbon: белый холст, серые слои #f4f4f4 и почти чёрный #161616, один синий #0f62fe на кнопках, ссылках и фокусе. Углы 0, плитки на тонких линиях без теней, поля с серой заливкой и нижней линией. Заголовки IBM Plex Sans 300 — крупно и легко, текст 400 с трекингом +0,16px, индексы и цифры в таблицах — Plex Mono. Подвал тёмный.",
+  "summary_en": "Carbon-style engineering rigour: a white canvas, #f4f4f4 grey layers and near-black #161616, one blue #0f62fe for buttons, links and focus. Zero corners, tiles on hairlines with no shadows, fields with a grey fill and a bottom rule. Headings in IBM Plex Sans 300 — large and light, body at 400 with +0.16px tracking, indices and table figures in Plex Mono. Dark footer.",
+  "best_for": [
+    "промышленное оборудование и производство",
+    "инжиниринг, проектирование и монтаж инженерных систем",
+    "логистика, склады и грузоперевозки для бизнеса",
+    "тендеры и B2B-поставки по 44-ФЗ и 223-ФЗ",
+    "ИТ-интеграторы и внедрение систем — с другим основным цветом",
+    "энергетика, электромонтаж, автоматизация",
+    "лаборатории, испытания и сертификация"
+  ],
+  "goals": [
+    "запрос коммерческого предложения",
+    "заявка на расчёт или аудит",
+    "скачивание презентации и документов",
+    "встреча с инженером"
+  ],
+  "mood": [
+    "строгий",
+    "инженерный",
+    "деловой",
+    "надёжный",
+    "спокойный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f4f4f4",
+        "text": "#161616",
+        "text_muted": "#525252",
+        "border": "#e0e0e0",
+        "primary": "#0f62fe",
+        "on_primary": "#ffffff",
+        "accent": "#393939",
+        "on_accent": "#ffffff",
+        "link": "#0f62fe",
+        "success": "#198038",
+        "error": "#da1e28",
+        "primary_hover": "#0050e6",
+        "primary_active": "#002d9c",
+        "accent_hover": "#474747",
+        "accent_active": "#6f6f6f",
+        "link_hover": "#0043ce",
+        "surface_hover": "#e8e8e8",
+        "surface_2": "#e0e0e0",
+        "border_strong": "#8d8d8d",
+        "text_placeholder": "#6f6f6f",
+        "text_disabled": "#8d8d8d",
+        "focus": "#0f62fe",
+        "focus_inset": "#ffffff",
+        "tag_bg": "#d0e2ff",
+        "on_tag": "#002d9c",
+        "band": "#161616",
+        "on_band": "#f4f4f4",
+        "on_band_muted": "#c6c6c6",
+        "border_on_band": "#393939",
+        "primary_alt": "#00727a",
+        "on_primary_alt": "#ffffff"
+      },
+      "dark": {
+        "background": "#161616",
+        "surface": "#262626",
+        "text": "#f4f4f4",
+        "text_muted": "#c6c6c6",
+        "border": "#393939",
+        "primary": "#0f62fe",
+        "on_primary": "#ffffff",
+        "accent": "#6f6f6f",
+        "on_accent": "#ffffff",
+        "link": "#78a9ff",
+        "success": "#42be65",
+        "error": "#ff8389",
+        "primary_hover": "#0353e9",
+        "primary_active": "#002d9c",
+        "accent_hover": "#606060",
+        "accent_active": "#393939",
+        "link_hover": "#a6c8ff",
+        "surface_hover": "#333333",
+        "surface_2": "#393939",
+        "border_strong": "#8d8d8d",
+        "text_placeholder": "#a8a8a8",
+        "text_disabled": "#6f6f6f",
+        "focus": "#ffffff",
+        "focus_inset": "#161616",
+        "tag_bg": "#0043ce",
+        "on_tag": "#d0e2ff",
+        "band": "#0d0d0d",
+        "on_band": "#f4f4f4",
+        "on_band_muted": "#c6c6c6",
+        "border_on_band": "#393939",
+        "primary_alt": "#00727a",
+        "on_primary_alt": "#ffffff"
+      },
+      "notes": "Светлая тема — слой White системы Carbon, тёмная — слой Gray 100. primary #0f62fe держит белый текст 5.00:1 и ставится только заливкой главной кнопки, CTA-баннера и полосы фокуса; как текст ссылки он проходит на белом (5.00), а на сером #f4f4f4 даёт 4.55 — ссылки на серой полосе допустимы, но не мельче 14px; в тёмной теме ссылки #78a9ff (7.68). accent — «вторичная» кнопка Carbon: #393939 в светлой (11.55), #6f6f6f в тёмной (5.02). border_strong #8d8d8d — нижняя линия поля (3.02:1 к заливке #f4f4f4, WCAG 1.4.11). text_placeholder #6f6f6f (4.57 на #f4f4f4) вместо фирменного #a8a8a8, который на заливке поля нечитаем. success #198038 вместо зелёного #24a148 (3.3 на белом) — чтобы текст статуса читался. focus в тёмной теме белый, как у Carbon Gray 100. band — тёмный подвал. primary_alt #00727a (5.69 с белым) — основной цвет для совпадающей ниши (ИТ-интеграторы, облака, серверы)."
+    },
+    "typography": {
+      "display": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "60px",
+        "size_mobile": "36px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.01em",
+        "note": "светлый крупный заголовок — главный знак стиля; у бренда 76px, для длинных русских слов 60px"
+      },
+      "h2": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "42px",
+        "size_mobile": "28px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "h3": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.33,
+        "letter_spacing": "0"
+      },
+      "lead": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.4,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0.16px"
+      },
+      "body_sm": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.43,
+        "letter_spacing": "0.16px",
+        "note": "текст плиток, подвал, подписи таблиц"
+      },
+      "body_emphasis": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.29,
+        "letter_spacing": "0.16px",
+        "note": "выбранная вкладка, заголовки таблиц, пункты процесса"
+      },
+      "button": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.25,
+        "letter_spacing": "0.16px"
+      },
+      "stat": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "56px",
+        "size_mobile": "40px",
+        "line_height": 1.1,
+        "letter_spacing": "0",
+        "note": "цифры полосы фактов; табличные цифры"
+      },
+      "caption": {
+        "family": "IBM Plex Sans",
+        "fallback": "'Helvetica Neue', Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.33,
+        "letter_spacing": "0.32px",
+        "note": "подписи полей, утилитарная полоса, юридический текст"
+      },
+      "index": {
+        "family": "IBM Plex Mono",
+        "fallback": "Menlo, Consolas, 'Courier New', monospace",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.3,
+        "letter_spacing": "0.32px",
+        "note": "индексы 01–08, номера ГОСТ и СП, размеры файлов, номер заявки"
+      },
+      "quote": {
+        "family": "IBM Plex Serif",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 300,
+        "size_desktop": "28px",
+        "size_mobile": "22px",
+        "line_height": 1.35,
+        "letter_spacing": "0",
+        "note": "цитата клиента в кейсе — единственное место антиквы"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "0px",
+      "md": "0px",
+      "lg": "0px",
+      "pill": "999px",
+      "note": "Всё с углами 0: кнопки, поля, плитки, снимки, окна. Пилюля — только у тэгов («44-ФЗ», «СРО», «ISO 9001») высотой 24px."
+    },
+    "spacing": {
+      "unit": 8,
+      "mini_unit": 4,
+      "section_desktop": "96px",
+      "section_mobile": "48px",
+      "container": "1312px",
+      "gutter_desktop": "32px",
+      "gutter_mobile": "16px",
+      "column_gap": "32px",
+      "tile_padding": "16px 16px 24px",
+      "tile_min_height": "240px",
+      "band_padding": "48px",
+      "button_padding": "14px 64px 14px 16px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "none",
+      "menu": "0 2px 6px rgba(0,0,0,0.3)",
+      "focus": "inset 0 0 0 2px #0f62fe, inset 0 0 0 3px #ffffff",
+      "focus_input": "outline 2px solid #0f62fe; outline-offset: -2px",
+      "note": "Глубина — сменой слоя (#ffffff → #f4f4f4 → #e8e8e8) и линией 1px, а не тенью. menu — только выпадающий список. Фокус — внутренняя синяя рамка 2px и белая 1px внутри неё у кнопок, синяя рамка 2px поверх поля."
+    },
+    "motion": {
+      "fast": "110ms",
+      "base": "240ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(0.2,0,0.38,0.9)",
+      "ease_emphasized": "cubic-bezier(0.4,0.14,0.3,1)",
+      "note": "Продуктовая кривая Carbon для состояний (110ms), выразительная — для раскрытий и появления (240–400ms). Без упругости и масштаба."
+    }
+  },
+  "fonts": [
+    {
+      "family": "IBM Plex Sans",
+      "fontsource": "ibm-plex-sans",
+      "role": "display+body",
+      "weights": [
+        300,
+        400,
+        600
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/ibm-plex-sans — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "не заменяет: это родной открытый шрифт стиля",
+      "why": "открытое семейство под SIL OFL 1.1 с полной кириллицей; светлое 300 в заголовках — главный знак стиля. Plex Sans Condensed не брать — у него только cyrillic-ext"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "fontsource": "ibm-plex-mono",
+      "role": "index+data",
+      "weights": [
+        400
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource/ibm-plex-mono",
+      "replaces": "не заменяет",
+      "why": "моноширинный из той же семьи для индексов, номеров норм и размеров файлов — инженерная «табличка» без чужого шрифта"
+    },
+    {
+      "family": "IBM Plex Serif",
+      "fontsource": "ibm-plex-serif",
+      "role": "quote",
+      "weights": [
+        300
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource/ibm-plex-serif",
+      "replaces": "не заменяет",
+      "why": "антиква той же семьи только для цитаты клиента в кейсе; грузить одно начертание"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "none",
+      "height": "48px",
+      "padding": "button_padding: подпись слева, справа стрелка 16px на 16px от края",
+      "min_width": "200px",
+      "font": "button",
+      "text_align": "left",
+      "hover": "фон primary_hover за 110ms",
+      "use": "«Запросить КП», «Получить расчёт»"
+    },
+    "button_secondary": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "none",
+      "height": "48px",
+      "padding": "button_padding",
+      "font": "button",
+      "hover": "фон accent_hover",
+      "use": "«Скачать презентацию, PDF»; в паре с синей стоит вплотную без зазора (button set)"
+    },
+    "button_tertiary": {
+      "bg": "transparent",
+      "color": "link",
+      "border": "1px solid primary (в тёмной теме — text)",
+      "radius": "none",
+      "height": "48px",
+      "padding": "button_padding",
+      "hover": "заливка primary, текст on_primary",
+      "use": "третье действие в плитке или на полосе surface"
+    },
+    "button_ghost": {
+      "bg": "transparent",
+      "color": "link",
+      "radius": "none",
+      "height": "48px",
+      "padding": "14px 16px",
+      "hover": "фон surface_hover",
+      "use": "«Подробнее →» в кейсах, «Все документы»"
+    },
+    "button_on_blue": {
+      "bg": "#ffffff",
+      "color": "primary",
+      "radius": "none",
+      "height": "48px",
+      "padding": "button_padding",
+      "hover": "фон #e8e8e8",
+      "use": "единственная кнопка на cta_banner (синий на белом 5.00:1)"
+    },
+    "tile_grid": {
+      "layout": "display: grid; gap: 1px; фон контейнера border; рамка 1px border — плитки стоят на тонких линиях",
+      "columns": "4 (≥1056px), 2 (672–1055px), 1 (<672px)"
+    },
+    "tile": {
+      "bg": "background (на полосе surface — surface)",
+      "color": "text",
+      "radius": "none",
+      "padding": "tile_padding",
+      "min_height": "tile_min_height",
+      "content": "index «01» сверху, h3, 2–3 строки body_sm text_muted; стрелка 20px цвета link в правом нижнем углу",
+      "hover": "фон surface (на полосе — surface_hover) за 110ms",
+      "link": "вся плитка — ссылка к форме с выбранной услугой",
+      "use": "услуги, направления, отрасли"
+    },
+    "stat_cell": {
+      "border_left": "1px solid border",
+      "padding": "0 0 0 16px",
+      "number": "stat 56px/300 табличными цифрами",
+      "label": "body_sm text_muted",
+      "footnote": "index text_muted: «по данным 2025 г.»",
+      "layout": "4 в строку",
+      "use": "полоса фактов под первым экраном"
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "none",
+      "height": "48px",
+      "padding": "0 16px",
+      "border": "none; снизу 1px border_strong",
+      "label": "над полем caption text_muted, зазор 8px",
+      "helper": "под полем caption text_muted",
+      "placeholder": "text_placeholder",
+      "on_surface": "на полосе surface заливка поля — background (слои чередуются)",
+      "focus": "outline 2px primary, outline-offset -2px",
+      "error": "outline 2px error, значок «!» 16px внутри справа, текст caption error под полем"
+    },
+    "file_input": {
+      "layout": "button_tertiary «Прикрепить ТЗ» + строка index text_muted «PDF, DOCX, DWG до 20 МБ»",
+      "list": "прикреплённый файл строкой на surface: имя, размер Mono, крестик 32px",
+      "use": "необязательное вложение в форме КП"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "none",
+      "border": "1px solid text",
+      "checked": "фон text, галочка background",
+      "focus": "outline 2px primary, offset 1px"
+    },
+    "tag": {
+      "bg": "tag_bg",
+      "color": "on_tag",
+      "radius": "pill",
+      "height": "24px",
+      "padding": "0 8px",
+      "font": "caption",
+      "use": "«44-ФЗ», «223-ФЗ», «СРО», «ISO 9001», «Работаем с НДС»"
+    },
+    "tabs": {
+      "item": "body_sm text_muted, padding 12px 16px, нижняя линия 2px border",
+      "selected": "body_emphasis text, нижняя линия 2px primary",
+      "hover": "текст text",
+      "use": "переключение отраслей в кейсах"
+    },
+    "process_step": {
+      "top": "полоса 2px: у текущего шага — primary, у остальных — border",
+      "index": "index «01»",
+      "title": "body_emphasis 16px",
+      "term": "index text_muted «3–5 дней»",
+      "layout": "5 шагов в строку, на телефоне — столбиком с полосой слева"
+    },
+    "case_card": {
+      "bg": "background",
+      "media": "снимок 16:9 без скругления",
+      "meta": "index text_muted «Пищевое производство · 2025»",
+      "title": "h3",
+      "metrics": "2–3 строки data_table: показатель и значение Mono справа",
+      "quote": "по желанию — цитата quote на surface с именем и должностью body_emphasis",
+      "link": "button_ghost «Подробнее →»"
+    },
+    "data_table": {
+      "header": "фон surface_2, body_emphasis",
+      "row": "высота 48px, линия 1px border снизу, body_sm",
+      "numbers": "справа табличными цифрами, единицы — Mono",
+      "zebra": "нет"
+    },
+    "doc_link": {
+      "base": "tile",
+      "content": "значок документа 32px, h3 название, index «PDF · 2,1 МБ», стрелка скачивания справа внизу",
+      "use": "лицензии СРО, сертификаты ISO, образец договора, презентация"
+    },
+    "cta_banner": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "none",
+      "padding": "band_padding",
+      "content": "h2 300 цвета on_primary в 1–2 строки + button_on_blue справа",
+      "use": "один раз, после кейсов: «Пришлите ТЗ — ответим с расчётом за 1 рабочий день»"
+    },
+    "utility_bar": {
+      "bg": "surface",
+      "color": "text_muted",
+      "height": "32px",
+      "font": "caption",
+      "content": "«Работаем по 44-ФЗ и 223-ФЗ · Москва и регионы · +7 …»",
+      "mobile": "скрыта"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "48px",
+      "border_bottom": "1px solid border",
+      "left": "текстовый логотип клиента body_emphasis 16px",
+      "center": "4–5 пунктов body_sm text, наведение — фон surface_hover на всю высоту",
+      "right": "телефон body_sm + button_primary на всю высоту шапки 48px, прижата к правому краю, без стрелки: «Запросить КП»",
+      "mobile": "логотип, синяя квадратная кнопка «КП» 48×48, меню 48×48"
+    },
+    "faq_item": {
+      "border_top": "1px solid border",
+      "min_height": "48px",
+      "padding": "12px 16px",
+      "question": "body 16px text",
+      "chevron": "16px справа, поворот на 180° при раскрытии",
+      "answer": "body_sm text, отступ справа 25%"
+    },
+    "footer": {
+      "bg": "band",
+      "color": "on_band_muted",
+      "padding": "64px 32px",
+      "columns": "4–5 колонок ссылок body_sm, заголовки body_emphasis on_band",
+      "legal": "нижняя строка над линией 1px border_on_band: реквизиты, ИНН, «Политика обработки персональных данных», год — caption"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Белый холст, контейнер 1312px, 16 колонок. Колонки 1–9: строка index text_muted «Инжиниринг · Москва и регионы», H1 Plex Sans 300 60px до 55 знаков — это 3–4 строки на десктопе и 4–5 на телефоне («Проектируем и монтируем промышленную вентиляцию под ключ»); город и отрасль уходят в индекс над заголовком, lead 20px text_muted, строка тэгов («СРО», «ISO 9001», «44-ФЗ»), две кнопки вплотную без зазора: синяя «Запросить КП →» и тёмная «Скачать презентацию, PDF». Колонки 10–16: документальный снимок объекта 4:3 без скругления. Сразу под первым экраном — полоса из четырёх stat_cell (объектов, лет, гарантия, специалистов в штате). Вариант form_in_hero: вместо снимка справа — форма КП на полосе surface (поля белые), для трафика с горячих запросов «монтаж … цена».",
+    "section_order": [
+      "utility_bar",
+      "nav",
+      "hero",
+      "stats",
+      "clients",
+      "services",
+      "process",
+      "cases",
+      "cta_banner",
+      "documents",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "stats": "4 stat_cell в строку на белом, сверху и снизу линия 1px border",
+      "clients": "монохромные логотипы клиентов в плитках 1px высотой 96px одной лентой (marquee-logos) с кнопкой паузы; подпись index «Нам доверяют»",
+      "services": "h2 300 + tile_grid из 4–8 плиток услуг",
+      "process": "5 process_step строкой: «Выезд инженера» → «Проект» → «Смета» → «Монтаж» → «Сдача и документы»",
+      "cases": "вкладки tabs по отраслям и 3 case_card в ряд; в одном кейсе — цитата quote",
+      "cta_banner": "синяя полоса во всю ширину контейнера",
+      "documents": "tile_grid из doc_link и ряд tag «44-ФЗ», «223-ФЗ», «Работаем с НДС», «Банковская гарантия»",
+      "faq": "6–8 faq_item в колонках 1–10",
+      "lead_form": "полоса surface: колонки 1–6 — h2 300 и три строки «что будет после заявки» с индексами 01–03; колонки 8–16 — форма с белыми полями"
+    },
+    "grid": "16 колонок Carbon, контейнер 1312px, зазор 32px; плитки — 4 в ряд (≥1056px), 2 (672–1055px), 1 (<672px); все отступы кратны 8px",
+    "mobile_notes": "Меньше 672px: утилитарная полоса скрыта; шапка 48px — текстовый логотип, синяя квадратная кнопка «КП» 48×48 у правого края и меню 48×48 (липкая нижняя кнопка не нужна — главное действие всегда в шапке). H1 36px/300, lead 18px. Кнопки первого экрана — стопкой во всю ширину по 48px без зазора между ними. Плитки — в один столбец, остаются на линиях 1px. Процесс — вертикальный, полоса 2px слева. Таблицы — горизонтальная прокрутка с закреплённой первой колонкой. Поля и кнопки 48px (сенсорная цель Carbon). Поля страницы 16px, секции 48px.",
+    "breakpoints": {
+      "mobile": "<672px",
+      "tablet": "672–1055px",
+      "desktop": "1056–1311px",
+      "wide": "≥1312px",
+      "max": "1584px — поля растут, сетка нет"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "company",
+      "email",
+      "attachment"
+    ],
+    "consent_152fz": true,
+    "style": "Форма Carbon на полосе surface: поля с белой заливкой и нижней линией 1px border_strong, высота 48px, подпись caption над полем. «Имя» и «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) — обязательные; «Компания», «Почта» и «Прикрепить ТЗ» (file_input) — необязательные, с пометкой «необязательно» в подписи. Чекбокс 20px с углами 0 «Я согласен(на) на обработку персональных данных по 152-ФЗ» не отмечен заранее, ссылка «Политика обработки данных» цвета link с подчёркиванием. Синяя кнопка во всю ширину колонки с подписью слева и стрелкой справа: «Запросить КП», под ней caption text_muted «Ответим с расчётом за 1 рабочий день». Кнопка активна всегда: ошибки — outline 2px error у поля и текст под ним, фокус — на первое проблемное поле; при сбое сети — видимый текст и кнопка «Отправить ещё раз», введённое и прикреплённый файл не теряются; без файла заявка уходит так же.",
+    "success_state": "Форма меняется на месте на полосе surface: квадрат 48px цвета success с белой галочкой, h3 «Запрос принят», строка index «Номер заявки КП-2026-0417», строка body «Инженер позвонит в течение 2 часов в рабочее время», button_ghost «Скачать презентацию, PDF». Фокус — на заголовок, aria-live=polite. Рецепт form-success."
+  },
+  "motion_recipes": [
+    "marquee-logos",
+    "counter-up",
+    "accordion-smooth",
+    "form-success",
+    "steps-progress-line",
+    "tabs-indicator",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "всё статично; логотипы клиентов — сетка плиток 2×4, цифры стоят сразу",
+      "subtle": "по умолчанию: все четыре рецепта с настройками ниже; + steps-progress-line; + tabs-indicator; + form-field-feedback",
+      "rich": "то же, что subtle — стиль не набирает движения сверх этого"
+    },
+    "marquee-logos": "полоса клиентов под цифрами: монохромные логотипы #525252 (в тёмной #c6c6c6) в плитках 1px border высотой 96px, --mq-gap 0, --mq-fade 48px, --mq-duration 60s; пауза по наведению и фокусу + квадратная кнопка паузы 32px справа; при reduced-motion — статичная сетка",
+    "counter-up": "цифры stat_cell (Plex Sans 300 56px, табличные): --cu-dur 1200ms, кривая cubic-bezier(0.2,0,0.38,0.9); полосу-акцент не рисовать — у каждой цифры уже есть линия 1px border слева",
+    "accordion-smooth": "FAQ как аккордеон Carbon: строки от 48px с линией 1px сверху, шеврон справа поворачивается на 180°, раскрытие 240ms кривой (0.2,0,0.38,0.9), без карточек и скруглений",
+    "form-success": "ответ на месте формы: квадрат 48px цвета success с белой галочкой (без круга и волны), «Запрос принят», номер заявки шрифтом Plex Mono и ссылка на презентацию",
+    "steps-progress-line": "process: этапы работ по 44/223-ФЗ, линия 2px цвета primary, квадратная точка 12px (.spl__dot{border-radius:0})",
+    "tabs-indicator": "services или documents: вкладки с радиусом 0 и нижней линией вместо подложки, --tbi-dur 110ms",
+    "form-field-feedback": "поля радиус 0 с нижней линией; ошибка — красная нижняя линия 2px и текст под полем"
+  },
+  "media": {
+    "hero": "Документальный снимок объекта или производства (цех, трасса вентиляции, склад, щитовая) 4:3 справа от заголовка, углы 0, без затемнений; либо технический рисунок-схема линиями 1px. Заголовок стоит на белом, а не на снимке.",
+    "video_in_flow": "Беззвучная петля 16:9 из цеха или с монтажа внутри кейса (углы 0, квадратная кнопка паузы); ролик-обращение главного инженера со звуком — по квадратной кнопке «Смотреть, 2 мин» с субтитрами.",
+    "imagery": "Документальные фото реальных объектов, оборудования и людей в спецодежде за работой; ровный холодный свет, чистый горизонт, без постановочных улыбок. Схемы и чертежи — линиями 1px цвета text на белом, выделение — primary. Пиктограммы 32px линией 2px с прямыми углами.",
+    "character": "Главный инженер или руководитель проекта — реальный человек в кейсах и у формы (портрет 1:1 без скругления), один и тот же в ролике и на фото; маскоты не нужны.",
+    "audio": "Аудиоверсия уместна как button_ghost «Послушать за 3 минуты» рядом с «Скачать презентацию» — для тех, кто в дороге.",
+    "avoid": [
+      "стоковые рукопожатия и офисы с улыбками",
+      "3D-глянец, неон и градиенты",
+      "скруглённые кадры и тени",
+      "горизонтальные полосы-«жалюзи» и полосатые буквы — приём знака IBM",
+      "синие подложки секций, кроме одного CTA-баннера"
+    ],
+    "geometry": {
+      "hero_desktop": "4:3 в колонках 10–16, углы 0",
+      "hero_mobile": "16:9 под заголовком",
+      "card": "16:9 — кейс",
+      "gallery": "16:9",
+      "case": "16:9",
+      "portrait": "1:1 без скругления",
+      "tile_icon": "пиктограмма 32px",
+      "logo_strip": "монохромные, высота знака 24–32px, в плитках 96px",
+      "document_preview": "3:4, первая страница PDF"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "синяя → #0050e6, тёмная → #474747 (в тёмной теме #606060), контурная → заливка primary с белым текстом, призрачная → фон surface_hover; 110ms",
+      "focus_visible": "внутренняя рамка 2px primary и белая 1px внутри неё: box-shadow inset 0 0 0 2px #0f62fe, inset 0 0 0 3px #ffffff (в тёмной теме рамка белая)",
+      "active": "синяя → #002d9c, тёмная → #6f6f6f (в тёмной теме #393939)",
+      "disabled": "фон #c6c6c6, текст #8d8d8d (в тёмной теме #525252 / #8d8d8d), cursor: not-allowed; в форме заявки не применяется",
+      "loading": "подпись меняется на «Отправляем…», вместо стрелки — круговой индикатор 16px; ширина кнопки фиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "outline 2px solid primary, outline-offset -2px; нижняя линия уходит под рамку",
+      "error": "outline 2px error, значок «!» 16px внутри поля справа, текст caption error под полем",
+      "disabled": "заливка surface, нижняя линия прозрачная, текст text_disabled"
+    },
+    "tile": {
+      "hover": "фон surface за 110ms, стрелка сдвигается на 4px вправо",
+      "focus_visible": "outline 2px primary, offset -2px",
+      "active": "фон surface_2"
+    }
+  },
+  "signature": [
+    "Углы 0 у кнопок, полей, плиток и снимков; скругляются только тэги-пилюли.",
+    "Лёгкий крупный заголовок: Plex Sans 300 на 42–60px, текст 400 с трекингом +0,16px, индексы и цифры в таблицах — Plex Mono.",
+    "Плитки на тонких линиях: сетка с зазором 1px цвета border, без теней; наведение меняет только слой #ffffff → #f4f4f4.",
+    "Кнопки с подписью слева и стрелкой справа, пара кнопок вплотную без зазора; поля — серая заливка с нижней линией и синей рамкой 2px в фокусе."
+  ],
+  "voice": "Точно и сухо, как техническое предложение: предмет, объём, срок, норма («Монтаж 12 000 м³/ч за 21 день по СП 60.13330»). Цифры с единицами и номерами норм вместо прилагательных; обычный регистр в заголовках и метках, без восклицаний и слов «инновационный», «уникальный».",
+  "type_features": {
+    "numbers": "font-variant-numeric: tabular-nums в таблицах, цифрах stat и ценах",
+    "mono": "IBM Plex Mono — индексы 01–08, номера ГОСТ и СП, артикулы, размеры файлов, номер заявки",
+    "body": "letter-spacing: 0.16px на 14–16px и 0.32px на 12px",
+    "display": "font-weight: 300 у display и h2; жирнее 400 заголовки не бывают"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_photo",
+        "form_in_hero"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "cta_label": [
+        "Запросить КП",
+        "Получить расчёт"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "hairline_tiles",
+      "light_display_weight"
+    ],
+    "default": {
+      "hero_layout": "split_photo",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "cta_label": "Запросить КП"
+    },
+    "legend": {
+      "hero_layout": {
+        "split_photo": "заголовок слева, документальный снимок справа",
+        "form_in_hero": "заголовок слева, форма КП на серой полосе справа"
+      },
+      "cta_color_role": {
+        "primary": "синяя главная кнопка",
+        "accent": "тёмная главная кнопка, синий остаётся у ссылок и фокуса"
+      },
+      "headline_scale": {
+        "xl": "60px / 36px",
+        "l": "48px / 32px"
+      },
+      "social_proof_position": {
+        "under_hero": "полоса цифр и логотипов сразу под первым экраном",
+        "before_form": "цифры и логотипы над формой, после кейсов"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первая гипотеза для B2B — hero_layout: форма в первом экране против снимка при горячем трафике."
+  },
+  "do": [
+    "Держать углы 0 у кнопок, полей, плиток и снимков; пилюлей бывают только тэги («44-ФЗ», «СРО»).",
+    "Набирать заголовки Plex Sans 300 и не утяжелять их; текст 400 с трекингом +0,16px; индексы, номера норм и размеры файлов — Plex Mono.",
+    "Строить блоки плитками на тонких линиях (зазор 1px цвета border) и сменой слоя #ffffff → #f4f4f4 вместо теней.",
+    "Держать синий только на главной кнопке, ссылках, фокусе и одном CTA-баннере.",
+    "Давать рядом с заявкой документы — презентацию, лицензии, образец договора — с форматом и размером файла.",
+    "Показывать фокус внутренней синей рамкой 2px у каждой кнопки, плитки и поля.",
+    "В совпадающей нише (ИТ-интеграторы, облака, серверы, ИТ-консалтинг) сдвинуть синий на primary_alt #00727a и не брать утилитарную полосу над шапкой, кнопку на всю высоту шапки и голубую подложку первого экрана (135-ФЗ, ст. 14.6)."
+  ],
+  "dont": [
+    "Не скруглять кнопки, поля и карточки даже на 4px и не делать кнопки-пилюли.",
+    "Не делать заголовки 600–700 и не набирать их прописными с разрядкой.",
+    "Не добавлять тени, градиенты, свечение и синие фоны секций, кроме одного CTA-баннера.",
+    "Не использовать логотип IBM, полосатые буквы и «жалюзи», фирменные пиктограммы и иллюстрации; название IBM Plex упоминать только как шрифт.",
+    "Не ставить синий текст мельче 14px на серую полосу (4.55:1 — на пределе) и не красить им заголовки.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не делать вложение ТЗ обязательным."
+  ],
+  "prompt_snippet": "Build a Russian B2B lead landing in an IBM Carbon-like style. Light: white #ffffff canvas, grey layers #f4f4f4 and #e8e8e8, text #161616, muted #525252, hairlines #e0e0e0; dark follows Carbon Gray 100: #161616, #262626, #f4f4f4, links #78a9ff. One blue, #0f62fe, for the primary button, links, focus and a single full-width CTA banner. Every corner is 0; only tags are pills. Fonts: self-hosted IBM Plex Sans 300 for headings (60/36px), 400 body with 0.16px tracking, 600 for emphasis; IBM Plex Mono for indices, standards and file sizes; Plex Serif 300 only for a client quote. Tiles sit on 1px hairlines (grid gap 1px on a border-coloured background), no shadows; hover only switches the layer. Buttons put the label left, an arrow right, and pair flush. Inputs are grey-filled with a bottom rule and a 2px blue outline on focus. Dark footer, unchecked 152-FZ consent, no logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/ibm/DESIGN.md, commit f696123",
+    "notes": "Шрифты не заменялись: семейство IBM Plex (Sans, Mono, Serif) открыто по SIL OFL 1.1 и содержит кириллицу, используется без изменений; Plex Sans Condensed не взят — только cyrillic-ext. Заголовок 76px уменьшен до 60px ради длинных русских слов, вес 300 сохранён. Тёмная тема собрана по слою Carbon Gray 100, которого на маркетинговом сайте нет. Серый #a8a8a8 для подсказок в полях заменён на #6f6f6f (4.57 на заливке), зелёный #24a148 для текста статуса — на #198038 (5.02). Мягкая голубая подложка первого экрана не перенесена. Утилитарная полоса, кнопка на всю высоту шапки и ряд логотипов клиентов оставлены как приёмы Carbon, но для совпадающей ниши запрещены. Добавлены тэги 44-ФЗ/223-ФЗ, документы с размером файла, форма КП с необязательным вложением и согласием по 152-ФЗ, primary_alt для совпадающей ниши, состояния, геометрия медиа и голос текста."
+  }
+}

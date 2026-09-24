@@ -1,0 +1,192 @@
+/* Необрутализм — Vibe Landing Kit 1.2.0
+ * Собственный стиль Вайб-Маркетолога.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Unbounded — npm i @fontsource-variable/unbounded (или @fontsource/unbounded), OFL
+ *   Rubik — npm i @fontsource-variable/rubik (или @fontsource/rubik), OFL
+ */
+:root {
+  --color-background: #fff6e5;
+  --color-surface: #ffffff;
+  --color-text: #0a0a0a;
+  --color-text-muted: #3f3a33;
+  --color-border: #0a0a0a;
+  --color-primary: #ffd23f;
+  --color-on-primary: #0a0a0a;
+  --color-accent: #5b3df5;
+  --color-on-accent: #ffffff;
+  --color-link: #4a2ee0;
+  --color-success: #0f7b3f;
+  --color-error: #c4271c;
+  --color-fill-coral: #ff7a59;
+  --color-fill-lime: #c5f23a;
+  --color-fill-sky: #8fd3ff;
+  --color-fill-mint: #7ee8b5;
+  --color-on-fill: #0a0a0a;
+  --color-shadow-color: #0a0a0a;
+  --color-marker: #ffd23f;
+  --color-on-marker: #0a0a0a;
+  --color-band-ink: #0a0a0a;
+  --color-on-band-ink: #ffd23f;
+  --color-focus: #5b3df5;
+  --font-display: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --display-size: 72px;
+  --display-weight: 800;
+  --display-size-desktop: 72px;
+  --display-size-mobile: 34px;
+  --display-line-height: 1.02;
+  --display-letter-spacing: -0.02em;
+  --display-text-transform: uppercase;
+  --font-h2: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --h2-size: 44px;
+  --h2-weight: 700;
+  --h2-size-desktop: 44px;
+  --h2-size-mobile: 26px;
+  --h2-line-height: 1.1;
+  --h2-letter-spacing: -0.02em;
+  --font-h3: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --h3-size: 22px;
+  --h3-weight: 700;
+  --h3-size-desktop: 22px;
+  --h3-size-mobile: 18px;
+  --h3-line-height: 1.2;
+  --h3-letter-spacing: -0.01em;
+  --font-lead: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lead-size: 20px;
+  --lead-weight: 400;
+  --lead-size-desktop: 20px;
+  --lead-size-mobile: 18px;
+  --lead-line-height: 1.5;
+  --lead-letter-spacing: 0;
+  --font-body: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 18px;
+  --body-weight: 400;
+  --body-size-desktop: 18px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.55;
+  --body-letter-spacing: 0;
+  --font-caption: 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 500;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.4;
+  --caption-letter-spacing: 0;
+  --font-label: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --label-size: 13px;
+  --label-weight: 700;
+  --label-size-desktop: 13px;
+  --label-size-mobile: 12px;
+  --label-line-height: 1.2;
+  --label-letter-spacing: 0.02em;
+  --label-text-transform: uppercase;
+  --font-button: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --button-size: 15px;
+  --button-weight: 700;
+  --button-size-desktop: 15px;
+  --button-size-mobile: 14px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0.02em;
+  --button-text-transform: uppercase;
+  --font-price: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  --price-size: 52px;
+  --price-weight: 800;
+  --price-size-desktop: 52px;
+  --price-size-mobile: 36px;
+  --price-line-height: 1;
+  --price-letter-spacing: -0.03em;
+  --radius-none: 0px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --space-unit: 8;
+  --space-section-desktop: 96px;
+  --space-section-mobile: 56px;
+  --space-container: 1200px;
+  --space-gutter-mobile: 16px;
+  --space-card-padding: 28px;
+  --space-card-padding-mobile: 20px;
+  --space-card-gap: 24px;
+  --space-marquee-height: 56px;
+  --shadow-card: 6px 6px 0 0 #0a0a0a;
+  --shadow-raised: 8px 8px 0 0 #0a0a0a;
+  --shadow-small: 4px 4px 0 0 #0a0a0a;
+  --shadow-pressed: 0 0 0 0 #0a0a0a;
+  --shadow-card-dark: 6px 6px 0 0 #fff6e5;
+  --shadow-raised-dark: 8px 8px 0 0 #fff6e5;
+  --shadow-small-dark: 4px 4px 0 0 #fff6e5;
+  --shadow-focus: 0 0 0 3px #fff6e5, 0 0 0 6px #5b3df5;
+  --shadow-focus-dark: 0 0 0 3px #141312, 0 0 0 6px #ffd23f;
+  --motion-fast: 90ms;
+  --motion-base: 160ms;
+  --motion-slow: 320ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.34,1.56,.64,1);
+  --stroke-thick: 3px;
+  --stroke-thin: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #141312;
+    --color-surface: #1f1d1b;
+    --color-text: #fff6e5;
+    --color-text-muted: #d6cfc2;
+    --color-border: #fff6e5;
+    --color-primary: #ffd23f;
+    --color-on-primary: #0a0a0a;
+    --color-accent: #a18cff;
+    --color-on-accent: #0a0a0a;
+    --color-link: #c9bbff;
+    --color-success: #57e08f;
+    --color-error: #ff7a70;
+    --color-fill-coral: #ff7a59;
+    --color-fill-lime: #c5f23a;
+    --color-fill-sky: #8fd3ff;
+    --color-fill-mint: #7ee8b5;
+    --color-on-fill: #0a0a0a;
+    --color-shadow-color: #fff6e5;
+    --color-marker: #ffd23f;
+    --color-on-marker: #0a0a0a;
+    --color-band-ink: #ffd23f;
+    --color-on-band-ink: #0a0a0a;
+    --color-focus: #ffd23f;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #141312;
+  --color-surface: #1f1d1b;
+  --color-text: #fff6e5;
+  --color-text-muted: #d6cfc2;
+  --color-border: #fff6e5;
+  --color-primary: #ffd23f;
+  --color-on-primary: #0a0a0a;
+  --color-accent: #a18cff;
+  --color-on-accent: #0a0a0a;
+  --color-link: #c9bbff;
+  --color-success: #57e08f;
+  --color-error: #ff7a70;
+  --color-fill-coral: #ff7a59;
+  --color-fill-lime: #c5f23a;
+  --color-fill-sky: #8fd3ff;
+  --color-fill-mint: #7ee8b5;
+  --color-on-fill: #0a0a0a;
+  --color-shadow-color: #fff6e5;
+  --color-marker: #ffd23f;
+  --color-on-marker: #0a0a0a;
+  --color-band-ink: #ffd23f;
+  --color-on-band-ink: #0a0a0a;
+  --color-focus: #ffd23f;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 34px;
+    --h2-size: 26px;
+    --h3-size: 18px;
+    --lead-size: 18px;
+    --body-size: 16px;
+    --caption-size: 14px;
+    --label-size: 12px;
+    --button-size: 14px;
+    --price-size: 36px;
+  }
+}

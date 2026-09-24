@@ -1,0 +1,603 @@
+{
+  "slug": "clay",
+  "name": "Clay",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Clay. Не аффилировано с Clay; без логотипов и фирменных шрифтов.",
+  "summary": "Кремовый холст, объёмные «пластилиновые» 3D-герои во весь первый экран и крупные карточки насыщенных цветов — розовая, тёмно-бирюзовая, лавандовая, персиковая, охра, мятная — по кругу, без повторов подряд. Заголовки круглым жирным шрифтом, текст спокойным гротеском, кнопки почти чёрные с радиусом 12px, карточки 24px. Подвал тоже кремовый: страница тёплая до конца.",
+  "summary_en": "A cream canvas, soft clay-like 3D characters filling the first screen and large saturated cards — hot pink, deep teal, lavender, peach, ochre, mint — cycling without repeats. Headings in a heavy rounded face, body in a calm grotesque, near-black 12px buttons and 24px cards. Even the footer stays cream, so the page is warm from top to bottom.",
+  "best_for": [
+    "детские центры и развивающие занятия",
+    "частные детские сады и школы",
+    "кружки, студии, летние лагеря",
+    "детские праздники и аниматоры",
+    "магазины игрушек и детских товаров",
+    "зоотовары, груминг, дрессировка",
+    "семейные развлечения: батуты, квесты, мастер-классы"
+  ],
+  "goals": [
+    "запись на пробное занятие",
+    "заявки",
+    "заказы в магазине",
+    "звонки родителей"
+  ],
+  "mood": [
+    "игривый",
+    "тёплый",
+    "яркий",
+    "дружелюбный",
+    "объёмный",
+    "заботливый"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#fffaf0",
+        "surface": "#f5f0e0",
+        "text": "#121110",
+        "text_muted": "#625c52",
+        "border": "#e6dfcc",
+        "primary": "#121110",
+        "on_primary": "#fffaf0",
+        "accent": "#ff4d8b",
+        "on_accent": "#121110",
+        "link": "#16605b",
+        "success": "#1e7b34",
+        "error": "#c42b1c",
+        "primary_hover": "#2b2926",
+        "accent_hover": "#ff6b9d",
+        "surface_soft": "#faf5e8",
+        "surface_strong": "#ebe6d6",
+        "border_strong": "#8a826f",
+        "card_pink": "#ff4d8b",
+        "card_teal": "#1a3a3a",
+        "card_lavender": "#b8a4ed",
+        "card_peach": "#ffb084",
+        "card_ochre": "#e8b94a",
+        "card_mint": "#a4d4c5",
+        "on_card": "#121110",
+        "on_card_teal": "#fffaf0",
+        "clay_coral": "#ff6b5a"
+      },
+      "dark": {
+        "background": "#0c1716",
+        "surface": "#162423",
+        "text": "#fffaf0",
+        "text_muted": "#b3c2be",
+        "border": "#2a3b39",
+        "primary": "#fffaf0",
+        "on_primary": "#0c1716",
+        "accent": "#ff5c95",
+        "on_accent": "#121110",
+        "link": "#8fdcc9",
+        "success": "#6fd08a",
+        "error": "#ff8a7a",
+        "primary_hover": "#ebe6d6",
+        "accent_hover": "#ff7aa8",
+        "surface_soft": "#111f1e",
+        "surface_strong": "#1e302e",
+        "border_strong": "#5a7a76",
+        "card_pink": "#ff5c95",
+        "card_teal": "#24504d",
+        "card_lavender": "#b8a4ed",
+        "card_peach": "#ffb084",
+        "card_ochre": "#e8b94a",
+        "card_mint": "#a4d4c5",
+        "on_card": "#121110",
+        "on_card_teal": "#fffaf0",
+        "clay_coral": "#ff6b5a"
+      },
+      "notes": "Главная поправка к исходнику: на розовой карточке бренд ставит белый текст — это 2.66:1. Здесь на всех светлых заливках (розовая, лавандовая, персиковая, охра, мятная) текст и кнопки чернилами on_card #121110: 6.01 / 8.60 / 10.59 / 10.30 / 11.50; кремовый on_card_teal — только на тёмно-бирюзовой (11.80, в тёмной теме #24504d — 8.66). accent — тот же горячий розовый как ЗАЛИВКА кнопки с чернильной подписью (6.01, наведение #ff6b9d — 7.04); розовым по крему не пишем. link — глубокая бирюза #16605b (7.06 на холсте, 6.45 на surface). border_strong #8a826f — рамка полей и чекбокса (3.67, порог 3:1 для границ полей); hairline border — только разделители. clay_coral — только в иллюстрациях и мелкой графике, не под текст. Тёмная тема своя, у бренда её нет: холст — почти чёрная бирюза #0c1716 (из тёмных поверхностей бренда), главная кнопка переворачивается в кремовую, цветные карточки сохраняют заливку и чернильный текст — на тёмном они светятся, как пластилин под лампой."
+    },
+    "typography": {
+      "display": {
+        "family": "M PLUS Rounded 1c",
+        "fallback": "'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 800,
+        "size_desktop": "68px",
+        "size_mobile": "38px",
+        "line_height": 1.04,
+        "letter_spacing": "-0.03em"
+      },
+      "h2": {
+        "family": "M PLUS Rounded 1c",
+        "fallback": "'Nunito', system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "46px",
+        "size_mobile": "30px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.025em"
+      },
+      "h3": {
+        "family": "M PLUS Rounded 1c",
+        "fallback": "'Nunito', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.01em"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "19px",
+        "size_mobile": "17px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "eyebrow": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.4,
+        "letter_spacing": "0.1em",
+        "note": "прописными: «ДЛЯ ДЕТЕЙ 4–7 ЛЕТ», «КАК ПРОХОДИТ ПРОБНОЕ»"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "M PLUS Rounded 1c",
+        "fallback": "'Nunito', system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "34px",
+        "size_mobile": "28px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.02em",
+        "note": "цена абонемента или товара «4 800 ₽/мес»"
+      }
+    },
+    "radius": {
+      "xs": "6px",
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "xxl": "32px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "container": "1280px",
+      "gutter_mobile": "20px",
+      "card_padding": "32px",
+      "card_gap": "20px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 2px 4px rgba(18,17,16,0.06), 0 12px 32px rgba(18,17,16,0.10)",
+      "raised_dark": "0 2px 4px rgba(0,0,0,0.35), 0 14px 36px rgba(0,0,0,0.45)",
+      "focus": "0 0 0 2px #fffaf0, 0 0 0 4px #121110",
+      "focus_dark": "0 0 0 2px #0c1716, 0 0 0 4px #fffaf0",
+      "note": "Тяжёлых теней нет: глубину дают цвет карточек и объём 3D-иллюстраций. raised — только поднятая при наведении кнопка, липкая панель и всплывающее окно расписания."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "240ms",
+      "slow": "520ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.34,1.4,.64,1)",
+      "note": "Игриво, но без суеты: кнопка при нажатии «пружинит» (scale .97 и возврат по ease_emphasized с лёгким перелётом), цветные карточки стопкой наезжают при прокрутке. Ничего не вращается бесконечно."
+    }
+  },
+  "fonts": [
+    {
+      "family": "M PLUS Rounded 1c",
+      "fontsource": "m-plus-rounded-1c",
+      "role": "display",
+      "weights": [
+        700,
+        800
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource/m-plus-rounded-1c — самохостинг, font-display: swap; подключать ТОЛЬКО подмножества cyrillic и latin (японское подмножество тяжёлое и не нужно)",
+      "replaces": "Plain Black (проприетарный)",
+      "why": "полностью скруглённые окончания штрихов и плотный жирный вес дают ту же мягкую «лепную» подачу крупного заголовка, что у бренда; кириллица нарисована аккуратно, без заимствований из латиницы. Вес 800 здесь соответствует визуальной массе Plain Black, хотя в CSS бренда он записан как 500"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body+ui",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/inter — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Inter — рабочая гарнитура самого бренда",
+      "why": "спокойный текст рядом с круглыми заголовками: бренд строго разделяет роли — круглый шрифт только в заголовках, всё остальное Inter"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "md",
+      "padding": "14px 24px",
+      "height": "52px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон primary_hover и подъём translateY(-2px) с тенью raised за 150ms",
+      "use": "«Записаться на пробное», «Выбрать программу», «В корзину»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "md",
+      "padding": "14px 24px",
+      "height": "52px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон accent_hover, подъём translateY(-2px)",
+      "use": "вариант главной кнопки в ветке cta_color_role=accent; акционная кнопка «Пробное бесплатно» в полосе перед формой"
+    },
+    "button_secondary": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "padding": "13px 23px",
+      "height": "52px",
+      "weight": 600,
+      "hover": "фон surface",
+      "use": "«Расписание и цены», «Позвонить»"
+    },
+    "button_on_color": {
+      "bg": "background",
+      "color": "text",
+      "radius": "md",
+      "padding": "12px 20px",
+      "height": "48px",
+      "weight": 600,
+      "hover": "фон surface_soft",
+      "use": "кнопка внутри цветной карточки; на тёмно-бирюзовой — такая же кремовая"
+    },
+    "feature_card": {
+      "bg": "card_pink | card_teal | card_lavender | card_peach | card_ochre | card_mint — по кругу, без повторов подряд",
+      "color": "on_card (на card_teal — on_card_teal)",
+      "radius": "xl",
+      "padding": "32px",
+      "min_height": "320px",
+      "content": "надзаголовок прописными, h3 круглым 700, 2–3 строки body в колонке до 75% ширины, внизу справа 3D-фигурка 140px, выступающая за край карточки на 16px (только на десктопе); текст не заходит под фигурку — нижний отступ карточки не меньше высоты фигурки; при необходимости button_on_color",
+      "use": "выгоды и направления: «Логика и математика», «Английский через игру», «Подготовка к школе»",
+      "mobile": "фигурка 96px ВНУТРИ карточки, без выступа за край (иначе горизонтальная прокрутка страницы), текст на всю ширину над ней"
+    },
+    "program_card": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "lg",
+      "padding": "0 0 24px",
+      "media": "сверху иллюстрация 4:3 на заливке одного из card_* с радиусом lg по верхним углам",
+      "content": "age_chip, h3, строка расписания caption text_muted («вт, чт 17:30–18:30»), цена шрифтом price, button_secondary во всю ширину; паддинг текста 0 24px",
+      "use": "программы, группы по возрасту, товары и наборы в магазине"
+    },
+    "age_chip": {
+      "bg": "card_mint",
+      "color": "on_card",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "caption 14px/600",
+      "use": "«4–6 лет», «для щенков»; другие заливки из card_* допустимы, но одна на карточку"
+    },
+    "badge": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "padding": "6px 14px",
+      "font": "caption 14px/500",
+      "use": "«Набор в группы на сентябрь», «Лицензия на образовательную деятельность»"
+    },
+    "tabs_age": {
+      "item": "пилюля 40px, паддинг 8px 16px, text_muted, фон прозрачный",
+      "active": "фон surface, текст text",
+      "use": "фильтр программ по возрасту: «3–4», «5–6», «7–9», «10+»; на телефоне — горизонтальная лента с затуханием края"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "height": "52px",
+      "padding": "12px 16px",
+      "label": "подпись над полем 14px/600 text",
+      "focus": "рамка 2px text",
+      "error": "рамка 2px error, текст 14px error с иконкой под полем"
+    },
+    "select_age": {
+      "bg": "background",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "height": "52px",
+      "use": "необязательное третье поле формы «Возраст ребёнка»; можно заменить тремя пилюлями tabs_age"
+    },
+    "checkbox": {
+      "size": "22px",
+      "radius": "xs",
+      "border": "1px solid border_strong",
+      "checked": "фон text, галочка background",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных; не отмечен заранее"
+    },
+    "teacher_card": {
+      "bg": "surface",
+      "radius": "xl",
+      "padding": "24px",
+      "content": "фото 4:5 radius lg, имя h3, опыт и образование caption text_muted, одна фраза педагога цитатой body",
+      "use": "блок «Педагоги»"
+    },
+    "review_card": {
+      "bg": "surface",
+      "radius": "lg",
+      "padding": "24px",
+      "content": "текст body, внизу имя родителя 16px/600 и «мама Софии, 5 лет» caption text_muted; оценка звёздами цветом text",
+      "use": "отзывы родителей 3 в ряд"
+    },
+    "cta_band": {
+      "bg": "surface_soft",
+      "radius": "xxl",
+      "padding": "64px",
+      "content": "слева h2 и форма заявки, справа 3D-сцена с героем, машущим рукой",
+      "use": "финальная полоса с формой"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "72px",
+      "left": "текстовый логотип клиента круглым шрифтом 22px/800",
+      "center": "3–4 якорные ссылки 15px/500 text",
+      "right": "телефон 16px/600 + button_primary высотой 44px «Записаться»",
+      "mobile": "64px: логотип, иконка телефона и меню кнопками 44×44"
+    },
+    "sticky_bottom_bar": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "padding": "12px 20px",
+      "content": "button_primary «Записаться на пробное» во всю ширину, слева кнопка-телефон 52px с рамкой border_strong",
+      "use": "телефон, рецепт sticky-cta-mobile"
+    },
+    "faq_item": {
+      "bg": "surface",
+      "radius": "lg",
+      "padding": "20px 24px",
+      "gap": "12px между вопросами",
+      "question": "18px/600 Inter text, справа круг 32px с плюсом",
+      "answer": "body text_muted"
+    },
+    "footer": {
+      "bg": "surface_soft",
+      "color": "text",
+      "padding": "72px 24px 40px",
+      "columns": "3–4 колонки ссылок 15px text_muted; адрес и часы работы 16px text",
+      "legal": "реквизиты, номер лицензии (для образования), «Политика обработки персональных данных» — caption text_muted",
+      "note": "подвал кремовый, не тёмный; сверху может выглядывать низкая 3D-сцена своего рисунка"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "primary: фон #2b2926 (в тёмной #ebe6d6) + translateY(-2px) + shadow.raised за 150ms; accent: фон #ff6b9d (подпись 7.04:1); secondary: фон surface",
+      "focus_visible": "кольцо 2px #121110 с зазором 2px цвета фона (shadow.focus); в тёмной теме кольцо #fffaf0 (shadow.focus_dark); на цветной карточке кольцо всегда чернильное",
+      "active": "scale(.97) за 100ms и возврат за 240ms по ease_emphasized с лёгким перелётом — «пружинка»; при prefers-reduced-motion только смена фона",
+      "disabled": "фон surface_strong, подпись text_muted, без подъёма; на форме заявки не применяется — кнопка активна всегда",
+      "loading": "подпись заменяется тремя кругами 8px цвета on_primary, которые по очереди подпрыгивают на 4px (не больше трёх циклов, затем стоят); ширина зафиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "рамка 2px text (#121110 / #fffaf0), фон не меняется, без свечения",
+      "error": "рамка 2px error (#c42b1c / #ff8a7a), под полем 14px error с иконкой «!» и понятной фразой («Введите телефон полностью — 10 цифр после +7»); aria-invalid=true",
+      "disabled": "фон surface, рамка border, текст text_muted"
+    }
+  },
+  "signature": [
+    "«Пластилиновые» 3D-герои и предметы своего рисунка — матовые, мягкие, с видимой лепкой — во весь первый экран и маленькими фигурками на карточках.",
+    "Карточки насыщенных цветов идут по кругу — розовая, тёмно-бирюзовая, лавандовая, персиковая, охра, мятная — один цвет не встречается дважды подряд, текст на них чернилами.",
+    "Круглый жирный заголовочный шрифт с плотной разрядкой на кремовом холсте и почти чёрные кнопки с радиусом 12px.",
+    "Тёплый до конца: вместо тёмного подвала — кремовый, перед ним полоса с 3D-сценой и формой."
+  ],
+  "voice": "Тёплый и живой, как хороший педагог, который говорит с родителями: коротко и конкретно про ребёнка и результат — «Через месяц читает по слогам», «Пробное занятие бесплатно». Без сюсюканья, уменьшительных через слово, восклицательных знаков и обещаний «вырастим гения».",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; неразрывный пробел между разрядами и перед ₽ («4 800 ₽/мес»)",
+    "ages": "короткое тире без пробелов и неразрывный пробел перед «лет»: «4–6 лет»",
+    "schedule": "font-variant-numeric: tabular-nums для времени «17:30–18:30»",
+    "headings": "text-wrap: balance; без прописных, кроме надзаголовков"
+  },
+  "layout": {
+    "hero_pattern": "Сплит 7/5 на кремовом холсте, 96px сверху. Слева: бейдж-пилюля «Набор в группы на сентябрь», H1 круглым 800 в две-три строки, лид 19px text_muted, две кнопки в ряд — button_primary «Записаться на пробное» и button_secondary «Расписание и цены», ниже строка доверия: оценка «4,9» цветом text, число отзывов и адрес филиала caption text_muted. Справа: карточка surface_soft radius xl с 3D-сценой — наш пластилиновый герой и предметы ниши (кубики, книжка, мяч; для зоотоваров — щенок и миска); фигура героя выходит за верхний край карточки на 24px. Вариант centered_scene: бейдж, H1 и кнопки по центру колонки 760px, широкая 3D-сцена 21:9 под ними.",
+    "section_order": [
+      "nav",
+      "hero",
+      "trust_row",
+      "feature_cards",
+      "programs",
+      "how",
+      "teachers",
+      "reviews",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "trust_row": "4 факта в строку на холсте: «с 2016 года», «8 филиалов», «группы до 8 детей», «лицензия»; число круглым 800 28px + подпись caption",
+      "feature_cards": "4–5 feature_card цветов по кругу — стопкой при прокрутке (stack_cards) или сеткой 3 в ряд (grid_cards)",
+      "programs": "tabs_age + сетка program_card 3 в ряд; для магазина — категории товаров с ценой «от …»",
+      "how": "«Как проходит пробное»: 3 шага на холсте, номер в круге 56px цвета card_* с чернильной цифрой круглым 800, подпись h3 и строка body",
+      "teachers": "3–4 teacher_card; для магазина и зоотоваров — «Кто подбирает»: консультант или ветеринар-консультант",
+      "reviews": "3 review_card, над ними оценка «4,9» и число отзывов",
+      "pricing": "2–3 варианта абонемента в program_card без картинки; выделенный — на card_teal с кремовым текстом",
+      "faq": "5–7 faq_item на surface",
+      "lead_form": "cta_band: форма слева, 3D-герой справа"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор 20px; цветные карточки 3 в ряд, программы 3 в ряд; 768–1023px — по 2",
+    "mobile_notes": "Меньше 768px: навигация 64px. 3D-сцена идёт ПОСЛЕ заголовка и кнопок, 1:1, без выхода за край; H1 38px. Кнопки первого экрана стопкой во всю ширину по 52px. Цветные карточки — стопкой при прокрутке (--stack-top 72px) или по одной во всю ширину; фигурки на карточках 96px и внутри карточки, без выступа за край. Фильтр возрастов — горизонтальная лента. Липкая нижняя панель «Записаться на пробное». Отступы 20px, секции 56px; все нажимаемые элементы не меньше 44×44px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "Внутри cta_band на surface_soft: h2 «Запишитесь на пробное — это бесплатно», строка body text_muted «Перезвоним, подберём группу по возрасту и времени». Поля «Имя родителя» и «Телефон» 52px, radius 12px, рамка 1px border_strong, подпись над полем 14px/600; телефон с маской +7 (___) ___-__-__, inputmode=tel. Необязательно — выбор возраста тремя пилюлями tabs_age (не обязательное поле, заявка уходит и без него). Кнопка button_primary во всю ширину «Записаться на пробное». Ниже чекбокс 22px, не отмеченный заранее: «Согласен(на) на обработку персональных данных по 152-ФЗ» и ссылка «Политика обработки данных» цветом link с подчёркиванием. Кнопка активна всегда: ошибки — видимым текстом у поля, фокус на первое проблемное поле; сбой сети — текст и «Отправить ещё раз», введённое не стирается.",
+    "success_state": "Форма заменяется на месте, высота сохраняется: 3D-герой в карточке меняет позу на «ура» (заранее отрисованный второй кадр, не анимация), круг 56px card_mint с чернильной галочкой, h3 «Заявка на пробное принята» (без восклицательного знака), строка «Позвоним на +7 … сегодня до 20:00 и подберём группу», button_secondary «Посмотреть расписание». Фокус на заголовок, aria-live=polite; рецепт form-success."
+  },
+  "motion_recipes": [
+    "parallax-soft",
+    "sticky-stack-cards",
+    "form-success",
+    "sticky-cta-mobile",
+    "steps-progress-line",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "ничего не двигается: цветные карточки стоят сеткой, сцена первого экрана неподвижна",
+      "subtle": "по умолчанию: цветные карточки стопкой (sticky-stack-cards), ответ формы, липкая панель на телефоне; + steps-progress-line; + form-field-feedback",
+      "rich": "как subtle + мягкий параллакс 3D-сцены первого экрана и финальной полосы"
+    },
+    "parallax-soft": "только уровень rich: 3D-герой в карточке первого экрана — слой иллюстрации --px-shift 20px, дальний слой с предметами .px-layer--deep 40px (на телефоне 10px и 20px); то же в cta_band. Не больше двух слоёв; текст, кнопки, цены и форма не двигаются",
+    "sticky-stack-cards": "feature_card 4–5 штук стопкой: --stack-top 96px (телефон 72px), --stack-step 16px, --stack-gap 24px, высота карточки не больше 60svh; цвета по кругу, первая карточка — розовая или лавандовая; одна стопка на страницу. В ветке benefits_layout=grid_cards рецепт не ставится",
+    "form-success": "ответ формы в cta_band: смена кадра героя (статичная картинка), круг card_mint с галочкой; без конфетти и частиц — даже на детском сайте запись это не приз",
+    "sticky-cta-mobile": "панель sticky_bottom_bar: кнопка-телефон + «Записаться на пробное»; data-after — кнопки первого экрана, data-hide-on — cta_band с формой",
+    "steps-progress-line": "how «как проходит первое занятие»: толстая линия 4px цвета текущей карточки, точка-кружок 18px",
+    "form-field-feedback": "без встряски — родителям не показываем тревогу; поля radius 12px, тексты мягкие"
+  },
+  "media": {
+    "hero": "Матовая 3D-сцена в «пластилиновой» технике собственного рисунка: главный герой (ребёнок-персонаж или зверёк) с предметами ниши на однотонной заливке одного из цветов карточек, мягкий студийный свет сверху-слева, видимые следы лепки и скруглённые края; сцена в карточке radius 24px справа от заголовка.",
+    "video_in_flow": "Живые ролики с занятий — вертикальные 9:16 по 15–30 секунд в сетке галереи, без звука и автозапуска до нажатия, постер — кадр ребёнка за делом; ролик-экскурсия по центру 60–90 секунд со звуком и субтитрами — по кнопке в блоке «Как проходит пробное».",
+    "imagery": "Два слоя: 3D-лепка (герои, предметы, фигурки на карточках) и документальные фото занятий при дневном свете в тёплой цветокоррекции под крем — дети за делом, а не позируют; фото педагогов 4:5 на однотонном фоне.",
+    "character": "Один собственный пластилиновый герой на весь сайт — повторяется в первом экране, на шагах «как проходит пробное» и в финальной полосе в разных позах (машет, читает, радуется); персонажей и маскотов бренда не копировать.",
+    "audio": "Аудиоверсия страницы не нужна; уместно короткое аудиоприветствие педагога (до 30 с) в блоке «Педагоги» с кнопкой воспроизведения и расшифровкой рядом.",
+    "avoid": [
+      "плоский векторный клипарт и стоковые мультяшки",
+      "глянцевый пластик и неон вместо матовой лепки",
+      "дети, позирующие в камеру со стоковой улыбкой",
+      "фото и видео детей без письменного согласия родителей",
+      "персонажи, иллюстрации и горный пейзаж подвала бренда",
+      "тёмный подвал и тёмные мрачные кадры"
+    ],
+    "geometry": {
+      "hero_desktop": "5:4 сцена в карточке правой колонки (≈560×448)",
+      "hero_mobile": "1:1 во всю ширину под кнопками",
+      "hero_centered": "21:9 под заголовком в варианте centered_scene",
+      "card": "4:3 иллюстрация на цветной заливке сверху program_card",
+      "card_figure": "фигурка на feature_card 1:1, 140px (телефон 96px), PNG/WebP с прозрачным фоном",
+      "portrait": "4:5 педагоги, radius 16px",
+      "gallery": "1:1 фото и 9:16 ролики, сетка 3 колонки",
+      "logo_strip": "партнёры и СМИ монохромно высотой 28px цвета text_muted"
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_scene",
+        "centered_scene"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "benefits_layout": [
+        "stack_cards",
+        "grid_cards"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "card_color_cycle",
+      "cream_footer",
+      "clay_3d_style"
+    ],
+    "default": {
+      "hero_layout": "split_scene",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "benefits_layout": "stack_cards"
+    },
+    "legend": {
+      "hero_layout": {
+        "split_scene": "текст слева, 3D-сцена в карточке справа",
+        "centered_scene": "текст по центру, широкая сцена 21:9 ниже"
+      },
+      "cta_color_role": {
+        "primary": "почти чёрная кнопка с кремовой подписью",
+        "accent": "розовая кнопка с чернильной подписью"
+      },
+      "headline_scale": {
+        "xl": "68px / 38px",
+        "l": "54px / 32px"
+      },
+      "benefits_layout": {
+        "stack_cards": "цветные карточки наезжают стопкой при прокрутке",
+        "grid_cards": "цветные карточки сеткой 3 в ряд"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для детских центров первой проверять cta_color_role: розовая кнопка заметнее, но почти чёрная солиднее для родителей."
+  },
+  "do": [
+    "Держать холст кремовым #fffaf0 и подвал тоже кремовым — тёплая страница от первого экрана до реквизитов.",
+    "Ставить во весь первый экран собственную матовую 3D-сцену «из пластилина» и повторять того же героя дальше по странице.",
+    "Чередовать цветные карточки по кругу: розовая → тёмно-бирюзовая → лавандовая → персиковая → охра → мятная, без повторов подряд.",
+    "Писать на цветных карточках чернилами #121110, кремовым — только на тёмно-бирюзовой.",
+    "Набирать заголовки круглым M PLUS Rounded 1c 800 с плотной разрядкой, текст — Inter 400; кнопки почти чёрные с радиусом 12px.",
+    "Для детей показывать возраст, расписание и цену прямо на карточке программы — родитель выбирает по ним.",
+    "В совпадающей нише (B2B-сервисы данных, обогащение контактов, инструменты продаж) сменить набор цветов карточек и не брать 3D-лепку и круглый заголовочный шрифт — требование ст. 14.6 закона о защите конкуренции (135-ФЗ)."
+  ],
+  "dont": [
+    "Не ставить белый текст на розовую, лавандовую, персиковую, охряную и мятную карточки: у розовой это 2,66:1.",
+    "Не писать розовым по крему — ни заголовки, ни цены, ни ссылки: розовый только заливкой с чернильной подписью.",
+    "Не заменять 3D-лепку плоскими векторами и стоковым клипартом — пропадает весь характер стиля.",
+    "Не добавлять седьмой цвет карточки и не ставить два одинаковых цвета подряд.",
+    "Не делать тёмный подвал и не заливать секции целиком насыщенным цветом — цвет живёт в карточках.",
+    "Не использовать логотип, персонажей, иллюстрации и шрифт Clay — только свой текстовый логотип и свои 3D-герои.",
+    "Не публиковать фото детей без письменного согласия родителей, не отмечать согласие на обработку данных заранее и не отбрасывать заявку молча."
+  ],
+  "prompt_snippet": "Build a playful, warm lead landing in a Clay-like style for a Russian kids' centre, toy shop or pet store. Light: cream canvas #fffaf0, cream cards #f5f0e0, ink #121110, muted #625c52, field borders #8a826f. Dark: teal-black #0c1716, surface #162423, text #fffaf0, muted #b3c2be. Main button near-black #121110 with cream label, 12px radius; accent hot pink #ff4d8b as a fill with an ink label only. Large saturated feature cards with 24px radius cycle pink #ff4d8b, deep teal #1a3a3a (cream text), lavender #b8a4ed, peach #ffb084, ochre #e8b94a, mint #a4d4c5 — never the same colour twice in a row, ink text on light fills. Headings in M PLUS Rounded 1c 800 with tight tracking (H1 68/38px); body Inter 17px. Hero: original matte clay-style 3D character scene in a rounded card beside the headline. Cream footer, never dark. Unchecked 152-FZ consent. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/clay/DESIGN.md, commit f696123",
+    "notes": "Plain Black заменён на M PLUS Rounded 1c 800 (OFL-1.1, кириллица), Inter оставлен — это гарнитура бренда. Контраст: белый текст на розовой карточке бренда (2.66:1) заменён на чернила (6.01:1), розовый акцент — только заливка с чернильной подписью; muted #6a6a6a переведён в тёплый #625c52 под кремовый холст; рамка полей #8a826f ради порога 3:1 (у бренда hairline #e5e5e5 — 1.2:1). Тёмная тема своя (почти чёрная бирюза #0c1716 из тёмных поверхностей бренда, кремовая главная кнопка, карточки сохраняют цвет). Кнопки подняты с 44 до 52px под трафик с телефона, добавлены пружинка при нажатии, стопка цветных карточек, форма в финальной полосе с 3D-героем, возраст и расписание в карточке программы, согласие по 152-ФЗ и напоминание о согласии родителей на съёмку детей. Персонажи, горный пейзаж подвала и иллюстрации бренда не переносятся — только техника «пластилиновой» 3D-лепки."
+  }
+}

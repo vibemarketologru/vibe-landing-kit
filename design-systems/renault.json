@@ -1,0 +1,626 @@
+{
+  "slug": "renault",
+  "name": "Renault",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Renault. Не аффилировано с Renault; без логотипов и фирменных шрифтов.",
+  "summary": "Чёрно-белый холст и один солнечно-жёлтый акцент: главная кнопка и одна жёлтая плитка на полосу. Плотные заголовки 700 с межстрочным 0,95, прямые углы у плиток и фото, 2px у кнопок, поля с одной нижней линией. Страница идёт полосами белая → чёрная → жёлтая; глубина — сменой цвета, а не тенью; подпись и цена всегда под фото, не поверх.",
+  "summary_en": "A black-and-white canvas with a single sunlight-yellow accent: the main button and one yellow tile per band. Dense 700 headlines at 0.95 line height, square corners on tiles and photos, 2px on buttons, inputs drawn with a single bottom rule. The page moves in full-bleed bands, white to black to yellow; depth comes from colour blocking, not shadows, and captions and prices always sit under the photo, never on top.",
+  "best_for": [
+    "автосалоны и продажа авто с пробегом",
+    "шины, диски и шиномонтаж",
+    "прокат и аренда автомобилей",
+    "такси-парки и набор водителей",
+    "стройка и стройматериалы",
+    "аренда и продажа спецтехники",
+    "автосервис и кузовной ремонт"
+  ],
+  "goals": [
+    "заявка на расчёт или тест-драйв",
+    "звонок",
+    "запись в сервис",
+    "набор водителей и персонала"
+  ],
+  "mood": [
+    "уверенный",
+    "контрастный",
+    "индустриальный",
+    "массовый",
+    "честный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f5f5f5",
+        "text": "#000000",
+        "text_muted": "#595959",
+        "border": "#d6d6d6",
+        "primary": "#ffed00",
+        "on_primary": "#000000",
+        "accent": "#000000",
+        "on_accent": "#ffffff",
+        "link": "#000000",
+        "success": "#1f7a3a",
+        "error": "#b3261e",
+        "primary_pressed": "#e6d200",
+        "border_strong": "#000000",
+        "band_alt": "#000000",
+        "on_band_alt": "#ffffff",
+        "on_band_alt_muted": "#b8b8b8",
+        "band_alt_surface": "#141414",
+        "focus": "#000000",
+        "focus_on_band": "#ffed00",
+        "disabled_bg": "#e6e6e6",
+        "scrim": "#000000"
+      },
+      "dark": {
+        "background": "#000000",
+        "surface": "#141414",
+        "text": "#ffffff",
+        "text_muted": "#b3b3b3",
+        "border": "#333333",
+        "primary": "#ffed00",
+        "on_primary": "#000000",
+        "accent": "#ffffff",
+        "on_accent": "#000000",
+        "link": "#ffffff",
+        "success": "#5cc97a",
+        "error": "#ff7a6e",
+        "primary_pressed": "#e6d200",
+        "border_strong": "#ffffff",
+        "band_alt": "#161616",
+        "on_band_alt": "#ffffff",
+        "on_band_alt_muted": "#b8b8b8",
+        "band_alt_surface": "#000000",
+        "focus": "#ffed00",
+        "focus_on_band": "#ffed00",
+        "disabled_bg": "#262626",
+        "scrim": "#000000"
+      },
+      "notes": "Фирменная пара исходника прошла без правок: жёлтый #ffed00 с чёрным — 17.37:1, нажатие #e6d200 с чёрным — 13.58:1. Жёлтый — только заливка под чёрный текст: жёлтый текст и жёлтый с белым запрещены (белый по #ffed00 — 1.21:1). Приглушённый #666666 исходника (5.74 на белом, 5.36 на surface) затемнён до #595959 (7.00 на белом, 6.42 на surface), потому что под фото на surface стоят мелкие подписи 14px. Ошибка исходника #be6464 (4.07 на белом) не проходит как текст — заменена на #b3261e (6.54); успех #8dc572 (2.03) — на #1f7a3a (5.38). border #d6d6d6 — только разделители строк (1.45, декоративные); рамка и нижняя линия полей — border_strong, чёрная (21:1). band_alt — «история»-полоса: в светлой теме чёрная, в тёмной — #161616 на чёрной странице; текст на ней on_band_alt (белый, 21 и 18.1), приглушённый on_band_alt_muted #b8b8b8 (10.59 на чёрном, 9.29 на #141414). Ссылки — цветом текста с подчёркиванием 1px, как у бренда: цвет #0000ee исходника не переносим."
+    },
+    "typography": {
+      "display": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "64px",
+        "size_mobile": "40px",
+        "line_height": 0.95,
+        "letter_spacing": "0"
+      },
+      "h2": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "44px",
+        "size_mobile": "32px",
+        "line_height": 0.98,
+        "letter_spacing": "0"
+      },
+      "h3": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "26px",
+        "size_mobile": "22px",
+        "line_height": 1.0,
+        "letter_spacing": "0"
+      },
+      "lead": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "21px",
+        "size_mobile": "19px",
+        "line_height": 1.3,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "15px",
+        "size_mobile": "14px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "eyebrow": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.2,
+        "letter_spacing": "0.04em",
+        "text_transform": "uppercase",
+        "note": "надзаголовок до 4 слов и метки «В НАЛИЧИИ», «НОВИНКА»"
+      },
+      "button": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "17px",
+        "size_mobile": "17px",
+        "line_height": 1.0,
+        "letter_spacing": "0.01em"
+      },
+      "price": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "32px",
+        "size_mobile": "26px",
+        "line_height": 1.0,
+        "letter_spacing": "0",
+        "note": "цена «от 1 290 000 ₽» и «2 400 ₽ за комплект» — под фото и в строках выбора"
+      },
+      "stat": {
+        "family": "Sofia Sans Semi Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "80px",
+        "size_mobile": "52px",
+        "line_height": 0.9,
+        "letter_spacing": "-0.01em",
+        "note": "цифры на чёрной полосе: «40 минут», «120 машин в парке»"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "xs": "2px",
+      "sm": "2px",
+      "md": "0px",
+      "lg": "0px",
+      "pill": "999px",
+      "note": "2px — только кнопки и квадратные иконки-кнопки; плитки, карточки, фото, поля, полосы — 0. Пилюля — только чипы выбора и метка «НОВИНКА», никогда главная кнопка."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "80px",
+      "section_mobile": "48px",
+      "container": "1280px",
+      "gutter_mobile": "16px",
+      "gutter_desktop": "32px",
+      "tile_padding": "32px",
+      "tile_padding_mobile": "20px",
+      "tile_gap": "16px",
+      "row_padding": "24px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 2px 4px rgba(0,0,0,0.10)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #000000",
+      "focus_dark": "0 0 0 2px #000000, 0 0 0 4px #ffed00",
+      "note": "Каталог без теней. raised — только липкая нижняя панель на телефоне и выпадающий список; всё остальное держится сменой цвета полос и рамкой 1px."
+    },
+    "motion": {
+      "fast": "120ms",
+      "base": "200ms",
+      "slow": "420ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.4,0,0,1)",
+      "note": "Механическая точность: смена цвета и короткий сдвиг стрелки на 4px, без пружин, отскоков и масштаба."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Sofia Sans Semi Condensed",
+      "fontsource": "sofia-sans-semi-condensed",
+      "role": "display+body",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/sofia-sans-semi-condensed — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "NouvelR (проприетарный шрифт бренда)",
+      "why": "полусжатый гротеск с высоким очком и прямыми окончаниями — как у NouvelR; одно семейство на всю шкалу, как у бренда; на межстрочном 0,95 «Й» и «Ё» не цепляют строку сверху (проверено на макете 64px); полноценная кириллица. Сжатая Sofia Sans Condensed не взята: её уже носит стиль Nike, и на тексте 17–18px она тесновата"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "xs",
+      "height": "52px",
+      "padding": "0 28px",
+      "font": "button",
+      "weight": 700,
+      "icon": "стрелка › 16px справа, отступ 12px",
+      "hover": "фон primary_pressed #e6d200 за 120ms, стрелка сдвигается на 4px вправо; без тени и масштаба",
+      "use": "одно главное действие на экран: «Рассчитать стоимость», «Записаться на тест-драйв», «Узнать цену шин»"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "xs",
+      "height": "52px",
+      "padding": "0 27px",
+      "weight": 700,
+      "hover": "инверсия: фон text, текст background",
+      "use": "«Позвонить», «Все предложения», «Каталог»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "xs",
+      "height": "52px",
+      "padding": "0 28px",
+      "weight": 700,
+      "hover": "фон #262626 в светлой теме / #e6e6e6 в тёмной",
+      "use": "вариант cta_color_role=accent: чёрная кнопка в светлой теме, белая в тёмной. Внутри жёлтой плитки и полосы не использовать — там button_on_yellow"
+    },
+    "button_on_yellow": {
+      "bg": "#000000",
+      "color": "#ffffff",
+      "radius": "xs",
+      "height": "52px",
+      "padding": "0 28px",
+      "weight": 700,
+      "hover": "фон #262626",
+      "use": "главная кнопка ВНУТРИ жёлтой плитки и полосы quick_calc — в обеих темах чёрная: белая кнопка на жёлтом в тёмной теме теряет край (1.21:1), это видно на демо"
+    },
+    "button_on_band": {
+      "bg": "transparent",
+      "color": "on_band_alt",
+      "border": "1px solid on_band_alt",
+      "radius": "xs",
+      "height": "52px",
+      "hover": "фон on_band_alt, текст band_alt",
+      "use": "вторичная кнопка на чёрной полосе рядом с жёлтой"
+    },
+    "chip": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "pill",
+      "height": "40px",
+      "padding": "0 16px",
+      "font_size": "15px",
+      "weight": 600,
+      "selected": "фон text, текст background",
+      "use": "выбор услуги или типа кузова под первым экраном; на телефоне — горизонтальная лента со scroll-snap"
+    },
+    "card": {
+      "bg": "background",
+      "radius": "md",
+      "border": "none",
+      "photo": "4:3, во всю ширину карточки, углы 0, фон под машиной surface",
+      "meta": "под фото отступ 16px: название h3 со стрелкой › справа, подпись caption text_muted (комплектация, срок, объём), цена price, строка условия caption («в кредит от 19 900 ₽/мес, ставка 0,01% — условия ниже»)",
+      "hover": "название подчёркивается 2px, стрелка сдвигается на 4px; фото не масштабируется",
+      "use": "модели, шины, тарифы проката, единицы техники; текст никогда не кладётся поверх фото"
+    },
+    "tile": {
+      "radius": "md",
+      "padding": "32px (телефон 20px)",
+      "variants": {
+        "light": "фон background, рамка 1px border_strong",
+        "dark": "фон band_alt, текст on_band_alt, кнопка button_on_band или button_primary",
+        "yellow": "фон primary, текст on_primary, кнопка button_on_yellow; НЕ БОЛЬШЕ ОДНОЙ на полосу"
+      },
+      "content": "надзаголовок eyebrow, заголовок h2 до 5 слов, 1–2 строки body, одна кнопка; фото, если есть, — квадратное 1:1 или 16:9 в верхней половине плитки без скругления",
+      "use": "сетка «2 в ряд» с зазором 16px: акция, trade-in, кредит, сервис"
+    },
+    "config_row": {
+      "bg": "background",
+      "divider": "1px solid border между строками, 1px solid border_strong сверху и снизу группы",
+      "padding": "24px 0",
+      "layout": "слева подпись body 700 («Срок аренды»), справа варианты-чипы или значение с ценой price 22px, у выбранного — квадрат 20px text с галочкой background",
+      "use": "калькулятор «как в конфигураторе»: срок и класс авто для проката, диаметр и сезон для шин, объём работ для стройки; итог — строкой «Итого от … ₽» и button_primary"
+    },
+    "spec_strip": {
+      "bg": "band_alt",
+      "layout": "4 колонки через вертикальные линии 1px rgba(255,255,255,0.16): число stat цветом on_band_alt + подпись caption on_band_alt_muted",
+      "use": "цифры доверия и характеристики: «40 мин» на шиномонтаж, «120 машин», «с 2009 года», «гарантия 1 год»"
+    },
+    "input": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "нет сверху и по бокам; снизу 1px border_strong",
+      "radius": "0",
+      "height": "52px",
+      "padding": "12px 0",
+      "label": "над полем, 15px/600 text, отступ 8px",
+      "placeholder": "text_muted",
+      "focus": "нижняя линия 2px text без свечения",
+      "on_band": "на чёрной полосе: текст и линия on_band_alt, подпись on_band_alt_muted"
+    },
+    "checkbox": {
+      "size": "22px",
+      "radius": "0",
+      "border": "1px solid border_strong",
+      "checked": "фон text, галочка background",
+      "on_band": "на чёрной полосе — рамка и фон on_band_alt, галочка band_alt"
+    },
+    "badge": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "6px 14px",
+      "font": "eyebrow",
+      "use": "«НОВИНКА», «В НАЛИЧИИ», «−15%» — в левом нижнем углу фото карточки, одна метка на карточку"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "64px",
+      "border_bottom": "1px solid border",
+      "left": "текстовое название компании 20px/700 (без значков и геометрических эмблем)",
+      "center": "4–5 пунктов 16px/700 text, активный — подчёркивание 2px",
+      "right": "телефон 17px/700 + button_primary высотой 44px «Заявка»",
+      "mobile": "название слева, справа квадратная кнопка-телефон 44px с рамкой 1px и бургер 44px"
+    },
+    "sticky_cta": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "shadow": "raised",
+      "content": "слева квадрат 52×52 с рамкой 1px text и иконкой телефона, справа button_primary во всю оставшуюся ширину «Рассчитать»"
+    },
+    "footer": {
+      "bg": "band_alt",
+      "color": "on_band_alt",
+      "padding": "64px 16px 40px",
+      "layout": "3 колонки: контакты и часы работы, адреса, правовая информация (ИНН, ОГРН, политика обработки данных); строка копирайта ниже, над ней линия rgba(255,255,255,0.16)",
+      "legal": "условия акций и кредита — caption on_band_alt_muted, не мельче 14px"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Чёрная полоса band_alt во всю ширину, высота 600–680px. Вариант split_bleed (по умолчанию): колонки 1–5 — надзаголовок eyebrow on_band_alt_muted, H1 display 64px белым в 2–3 строки, лид lead on_band_alt_muted в 2 строки, строка фактов (3 факта через вертикальные линии: «В наличии 42 авто · Trade-in за 1 день · Кредит от 4,9%»), кнопки button_primary «Рассчитать стоимость» (id=hero-cta) + button_on_band «Позвонить». Колонки 6–12 — фото 4:3 или 16:9 с прямыми углами, выходит за правый край контейнера до края экрана, под фото подпись caption on_band_alt_muted («Фото автомобиля в наличии, комплектация Life»). Текст на фото не кладётся никогда. Сразу под героем — жёлтая полоса quick_calc высотой 96px: форма в одну строку (тип/размер → срок → «Узнать цену»), это единственный жёлтый элемент первого экрана. Вариант stacked: текст сверху на чёрном по левому краю, под ним фото 16:9 во всю ширину экрана.",
+    "section_order": [
+      "nav",
+      "hero",
+      "quick_calc",
+      "chips",
+      "offers",
+      "promo_tiles",
+      "configurator",
+      "spec_strip",
+      "how",
+      "reviews",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "quick_calc": "жёлтая полоса primary: подпись h3 слева, 2 поля-селекта с нижней линией border_strong и button_on_yellow «Узнать цену»; на телефоне — две строки и кнопка во всю ширину",
+      "chips": "лента chip под жёлтой полосой: «Легковые», «Коммерческие», «С пробегом», «Шины R16–R20»; клик прокручивает к нужной группе offers",
+      "offers": "белая полоса: h2 слева, справа button_secondary «Весь каталог» (на телефоне — под сеткой во всю ширину, а не в строке заголовка); 3–4 card в ряд, зазор 24px",
+      "promo_tiles": "2 tile в ряд с зазором 16px: слева dark (trade-in, фото сверху), справа yellow (акция месяца) — единственная жёлтая плитка полосы",
+      "configurator": "surface-полоса: слева фото 16:9 выбранного варианта (колонки 1–7), справа (8–12) config_row: 3–4 строки выбора и итог «от … ₽» + button_primary",
+      "spec_strip": "чёрная полоса с 4 цифрами доверия, рецепт counter-up",
+      "how": "4 шага в ряд на белом: номер 48px/700 в квадрате 64px с рамкой 1px text, заголовок h3, 2 строки body; между шагами — линия 1px border",
+      "reviews": "3 отзыва в ряд: цитата body, имя 700, «клиент с 2021 года» caption text_muted, оценка цифрой «5/5» без звёзд цветом",
+      "faq": "5–7 вопросов на белом, строки через линию 1px border, плюс-минус квадратным значком",
+      "lead_form": "чёрная полоса: слева h2 белым «Рассчитаем стоимость за 15 минут» и 3 строки выгод с галочками, справа панель band_alt_surface с полями на нижней линии белым и button_primary во всю ширину"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор 24px; плитки — 2 в ряд с зазором 16px; карточки — 4 в ряд от 1280px, 3 от 1024px, 2 от 600px, 1 на телефоне",
+    "mobile_notes": "До 767px: навигация 64px, телефон и бургер — квадраты 44×44. Герой — текст сверху на чёрном (H1 40px, до 4 строк по 1–3 слова), строка фактов — столбиком без вертикальных разделителей, кнопка «Рассчитать» во всю ширину 52px, «Позвонить» — вторая строкой; фото 4:5 под текстом во всю ширину экрана без боковых отступов, подпись под ним. Жёлтая полоса quick_calc — два поля столбиком и кнопка во всю ширину. Чипы — горизонтальная лента с прилипанием, высота 40px, зона нажатия 44px. Плитки 2 в ряд → 1, padding 20px. config_row — подпись над вариантами, варианты-чипы переносятся. spec_strip — 2×2 с линиями. Липкая нижняя панель sticky_cta с первой прокрутки. Секции 48px, боковые отступы 16px, текст 17px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "Панель на чёрной полосе (band_alt_surface), углы 0, padding 32px. Поля «Имя» и «Телефон» — подпись 15px/600 on_band_alt_muted над полем, само поле на одной нижней линии 1px on_band_alt, текст 18px белым; телефон с маской +7 (___) ___-__-__ и inputmode=tel. Необязательное третье поле — «Что рассчитать» строкой чипов (модель, размер шин, срок аренды). Кнопка button_primary во всю ширину 52px «Получить расчёт» со стрелкой. Ниже чекбокс 22px с белой рамкой (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» белым. Кнопка активна всегда: пустое поле или нет галочки — под полем видимый текст ошибки (#ff7a6e на тёмной панели, 14px, квадратная иконка «!»), фокус уходит на первое проблемное поле. Сбой сети — текст «Не отправилось. Проверьте связь» и кнопка «Отправить ещё раз», данные в полях сохраняются.",
+    "success_state": "Панель меняется на месте, высота сохраняется: жёлтый квадрат 56px с чёрной галочкой, заголовок h3 белым «Заявка принята», строка on_band_alt_muted «Перезвоним на +7 … в течение 15 минут, с 9 до 21» и button_on_band «Изменить номер». Фокус на заголовке, область aria-live=polite. Рецепт form-success в каталоге есть, но в этой системе ответ формы — статичная замена без анимации."
+  },
+  "motion_recipes": [
+    "image-reveal-clip",
+    "counter-up",
+    "fade-up-stagger",
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "steps-progress-line",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "только функциональное: sticky-cta-mobile и смена цвета при наведении",
+      "subtle": "по умолчанию: весь motion_map; + tabs-indicator; + steps-progress-line; + form-field-feedback",
+      "rich": "в этом стиле не предусмотрен — каталог и цифры важнее эффектов"
+    },
+    "image-reveal-clip": "фото в configurator и в тёмной плитке trade-in: data-irc=\"right\" — шторка слева направо, как машина въезжает в кадр; --irc-radius: 0px; --irc-dur: 640ms; --irc-zoom: 1.06; подпись под фото — .irc__cap. Фото первого экрана и карточки offers не анимировать. Не больше 4 картинок на страницу",
+    "counter-up": "только spec_strip на чёрной полосе: размер цифры из typography.stat (80/52px, 700), полоса-подчёркивание .stat__label::before — цвета primary высотой 3px (жёлтая линия на чёрном — единственный жёлтый элемент этой полосы); единицы («мин», «₽», «%») отдельным span на 40% мельче, а не в data-count-suffix. Цены не считать никогда — цена, бегущая от нуля, читается как уловка",
+    "fade-up-stagger": "карточки offers, шаги how и отзывы: --reveal-dist: 16px; --reveal-dur: 360ms; --reveal-step: 60ms; --reveal-ease: cubic-bezier(.2,0,0,1). Плитки promo_tiles и жёлтую полосу не анимировать — цветной блок должен стоять сразу",
+    "sticky-cta-mobile": "панель по компоненту sticky_cta: data-after=\"#hero-cta\", data-hide-on=\"#lead\"; --radius-pill: 2px (иначе кнопка станет пилюлей); кнопку звонка .scta__alt включить квадратом 52×52 с рамкой 1px text; фон панели background, линия сверху border",
+    "tabs-indicator": "configurator: комплектации вкладками, радиус 0, жёлтая подложка под чёрным текстом, --tbi-dur 200ms",
+    "steps-progress-line": "how: шаги покупки или подбора, чёрная линия 2px, квадратная точка",
+    "form-field-feedback": "поле — одна нижняя линия: ошибка = красная линия 2px и текст под ней",
+    "not_for_this_style": "gradient-drift и parallax-soft — атмосферных градиентов и плавающих слоёв у стиля нет; tilt-card и magnetic-button — каталог не пружинит; cta-attention — жёлтая кнопка и так самый яркий объект экрана; hero-text-reveal — H1 первого экрана стоит сразу, иначе теряется LCP на тяжёлом фото; marquee-logos — логотипы партнёров (банки, страховые) стоят неподвижной строкой"
+  },
+  "media": {
+    "hero": "Предмет продажи целиком и крупно: автомобиль в три четверти, комплект шин, техника на объекте — на нейтральном фоне или в реальном месте при ровном дневном свете. Кадр прямоугольный, без скруглений, на чёрной полосе; текст рядом, а не поверх.",
+    "video_in_flow": "Короткая беззвучная петля 6–10 с в тёмной плитке (машина на ходу, монтаж шины, работа экскаватора) с кнопкой паузы; ролик со звуком (обзор, экскурсия по парку) — только по кнопке, с субтитрами, в секции configurator.",
+    "imagery": "Предметная съёмка на однотонном фоне для карточек и честные кадры места: бокс сервиса, стоянка парка, склад шин. Люди — в работе (механик, водитель, прораб), не позируют. Под каждым фото подпись фактом: что это и где.",
+    "character": "Персонаж не нужен. Допустим реальный человек-проводник — менеджер или мастер — одним и тем же лицом в ролике и в блоке «как мы работаем».",
+    "audio": "Аудиоверсия не нужна; исключение — набор водителей: кнопка «Послушать условия за 1 минуту» рядом с формой.",
+    "avoid": [
+      "скругления и мягкие тени на фото",
+      "текст поверх фото машины",
+      "атмосферные градиенты и неоновые подсветки",
+      "3D-рендеры с отражениями вместо реальных кадров",
+      "ромбы и прочие фигуры, похожие на эмблемы автопроизводителей"
+    ],
+    "geometry": {
+      "hero_desktop": "16:9 или 4:3, прямоугольник без скругления, выход за правый край контейнера",
+      "hero_mobile": "4:5 под текстом, во всю ширину экрана",
+      "card": "4:3",
+      "tile": "1:1 или 16:9 в верхней половине плитки",
+      "wide_band": "2:1 для полосы-истории во всю ширину",
+      "portrait": "3:4 — менеджеры, мастера, водители",
+      "gallery": "3:2",
+      "logo_strip": "монохромные, высота 28px, цвет text_muted, неподвижной строкой"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "жёлтая: фон #e6d200 (primary_pressed), стрелка › сдвигается на 4px за 120ms; вторичная: инверсия — фон text, текст background",
+      "focus_visible": "shadow.focus — кольцо 2px #000000 с зазором 2px #ffffff; на чёрной полосе и в тёмной теме — кольцо 2px #ffed00 с зазором #000000",
+      "active": "фон #e6d200, translateY(1px) на время нажатия; без масштаба и тени",
+      "disabled": "фон #e6e6e6 (в тёмной #262626), текст text_muted, курсор not-allowed; кнопку отправки формы заявки не блокировать — ошибки объясняются текстом",
+      "loading": "подпись «Отправляем…», стрелка заменяется квадратом 12px, который мигает прозрачностью 1 → .3 не дольше 3 повторов; ширина кнопки зафиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "нижняя линия 2px text (на чёрной полосе — 2px белым), подпись над полем остаётся на месте; без свечения",
+      "error": "нижняя линия 2px error, под полем текст 14px error с квадратной иконкой «!», aria-invalid=true и aria-describedby на текст ошибки",
+      "disabled": "нижняя линия пунктиром 1px text_muted, текст text_muted, курсор not-allowed"
+    }
+  },
+  "signature": [
+    "Ритм полос во всю ширину: белая (каталог) → чёрная (история и цифры) → одна жёлтая плитка или полоса на экран; жёлтый никогда не бывает фоном больших блоков текста",
+    "Плотный заголовок 700 с межстрочным 0,95 и прямые углы: фото и плитки — 0, кнопки — 2px, пилюля только у чипов и метки «НОВИНКА»",
+    "Подпись и цена под фото, никогда поверх; у названия — стрелка ›, которая сдвигается при наведении",
+    "Поля формы — одна нижняя линия, выбор вариантов — строками «как в конфигураторе» с тонкими разделителями и итогом «от … ₽»"
+  ],
+  "voice": "Как ценник в автосалоне: существительное, цифра, условие — «Шиномонтаж R17 — 2 400 ₽ за комплект», «Trade-in за 1 день». Фразы до 12 слов, без восклицательных знаков и «самый/лучший»; условия кредита и акции пишутся рядом с ценой обычным шрифтом, а не звёздочкой в подвале.",
+  "type_features": {
+    "prices": "font-variant-numeric: lining-nums tabular-nums; неразрывный пробел в разрядах и перед ₽ (1&nbsp;290&nbsp;000&nbsp;₽)",
+    "specs": "характеристики и сроки — tabular-nums, единица измерения отдельным span на 40% мельче цифры",
+    "eyebrow": "text-transform: uppercase; letter-spacing: 0.04em — только надзаголовки и метки до 4 слов",
+    "headlines": "text-wrap: balance у H1 и h2; межстрочный 0,95 не поднимать выше 1,0 — плотность и есть характер"
+  },
+  "color_presets": {
+    "how_to_use": "Один пресет на страницу. Пресет переопределяет только перечисленные ключи в обеих темах. sunlight — по умолчанию; в нишах, совпадающих с автопроизводителями и с жёлто-чёрными сервисами такси (продажа и сервис автомобилей, такси-парки), брать amber или signal — это сдвиг основного цвета по 135-ФЗ ст. 14.6.",
+    "sunlight": {
+      "label": "Солнечный жёлтый (по умолчанию)",
+      "for": "шины и диски, прокат, стройка, спецтехника",
+      "light": {
+        "primary": "#ffed00",
+        "on_primary": "#000000",
+        "primary_pressed": "#e6d200"
+      },
+      "dark": {
+        "primary": "#ffed00",
+        "on_primary": "#000000",
+        "primary_pressed": "#e6d200"
+      },
+      "contrast": {
+        "on_primary/primary": 17.37,
+        "on_primary/primary_pressed": 13.58
+      }
+    },
+    "amber": {
+      "label": "Янтарный",
+      "for": "автосалоны, авто с пробегом, автосервис, такси-парки и набор водителей",
+      "light": {
+        "primary": "#ffb81c",
+        "on_primary": "#000000",
+        "primary_pressed": "#f0a800"
+      },
+      "dark": {
+        "primary": "#ffb81c",
+        "on_primary": "#000000",
+        "primary_pressed": "#f0a800"
+      },
+      "contrast": {
+        "on_primary/primary": 12.12,
+        "on_primary/primary_pressed": 10.31
+      }
+    },
+    "signal": {
+      "label": "Сигнальный оранжевый",
+      "for": "дилеры спецтехники в жёлтой гамме, дорожные и строительные работы",
+      "light": {
+        "primary": "#ff8a00",
+        "on_primary": "#000000",
+        "primary_pressed": "#f07800"
+      },
+      "dark": {
+        "primary": "#ff8a00",
+        "on_primary": "#000000",
+        "primary_pressed": "#f07800"
+      },
+      "contrast": {
+        "on_primary/primary": 8.89,
+        "on_primary/primary_pressed": 7.39
+      }
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_bleed",
+        "stacked"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "quick_calc": [
+        "strip",
+        "none"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "band_rhythm",
+      "caption_below_photo",
+      "underline_inputs"
+    ],
+    "default": {
+      "hero_layout": "split_bleed",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "quick_calc": "strip"
+    },
+    "legend": {
+      "hero_layout": "split_bleed — текст слева на чёрном, фото справа до края экрана; stacked — текст сверху, фото 16:9 во всю ширину ниже",
+      "cta_color_role": "primary — жёлтая кнопка; accent — чёрная (в тёмной теме белая), жёлтой остаётся только полоса quick_calc",
+      "headline_scale": "xl — 64/40px, заголовок до 45 знаков; l — 52/34px, до 60 знаков",
+      "quick_calc": "strip — жёлтая полоса-калькулятор сразу под героем; none — её нет, форма только внизу",
+      "social_proof_position": "under_hero — spec_strip сразу после quick_calc; before_form — перед lead_form"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первой проверять quick_calc: жёлтая полоса-калькулятор с ценой на первом экране — главный кандидат на рост заявок в массовых нишах."
+  },
+  "do": [
+    "Держать жёлтый редким: главная кнопка, метка «НОВИНКА», одна жёлтая плитка или полоса на экран; на жёлтом — только чёрный текст и чёрная кнопка.",
+    "Чередовать полосы во всю ширину: белая для каталога, чёрная для истории и цифр; разделять блоки сменой цвета, а не тенями.",
+    "Ставить подпись, цену и условие под фото, а у названия — стрелку ›; фото и плитки держать с прямыми углами.",
+    "Набирать заголовки весом 700 с межстрочным 0,95 и балансом строк; текст — 400, без промежуточных 500.",
+    "Рисовать поля одной нижней линией 1px, фокус — линией 2px и видимым кольцом с клавиатуры.",
+    "Писать цену и условия кредита или акции рядом с ценой обычным текстом не мельче 14px.",
+    "В совпадающей нише (продажа и сервис автомобилей, такси-парки) брать пресет amber или signal, не ставить эмблем-фигур и не копировать фирменные приёмы автопроизводителей — 135-ФЗ ст. 14.6."
+  ],
+  "dont": [
+    "Не ставить белый текст на жёлтый (1.21:1) и не набирать жёлтым текст или ссылки.",
+    "Не скруглять фото, карточки и плитки и не давать главной кнопке форму пилюли.",
+    "Не класть заголовки и цены поверх фото машины и не затемнять фото градиентом ради текста.",
+    "Не добавлять второй яркий цвет и атмосферные градиенты — успех и ошибка остаются служебными цветами.",
+    "Не использовать ромбы, шевроны и другие фигуры, похожие на логотипы автопроизводителей, и их фирменные фото.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не блокировать кнопку отправки без объяснения."
+  ],
+  "prompt_snippet": "Build a high-contrast dealership-style lead landing inspired by Renault's web aesthetic. Canvas #ffffff, ink #000000, muted #595959, surface #f5f5f5; dark theme #000000 with surface #141414, text #ffffff, muted #b3b3b3. The only accent is sunlight yellow #ffed00 (pressed #e6d200), always with black text: main CTA, a NEW badge, at most one yellow tile or strip per band. Self-hosted Sofia Sans Semi Condensed (Cyrillic) 400/600/700: H1 64/40px weight 700, line-height 0.95; body 18px/1.5. Square geometry: 0 radius on tiles, cards and photos, 2px on buttons, pills only for filter chips. No shadows; alternate full-bleed white and black bands. Hero: black band, text left, square-cornered product photo bleeding right with a caption below, then a yellow quick-quote strip. Captions and prices sit under photos, never over them. Inputs are a single bottom rule. Unchecked 152-FZ consent, no logos or emblem shapes.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/renault/DESIGN.md, commit f696123",
+    "notes": "Перенесено: жёлтый #ffed00 с чёрным текстом и нажатие #e6d200 без изменений (17.37 и 13.58), чернила #000000, surface #f7f7f7 → #f5f5f5, чёрная «история»-полоса и #111111/#141414 для вложенных панелей, радиусы 0/2px и пилюля только у чипов и метки, заголовки 700 с межстрочным 0,95, отсутствие теней, ритм белая → чёрная → жёлтая, подпись под фото, поле с нижней линией, строки конфигуратора, метка «НОВИНКА» в углу фото, чёрный подвал. Изменено: NouvelR (фирменный) заменён на Sofia Sans Semi Condensed (OFL-1.1, кириллица) — ближайший полусжатый гротеск с прямыми окончаниями; источник предлагал Inter Tight и Manrope — они шире и теряют плотность. Кегль текста 16 → 18px, подписи 12 → 15px (полусжатая кириллица мельчит), заголовок первого экрана 56 → 64px под рекламу. Контраст: приглушённый #666666 → #595959 (под мелкие подписи на surface), ошибка #be6464 (4.07) → #b3261e (6.54), успех #8dc572 (2.03) → #1f7a3a (5.38), синие ссылки #0000ee заменены на цвет текста с подчёркиванием, как в продакшне бренда. Тёмная тема у бренда только полосами — собрана как чёрная страница с полосами #161616 и панелями #141414, жёлтый не меняется, фокус жёлтым кольцом. Добавлены пресеты amber и signal для ниш, совпадающих с автопроизводителями и жёлто-чёрными такси-сервисами, жёлтая полоса-калькулятор под первым экраном, форма заявки по 152-ФЗ на чёрной полосе, липкая панель на телефоне. Не переносится: ромб-логотип и всё, что из него выросло, фирменные фото моделей, атмосферные градиенты суббренда электромобилей."
+  }
+}

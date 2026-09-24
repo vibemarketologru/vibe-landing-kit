@@ -1,0 +1,192 @@
+/* Clay — Vibe Landing Kit 1.2.0
+ * Эстетика в духе Clay. Не аффилировано с Clay; без логотипов и фирменных шрифтов.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   M PLUS Rounded 1c — npm i @fontsource-variable/m-plus-rounded-1c (или @fontsource/m-plus-rounded-1c), OFL; заменяет Plain Black (проприетарный)
+ *   Inter — npm i @fontsource-variable/inter (или @fontsource/inter), OFL; заменяет Inter — рабочая гарнитура самого бренда
+ */
+:root {
+  --color-background: #fffaf0;
+  --color-surface: #f5f0e0;
+  --color-text: #121110;
+  --color-text-muted: #625c52;
+  --color-border: #e6dfcc;
+  --color-primary: #121110;
+  --color-on-primary: #fffaf0;
+  --color-accent: #ff4d8b;
+  --color-on-accent: #121110;
+  --color-link: #16605b;
+  --color-success: #1e7b34;
+  --color-error: #c42b1c;
+  --color-primary-hover: #2b2926;
+  --color-accent-hover: #ff6b9d;
+  --color-surface-soft: #faf5e8;
+  --color-surface-strong: #ebe6d6;
+  --color-border-strong: #8a826f;
+  --color-card-pink: #ff4d8b;
+  --color-card-teal: #1a3a3a;
+  --color-card-lavender: #b8a4ed;
+  --color-card-peach: #ffb084;
+  --color-card-ochre: #e8b94a;
+  --color-card-mint: #a4d4c5;
+  --color-on-card: #121110;
+  --color-on-card-teal: #fffaf0;
+  --color-clay-coral: #ff6b5a;
+  --font-display: 'M PLUS Rounded 1c', 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-size: 68px;
+  --display-weight: 800;
+  --display-size-desktop: 68px;
+  --display-size-mobile: 38px;
+  --display-line-height: 1.04;
+  --display-letter-spacing: -0.03em;
+  --font-h2: 'M PLUS Rounded 1c', 'Nunito', system-ui, sans-serif;
+  --h2-size: 46px;
+  --h2-weight: 800;
+  --h2-size-desktop: 46px;
+  --h2-size-mobile: 30px;
+  --h2-line-height: 1.08;
+  --h2-letter-spacing: -0.025em;
+  --font-h3: 'M PLUS Rounded 1c', 'Nunito', system-ui, sans-serif;
+  --h3-size: 24px;
+  --h3-weight: 700;
+  --h3-size-desktop: 24px;
+  --h3-size-mobile: 20px;
+  --h3-line-height: 1.2;
+  --h3-letter-spacing: -0.01em;
+  --font-lead: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lead-size: 19px;
+  --lead-weight: 400;
+  --lead-size-desktop: 19px;
+  --lead-size-mobile: 17px;
+  --lead-line-height: 1.55;
+  --lead-letter-spacing: 0;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 17px;
+  --body-weight: 400;
+  --body-size-desktop: 17px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0;
+  --font-caption: 'Inter', system-ui, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 500;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.45;
+  --caption-letter-spacing: 0;
+  --font-eyebrow: 'Inter', system-ui, sans-serif;
+  --eyebrow-size: 13px;
+  --eyebrow-weight: 600;
+  --eyebrow-size-desktop: 13px;
+  --eyebrow-size-mobile: 12px;
+  --eyebrow-line-height: 1.4;
+  --eyebrow-letter-spacing: 0.1em;
+  --font-button: 'Inter', system-ui, sans-serif;
+  --button-size: 16px;
+  --button-weight: 600;
+  --button-size-desktop: 16px;
+  --button-size-mobile: 16px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --font-price: 'M PLUS Rounded 1c', 'Nunito', system-ui, sans-serif;
+  --price-size: 34px;
+  --price-weight: 800;
+  --price-size-desktop: 34px;
+  --price-size-mobile: 28px;
+  --price-line-height: 1.1;
+  --price-letter-spacing: -0.02em;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-xxl: 32px;
+  --radius-pill: 9999px;
+  --space-unit: 8;
+  --space-section-desktop: 96px;
+  --space-section-mobile: 56px;
+  --space-container: 1280px;
+  --space-gutter-mobile: 20px;
+  --space-card-padding: 32px;
+  --space-card-gap: 20px;
+  --shadow-card: none;
+  --shadow-raised: 0 2px 4px rgba(18,17,16,0.06), 0 12px 32px rgba(18,17,16,0.10);
+  --shadow-raised-dark: 0 2px 4px rgba(0,0,0,0.35), 0 14px 36px rgba(0,0,0,0.45);
+  --shadow-focus: 0 0 0 2px #fffaf0, 0 0 0 4px #121110;
+  --shadow-focus-dark: 0 0 0 2px #0c1716, 0 0 0 4px #fffaf0;
+  --motion-fast: 150ms;
+  --motion-base: 240ms;
+  --motion-slow: 520ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.34,1.4,.64,1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #0c1716;
+    --color-surface: #162423;
+    --color-text: #fffaf0;
+    --color-text-muted: #b3c2be;
+    --color-border: #2a3b39;
+    --color-primary: #fffaf0;
+    --color-on-primary: #0c1716;
+    --color-accent: #ff5c95;
+    --color-on-accent: #121110;
+    --color-link: #8fdcc9;
+    --color-success: #6fd08a;
+    --color-error: #ff8a7a;
+    --color-primary-hover: #ebe6d6;
+    --color-accent-hover: #ff7aa8;
+    --color-surface-soft: #111f1e;
+    --color-surface-strong: #1e302e;
+    --color-border-strong: #5a7a76;
+    --color-card-pink: #ff5c95;
+    --color-card-teal: #24504d;
+    --color-card-lavender: #b8a4ed;
+    --color-card-peach: #ffb084;
+    --color-card-ochre: #e8b94a;
+    --color-card-mint: #a4d4c5;
+    --color-on-card: #121110;
+    --color-on-card-teal: #fffaf0;
+    --color-clay-coral: #ff6b5a;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #0c1716;
+  --color-surface: #162423;
+  --color-text: #fffaf0;
+  --color-text-muted: #b3c2be;
+  --color-border: #2a3b39;
+  --color-primary: #fffaf0;
+  --color-on-primary: #0c1716;
+  --color-accent: #ff5c95;
+  --color-on-accent: #121110;
+  --color-link: #8fdcc9;
+  --color-success: #6fd08a;
+  --color-error: #ff8a7a;
+  --color-primary-hover: #ebe6d6;
+  --color-accent-hover: #ff7aa8;
+  --color-surface-soft: #111f1e;
+  --color-surface-strong: #1e302e;
+  --color-border-strong: #5a7a76;
+  --color-card-pink: #ff5c95;
+  --color-card-teal: #24504d;
+  --color-card-lavender: #b8a4ed;
+  --color-card-peach: #ffb084;
+  --color-card-ochre: #e8b94a;
+  --color-card-mint: #a4d4c5;
+  --color-on-card: #121110;
+  --color-on-card-teal: #fffaf0;
+  --color-clay-coral: #ff6b5a;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 38px;
+    --h2-size: 30px;
+    --h3-size: 20px;
+    --lead-size: 17px;
+    --body-size: 16px;
+    --caption-size: 14px;
+    --eyebrow-size: 12px;
+    --button-size: 16px;
+    --price-size: 28px;
+  }
+}

@@ -82,7 +82,21 @@
 
 ## Анимации
 
-`hero-text-reveal`, `fade-up-stagger`, `image-reveal-clip`, `marquee-logos`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`hero-text-reveal`, `fade-up-stagger`, `image-reveal-clip`, `marquee-logos`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `media-zoom-scroll`, `text-scroll-highlight`, `tabs-indicator`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Тёмное поле, интерфейс продукта со свечением по краю или беззвучная петля продукта; крупный плотный заголовок.
+
+**Видео ниже.** Записи экрана в тёмных рамках, мягкое свечение, ролик-обращение по кнопке.
+
+**Картинки.** Скриншоты, мягкие градиенты свечения, никаких стоковых фото.
+
+**Персонаж или маскот.** Обычно нет; для продукта-сотрудника допустим фирменный маскот как «лицо» продукта в ролике.
+
+**Аудиоверсия.** Не нужна.
+
+**Избегать:** светлые фото людей; пёстрые иллюстрации.
 
 ## A/B-тест
 

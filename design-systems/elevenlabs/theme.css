@@ -1,0 +1,191 @@
+/* ElevenLabs — Vibe Landing Kit 1.2.0
+ * Эстетика в духе ElevenLabs. Не аффилировано с ElevenLabs; без логотипов и фирменных шрифтов.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Spectral — npm i @fontsource-variable/spectral (или @fontsource/spectral), OFL; заменяет Waldenburg Light (проприетарный); курсив — отдельным файлом (wght-italic.css / *-italic.css)
+ *   Inter — npm i @fontsource-variable/inter (или @fontsource/inter), OFL; заменяет Inter — гарнитура самого бренда
+ */
+:root {
+  --color-background: #f5f5f4;
+  --color-surface: #ffffff;
+  --color-text: #0c0a09;
+  --color-text-muted: #66615a;
+  --color-border: #e7e5e4;
+  --color-primary: #292524;
+  --color-on-primary: #ffffff;
+  --color-accent: #e7e5e4;
+  --color-on-accent: #0c0a09;
+  --color-link: #292524;
+  --color-success: #166534;
+  --color-error: #b91c1c;
+  --color-primary-hover: #0c0a09;
+  --color-accent-hover: #d6d3d1;
+  --color-surface-soft: #fafafa;
+  --color-surface-strong: #ebe7e1;
+  --color-border-strong: #8a847c;
+  --color-orb-mint: #a7e5d3;
+  --color-orb-peach: #f4c5a8;
+  --color-orb-lavender: #c8b8e0;
+  --color-orb-sky: #a8c8e8;
+  --color-orb-rose: #e8b8c4;
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --display-size: 64px;
+  --display-weight: 300;
+  --display-size-desktop: 64px;
+  --display-size-mobile: 38px;
+  --display-line-height: 1.06;
+  --display-letter-spacing: -0.02em;
+  --font-h2: 'Spectral', Georgia, 'Times New Roman', serif;
+  --h2-size: 44px;
+  --h2-weight: 300;
+  --h2-size-desktop: 44px;
+  --h2-size-mobile: 30px;
+  --h2-line-height: 1.12;
+  --h2-letter-spacing: -0.015em;
+  --font-h3: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h3-size: 20px;
+  --h3-weight: 500;
+  --h3-size-desktop: 20px;
+  --h3-size-mobile: 18px;
+  --h3-line-height: 1.35;
+  --h3-letter-spacing: 0;
+  --font-quote: 'Spectral', Georgia, serif;
+  --quote-size: 28px;
+  --quote-weight: 300;
+  --quote-size-desktop: 28px;
+  --quote-size-mobile: 22px;
+  --quote-line-height: 1.35;
+  --quote-letter-spacing: -0.005em;
+  --font-lead: 'Inter', system-ui, sans-serif;
+  --lead-size: 18px;
+  --lead-weight: 400;
+  --lead-size-desktop: 18px;
+  --lead-size-mobile: 17px;
+  --lead-line-height: 1.6;
+  --lead-letter-spacing: 0.01em;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 16px;
+  --body-weight: 400;
+  --body-size-desktop: 16px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.65;
+  --body-letter-spacing: 0.01em;
+  --font-caption: 'Inter', system-ui, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 400;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.5;
+  --caption-letter-spacing: 0;
+  --font-eyebrow: 'Inter', system-ui, sans-serif;
+  --eyebrow-size: 12px;
+  --eyebrow-weight: 600;
+  --eyebrow-size-desktop: 12px;
+  --eyebrow-size-mobile: 12px;
+  --eyebrow-line-height: 1.4;
+  --eyebrow-letter-spacing: 0.08em;
+  --font-button: 'Inter', system-ui, sans-serif;
+  --button-size: 16px;
+  --button-weight: 500;
+  --button-size-desktop: 16px;
+  --button-size-mobile: 16px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --font-price: 'Inter', system-ui, sans-serif;
+  --price-size: 18px;
+  --price-weight: 500;
+  --price-size-desktop: 18px;
+  --price-size-mobile: 17px;
+  --price-line-height: 1.4;
+  --price-letter-spacing: 0;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 24px;
+  --radius-pill: 9999px;
+  --space-unit: 8;
+  --space-section-desktop: 112px;
+  --space-section-mobile: 64px;
+  --space-container: 1200px;
+  --space-text-column: 640px;
+  --space-gutter-mobile: 20px;
+  --space-card-padding: 32px;
+  --space-card-gap: 16px;
+  --shadow-card: none;
+  --shadow-raised: 0 4px 16px rgba(12,10,9,0.04);
+  --shadow-raised-dark: 0 4px 20px rgba(0,0,0,0.5);
+  --shadow-focus: 0 0 0 2px #f5f5f4, 0 0 0 4px #0c0a09;
+  --shadow-focus-dark: 0 0 0 2px #0c0a09, 0 0 0 4px #f5f5f4;
+  --motion-fast: 200ms;
+  --motion-base: 320ms;
+  --motion-slow: 640ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.05,.7,.1,1);
+  --gradient-orbs-light: radial-gradient(closest-side at 30% 40%, rgba(167,229,211,0.55), transparent), radial-gradient(closest-side at 72% 35%, rgba(200,184,224,0.55), transparent), radial-gradient(closest-side at 55% 80%, rgba(244,197,168,0.45), transparent);
+  --gradient-orbs-dark: radial-gradient(closest-side at 30% 40%, rgba(167,229,211,0.20), transparent), radial-gradient(closest-side at 72% 35%, rgba(200,184,224,0.22), transparent), radial-gradient(closest-side at 55% 80%, rgba(244,197,168,0.16), transparent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #0c0a09;
+    --color-surface: #1c1917;
+    --color-text: #f5f5f4;
+    --color-text-muted: #a8a29e;
+    --color-border: #292524;
+    --color-primary: #f5f5f4;
+    --color-on-primary: #0c0a09;
+    --color-accent: #292524;
+    --color-on-accent: #f5f5f4;
+    --color-link: #e7e5e4;
+    --color-success: #4ade80;
+    --color-error: #f87171;
+    --color-primary-hover: #ffffff;
+    --color-accent-hover: #44403c;
+    --color-surface-soft: #141210;
+    --color-surface-strong: #292524;
+    --color-border-strong: #78716c;
+    --color-orb-mint: #a7e5d3;
+    --color-orb-peach: #f4c5a8;
+    --color-orb-lavender: #c8b8e0;
+    --color-orb-sky: #a8c8e8;
+    --color-orb-rose: #e8b8c4;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #0c0a09;
+  --color-surface: #1c1917;
+  --color-text: #f5f5f4;
+  --color-text-muted: #a8a29e;
+  --color-border: #292524;
+  --color-primary: #f5f5f4;
+  --color-on-primary: #0c0a09;
+  --color-accent: #292524;
+  --color-on-accent: #f5f5f4;
+  --color-link: #e7e5e4;
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  --color-primary-hover: #ffffff;
+  --color-accent-hover: #44403c;
+  --color-surface-soft: #141210;
+  --color-surface-strong: #292524;
+  --color-border-strong: #78716c;
+  --color-orb-mint: #a7e5d3;
+  --color-orb-peach: #f4c5a8;
+  --color-orb-lavender: #c8b8e0;
+  --color-orb-sky: #a8c8e8;
+  --color-orb-rose: #e8b8c4;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 38px;
+    --h2-size: 30px;
+    --h3-size: 18px;
+    --quote-size: 22px;
+    --lead-size: 17px;
+    --body-size: 16px;
+    --caption-size: 14px;
+    --eyebrow-size: 12px;
+    --button-size: 16px;
+    --price-size: 17px;
+  }
+}

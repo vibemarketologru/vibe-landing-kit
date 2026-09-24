@@ -632,13 +632,17 @@
     "magnetic-button",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "svg-line-draw",
+    "media-zoom-scroll",
+    "scroll-story-steps",
+    "form-field-feedback"
   ],
   "motion_map": {
     "levels": {
       "none": "без анимаций, кроме смены состояния формы",
-      "subtle": "по умолчанию: hero-text-reveal, fade-up-stagger, counter-up, accordion-smooth, form-success, sticky-cta-mobile",
-      "rich": "subtle + image-reveal-clip, parallax-soft, gradient-drift и magnetic-button по правилам ниже"
+      "subtle": "по умолчанию: hero-text-reveal, fade-up-stagger, counter-up, accordion-smooth, form-success, sticky-cta-mobile; + svg-line-draw; + form-field-feedback",
+      "rich": "subtle + image-reveal-clip, parallax-soft, gradient-drift и magnetic-button по правилам ниже; + media-zoom-scroll; + scroll-story-steps"
     },
     "speed": "Проявления секций (fade-up-stagger, image-reveal-clip, accordion-smooth) медленнее рецептов на треть — токены slow 720ms и reveal 1100ms, одно проявление в кадре за раз. hero-text-reveal, form-success и отклик на наведение и нажатие — со скоростью рецептов.",
     "hero-text-reveal": "subtle и выше: заголовок первого экрана со скоростью рецепта — обязан уложиться примерно в секунду, иначе растёт LCP; фото первого экрана не анимировать",
@@ -650,7 +654,23 @@
     "magnetic-button": "только rich: главная кнопка первого экрана и кнопка формы — сдвиг до 6px и без увеличения: дорогое не пружинит",
     "accordion-smooth": "частые вопросы, раскрытие медленнее рецепта на треть",
     "form-success": "со скоростью рецепта: галочка в круге 56px с золотой линией 1.5px — полностью в lead_form.success_state",
-    "sticky-cta-mobile": "золотая кнопка button_primary на телефоне; прячется, когда форма в кадре"
+    "sticky-cta-mobile": "золотая кнопка button_primary на телефоне; прячется, когда форма в кадре",
+    "svg-line-draw": "subtle: одна золотая линия под 1–2 словами оффера; --sld-width 1.5px, --sld-dur 900ms, без обводок и стрелок",
+    "media-zoom-scroll": "только rich: фото объекта в story или gallery вместо parallax-soft; --mzs-radius 0, --mzs-from .88, --mzs-img-from 1.06",
+    "scroll-story-steps": "rich: этапы process с фото; --sst-in 720ms, --sst-out 480ms, --sst-radius 0",
+    "form-field-feedback": "без встряски (.ffb__control.is-shake{animation:none}) — дорогое не трясётся"
+  },
+  "media": {
+    "hero": "Медленная тёмная петля или кадр во всю ширину: фактуры, свет, детали; крупная антиква поверх затемнения.",
+    "video_in_flow": "Галерея крупных кадров, история в фото, фильм со звуком по кнопке «Смотреть».",
+    "imagery": "Низкий ключ, тёплые блики, дорогие материалы, минимум предметов.",
+    "character": "Основатель или хозяин — портрет и голос в ролике.",
+    "audio": "Аудиоверсия голосом основателя — сильный ход.",
+    "avoid": [
+      "яркие цвета",
+      "мультяшность",
+      "перегруженные экраны"
+    ]
   },
   "ab_axes": {
     "vary": {

@@ -1,7 +1,7 @@
 /* Мягкий — Vibe Landing Kit 1.0.0
  * Собственный стиль Вайб-Маркетолога.
  * Шрифты (раздавайте со своего домена, не с внешнего CDN):
- *   Lora — npm i @fontsource-variable/lora (или @fontsource/lora), OFL; заменяет платные мягкие антиквы вроде Recoleta и Cooper (проприетарные, без кириллицы)
+ *   Lora — npm i @fontsource-variable/lora (или @fontsource/lora), OFL; заменяет платные мягкие антиквы вроде Recoleta и Cooper (проприетарные, без кириллицы); курсив — отдельным файлом (wght-italic.css / *-italic.css)
  *   Nunito — npm i @fontsource-variable/nunito (или @fontsource/nunito), OFL; заменяет платные округлые гротески вроде Circular и Sofia Pro (проприетарные)
  */
 :root {
@@ -123,7 +123,6 @@
   --radius-xl: 32px;
   --radius-pill: 999px;
   --radius-arch: 999px 999px 32px 32px;
-  --radius-notes: Острых углов нет нигде. arch — маска фото специалиста на первом экране и в карточках людей (верх полукругом, низ 32 px).;
   --space-unit: 8;
   --space-section-desktop: 120px;
   --space-section-mobile: 72px;
@@ -136,14 +135,12 @@
   --space-stack-tight: 8px;
   --space-stack-base: 16px;
   --space-stack-loose: 32px;
-  --space-notes: Воздуха больше, чем у деловых стилей: полосы 120/72 px. Внутри карточки — ритм 8/16/32.;
   --shadow-card: 0 1px 2px rgba(74,43,28,.05), 0 10px 30px -12px rgba(74,43,28,.14);
   --shadow-raised: 0 2px 6px rgba(74,43,28,.06), 0 24px 48px -16px rgba(74,43,28,.22);
   --shadow-card-dark: none;
   --shadow-raised-dark: 0 24px 48px -16px rgba(0,0,0,.6);
   --shadow-ring-dark: 0 0 0 1px #3E3531;
   --shadow-focus-ring: 0 0 0 4px color-mix(in srgb, var(--color-focus) 24%, transparent);
-  --shadow-notes: Тени тёплые (коричневый оттенок, а не серый) и рассеянные: карточка «лежит» на льне, а не парит. На тёмной теме тень не видна — её заменяет контур 1px border, поэтому card_dark = none (у card рамка уже есть, кольцо удвоило бы линию). ring_dark — только элементам без своей рамки: карточка-подпись поверх фото, выпадающие списки.;
   --motion-fast: 180ms;
   --motion-base: 280ms;
   --motion-slow: 560ms;
@@ -152,9 +149,7 @@
   --motion-reveal-distance: 12px;
   --motion-hover-lift: -2px;
   --motion-press-scale: 0.98;
-  --motion-notes: Только мягкое замедление, без пружин, отскоков и перелёта. Появление — сдвиг 12 px и прозрачность. Аудитория стиля часто приходит встревоженной: движение успокаивает, а не зовёт.;
   --gradient-hero: radial-gradient(55% 65% at 92% 8%, color-mix(in srgb, var(--haze-1, #F0A7B8) var(--haze-strength, 18%), transparent) 0%, transparent 70%), radial-gradient(45% 60% at 4% 96%, color-mix(in srgb, var(--haze-2, #A3D5BF) var(--haze-strength, 18%), transparent) 0%, transparent 70%), radial-gradient(35% 45% at 58% 0%, color-mix(in srgb, var(--haze-3, #F4C9A9) var(--haze-strength, 18%), transparent) 0%, transparent 70%);
-  --gradient-notes: Дымка первого экрана — три пастельных пятна у краёв поверх background: --haze-1…3 берутся из haze выбранного пресета (запасные значения в строке — пресет rose), --haze-strength — 18% на светлой теме и 15% на тёмной. Замер по сетке с наложением пятен на 1440 и 390 px во всех четырёх пресетах: text_muted не ниже 5.16:1 на светлой и 5.12:1 на тёмной, primary (курсивное слово заголовка) не ниже 4.59:1. Сильнее 20% на тёмной теме не поднимать — приглушённый текст падает к 4.5. Живой вариант той же дымки — рецепт gradient-drift (см. motion_map); вместе со статичной дымкой его не накладывать — одно из двух.;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

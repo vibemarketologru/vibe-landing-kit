@@ -89,7 +89,21 @@
 
 ## Анимации
 
-`hero-text-reveal`, `image-reveal-clip`, `fade-up-stagger`, `counter-up`, `marquee-logos`, `parallax-soft`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`hero-text-reveal`, `image-reveal-clip`, `fade-up-stagger`, `counter-up`, `marquee-logos`, `parallax-soft`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `media-zoom-scroll`, `scroll-story-steps`, `result-bars`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Фото реального владельца бизнеса в его пространстве во всю ширину.
+
+**Видео ниже.** История владельца — ролик со звуком по кнопке, с субтитрами; витрина товаров карточками.
+
+**Картинки.** Документальные фото людей и товаров, естественный свет.
+
+**Персонаж или маскот.** Реальный владелец/мастер — один человек на фото и в ролике.
+
+**Аудиоверсия.** Аудиоверсия истории владельца уместна.
+
+**Избегать:** абстрактные 3D-фигуры.
 
 ## A/B-тест
 

@@ -93,7 +93,21 @@
 
 ## Анимации
 
-`fade-up-stagger`, `image-reveal-clip`, `marquee-logos`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`fade-up-stagger`, `image-reveal-clip`, `marquee-logos`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `tabs-indicator`, `scroll-story-steps`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Интерфейс переписки с дружелюбной иллюстрацией или маскотом-ботом рядом; живые пузыри сообщений.
+
+**Видео ниже.** Короткое демо продукта в окне; маскот появляется в нескольких секциях как проводник.
+
+**Картинки.** Скриншоты + мягкие иллюстрации, аватары людей в пузырях.
+
+**Персонаж или маскот.** Маскот-бот уместен: один и тот же во всех секциях и роликах, с одним голосом.
+
+**Аудиоверсия.** Короткий приветственный голос маскота по кнопке.
+
+**Избегать:** холодный корпоративный сток.
 
 ## A/B-тест
 

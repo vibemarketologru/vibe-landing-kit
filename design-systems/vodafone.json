@@ -1,0 +1,606 @@
+{
+  "slug": "vodafone",
+  "name": "Vodafone",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Vodafone. Не аффилировано с Vodafone; без логотипов и фирменных шрифтов.",
+  "summary": "Плакатный первый экран: огромный заголовок ЗАГЛАВНЫМИ весом 800 поверх тёмного редакционного фото и сразу под ним спокойная строка весом 300. Одна алая пилюля на главной кнопке, второго яркого цвета нет. Дальше — светлые полосы с карточками 6px и тёмный подвал: глубину даёт смена полярности полос, а не тени; редкая красная полоса во всю ширину — для акции.",
+  "summary_en": "A poster-like first screen: a huge 800-weight UPPERCASE headline over dark editorial photography, followed straight away by a calm 300-weight line. One scarlet pill on the main button and no second bright colour. Below: light bands with 6px cards and a dark footer; depth comes from flipping band polarity rather than shadows, and a rare full-bleed red band is reserved for the offer.",
+  "best_for": [
+    "интернет-провайдеры и домашнее ТВ",
+    "мобильная связь и тарифы для бизнеса",
+    "акции, распродажи и сезонные предложения",
+    "фитнес-клубы и студии",
+    "концерты, матчи и городские события",
+    "автошколы и курсы с сезонным набором"
+  ],
+  "goals": [
+    "проверка адреса и заявка на подключение",
+    "заявка на акцию",
+    "запись на пробное занятие",
+    "звонок"
+  ],
+  "mood": [
+    "громкий",
+    "плакатный",
+    "уверенный",
+    "контрастный",
+    "городской"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f2f2f2",
+        "text": "#25282b",
+        "text_muted": "#5e6166",
+        "border": "#d9d9d9",
+        "primary": "#e60000",
+        "on_primary": "#ffffff",
+        "accent": "#25282b",
+        "on_accent": "#ffffff",
+        "link": "#cc0000",
+        "success": "#0a7a3e",
+        "error": "#bd0000",
+        "primary_hover": "#c80000",
+        "border_strong": "#25282b",
+        "hero_band": "#25282b",
+        "on_hero": "#ffffff",
+        "on_hero_muted": "#c3c6ca",
+        "promo_band": "#e60000",
+        "on_promo": "#ffffff",
+        "scrim": "#000000"
+      },
+      "dark": {
+        "background": "#16181a",
+        "surface": "#25282b",
+        "text": "#ffffff",
+        "text_muted": "#b4b8bc",
+        "border": "#3a3e42",
+        "primary": "#e60000",
+        "on_primary": "#ffffff",
+        "accent": "#ffffff",
+        "on_accent": "#25282b",
+        "link": "#ff6666",
+        "success": "#3ccf7e",
+        "error": "#ff6b6b",
+        "primary_hover": "#c80000",
+        "border_strong": "#b4b8bc",
+        "hero_band": "#0e0f10",
+        "on_hero": "#ffffff",
+        "on_hero_muted": "#c3c6ca",
+        "promo_band": "#e60000",
+        "on_promo": "#ffffff",
+        "scrim": "#000000"
+      },
+      "notes": "Фирменная пара прошла без правок: белый по #e60000 — 4.81:1, поэтому красная пилюля и красная полоса-акция держат белый текст любого кегля. Чернила #25282b — 14.82 на белом. Приглушённый #7e7e7e исходника даёт 3.9 — заменён на #5e6166 (6.22 на белом, 5.55 на surface); #bebebe исходника (1.9) оставлен только для неактивных иконок и не переносится в токены. primary_hover #c80000 (6.08) — затемнение, а не осветление: у светлого красного белый текст провалился бы ниже 4.5. link — отдельный красный для текста: #cc0000 (5.89) в светлой теме и #ff6666 (6.23) в тёмной; сам primary текстом не ставится. hero_band — тёмная полоса первого экрана и подвала: в светлой теме чернила бренда #25282b, в тёмной — глубже #0e0f10, чтобы полоса отличалась от страницы #16181a. on_hero_muted #c3c6ca — 8.65 на #25282b. border_strong — рамка полей: чернила в светлой теме (14.82), #b4b8bc в тёмной (7.43 на surface). Бренд не держит семантической палитры — success/error собраны здесь: ошибка — тёмный красный #bd0000 (6.64), чтобы не спорить с кнопкой по яркости."
+    },
+    "typography": {
+      "display": {
+        "family": "Geologica",
+        "fallback": "'Arial Black', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "104px",
+        "size_mobile": "44px",
+        "line_height": 0.9,
+        "letter_spacing": "-0.02em",
+        "text_transform": "uppercase",
+        "note": "слоган первого экрана 2–5 слов; самое длинное слово на телефоне — до 10 букв при 44px (замер: «ПОДКЛЮЧИТЕ» 10 знаков ≈ 340px в колонке 358px)"
+      },
+      "display_light": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 300,
+        "size_desktop": "40px",
+        "size_mobile": "24px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.01em",
+        "note": "спокойная строка сразу под слоганом: цена, скорость, срок — вторая половина контраста 800/300"
+      },
+      "h2": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 300,
+        "size_desktop": "52px",
+        "size_mobile": "32px",
+        "line_height": 1.06,
+        "letter_spacing": "-0.015em",
+        "note": "заголовки разделов — светлым 300 в строчных, как sub-display бренда; ЗАГЛАВНЫЕ 800 остаются только у слогана и красной полосы"
+      },
+      "h3": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "26px",
+        "size_mobile": "21px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.005em"
+      },
+      "eyebrow": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "15px",
+        "size_mobile": "13px",
+        "line_height": 1.3,
+        "letter_spacing": "0.04em",
+        "text_transform": "uppercase"
+      },
+      "lead": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "21px",
+        "size_mobile": "18px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "button": {
+        "family": "Geologica",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "Geologica",
+        "fallback": "'Arial Black', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "56px",
+        "size_mobile": "40px",
+        "line_height": 1.0,
+        "letter_spacing": "-0.02em",
+        "note": "цена и скорость в тарифе: число 800, единица «₽/мес», «Мбит/с» — весом 300 на 45% мельче"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "6px",
+      "md": "6px",
+      "lg": "12px",
+      "chip": "32px",
+      "pill": "999px",
+      "note": "Все кнопки — пилюли; карточки, фото в карточках и поля — 6px; полосы первого экрана, акции и подвала — 0."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "container": "1360px",
+      "gutter_mobile": "20px",
+      "gutter_desktop": "32px",
+      "card_padding": "20px",
+      "card_gap": "24px",
+      "headline_to_line": "16px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 8px 24px rgba(0,0,0,0.18)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #25282b",
+      "focus_dark": "0 0 0 2px #16181a, 0 0 0 4px #ffffff",
+      "note": "Бренд живёт без теней: глубину дают полосы разной полярности. raised — только выпадающий список адресов и липкая панель на телефоне."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "250ms",
+      "slow": "640ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.05,.7,.1,1)",
+      "note": "Движение крупное и одно: слоган выезжает строками на первом экране, остальное почти неподвижно."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Geologica",
+      "fontsource": "geologica",
+      "role": "display+body",
+      "weights": [
+        300,
+        400,
+        500,
+        700,
+        800
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/geologica — одна переменная гарнитура на все веса, самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Vodafone / Vodafone Rg (проприетарный шрифт бренда)",
+      "why": "одно семейство от 300 до 800, как у бренда: на 800 заглавными — плотный плакатный рисунок с округлыми овалами, на 300 — спокойный и широкий; кириллица родная (у гарнитуры кириллический дизайн, а не пристройка). Сравнивались Inter 800 (уже в пяти системах каталога) и Montserrat 800 (на 2–5% шире и с круглыми геометрическими овалами — рисунок модернистской вывески, а не бренда); замер «ПОДКЛЮЧИТЕ» 44px: Geologica 336px, Inter 330px, Montserrat 344px"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 32px",
+      "font": "button",
+      "weight": 500,
+      "hover": "фон primary_hover #c80000 за 150ms; без тени",
+      "use": "одна красная пилюля на экран: «Подключить», «Проверить адрес», «Забрать скидку», «Записаться на пробное»"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1.5px solid text",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 30px",
+      "weight": 500,
+      "hover": "фон text, текст background",
+      "on_dark": "на тёмной полосе — рамка и текст on_hero, наведение: фон on_hero, текст hero_band",
+      "use": "«Все тарифы», «Позвонить», «Смотреть каналы»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 32px",
+      "weight": 500,
+      "hover": "фон #000000 в светлой теме / #e6e6e6 в тёмной",
+      "use": "кнопка на красной полосе-акции (красная на красном не видна) и вариант cta_color_role=accent"
+    },
+    "button_icon": {
+      "bg": "#ffffff",
+      "color": "#25282b",
+      "radius": "pill",
+      "size": "48px",
+      "use": "пауза и звук у видео, стрелки ленты карточек"
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "md",
+      "padding": "20px",
+      "photo": "16:9 сверху, радиус 6px, отступ до текста 16px",
+      "content": "метка chip, заголовок h3 до 2 строк, 2 строки body text_muted, ссылка «Подробнее ›» цветом link",
+      "hover": "фото меняет прозрачность на .92 за 250ms; карточка не поднимается и не отбрасывает тень",
+      "use": "истории, пакеты, акции партнёров, направления в фитнесе"
+    },
+    "tariff_card": {
+      "bg": "surface",
+      "radius": "md",
+      "padding": "28px 24px",
+      "content": "название eyebrow («ДОМАШНИЙ»), скорость price «500» + «Мбит/с» 300, список 3–5 строк с галочкой 20px цветом text, цена price «650» + «₽/мес» 300, строка условия caption text_muted («первые 2 месяца — 325 ₽»), button_primary во всю ширину",
+      "featured": "смена полярности: фон hero_band, текст on_hero, метка chip на белом «ВЫБИРАЮТ ЧАЩЕ»; кнопка остаётся красной",
+      "use": "3–4 тарифа в ряд; рекомендуемый — один, второй в ряду"
+    },
+    "address_check": {
+      "layout": "в одну строку: поле «Улица и дом» (input, радиус 6px, высота 56px, во всю доступную ширину) + button_primary «Проверить адрес»; под строкой caption on_hero_muted «Ответим, есть ли подключение, за 10 секунд»",
+      "result": "строка под полем: «Дом подключён — 500 Мбит/с за 650 ₽/мес» цветом on_hero с галочкой success или «Пока не подключён — оставьте номер, сообщим первыми» и сразу поле телефона",
+      "use": "первый экран провайдера; на телефоне поле и кнопка в две строки во всю ширину"
+    },
+    "promo_band": {
+      "bg": "promo_band",
+      "color": "on_promo",
+      "radius": "0",
+      "padding": "56px 32px",
+      "content": "слоган display 88/40px ЗАГЛАВНЫМИ («−50% НА ДВА МЕСЯЦА»), строка условия display_light, button_accent",
+      "use": "одна на страницу, во всю ширину, между тарифами и отзывами; только для акции с датой окончания"
+    },
+    "chip": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "chip",
+      "padding": "4px 12px",
+      "font": "caption, 700",
+      "use": "метки внутри карточек: «ТВ + ИНТЕРНЕТ», «ДЛЯ НОВЫХ», «ГРУППОВЫЕ»"
+    },
+    "segmented": {
+      "item": "пилюля высотой 44px, padding 0 20px, 16px/500",
+      "idle": "обводка 1.5px text, текст text",
+      "selected": "фон accent, текст on_accent — в тёмной теме это белая пилюля с чернильным текстом (чернильная пилюля на тёмном фоне пропадает, это видно на демо)",
+      "use": "переключатель «Интернет · Интернет + ТВ», «Взрослые · Детские» над тарифами"
+    },
+    "badge": {
+      "bg": "on_hero",
+      "color": "hero_band",
+      "radius": "chip",
+      "padding": "6px 14px",
+      "font": "eyebrow",
+      "use": "метка на тёмной полосе и у рекомендуемого тарифа: «ВЫБИРАЮТ ЧАЩЕ», «ДО 30 СЕНТЯБРЯ»"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "sm",
+      "height": "56px",
+      "padding": "0 16px",
+      "label": "над полем 15px/700 text, отступ 8px",
+      "placeholder": "text_muted",
+      "focus": "рамка 2px text (без свечения) и кольцо shadow.focus только при фокусе с клавиатуры"
+    },
+    "checkbox": {
+      "size": "22px",
+      "radius": "4px",
+      "border": "1.5px solid border_strong",
+      "checked": "фон text, галочка background"
+    },
+    "stat": {
+      "number": "price 800",
+      "label": "caption text_muted под числом",
+      "divider": "вертикальная линия 1px border между колонками",
+      "use": "«500 Мбит/с», «200 каналов», «24/7 поддержка», «12 залов»"
+    },
+    "nav": {
+      "bg": "hero_band",
+      "color": "on_hero",
+      "height": "64px",
+      "left": "текстовое название компании 20px/800 заглавными (без знаков и фигур в кружках или квадратах)",
+      "center": "4–5 ссылок 16px/400 цветом on_hero (не link: красный текст на чернильной полосе — 2.52:1), активная — подчёркивание 2px",
+      "right": "телефон 16px/700 + button_primary высотой 44px «Подключить»",
+      "mobile": "название, круглая кнопка-телефон 44px, бургер 44px; меню — тёмный слой во весь экран"
+    },
+    "sticky_cta": {
+      "bg": "hero_band",
+      "shadow": "raised",
+      "content": "круглая кнопка-телефон 52px с белой рамкой слева + button_primary «Проверить адрес» во всю оставшуюся ширину"
+    },
+    "footer": {
+      "bg": "hero_band",
+      "color": "on_hero",
+      "padding": "64px 32px 40px",
+      "layout": "4 колонки: тарифы, поддержка, о компании, контакты; заголовки колонок eyebrow on_hero_muted; строка копирайта и правовой информации ниже линии rgba(255,255,255,0.2)"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Тёмная полоса hero_band во всю ширину, высота 640–720px (на телефоне 100svh − 64px, не выше 760). Вариант photo_overlay (по умолчанию): редакционное фото во весь фон, кадрированное вплотную (лицо, руки с телефоном или пультом, спортсмен в движении) и смещённое вправо, слева затемнение scrim linear-gradient(90deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.2) 60%, transparent). Поверх в колонках 1–8: eyebrow on_hero_muted, слоган display 104px ЗАГЛАВНЫМИ в 2–3 строки, через 16px — строка display_light 40px белым с ценой или сроком, ниже address_check (для провайдера) или две пилюли «Подключить» (id=hero-cta) + обводка «Все тарифы». Вариант split_photo: слева текст на сплошной полосе hero_band, справа фото 4:5 во всю высоту полосы без скругления.",
+    "section_order": [
+      "nav",
+      "hero",
+      "stats",
+      "tariffs",
+      "benefits",
+      "promo_band",
+      "stories",
+      "how",
+      "reviews",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "stats": "белая полоса сразу под героем: 4 stat в ряд через вертикальные линии",
+      "tariffs": "белая полоса: h2 светлым 300 слева («Тарифы для дома»), переключатель «Интернет · Интернет + ТВ» пилюлями справа; 3–4 tariff_card, рекомендуемый — с тёмной заливкой",
+      "benefits": "surface-полоса: 3 колонки — иконка-линия 40px цветом text, h3, 2 строки body; без карточек",
+      "promo_band": "красная полоса во всю ширину, одна на страницу, только при реальной акции с датой",
+      "stories": "2 card в ряд с фото 16:9 — истории клиентов, каналы, залы",
+      "how": "3–4 шага: номер display 800 64px цветом text, h3, 2 строки body; шаги через линию 1px border",
+      "reviews": "3 отзыва: цитата lead 400, имя 700 и район или стаж клиента caption",
+      "faq": "5–7 вопросов, строки через линию 1px border, значок-плюс в круге 32px",
+      "lead_form": "тёмная полоса hero_band: слева h2 белым 300 «Подключим за 1 день», справа белая карточка 6px с полями и красной пилюлей"
+    },
+    "grid": "12 колонок, контейнер 1360px, поля 32px, зазор 24px; тарифы — 3–4 в ряд, истории — 2 в ряд; 600–1023px — по 2, телефон — 1 или горизонтальная лента со scroll-snap шагом 85%",
+    "mobile_notes": "До 767px: слоган 44px, 2–4 строки по 1–2 слова, самое длинное слово до 10 букв (длиннее — переписать слоган, а не уменьшать кегль); строка 300 — 24px. Фото первого экрана кадрируется до лица или рук и уходит в верхние 55% полосы, текст ниже на сплошном hero_band — никогда по лицу. address_check — поле и кнопка в две строки во всю ширину 56/52px. Тарифы — горизонтальная лента шагом 85% с прилипанием и точками-индикаторами; рекомендуемый — первым. stats 2×2. Липкая панель sticky_cta с первой прокрутки. Секции 56px, поля 20px, зоны нажатия от 44px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "address"
+    ],
+    "consent_152fz": true,
+    "style": "Белая карточка с радиусом 6px и padding 32px на тёмной полосе hero_band (в тёмной теме — surface). Поля «Имя», «Телефон» (маска +7 (___) ___-__-__, inputmode=tel), для провайдера — «Адрес подключения»; подпись над полем 15px/700, поле 56px с рамкой 1px border_strong и радиусом 6px. Красная пилюля во всю ширину 52px «Оставить заявку». Под ней caption text_muted «Перезвоним за 15 минут, с 8 до 22». Ниже чекбокс 22px (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» цветом link. Кнопка активна всегда: пустое поле или нет галочки — видимый текст ошибки 14px цветом error с иконкой-кругом «!» под полем, фокус на первое проблемное поле. Сбой сети — текст и кнопка «Отправить ещё раз», введённое сохраняется.",
+    "success_state": "Содержимое карточки меняется на месте, высота сохраняется: круг 56px цвета success с белой галочкой, заголовок h3 «Заявка принята», строка «Позвоним на +7 … до 18:00 и согласуем время мастера», обводная пилюля «Изменить номер». Фокус на заголовке, aria-live=polite. Без анимации празднования — рецепт form-success в этой системе не используется."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "counter-up",
+    "cta-attention",
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "только функциональное: sticky-cta-mobile и смена цвета при наведении",
+      "subtle": "по умолчанию: hero-text-reveal, counter-up, sticky-cta-mobile; + tabs-indicator; + form-field-feedback",
+      "rich": "subtle + cta-attention на главной пилюле первого экрана"
+    },
+    "hero-text-reveal": "только слоган первого экрана: каждая строка ЗАГЛАВНЫМИ — своя .htr-line (на телефоне строка слогана = 1–2 слова, не дробить сильнее); @media (min-width: 768px) { :root { --htr-dur: 720ms; --htr-step: 80ms } }; .htr-sub — на строку display_light 300, .htr-cta — на address_check или ряд пилюль. Фото фона не анимировать — оно и есть кадр LCP",
+    "counter-up": "только полоса stats под героем: считаются «500 Мбит/с», «200 каналов», «12 залов»; цифры в tariff_card и любые цены не считать никогда. Размер числа — typography.price (56/40px, 800); полоса .stat__label::before — цвета primary высотой 3px; единицы «Мбит/с», «каналов» — отдельным span весом 300, а не в data-count-suffix",
+    "cta-attention": "уровень rich: одна обёртка data-cta-attn на пилюле «Подключить» первого экрана, --cta-radius: 999px; --cta-shine: transparent (белый по #e60000 = 4.81 < 7, блик запрещён рецептом); --cta-glow — готовая тень rgba(230,0,0,.45) 0 0 0 6px, меняется только её прозрачность; --cta-attn-count: 2. На кнопку в форме, в красной полосе и в липкой панели не ставить",
+    "sticky-cta-mobile": "панель по компоненту sticky_cta: data-after=\"#hero-cta\" (на странице провайдера — id у кнопки address_check), data-hide-on=\"#lead\"; фон панели hero_band, .scta__btn — красная пилюля; кнопку звонка .scta__alt включить кругом 52px с белой рамкой",
+    "tabs-indicator": "tariffs: «интернет / ТВ / вместе» — segmented, выбранное accent, --tbi-dur 250ms",
+    "form-field-feedback": "поля radius 6px",
+    "not_for_this_style": "fade-up-stagger — карточки ниже первого экрана стоят сразу, движение держит только слоган; image-reveal-clip и parallax-soft — редакционное фото не «открывают» и не двигают; gradient-drift — градиентов нет; tilt-card, magnetic-button — пилюля и так главная точка экрана; marquee-logos — список каналов и партнёров неподвижной сеткой"
+  },
+  "media": {
+    "hero": "Редакционная фотография человека, кадрированная вплотную: глаза и рука с телефоном, семья у экрана, спортсмен в рывке. Тёмная и контрастная, правая часть кадра, слева место под слоган. Снимок настоящий, не иллюстрация.",
+    "video_in_flow": "Беззвучная петля 6–8 с как фон первого экрана допустима только с кнопкой паузы 48px и постером-кадром; ролики-истории в карточках stories запускаются по кнопке с субтитрами. Звук на автозапуске запрещён.",
+    "imagery": "Городская репортажная съёмка: реальные люди в квартирах, залах, на улице; плотное кадрирование, живой свет, высокий контраст. В карточках — кадр 16:9 с одним объектом.",
+    "character": "Персонаж-маскот не нужен. Сквозной герой — реальный человек (клиент, тренер, мастер-монтажник) одним лицом в первом экране, в истории и в ролике.",
+    "audio": "Аудиоверсия не нужна; для фитнеса допустим короткий голосовой анонс тренера кнопкой рядом с расписанием.",
+    "avoid": [
+      "иллюстрации, 3D и мультяшные маскоты",
+      "атмосферные градиенты и неон",
+      "улыбающийся сток с белым фоном",
+      "текст слогана поверх лица",
+      "кавычки, речевые облачка и красные квадраты-эмблемы"
+    ],
+    "geometry": {
+      "hero_desktop": "16:9 во весь фон полосы, фокус кадра в правой трети",
+      "hero_mobile": "4:5, фокус на лице или руках в верхних 55% полосы",
+      "card": "16:9 с радиусом 6px",
+      "portrait": "4:5 — тренеры и мастера",
+      "gallery": "3:2",
+      "promo_band": "без фото — сплошной красный",
+      "logo_strip": "каналы и партнёры монохромно белым на тёмной полосе, высота 24px"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "красная пилюля: фон #c80000 за 150ms; обводная: заливка цветом текста, текст цветом фона",
+      "focus_visible": "shadow.focus — кольцо 2px #25282b с зазором 2px #ffffff; на тёмной полосе и в тёмной теме — кольцо 2px #ffffff с зазором цвета полосы",
+      "active": "scale(0.98) на время нажатия, фон #c80000",
+      "disabled": "фон #d9d9d9 (в тёмной #3a3e42), текст text_muted, курсор not-allowed; кнопку формы заявки не блокировать",
+      "loading": "подпись «Проверяем…» или «Отправляем…», справа кольцо 18px белым, которое крутится не дольше 10 с (дальше — текст ошибки); ширина пилюли зафиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "рамка 2px text (на тёмной полосе — 2px #ffffff), без свечения; подпись над полем не двигается",
+      "error": "рамка 2px error, под полем текст 14px error с иконкой-кругом «!», aria-invalid=true и aria-describedby",
+      "disabled": "фон surface, рамка 1px border, текст text_muted"
+    }
+  },
+  "signature": [
+    "Контраст голосов: слоган 800 ЗАГЛАВНЫМИ с плотным трекингом и сразу под ним спокойная строка весом 300 крупным кеглем — крик, потом факт",
+    "Одна алая пилюля на главной кнопке экрана; всё остальное — чернила, белый и серые, второго яркого цвета нет",
+    "Смена полярности полос вместо теней: тёмный первый экран → светлые полосы → тёмный подвал; одна красная полоса во всю ширину — только для акции с датой",
+    "Редакционное фото, кадрированное вплотную: глаза, руки, телефон, движение — без иллюстраций"
+  ],
+  "voice": "Слоган — 2–5 слов ЗАГЛАВНЫМИ, призыв или утверждение («ИНТЕРНЕТ БЕЗ ПАУЗ», «СЕЗОН ОТКРЫТ»); сразу за ним спокойная строка с фактами: скорость, цена, срок. Цифры цифрами, условия акции — рядом с ценой, без звёздочек; «самый быстрый» и «лучший» не писать без подтверждённого замера (38-ФЗ, ст. 5).",
+  "type_features": {
+    "prices": "font-variant-numeric: lining-nums tabular-nums; число 800, единица «₽/мес» весом 300 на 45% мельче; неразрывный пробел перед ₽",
+    "speeds": "«500 Мбит/с» — число 800 и единица 300 в одну строку, white-space: nowrap",
+    "slogan": "text-transform: uppercase; letter-spacing: -0.02em; text-wrap: balance; hyphens: none — перенос по слогам в слогане запрещён",
+    "eyebrow": "text-transform: uppercase; letter-spacing: 0.04em; вес 800"
+  },
+  "color_presets": {
+    "how_to_use": "Один пресет на страницу, переопределяет перечисленные ключи в обеих темах. scarlet — по умолчанию; для интернет-провайдеров, ТВ и мобильной связи — совпадающая ниша не только с Vodafone, но и с красными операторами на рынке РФ — брать cobalt (сдвиг основного цвета по 135-ФЗ ст. 14.6).",
+    "scarlet": {
+      "label": "Алый (по умолчанию)",
+      "for": "акции и распродажи, фитнес, события, автошколы",
+      "light": {
+        "primary": "#e60000",
+        "on_primary": "#ffffff",
+        "primary_hover": "#c80000",
+        "link": "#cc0000",
+        "promo_band": "#e60000"
+      },
+      "dark": {
+        "primary": "#e60000",
+        "on_primary": "#ffffff",
+        "primary_hover": "#c80000",
+        "link": "#ff6666",
+        "promo_band": "#e60000"
+      },
+      "contrast": {
+        "light:on_primary/primary": 4.81,
+        "light:on_primary/primary_hover": 6.08,
+        "light:link/background": 5.89,
+        "dark:link/background": 6.23
+      }
+    },
+    "cobalt": {
+      "label": "Кобальт",
+      "for": "интернет-провайдеры, домашнее ТВ, мобильная связь",
+      "light": {
+        "primary": "#1d4ed8",
+        "on_primary": "#ffffff",
+        "primary_hover": "#1e40af",
+        "link": "#1d4ed8",
+        "promo_band": "#1d4ed8"
+      },
+      "dark": {
+        "primary": "#1d4ed8",
+        "on_primary": "#ffffff",
+        "primary_hover": "#1e40af",
+        "link": "#6b9bff",
+        "promo_band": "#1d4ed8"
+      },
+      "contrast": {
+        "light:on_primary/primary": 6.7,
+        "light:on_primary/primary_hover": 8.72,
+        "light:link/background": 6.7,
+        "dark:link/background": 6.58
+      }
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "photo_overlay",
+        "split_photo"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "hero_form": [
+        "address_check",
+        "buttons"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "uppercase_800_slogan",
+      "light_300_subline",
+      "band_polarity"
+    ],
+    "default": {
+      "hero_layout": "photo_overlay",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "hero_form": "address_check"
+    },
+    "legend": {
+      "hero_layout": "photo_overlay — фото во весь фон с затемнением слева; split_photo — текст на сплошной тёмной полосе, фото 4:5 справа",
+      "cta_color_role": "primary — красная пилюля; accent — белая пилюля на тёмной полосе (чернильная на светлой), красным остаётся только полоса-акция",
+      "headline_scale": "xl — 104/44px, слоган до 24 знаков; l — 80/38px, до 34 знаков",
+      "hero_form": "address_check — поле адреса с кнопкой прямо на первом экране; buttons — две пилюли, форма только внизу (для фитнеса и акций)",
+      "motion_level": "none — без hero-text-reveal и счётчиков; subtle — по умолчанию; rich — плюс cta-attention"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для провайдера первой проверять hero_form, для акций и фитнеса — headline_scale: длинный русский слоган в 80px часто сильнее, чем обрезанный до 3 слов в 104px."
+  },
+  "do": [
+    "Набирать слоган первого экрана весом 800 ЗАГЛАВНЫМИ с трекингом −0,02em и сразу под ним ставить спокойную строку весом 300 с ценой или сроком.",
+    "Держать одну красную пилюлю на экран; все кнопки — пилюли, карточки и поля — 6px.",
+    "Чередовать полярность полос: тёмный первый экран, светлые полосы контента, тёмный подвал; красная полоса во всю ширину — одна и только под акцию с датой.",
+    "Ставить редакционное фото с плотным кадрированием и держать слоган в стороне от лица.",
+    "Проверять длину слогана на телефоне: самое длинное слово до 10 букв при 44px, иначе переписывать.",
+    "Писать цену и скорость числом 800 с единицей весом 300; условия акции — рядом, обычным текстом.",
+    "В совпадающей нише (интернет, ТВ, мобильная связь) брать пресет cobalt и не повторять фирменные приёмы операторов — 135-ФЗ ст. 14.6."
+  ],
+  "dont": [
+    "Не вводить второй яркий цвет и не красить красным крупные площади, кроме одной полосы-акции.",
+    "Не делать кнопки прямоугольными и не набирать слоган первого экрана строчными.",
+    "Не набирать заголовки разделов весом 800 — там светлый 300, иначе теряется контраст голосов.",
+    "Не ставить тени на карточки и не заливать фон градиентами.",
+    "Не рисовать кавычки, речевые облачка и красные квадраты или круги со знаком — это вырастает из логотипа бренда.",
+    "Не прятать согласие на обработку данных и не отмечать его заранее; не включать звук видео на автозапуске."
+  ],
+  "prompt_snippet": "Build a poster-like telecom-style lead landing inspired by Vodafone's web aesthetic. Light: canvas #ffffff, ink #25282b, muted #5e6166, surface #f2f2f2. Dark: #16181a, surface #25282b, text #ffffff, muted #b4b8bc. One accent: scarlet #e60000 (hover #c80000) as a pill button with white text; no second bright colour (use preset cobalt #1d4ed8 for internet providers). Self-hosted Geologica (Cyrillic) 300–800: the hero slogan is 104/44px weight 800 UPPERCASE, tracking -0.02em, line-height 0.9, followed immediately by a calm 40px weight-300 line with price or speed; section headings are weight 300. Dark full-bleed hero over tightly cropped editorial photography with a left scrim and an address-check field plus red pill. Then light bands with 6px cards and tariff cards, one full-bleed red promo band, dark footer. No shadows, no illustrations. Unchecked 152-FZ consent, no logos, speech marks or emblem shapes.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/vodafone/DESIGN.md, commit f696123",
+    "notes": "Перенесено: алый #e60000 с белым (4.81) и чернила #25282b без изменений, surface #f2f2f2, пилюля на каждой кнопке, карточки и поля 6px, чипы 32px, контраст 800 ЗАГЛАВНЫМИ и 300 как главный типографский приём, трекинг −0,02em на слогане, тёмная навигация и подвал цветом чернил, смена полярности полос вместо теней, редакционная фотография, красная полоса-кампания, «тёмный рекомендуемый тариф» из ex-pricing-tier-featured. Изменено: шрифт Vodafone (фирменный) заменён на Geologica (OFL-1.1, кириллица) — одно семейство 300–800; слоган 144 → 104px (русские слова на 30–40% длиннее английских «STAY CONNECTED»), на телефоне 44px с правилом «слово до 10 букв». Контраст: приглушённый #7e7e7e (3.9) → #5e6166 (6.22), наведение кнопки — затемнение #c80000 (6.08), для текста ссылок отдельный красный #cc0000/#ff6666; собраны success и error, которых у бренда нет. Тёмной темы у бренда нет — собрана из его же тёмных полос: страница #16181a, поверхности #25282b (цвет чернил бренда), первый экран глубже #0e0f10; пилюля остаётся алой с белым текстом. Добавлены: форма проверки адреса на первом экране, карточка тарифа с числом 800 и единицей 300, пресет cobalt для совпадающей ниши связи, форма заявки по 152-ФЗ, липкая панель на телефоне. Не переносится: знак-кавычка и красный квадрат-орб с ним, фирменные фотографии."
+  }
+}

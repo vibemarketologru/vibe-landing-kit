@@ -409,13 +409,17 @@
     "tilt-card",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "result-bars",
+    "media-zoom-scroll",
+    "form-field-feedback"
   ],
   "motion_map": {
     "levels": {
       "none": "всё стоит, кроме раскрытия FAQ, ответа формы и липкой кнопки на телефоне",
-      "subtle": "по умолчанию: проявление заголовка, появление карточек и счётчики",
-      "rich": "subtle + стопка карточек в product_story, мягкий параллакс макета первого экрана и наклон карточек тарифов"
+      "subtle": "по умолчанию: проявление заголовка, появление карточек и счётчики; + tabs-indicator; + result-bars; + form-field-feedback",
+      "rich": "subtle + стопка карточек в product_story, мягкий параллакс макета первого экрана и наклон карточек тарифов; + media-zoom-scroll"
     },
     "hero-text-reveal": "subtle и выше: строки заголовка первого экрана (display 96px, строка 1.0); запас маски из рецепта не уменьшать — при строке 1.0 заглавные Й и Ё задевают хвосты строки выше",
     "fade-up-stagger": "subtle и выше: карточки benefits, шаги how, отзывы reviews",
@@ -425,7 +429,22 @@
     "tilt-card": "только rich и только на десктопе с мышью: карточки тарифов в pricing, data-tilt-max=\"5\", --tilt-radius: 20px; --tilt-shadow: transparent — теней в стиле нет, глубину даёт сам наклон; --tilt-glare: transparent — ссылки к surface ниже 5.5:1. Не ставить в секцию со sticky-stack-cards",
     "accordion-smooth": "на любом уровне: частые вопросы строками с линией border, плюс-минус SVG справа",
     "form-success": "на любом уровне: кобальтовая карточка остаётся, поля гаснут за 280ms, галочка в белом круге 56px — полностью в lead_form.success_state",
-    "sticky-cta-mobile": "монохромная таблетка button_primary 52px на телефоне; прячется, когда форма в кадре"
+    "sticky-cta-mobile": "монохромная таблетка button_primary 52px на телефоне; прячется, когда форма в кадре",
+    "tabs-indicator": "subtle и выше: тарифы или «месяц / год», монохромная таблетка --tbi-edge: var(--text), --tbi-dur 280ms",
+    "result-bars": "subtle и выше: «В банке / С нами» по 2–3 операциям, подписи строк заменить",
+    "media-zoom-scroll": "только rich: экран приложения в benefits, --mzs-img-from 1, --mzs-radius 28px, не рядом со sticky-stack-cards",
+    "form-field-feedback": "на кобальтовой карточке красный текст ошибки не держит контраст — ошибку писать цветом on_primary, со значком"
+  },
+  "media": {
+    "hero": "Телефон с живым экраном приложения на смелом тёмном или градиентном поле.",
+    "video_in_flow": "Записи экрана приложения внутри рамки телефона, крупные цифры.",
+    "imagery": "Мокапы устройств, продуктовые рендеры.",
+    "character": "Не нужен.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "домашние фото",
+      "мелкий текст на картинках"
+    ]
   },
   "ab_axes": {
     "vary": {

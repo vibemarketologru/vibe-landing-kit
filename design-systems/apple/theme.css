@@ -103,9 +103,7 @@
   --space-container-wide: 1200px;
   --space-gutter-mobile: 24px;
   --space-grid-gap: 24px;
-  --space-rhythm: метка → заголовок 8px; заголовок → строка пояснения 12px; пояснение → кнопки 24px; кнопки → фото 48px (телефон 32px); над заголовком секции не меньше 64px воздуха (телефон — 48px);
   --shadow-card: none;
-  --shadow-raised: none — поверх контента лежит матовое стекло (tokens.glass), а не тень;
   --shadow-product: 3px 5px 30px 0 rgba(0, 0, 0, 0.22);
   --shadow-product-dark: 3px 5px 30px 0 rgba(0, 0, 0, 0.6);
   --shadow-focus-ring: 0 0 0 3px rgba(0, 113, 227, 0.3);
@@ -115,6 +113,11 @@
   --motion-ease-standard: cubic-bezier(.25,.1,.25,1);
   --motion-ease-emphasized: cubic-bezier(.28,.11,.32,1);
   --motion-press-scale: 0.95;
+  --glass-light: rgba(245, 245, 247, 0.8);
+  --glass-dark: rgba(22, 22, 23, 0.8);
+  --glass-filter: saturate(180%) blur(20px);
+  --glass-hairline-light: rgba(0, 0, 0, 0.16);
+  --glass-hairline-dark: rgba(255, 255, 255, 0.16);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

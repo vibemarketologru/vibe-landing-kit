@@ -486,18 +486,37 @@
     "parallax-soft",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "media-zoom-scroll",
+    "steps-progress-line",
+    "form-field-feedback"
   ],
   "motion_map": {
     "gradient-drift": "пятна поверх статичной дымки первого экрана: --gd-c1 #ffb37a, --gd-c2 #533afd, --gd-c3 #ea2261, --gd-strength 24%; за формой — те же цвета с --gd-strength 18%. Кнопка паузы рецепта обязательна",
     "fade-up-stagger": "карточки преимуществ, шаги, тарифы",
     "counter-up": "блок цифр на тёмно-синей полосе; строку доверия первого экрана не анимировать — число видно сразу",
+    "tilt-card": "только motion_level = rich и только на десктопе с мышью: три карточки тарифов в pricing, не больше одного ряда на страницу. data-tilt-max=\"4\" — движение у стиля спокойное; --tilt-radius: 12px (radius.lg); --tilt-shadow: rgba(0,55,112,.18) — та же синеватая тень, что у shadow.raised. Блик: в светлой теме --tilt-glare: transparent (text_muted к белой карточке 4.96 < 5.5), в тёмной и у card_featured (#1c1e54) — rgba(255,255,255,.06). Макеты интерфейса не наклонять — они уже двигаются parallax-soft.",
     "marquee-logos": "полоса клиентов под первым экраном",
     "parallax-soft": "не больше двух слоёв макета интерфейса на первом экране и в product_mockup, сдвиг не больше 24px; текст и кнопки неподвижны",
     "accordion-smooth": "частые вопросы",
     "form-success": "ответ формы заявки",
     "sticky-cta-mobile": "липкая кнопка «Оставить заявку» на телефоне, прячется, когда форма в кадре",
-    "tilt-card": "только motion_level = rich и только на десктопе с мышью: три карточки тарифов в pricing, не больше одного ряда на страницу. data-tilt-max=\"4\" — движение у стиля спокойное; --tilt-radius: 12px (radius.lg); --tilt-shadow: rgba(0,55,112,.18) — та же синеватая тень, что у shadow.raised. Блик: в светлой теме --tilt-glare: transparent (text_muted к белой карточке 4.96 < 5.5), в тёмной и у card_featured (#1c1e54) — rgba(255,255,255,.06). Макеты интерфейса не наклонять — они уже двигаются parallax-soft."
+    "tabs-indicator": "pricing, --tbi-edge: var(--primary), --tbi-dur 240ms",
+    "media-zoom-scroll": "product_mockup, вместо parallax-soft на нём; --mzs-img-from 1, --mzs-from .88, --mzs-radius 16px",
+    "steps-progress-line": "how «подключение за 4 шага»",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Анимированный градиент-сетка и карточки интерфейса, без фотографий.",
+    "video_in_flow": "Анимации интерфейса и схем, ролики не нужны.",
+    "imagery": "Схемы, код, карточки продукта.",
+    "character": "Не нужен.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "стоковые фото",
+      "маскоты"
+    ]
   },
   "ab_axes": {
     "vary": {

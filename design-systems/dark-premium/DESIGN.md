@@ -83,7 +83,21 @@
 
 ## Анимации
 
-`hero-text-reveal`, `image-reveal-clip`, `fade-up-stagger`, `counter-up`, `parallax-soft`, `gradient-drift`, `magnetic-button`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`hero-text-reveal`, `image-reveal-clip`, `fade-up-stagger`, `counter-up`, `parallax-soft`, `gradient-drift`, `magnetic-button`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `svg-line-draw`, `media-zoom-scroll`, `scroll-story-steps`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Медленная тёмная петля или кадр во всю ширину: фактуры, свет, детали; крупная антиква поверх затемнения.
+
+**Видео ниже.** Галерея крупных кадров, история в фото, фильм со звуком по кнопке «Смотреть».
+
+**Картинки.** Низкий ключ, тёплые блики, дорогие материалы, минимум предметов.
+
+**Персонаж или маскот.** Основатель или хозяин — портрет и голос в ролике.
+
+**Аудиоверсия.** Аудиоверсия голосом основателя — сильный ход.
+
+**Избегать:** яркие цвета; мультяшность; перегруженные экраны.
 
 ## A/B-тест
 

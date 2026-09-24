@@ -128,20 +128,17 @@
   --space-card-padding: 32px;
   --space-card-padding-mobile: 24px;
   --space-grid-gap: 24px;
-  --space-note: Кинематографичные полосы (первый экран, преимущества, фото-витрина, отзывы) — 128px воздуха; транзакционные (тарифы, частые вопросы, форма) сжимаются до 64px, потому что там сравнивают и действуют;
   --shadow-card: none;
   --shadow-raised: 0 8px 8px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.1);
   --shadow-modal: 0 25px 50px -12px rgba(0,0,0,0.25);
   --shadow-card-dark: 0 1px 2px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.04);
   --shadow-raised-dark: 0 0 0 1px rgba(255,255,255,0.08), 0 1px 3px rgba(0,0,0,0.3), 0 5px 10px rgba(0,0,0,0.2);
   --shadow-focus: 0 0 0 3px color-mix(in srgb, var(--focus_ring) 25%, transparent);
-  --shadow-note: Светлая: обычная карточка плоская с волоском border; raised — фирменная стопка из четырёх крошечных теней (бумажный ореол) у тарифов и формы. Тёмная: у карточек только верхний внутренний блик card_dark; raised_dark — у формы и всплывающих слоёв. Больше никаких теней на чёрном;
   --motion-fast: 150ms;
   --motion-base: 300ms;
   --motion-slow: 700ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.16,1,.3,1);
-  --motion-note: Движение редакционное и медленное: фото проявляются за 700–900ms, текст поднимается на 16–24px, без пружин и отскоков. Кнопки реагируют только сменой заливки за 150ms;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

@@ -1,0 +1,175 @@
+/* Zapier — Vibe Landing Kit 1.2.0
+ * Эстетика в духе Zapier. Не аффилировано с Zapier; без логотипов и фирменных шрифтов.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Wix Madefor Display — npm i @fontsource-variable/wix-madefor-display (или @fontsource/wix-madefor-display), OFL; заменяет Degular Display (проприетарный)
+ *   Inter — npm i @fontsource-variable/inter (или @fontsource/inter), OFL; заменяет Inter — рабочая гарнитура самого бренда, замена не нужна
+ */
+:root {
+  --color-background: #fffefb;
+  --color-surface: #f8f4f0;
+  --color-text: #201515;
+  --color-text-muted: #605d52;
+  --color-border: #e3ddd2;
+  --color-primary: #ff4f00;
+  --color-on-primary: #201515;
+  --color-accent: #201515;
+  --color-on-accent: #fffefb;
+  --color-link: #a93800;
+  --color-success: #1d7a3e;
+  --color-error: #b3261e;
+  --color-primary-hover: #ff6a26;
+  --color-primary-active: #f24a00;
+  --color-accent-hover: #3a2d29;
+  --color-surface-strong: #efe8df;
+  --color-border-strong: #201515;
+  --color-band: #201515;
+  --color-on-band: #fffefb;
+  --color-on-band-muted: #c5c0b1;
+  --color-decor-muted: #8a8477;
+  --font-display: 'Wix Madefor Display', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-size: 56px;
+  --display-weight: 600;
+  --display-size-desktop: 56px;
+  --display-size-mobile: 36px;
+  --display-line-height: 1.05;
+  --display-letter-spacing: -0.015em;
+  --font-h2: 'Wix Madefor Display', 'Inter', system-ui, sans-serif;
+  --h2-size: 40px;
+  --h2-weight: 600;
+  --h2-size-desktop: 40px;
+  --h2-size-mobile: 28px;
+  --h2-line-height: 1.12;
+  --h2-letter-spacing: -0.01em;
+  --font-h3: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h3-size: 24px;
+  --h3-weight: 600;
+  --h3-size-desktop: 24px;
+  --h3-size-mobile: 20px;
+  --h3-line-height: 1.25;
+  --h3-letter-spacing: -0.02em;
+  --font-eyebrow: 'Wix Madefor Display', 'Inter', system-ui, sans-serif;
+  --eyebrow-size: 14px;
+  --eyebrow-weight: 500;
+  --eyebrow-size-desktop: 14px;
+  --eyebrow-size-mobile: 13px;
+  --eyebrow-line-height: 1.2;
+  --eyebrow-letter-spacing: 0.07em;
+  --font-lead: 'Inter', system-ui, sans-serif;
+  --lead-size: 20px;
+  --lead-weight: 400;
+  --lead-size-desktop: 20px;
+  --lead-size-mobile: 17px;
+  --lead-line-height: 1.5;
+  --lead-letter-spacing: -0.01em;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 18px;
+  --body-weight: 400;
+  --body-size-desktop: 18px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.5;
+  --body-letter-spacing: 0;
+  --font-caption: 'Inter', system-ui, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 400;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.5;
+  --caption-letter-spacing: 0;
+  --font-button: 'Inter', system-ui, sans-serif;
+  --button-size: 18px;
+  --button-weight: 600;
+  --button-size-desktop: 18px;
+  --button-size-mobile: 17px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --font-price: 'Wix Madefor Display', 'Inter', system-ui, sans-serif;
+  --price-size: 40px;
+  --price-weight: 600;
+  --price-size-desktop: 40px;
+  --price-size-mobile: 32px;
+  --price-line-height: 1.1;
+  --price-letter-spacing: -0.01em;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+  --space-unit: 8;
+  --space-section-desktop: 88px;
+  --space-section-mobile: 56px;
+  --space-container: 1280px;
+  --space-gutter-mobile: 20px;
+  --space-card-padding: 24px;
+  --space-card-gap: 24px;
+  --shadow-card: none;
+  --shadow-raised: 0 1px 2px rgba(32,21,21,0.06), 0 8px 24px rgba(32,21,21,0.08);
+  --shadow-raised-dark: 0 1px 2px rgba(0,0,0,0.4), 0 10px 28px rgba(0,0,0,0.45);
+  --shadow-focus: 0 0 0 2px #fffefb, 0 0 0 4px #201515;
+  --shadow-focus-dark: 0 0 0 2px #1b1512, 0 0 0 4px #f8f4f0;
+  --motion-fast: 150ms;
+  --motion-base: 200ms;
+  --motion-slow: 400ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.3,0,0,1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #1b1512;
+    --color-surface: #261f1b;
+    --color-text: #f8f4f0;
+    --color-text-muted: #b7afa2;
+    --color-border: #3a312b;
+    --color-primary: #ff4f00;
+    --color-on-primary: #201515;
+    --color-accent: #fffefb;
+    --color-on-accent: #201515;
+    --color-link: #ff8a4d;
+    --color-success: #5cc27a;
+    --color-error: #ff7a66;
+    --color-primary-hover: #ff6a26;
+    --color-primary-active: #f24a00;
+    --color-accent-hover: #efe8df;
+    --color-surface-strong: #2f2723;
+    --color-border-strong: #8f8577;
+    --color-band: #f8f4f0;
+    --color-on-band: #201515;
+    --color-on-band-muted: #605d52;
+    --color-decor-muted: #6b6456;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #1b1512;
+  --color-surface: #261f1b;
+  --color-text: #f8f4f0;
+  --color-text-muted: #b7afa2;
+  --color-border: #3a312b;
+  --color-primary: #ff4f00;
+  --color-on-primary: #201515;
+  --color-accent: #fffefb;
+  --color-on-accent: #201515;
+  --color-link: #ff8a4d;
+  --color-success: #5cc27a;
+  --color-error: #ff7a66;
+  --color-primary-hover: #ff6a26;
+  --color-primary-active: #f24a00;
+  --color-accent-hover: #efe8df;
+  --color-surface-strong: #2f2723;
+  --color-border-strong: #8f8577;
+  --color-band: #f8f4f0;
+  --color-on-band: #201515;
+  --color-on-band-muted: #605d52;
+  --color-decor-muted: #6b6456;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 36px;
+    --h2-size: 28px;
+    --h3-size: 20px;
+    --eyebrow-size: 13px;
+    --lead-size: 17px;
+    --body-size: 16px;
+    --caption-size: 14px;
+    --button-size: 17px;
+    --price-size: 32px;
+  }
+}

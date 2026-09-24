@@ -1,7 +1,7 @@
 /* Тёмный премиум — Vibe Landing Kit 1.0.0
  * Собственный стиль Вайб-Маркетолога.
  * Шрифты (раздавайте со своего домена, не с внешнего CDN):
- *   Cormorant — npm i @fontsource-variable/cormorant (или @fontsource/cormorant), OFL; заменяет проприетарные антиквы люкс-сегмента: Canela, GT Super, Chronicle Display, Didot-гарнитуры
+ *   Cormorant — npm i @fontsource-variable/cormorant (или @fontsource/cormorant), OFL; заменяет проприетарные антиквы люкс-сегмента: Canela, GT Super, Chronicle Display, Didot-гарнитуры; курсив — отдельным файлом (wght-italic.css / *-italic.css)
  *   Manrope — npm i @fontsource-variable/manrope (или @fontsource/manrope), OFL; заменяет проприетарные гротески премиальных брендов: Neue Haas Grotesk, Graphik, Söhne
  */
 :root {
@@ -115,7 +115,6 @@
   --radius-md: 4px;
   --radius-lg: 8px;
   --radius-pill: 999px;
-  --radius-notes: Архитектурные прямоугольники: кнопки 2px, поля и карточки 4px, окна и крупные панели 8px, фото — 0. Таблетка 999px — только у бейджей и чипов выбора.;
   --space-unit: 8;
   --space-section-desktop: 144px;
   --space-section-mobile: 88px;
@@ -138,7 +137,6 @@
   --shadow-focus: 0 0 0 2px #0B0A08, 0 0 0 4px #DCC08A;
   --shadow-card-light: 0 1px 2px rgba(22,19,14,.06), 0 0 0 1px #E2D9C8;
   --shadow-focus-light: 0 0 0 2px #F6F1E8, 0 0 0 4px #7A5A22;
-  --shadow-notes: На тёмном тени почти не видны — глубину дают слои светлоты (#0B0A08 → #15130F → #1D1A15) и волосяные линии. glow_primary — только у выделенной карточки и у золотой кнопки при наведении. raised — у всплывающих окон и липкой панели на телефоне. Значения даны для шампанского; для платины и меди glow_primary, focus и focus_light берите из tokens.color.variants.<вариант>.effects.;
   --motion-fast: 180ms;
   --motion-base: 320ms;
   --motion-slow: 720ms;
@@ -146,7 +144,6 @@
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.16,1,.3,1);
   --motion-ease-inout: cubic-bezier(.65,0,.35,1);
-  --motion-notes: Дорогое не суетится: движение на треть медленнее обычного интерфейса, без пружин, подпрыгиваний и вращений. Одно проявление в кадре за раз. При prefers-reduced-motion остаются только смены прозрачности до 200ms.;
   --gradient-hero: radial-gradient(90% 70% at 78% 8%, rgba(201,168,105,.16) 0%, rgba(201,168,105,0) 62%);
   --gradient-photo-scrim: linear-gradient(180deg, rgba(11,10,8,.72) 0px, rgba(11,10,8,.66) 88px, rgba(11,10,8,0) 240px), linear-gradient(90deg, rgba(11,10,8,.92) 0%, rgba(11,10,8,.86) 50%, rgba(11,10,8,0) 82%);
   --gradient-photo-scrim-top: linear-gradient(180deg, rgba(11,10,8,.72) 0px, rgba(11,10,8,.66) 88px, rgba(11,10,8,0) 240px);
@@ -154,7 +151,6 @@
   --gradient-text-scrim: linear-gradient(180deg, rgba(11,10,8,0) 0px, rgba(11,10,8,.86) 120px, rgba(11,10,8,.92) 100%);
   --gradient-hairline-gold: linear-gradient(90deg, rgba(201,168,105,0) 0%, #C9A869 50%, rgba(201,168,105,0) 100%);
   --gradient-card-sheen: linear-gradient(135deg, rgba(242,236,225,.05) 0%, rgba(242,236,225,0) 42%);
-  --gradient-notes: gradient.hero — только золотое сияние без собственного фона: кладётся поверх background текущей палитры, поэтому работает в обеих; в худшей точке (центр пятна) text 13+:1, text_muted 5.9+:1. Фото первого экрана. Десктоп от 1024px: photo_scrim (это photo_scrim_top + photo_scrim_side одним свойством), весь текстовый блок — в левых 6 колонках, где затемнение не слабее 86%; заголовку можно зайти в седьмую — крупному тексту хватает 3:1. Телефон и планшет: на фото только photo_scrim_top, а text_scrim кладётся псевдоэлементом текстового блока (position:absolute; top:-120px; bottom:0; left и right: calc(50% − 50vw); z-index:-1 при isolation:isolate; у первого экрана overflow:clip) — плотность 86% начинается ровно у верхней кромки текста при любой высоте экрана, а процент от высоты первого экрана этого не гарантирует. Худший случай — белый участок снимка: при 85% text 11.38:1, text_muted 5.16:1, золото 5.92:1; при 75% text_muted падает до 3.58 — мало. Под шапкой затемнение 66–72%: text 5.4+:1 — хватает для текста шапки, но не для text_muted и золота (меньше 3:1), поэтому в шапке над фото нет приглушённого текста и золотой кнопки. Золото — только тонкой линией (hairline_gold 1px) и мягким свечением, никогда не заливкой-металликом с бликами. Сияние первого экрана — одно пятно в правом верхнем углу; в варианте type_only при motion_level=rich его можно заставить плыть рецептом gradient-drift с насыщенностью пятна не выше 20% (при 28% text_muted падает до 4.58).;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

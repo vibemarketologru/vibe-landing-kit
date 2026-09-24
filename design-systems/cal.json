@@ -575,7 +575,10 @@
     "marquee-logos",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "steps-progress-line",
+    "form-field-feedback"
   ],
   "motion_map": {
     "fade-up-stagger": "карточки преимуществ, шаги, отзывы, тарифы. Строгий вариант: --reveal-dist 16px, --reveal-dur 360ms, --reveal-ease cubic-bezier(.16,1,.3,1) (ease_emphasized). Виджет записи и заголовок первого экрана не прятать",
@@ -584,7 +587,21 @@
     "marquee-logos": "строка логотипов клиентов, только если их больше 6 (иначе статичный ряд): монохромные знаки высотой 24px цветом text_muted, 40 px/с. Переменные --mq-* из токенов: bg — background, surface — surface_soft, text — text, muted — text_muted, border — border, focus — focus_ring. Кнопку паузы сделать прямоугольной (радиус md), а не пилюлей",
     "accordion-smooth": "частые вопросы. Механику рецепта оставить, вид перестроить под бренд: пункты не карточками — без рамки, фона и радиуса, gap 0, только нижняя линия 1px border; вопрос typography.title 18px, отступ 20px 0; значок — шеврон 16px text_muted, при раскрытии поворот на 180° (transform) и цвет text — вместо плюса-минуса рецепта",
     "form-success": "ответ формы внутри booking_widget. Из рецепта взять механику состояний (idle → sending → sent | error в одной ячейке сетки, фокус на заголовок, текст ошибки у кнопки), вид — из токенов: карточка радиус xl 16px, поля радиус md 8px с рамкой border_input, фокус shadow.focus, кнопка button_primary. У чекбокса согласия убрать атрибут required: согласие проверяет скрипт видимым текстом (lead_form.consent_rules), ссылки «Согласие» и «Политика» — две. Вместо абзаца «спасибо» — таблица подтверждения из lead_form.success_state, значок — круг 48px цветом success с галочкой on_primary",
-    "sticky-cta-mobile": "липкая кнопка «Записаться» на телефоне: data-after=\"#hero-cta\", data-hide-on=\"#hero-booking, #lead\" — прячется, пока в кадре виджет первого экрана или нижняя форма. Панель — фон background, сверху линия 1px border, без тени рецепта; внутри button_primary 48px на всю ширину, радиус md; круглая кнопка звонка слева — button_icon, если клиент принимает звонки"
+    "sticky-cta-mobile": "липкая кнопка «Записаться» на телефоне: data-after=\"#hero-cta\", data-hide-on=\"#hero-booking, #lead\" — прячется, пока в кадре виджет первого экрана или нижняя форма. Панель — фон background, сверху линия 1px border, без тени рецепта; внутри button_primary 48px на всю ширину, радиус md; круглая кнопка звонка слева — button_icon, если клиент принимает звонки",
+    "tabs-indicator": "pricing «помесячно / за год», пилюля в пилюле; --tbi-edge: var(--primary), --tbi-dur 200ms",
+    "steps-progress-line": "how: 3–4 шага записи; --spl-color: var(--primary)",
+    "form-field-feedback": "в booking_widget, поля radius 8px"
+  },
+  "media": {
+    "hero": "Интерфейс продукта вместо фото: скриншот или живая петля записи экрана в спокойной монохромной рамке.",
+    "video_in_flow": "Короткие записи экрана по сценариям (15–30 с) у каждого преимущества.",
+    "imagery": "Скриншоты, схемы, минимум фотографий.",
+    "character": "Не нужен.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "постановочные фото",
+      "яркие иллюстрации"
+    ]
   },
   "ab_axes": {
     "vary": {

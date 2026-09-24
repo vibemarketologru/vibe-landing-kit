@@ -1,0 +1,580 @@
+{
+  "slug": "zapier",
+  "name": "Zapier",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Zapier. Не аффилировано с Zapier; без логотипов и фирменных шрифтов.",
+  "summary": "Кремовый холст вместо белого, «кофейные» чернила вместо чёрного и один насыщенный оранжевый — только на главной кнопке, с тёмной подписью. Заголовки плотным гротеском 600 строчными, над ними надзаголовок прописными с разрядкой. Кнопки и карточки со средним радиусом 12px, шаги работы — цепочкой «событие → действие», выделенный тариф и подвал — в тёмный кофе.",
+  "summary_en": "A warm cream canvas instead of white, coffee ink instead of black and a single saturated orange reserved for the main button, labelled in dark ink. Dense 600-weight sentence-case headings sit under small tracked uppercase eyebrows. Buttons and cards share a middle 12px radius, the process is drawn as a trigger-to-action chain, and the featured plan and footer flip to dark coffee.",
+  "best_for": [
+    "малый бизнес и услуги для предпринимателей",
+    "бухгалтерия, налоги, регистрация ИП и ООО",
+    "окна, натяжные потолки, двери, жалюзи",
+    "франшизы и продажа готового бизнеса",
+    "юридические услуги для бизнеса",
+    "ремонт и монтаж под ключ",
+    "аутсорсинг: кадры, клининг офисов, курьеры"
+  ],
+  "goals": [
+    "заявки на расчёт",
+    "звонки",
+    "запись на консультацию",
+    "заявки будущих франчайзи"
+  ],
+  "mood": [
+    "тёплый",
+    "деловой",
+    "уверенный",
+    "простой",
+    "без пафоса"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#fffefb",
+        "surface": "#f8f4f0",
+        "text": "#201515",
+        "text_muted": "#605d52",
+        "border": "#e3ddd2",
+        "primary": "#ff4f00",
+        "on_primary": "#201515",
+        "accent": "#201515",
+        "on_accent": "#fffefb",
+        "link": "#a93800",
+        "success": "#1d7a3e",
+        "error": "#b3261e",
+        "primary_hover": "#ff6a26",
+        "primary_active": "#f24a00",
+        "accent_hover": "#3a2d29",
+        "surface_strong": "#efe8df",
+        "border_strong": "#201515",
+        "band": "#201515",
+        "on_band": "#fffefb",
+        "on_band_muted": "#c5c0b1",
+        "decor_muted": "#8a8477"
+      },
+      "dark": {
+        "background": "#1b1512",
+        "surface": "#261f1b",
+        "text": "#f8f4f0",
+        "text_muted": "#b7afa2",
+        "border": "#3a312b",
+        "primary": "#ff4f00",
+        "on_primary": "#201515",
+        "accent": "#fffefb",
+        "on_accent": "#201515",
+        "link": "#ff8a4d",
+        "success": "#5cc27a",
+        "error": "#ff7a66",
+        "primary_hover": "#ff6a26",
+        "primary_active": "#f24a00",
+        "accent_hover": "#efe8df",
+        "surface_strong": "#2f2723",
+        "border_strong": "#8f8577",
+        "band": "#f8f4f0",
+        "on_band": "#201515",
+        "on_band_muted": "#605d52",
+        "decor_muted": "#6b6456"
+      },
+      "notes": "Главная поправка к исходнику: фирменный оранжевый #ff4f00 с белой подписью даёт 3.27:1 — ниже порога. Цвет не трогаем, меняем подпись: на кнопке кофейные чернила #201515 (5.40:1). Поэтому наведение СВЕТЛЕЕТ, а не темнеет: #ff6a26 поднимает контраст до 6.22, нажатие #f24a00 — 4.88; обычное «затемнить на 10%» уронило бы подпись ниже 4.5. Оранжевый — только заливка кнопки и значка «Чаще выбирают»; текстом по крему он 3.3:1, поэтому ссылки — жжёный оранжевый #a93800 (6.40 на холсте, 5.90 на surface) с подчёркиванием. text_muted #605d52 — фирменный «body» бренда (6.54). border_strong — рамка полей цветом чернил, как у бренда; в тёмной теме #8f8577 (4.98). band — «тёмный кофе» выделенного тарифа, липкой панели и подвала; в тёмной теме полярность переворачивается в крем, как требует исходник для выделенного тарифа. on_band_muted — ссылки подвала (9.79 на #201515). decor_muted #8a8477 — только иконки, линии цепочки и узлы (3.69, порог 3:1 для графики), не текст. Тёмная тема своя: у бренда её нет; «эспрессо» #1b1512 держит тёплую температуру, оранжевый кнопки и её чернильная подпись те же."
+    },
+    "typography": {
+      "display": {
+        "family": "Wix Madefor Display",
+        "fallback": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "56px",
+        "size_mobile": "36px",
+        "line_height": 1.05,
+        "letter_spacing": "-0.015em"
+      },
+      "h2": {
+        "family": "Wix Madefor Display",
+        "fallback": "'Inter', system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "40px",
+        "size_mobile": "28px",
+        "line_height": 1.12,
+        "letter_spacing": "-0.01em"
+      },
+      "h3": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.25,
+        "letter_spacing": "-0.02em"
+      },
+      "eyebrow": {
+        "family": "Wix Madefor Display",
+        "fallback": "'Inter', system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.2,
+        "letter_spacing": "0.07em",
+        "note": "прописными, над каждым заголовком секции и над H1: «БУХГАЛТЕРИЯ ДЛЯ ИП И ООО», «КАК МЫ РАБОТАЕМ»"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "17px",
+        "line_height": 1.5,
+        "letter_spacing": "-0.01em"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "Wix Madefor Display",
+        "fallback": "'Inter', system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "40px",
+        "size_mobile": "32px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.01em",
+        "note": "цена в тарифе и калькуляторе «от 3 900 ₽/мес»; единица измерения рядом 16px text_muted"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "6px",
+      "md": "12px",
+      "lg": "16px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "88px",
+      "section_mobile": "56px",
+      "container": "1280px",
+      "gutter_mobile": "20px",
+      "card_padding": "24px",
+      "card_gap": "24px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 1px 2px rgba(32,21,21,0.06), 0 8px 24px rgba(32,21,21,0.08)",
+      "raised_dark": "0 1px 2px rgba(0,0,0,0.4), 0 10px 28px rgba(0,0,0,0.45)",
+      "focus": "0 0 0 2px #fffefb, 0 0 0 4px #201515",
+      "focus_dark": "0 0 0 2px #1b1512, 0 0 0 4px #f8f4f0",
+      "note": "Глубину несёт заливка (крем на холсте, кофе на креме), а не тень. raised — только у плавающего: карточка-звено поверх картинки первого экрана, липкая нижняя панель, выпадающий список."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "note": "Движение деловое и короткое: смена заливки 150ms, появление карточек снизу на 16px. Ничего не пульсирует и не крутится."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Wix Madefor Display",
+      "fontsource": "wix-madefor-display",
+      "role": "display",
+      "weights": [
+        500,
+        600
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource/wix-madefor-display — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Degular Display (проприетарный)",
+      "why": "плотный тёплый гротеск с открытыми апертурами и характерной «р»/«а» — на крупном кегле даёт ту же уверенную, не холодную подачу, что Degular; полноценная кириллица"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body+ui",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/inter — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Inter — рабочая гарнитура самого бренда, замена не нужна",
+      "why": "у бренда строгое разделение ролей: заголовки — дисплейный шрифт, всё остальное (подзаголовки, текст, кнопки) — Inter"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "md",
+      "padding": "14px 24px",
+      "height": "52px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон primary_hover #ff6a26 за 150ms — светлее, чтобы чернильная подпись стала контрастнее; без сдвига и тени",
+      "use": "одна главная кнопка на экран: «Получить расчёт», «Записаться на консультацию», «Узнать условия франшизы»"
+    },
+    "button_secondary": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "md",
+      "padding": "14px 24px",
+      "height": "52px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон accent_hover",
+      "use": "чернильная кнопка второго уровня: «Скачать презентацию франшизы», «Смотреть тарифы»; вариант главной кнопки в ветке cta_color_role=accent"
+    },
+    "button_outline": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "md",
+      "padding": "13px 23px",
+      "height": "52px",
+      "weight": 600,
+      "hover": "фон surface, рамка остаётся цвета text",
+      "use": "«Позвонить», «Задать вопрос», «Все отзывы»"
+    },
+    "button_text": {
+      "bg": "transparent",
+      "color": "text",
+      "weight": 600,
+      "size": "16px",
+      "decoration": "подчёркивание 1px, отступ 3px; стрелка → после текста",
+      "hover": "цвет link",
+      "use": "«Подробнее о тарифе →», «Читать кейс →»"
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "md",
+      "padding": "24px",
+      "border": "none",
+      "shadow": "card",
+      "content": "иконка 32px в плашке 48px radius sm цвета background; заголовок h3; текст body text_muted 2–3 строки",
+      "use": "выгоды, услуги, что входит в тариф"
+    },
+    "card_dark": {
+      "bg": "band",
+      "color": "on_band",
+      "radius": "md",
+      "padding": "32px",
+      "content": "надзаголовок прописными on_band_muted, заголовок h3, текст on_band, кнопка button_primary",
+      "use": "одна «перевёрнутая» карточка на секцию: гарантия, главный кейс, приглашение к расчёту; в тёмной теме — кремовая"
+    },
+    "flow_chain": {
+      "layout": "4–5 звеньев в ряд на десктопе, вертикально на телефоне",
+      "node": "карточка background с рамкой 1px border, radius md, padding 20px; слева плашка 40px radius sm цвета surface с номером 16px/600 или иконкой 24px; справа подпись caption text_muted прописными («КОГДА», «МЫ», «ВЫ ПОЛУЧАЕТЕ») и строка h3 20px",
+      "connector": "линия 2px цвета decor_muted между звеньями с узлом-кругом 8px на середине; первое звено («Вы оставляете заявку») отмечено слева полосой 4px цвета primary",
+      "use": "«Как мы работаем»: заявка → звонок за 15 минут → расчёт и договор → работа → отчёт/монтаж"
+    },
+    "pricing_card": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "padding": "32px",
+      "content": "название h3, цена шрифтом price + период text_muted, список из 5–7 пунктов с галочкой 20px цвета text, button_outline во всю ширину",
+      "featured": "фон band, текст on_band, значок «Чаще выбирают» — pill primary с подписью on_primary, кнопка button_primary во всю ширину; в тёмной теме фон крем, текст чернила"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "sm",
+      "height": "52px",
+      "padding": "12px 16px",
+      "font": "body",
+      "label": "подпись над полем 14px/600 text, отступ 6px; плейсхолдер text_muted",
+      "focus": "рамка 2px border_strong (внутрь, без смещения), без свечения",
+      "error": "рамка 2px error, текст 14px error с иконкой «!» под полем"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "xs",
+      "border": "1px solid border_strong",
+      "checked": "фон text, галочка background",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных; не отмечен заранее"
+    },
+    "badge": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "caption 14px/500",
+      "use": "«Договор с фиксированной ценой», «Работаем с 2014 года»"
+    },
+    "badge_hot": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "caption 14px/600",
+      "use": "только «Чаще выбирают» на выделенном тарифе — второе и последнее оранжевое место экрана"
+    },
+    "proof_strip": {
+      "bg": "background",
+      "border": "1px solid border сверху и снизу",
+      "content": "4 факта в строку через вертикальные линии: число h3 20px/600 + подпись caption text_muted («1 200 клиентов», «с 2014 года», «договор и акт», «ответ за 15 минут»)",
+      "use": "полоса доверия сразу под первым экраном"
+    },
+    "testimonial": {
+      "bg": "surface",
+      "radius": "md",
+      "padding": "24px",
+      "content": "текст body 18px text; ниже аватар-круг 48px, имя 16px/600, должность и город 14px text_muted",
+      "use": "отзывы 3 в ряд"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "72px",
+      "border_bottom": "1px solid border",
+      "left": "текстовый логотип клиента 20px/700 цветом text",
+      "center": "3–4 якорные ссылки 16px/500 text",
+      "right": "телефон 16px/600 text (tabular-nums) + button_primary высотой 44px «Получить расчёт»",
+      "mobile": "64px: логотип, иконка телефона 44×44, кнопка-меню 44×44"
+    },
+    "sticky_bottom_bar": {
+      "bg": "band",
+      "color": "on_band",
+      "padding": "12px 20px",
+      "content": "слева кнопка-иконка телефона 48px (рамка 1px on_band_muted), справа button_primary на остальную ширину «Получить расчёт»",
+      "use": "телефон, рецепт sticky-cta-mobile"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "question": "20px/600 Inter text, справа плюс 20px, поворот в крест при раскрытии",
+      "answer": "body text_muted, колонка до 720px"
+    },
+    "footer": {
+      "bg": "band",
+      "color": "on_band",
+      "dark_theme": "в тёмной теме подвал НЕ переворачивается в крем: фон surface_strong, рамка 1px border сверху, текст text, ссылки text_muted — кремовая полоса в самом низу тёмной страницы слепит",
+      "padding": "56px 24px",
+      "columns": "4 колонки ссылок 16px on_band_muted, заголовки колонок eyebrow прописными on_band",
+      "legal": "нижняя строка caption on_band_muted: ИНН/ОГРН, «Политика обработки персональных данных», год"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "primary: фон #ff6a26 (подпись #201515, 6.22:1); secondary: фон #3a2d29 (в тёмной #efe8df); outline: фон surface; transition background-color 150ms ease_standard",
+      "focus_visible": "кольцо 2px #201515 с зазором 2px цвета фона — shadow.focus (в тёмной теме shadow.focus_dark, кольцо #f8f4f0); только :focus-visible, мышью не рисуется",
+      "active": "фон primary_active #f24a00 (4.88:1) и translateY(1px) на 80ms; масштаб не меняется",
+      "disabled": "фон surface_strong, подпись text_muted, курсор not-allowed; на форме заявки не применяется — кнопка активна всегда, ошибки объясняются текстом",
+      "loading": "подпись заменяется тремя точками 6px цвета on_primary, ширина кнопки зафиксирована, aria-busy=true, повторное нажатие игнорируется"
+    },
+    "input": {
+      "focus": "рамка 2px border_strong (#201515, в тёмной #8f8577 → #f8f4f0), фон не меняется, без свечения",
+      "error": "рамка 2px error (#b3261e / #ff7a66) и под полем текст 14px error с иконкой «!» 16px; фон не заливается; aria-invalid=true и aria-describedby на текст ошибки",
+      "disabled": "фон surface, рамка border, текст text_muted"
+    }
+  },
+  "signature": [
+    "Тёплая температура всей палитры: кремовый холст, кофейные чернила и тёплые серые — ни чистого белого, ни чистого чёрного, ни одного холодного серого.",
+    "Один насыщенный оранжевый — заливка главной кнопки с тёмной, а не белой подписью; всё остальное на странице — чернила и крем.",
+    "Надзаголовок прописными с разрядкой над каждым заголовком секции; сами заголовки плотные, строчными.",
+    "Шаги работы цепочкой «событие → действие»: карточки-звенья, соединённые линией с узлами; выделенный тариф и подвал перевёрнуты в тёмный кофе."
+  ],
+  "voice": "Деловой и тёплый, как толковый бухгалтер или прораб: коротко, по делу, с цифрами и сроками — «Расчёт за 15 минут», «Договор с фиксированной ценой». В кнопках глагол действия и результат; без восклицательных знаков, канцелярита и «лучшие в городе».",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; неразрывный пробел между разрядами и перед ₽ («3 900 ₽»)",
+    "phone": "font-variant-numeric: tabular-nums; white-space: nowrap",
+    "eyebrow": "text-transform: uppercase; letter-spacing: .07em",
+    "headings": "text-wrap: balance; только строчными, без прописных"
+  },
+  "layout": {
+    "hero_pattern": "Сплит 7/5 на кремовом холсте. Слева: надзаголовок прописными («БУХГАЛТЕРИЯ ДЛЯ ИП И ООО»), H1 до трёх строк строчными, лид 20px text_muted в две строки и форма прямо в первом экране — поле телефона 52px и оранжевая кнопка «Получить расчёт» в одну строку, под ней чекбокс согласия и caption «Перезвоним за 15 минут в рабочее время». Ниже три коротких факта с галочками. Справа: предметное фото результата или простая иллюстрация в рамке radius lg на surface; поверх её нижнего угла — карточка-звено «Заявка → звонок через 15 минут» с тенью raised. Вариант centered_form: надзаголовок, H1 и лид по центру колонки 760px, форма в одну строку под ними, картинка во всю ширину контейнера ниже.",
+    "section_order": [
+      "nav",
+      "hero",
+      "proof_strip",
+      "benefits",
+      "flow_chain",
+      "cases",
+      "pricing",
+      "testimonials",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "proof_strip": "4 факта через вертикальные линии на холсте, линии border сверху и снизу",
+      "benefits": "надзаголовок + h2, 3 карточки card на surface в ряд; одна из шести — card_dark",
+      "flow_chain": "цепочка шагов на холсте; справа от последнего звена — button_primary",
+      "cases": "окна, потолки, ремонт — «было — стало» ползунком и 3 фото работ 4:3; бухгалтерия и юристы — 3 кейса текстом: задача, что сделали, цифра результата; франшизы — точки сети с окупаемостью",
+      "pricing": "3–4 pricing_card, средняя выделенная (band); под ними строка caption text_muted «Цена фиксируется в договоре»",
+      "testimonials": "3 testimonial в ряд на холсте",
+      "faq": "5–7 вопросов faq_item, колонка 720px",
+      "lead_form": "фон surface, слева h2 «Рассчитаем стоимость за 15 минут» и 3 строки выгод с галочками, справа карточка background radius md с формой"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор 24px; карточки 3 в ряд, тарифы 3–4 в ряд; 768–1023px — по 2",
+    "mobile_notes": "Меньше 768px: навигация 64px (логотип, телефон и меню кнопками 44×44). H1 36px, лид 17px; форма первого экрана стопкой — поле 52px и кнопка 52px во всю ширину, чекбокс под ними с зоной нажатия 44px; картинка под формой 4:3 без карточки-звена. Цепочка шагов вертикальная: линия слева, узлы на ней. Тарифы стопкой, выделенный идёт первым. Липкая нижняя панель band: телефон + «Получить расчёт», прячется у формы и пока человек печатает. Боковые отступы 20px, секции 56px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "Карточка background radius md с рамкой 1px border и паддингом 32px. Поля «Имя» и «Телефон» 52px с подписью сверху 14px/600, рамка 1px чернилами (border_strong), radius 6px; телефон с маской +7 (___) ___-__-__ и inputmode=tel. Кнопка button_primary во всю ширину: оранжевая заливка, подпись чернилами «Получить расчёт». Под кнопкой caption text_muted «Перезвоним за 15 минут. Расчёт бесплатный». Ниже чекбокс 20px, не отмеченный заранее: «Согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» цветом link. Кнопка активна всегда: при пустом поле или без галочки под полем видимый текст ошибки цветом error с иконкой, фокус на первое проблемное поле. Сбой сети — видимый текст и кнопка «Отправить ещё раз», введённое не стирается.",
+    "success_state": "Карточка заменяется на месте с той же высотой: круг 56px цвета surface с галочкой цвета success, заголовок h3 «Заявка принята», строка «Позвоним на +7 … в течение 15 минут», ниже звено цепочки «Дальше: расчёт и договор» и button_text «Изменить номер». Фокус на заголовок, aria-live=polite; рецепт form-success."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "before-after-slider",
+    "form-success",
+    "sticky-cta-mobile",
+    "steps-progress-line",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "ничего не двигается: карточки и звенья стоят сразу, ползунок «до и после» работает только от руки",
+      "subtle": "по умолчанию: fade-up-stagger на карточках и звеньях цепочки, ответ формы, липкая панель на телефоне; + steps-progress-line; + form-field-feedback",
+      "rich": "как subtle + разовая подсказка ползунка «до и после» при первом показе"
+    },
+    "fade-up-stagger": "карточки выгод, звенья flow_chain по порядку слева направо (сверху вниз на телефоне), тарифы, отзывы; --reveal-dist 16px, --reveal-dur 400ms, --reveal-step 70ms. Первый экран не анимируется: форма в нём должна быть готова к вводу сразу",
+    "before-after-slider": "только в нишах с видимым результатом — окна, потолки, ремонт, клининг: 1–2 ползунка в секции cases, --ba-ratio 4 / 3, радиус md, ручка и линия цвета background с кольцом text; в бухгалтерии, юристах и франшизах не ставить",
+    "form-success": "ответ формы заявки и формы первого экрана: круг surface с галочкой success, без перелёта значка; вместо ссылки на примеры — следующее звено цепочки «Дальше: расчёт и договор»",
+    "sticky-cta-mobile": "панель sticky_bottom_bar (фон band): кнопка-телефон + button_primary; data-after — форма первого экрана, data-hide-on — нижняя форма заявки",
+    "steps-progress-line": "flow_chain: цепочка «событие → действие» заполняется по прокрутке, линия primary 3px",
+    "form-field-feedback": "поля radius 6px"
+  },
+  "media": {
+    "hero": "Спокойная предметная сцена результата — поставленное окно, готовый потолок, аккуратный отчёт на столе, точка франшизы при дневном свете — в рамке radius 16px на кремовом фоне; поверх угла маленькая карточка-звено «Заявка → звонок за 15 минут». Можно простую иллюстрацию из тех же тёплых цветов вместо фото.",
+    "video_in_flow": "Видео одно и по кнопке: короткий ролик «как проходит замер» или «день в точке франшизы» 30–60 секунд со звуком, субтитрами и постером в рамке radius 12px; автозапуска нет.",
+    "imagery": "Документальные фото работ и людей за делом при дневном свете, тёплая цветокоррекция под крем; плоские иллюстрации — чернильный контур 2px, заливки кремом и одним оранжевым пятном; скриншоты кабинета или отчёта — в рамке 12px на surface.",
+    "character": "Реальный человек — основатель, главный бухгалтер, мастер-замерщик — с портретом 3:4 и короткой цитатой в блоке доверия; один и тот же человек на фото и в ролике. Маскоты не нужны.",
+    "audio": "Уместна аудиоверсия длинных разделов (условия франшизы, порядок работ): тихая кнопка «Послушать за 2 минуты» рядом с h2, вторичная, не оранжевая.",
+    "avoid": [
+      "стоковые офисные улыбки и рукопожатия",
+      "холодные серо-синие фото",
+      "3D-рендеры и неон",
+      "фирменные иллюстрации бренда и фигуры-«звёздочки» в оранжевом",
+      "текст поверх фото"
+    ],
+    "geometry": {
+      "hero_desktop": "5:4 в правой колонке (≈560×448)",
+      "hero_mobile": "4:3 во всю ширину под формой",
+      "card": "4:3 для фото работ",
+      "portrait": "3:4 для основателя и мастера",
+      "gallery": "4:3, сетка 3 в ряд",
+      "before_after": "4:3, оба кадра с одной точки",
+      "video_poster": "16:9",
+      "logo_strip": "названия клиентов текстом 16px/600 text_muted или монохромные логотипы высотой 24px цвета text_muted"
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_form",
+        "centered_form"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "steps_style": [
+        "flow_chain",
+        "numbered_cards"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "ink_label_on_orange",
+      "eyebrow_uppercase"
+    ],
+    "default": {
+      "hero_layout": "split_form",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "steps_style": "flow_chain"
+    },
+    "legend": {
+      "hero_layout": {
+        "split_form": "форма в левой колонке, картинка справа",
+        "centered_form": "всё по центру, форма в строку, картинка ниже"
+      },
+      "cta_color_role": {
+        "primary": "оранжевая кнопка с чернильной подписью",
+        "accent": "чернильная кнопка с кремовой подписью; оранжевый остаётся только на значке тарифа"
+      },
+      "headline_scale": {
+        "xl": "56px / 36px",
+        "l": "44px / 30px"
+      },
+      "steps_style": {
+        "flow_chain": "звенья, соединённые линией с узлами",
+        "numbered_cards": "обычные карточки с крупным номером, без соединителей"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первой проверять hero_layout: форма в первом экране у малого бизнеса часто важнее картинки."
+  },
+  "do": [
+    "Держать всю палитру тёплой: холст #fffefb, карточки #f8f4f0, текст #201515, вторичный текст #605d52 — ни чистого белого, ни чистого чёрного, ни холодного серого.",
+    "Ставить оранжевый #ff4f00 только заливкой главной кнопки и значка «Чаще выбирают», подпись на нём — чернилами #201515; не больше двух оранжевых мест на экран.",
+    "Над каждым заголовком секции ставить надзаголовок прописными 14px с разрядкой .07em, а сами заголовки набирать строчными весом 600.",
+    "Давать форму уже в первом экране: телефон и кнопка в одну строку, согласие под ними.",
+    "Рисовать «Как мы работаем» цепочкой звеньев со связующей линией и узлами, а не россыпью иконок.",
+    "Использовать один радиус 12px для кнопок и карточек, 6px — для полей, круглые — только значки.",
+    "В совпадающей нише (сервисы автоматизации, интеграции приложений, no-code-платформы) сдвинуть основной цвет к терракоте или янтарю и не брать цепочку «событие → действие» и надзаголовки — это требование ст. 14.6 закона о защите конкуренции (135-ФЗ)."
+  ],
+  "dont": [
+    "Не ставить белый текст на оранжевый: 3,27:1 — нечитаемо; и не затемнять кнопку при наведении — подпись потеряет контраст.",
+    "Не писать оранжевым по крему — ни заголовки, ни цифры, ни ссылки: ссылки только жжёным #a93800 с подчёркиванием.",
+    "Не превращать кнопки в пилюли и не делать острые углы — средний радиус 12px и есть почерк стиля.",
+    "Не добавлять второй яркий цвет: оранжевый, крем и кофе — вся палитра.",
+    "Не набирать заголовки прописными и не делать их весом 800–900.",
+    "Не использовать логотип, фирменные иллюстрации и шрифт Zapier, фигуры-звёздочки и подчёркивание перед названием — только свой текстовый логотип клиента.",
+    "Не прятать и не отмечать заранее согласие на обработку данных и не отбрасывать заявку молча."
+  ],
+  "prompt_snippet": "Build a warm, businesslike lead landing in a Zapier-like style for a Russian small-business service. Light: cream canvas #fffefb, cream cards #f8f4f0, coffee ink #201515, muted #605d52, hairlines #e3ddd2, input borders in ink. Dark: espresso #1b1512, surface #261f1b, text #f8f4f0, muted #b7afa2. One saturated orange #ff4f00 used only as the main button fill with an INK label (#201515, never white); hover lightens to #ff6a26. Links burnt orange #a93800, underlined. Fonts: Wix Madefor Display 600 for sentence-case headings (H1 56/36px) and 14px tracked uppercase eyebrows above every section title; Inter for body 18px, buttons 18px/600. Radius 12px on buttons and cards, 6px on inputs. Split hero with the phone form right in the first screen, a trigger-to-action process chain of connected cards, a dark-coffee featured plan and footer. Unchecked 152-FZ consent. No logos, no emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/zapier/DESIGN.md, commit f696123",
+    "notes": "Шрифт Degular Display заменён на Wix Madefor Display (OFL-1.1, кириллица), Inter оставлен — это рабочая гарнитура бренда. Главная правка контраста: фирменный #ff4f00 с белым даёт 3.27:1, поэтому цвет кнопки сохранён, а подпись переведена в кофейные чернила #201515 (5.40:1); наведение пересчитано в сторону светлее (#ff6a26, 6.22:1), нажатие #f24a00 (4.88:1). Ссылки — жжёный оранжевый #a93800 (6.40:1) вместо оранжевого текстом (3.3:1). Тёмная тема своя («эспрессо» #1b1512, у бренда её нет), выделенный тариф в ней переворачивается в крем, как требует исходник. Кнопки 48 → 52px и шрифт кнопки 18px сохранены для рекламного трафика с телефона; добавлены форма в первом экране, цепочка «событие → действие» для шагов работы, полоса фактов, липкая нижняя панель и согласие по 152-ФЗ. Секции ориентированы на русскоязычные лендинги малого бизнеса, бухгалтерии, окон и потолков, франшиз."
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "slug": "terracotta",
+  "name": "Терракота",
+  "kind": "style",
+  "version": "1.2.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Тёплый кремовый фон, глубокая кирпичная терракота на кнопках и полосах, оливковый — второй голос. Заголовки — каллиграфичная антиква, одно слово курсивом; текст — мягкий гротеск. Фото в арочных рамках с отбивкой второй аркой, меню и цены строкой с точечной отточкой, полосы глины и оливы во всю ширину. Ощущение ремесла и кухни, а не корпоративного сайта.",
+  "summary_en": "A warm cream background, deep brick terracotta on buttons and bands, olive as the second voice. Headlines are set in a calligraphic serif with one word in italics; text in a soft grotesque. Photos sit in arched frames echoed by a second arch, menus and prices run on dotted leaders, and full-bleed clay and olive bands break the page. It feels like a craft kitchen, not a corporate site.",
+  "best_for": [
+    "кафе и рестораны",
+    "пекарни и кондитерские",
+    "кейтеринг и доставка домашней еды",
+    "интерьер, мебель и керамика",
+    "ремесленные мастерские и мастер-классы",
+    "винные бары и гастрономия",
+    "гостевые дома и фермерские хозяйства"
+  ],
+  "goals": [
+    "бронь столика",
+    "заказ кейтеринга или торта",
+    "запись на мастер-класс",
+    "звонок и маршрут"
+  ],
+  "mood": [
+    "тёплый",
+    "ремесленный",
+    "уютный",
+    "вкусный",
+    "неспешный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#f6eee1",
+        "surface": "#fdf8f0",
+        "text": "#2a1c13",
+        "text_muted": "#6a5444",
+        "border": "#e2d2bb",
+        "primary": "#a6431f",
+        "on_primary": "#fff8ee",
+        "accent": "#56642c",
+        "on_accent": "#fbf6ea",
+        "link": "#8f3a1a",
+        "success": "#4e6a24",
+        "error": "#a3261a",
+        "primary_hover": "#8c3518",
+        "accent_hover": "#47531f",
+        "surface_strong": "#ecdcc3",
+        "border_strong": "#7d6a55",
+        "leader": "#b39c80",
+        "band_clay": "#a6431f",
+        "on_band_clay": "#fff8ee",
+        "on_band_clay_muted": "#f8e6d8",
+        "band_olive": "#3f4a20",
+        "on_band_olive": "#fff8ee",
+        "on_band_olive_muted": "#d9d3b8",
+        "focus": "#8f3a1a"
+      },
+      "dark": {
+        "background": "#1d1510",
+        "surface": "#2a1f18",
+        "text": "#f6ead9",
+        "text_muted": "#c6ae93",
+        "border": "#46362a",
+        "primary": "#b04a24",
+        "on_primary": "#fff8ee",
+        "accent": "#a9b56f",
+        "on_accent": "#1d1510",
+        "link": "#eb9a74",
+        "success": "#9cc46a",
+        "error": "#ff8a78",
+        "primary_hover": "#9c3f1e",
+        "accent_hover": "#bcc784",
+        "surface_strong": "#33271e",
+        "border_strong": "#9c876f",
+        "leader": "#6b5646",
+        "band_clay": "#6e2c14",
+        "on_band_clay": "#f6ead9",
+        "on_band_clay_muted": "#d9c3a8",
+        "band_olive": "#2f3818",
+        "on_band_olive": "#f6ead9",
+        "on_band_olive_muted": "#cdc6a6",
+        "focus": "#eb9a74"
+      },
+      "notes": "Терракота здесь кирпичная и глубокая (#a6431f): кремовый текст на ней — 5.78, наведение #8c3518 — 7.55; в тёмной теме заливка чуть светлее (#b04a24, 5.17), чтобы не тонуть в фоне эспрессо. Сама терракота текстом не ставится — для слов есть link #8f3a1a (6.54 на фоне) и #eb9a74 в тёмной (8.06). Олива — вторая кнопка и полоса: #56642c с кремом 5.98, в тёмной #a9b56f с тёмным текстом 8.16. text_muted #6a5444 — 6.15 на фоне и 5.26 на surface_strong (песочные плашки меню). Полосы: band_clay с кремом 5.78, приглушённый #f8e6d8 — 5.02; band_olive #3f4a20 — 9.00 и 6.31; в тёмной теме полосы глубже (#6e2c14 и #2f3818, текст 8.70 и 10.41). border_strong — рамка полей (4.89 на surface, 4.67 в тёмной); leader — точки отточки в меню, декоративные (2.49), цены и названия по обе стороны — цветом text."
+    },
+    "typography": {
+      "display": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "64px",
+        "size_mobile": "40px",
+        "line_height": 1.04,
+        "letter_spacing": "-0.01em",
+        "note": "одно слово — курсивом 500 (<em>), цветом text, не терракотой"
+      },
+      "h2": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "44px",
+        "size_mobile": "30px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.005em"
+      },
+      "h3": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 700,
+        "size_desktop": "24px",
+        "size_mobile": "21px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "menu_item": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "21px",
+        "size_mobile": "19px",
+        "line_height": 1.25,
+        "letter_spacing": "0",
+        "note": "название блюда, изделия, программы мастер-класса в строке меню"
+      },
+      "price": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 700,
+        "size_desktop": "21px",
+        "size_mobile": "19px",
+        "line_height": 1.25,
+        "letter_spacing": "0"
+      },
+      "stat": {
+        "family": "Alegreya",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 700,
+        "size_desktop": "56px",
+        "size_mobile": "40px",
+        "line_height": 1.0,
+        "letter_spacing": "-0.01em",
+        "note": "«с 2009», «6:00», «48 часов на закваске»"
+      },
+      "lead": {
+        "family": "Nunito Sans",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Nunito Sans",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.62,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Nunito Sans",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "eyebrow": {
+        "family": "Nunito Sans",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.3,
+        "letter_spacing": "0.14em",
+        "text_transform": "uppercase",
+        "note": "надзаголовок из 2–4 фактов через точку-разделитель: «ПЕКАРНЯ · С 6:00 · ДОСТАВКА»"
+      },
+      "button": {
+        "family": "Nunito Sans",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.2,
+        "letter_spacing": "0.01em"
+      }
+    },
+    "radius": {
+      "xs": "6px",
+      "sm": "10px",
+      "md": "14px",
+      "lg": "24px",
+      "arch": "999px 999px 0 0",
+      "pill": "999px",
+      "note": "arch — верх полукругом у портретных фото 3:4 и у плашки за ними; md — карточки; sm — фото внутри карточки; xs — поля ввода; pill — кнопки и метки."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "112px",
+      "section_mobile": "64px",
+      "container": "1200px",
+      "gutter_mobile": "20px",
+      "card_padding": "28px",
+      "card_gap": "24px",
+      "arch_offset": "16px",
+      "menu_row": "14px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 18px 40px -24px rgba(42,28,19,0.35)",
+      "raised_dark": "0 18px 40px -20px rgba(0,0,0,0.7)",
+      "focus": "0 0 0 2px #f6eee1, 0 0 0 4px #8f3a1a",
+      "focus_dark": "0 0 0 2px #1d1510, 0 0 0 4px #eb9a74",
+      "note": "Бумажная плоскость: карточки держит рамка 1px border и тон surface. raised — только карточка брони и выпадающий календарь."
+    },
+    "motion": {
+      "fast": "180ms",
+      "base": "320ms",
+      "slow": "720ms",
+      "ease_standard": "cubic-bezier(.25,.1,.25,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "note": "Неспешно: арки поднимаются снизу, как тесто, карточки проявляются мягко; никаких пружин и отскоков."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Alegreya",
+      "fontsource": "alegreya",
+      "role": "display+headings+menu",
+      "weights": [
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/alegreya — подключить wght.css и wght-italic.css (курсив нужен для акцентного слова), самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "why": "каллиграфичная антиква с живым ритмом пера — пахнет рукописным меню и ремеслом; курсив настоящий, а не наклонённый прямой; цифры ровные, цены в меню встают столбцом. Lora уже носит стиль «Мягкий», Playfair — «Редакционный»; Alegreya даёт этой системе свой голос"
+    },
+    {
+      "family": "Nunito Sans",
+      "fontsource": "nunito-sans",
+      "role": "body+ui",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/nunito-sans — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "why": "мягкий гротеск со скруглёнными окончаниями — тёплый рядом с антиквой, но ровный для меню, адресов и часов работы; капс с разрядкой 0,14em хорошо держит надзаголовки. Alegreya Sans отвергнута: в проверке с пакетом @fontsource/alegreya-sans цифры остались старостильными даже с lining-nums, и цены в строке прыгают по высоте"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 28px",
+      "font": "button",
+      "hover": "фон primary_hover за 180ms",
+      "use": "одно главное действие на экран: «Забронировать стол», «Заказать торт», «Записаться на мастер-класс»"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1.5px solid text",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 26px",
+      "font": "button",
+      "hover": "фон surface_strong",
+      "use": "«Меню», «Как добраться», «Смотреть работы»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "height": "52px",
+      "padding": "0 28px",
+      "font": "button",
+      "hover": "фон accent_hover",
+      "use": "вторая по весу кнопка (заказ кейтеринга рядом с бронью) и вариант cta_color_role=accent"
+    },
+    "button_on_band": {
+      "bg": "on_band_clay",
+      "color": "#2a1c13",
+      "radius": "pill",
+      "height": "52px",
+      "hover": "прозрачность .9",
+      "use": "кнопка на полосе глины или оливы — терракотовая кнопка на терракотовой полосе не видна; текст #2a1c13 на креме — 15.9:1"
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "md",
+      "padding": "12px 12px 24px",
+      "photo": "4:3 с радиусом sm, внутри карточки с полем 12px — как паспарту",
+      "meta": "название menu_item, строка body text_muted, внизу цена price и link «В заказ →»",
+      "hover": "рамка border_strong за 180ms; без подъёма и тени",
+      "use": "блюда дня, наборы, изделия, программы мастер-классов"
+    },
+    "arch_frame": {
+      "ratio": "3:4",
+      "radius": "arch",
+      "echo": "за фото — вторая арка того же размера, смещённая на 16px вправо и вниз: заливка surface_strong или band_olive, либо контур 1.5px border_strong",
+      "caption": "подпись под аркой caption text_muted по центру",
+      "use": "фото первого экрана, мастер, интерьер, витрина; одна-три арки на экран"
+    },
+    "menu_list": {
+      "row": "название menu_item слева — отточка точками leader (border-bottom: 2px dotted leader на растягивающемся элементе) — цена price справа; под строкой описание body 15px text_muted до 90 знаков; метки badge (веган, острое, новинка)",
+      "grouping": "группы с заголовком h3 и тонкой линией border сверху; 2 колонки на десктопе",
+      "use": "меню, прайс мастер-классов, ассортимент пекарни, цены кейтеринга за персону"
+    },
+    "stamp": {
+      "size": "112px",
+      "shape": "круг с двойной линией 1.5px border_strong; по кругу текст eyebrow через SVG textPath («ПЕКАРНЯ НА ЗАКВАСКЕ · ГОНЧАРНАЯ, 12 ·»), в центре stat «2009»",
+      "rule": "не вращается; один на страницу; это не логотип — внутри только слова и цифра. Текст обязан замкнуть окружность: textLength = 2πr (для r=42 — 264) и lengthAdjust=\"spacing\", иначе на демо остаётся пустая дуга; число из центра в кольцевой надписи не повторять",
+      "use": "у края арки первого экрана или в блоке «О нас»"
+    },
+    "divider": {
+      "shape": "линия 1px border — три точки 4px leader — линия, ширина 120px по центру",
+      "use": "между заголовком раздела и содержимым в меню и «О нас»"
+    },
+    "badge": {
+      "bg": "surface_strong",
+      "color": "text",
+      "radius": "pill",
+      "padding": "3px 10px",
+      "font": "caption",
+      "use": "«новинка», «без глютена», «хит недели» — строчными"
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "xs",
+      "height": "52px",
+      "padding": "0 14px",
+      "label": "над полем 14px/600 text, отступ 6px",
+      "placeholder": "text_muted",
+      "focus": "рамка 2px link (в тёмной — link #eb9a74) без свечения"
+    },
+    "booking_card": {
+      "bg": "surface",
+      "border": "1px solid border",
+      "radius": "lg",
+      "shadow": "raised",
+      "padding": "28px",
+      "fields": "дата (кнопки-дни на неделю вперёд), время (чипы 18:00 / 19:30 / 21:00), гостей (− 2 +), телефон; итог «Стол на 2 гостей, пт 19:30» и button_primary во всю ширину",
+      "use": "ресторан и кафе: бронь прямо в первом экране или в lead_form"
+    },
+    "review": {
+      "quote": "Alegreya italic 500 22px/1.4 цветом text, открывающая кавычка «ёлочка» 56px цветом leader",
+      "author": "eyebrow: имя и повод («ИРИНА · ЗАКАЗЫВАЛА ТОРТ НА СВАДЬБУ»)",
+      "use": "3 отзыва в ряд или один крупный на полосе оливы"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "72px",
+      "border_bottom": "1px solid border",
+      "left": "название заведения Alegreya italic 600 24px (текстом, без значков)",
+      "center": "4 пункта Nunito Sans 600 15px, активный — точка 4px primary под словом",
+      "right": "телефон 15px/700 + button_primary 44px «Забронировать»",
+      "mobile": "название, круглая кнопка-телефон 44px с рамкой 1.5px text и бургер 44px"
+    },
+    "sticky_cta": {
+      "bg": "surface",
+      "border_top": "1px solid border",
+      "shadow": "raised",
+      "content": "круглая кнопка-телефон 52px слева + button_primary «Забронировать стол» во всю оставшуюся ширину; под кнопкой в одну строку часы «сегодня до 23:00» caption"
+    },
+    "footer": {
+      "bg": "band_olive",
+      "color": "on_band_olive",
+      "padding": "72px 20px 40px",
+      "layout": "3 колонки: адрес и маршрут, часы работы строками с отточкой (как меню), контакты и соцсети; правовая строка on_band_olive_muted"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Вариант split_arch (по умолчанию): колонки 1–6 — eyebrow из фактов («ПЕКАРНЯ · С 6:00 · ДОСТАВКА ЗА 40 МИН»), H1 display 64px в 2–3 строки с одним словом курсивом («Хлеб на закваске *с шести утра*»), лид 2 строки, кнопки button_primary «Заказать к завтраку» (id=hero-cta) + button_secondary «Меню», ниже строка фактов caption: рейтинг «4,9 на картах», адрес, часы. Колонки 8–12 — arch_frame 3:4 высотой 560px с фото продукта или интерьера, за ним вторая арка band_olive со сдвигом 16px, у левого нижнего края арки stamp. Вариант band_gallery: полоса band_clay во всю ширину, H1 кремом по центру, под ним ряд из трёх арок 3:4 (продукт — мастер — интерьер) и одна кнопка button_on_band.",
+    "section_order": [
+      "nav",
+      "hero",
+      "facts_strip",
+      "menu",
+      "craft_story",
+      "gallery_arches",
+      "offer_band",
+      "reviews",
+      "visit",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "facts_strip": "полоса surface_strong: 3–4 факта в ряд — stat («с 2009», «48 ч», «6:00») и подпись caption text_muted",
+      "menu": "h2 по центру с divider, segmented-вкладки категорий пилюлями, menu_list в 2 колонки; под списком button_secondary «Всё меню (PDF, 1,2 МБ)»",
+      "craft_story": "сплит: слева arch_frame мастера, справа h2 «Как мы печём», 3 шага строками: номер stat 40px цветом link, заголовок h3, 2 строки body",
+      "gallery_arches": "ряд из 3–4 арок разной высоты (560/480/520px), подписи под ними; рецепт image-reveal-clip",
+      "offer_band": "полоса band_clay во всю ширину: h2 кремом («Кейтеринг на 20–200 гостей»), 2 строки on_band_clay_muted, цена «от 1 900 ₽ за гостя» stat, button_on_band",
+      "reviews": "3 review в ряд на background",
+      "visit": "сплит: слева карта-схема (статичная картинка со ссылкой на карты), справа адрес, часы работы строками с отточкой, «Как добраться» списком",
+      "faq": "5–7 вопросов (предзаказ, аллергены, доставка, банкеты), рецепт accordion-smooth",
+      "lead_form": "полоса surface_strong: слева h2 «Забронируем стол за 2 минуты» и 3 пункта, справа booking_card или форма"
+    },
+    "grid": "12 колонок, контейнер 1200px, зазор 24px; меню — 2 колонки по 6; карточки — 3 в ряд, 2 на 768–1023px, 1 на телефоне; арки галереи — 4 в ряд на десктопе, горизонтальная лента на телефоне",
+    "mobile_notes": "До 767px: сначала eyebrow и H1 40px (курсивное слово — отдельной строкой при переносе), лид, кнопки во всю ширину 52px столбиком; арка 3:4 ниже текста шириной 82% экрана по центру, вторая арка со сдвигом 12px, stamp уменьшается до 88px и садится на край арки. Меню — одна колонка, вкладки категорий — горизонтальная лента пилюль со scroll-snap. Галерея арок — лента шагом 70% ширины. offer_band — текст по левому краю, кнопка во всю ширину. Липкая панель sticky_cta с первой прокрутки. Секции 64px, поля 20px, строки меню 16px, цены не переносятся (white-space: nowrap)."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "date",
+      "guests"
+    ],
+    "consent_152fz": true,
+    "style": "booking_card на полосе surface_strong: дата — ряд кнопок-дней на неделю вперёд (пилюли 44px, выбранная — фон text, текст background), время — чипы, гостей — счётчик «− 2 +» с кнопками 44px; ниже поля «Имя» и «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) с рамкой 1px border_strong и радиусом 6px. Итог строкой «Стол на 2 гостей, пятница, 19:30» menu_item и button_primary во всю ширину «Забронировать». Для кейтеринга и тортов вместо даты и гостей — «Дата праздника» и «Сколько гостей» полями. Ниже чекбокс 20px с радиусом 4px (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» цветом link. Кнопка активна всегда: пустое поле или нет галочки — видимый текст ошибки 14px цветом error с иконкой-кругом «!» под полем, фокус на первое проблемное поле. Сбой сети — текст «Не отправилось, позвоните нам: +7 …» и кнопка «Отправить ещё раз», данные сохраняются.",
+    "success_state": "Карточка меняет содержимое на месте, высота сохраняется: арка 64×80 цвета surface_strong с галочкой success, заголовок h3 «Стол ждёт вас», строка «Пятница, 19:30, 2 гостя. Подтвердим звонком на +7 … в течение 30 минут», button_secondary «Изменить бронь» и ссылка «Как добраться». Фокус на заголовке, aria-live=polite."
+  },
+  "motion_recipes": [
+    "image-reveal-clip",
+    "fade-up-stagger",
+    "accordion-smooth",
+    "sticky-cta-mobile",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "только функциональное: accordion-smooth, sticky-cta-mobile, смена цвета при наведении",
+      "subtle": "по умолчанию: весь motion_map; + form-field-feedback",
+      "rich": "в этом стиле не предусмотрен — неспешность и есть характер"
+    },
+    "image-reveal-clip": "арки в craft_story и gallery_arches: data-irc без значения — снизу вверх, арка «поднимается как тесто»; --irc-radius: 999px 999px 0 0; --irc-dur: 900ms; --irc-zoom: 1.06; --irc-ease: cubic-bezier(.16,1,.3,1); подпись под аркой — .irc__cap. Арку первого экрана не анимировать (LCP), вторую арку-отбивку не анимировать — она стоит сразу. Не больше 5 арок на страницу",
+    "fade-up-stagger": "карточки меню-дня, строки facts_strip, отзывы и шаги craft_story (текстовая часть): --reveal-dist: 16px; --reveal-dur: 560ms; --reveal-step: 90ms; --reveal-ease: cubic-bezier(.16,1,.3,1). Строки menu_list не анимировать — меню читают, а не смотрят",
+    "accordion-smooth": "faq: снять карточный вид — .faq__item { border: 0; border-top: 1px solid var(--color-border); border-radius: 0; background: transparent }, у последнего ещё border-bottom; .faq__q { font-family: 'Alegreya', serif; font-weight: 600; font-size: 21px; padding: 22px 0 } .faq__a { padding: 0 0 22px; color: var(--color-text-muted) }; значок плюс-минус цветом link",
+    "sticky-cta-mobile": "по компоненту sticky_cta: data-after=\"#hero-cta\", data-hide-on=\"#lead\"; кнопка — терракотовая пилюля (--radius-pill: 999px), кнопку звонка .scta__alt включить кругом 52px с рамкой 1.5px text — в кафе звонят чаще, чем пишут; фон панели surface",
+    "form-field-feedback": "поля radius 10px; без встряски — тёплый стиль не дёргается",
+    "not_for_this_style": "hero-text-reveal — заголовок антиквой стоит сразу, построчный въезд спорит с неспешностью; counter-up — «с 2009» и «48 часов» не должны бежать от нуля; gradient-drift — градиентов нет; parallax-soft — арки неподвижны; tilt-card, magnetic-button, cta-attention — игровые эффекты чужды ремеслу; marquee-logos — отзывы и партнёры стоят спокойной сеткой; sticky-stack-cards — меню читают строками"
+  },
+  "media": {
+    "hero": "Продукт крупно при тёплом боковом свете: хлеб на разломе, тарелка сверху на деревянном столе, керамика в руках мастера. Кадр портретный 3:4 в арке; фон кадра — натуральные фактуры (дерево, лён, камень, глина).",
+    "video_in_flow": "Беззвучная петля 6–10 с в арке craft_story (руки месят тесто, гончарный круг, струя кофе) с кнопкой паузы; ролик о заведении со звуком 60–90 с — по кнопке в <dialog> с субтитрами.",
+    "imagery": "Тёплая документальная съёмка: продукт, процесс, руки мастера, интерьер при дневном свете; палитра кадров — охра, глина, олива, дерево. Иконки — тонкие линии 1.5px со скруглёнными концами цветом text.",
+    "character": "Реальный человек — шеф, пекарь, мастер — одним лицом в арке craft_story, в ролике и в подписи к отзывам «отвечает шеф». Маскот не нужен.",
+    "audio": "Уместна: «Шеф рассказывает о меню осени — 2 минуты» кнопкой рядом с меню, голосом того же человека.",
+    "avoid": [
+      "холодный белый свет и глянец",
+      "фото еды сверху на белом фоне как в каталоге",
+      "стоковые улыбающиеся официанты",
+      "неон, градиенты и стекло",
+      "сплошные терракотовые страницы без кремовых передышек"
+    ],
+    "geometry": {
+      "hero_desktop": "3:4 в арке высотой 560px",
+      "hero_mobile": "3:4 в арке шириной 82% экрана",
+      "card": "4:3 с полем 12px внутри карточки",
+      "portrait": "3:4 в арке — мастер и команда",
+      "gallery": "3:4 арки разной высоты, 4 в ряд",
+      "wide_band": "21:9 интерьер во всю ширину между разделами",
+      "logo_strip": "партнёры и доставка монохромно цветом text_muted, высота 24px"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "терракотовая: фон #8c3518 (в тёмной #9c3f1e) за 180ms; контурная: фон surface_strong",
+      "focus_visible": "shadow.focus — кольцо 2px #8f3a1a с зазором 2px цвета фона (в тёмной #eb9a74)",
+      "active": "scale(0.98) и фон primary_hover",
+      "disabled": "фон surface_strong, текст text_muted, курсор not-allowed; кнопку брони не блокировать — ошибки объясняются текстом",
+      "loading": "подпись «Бронируем…», справа три точки 6px цветом on_primary, мигающие по очереди не дольше 3 циклов; ширина пилюли зафиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "рамка 2px link, без свечения; подпись над полем не двигается",
+      "error": "рамка 2px error, под полем текст 14px error с иконкой-кругом «!», aria-invalid=true и aria-describedby",
+      "disabled": "фон surface_strong, рамка border, текст text_muted"
+    },
+    "chip": {
+      "selected": "фон text, текст background",
+      "hover": "фон surface_strong",
+      "focus_visible": "shadow.focus"
+    }
+  },
+  "signature": [
+    "Фото в арке (верх полукругом, 3:4) с отбивкой второй аркой, смещённой на 16px, и подписью под ней",
+    "Меню и цены строкой с точечной отточкой: название антиквой — точки — цена ровными цифрами",
+    "Антиква с одним словом курсивом в заголовке и мягкий гротеск в тексте; надзаголовок капсом с разрядкой из фактов через точку",
+    "Полосы глины и оливы во всю ширину между кремовыми разделами, круглый штамп с годом и словами вместо эмблемы"
+  ],
+  "voice": "Тёплый рассказ хозяина от первого лица множественного числа: «Печём с шести утра», «Закваске восемь лет». Конкретика вместо эпитетов — время, граммы, происхождение продуктов; без «изысканный», «непревзойдённый вкус» и без восклицательных знаков.",
+  "type_features": {
+    "prices": "font-variant-numeric: lining-nums tabular-nums; цена в меню — white-space: nowrap, неразрывный пробел перед ₽; «за гостя», «за 100 г» — caption рядом",
+    "menu_leaders": "отточка — отдельный элемент flex: 1 с border-bottom: 2px dotted leader и выравниванием по базовой линии (align-self: baseline; margin: 0 8px 6px)",
+    "headlines": "text-wrap: balance; курсив <em> — Alegreya italic 500, font-synthesis: none (запрет поддельного курсива)",
+    "eyebrow": "text-transform: uppercase; letter-spacing: 0.14em; разделитель « · » с неразрывными пробелами"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_arch",
+        "band_gallery"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "menu_position": [
+        "after_hero",
+        "after_story"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "arch_frames",
+      "menu_leaders",
+      "cream_breaks_between_bands"
+    ],
+    "default": {
+      "hero_layout": "split_arch",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "menu_position": "after_hero"
+    },
+    "legend": {
+      "hero_layout": "split_arch — текст слева, арка с отбивкой и штампом справа; band_gallery — полоса глины с заголовком по центру и тремя арками",
+      "cta_color_role": "primary — терракотовая пилюля; accent — оливковая",
+      "headline_scale": "xl — 64/40px, заголовок до 45 знаков; l — 52/34px, до 60 знаков",
+      "menu_position": "after_hero — меню сразу за полосой фактов (кафе, пекарня, доставка); after_story — сначала «как мы делаем», потом меню (кейтеринг, мастерские, интерьер)",
+      "social_proof_position": "under_hero — рейтинг и отзывы до меню; before_form — перед бронью"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для кафе и пекарен первой проверять menu_position (цена и ассортимент против истории), для кейтеринга — hero_layout."
+  },
+  "do": [
+    "Ставить фото первого экрана и мастера в арку 3:4 с отбивкой второй аркой и подписью под ней.",
+    "Показывать меню и прайс строками с точечной отточкой и ровными табличными цифрами; цену не переносить.",
+    "Выделять курсивом одно слово в заголовке — цветом текста, а не терракотой.",
+    "Чередовать кремовые разделы с полосами глины и оливы; между двумя цветными полосами — всегда кремовая.",
+    "Писать конкретику: часы, граммы, происхождение продуктов, срок предзаказа.",
+    "Держать терракоту заливкой под кремовый текст; ссылки — отдельным цветом link.",
+    "В совпадающей нише (ИИ-сервисы, технологические продукты, где известен стиль «глина и крем») не брать этот стиль целиком: сдвинуть основной цвет к кирпичу или оливе и не ставить фирменных знаков-звёздочек — 135-ФЗ ст. 14.6."
+  ],
+  "dont": [
+    "Не набирать терракотой текст, цены и заголовки и не ставить терракотовую кнопку на терракотовую полосу.",
+    "Не заливать страницу терракотой целиком и не ставить две цветные полосы подряд.",
+    "Не использовать холодный белый фон, серые тени, неон и градиенты.",
+    "Не вращать штамп и не превращать его в эмблему-логотип — только слова и цифра.",
+    "Не набирать длинный текст антиквой и не синтезировать курсив из прямого начертания.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не блокировать кнопку брони без объяснения."
+  ],
+  "prompt_snippet": "Build a warm craft-kitchen lead landing in a terracotta style. Light: cream background #f6eee1, surface #fdf8f0, sand plates #ecdcc3, ink-brown text #2a1c13, muted #6a5444. Dark: espresso #1d1510, surface #2a1f18, text #f6ead9. Deep brick terracotta #a6431f (hover #8c3518) as pill buttons with cream text; olive #56642c as the second button; links #8f3a1a. Full-bleed clay and olive bands, always separated by cream sections. Self-hosted Alegreya (Cyrillic) 500–700 with real italics for headlines 64/40px, one word italicised in text colour; Nunito Sans 400–700 for body 17px/1.62 and letter-spaced uppercase eyebrows. Signature: photos in 3:4 arches with a second offset arch behind, dotted-leader menu rows with tabular prices, a circular text stamp with a year. Split hero: eyebrow facts, serif headline, two pill buttons, arch on the right. Booking card with day chips, unchecked 152-FZ consent. No gradients, neon or cold white.",
+  "source": {
+    "inspired_by": "собственная разработка; идея — bergside/awesome-design-skills (MIT), skills/terracotta: только сочетание «кремовый фон + антиква + один терракотовый акцент»",
+    "notes": "У bergside в skills/terracotta — семь hex-токенов (терракота #C56A3C, беж #F3E9D8, белая поверхность), DM Serif Display на весь текст (кириллицы у него нет) и радиусы 4/8px; тёмной темы, компонентов и раскладки нет. Здесь своё и намеренно не похожее на стиль ИИ-ассистентов «глина и слоновая кость»: терракота глубже и краснее (#a6431f, кирпич, а не коралл), крем теплее и желтее, второй голос — олива, а не серые; полосы цвета во всю ширину вместо редкого акцента на белом; арочные рамки с отбивкой, меню с отточкой и штамп как фирменные приёмы; пилюли вместо мелкоскруглённых кнопок; пара Alegreya + Nunito Sans (OFL-1.1, кириллица) вместо DM Serif Display. Добавлены тёмная тема «эспрессо» с проверенным контрастом, карточка брони с днями и гостями, форма заявки по 152-ФЗ, motion_map с аркой, поднимающейся снизу."
+  }
+}

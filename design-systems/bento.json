@@ -1,0 +1,614 @@
+{
+  "slug": "bento",
+  "name": "Бенто",
+  "kind": "style",
+  "version": "1.2.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Страница собрана из плиток разного размера на общей сетке: каждая плитка — одна мысль (цифра, экран продукта, функция, отзыв, цена). Светлый тёплый фон, белые и пастельные плитки со скруглением 24px и зазором 12px, одна индиго-кнопка и одна чернильная плитка на экран. Первый экран — тоже бенто: крупная плитка с заголовком и формой среди плиток-доказательств.",
+  "summary_en": "The page is built from tiles of different sizes on one grid, and every tile holds a single idea: a number, a product screen, a feature, a review or a price. A light warm background, white and pastel tiles with 24px corners and 12px gaps, one indigo button and one ink tile per screen. The first screen is a bento too: a large tile with the headline and form surrounded by proof tiles.",
+  "best_for": [
+    "SaaS для малого бизнеса",
+    "онлайн-касса, учёт, CRM",
+    "онлайн-сервисы и мобильные приложения",
+    "тарифы хостинга, связи и подписок",
+    "онлайн-школы с набором функций",
+    "агентства с пакетами услуг",
+    "умный дом и гаджеты"
+  ],
+  "goals": [
+    "регистрация и пробный период",
+    "заявка на демо",
+    "выбор тарифа",
+    "скачивание приложения"
+  ],
+  "mood": [
+    "собранный",
+    "современный",
+    "дружелюбный",
+    "ясный",
+    "технологичный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#f3f2ee",
+        "surface": "#ffffff",
+        "text": "#15171c",
+        "text_muted": "#585d68",
+        "border": "#e3e1db",
+        "primary": "#3a36e0",
+        "on_primary": "#ffffff",
+        "accent": "#15171c",
+        "on_accent": "#ffffff",
+        "link": "#3531c9",
+        "success": "#15703c",
+        "error": "#c0352b",
+        "primary_hover": "#2f2bd0",
+        "border_strong": "#858a94",
+        "tile_lilac": "#e4e2ff",
+        "tile_mint": "#d6f2e3",
+        "tile_peach": "#ffe2d1",
+        "tile_lemon": "#fbf0bf",
+        "tile_ink": "#15171c",
+        "on_tile_ink": "#ffffff",
+        "on_tile_ink_muted": "#b9bdc6",
+        "focus": "#3a36e0"
+      },
+      "dark": {
+        "background": "#0d0e11",
+        "surface": "#17191e",
+        "text": "#f1f2f4",
+        "text_muted": "#a0a5b0",
+        "border": "#262930",
+        "primary": "#5a56f0",
+        "on_primary": "#ffffff",
+        "accent": "#f1f2f4",
+        "on_accent": "#15171c",
+        "link": "#a09eff",
+        "success": "#4ad08a",
+        "error": "#ff7a70",
+        "primary_hover": "#4a46e6",
+        "border_strong": "#6b7080",
+        "tile_lilac": "#1e1c3a",
+        "tile_mint": "#13291f",
+        "tile_peach": "#33211a",
+        "tile_lemon": "#2e2912",
+        "tile_ink": "#f1f2f4",
+        "on_tile_ink": "#15171c",
+        "on_tile_ink_muted": "#4a4f5a",
+        "focus": "#a09eff"
+      },
+      "notes": "Плитки четырёх пастельных тонов держат и text, и text_muted: в светлой теме text_muted #585d68 даёт 5.23–5.76 на всех четырёх тонах, text — от 14.19; в тёмной text_muted #a0a5b0 — 5.90–6.63 на тёмных тонах. tile_ink — одна «чернильная» плитка на экран: в тёмной теме инвертируется в светлую (#f1f2f4 с текстом #15171c, 16.01), приглушённый на ней — on_tile_ink_muted (9.53 и 7.33). primary — индиго-заливка под белый текст: 7.54 в светлой, 5.22 в тёмной (#5a56f0 светлее, чтобы кнопка не тонула в тёмном фоне); наведение — затемнение (8.83 и 6.34). Текстом индиго идёт только как link (7.70 на фоне, 8.63 на белой плитке; 8.12 и 7.39 в тёмной). border — декоративные разделители; рамка полей — border_strong (3.47 на белом, 3.56 на тёмной плитке — порог 3:1 для границ полей WCAG 1.4.11). success #15703c — 5.49 на фоне, чтобы строка «Сохранено» читалась мелким кеглем."
+    },
+    "typography": {
+      "display": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "56px",
+        "size_mobile": "36px",
+        "line_height": 1.02,
+        "letter_spacing": "-0.03em"
+      },
+      "h2": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "40px",
+        "size_mobile": "28px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.025em"
+      },
+      "h3": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "21px",
+        "size_mobile": "19px",
+        "line_height": 1.22,
+        "letter_spacing": "-0.01em",
+        "note": "заголовок плитки: 3–7 слов, до 2 строк"
+      },
+      "tile_stat": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "64px",
+        "size_mobile": "48px",
+        "line_height": 1.0,
+        "letter_spacing": "-0.035em",
+        "note": "одно число на плитку-цифру: «14 дней», «3 мин», «1 290 ₽»"
+      },
+      "lead": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "19px",
+        "size_mobile": "17px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.4,
+        "letter_spacing": "0"
+      },
+      "eyebrow": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.2,
+        "letter_spacing": "0",
+        "note": "метка плитки строчными с точкой-кружком 8px цвета тона плитки впереди — без капса"
+      },
+      "button": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "Commissioner",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "44px",
+        "size_mobile": "36px",
+        "line_height": 1.0,
+        "letter_spacing": "-0.03em"
+      }
+    },
+    "radius": {
+      "sm": "12px",
+      "md": "16px",
+      "lg": "24px",
+      "pill": "999px",
+      "note": "lg 24px — плитки; md 16px — картинка и экран внутри плитки (24 − отступ, чтобы углы шли концентрично), навигация; sm 12px — кнопки и поля; pill — метки и переключатель месяц/год."
+    },
+    "spacing": {
+      "unit": 4,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "container": "1200px",
+      "gutter_mobile": "16px",
+      "tile_gap": "12px",
+      "tile_gap_mobile": "10px",
+      "tile_padding": "24px",
+      "tile_padding_mobile": "20px",
+      "row_height": "220px",
+      "row_height_mobile": "auto (минимум 160px)"
+    },
+    "shadow": {
+      "card": "0 1px 2px rgba(21,23,28,0.06)",
+      "raised": "0 16px 32px -16px rgba(21,23,28,0.22)",
+      "card_dark": "none",
+      "raised_dark": "0 16px 32px -16px rgba(0,0,0,0.6)",
+      "focus": "0 0 0 2px #f3f2ee, 0 0 0 4px #3a36e0",
+      "focus_dark": "0 0 0 2px #0d0e11, 0 0 0 4px #a09eff",
+      "note": "card — едва заметная линия под белой плиткой на тёплом фоне; в тёмной теме плитки отделяет цвет, тень не нужна. raised — плитка под курсором и плавающая навигация после прокрутки."
+    },
+    "motion": {
+      "fast": "140ms",
+      "base": "240ms",
+      "slow": "480ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.05,.7,.1,1)",
+      "note": "Плитки появляются очередью по ходу чтения сетки, при наведении поднимаются тенью raised; внутри плитки ничего не прыгает."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Commissioner",
+      "fontsource": "commissioner",
+      "role": "display+body",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/commissioner — переменная гарнитура, самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "why": "компактный гротеск с живым рисунком: на 700 заголовок плитки занимает на 9,5% меньше ширины, чем у Inter, и на 5% — чем у Manrope (замер в Chrome: «Касса, склад и CRM в одном окне» 44px — 647 / 715 / 679px), поэтому 3–7 слов помещаются в плитку 1×1 в две строки; цифры ровные и узнаваемые, кириллица полная. Одна гарнитура на всю шкалу — плитки и так дают достаточно разнообразия"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "sm",
+      "height": "48px",
+      "padding": "0 22px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон primary_hover за 140ms",
+      "use": "одна на экран: «Попробовать бесплатно», «Записаться на демо», «Выбрать тариф»"
+    },
+    "button_secondary": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "sm",
+      "height": "48px",
+      "padding": "0 21px",
+      "weight": 600,
+      "hover": "рамка border_strong, фон background",
+      "use": "«Смотреть видео», «Все функции»; внутри белой плитки — фон background"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "sm",
+      "height": "48px",
+      "padding": "0 22px",
+      "weight": 600,
+      "hover": "прозрачность .88",
+      "use": "вариант cta_color_role=accent и кнопка на индиго-фоне"
+    },
+    "link_arrow": {
+      "color": "link",
+      "weight": 600,
+      "icon": "стрелка → 16px, при наведении сдвиг на 3px",
+      "use": "«Подробнее →» в нижнем левом углу плитки-функции; вся плитка при этом кликабельна (ссылка растянута ::after)"
+    },
+    "card": {
+      "bg": "surface",
+      "radius": "lg",
+      "padding": "24px",
+      "shadow": "card",
+      "hover": "тень raised за 240ms, плитка не двигается и не масштабируется",
+      "use": "базовая плитка: всё на странице собирается из неё"
+    },
+    "tile": {
+      "sizes": "1×1, 2×1, 1×2, 2×2 по сетке 4 колонки × ряд 220px; на странице одновременно не больше трёх размеров",
+      "tones": "surface (белая), tile_lilac, tile_mint, tile_peach, tile_lemon, tile_ink; рядом не ставить два одинаковых тона; tile_ink — одна на экран",
+      "anatomy": "сверху метка eyebrow (точка 8px + 1–3 слова), в середине содержание одного вида, снизу подпись или link_arrow; поля 24px",
+      "variants": {
+        "tile_stat": "число tile_stat + подпись caption text_muted в 1–2 строки; число прижато к нижнему краю",
+        "tile_feature": "квадрат 44px с радиусом 12px тона плитки темнее на шаг и линейной иконкой 24px цветом text, заголовок h3, строка body text_muted",
+        "tile_media": "экран продукта с радиусом 16px, выходит за правый и нижний край плитки (overflow: hidden у плитки, отступ сверху-слева 24px); заголовок h3 над экраном",
+        "tile_quote": "цитата body 17px до 180 знаков, аватар-круг 40px, имя 600 и должность caption",
+        "tile_price": "название h3, цена price + «₽/мес» caption, 4–6 строк «что входит» с галочкой 18px цветом success, button_primary во всю ширину внизу",
+        "tile_form": "плитка tile_ink или surface 2×2 с заголовком h2, одним-двумя полями и кнопкой"
+      }
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "sm",
+      "height": "48px",
+      "padding": "0 14px",
+      "label": "над полем 14px/500 text_muted, отступ 6px",
+      "placeholder": "text_muted",
+      "focus": "рамка 2px primary (в тёмной теме focus), без свечения",
+      "on_ink": "на чернильной плитке: фон #ffffff14 (в тёмной — #15171c0f), рамка on_tile_ink_muted, текст on_tile_ink"
+    },
+    "segmented": {
+      "bg": "background",
+      "radius": "pill",
+      "padding": "4px",
+      "item": "высота 40px, padding 0 16px, 15px/600 text_muted; выбранный — фон surface, текст text, тень card",
+      "use": "переключатель «Месяц / Год −20%» над тарифами, «Для кафе / Для магазина» над функциями"
+    },
+    "badge": {
+      "bg": "tile_lemon",
+      "color": "text",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "caption, 600",
+      "use": "«Новое», «Популярный», «−20% за год» — одна метка на плитку"
+    },
+    "nav": {
+      "bg": "surface",
+      "radius": "md",
+      "height": "60px",
+      "border": "1px solid border",
+      "position": "sticky top 12px внутри контейнера, после прокрутки — тень raised",
+      "left": "текстовое название 18px/700",
+      "center": "3–4 пункта 15px/500 text",
+      "right": "«Войти» ссылкой + button_primary 40px «Попробовать»",
+      "mobile": "название и button_primary 40px «Попробовать»; меню — бургер 44px, открывается плиткой во всю ширину"
+    },
+    "compare_table": {
+      "bg": "surface",
+      "radius": "lg",
+      "rows": "строки через линию 1px border, названия слева body, значения по центру: галочка success или прочерк text_muted",
+      "use": "сравнение тарифов под плитками цен; на телефоне — одна колонка тарифа с переключателем segmented"
+    },
+    "footer": {
+      "bg": "background",
+      "layout": "плитка surface во всю ширину контейнера с 4 колонками ссылок, внизу правовая строка caption text_muted",
+      "padding": "40px"
+    },
+    "sticky_cta": {
+      "bg": "surface",
+      "radius": "16px 16px 0 0",
+      "shadow": "raised",
+      "content": "слева «14 дней бесплатно» caption 600, справа button_primary 48px «Попробовать»"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Вариант bento (по умолчанию) — сетка 4 колонки × 2 ряда по 260px. Плитка A 2×2 слева (surface): метка «для малого бизнеса», H1 display 56px в 2–3 строки, лид в 2 строки, форма в одну строку «Телефон или почта + Попробовать бесплатно» (id=hero-cta), под ней caption «14 дней без оплаты, карта не нужна» и строка согласия. Плитка B 2×1 справа сверху (tile_lilac): экран продукта, обрезанный правым нижним краем. Плитка C 1×1 (tile_mint): tile_stat «3 мин» — «на первую продажу». Плитка D 1×1 (tile_ink): рейтинг «4,8» и «1 200 отзывов в маркетплейсе приложений» или короткий отзыв. Вариант centered: H1 и лид по центру над сеткой, кнопка под лидом, ниже ряд из 4 плиток 1×1 с цифрами и экраном.",
+    "section_order": [
+      "nav",
+      "hero",
+      "logos",
+      "features_bento",
+      "how",
+      "pricing",
+      "compare",
+      "reviews_bento",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "logos": "плитка 4×… низкая (96px): «Нам доверяют 3 400 кафе и магазинов» и 6 монохромных логотипов text_muted высотой 24px",
+      "features_bento": "h2 и лид слева над сеткой; 6–8 плиток: 1 tile_media 2×2, 2 tile_media 2×1, 3–4 tile_feature 1×1, 1 tile_stat; тона чередуются",
+      "how": "3 плитки 1×1 в ряд + плитка 1×1 с кнопкой; номер шага — крупная цифра tile_stat цветом text_muted",
+      "pricing": "segmented над сеткой, 3 tile_price 1×2; рекомендуемый — tile_ink с badge «Популярный»; цены рецептом tilt-card",
+      "compare": "compare_table под тарифами, свёрнут в <details> «Сравнить все функции»",
+      "reviews_bento": "tile_quote 2×1 и 1×1 вперемешку с tile_stat (рейтинг, «92% продлевают»)",
+      "faq": "плитка surface 4×… со списком вопросов через линию 1px border",
+      "lead_form": "tile_form 2×2 (tile_ink) + 2 плитки 1×1 справа: «Ответим за 15 минут» и «Демо 20 минут по видео»"
+    },
+    "grid": "Контейнер 1200px, CSS grid: grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(220px, auto); gap 12px; плитки занимают span 1–2 по обеим осям. 768–1023px — 2 колонки, 2×2 становится 2×1 с высотой auto; до 767px — 1 колонка, но пары 1×1 плиток-цифр стоят по 2 в ряд (grid-template-columns: 1fr 1fr только для них)",
+    "mobile_notes": "До 767px: плитки в одну колонку с зазором 10px и полями 20px; плитки-цифры парами 2 в ряд. Первый экран: плитка A во всю ширину (H1 36px, форма — поле и кнопка столбиком 48px во всю ширину), под ней плитка B с экраном 4:3, затем пара C+D. Тарифы — горизонтальная лента шагом 85% со scroll-snap, рекомендуемый первым. Навигация 60px без плавающего отступа. Липкая нижняя панель sticky_cta с первой прокрутки. Все интерактивные зоны от 44px, текст в плитке не мельче 14px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "business_type"
+    ],
+    "consent_152fz": true,
+    "style": "Плитка tile_form 2×2 (tile_ink; в тёмной теме — светлая). Заголовок h2 «Покажем за 20 минут на ваших товарах», подзаголовок on_tile_ink_muted. Поля «Имя», «Телефон» (маска +7 (___) ___-__-__, inputmode=tel) и «Чем занимаетесь» — segmented из 3 вариантов («Кафе», «Магазин», «Услуги»), а не выпадающий список. Кнопка button_primary во всю ширину 48px «Записаться на демо». Ниже чекбокс 20px с радиусом 6px (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» (on_tile_ink). Кнопка активна всегда: пустое поле или нет галочки — видимый текст ошибки 14px под полем (#ff9d95 на чернильной плитке — 8.97:1, в тёмной теме error) с иконкой «!», фокус на первое проблемное поле. Сбой сети — текст и «Отправить ещё раз», данные сохраняются.",
+    "success_state": "Плитка меняет содержимое на месте, высота сохраняется: квадрат 56px с радиусом 16px цвета tile_mint и галочкой success, заголовок h3 «Заявка принята», строка «Позвоним на +7 … и пришлём ссылку на демо», link_arrow «Пока посмотреть видео →». Фокус на заголовке, aria-live=polite."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "counter-up",
+    "tilt-card",
+    "sticky-cta-mobile",
+    "tabs-indicator",
+    "form-success",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "только функциональное: sticky-cta-mobile и тень при наведении",
+      "subtle": "по умолчанию: fade-up-stagger, counter-up, sticky-cta-mobile; + tabs-indicator; + form-success; + form-field-feedback",
+      "rich": "subtle + tilt-card на плитках тарифов"
+    },
+    "fade-up-stagger": "плитки features_bento, how и reviews_bento — порядок очереди = порядок чтения сетки (слева направо, сверху вниз), а не порядок в DOM, если плитки переставлены через grid-area; --reveal-dist: 16px; --reveal-dur: 420ms; --reveal-step: 60ms. Первый экран не анимировать — это LCP",
+    "counter-up": "только tile_stat ниже первого экрана (в how и reviews_bento): одно число на плитку, размер из typography.tile_stat, полосу .stat__label::before удалить — у плитки нет подчёркиваний; единицы («мин», «%») — отдельным span caption. Плитки-цифры первого экрана и цены стоят сразу",
+    "tilt-card": "уровень rich, только три tile_price в pricing: data-tilt-max=\"4\"; --tilt-radius: 24px; --tilt-shadow — shadow.raised; блик .10 на белой плитке (text_muted/surface = 6.60 ≥ 5.5) и .06 на чернильной; на features_bento и отзывах не ставить",
+    "sticky-cta-mobile": "панель по компоненту sticky_cta: data-after=\"#hero-cta\", data-hide-on=\"#lead\"; --radius-pill: 12px, скругление верхних углов панели 16px; кнопку звонка не включать — в SaaS пишут, а не звонят",
+    "tabs-indicator": "pricing «месяц / год» в плитке тарифов: подложка --radius-md 16px внутри плитки 24px, --tbi-dur 220ms",
+    "form-success": "ответ формы внутри большой плитки первого экрана — плитка не меняет высоту",
+    "form-field-feedback": "поля radius 12px, ошибки внутри плитки формы",
+    "not_for_this_style": "hero-text-reveal — первый экран из нескольких плиток не должен ждать строку заголовка; image-reveal-clip — внутри плиток уже работает fade-up-stagger, два приёма появления в одной секции запрещены; parallax-soft и gradient-drift — плитки неподвижны и однотонны; sticky-stack-cards — сетка и есть способ показать много функций; marquee-logos — логотипы клиентов стоят в плитке неподвижно; cta-attention — кнопка в плитке и так выделена"
+  },
+  "media": {
+    "hero": "Экран продукта крупно в плитке 2×1: настоящий интерфейс на реальных данных (касса с чеком, график выручки, карточка клиента), обрезанный краем плитки. Рядом — плитки с цифрой и отзывом, а не фото людей.",
+    "video_in_flow": "Короткая беззвучная петля 5–8 с внутри tile_media вместо скриншота (как пробивается чек, как появляется отчёт) с кнопкой паузы 32px в углу; обзор со звуком 60–90 с — по кнопке «Смотреть видео» в <dialog> с субтитрами.",
+    "imagery": "Скриншоты и фрагменты интерфейса на тоне плитки, чистые без мокапов устройств; фото — только в отзывах (аватар 40px) и в плитке про реальный бизнес клиента 1:1.",
+    "character": "Персонаж не нужен; допустим один набор линейных иконок 24px в едином штрихе 1.75px на всю страницу.",
+    "audio": "Аудиоверсия не нужна.",
+    "avoid": [
+      "стоковые фото людей у ноутбука",
+      "3D-мокапы телефонов и ноутбуков вместо реального экрана",
+      "градиентные фоны плиток",
+      "плитки без содержания ради заполнения сетки",
+      "эмодзи вместо иконок"
+    ],
+    "geometry": {
+      "hero_desktop": "экран продукта 16:10 в плитке 2×1, обрезан правым нижним краем",
+      "hero_mobile": "экран 4:3 в плитке во всю ширину",
+      "tile_media": "16:10 для экранов, 1:1 для фото",
+      "card": "1:1",
+      "portrait": "круг 40px в tile_quote",
+      "gallery": "4:3",
+      "logo_strip": "монохромные text_muted высотой 24px в низкой плитке"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "фон primary_hover (#2f2bd0, в тёмной #4a46e6) за 140ms; вторичная — рамка border_strong",
+      "focus_visible": "shadow.focus — кольцо 2px #3a36e0 с зазором 2px цвета фона (в тёмной #a09eff)",
+      "active": "scale(0.98), 90ms",
+      "disabled": "фон border, текст text_muted, курсор not-allowed; кнопку формы заявки не блокировать",
+      "loading": "подпись «Отправляем…», слева кольцо 16px цветом on_primary, ширина кнопки зафиксирована, aria-busy=true; кольцо не крутится дольше 10 с"
+    },
+    "input": {
+      "focus": "рамка 2px primary (в тёмной — focus #a09eff), подпись над полем не двигается",
+      "error": "рамка 2px error, под полем текст 14px error с иконкой «!», aria-invalid=true и aria-describedby",
+      "disabled": "фон background, рамка border, текст text_muted"
+    },
+    "tile": {
+      "hover": "тень raised за 240ms, у link_arrow стрелка сдвигается на 3px",
+      "focus_visible": "кольцо 2px primary с зазором 2px по контуру плитки (радиус 26px)",
+      "active": "scale(0.99)"
+    }
+  },
+  "signature": [
+    "Сетка разновеликих плиток 1×1, 2×1, 1×2, 2×2 на общем шаге: каждая плитка — одна мысль (цифра, экран, функция, отзыв, цена)",
+    "Первый экран — тоже бенто: большая плитка с заголовком и формой среди плиток-доказательств",
+    "Экран продукта выходит за край плитки и обрезан ею; плитка-цифра — одно число 64px и подпись в строку",
+    "Четыре пастельных тона плиток и одна чернильная плитка на экран; радиус 24px и зазор 12px одинаковы везде"
+  ],
+  "voice": "Одна плитка — одна мысль в 3–7 словах: «Касса и склад в одном окне», «14 дней бесплатно». Глаголы пользы и цифры цифрами; без «инновационный», «уникальный», «осуществляем»; подпись в плитке — одна строка до 60 знаков.",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; неразрывный пробел в разрядах и перед ₽",
+    "tile_stat": "font-variant-numeric: tabular-nums; letter-spacing: -0.035em; единица отдельным span caption",
+    "headlines": "text-wrap: balance у H1, h2 и заголовков плиток",
+    "captions": "text-wrap: pretty — чтобы подпись плитки не оставляла одно слово на второй строке"
+  },
+  "color_presets": {
+    "how_to_use": "Один пресет на страницу — под цвет продукта клиента; меняются только перечисленные ключи, тона плиток общие.",
+    "indigo": {
+      "label": "Индиго (по умолчанию)",
+      "for": "учёт, CRM, SaaS",
+      "light": {
+        "primary": "#3a36e0",
+        "on_primary": "#ffffff",
+        "primary_hover": "#2f2bd0",
+        "link": "#3531c9",
+        "focus": "#3a36e0"
+      },
+      "dark": {
+        "primary": "#5a56f0",
+        "on_primary": "#ffffff",
+        "primary_hover": "#4a46e6",
+        "link": "#a09eff",
+        "focus": "#a09eff"
+      },
+      "contrast": {
+        "light:on_primary/primary": 7.54,
+        "light:link/background": 7.7,
+        "dark:on_primary/primary": 5.22,
+        "dark:link/background": 8.12
+      }
+    },
+    "teal": {
+      "label": "Морская волна",
+      "for": "финансы малого бизнеса, медицина, образование",
+      "light": {
+        "primary": "#0f766e",
+        "on_primary": "#ffffff",
+        "primary_hover": "#115e59",
+        "link": "#0f766e",
+        "focus": "#0f766e"
+      },
+      "dark": {
+        "primary": "#0f766e",
+        "on_primary": "#ffffff",
+        "primary_hover": "#115e59",
+        "link": "#5fd4c0",
+        "focus": "#5fd4c0"
+      },
+      "contrast": {
+        "light:on_primary/primary": 5.47,
+        "light:link/background": 4.89,
+        "dark:on_primary/primary": 5.47,
+        "dark:link/background": 10.72
+      }
+    },
+    "tangerine": {
+      "label": "Мандарин",
+      "for": "доставка, общепит, ритейл",
+      "light": {
+        "primary": "#c2410c",
+        "on_primary": "#ffffff",
+        "primary_hover": "#9a3412",
+        "link": "#c2410c",
+        "focus": "#c2410c"
+      },
+      "dark": {
+        "primary": "#c2410c",
+        "on_primary": "#ffffff",
+        "primary_hover": "#9a3412",
+        "link": "#ff9a6b",
+        "focus": "#ff9a6b"
+      },
+      "contrast": {
+        "light:on_primary/primary": 5.18,
+        "light:link/background": 4.62,
+        "dark:on_primary/primary": 5.18,
+        "dark:link/background": 9.27
+      }
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "bento",
+        "centered"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "tile_palette": [
+        "tinted",
+        "mono"
+      ]
+    },
+    "fixed": [
+      "fonts",
+      "radius",
+      "tile_gap",
+      "grid_4",
+      "one_idea_per_tile"
+    ],
+    "default": {
+      "hero_layout": "bento",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "tile_palette": "tinted"
+    },
+    "legend": {
+      "hero_layout": "bento — первый экран из 4 плиток с формой в большой; centered — заголовок по центру над рядом плиток, форма только кнопкой",
+      "cta_color_role": "primary — индиго-кнопка; accent — чернильная (в тёмной теме светлая)",
+      "headline_scale": "xl — 56/36px, заголовок до 45 знаков; l — 44/32px, до 60 знаков",
+      "tile_palette": "tinted — четыре пастельных тона; mono — все плитки белые, кроме одной чернильной (строже, для B2B)",
+      "social_proof_position": "under_hero — плитка логотипов и отзывы сразу под героем; before_form — перед lead_form"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первой проверять hero_layout: форма в плитке первого экрана против одной кнопки — главная развилка для регистраций. Палитра пресетов в A/B не участвует: пресет выбирается под продукт один раз."
+  },
+  "do": [
+    "Держать в плитке одну мысль: цифру, экран, функцию, отзыв или цену — и не больше 7 слов в её заголовке.",
+    "Собирать сетку на одном шаге: 4 колонки, ряд 220px, зазор 12px, радиус плиток 24px, у картинки внутри — 16px.",
+    "Ставить одну чернильную плитку и одну индиго-кнопку на экран; соседние плитки — разных тонов.",
+    "Показывать настоящий экран продукта на реальных данных, обрезанный краем плитки, а не мокап устройства.",
+    "Делать всю плитку-функцию кликабельной и давать ей видимое кольцо фокуса по контуру.",
+    "Проверять текст плитки на телефоне: подпись не мельче 14px, плитки-цифры парами 2 в ряд.",
+    "Если продукт клиента конкурирует с сервисом, у которого есть свой бенто-сайт, брать другой пресет цвета и не повторять его набор плиток и иллюстраций — 135-ФЗ ст. 14.6."
+  ],
+  "dont": [
+    "Не класть в плитку абзац текста и два призыва сразу.",
+    "Не смешивать больше трёх размеров плиток на одном экране и не оставлять пустые плитки для ровной сетки.",
+    "Не заливать плитки градиентами, не добавлять стекло и размытие.",
+    "Не ставить индиго текстом по пастельной плитке — только link на белой плитке или на фоне страницы.",
+    "Не вставлять стоковых людей у ноутбука, 3D-мокапы и эмодзи.",
+    "Не прятать согласие на обработку данных и не отмечать его заранее; не блокировать кнопку без объяснения."
+  ],
+  "prompt_snippet": "Build a bento-grid SaaS lead landing for a small-business product. Light: page #f3f2ee, tiles #ffffff and pastel tones lilac #e4e2ff, mint #d6f2e3, peach #ffe2d1, lemon #fbf0bf, one ink tile #15171c per screen; text #15171c, muted #585d68. Dark: #0d0e11, tiles #17191e with deep tints, the ink tile inverts to #f1f2f4. One indigo button #3a36e0 (dark #5a56f0) with white text. Self-hosted Commissioner (Cyrillic) 400–700: H1 56/36px weight 700, tracking -0.03em; tile stats 64px. CSS grid of 4 columns, 220px rows, 12px gaps, 24px tile radius, 16px for screens inside tiles. Every tile holds one idea: a number, a real product screen cropped by the tile edge, a feature, a quote or a price. The hero is a bento too: a 2×2 tile with headline and one-line form, plus screen, stat and rating tiles. Unchecked 152-FZ consent. No gradients, device mockups or emoji.",
+  "source": {
+    "inspired_by": "собственная разработка; идея — bergside/awesome-design-skills (MIT), skills/bento: только общий принцип «блоки разного размера на сетке»",
+    "notes": "У bergside в skills/bento — семь hex-токенов (персиковый #FAD4C0, синий #80A1C1, крем #FFF5E6), шрифт Inter, радиусы 4/8px и общий текст про сетку; тёмной темы, размеров плиток и раскладки нет. Здесь своё: палитра тёплый фон + белые плитки + четыре пастельных тона + одна чернильная плитка с проверенным контрастом text и text_muted на каждом тоне в обеих темах, индиго-кнопка и три пресета цвета под продукт клиента, сетка 4 × 220px с правилами размеров 1×1…2×2 и их поведением на планшете и телефоне, концентрические радиусы 24/16/12, экран продукта, обрезанный краем плитки, первый экран-бенто с формой в плитке, плитки тарифов с таблицей сравнения, гарнитура Commissioner (OFL-1.1, кириллица) вместо Inter — компактнее для заголовков плиток, форма заявки по 152-ФЗ в чернильной плитке, motion_map с порядком появления по ходу чтения сетки."
+  }
+}

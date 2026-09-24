@@ -104,7 +104,21 @@
 
 ## Анимации
 
-`fade-up-stagger`, `parallax-soft`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`fade-up-stagger`, `parallax-soft`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `marker-highlight`, `steps-progress-line`, `tabs-indicator`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Рисованные иллюстрации на светлом поле рядом с короткой записью продукта.
+
+**Видео ниже.** Прохождение по интерфейсу 20–40 с, иллюстрации в каждой секции.
+
+**Картинки.** Штриховые иллюстрации в одном стиле, скриншоты.
+
+**Персонаж или маскот.** Иллюстрированные персонажи-маскоты уместны, в одном стиле.
+
+**Аудиоверсия.** Не нужна.
+
+**Избегать:** фотореализм; тёмные темы.
 
 ## A/B-тест
 

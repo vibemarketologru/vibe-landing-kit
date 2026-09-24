@@ -550,7 +550,11 @@
     "counter-up",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "marker-highlight",
+    "steps-progress-line",
+    "tabs-indicator",
+    "form-field-feedback"
   ],
   "motion_map": {
     "fade-up-stagger": "пастельная мозаика преимуществ, шаги, отзывы, тарифы: --reveal-dist 16px, --reveal-dur 360ms, --reveal-ease cubic-bezier(.2,0,0,1), --reveal-step 60ms — тихо, без «выстрела». Первый экран (заголовок, кнопки, окно продукта) не анимируется: окно — вероятный элемент LCP",
@@ -558,7 +562,22 @@
     "counter-up": "только цифры stat_row (3–4 числа, typography.stat, tabular-nums), счёт 1200ms без перелёта; полоса-мини-диаграмма под числом (--cu-bar) цвета text_muted, не фиолетовая. Цифры только проверяемые",
     "accordion-smooth": "частые вопросы в виде faq_item: у .faq__item убрать рамку, фон и скругление 16px рецепта — только линия 1px border снизу; треугольник SVG 12px слева от вопроса поворачивается на 90° (transform: rotate) за 200ms, как блок-переключатель в документах",
     "form-success": "ответ формы в карточке: круг .lead__badge 48px вместо 64px, цвет success, галочка цветом background (рецепт так и делает); круговую волну ::after не включать, появление значка по ease_standard без перелёта — стиль сдержанный. Дальше h3 «Заявка принята», срок ответа и ссылка цвета link на примеры работ",
-    "sticky-cta-mobile": "панель на телефоне: фон background, линия 1px border сверху, тень modal, фиолетовая кнопка 48px во всю ширину. Рецепт скругляет кнопку через --radius-pill — внутри .scta задать --radius-pill: 8px (radius.md), кнопки-пилюли в стиле запрещены. data-after=\"#hero-cta\" (кнопка первого экрана), data-hide-on=\"#lead\" (блок формы)"
+    "sticky-cta-mobile": "панель на телефоне: фон background, линия 1px border сверху, тень modal, фиолетовая кнопка 48px во всю ширину. Рецепт скругляет кнопку через --radius-pill — внутри .scta задать --radius-pill: 8px (radius.md), кнопки-пилюли в стиле запрещены. data-after=\"#hero-cta\" (кнопка первого экрана), data-hide-on=\"#lead\" (блок формы)",
+    "marker-highlight": "одна фраза выгоды в подзаголовке первого экрана; --mh-color из пастели пресета, data-mh-delay 300",
+    "steps-progress-line": "how или программа курса",
+    "tabs-indicator": "pricing, --tbi-edge: var(--primary), --tbi-dur 200ms",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Рисованные иллюстрации на светлом поле рядом с короткой записью продукта.",
+    "video_in_flow": "Прохождение по интерфейсу 20–40 с, иллюстрации в каждой секции.",
+    "imagery": "Штриховые иллюстрации в одном стиле, скриншоты.",
+    "character": "Иллюстрированные персонажи-маскоты уместны, в одном стиле.",
+    "audio": "Не нужна.",
+    "avoid": [
+      "фотореализм",
+      "тёмные темы"
+    ]
   },
   "ab_axes": {
     "vary": {

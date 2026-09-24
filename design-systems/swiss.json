@@ -673,7 +673,11 @@
     "image-reveal-clip",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "steps-progress-line",
+    "result-bars",
+    "tabs-indicator",
+    "form-field-feedback"
   ],
   "motion_map": {
     "hero-text-reveal": "Только H1 первого экрана: каждая смысловая половина заголовка — своя .htr-line (на телефоне половина может занять две строки — это нормально). Десктоп: @media (min-width: 641px) { :root { --htr-dur: 720ms; --htr-step: 80ms } }, телефонные 640/60 из рецепта не трогать. .htr-sub — на lead, .htr-cta — на блок кнопки с подписью; badge, caption и факты первого экрана не анимировать. В варианте split_photo фото не анимировать.",
@@ -684,7 +688,22 @@
     "accordion-smooth": "faq в колонках 5–12. Снять карточный вид рецепта: .faq__list { gap: 0; max-width: none; margin: 0 } .faq__item { border: 0; border-top: 1px solid var(--color-border); border-radius: 0; background: transparent }, у последнего ещё border-bottom; .faq__q { padding: 24px 0; font-size: 20px; font-weight: 500 } .faq__a { padding: 0 0 24px; max-width: 64ch }. Палочки значка — border-radius: 0 и толщина 1.5px (inset: 9.25px 2px); значок — плюс → минус из рецепта.",
     "form-success": "Ответ формы заявки. Вид рецепта переопределить: .lead { border: 0; border-radius: 0; padding: 0; background: transparent; max-width: none }; заголовок .lead__h убрать — H2 стоит в section_header, aria-labelledby ведёт на него. Поля — height 56px, padding 0 16px, border-radius 0 и рамка var(--color-border-input), а не --color-border (#DADAD6 даёт 1.40:1, рамке поля нужно от 3:1); метки 15px 500 цвета text; чекбокс — по components.checkbox. .lead__btn — border-radius 0, min-height 56px, justify-content: space-between со стрелкой. Вместо трёх точек в .lead__dots — текст «Отправляем…» у левого края (justify-content: flex-start; padding-inline: 24px). Экран успеха по левому краю: .lead__done { justify-items: start; text-align: left }; .lead__badge — квадрат 40px, border-radius 0 и у волны ::after тоже; анимация lead-pop — по cubic-bezier(.2,0,0,1) вместо кривой с перелётом. Без конфетти.",
     "sticky-cta-mobile": "По компоненту sticky_cta: data-after=\"#hero-cta\" (id у кнопки первого экрана), data-hide-on=\"#lead\". Под стиль: .scta { background: var(--color-background); box-shadow: none } — линейка сверху у рецепта уже есть; --radius-pill: 0px, иначе кнопки станут пилюлями; .scta__btn { min-height: 52px; justify-content: space-between; padding: 12px 16px } со стрелкой, текст «Получить консультацию». Кнопку звонка .scta__alt включить (звонок — цель стиля): квадрат 52×52, рамка var(--color-border-strong).",
+    "steps-progress-line": "how: красная линия --spl-color: var(--accent) — заливка, 4.9:1 к фону; квадратная точка 12px",
+    "result-bars": "numbers или cases, .rb__bar{border-radius:0}, --rb-now-color: var(--text)",
+    "tabs-indicator": "pricing, радиусы 0, --tbi-dur 200ms",
+    "form-field-feedback": "поля radius 0",
     "not_for_this_style": "marquee-logos — полоса клиентов в стиле стоит на месте; parallax-soft, tilt-card и magnetic-button — параллакс, наклон и пружина спорят с коротким прямым движением; cta-attention — пульсирующая кнопка ломает правило «красный точечно»; gradient-drift — градиентов в стиле нет; sticky-stack-cards — карточек-коробок нет, разделы держат линейки; before-after-slider — только если у производства или бюро есть собственные снимки «было — стало», в монохроме и без скруглений."
+  },
+  "media": {
+    "hero": "Строгая сетка: крупное фото во всю ширину или в широкую колонку, типографский заголовок, точное выравнивание.",
+    "video_in_flow": "Видео редко; технические кадры и схемы, цифры в сетке.",
+    "imagery": "Предметные и технические фото на нейтральном фоне, работа мастера документально.",
+    "character": "Не обязателен; мастер в работе допустим как документальное фото.",
+    "audio": "Аудиоверсия — тихая ссылка рядом с кнопкой, для тех, кто за рулём или на ходу.",
+    "avoid": [
+      "декоративные градиенты",
+      "мультяшность"
+    ]
   },
   "ab_axes": {
     "vary": {

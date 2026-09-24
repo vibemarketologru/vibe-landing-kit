@@ -131,7 +131,6 @@
   --radius-xl: 16px;
   --radius-xxl: 20px;
   --radius-pill: 999px;
-  --radius-notes: md — кнопки и поля, lg — все карточки и окно продукта, xs/sm — метки-чипы и «стикеры», pill — только бейджи и переключатели, никогда не кнопки.;
   --space-unit: 8;
   --space-base: 4;
   --space-section-desktop: 96px;
@@ -153,13 +152,11 @@
   --shadow-modal: 0 16px 48px -8px rgba(15,15,15,.16);
   --shadow-raised-dark: 0 0 0 1px #373633, 0 8px 24px rgba(0,0,0,.45);
   --shadow-mockup-dark: 0 0 0 1px #373633, 0 24px 48px -8px rgba(0,0,0,.65);
-  --shadow-notes: Карточки плоские: граница 1px border вместо тени. raised — при наведении на карточку и у карточки формы; mockup — только у окна продукта в первом экране; modal — у липкой кнопки и всплывающих окон.;
   --motion-fast: 150ms;
   --motion-base: 200ms;
   --motion-slow: 360ms;
   --motion-ease-standard: cubic-bezier(.2,0,0,1);
   --motion-ease-emphasized: cubic-bezier(.3,0,0,1);
-  --motion-notes: Бренд сдержан: короткие переходы цвета и тени, без пружин и масштабирования кнопок.;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

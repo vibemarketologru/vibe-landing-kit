@@ -1,0 +1,686 @@
+{
+  "slug": "uber",
+  "name": "Uber",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Uber. Не аффилировано с Uber; без логотипов и фирменных шрифтов.",
+  "summary": "Чёрно-белый дуэт без третьего цвета: чёрная пилюля — единственная главная кнопка, всё нажимаемое скруглено до 999px, карточки — 16px. В первом экране карточка-форма «адрес · дата → Узнать цену», посреди страницы — чёрная промо-полоса с белой пилюлей, вместо декора — плоские иллюстрации 4:3. Заголовки 700 без разрядки, текст 400/500.",
+  "summary_en": "A black-and-white duet with no third colour: the black pill is the only primary button, everything tappable is rounded to 999px and cards to 16px. The first screen carries a request card \"address · date → See the price\", a black promo band with a white pill breaks the page halfway, and flat 4:3 editorial illustrations replace decoration. Headings at 700 with no tracking, text at 400/500.",
+  "best_for": [
+    "клининг и уборка квартир и офисов",
+    "переезды, грузчики, вывоз мусора",
+    "доставка цветов, продуктов, стройматериалов",
+    "мастер на час, ремонт техники, сборка мебели",
+    "химчистка мебели и ковров на выезде",
+    "аренда инструмента и спецтехники с доставкой",
+    "сервисы вызова услуги на дом по адресу и времени"
+  ],
+  "goals": [
+    "заявка с расчётом цены",
+    "заказ услуги на дату",
+    "звонок",
+    "повторный заказ"
+  ],
+  "mood": [
+    "уверенный",
+    "городской",
+    "контрастный",
+    "деловитый",
+    "быстрый"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f3f3f3",
+        "text": "#000000",
+        "text_muted": "#5e5e5e",
+        "border": "#e2e2e2",
+        "primary": "#000000",
+        "on_primary": "#ffffff",
+        "accent": "#efefef",
+        "on_accent": "#000000",
+        "link": "#000000",
+        "success": "#0b7a3e",
+        "error": "#c41400",
+        "primary_hover": "#333333",
+        "primary_active": "#4b4b4b",
+        "accent_hover": "#e2e2e2",
+        "surface_input": "#efefef",
+        "surface_pressed": "#e2e2e2",
+        "text_placeholder": "#5e5e5e",
+        "focus_ring": "#000000",
+        "band": "#000000",
+        "band_elevated": "#282828",
+        "on_band": "#ffffff",
+        "on_band_muted": "#afafaf",
+        "button_on_band": "#ffffff",
+        "on_button_on_band": "#000000",
+        "primary_alt": "#0f4c5c",
+        "on_primary_alt": "#ffffff"
+      },
+      "dark": {
+        "background": "#000000",
+        "surface": "#1c1c1c",
+        "text": "#ffffff",
+        "text_muted": "#afafaf",
+        "border": "#333333",
+        "primary": "#ffffff",
+        "on_primary": "#000000",
+        "accent": "#282828",
+        "on_accent": "#ffffff",
+        "link": "#ffffff",
+        "success": "#3cc47c",
+        "error": "#ff6b5a",
+        "primary_hover": "#e2e2e2",
+        "primary_active": "#c6c6c6",
+        "accent_hover": "#3a3a3a",
+        "surface_input": "#282828",
+        "surface_pressed": "#3a3a3a",
+        "text_placeholder": "#afafaf",
+        "focus_ring": "#ffffff",
+        "band": "#f3f3f3",
+        "band_elevated": "#ffffff",
+        "on_band": "#000000",
+        "on_band_muted": "#5e5e5e",
+        "button_on_band": "#000000",
+        "on_button_on_band": "#ffffff",
+        "primary_alt": "#0f4c5c",
+        "on_primary_alt": "#ffffff"
+      },
+      "notes": "Третьего цвета интерфейса нет: primary — чёрная пилюля (21:1), accent — серая пилюля #efefef с чёрным текстом (18.3:1) для второстепенных действий. В тёмной теме полярность меняется целиком: страница чёрная, главная пилюля белая с чёрным текстом, а промо-полоса band — светлая #f3f3f3 с чёрным текстом и чёрной пилюлей (button_on_band): приём «смена полярности посередине страницы» работает в обеих темах. text_placeholder равен text_muted: фирменный #afafaf на заливке поля даёт 2.2:1 — нечитаемо. success #0b7a3e (5.43 на белом, 4.89 на #f3f3f3) и error #c41400 (6.09 / 5.49) подобраны под текст ошибки на белой карточке и на серой полосе. primary_alt #0f4c5c (9.51 с белым) — основной цвет для совпадающей ниши (такси, трансфер, доставка еды): чёрный заменяется им на всех главных пилюлях, наведение — #0b3a46. link равен text и всегда подчёркнут: синий браузерный цвет бренда живёт только в мелком юридическом тексте и здесь не нужен."
+    },
+    "typography": {
+      "display": {
+        "family": "Wix Madefor Display",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "52px",
+        "size_mobile": "34px",
+        "line_height": 1.2,
+        "letter_spacing": "0",
+        "note": "заголовок первого экрана; у бренда 52/64 — межстрочный 1.2 оставлен для кириллицы, трекинг никогда не трогается"
+      },
+      "h2": {
+        "family": "Wix Madefor Display",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "36px",
+        "size_mobile": "28px",
+        "line_height": 1.22,
+        "letter_spacing": "0"
+      },
+      "h3": {
+        "family": "Wix Madefor Display",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.33,
+        "letter_spacing": "0"
+      },
+      "price": {
+        "family": "Wix Madefor Display",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "32px",
+        "size_mobile": "28px",
+        "line_height": 1.15,
+        "letter_spacing": "0",
+        "note": "сумма в карточке-форме после «Узнать цену» и в строках цен, табличные цифры"
+      },
+      "stat": {
+        "family": "Wix Madefor Display",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "24px",
+        "size_mobile": "22px",
+        "line_height": 1.2,
+        "letter_spacing": "0",
+        "note": "цифры строки фактов под первым экраном"
+      },
+      "lead": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.4,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body_strong": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.35,
+        "letter_spacing": "0",
+        "note": "вопросы FAQ, пункты навигации, подписи полей"
+      },
+      "button": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.25,
+        "letter_spacing": "0"
+      },
+      "chip": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.15,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Wix Madefor Text",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.5,
+        "letter_spacing": "0",
+        "note": "подписи под кнопками, юридический текст; у бренда 12px — для кириллицы на десктопе 13px"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "pill_tab": "36px",
+      "pill": "999px",
+      "note": "Пилюля 999px — у всего нажимаемого (кнопки, чипы, контакты, круглые иконки). 16px — карточки, карточка-форма, промо-полоса, иллюстрации. 8px — поля-строки внутри карточки-формы. 36px — только переключатель видов услуги в карточке-форме, нарочно «не совсем пилюля». 0 — полосы во всю ширину и подвал."
+    },
+    "spacing": {
+      "unit": 4,
+      "section_desktop": "80px",
+      "section_mobile": "48px",
+      "container": "1200px",
+      "gutter_desktop": "32px",
+      "gutter_mobile": "16px",
+      "card_padding": "24px",
+      "form_padding": "16px",
+      "stack_gap": "8px",
+      "inline_gap": "12px",
+      "card_gap": "32px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 4px 16px rgba(0,0,0,0.12)",
+      "form": "0 4px 16px rgba(0,0,0,0.16)",
+      "float": "0 2px 8px rgba(0,0,0,0.16)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #000000",
+      "focus_dark": "0 0 0 2px #000000, 0 0 0 4px #ffffff",
+      "note": "По умолчанию всё плоское. form — только карточка-форма первого экрана; float — белая пилюля, стоящая над снимком или промо-полосой; raised — промо-карточка при наведении. В тёмной теме тени не видны: карточка-форма получает фон surface и рамку 1px border."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "note": "Движение деловое: смена цвета пилюли за 150ms, появление карточек снизу на 16px, раскрытие цены в карточке-форме за 200ms. Нажатие меняет только цвет, без масштаба."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Wix Madefor Display",
+      "fontsource": "wix-madefor-display",
+      "role": "display",
+      "weights": [
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/wix-madefor-display — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "UberMove (проприетарный)",
+      "why": "плотный геометрический гротеск с прямыми окончаниями и ровным цветом строки на 700 — как у заголовочного шрифта бренда; полноценная кириллица"
+    },
+    {
+      "family": "Wix Madefor Text",
+      "fontsource": "wix-madefor-text",
+      "role": "body+ui",
+      "weights": [
+        400,
+        500
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/wix-madefor-text",
+      "replaces": "UberMoveText (проприетарный)",
+      "why": "текстовая пара той же семьи — как у бренда: заголовочное начертание не набирает абзацы, текстовое не набирает заголовки"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "48px",
+      "padding": "12px 24px",
+      "font": "button",
+      "weight": 500,
+      "hover": "фон primary_hover за 150ms, без сдвига и тени",
+      "use": "одна на экран: «Узнать цену», «Заказать уборку»"
+    },
+    "button_secondary": {
+      "bg": "background",
+      "color": "text",
+      "radius": "pill",
+      "height": "48px",
+      "padding": "12px 24px",
+      "font": "button",
+      "shadow": "float — только когда стоит над иллюстрацией или фото",
+      "hover": "фон surface_input",
+      "use": "парная к чёрной: «Все услуги», «Как мы работаем»"
+    },
+    "button_subtle": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "height": "40px",
+      "padding": "10px 16px",
+      "font": "button",
+      "hover": "фон accent_hover",
+      "use": "третьестепенные действия внутри карточек: «Выбрать», «Подробнее»"
+    },
+    "button_on_band": {
+      "bg": "button_on_band",
+      "color": "on_button_on_band",
+      "radius": "pill",
+      "height": "48px",
+      "padding": "12px 24px",
+      "font": "button",
+      "hover": "светлая пилюля → #efefef, тёмная → #333333",
+      "use": "единственная кнопка на промо-полосе band"
+    },
+    "chip": {
+      "bg": "surface_input",
+      "color": "text",
+      "radius": "pill",
+      "height": "40px",
+      "padding": "8px 16px",
+      "font": "chip",
+      "icon": "линейный значок 16px слева",
+      "active": "фон primary, текст on_primary",
+      "hit_area": "на телефоне 44px за счёт прозрачного отступа",
+      "use": "виды услуги под заголовком; клик переключает вкладку в карточке-форме"
+    },
+    "tab_toggle": {
+      "bg": "surface_input",
+      "radius": "pill_tab",
+      "padding": "4px",
+      "item_height": "36px",
+      "item_radius": "32px",
+      "item": "значок 16px + подпись 14px/500 text_muted",
+      "active": "фон background, текст text, тень float",
+      "use": "переключатель видов услуги в шапке карточки-формы: «Уборка · Окна · Химчистка»"
+    },
+    "request_card": {
+      "bg": "background",
+      "radius": "xl",
+      "shadow": "form",
+      "padding": "16px (24px на десктопе)",
+      "width": "до 480px",
+      "content": "tab_toggle; 2–3 input_row со значками (адрес — булавка, дата и время — календарь, площадь или объём — линейка) с зазором 8px; button_primary «Узнать цену» во всю ширину 56px; caption text_muted по центру «Цена не изменится после осмотра»",
+      "estimate": "после нажатия в той же карточке за 200ms раскрывается блок: сумма шрифтом price, строка состава (3 часа · 2 специалиста · инвентарь наш), поля «Имя» и «Телефон», чекбокс согласия и пилюля «Оформить заявку»; уже введённые адрес и дата остаются видны строкой сверху",
+      "dark": "фон surface, рамка 1px border, без тени"
+    },
+    "input_row": {
+      "bg": "surface_input",
+      "color": "text",
+      "radius": "md",
+      "height": "56px",
+      "padding": "0 16px",
+      "icon": "20px цвета text слева, зазор 12px",
+      "label": "подпись 12px/500 text_muted над значением 16px внутри строки",
+      "placeholder": "text_placeholder",
+      "focus": "фон background, рамка 2px text внутри (inset)",
+      "use": "поля карточки-формы"
+    },
+    "input": {
+      "bg": "surface_input",
+      "color": "text",
+      "radius": "md",
+      "height": "56px",
+      "padding": "16px",
+      "label": "над полем 14px/500 text, зазор 8px",
+      "focus": "фон background, рамка 2px text внутри",
+      "error": "рамка 2px error, под полем 14px error со значком «!»"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "4px",
+      "border": "2px solid text",
+      "checked": "фон text, галочка background",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных, не отмечено заранее"
+    },
+    "card": {
+      "bg": "background",
+      "color": "text",
+      "radius": "xl",
+      "padding": "24px",
+      "shadow": "card",
+      "use": "обычная карточка на белом, без рамки"
+    },
+    "card_soft": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "xl",
+      "padding": "24px",
+      "shadow": "none",
+      "use": "отзывы, факты, выноски «Можно заказать на завтра»"
+    },
+    "promo_card": {
+      "bg": "background",
+      "radius": "xl",
+      "layout": "2 колонки: иллюстрация 4:3 с радиусом 16px + текст (h2 или h3, 2–3 строки body text_muted, button_subtle); стороны чередуются от ряда к ряду",
+      "hover": "тень raised у иллюстрации, без масштаба",
+      "use": "виды услуг"
+    },
+    "promo_band": {
+      "bg": "band",
+      "color": "on_band",
+      "radius": "xl",
+      "padding": "48px",
+      "layout": "слева h2 и строка on_band_muted, справа или ниже — button_on_band; иллюстрация 4:3 справа по желанию",
+      "use": "одна смена полярности посередине страницы"
+    },
+    "fact_row": {
+      "layout": "3–4 ячейки в строку, между ними вертикальная линия 1px border",
+      "number": "stat 24px/700",
+      "label": "14px text_muted",
+      "use": "сразу под первым экраном вместо логотипов"
+    },
+    "price_row": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "layout": "название 16px/500 и состав 14px text_muted слева; цена price 24px/700 справа табличными цифрами; button_subtle «Заказать» справа на десктопе",
+      "mobile": "цена под названием, кнопка во всю ширину"
+    },
+    "step": {
+      "marker": "чёрный круг 32px (primary) с белой цифрой 16px/700",
+      "title": "h3",
+      "text": "body text_muted",
+      "layout": "3 шага в ряд, на телефоне столбиком"
+    },
+    "review": {
+      "bg": "surface",
+      "radius": "xl",
+      "padding": "24px",
+      "author": "имя 16px/500 + район и месяц 14px text_muted",
+      "stars": "5 звёзд 14px цвета text — не жёлтых",
+      "text": "body, до 4 строк"
+    },
+    "contact_pill": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "48px",
+      "padding": "12px 20px",
+      "icon": "20px слева",
+      "use": "пара «Позвонить» и «Написать в мессенджер» над подвалом — наследник кнопок «скачать приложение»"
+    },
+    "badge": {
+      "bg": "surface_input",
+      "color": "text",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "12px/500",
+      "use": "«Сегодня свободно 6 бригад», «Без предоплаты»"
+    },
+    "icon_button": {
+      "bg": "surface_input",
+      "color": "text",
+      "radius": "pill",
+      "size": "40px",
+      "hover": "фон surface_pressed",
+      "hit_area": "44px на телефоне"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "question": "body_strong 18px/500 text",
+      "chevron": "в icon_button 32px справа",
+      "answer": "body text_muted",
+      "card": "нет — строки на линиях"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "64px",
+      "padding": "0 32px",
+      "left": "текстовый логотип клиента 20px/700 цвета text",
+      "center": "3–4 якорные ссылки body_strong 16px/500",
+      "right": "телефон 16px/500 + button_primary 40px «Заказать»",
+      "mobile": "56px: логотип + пилюля «Заказать» + icon_button меню"
+    },
+    "footer": {
+      "bg": "band",
+      "color": "on_band",
+      "padding": "64px 32px",
+      "columns": "3–4 колонки ссылок 14px on_band_muted, заголовки колонок 16px/500 on_band",
+      "legal": "нижняя строка caption on_band_muted: реквизиты, «Политика обработки персональных данных», год; подвал чёрный в светлой теме и светлый в тёмной (по правилу band)"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Белая полоса во всю ширину, контейнер 1200px, 12 колонок. Колонки 1–6: H1 display 52px/700 в 2–3 строки с ценой или сроком в самом заголовке («Уборка квартиры от 2 900 ₽ за 3 часа»), лид 18px/500 text_muted в одну-две строки, ниже ряд из 3–4 chip с видами услуги. Колонки 7–12: request_card шириной до 480px с тенью form — переключатель видов услуги, поля-строки «Адрес», «Когда», «Площадь», чёрная пилюля «Узнать цену» во всю ширину; сумма, имя, телефон и согласие раскрываются в этой же карточке. Под первым экраном — fact_row из 3–4 фактов. Вариант illustrated: справа вместо карточки — иллюстрация 4:3 с радиусом 16px, форма — одна строка «телефон + чёрная пилюля» под лидом. Вариант dark_band: весь первый экран на band (чёрный), заголовок белый, карточка-форма белая, пилюля внутри карточки — чёрная.",
+    "section_order": [
+      "nav",
+      "hero",
+      "facts",
+      "services",
+      "promo_band",
+      "how",
+      "pricing",
+      "reviews",
+      "faq",
+      "lead_form",
+      "contacts",
+      "footer"
+    ],
+    "sections": {
+      "facts": "fact_row: «4,9 — оценка по 1 240 отзывам» · «от 2 часов — приезд» · «Инвентарь и химия наши» · «Оплата после работы»",
+      "services": "promo_card в 2 колонки с чередованием сторон, 3–4 ряда; «Выбрать» переключает вкладку карточки-формы и прокручивает к ней",
+      "promo_band": "promo_band один раз посередине страницы: «Переезжаете? Посчитаем грузчиков и машину за минуту» + button_on_band «Рассчитать переезд»",
+      "how": "3 шага step: «Оставьте адрес» → «Подтвердим бригаду за 10 минут» → «Платите после приёмки»",
+      "pricing": "таблица price_row на белом, 4–6 строк; над таблицей chip-фильтр по видам услуги",
+      "reviews": "3 review на surface в ряд, на телефоне — лента с прилипанием",
+      "faq": "5–7 faq_item в колонке 760px",
+      "lead_form": "повтор request_card по центру на полосе surface (или на band — по оси final_band)",
+      "contacts": "две contact_pill по центру: «Позвонить» и «Написать в мессенджер»"
+    },
+    "grid": "12 колонок, контейнер 1200px, поля 32px на десктопе и 16px на телефоне, зазор колонок 24px; промо-карточки — 2 в ряд; на 768–1119px карточка-форма встаёт под заголовок во всю ширину 8 колонок",
+    "mobile_notes": "Меньше 600px: шапка 56px (текстовый логотип + чёрная пилюля «Заказать» 40px с зоной нажатия 44px + круглая кнопка меню, меню — белая шторка во весь экран). Первый экран: H1 34px → лид → request_card во всю ширину без тени, с рамкой 1px border; поля-строки и пилюля по 56px. Чипы услуг — горизонтальная лента с прокруткой и затуханием правого края. У промо-карточек иллюстрация всегда над текстом. Промо-полоса сохраняет радиус 16px, поля 24px. Когда карточка-форма ушла с экрана, снизу выезжает чёрная пилюля «Узнать цену» (sticky-cta-mobile). Поля страницы 16px, секции 48px.",
+    "breakpoints": {
+      "mobile": "<600px",
+      "tablet": "600–1119px",
+      "desktop": "≥1120px"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "address",
+      "date"
+    ],
+    "consent_152fz": true,
+    "style": "Карточка-форма request_card: сначала 2–3 поля-строки услуги (адрес, дата и время, площадь или объём — все необязательные) и чёрная пилюля «Узнать цену»; затем в той же карточке сумма и обязательные «Имя» и «Телефон» (маска +7 (___) ___-__-__, inputmode=tel), чекбокс 20px «Я согласен(на) на обработку персональных данных по 152-ФЗ» (не отмечен заранее) с подчёркнутой ссылкой «Политика обработки данных», пилюля «Оформить заявку» 56px во всю ширину. Кто сразу вписал имя и телефон, не заполняя адрес, тоже отправляет заявку — цену назовём по телефону. Кнопка активна всегда: ошибки — видимым текстом цветом error под полем, фокус на первое проблемное поле; при сбое сети — текст с пилюлей «Отправить ещё раз», введённое не стирается.",
+    "success_state": "Карточка заменяется на месте, высота сохраняется: чёрный круг 56px с белой галочкой, h3 «Заявка принята», строка «Перезвоним за 10 минут и подтвердим бригаду на 12 октября, 10:00», строка статуса цветом success «Отправлено», button_subtle «Изменить время». Фокус — на заголовок, область aria-live=polite. Рецепт form-success."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile",
+    "steps-progress-line",
+    "tabs-indicator",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "всё статично; липкая пилюля появляется без выезда",
+      "subtle": "по умолчанию: fade-up-stagger у промо-карточек, шагов и отзывов; accordion-smooth; form-success; sticky-cta-mobile; + steps-progress-line; + tabs-indicator; + form-field-feedback",
+      "rich": "subtle + fade-up-stagger у строки фактов и строк цен"
+    },
+    "fade-up-stagger": "промо-карточки услуг, шаги, отзывы; --reveal-dist 16px, --reveal-dur 320ms, --reveal-step 60ms, --reveal-ease cubic-bezier(.2,0,0,1); первый экран и карточку-форму не анимировать — они в кадре сразу",
+    "accordion-smooth": "faq_item: строки на линиях 1px border без карточек, вопрос 18px/500, шеврон в серой круглой кнопке 32px, раскрытие 200ms",
+    "form-success": "ответ внутри request_card: чёрный круг 56px с белой галочкой (в тёмной теме — белый с чёрной), «Заявка принята», дата и время бригады, статус цветом success; без волны и конфетти",
+    "sticky-cta-mobile": "чёрная пилюля 56px во всю ширину минус 16px по краям, текст «Узнать цену»; data-after — request_card первого экрана, data-hide-on — нижняя форма; клик прокручивает к форме и ставит фокус в поле «Адрес»",
+    "steps-progress-line": "how «заказ → мастер → готово»: чёрная линия, круглая точка 16px",
+    "tabs-indicator": "pricing или виды услуг: пилюля pill_tab 36px, --tbi-edge: var(--text), --tbi-dur 200ms",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Первый экран без фото: белая полоса, заголовок с ценой и карточка-форма. Если нужен кадр — плоская редакционная иллюстрация 4:3 (исполнитель в работе, дом, улица) с радиусом 16px рядом с заголовком, не фоном под текстом.",
+    "video_in_flow": "Видео редкое: беззвучная петля 4:3 на месте иллюстрации одной промо-карточки (бригада в работе, погрузка), запуск при появлении в кадре; ролик со звуком — только по серой пилюле «Смотреть, как работаем» с субтитрами.",
+    "imagery": "Плоские редакционные иллюстрации 4:3: люди в работе (уборщица с тележкой, грузчики с коробками, курьер у подъезда), город и предметы; ограниченная палитра — чёрный, белый, серые и 1–2 спокойных тона только внутри рисунка, без градиентов и 3D. Фото допустимо в тех же рамках 4:3 и 4:5 с радиусом 16px.",
+    "character": "Персонаж — исполнитель (мастер, грузчик, уборщица) в одном рисованном стиле на всех иллюстрациях и в ролике; маскоты-зверьки не нужны.",
+    "audio": "Аудиоверсия не нужна; допустима серая пилюля «Послушать условия» в блоке цен.",
+    "avoid": [
+      "градиенты и фоны-«атмосфера»",
+      "3D и глянцевые рендеры",
+      "второй яркий цвет в интерфейсе",
+      "стоковые фото с улыбкой и тряпкой",
+      "значки «откуда — куда» (кружок и квадрат на линии) и карты маршрута"
+    ],
+    "geometry": {
+      "hero_desktop": "4:3 иллюстрация в колонках 7–12 (вариант illustrated)",
+      "hero_mobile": "4:3 над текстом",
+      "card": "4:3 — промо-карточка услуги",
+      "gallery": "4:3",
+      "promo_card": "4:3",
+      "portrait": "4:5",
+      "showcase": "16:9",
+      "avatar": "1:1 круг",
+      "logo_strip": "монохромные, высота 24px — только если есть партнёры"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "чёрная пилюля → #333333, белая → #efefef, серая → #e2e2e2; за 150ms, без сдвига, масштаба и тени (в тёмной теме белая главная → #e2e2e2)",
+      "focus_visible": "кольцо 2px цвета text с зазором 2px цвета фона: box-shadow 0 0 0 2px #ffffff, 0 0 0 4px #000000 (в тёмной теме и на band — наоборот)",
+      "active": "чёрная → #4b4b4b, белая и серая → #e2e2e2; без масштаба",
+      "disabled": "фон #efefef, текст #5e5e5e, cursor: not-allowed; в форме заявки не применяется — кнопка активна всегда",
+      "loading": "подпись меняется на три точки 6px цвета on_primary, ширина пилюли фиксирована, aria-busy=true, повторные нажатия игнорируются"
+    },
+    "input": {
+      "focus": "фон background и рамка 2px text внутри поля (inset), значок остаётся",
+      "error": "рамка 2px error, под полем текст 14px error со значком «!» и объяснением, что исправить",
+      "disabled": "фон surface, текст text_muted, без рамки"
+    }
+  },
+  "signature": [
+    "Чёрная пилюля 999px — единственная главная кнопка в кадре; всё нажимаемое тоже пилюли, карточки — 16px.",
+    "Карточка-форма в первом экране: вид услуги переключателем, 2–3 поля-строки со значками и «Узнать цену» — сумма раскрывается в той же карточке до ввода телефона.",
+    "Смена полярности посередине страницы: скруглённая чёрная промо-полоса с белым заголовком и белой пилюлей, потом снова белое; подвал чёрный.",
+    "Плоские редакционные иллюстрации 4:3 вместо фото и декора — без градиентов, теней и третьего цвета интерфейса."
+  ],
+  "voice": "Коротко и по делу, как в приложении: глагол, предмет и цифра («Уберём за 3 часа», «Приедем сегодня»). Заголовки обычным регистром, без восклицательных знаков и слов «лучший», «качественно»; цена и срок — в заголовке или первой строкой под ним.",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums lining-nums; неразрывные пробелы между разрядами и перед ₽",
+    "phone": "tabular-nums",
+    "display": "letter-spacing: 0 на всех заголовках — не разрежать и не сжимать",
+    "case": "заголовки, кнопки и чипы — обычным регистром, прописные не используются"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "request_card",
+        "illustrated",
+        "dark_band"
+      ],
+      "estimate_first": [
+        "price_then_contact",
+        "contact_only"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "final_band": [
+        "surface",
+        "band"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "pill_shape",
+      "illustration_style"
+    ],
+    "default": {
+      "hero_layout": "request_card",
+      "estimate_first": "price_then_contact",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "final_band": "surface"
+    },
+    "legend": {
+      "hero_layout": {
+        "request_card": "заголовок слева, карточка-форма справа",
+        "illustrated": "иллюстрация 4:3 справа, короткая форма «телефон + пилюля» под лидом",
+        "dark_band": "первый экран на чёрном, карточка-форма белая"
+      },
+      "estimate_first": {
+        "price_then_contact": "«Узнать цену» показывает сумму, затем имя и телефон",
+        "contact_only": "сразу имя и телефон, цену называем по звонку"
+      },
+      "headline_scale": {
+        "xl": "52px / 34px",
+        "l": "40px / 30px"
+      },
+      "final_band": {
+        "surface": "нижняя форма на серой полосе",
+        "band": "нижняя форма на чёрной полосе с белой карточкой"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Первая гипотеза для услуг на дом — estimate_first: цена до телефона против короткой формы."
+  },
+  "do": [
+    "Держать одну чёрную пилюлю на экран — главное действие; вторичные — белая пилюля (с тенью float только над полосой или картинкой) или серая #efefef.",
+    "Скруглять всё нажимаемое до 999px (кнопки, чипы, контакты), карточки и промо-полосу — до 16px, поля-строки карточки-формы — до 8px.",
+    "Показывать цену до телефона: «Узнать цену» раскрывает сумму в той же карточке, имя и телефон — следом, введённые адрес и дата не стираются.",
+    "Ставить чёрную промо-полосу один раз посередине страницы и чёрный подвал — это вся глубина стиля.",
+    "Набирать заголовки 700 обычным регистром без разрядки, текст 400/500, цены — табличными цифрами.",
+    "В совпадающей нише (такси, трансфер, доставка еды, курьерские сервисы) сдвинуть основной цвет с чёрного на primary_alt #0f4c5c и не брать карточку «откуда — куда» со значками кружок-квадрат и переключатель «Поездка / Доставка» (135-ФЗ, ст. 14.6).",
+    "Показывать кольцо фокуса 2px цвета текста с зазором 2px на каждой пилюле и поле."
+  ],
+  "dont": [
+    "Не вводить второй яркий цвет в интерфейс — оранжевый, синий и зелёный живут только внутри иллюстраций.",
+    "Не делать главную кнопку прямоугольной и не ставить в кадр больше одной чёрной пилюли.",
+    "Не класть тени на все карточки: тень только у карточки-формы и у белой пилюли над полосой.",
+    "Не набирать заголовки прописными и не менять трекинг заголовков.",
+    "Не использовать логотип, фирменный шрифт и фирменные иллюстрации Uber — только свой текстовый логотип и свои рисунки.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не терять введённые адрес и телефон при ошибке."
+  ],
+  "prompt_snippet": "Build a Russian home-service lead landing in an Uber-like black-and-white style. Light: white #ffffff canvas, black ink, muted #5e5e5e, soft fill #efefef, hairlines #e2e2e2; dark flips polarity: black page, white primary pill, light #f3f3f3 promo band. No third interface colour. Every tappable element is a 999px pill; cards and the promo band use 16px corners; field rows inside the form card use 8px. Fonts: self-hosted Wix Madefor Display 700 for headings (52/34px, no tracking, sentence case) and Wix Madefor Text 400/500 for body and buttons. Hero: headline with the price on the left, a request card on the right with a service toggle, address/date/area rows with icons and one black pill \"Узнать цену\" that reveals the price, name, phone and an unchecked 152-FZ consent inside the same card. Flat 4:3 editorial illustrations, one black promo band mid-page, black footer, shadows only on the form card. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/uber/DESIGN.md, commit f696123",
+    "notes": "Шрифты UberMove / UberMoveText заменены парой Wix Madefor Display / Wix Madefor Text (OFL-1.1, кириллица) — как у бренда, заголовочное и текстовое начертания одной семьи с разделёнными ролями; Inter не взят, потому что он уже в девяти системах каталога. Тёмной темы у веб-сайта бренда нет — спроектирована сменой полярности: чёрная страница, белая главная пилюля, светлая промо-полоса. Серый #afafaf для подсказок в полях (2.2:1) заменён на #5e5e5e (5.6:1 на заливке поля); добавлены success и error, которых в маркетинговой палитре бренда нет. Форма поездки «откуда — куда» переделана в карточку расчёта услуги: адрес, дата, площадь → «Узнать цену» → имя и телефон с согласием по 152-ФЗ; значки кружок-квадрат и карта маршрута убраны. Кнопки «скачать приложение» стали контактными пилюлями «Позвонить / Написать». Заголовок 52px оставлен, межстрочный 1.2 и подписи 13px — ради кириллицы. Добавлены primary_alt для совпадающей ниши, состояния, геометрия медиа и голос текста."
+  }
+}

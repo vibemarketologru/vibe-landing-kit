@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "vibe-pro",
+    "product": true,
+    "query": "ии агент",
+    "freq": 71972,
+    "style": "linear",
+    "ru": {
+      "title": "Вайб Профессиональный — ИИ-агент для бизнеса",
+      "niche": "Наш продукт: 44 990 ₽/мес, пробная ступень 14 990 ₽/мес",
+      "hypothesis": "Главная кнопка «Обсудить задачи» против «Начать с пробного за 14 990 ₽».",
+      "media": "Фоновая петля с маскотом (Gemini Omni, «вперёд и назад» без шва), ролик-обращение маскота с русской речью и субтитрами, логотип платформы. Заявки уходят в отдел продаж.",
+      "alt": "Лендинг Вайб Профессиональный: маскот с телефоном на тёмном первом экране",
+      "alt_m": "Телефонная версия лендинга Вайб Профессиональный"
+    },
+    "en": {
+      "title": "Vibe Professional — an AI agent for business",
+      "niche": "Our own product: 44,990 ₽/mo, trial tier 14,990 ₽/mo",
+      "hypothesis": "Main button \"Discuss tasks\" vs \"Start with the 14,990 ₽ trial\".",
+      "media": "Seamless mascot loop (Gemini Omni, forward-and-back), the mascot speaking Russian with captions, platform logo. Leads go to our sales team.",
+      "alt": "Vibe Professional landing: mascot with a phone on a dark hero",
+      "alt_m": "Vibe Professional landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/vibe-pro",
+    "style_name": "Linear",
+    "shot_desktop": "assets/gallery/vibe-pro-desktop.webp",
+    "shot_mobile": "assets/gallery/vibe-pro-mobile.webp"
+  },
+  {
+    "slug": "psiholog-tihaya-komnata",
+    "query": "психолог",
+    "freq": 3042109,
+    "style": "soft",
+    "ru": {
+      "title": "Тихая комната — психологи",
+      "niche": "Психолог онлайн и в кабинете",
+      "hypothesis": "Заголовок «Психолог рядом» против «Первая встреча — чтобы понять, с чего начать».",
+      "media": "Тихая петля кабинета (Omni из кадра gpt-image-2.5), портреты специалистов, аудиоверсия страницы тёплым голосом (Gemini TTS).",
+      "alt": "Лендинг психолога: светлый кабинет с креслами на первом экране",
+      "alt_m": "Лендинг психолога на телефоне"
+    },
+    "en": {
+      "title": "Quiet Room — psychologists",
+      "niche": "Psychologist online and in-office",
+      "hypothesis": "Headline \"A psychologist nearby\" vs \"A first session to see where to start\".",
+      "media": "Quiet office loop (Omni from a gpt-image-2.5 still), specialist portraits, an audio version of the page in a warm voice (Gemini TTS).",
+      "alt": "Psychologist landing: a calm office with armchairs on the hero",
+      "alt_m": "Psychologist landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/psiholog-tihaya-komnata",
+    "style_name": "Мягкий",
+    "shot_desktop": "assets/gallery/psiholog-tihaya-komnata-desktop.webp",
+    "shot_mobile": "assets/gallery/psiholog-tihaya-komnata-mobile.webp"
+  },
+  {
+    "slug": "okna-teplokadr",
+    "query": "пластиковые окна",
+    "freq": 1623402,
+    "style": "swiss",
+    "ru": {
+      "title": "ТеплоКадр — пластиковые окна",
+      "niche": "Окна и балконы, Москва и область",
+      "hypothesis": "Оффер «цена из договора, без доплат» против «от 9 900 ₽ под ключ, замер бесплатно».",
+      "media": "Кадр первого экрана и вертикальный для телефона, разрез профиля, монтажник (gpt-image-2.5), аудиоверсия голосом мастера, чат-бот с ИИ, обученный FAQ страницы.",
+      "alt": "Лендинг пластиковых окон: окно с осенними берёзами на первом экране",
+      "alt_m": "Лендинг пластиковых окон на телефоне"
+    },
+    "en": {
+      "title": "TeploKadr — PVC windows",
+      "niche": "Windows and balconies, Moscow region",
+      "hypothesis": "Offer \"price fixed in the contract\" vs \"from 9,900 ₽ turnkey, free measuring\".",
+      "media": "Hero still plus a vertical one for phones, a profile cross-section, an installer (gpt-image-2.5), an audio version in the master's voice, an AI chatbot trained on the page FAQ.",
+      "alt": "PVC windows landing: a window with autumn birches on the hero",
+      "alt_m": "PVC windows landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/okna-teplokadr",
+    "style_name": "Швейцарский",
+    "shot_desktop": "assets/gallery/okna-teplokadr-desktop.webp",
+    "shot_mobile": "assets/gallery/okna-teplokadr-mobile.webp"
+  },
+  {
+    "slug": "potolki-liniya",
+    "query": "натяжные потолки",
+    "freq": 1317124,
+    "style": "apple",
+    "ru": {
+      "title": "Линия — натяжные потолки",
+      "niche": "Натяжные потолки, Москва",
+      "hypothesis": "Оффер «за один день без пыли» против «от 590 ₽ за м² с монтажом».",
+      "media": "Кадры гостиной со световыми линиями, теневого зазора и кухни (gpt-image-2.5), липкий кадр со сменой преимуществ в духе Apple.",
+      "alt": "Лендинг натяжных потолков: вечерняя гостиная со световыми линиями",
+      "alt_m": "Лендинг натяжных потолков на телефоне"
+    },
+    "en": {
+      "title": "Liniya — stretch ceilings",
+      "niche": "Stretch ceilings, Moscow",
+      "hypothesis": "Offer \"in one day, no dust\" vs \"from 590 ₽ per m² installed\".",
+      "media": "Living room with light lines, a shadow gap and a kitchen (gpt-image-2.5), an Apple-style sticky frame with changing benefits.",
+      "alt": "Stretch ceilings landing: an evening living room with light lines",
+      "alt_m": "Stretch ceilings landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/potolki-liniya",
+    "style_name": "Apple",
+    "shot_desktop": "assets/gallery/potolki-liniya-desktop.webp",
+    "shot_mobile": "assets/gallery/potolki-liniya-mobile.webp"
+  },
+  {
+    "slug": "avtoservis-grafit",
+    "query": "автосервис",
+    "freq": 1151351,
+    "style": "bmw",
+    "ru": {
+      "title": "Графит — автосервис",
+      "niche": "Ремонт и ТО, Москва",
+      "hypothesis": "Оффер «цена не растёт после ремонта» против «ремонт за один день и видео с подъёмника».",
+      "media": "Ночная мастерская оживлена Omni и замирает на последнем кадре; мастер Андрей — один персонаж на портрете и в ролике с русской речью (голос закреплён за персонажем).",
+      "alt": "Лендинг автосервиса: седан на подъёмнике в ночной мастерской",
+      "alt_m": "Лендинг автосервиса на телефоне"
+    },
+    "en": {
+      "title": "Grafit — car service",
+      "niche": "Repairs and maintenance, Moscow",
+      "hypothesis": "Offer \"the price does not grow after the repair\" vs \"same-day repair with video from the lift\".",
+      "media": "A night workshop animated by Omni that stops on its last frame; master Andrey is one character across the portrait and a Russian-speaking video (voice bound to the character).",
+      "alt": "Car service landing: a sedan on a lift in a night workshop",
+      "alt_m": "Car service landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/avtoservis-grafit",
+    "style_name": "BMW",
+    "shot_desktop": "assets/gallery/avtoservis-grafit-desktop.webp",
+    "shot_mobile": "assets/gallery/avtoservis-grafit-mobile.webp"
+  },
+  {
+    "slug": "salon-na-moike",
+    "query": "салон красоты",
+    "freq": 1139180,
+    "style": "editorial",
+    "ru": {
+      "title": "Ателье на Мойке — салон красоты",
+      "niche": "Волосы, ногти, Санкт-Петербург",
+      "hypothesis": "Оффер «волосы, ногти и час тишины» против «колорист подбирает оттенок до окрашивания».",
+      "media": "Журнальная обложка — ролик Omni из кадра с круглым зеркалом, фото-эссе (gpt-image-2.5).",
+      "alt": "Лендинг салона красоты: мастер и клиентка у круглого зеркала",
+      "alt_m": "Лендинг салона красоты на телефоне"
+    },
+    "en": {
+      "title": "Atelier on the Moika — beauty salon",
+      "niche": "Hair and nails, Saint Petersburg",
+      "hypothesis": "Offer \"hair, nails and an hour of quiet\" vs \"a colorist picks the shade before coloring\".",
+      "media": "A magazine cover — an Omni video from a still with a round mirror, a photo essay (gpt-image-2.5).",
+      "alt": "Beauty salon landing: a stylist and a client at a round mirror",
+      "alt_m": "Beauty salon landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/salon-na-moike",
+    "style_name": "Журнал",
+    "shot_desktop": "assets/gallery/salon-na-moike-desktop.webp",
+    "shot_mobile": "assets/gallery/salon-na-moike-mobile.webp"
+  },
+  {
+    "slug": "cvety-pionovyi-dvor",
+    "query": "доставка цветов",
+    "freq": 891858,
+    "style": "airbnb",
+    "ru": {
+      "title": "Пионовый двор — доставка цветов",
+      "niche": "Доставка цветов по Москве",
+      "hypothesis": "Главная кнопка «Выбрать букет» против «Получить фото букета до отправки».",
+      "media": "Документальный кадр доставки и вертикальный для телефона, четыре букета для карточек каталога (gpt-image-2.5).",
+      "alt": "Лендинг доставки цветов: девушка получает букет пионов у двери",
+      "alt_m": "Лендинг доставки цветов на телефоне"
+    },
+    "en": {
+      "title": "Peony Yard — flower delivery",
+      "niche": "Flower delivery in Moscow",
+      "hypothesis": "Main button \"Choose a bouquet\" vs \"Get a photo of the bouquet before delivery\".",
+      "media": "A documentary delivery shot plus a vertical one, four bouquets for catalog cards (gpt-image-2.5).",
+      "alt": "Flower delivery landing: a woman receiving peonies at her door",
+      "alt_m": "Flower delivery landing on a phone"
+    },
+    "url": "https://lk.vibemarketolog.ru/w/cvety-pionovyi-dvor",
+    "style_name": "Airbnb",
+    "shot_desktop": "assets/gallery/cvety-pionovyi-dvor-desktop.webp",
+    "shot_mobile": "assets/gallery/cvety-pionovyi-dvor-mobile.webp"
+  }
+]

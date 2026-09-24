@@ -1,0 +1,653 @@
+{
+  "slug": "miro",
+  "name": "Miro",
+  "kind": "brand",
+  "version": "1.2.0",
+  "disclaimer": "Эстетика в духе Miro. Не аффилировано с Miro; без логотипов и фирменных шрифтов.",
+  "summary": "Белый холст, чёрные кнопки-пилюли и пастельные «стикеры» — модули программы, выгоды и отзывы выглядят как заметки на доске с точечной сеткой. Канареечный жёлтый — только на метках, акционной полоске и одной вторичной кнопке. Заголовки ровным геометричным гротеском 500, крупные цифры, 4 тарифа в ряд и под ними плотная таблица сравнения с липкой шапкой.",
+  "summary_en": "A white canvas, black pill buttons and pastel sticky notes — programme modules, benefits and reviews look like notes on a dotted board. Canary yellow appears only on tags, the promo strip and one secondary button. Even geometric 500-weight headings, big numbers, four pricing tiers in a row and a dense comparison table with a sticky header underneath.",
+  "best_for": [
+    "онлайн-школы и курсы",
+    "тренинги, интенсивы и марафоны",
+    "корпоративное обучение",
+    "конференции, митапы и форумы",
+    "мастер-классы и воркшопы",
+    "репетиторы и подготовка к экзаменам"
+  ],
+  "goals": [
+    "запись на курс",
+    "регистрация на мероприятие",
+    "заявки на корпоративное обучение",
+    "покупка билетов и тарифов"
+  ],
+  "mood": [
+    "бодрый",
+    "дружелюбный",
+    "понятный",
+    "рабочий",
+    "светлый"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f7f8fa",
+        "text": "#1c1c1e",
+        "text_muted": "#555a6a",
+        "border": "#e0e2e8",
+        "primary": "#1c1c1e",
+        "on_primary": "#ffffff",
+        "accent": "#ffd02f",
+        "on_accent": "#1c1c1e",
+        "link": "#3350e6",
+        "success": "#007a50",
+        "error": "#d32f2f",
+        "primary_hover": "#2c2c34",
+        "accent_hover": "#fcb900",
+        "surface_yellow": "#fff8e0",
+        "on_surface_yellow": "#746019",
+        "featured_bg": "#f5f3ff",
+        "featured_border": "#4262ff",
+        "border_strong": "#7a7e8e",
+        "dot_grid": "#d9dbe2",
+        "sticky_yellow": "#fff4c4",
+        "sticky_rose": "#ffd8f4",
+        "sticky_coral": "#ffc6c6",
+        "sticky_teal": "#c3faf5",
+        "sticky_orange": "#ffe6cd",
+        "sticky_lavender": "#e6e0ff",
+        "on_sticky": "#1c1c1e",
+        "band": "#1c1c1e",
+        "on_band": "#ffffff",
+        "on_band_muted": "#a5a8b5"
+      },
+      "dark": {
+        "background": "#131316",
+        "surface": "#1e1e23",
+        "text": "#f5f5f7",
+        "text_muted": "#a5a8b5",
+        "border": "#2f3038",
+        "primary": "#ffffff",
+        "on_primary": "#1c1c1e",
+        "accent": "#ffd02f",
+        "on_accent": "#1c1c1e",
+        "link": "#8fa2ff",
+        "success": "#34d399",
+        "error": "#ff8a80",
+        "primary_hover": "#e0e2e8",
+        "accent_hover": "#ffdb5c",
+        "surface_yellow": "#2a2615",
+        "on_surface_yellow": "#f3dc86",
+        "featured_bg": "#1f1d33",
+        "featured_border": "#6f86ff",
+        "border_strong": "#6b6f7e",
+        "dot_grid": "#2a2b33",
+        "sticky_yellow": "#f3e7b0",
+        "sticky_rose": "#f0cde6",
+        "sticky_coral": "#f2c0c0",
+        "sticky_teal": "#b9ece7",
+        "sticky_orange": "#f3dcc4",
+        "sticky_lavender": "#dcd6f7",
+        "on_sticky": "#1c1c1e",
+        "band": "#26262d",
+        "on_band": "#f5f5f7",
+        "on_band_muted": "#a5a8b5"
+      },
+      "notes": "Главная кнопка — чёрная пилюля (17.01:1), жёлтый #ffd02f — ЗАЛИВКА меток, акционной полоски и вторичной кнопки с чернильной подписью (11.60), текстом по белому он 1.4:1 и не бывает. Ссылки — синий #3350e6 (6.12): фирменный #4262ff даёт 4.75 на белом, но на surface падает ниже 4.5, поэтому он оставлен только рамкой выделенного тарифа featured_border (порог 3:1 для графики). success бренда #00b473 на белом 2.9 — здесь #007a50 (5.39). border_strong #7a7e8e — рамки полей (4.04); hairline #e0e2e8 — разделители и таблица. Стикеры sticky_* — пастели бренда, текст на них всегда чернилами (от 11.5:1); в тёмной теме они чуть приглушены, но остаются светлыми «бумажками» на тёмной доске — это и есть тёмная тема стиля, у бренда её в маркетинге нет. on_surface_yellow — текст метки на бледно-жёлтой подложке (5.76 / в тёмной #f3dc86 на #2a2615). band — полоса-приглашение и подвал: в светлой чёрные, в тёмной — поднятая поверхность #26262d, а не ещё более тёмная."
+    },
+    "typography": {
+      "display": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "72px",
+        "size_mobile": "38px",
+        "line_height": 1.05,
+        "letter_spacing": "-0.025em"
+      },
+      "h2": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "48px",
+        "size_mobile": "30px",
+        "line_height": 1.12,
+        "letter_spacing": "-0.02em"
+      },
+      "h3": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "22px",
+        "size_mobile": "20px",
+        "line_height": 1.3,
+        "letter_spacing": "-0.005em"
+      },
+      "lead": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "label": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.3,
+        "letter_spacing": "0",
+        "note": "метки-пилюли «Хит», «Старт 14 октября», «Скидка 20%»"
+      },
+      "button": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "stat": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "64px",
+        "size_mobile": "44px",
+        "line_height": 1.05,
+        "letter_spacing": "-0.03em",
+        "note": "«12 000 выпускников», «4,9 из 5» — крупной цифрой цвета text"
+      },
+      "price": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "40px",
+        "size_mobile": "34px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.02em"
+      },
+      "table_group": {
+        "family": "Onest",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.3,
+        "letter_spacing": "0.06em",
+        "note": "заголовки групп в таблице сравнения прописными: «ОБУЧЕНИЕ», «ПОДДЕРЖКА», «ДОКУМЕНТЫ»"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "6px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "feature": "28px",
+      "banner": "32px",
+      "sticker": "4px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "hero_top_desktop": "96px",
+      "container": "1280px",
+      "gutter_mobile": "16px",
+      "card_padding": "32px",
+      "card_gap": "20px"
+    },
+    "shadow": {
+      "card": "none",
+      "sticker": "0 1px 2px rgba(5,0,56,0.06), 0 6px 14px rgba(5,0,56,0.08)",
+      "raised": "0 4px 12px rgba(5,0,56,0.06)",
+      "mockup": "0 12px 32px -4px rgba(5,0,56,0.08)",
+      "mockup_dark": "0 12px 32px -4px rgba(0,0,0,0.6)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #3350e6",
+      "focus_dark": "0 0 0 2px #131316, 0 0 0 4px #8fa2ff",
+      "note": "Плоская система с одним исключением: стикеры и мокап доски приподняты мягкой тенью с фиолетово-синим оттенком (rgba 5,0,56), как бумажки на доске. Карточки тарифов, таблица и поля — без тени."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "note": "Живо, но по делу: стикеры приподнимаются и чуть наклоняются под курсором, цифры досчитываются один раз, кнопка рекомендуемого тарифа один раз «вдыхает». Всё за 150–400ms."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Onest",
+      "fontsource": "onest",
+      "role": "display+body",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/onest — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Roobert PRO (проприетарный)",
+      "why": "ровный геометричный гротеск с чуть скруглёнными овалами и спокойным весом 500 — как Roobert, одна гарнитура на всё от 72px до 12px; кириллица нарисована российской студией, без механических заимствований"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "14px 28px",
+      "height": "52px",
+      "font": "button",
+      "weight": 500,
+      "hover": "фон primary_hover за 150ms",
+      "use": "«Записаться на курс», «Купить билет», «Выбрать тариф»"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "pill",
+      "padding": "13px 27px",
+      "height": "52px",
+      "weight": 500,
+      "hover": "фон surface",
+      "use": "«Смотреть программу», «Бесплатный урок»"
+    },
+    "button_yellow": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "padding": "14px 28px",
+      "height": "52px",
+      "weight": 500,
+      "hover": "фон accent_hover",
+      "use": "вариант главной кнопки в ветке cta_color_role=accent; маленькая жёлтая пилюля внутри promo_strip («Занять место»)"
+    },
+    "button_on_band": {
+      "bg": "on_band",
+      "color": "band",
+      "radius": "pill",
+      "padding": "14px 28px",
+      "height": "52px",
+      "weight": 500,
+      "use": "белая пилюля на чёрной полосе-приглашении"
+    },
+    "promo_strip": {
+      "bg": "band",
+      "color": "on_band",
+      "height": "44px",
+      "font": "body 14px/500",
+      "content": "одна строка по центру: «Ранняя цена до 15 октября — минус 20%» + маленькая button_yellow высотой 28px «Занять место»; кнопка закрытия 44×44 справа",
+      "use": "над навигацией: набор на поток, ранняя цена билетов; одна полоса, без бегущей строки"
+    },
+    "sticker": {
+      "bg": "sticky_yellow | sticky_rose | sticky_coral | sticky_teal | sticky_orange | sticky_lavender",
+      "color": "on_sticky",
+      "radius": "sticker",
+      "padding": "24px",
+      "aspect": "1:1 (на телефоне допускается 4:3)",
+      "shadow": "sticker",
+      "rotate": "по очереди -1.5°, 1°, -0.5°, 1.5° — не больше 2°; на телефоне без поворота",
+      "content": "метка «Модуль 1» label, заголовок h3, 2–3 строки body, внизу caption «2 недели · 6 уроков»",
+      "use": "модули программы, выгоды, «что вы получите», короткие отзывы; 3–4 цвета на экран, соседние разные"
+    },
+    "board": {
+      "bg": "background с точечной сеткой: radial-gradient(dot_grid 1px, transparent 1.5px) 0 0 / 24px 24px",
+      "border": "1px solid border",
+      "radius": "xl",
+      "shadow": "mockup",
+      "content": "на доске стикеры модулей по неделям, стрелки-связи 2px цвета border_strong со скруглёнными концами, рамка-группа «Итоговый проект» с подписью label; для ивентов — программа дня по залам",
+      "use": "мокап первого экрана и блок «Программа»"
+    },
+    "feature_card": {
+      "bg": "sticky_* или background с рамкой border",
+      "radius": "feature",
+      "padding": "32px",
+      "content": "h3, body, внизу скриншот урока или фото работы студента radius lg",
+      "use": "крупные карточки «Формат обучения»: живые разборы, практика, наставник; цветные чередуются с белыми"
+    },
+    "stat": {
+      "number": "stat, цвет text",
+      "label": "caption text_muted под числом",
+      "layout": "4 в ряд через воздух, без карточек",
+      "use": "выпускники, средняя оценка, часов практики, работодателей-партнёров"
+    },
+    "pricing_card": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "xl",
+      "padding": "32px",
+      "content": "название h3, метка label, цена шрифтом price + «/мес» или «за курс» text_muted, строка рассрочки caption, button_secondary во всю ширину, список 5–7 пунктов с галочкой",
+      "featured": "фон featured_bg, рамка 2px featured_border, метка «Хит» на button_yellow-заливке, кнопка button_primary",
+      "dark_tier": "четвёртый тариф «Для компаний» — фон band, текст on_band, кнопка button_on_band «Оставить заявку»",
+      "use": "ровно 4 тарифа в ряд: Базовый / Стандарт / С наставником / Для компаний (для ивентов: Онлайн / Стандарт / Бизнес / Корпоративный)"
+    },
+    "compare_table": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "md",
+      "header": "липкая строка (position: sticky; top: 72px) с названиями тарифов 16px/500 и button_primary 40px у каждого",
+      "group_row": "строка-разделитель на surface с заголовком table_group прописными",
+      "row": "название возможности 15px text слева, значения по центру: галочка 20px цвета text, тире text_muted или текст 14px; линия 1px border",
+      "mobile": "горизонтальная прокрутка с закреплённой первой колонкой и затуханием правого края, либо переключатель тарифа пилюлями и одна колонка значений",
+      "use": "20–40 строк под тарифами; сворачивается кнопкой «Показать всё сравнение»"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "height": "52px",
+      "padding": "12px 16px",
+      "label": "подпись над полем 14px/500 text",
+      "focus": "рамка 2px link-синего #3350e6 (в тёмной #8fa2ff)",
+      "error": "рамка 2px error, текст 14px error с иконкой под полем"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "xs",
+      "border": "1px solid border_strong",
+      "checked": "фон text, галочка background",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных; не отмечен заранее"
+    },
+    "tag": {
+      "bg": "surface_yellow",
+      "color": "on_surface_yellow",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "label",
+      "use": "«Старт 14 октября», «Онлайн», «Есть рассрочка»"
+    },
+    "badge_hot": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "label",
+      "use": "«Хит» на выделенном тарифе, «−20%» у цены"
+    },
+    "speaker_card": {
+      "bg": "background",
+      "radius": "xl",
+      "content": "фото 1:1 radius xl на подложке одного из sticky_*, имя h3, должность и опыт caption text_muted, 1–2 строки о теме",
+      "use": "авторы курса, наставники, спикеры конференции"
+    },
+    "review_sticker": {
+      "base": "sticker",
+      "content": "текст отзыва body 2–4 строки, аватар-круг 32px, имя 14px/600, «выпускник потока весна-2026» caption",
+      "use": "отзывы стикерами на доске 3–4 в ряд"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "72px",
+      "border_bottom": "1px solid border при прокрутке",
+      "left": "текстовый логотип клиента 20px/600 цветом text — не на жёлтом квадрате",
+      "center": "3–4 ссылки 15px/500 text",
+      "right": "ссылка «Войти» 15px + button_primary высотой 44px «Записаться»",
+      "mobile": "64px: логотип, кнопка «Записаться» 40px (зона 44px), меню 44×44"
+    },
+    "sticky_bottom_bar": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "padding": "12px 16px",
+      "content": "слева цена «от 4 900 ₽/мес» 18px/500 + tag «Старт 14 октября»; справа button_primary «Записаться»",
+      "use": "телефон, рецепт sticky-cta-mobile"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "24px 0",
+      "question": "18px/500 text, справа круглая кнопка 36px с рамкой border и плюсом",
+      "answer": "body text_muted, колонка 760px"
+    },
+    "cta_banner": {
+      "bg": "band",
+      "color": "on_band",
+      "radius": "banner",
+      "padding": "64px",
+      "content": "h2 по центру, строка lead on_band_muted, button_on_band; по краям 2–3 стикера, выглядывающие из-за границы полосы",
+      "use": "приглашение перед формой"
+    },
+    "footer": {
+      "bg": "band",
+      "color": "on_band",
+      "padding": "64px 32px 40px",
+      "columns": "4–5 колонок ссылок 14px on_band_muted, заголовки 15px/500 on_band",
+      "legal": "юрлицо, ИНН, лицензия на образовательную деятельность (если выдаются документы), оферта, «Политика обработки персональных данных» — caption on_band_muted"
+    }
+  },
+  "states": {
+    "button": {
+      "hover": "primary: фон #2c2c34 (в тёмной #e0e2e8); secondary: фон surface; yellow: фон #fcb900 (подпись 9.79:1); transition 150ms ease_standard",
+      "focus_visible": "кольцо 2px синего #3350e6 с зазором 2px белого (shadow.focus); в тёмной теме #8fa2ff — синий кольца отличает фокус от чёрной пилюли",
+      "active": "scale(.97) на 100ms",
+      "disabled": "фон border #e0e2e8, подпись text_muted — как у бренда; на форме заявки не применяется, кнопка активна всегда",
+      "loading": "подпись заменяется тремя точками 6px цвета on_primary, ширина зафиксирована, aria-busy=true"
+    },
+    "input": {
+      "focus": "рамка 2px #3350e6 (в тёмной #8fa2ff), как у бренда — синий, а не чёрный",
+      "error": "рамка 2px error (#d32f2f / #ff8a80), под полем 14px error с иконкой «!»; фон не заливается; aria-invalid=true",
+      "disabled": "фон surface, рамка border, текст text_muted"
+    }
+  },
+  "signature": [
+    "Пастельные стикеры с лёгким поворотом ±1–2° и мягкой тенью — модули программы, выгоды и отзывы выглядят как заметки на рабочей доске.",
+    "Точечная сетка «доски» под мокапом первого экрана и под блоком программы: стикеры, связи-стрелки и рамки-группы.",
+    "Чёрные кнопки-пилюли на белом; канареечный жёлтый — только метки, акционная полоска и одна вторичная кнопка.",
+    "Ровно четыре тарифа в ряд и под ними плотная таблица сравнения с липкой шапкой и группами прописными."
+  ],
+  "voice": "Бодрый и конкретный, как хороший методист: что человек будет уметь и за сколько недель — «Соберёте первый проект на 3-й неделе», «6 живых разборов с наставником». Короткие фразы, цифры и сроки; без «станьте профессионалом за месяц», гарантий трудоустройства и дохода.",
+  "type_features": {
+    "prices": "font-variant-numeric: tabular-nums; «4 900 ₽/мес» с неразрывными пробелами; рассрочка отдельной строкой caption",
+    "stats": "font-variant-numeric: tabular-nums; неразрывный пробел в «12 000»",
+    "dates": "«14 октября», «пн, ср 19:00–20:30 мск» — время tabular-nums",
+    "table": "font-variant-numeric: tabular-nums в числовых ячейках таблицы сравнения",
+    "headings": "text-wrap: balance; без прописных"
+  },
+  "layout": {
+    "hero_pattern": "По центру на белом, 96px сверху: tag «Старт 14 октября · онлайн», H1 72px весом 500 в две строки, лид 20px text_muted в колонке 720px, две пилюли в ряд — чёрная «Записаться на курс» и прозрачная «Бесплатный урок». Под ними строка доверия caption: «4,9 из 5 · 12 000 выпускников». Ниже во всю ширину контейнера — board 16:9: точечная сетка, стикеры модулей по неделям, стрелки-связи и рамка «Итоговый проект»; для ивентов — программа дня по залам. Над навигацией — promo_strip с ранней ценой. Вариант split_board: текст слева 5 колонок, доска справа 7 колонок с обрезом за правым краем экрана.",
+    "section_order": [
+      "promo_strip",
+      "nav",
+      "hero",
+      "logos",
+      "stats",
+      "program_board",
+      "format",
+      "speakers",
+      "student_works",
+      "pricing",
+      "compare_table",
+      "reviews",
+      "faq",
+      "cta_banner",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "logos": "«Выпускники работают в» или «Партнёры конференции»: монохромные логотипы или названия текстом 16px/500 text_muted",
+      "stats": "4 stat в ряд",
+      "program_board": "board со стикерами модулей; под доской ссылка «Скачать программу PDF»",
+      "format": "3 feature_card: цветной стикерного тона и белые с рамкой по очереди",
+      "speakers": "3–4 speaker_card на подложках разных sticky_*",
+      "student_works": "4–6 работ студентов 16:10 radius lg с подписью «Анна, 2-й месяц обучения»",
+      "pricing": "ровно 4 pricing_card, третий выделен, четвёртый — тёмный «Для компаний»; над ними переключатель пилюлями «Сразу / В рассрочку»",
+      "compare_table": "compare_table под тарифами, свёрнута до 10 строк с кнопкой «Показать всё сравнение»",
+      "reviews": "review_sticker на точечной сетке 3–4 в ряд",
+      "faq": "6–10 faq_item: документы, возврат, доступ к урокам, рассрочка",
+      "cta_banner": "cta_banner с белой пилюлей, ведущей к форме",
+      "lead_form": "форма в колонке 560px на белом"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор 20px; тарифы 4 в ряд от 1200px, 2 в ряд на 768–1199px; стикеры 3–4 в ряд",
+    "mobile_notes": "Меньше 768px: promo_strip 40px, текст обрезается многоточием; навигация 64px. H1 38px, лид 18px; кнопки первого экрана стопкой по 52px во всю ширину; доска 4:5 — фрагмент с 4 стикерами, прокручивается горизонтально с затуханием края. Стикеры без поворота, по одному во всю ширину или лентой шагом 80%. Тарифы — горизонтальная лента с прилипанием, выделенный показан первым; таблица сравнения — переключатель тарифа пилюлями и одна колонка значений. Липкая нижняя панель с ценой и «Записаться». Отступы 16px, секции 56px; зоны нажатия не меньше 44×44px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "На белом под cta_banner: h2 «Оставьте заявку — поможем выбрать тариф», строка body text_muted. Поля «Имя» и «Телефон» 52px, radius 8px, рамка 1px border_strong, фокус — синяя рамка 2px; телефон с маской +7 (___) ___-__-__, inputmode=tel. Необязательно — выбор тарифа пилюлями (заявка уходит и без него). Кнопка button_primary во всю ширину «Записаться на курс». Под кнопкой caption text_muted «Менеджер позвонит в течение рабочего дня». Ниже чекбокс 20px, не отмеченный заранее: «Согласен(на) на обработку персональных данных по 152-ФЗ», ссылка «Политика обработки данных» синим link с подчёркиванием. Кнопка активна всегда: ошибки — видимым текстом у поля, фокус на первое проблемное поле; сбой сети — текст и «Отправить ещё раз», введённое не стирается.",
+    "success_state": "Форма заменяется на месте жёлтым стикером sticky_yellow с лёгким поворотом −1°: галочка 32px цвета text, h3 «Заявка принята», строка «Позвоним на +7 … сегодня до 20:00 мск», button_secondary «Смотреть бесплатный урок». Фокус на заголовок, aria-live=polite; без конфетти."
+  },
+  "motion_recipes": [
+    "tilt-card",
+    "counter-up",
+    "cta-attention",
+    "sticky-cta-mobile",
+    "steps-progress-line",
+    "tabs-indicator",
+    "form-field-feedback"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "ничего не двигается: стикеры стоят со своим поворотом, цифры сразу итоговые",
+      "subtle": "по умолчанию: цифры досчитываются один раз, липкая панель на телефоне, стикеры приподнимаются тенью при наведении без наклона; + steps-progress-line; + tabs-indicator; + form-field-feedback",
+      "rich": "как subtle + наклон стикеров за курсором и одна серия «вдоха» кнопки рекомендуемого тарифа"
+    },
+    "tilt-card": "только уровень rich и только стикеры (sticker, review_sticker) в блоках программы и отзывов: data-tilt-max 4, --tilt-glare transparent — бумага не блестит; наклон складывается с исходным поворотом стикера; тарифы и таблица не наклоняются",
+    "counter-up": "ряд stat: «12 000 выпускников», «4,9» (data-count-decimals 1), «320 часов практики», «85 партнёров»; полосу-акцент под числом не рисовать — цифры цвета text без украшений",
+    "cta-attention": "только уровень rich: кнопка «Выбрать» в выделенном тарифе и кнопка cta_banner; --cta-radius 9999px, --cta-attn-count 2; блик разрешён только на чёрной пилюле (контраст 17:1), на жёлтой --cta-shine transparent",
+    "sticky-cta-mobile": "панель sticky_bottom_bar: цена «от …» с меткой старта + «Записаться»; data-after — кнопки первого экрана, data-hide-on — тарифы и форма заявки",
+    "steps-progress-line": "program_board: программа курса по модулям, линия цвета text, стикер-точка с наклоном 0°",
+    "tabs-indicator": "pricing «онлайн / с куратором», пилюля в пилюле, --tbi-dur 200ms",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Мокап рабочей доски под текстом: точечная сетка, пастельные стикеры модулей по неделям, стрелки-связи и рамки-группы — программа курса или день мероприятия, собранные своими руками в HTML/SVG, а не скриншот чужого сервиса.",
+    "video_in_flow": "Фрагмент урока 60–120 секунд или aftermovie прошлого мероприятия 30–60 секунд — по кнопке со звуком и субтитрами, в рамке radius 16px с мягкой тенью; постер — кадр с живым человеком у доски или на сцене.",
+    "imagery": "Скриншоты платформы обучения и работы студентов в рамках 16px на белом; фото спикеров 1:1 на пастельных подложках стикерных тонов; фото с прошлых мероприятий — документальные, дневной свет, без постановки.",
+    "character": "Реальные авторы курса, наставники и спикеры с фото и одной фразой о теме; маскот не нужен — роль «персонажа» играет сама доска со стикерами.",
+    "audio": "Аудиоверсия страницы не нужна; уместен отрывок лекции 30–60 секунд «Послушать, как объясняет автор» в карточке спикера — кнопка-пилюля с рамкой.",
+    "avoid": [
+      "стоковые фото «студент с ноутбуком улыбается»",
+      "скриншоты чужих сервисов и их интерфейса",
+      "жёлтый квадрат с логотипом в левом верхнем углу",
+      "жёлтые фоны секций и жёлтый текст",
+      "тёмные кинематографичные кадры",
+      "обещания трудоустройства и дохода на картинках"
+    ],
+    "geometry": {
+      "hero_desktop": "16:9 доска-мокап под текстом (≈1200×675)",
+      "hero_mobile": "4:5 фрагмент доски с горизонтальной прокруткой",
+      "hero_split": "4:3 доска справа с обрезом за краем экрана",
+      "card": "1:1 стикер",
+      "portrait": "1:1 спикеры и авторы на пастельной подложке",
+      "gallery": "16:10 скриншоты и работы студентов",
+      "video_poster": "16:9",
+      "logo_strip": "монохромные логотипы работодателей и партнёров высотой 28px цвета text_muted"
+    }
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "centered_board",
+        "split_board"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "pricing_depth": [
+        "tiers_and_table",
+        "tiers_only"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "pill_buttons",
+      "four_tiers",
+      "yellow_as_label_only"
+    ],
+    "default": {
+      "hero_layout": "centered_board",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "pricing_depth": "tiers_and_table"
+    },
+    "legend": {
+      "hero_layout": {
+        "centered_board": "текст по центру, доска во всю ширину ниже",
+        "split_board": "текст слева, доска справа с обрезом за краем"
+      },
+      "cta_color_role": {
+        "primary": "чёрная пилюля",
+        "accent": "жёлтая пилюля с чернильной подписью — единственное исключение из правила «жёлтый только на метках»"
+      },
+      "headline_scale": {
+        "xl": "72px / 38px",
+        "l": "56px / 34px"
+      },
+      "pricing_depth": {
+        "tiers_and_table": "4 тарифа и таблица сравнения",
+        "tiers_only": "только 4 тарифа, без таблицы"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для курсов первой проверять pricing_depth: таблица помогает дорогим тарифам, но удлиняет путь к форме."
+  },
+  "do": [
+    "Строить страницу на белом холсте с чёрными кнопками-пилюлями, а цвет давать пастельными стикерами.",
+    "Показывать программу и выгоды стикерами на точечной сетке: 3–4 разных пастели на экран, поворот не больше 2°, текст чернилами.",
+    "Держать канареечный жёлтый #ffd02f только заливкой меток, акционной полоски и одной вторичной кнопки — с чернильной подписью.",
+    "Давать ровно четыре тарифа в ряд: выделенный — лавандовая подложка и синяя рамка 2px, «Для компаний» — тёмный; под ними таблица сравнения с липкой шапкой.",
+    "Выносить результат в крупные цифры 64px весом 500 цвета текста.",
+    "Писать сроки и формат конкретно: старт, длительность, число живых разборов, рассрочка.",
+    "В совпадающей нише (онлайн-доски, сервисы совместной работы, таск-трекеры) сменить жёлтый на другой тон и не брать стикеры на точечной сетке — требование ст. 14.6 закона о защите конкуренции (135-ФЗ)."
+  ],
+  "dont": [
+    "Не заливать жёлтым фоны секций и не писать жёлтым по белому — 1,4:1.",
+    "Не ставить свой логотип на жёлтый квадрат в левом верхнем углу и не использовать логотип, интерфейс и шрифт Miro.",
+    "Не делать кнопки прямоугольными — пилюля обязательна; и не красить главную кнопку синим.",
+    "Не наклонять стикеры больше чем на 2° и не ставить два одинаковых цвета рядом.",
+    "Не добавлять тяжёлые тени карточкам тарифов и таблице — тень только у стикеров и доски.",
+    "Не обещать трудоустройство, доход и «профессию за месяц».",
+    "Не прятать и не отмечать заранее согласие на обработку данных и не отбрасывать заявку молча."
+  ],
+  "prompt_snippet": "Build a bright, practical lead landing in a Miro-like style for a Russian online school, training or event. Light: white canvas #ffffff, surface #f7f8fa, ink #1c1c1e, muted #555a6a, hairlines #e0e2e8, field borders #7a7e8e, links #3350e6. Dark: #131316, surface #1e1e23, text #f5f5f7, muted #a5a8b5, main pill turns white. Main CTA: black pill #1c1c1e with white label; canary yellow #ffd02f only as a fill for tags, a promo strip and one secondary pill, always with ink text. Programme modules, benefits and reviews are pastel sticky notes (#fff4c4, #ffd8f4, #ffc6c6, #c3faf5, #ffe6cd) rotated up to 2 degrees with a soft shadow on a 24px dotted board grid. Font: Onest only — H1 72/38px weight 500, big 64px stats. Four pricing tiers in a row (featured on lavender #f5f3ff with a 2px #4262ff border) and a comparison table with a sticky header. Unchecked 152-FZ consent. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/miro/DESIGN.md, commit f696123",
+    "notes": "Roobert PRO заменён на Onest (OFL-1.1, кириллица) — одна гарнитура на весь масштаб, как у бренда. Контраст: ссылки #4262ff (4.75 на белом, ниже 4.5 на surface) переведены в #3350e6 (6.12), фирменный синий оставлен рамкой выделенного тарифа; success #00b473 (2.9) → #007a50 (5.39); рамка полей #7a7e8e (4.04) вместо #c7cad5. Тёмная тема своя (у бренда в маркетинге её нет): доска #131316, стикеры остаются светлыми «бумажками» с чернильным текстом, главная пилюля белая, чёрные полосы переходят в поднятую поверхность. Кнопки подняты с 40–44 до 52px, H1 уменьшен с 80 до 72px под длину русских слов. Жёлтый бренда оставлен только на метках, акционной полоске и одной вторичной кнопке — не в роли знака; жёлтый квадрат с логотипом запрещён. Под русскоязычные онлайн-школы и мероприятия добавлены доска-программа, стикеры-модули, рассрочка, лицензия в подвале, согласие по 152-ФЗ."
+  }
+}

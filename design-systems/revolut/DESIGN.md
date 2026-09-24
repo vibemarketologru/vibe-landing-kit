@@ -75,7 +75,21 @@
 
 ## Анимации
 
-`hero-text-reveal`, `fade-up-stagger`, `counter-up`, `sticky-stack-cards`, `parallax-soft`, `tilt-card`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+`hero-text-reveal`, `fade-up-stagger`, `counter-up`, `sticky-stack-cards`, `parallax-soft`, `tilt-card`, `accordion-smooth`, `form-success`, `sticky-cta-mobile`, `tabs-indicator`, `result-bars`, `media-zoom-scroll`, `form-field-feedback` — рецепты: GET /api/agent/motion/{slug}
+
+## Медиа
+
+**Первый экран.** Телефон с живым экраном приложения на смелом тёмном или градиентном поле.
+
+**Видео ниже.** Записи экрана приложения внутри рамки телефона, крупные цифры.
+
+**Картинки.** Мокапы устройств, продуктовые рендеры.
+
+**Персонаж или маскот.** Не нужен.
+
+**Аудиоверсия.** Не нужна.
+
+**Избегать:** домашние фото; мелкий текст на картинках.
 
 ## A/B-тест
 

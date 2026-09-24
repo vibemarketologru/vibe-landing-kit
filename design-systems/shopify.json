@@ -529,7 +529,11 @@
     "parallax-soft",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "media-zoom-scroll",
+    "scroll-story-steps",
+    "result-bars",
+    "form-field-feedback"
   ],
   "motion_map": {
     "hero-text-reveal": "строки тонкого заголовка первого экрана поднимаются по очереди, lead и пилюли идут следом классом htr-sub; без ожидания шрифтов. Других входных анимаций на первом экране нет: строка доверия и фото стоят сразу",
@@ -540,7 +544,21 @@
     "parallax-soft": "только фото-витрина: класс px-layer на самом фото, --px-shift: 12px (полный ход 24px, на телефоне 8px); рамка с overflow: hidden, фото выше рамки на 24px и object-fit: cover, чтобы край не открывался; текст неподвижен",
     "accordion-smooth": "частые вопросы",
     "form-success": "ответ формы заявки. Круг рецепта .lead__badge (64px) перекрасить: background accent #c1fbd4, color #000000, у волны ::after border-color #c1fbd4. Переменную --color-success не трогать — ею пишется текст успеха",
-    "sticky-cta-mobile": "липкая пилюля «Оставить заявку» на телефоне высотой 52px, цвет primary своей дорожки; у главной кнопки первого экрана id=hero-cta, у блока формы id=lead — панель появляется после первой и прячется, когда форма в кадре"
+    "sticky-cta-mobile": "липкая пилюля «Оставить заявку» на телефоне высотой 52px, цвет primary своей дорожки; у главной кнопки первого экрана id=hero-cta, у блока формы id=lead — панель появляется после первой и прячется, когда форма в кадре",
+    "media-zoom-scroll": "фото-витрина showcase, вместо parallax-soft; --mzs-radius 20px, --mzs-from .86, --mzs-img-from 1.08",
+    "scroll-story-steps": "how «товар → витрина → заказы»; --sst-radius 20px, --sst-in 700ms",
+    "result-bars": "proof, кейс бренда; --rb-now-color: var(--text)",
+    "form-field-feedback": "поля radius 8px"
+  },
+  "media": {
+    "hero": "Фото реального владельца бизнеса в его пространстве во всю ширину.",
+    "video_in_flow": "История владельца — ролик со звуком по кнопке, с субтитрами; витрина товаров карточками.",
+    "imagery": "Документальные фото людей и товаров, естественный свет.",
+    "character": "Реальный владелец/мастер — один человек на фото и в ролике.",
+    "audio": "Аудиоверсия истории владельца уместна.",
+    "avoid": [
+      "абстрактные 3D-фигуры"
+    ]
   },
   "ab_axes": {
     "vary": {

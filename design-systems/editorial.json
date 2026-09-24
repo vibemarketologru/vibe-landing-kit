@@ -767,9 +767,18 @@
     "counter-up",
     "accordion-smooth",
     "form-success",
-    "sticky-cta-mobile"
+    "sticky-cta-mobile",
+    "svg-line-draw",
+    "steps-progress-line",
+    "text-scroll-highlight",
+    "form-field-feedback"
   ],
   "motion_map": {
+    "levels": {
+      "none": "accordion-smooth, form-success, sticky-cta-mobile — только функциональные; + form-field-feedback",
+      "subtle": "+ fade-up-stagger, image-reveal-clip (ниже первого экрана), counter-up, scroll-progress-bar; + svg-line-draw; + steps-progress-line",
+      "rich": "+ hero-text-reveal на заголовке первого экрана, parallax-soft на фото материала и панораме; + text-scroll-highlight"
+    },
     "hero-text-reveal": "только заголовок первого экрана и только при motion_level = rich: строки поднимаются из-под маски по очереди; --htr-dur: 900ms (motion.reveal), --htr-ease: ease_emphasized; запас маски 0.14em под Й и хвосты; заголовок виден без JS. Одновременно с ним на первом экране больше ничего не появляется — фото стоит на месте.",
     "image-reveal-clip": "кадры фотоистории и фото материала ниже первого экрана, не больше 6 на страницу: шторка снизу вверх, --irc-dur: 900ms, --irc-zoom: 1.06, --irc-radius: 0. Фото первого экрана не анимировать никогда: на компьютере это LCP-элемент, и рецепт его сам не трогает.",
     "fade-up-stagger": "рубрики feature_item, строки меню по группам, отзывы, колонки тарифов — сдвиг 16px, шаг 80ms, не больше 6 в волне",
@@ -779,12 +788,22 @@
     "accordion-smooth": "FAQ на <details>, иконка-плюс поворачивается на 45°",
     "form-success": "смена карточки формы на подтверждение; значок цвета success",
     "sticky-cta-mobile": "липкая чернильная кнопка на телефоне, прячется у формы",
-    "levels": {
-      "none": "accordion-smooth, form-success, sticky-cta-mobile — только функциональные",
-      "subtle": "+ fade-up-stagger, image-reveal-clip (ниже первого экрана), counter-up, scroll-progress-bar",
-      "rich": "+ hero-text-reveal на заголовке первого экрана, parallax-soft на фото материала и панораме"
-    },
+    "svg-line-draw": "subtle: линия пером под словом в заголовке материала; --sld-color: var(--accent), --sld-width 2px, --sld-dur 900ms, без стрелок",
+    "steps-progress-line": "subtle: программа или этапы в offer; --spl-color: var(--text), квадратная точка",
+    "text-scroll-highlight": "rich: одна цитата-манифест 30–50 слов шрифтом display",
+    "form-field-feedback": "уровень none, без встряски — журнал не прыгает",
     "not_for_this_style": "gradient-drift, tilt-card, magnetic-button, cta-attention, sticky-stack-cards — кричат и спорят с журнальной интонацией; marquee-logos — изданий в «О нас писали» обычно 3–5, лента с повторами выглядит пустой и суетливой, строка стоит на месте; before-after-slider — только у одежды и интерьера для реальных «было — стало» (перешив, стилизация, ремонт) и только собственные снимки."
+  },
+  "media": {
+    "hero": "Обложка журнала: фото во всю ширину или на всю колонку, крупная антиква заголовка, строка выпуска.",
+    "video_in_flow": "Фото-эссе с подписями, цитаты-выноски; редакционный фильм со звуком по кнопке.",
+    "imagery": "Плёночное зерно, тёплый практический свет, репортаж, живые руки и лица.",
+    "character": "Реальные мастера и герои истории.",
+    "audio": "Аудиоверсия как «прочитано автором».",
+    "avoid": [
+      "глянцевый сток",
+      "плоские иллюстрации"
+    ]
   },
   "photography": {
     "direction": "Фото как в журнале: естественный свет из окна или вечерний тёплый, живые моменты вместо позирования, детали и фактуры (руки, ткань, корка хлеба, пар над тарелкой), свободное пространство в кадре. Цвет тёплый и приглушённый, контраст мягкий, насыщенность −10–15%, без HDR и резкого повышения чёткости.",
