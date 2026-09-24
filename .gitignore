@@ -1,0 +1,8 @@
+_preview/
+_src/
+_budget.json
+_budget.json.lock
+_gen-*.log
+_stickers-check.png
+node_modules/
+.DS_Store

@@ -1,0 +1,575 @@
+{
+  "slug": "airbnb",
+  "name": "Airbnb",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Airbnb; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Белый холст, почти чёрные «чернила» и один тёплый коралловый акцент Rausch на главной кнопке. Вес странице дают крупные фотографии со скруглением 14px, а не жирный шрифт: заголовки умеренные, 600. Всё мягкое — кнопки и поля 8px, форма-пилюля и бейджи полностью круглые, одна лёгкая тень только у плавающих элементов, рейтинг — крупной цифрой цветом текста.",
+  "summary_en": "A white canvas, near-black ink and a single warm coral Rausch accent on the main call to action. Large photos with 14px corners carry the visual weight instead of heavy type: headings stay at a modest 600. Everything is soft: 8px buttons and inputs, fully rounded pill form and badges, one light shadow tier reserved for floating elements, and the rating shown as a big number in ink.",
+  "best_for": [
+    "аренда жилья и туризм",
+    "гостиницы, глэмпинги, базы отдыха",
+    "экскурсии и впечатления",
+    "услуги частных мастеров",
+    "маркетплейсы и агрегаторы услуг",
+    "недвижимость и посуточная аренда",
+    "фотостудии, площадки для событий"
+  ],
+  "goals": [
+    "заявки",
+    "бронирования",
+    "запись на консультацию",
+    "доверие через отзывы и рейтинг"
+  ],
+  "mood": [
+    "тёплый",
+    "дружелюбный",
+    "фотографичный",
+    "светлый",
+    "спокойный",
+    "человечный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f7f7f7",
+        "text": "#222222",
+        "text_muted": "#6a6a6a",
+        "border": "#dddddd",
+        "primary": "#e7144a",
+        "on_primary": "#ffffff",
+        "accent": "#222222",
+        "on_accent": "#ffffff",
+        "link": "#222222",
+        "success": "#008a05",
+        "error": "#c13515",
+        "primary_hover": "#c8003a",
+        "brand_mark": "#ff385c",
+        "text_body": "#3f3f3f",
+        "surface_strong": "#f2f2f2",
+        "border_soft": "#ebebeb",
+        "border_strong": "#8a8a8a",
+        "scrim": "#000000"
+      },
+      "dark": {
+        "background": "#121212",
+        "surface": "#1c1c1e",
+        "text": "#dddddd",
+        "text_muted": "#a0a0a0",
+        "border": "#333333",
+        "primary": "#e7144a",
+        "on_primary": "#ffffff",
+        "accent": "#f7f7f7",
+        "on_accent": "#222222",
+        "link": "#f7f7f7",
+        "success": "#4cc764",
+        "error": "#ff7a66",
+        "primary_hover": "#c8003a",
+        "brand_mark": "#ff385c",
+        "text_body": "#c4c4c4",
+        "surface_strong": "#2a2a2a",
+        "border_soft": "#262626",
+        "border_strong": "#707070",
+        "scrim": "#000000"
+      },
+      "notes": "primary — фирменный Rausch, затемнённый в OKLCH ровно до контраста 4.57 с белым (оттенок и насыщенность сохранены). primary_hover #c8003a (5.97:1) — тот же шаг светлоты, что у бренда между #ff385c и #e00b41 (−0.08 L в OKLCH): фирменный #e00b41 рядом с затемнённым #e7144a отличается на 0.017 L, и наведения просто не видно. brand_mark #ff385c — исходный Rausch только для нетекстовых меток (точка «новое», иконка в круглой кнопке, линия активной вкладки на тёмном): 3.52:1 на белом проходит порог 3:1 для графики, но под белый текст его не ставить. border_strong — рамка полей и чекбокса: у бренда #b0b0b0 (2.17:1 — ниже порога 3:1 для границ полей, WCAG 1.4.11), здесь #8a8a8a (3.45:1 на белом) и #707070 в тёмной (3.78:1). scrim — подложка модальных окон: 50% в светлой теме, 70% в тёмной. link — цвет текста с подчёркиванием, как у бренда."
+    },
+    "gradient": {
+      "cta": "linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%)",
+      "cta_hover": "linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%)",
+      "note": "cta — фирменная растяжка кнопки брони. Каждая точка держит белый текст не ниже 4.5:1 (#e61e4d 4.51, #e31c5f 4.57, #d70466 5.12), поэтому подпись читается по всей ширине. Только на button_reserve: кнопка карточки-предложения, её повтор у нижней формы и липкая нижняя панель. Фоны секций, заголовки и карточки градиентами не заливать. cta_hover — та же растяжка под слоем 10% чёрного: контраст только растёт. Радиальную «подсветку за курсором» бренда не переносим — в её центре исходный #ff385c с контрастом 3.52."
+    },
+    "typography": {
+      "display": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "52px",
+        "size_mobile": "34px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.02em"
+      },
+      "h2": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "32px",
+        "size_mobile": "26px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.015em"
+      },
+      "h3": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.25,
+        "letter_spacing": "-0.01em"
+      },
+      "price": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "22px",
+        "size_mobile": "20px",
+        "line_height": 1.25,
+        "letter_spacing": "-0.01em",
+        "note": "цена «от 4 900 ₽» в карточке-предложении и в липкой нижней панели"
+      },
+      "lead": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "body": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.35,
+        "letter_spacing": "0"
+      },
+      "stat": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "64px",
+        "size_mobile": "48px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.015em",
+        "note": "единственный «громкий» шрифт страницы — только число рейтинга или главная цифра доверия"
+      },
+      "button": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.25,
+        "letter_spacing": "0"
+      },
+      "badge": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.2,
+        "letter_spacing": "0"
+      },
+      "micro_tag": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 700,
+        "size_desktop": "10px",
+        "size_mobile": "10px",
+        "line_height": 1.2,
+        "letter_spacing": "0.04em",
+        "note": "только метка «НОВОЕ», прописными"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "14px",
+      "lg": "20px",
+      "xl": "32px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "64px",
+      "section_mobile": "48px",
+      "hero_top_desktop": "48px",
+      "container": "1280px",
+      "gutter_mobile": "24px",
+      "card_gap": "16px",
+      "column_gap": "24px",
+      "card_padding": "24px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 0 0 1px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.1)",
+      "raised_dark": "0 0 0 1px rgba(255,255,255,0.06), 0 2px 6px rgba(0,0,0,0.4), 0 6px 16px rgba(0,0,0,0.5)",
+      "focus": "0 0 0 2px #ffffff, 0 0 0 4px #222222",
+      "focus_dark": "0 0 0 2px #121212, 0 0 0 4px #f7f7f7",
+      "note": "В системе ровно одна тень (raised) — у плавающих элементов: карточка-предложение, форма-пилюля, бейдж на фото, выпадающие меню, фото-карточка при наведении. Всё остальное плоское."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "250ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.35,0,.25,1)",
+      "note": "Движение тихое: смена цвета и тени, появление снизу на 16px. Кнопки при нажатии меняют только цвет — без сдвигов и масштаба."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Manrope",
+      "fontsource": "manrope",
+      "role": "display+body",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "install": "npm i @fontsource-variable/manrope — самохостинг, font-display: swap, подмножества cyrillic и latin",
+      "replaces": "Airbnb Cereal VF и Circular (проприетарные)",
+      "why": "геометрический гротеск с круглыми овалами, широкими пропорциями и спокойной средней насыщенностью — как у Cereal; одна гарнитура на всю шкалу, как у бренда; полноценная кириллица"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "sm",
+      "padding": "14px 24px",
+      "height": "48px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон primary_hover (#c8003a) за 150ms; без сдвига, масштаба и тени; при нажатии тот же цвет",
+      "focus": "shadow.focus (в тёмной теме shadow.focus_dark)",
+      "disabled": "фон border, текст text_muted, курсор not-allowed; на форме заявки не применяется — там кнопка активна всегда, а ошибки объясняются текстом"
+    },
+    "button_reserve": {
+      "bg": "gradient.cta",
+      "color": "on_primary",
+      "radius": "sm",
+      "padding": "14px 24px",
+      "height": "48px",
+      "width": "100% внутри карточки",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон gradient.cta_hover за 150ms; без сдвига, масштаба и тени",
+      "focus": "shadow.focus (в тёмной теме shadow.focus_dark)",
+      "use": "кнопка «брони» — главное действие страницы: карточка-предложение, её повтор у нижней формы, липкая нижняя панель. В ветке cta_color_role=accent заменяется на button_accent"
+    },
+    "button_secondary": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "sm",
+      "padding": "13px 23px",
+      "height": "48px",
+      "weight": 600,
+      "hover": "фон surface; рамка остаётся цвета text",
+      "use": "«Показать все фото», «Все отзывы», «Задать вопрос»"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "sm",
+      "padding": "14px 24px",
+      "height": "48px",
+      "weight": 600,
+      "hover": "фон #000000 в светлой теме / #ffffff в тёмной",
+      "use": "вариант главной кнопки для A/B (cta_color_role=accent) — «чернильная» кнопка, как в разделах бренда для хозяев"
+    },
+    "button_pill": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "10px 20px",
+      "height": "40px",
+      "font_size": "14px",
+      "weight": 600,
+      "hover": "фон primary_hover",
+      "use": "кнопка «Оставить заявку» в навигации"
+    },
+    "button_text": {
+      "bg": "transparent",
+      "color": "text",
+      "weight": 600,
+      "decoration": "подчёркивание 1px, отступ 2px",
+      "hover": "цвет text_muted",
+      "use": "«Читать полностью», «Показать ещё»"
+    },
+    "form_pill": {
+      "bg": "background",
+      "radius": "pill",
+      "height": "64px",
+      "border": "1px solid border",
+      "shadow": "raised",
+      "segments": "поля «Имя» и «Телефон» через вертикальную линию 1px border высотой 32px; в сегменте подпись 12px/600 цвета text сверху и значение 14px (плейсхолдер text_muted); padding сегмента 8px 24px",
+      "active": "при фокусе вся пилюля получает фон surface, активный сегмент — фон background (белый в светлой теме) с тенью raised и радиусом pill",
+      "orb": "справа кнопка-круг 48px цвета primary с иконкой-стрелкой on_primary и aria-label «Отправить заявку»; когда фокус внутри формы, круг раскрывается в пилюлю с текстом «Получить расчёт» за 250ms — кнопка лежит поверх правого отступа последнего сегмента, соседние сегменты не сдвигаются; при prefers-reduced-motion раскрытие мгновенное",
+      "use": "главная форма в варианте hero_layout=centered_pill_form"
+    },
+    "offer_card": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "md",
+      "shadow": "raised",
+      "padding": "24px",
+      "sticky": "position: sticky; top: 104px — до блока отзывов",
+      "content": "цена шрифтом price «от 4 900 ₽» + «за услугу» 16px text_muted; строка рейтинга (звезда цветом text · 4,9 · подчёркнутые «312 отзывов»); группа полей формы; button_reserve во всю ширину; под ней caption text_muted по центру «Перезвоним за 15 минут. Это бесплатно»; разбивка стоимости строками body с линией border над итогом"
+    },
+    "card": {
+      "bg": "transparent",
+      "color": "text",
+      "radius": "md",
+      "shadow": "card",
+      "photo": "фото 1:1 или 4:3 с object-fit: cover и радиусом md; в левом верхнем углу бейдж. Сердечко «в избранное» не ставить: на лендинге сохранять некуда, а кнопка без действия хуже её отсутствия",
+      "meta": "под фото 12px отступ, затем 3–4 строки: заголовок 16px/600, подпись 14px text_muted, цена 16px/600 + «за …» text_muted",
+      "hover": "у фото тень raised, курсор pointer; без масштаба",
+      "use": "варианты услуги, объекты, программы"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "sm",
+      "height": "56px",
+      "padding": "26px 12px 8px",
+      "label": "плавающая подпись внутри поля: в покое 16px text_muted по центру, при вводе 12px/600 text_muted сверху",
+      "focus": "рамка 2px цвета text, без свечения",
+      "error": "рамка 2px цвета error, под полем текст 14px error с иконкой-кругом «!»",
+      "group": "в карточке-предложении поля стоят одной группой: общий радиус 8px, внутренняя линия 1px border между ними"
+    },
+    "checkbox": {
+      "size": "20px",
+      "radius": "xs",
+      "border": "1px solid border_strong",
+      "checked": "фон text, галочка background",
+      "focus": "shadow.focus",
+      "use": "согласие на обработку персональных данных"
+    },
+    "badge": {
+      "bg": "background",
+      "color": "text",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "badge",
+      "shadow": "raised",
+      "use": "плавающий бейдж на фото: «Выбор клиентов», «Хит сезона»"
+    },
+    "tag_new": {
+      "bg": "background",
+      "color": "text",
+      "radius": "pill",
+      "padding": "2px 6px",
+      "font": "micro_tag",
+      "border": "1px solid border",
+      "use": "метка «НОВОЕ» у пункта навигации или вкладки"
+    },
+    "rating_block": {
+      "bg": "transparent",
+      "color": "text",
+      "number": "stat 64px/700, цвет text",
+      "ornament": "по бокам числа — тонкие симметричные веточки собственного рисунка (inline SVG, штрих 1.5px, цвет text), высота 44px",
+      "under": "подпись h3 «Выбор клиентов» и строка body text_muted «Один из самых высоко оценённых сервисов по отзывам»",
+      "stats": "ниже ряд из 3–4 колонок через вертикальные линии border: число 20px/600 + подпись 14px text_muted (оценка, отзывов, лет работы, повторных заказов)",
+      "stars": "звёзды только цветом text — никаких жёлтых"
+    },
+    "amenity_list": {
+      "layout": "2 колонки на десктопе, 1 на телефоне",
+      "row": "иконка 24px линейная (штрих 1.5px, цвет text) + подпись 16px text, отступ строки 12px 0, без рамок",
+      "divider": "линия 1px border сверху и снизу всего блока",
+      "more": "button_secondary «Показать все 14 пунктов»"
+    },
+    "review": {
+      "layout": "сетка 2 колонки, зазор 24px 64px",
+      "author": "аватар-круг 48px (фото или инициалы на surface_strong) + имя 16px/600 + город и месяц 14px text_muted",
+      "rating": "5 маленьких звёзд 10px цвета text + дата caption",
+      "text": "body, обрезка до 3 строк, затем button_text «Читать полностью»"
+    },
+    "host_card": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "md",
+      "padding": "24px",
+      "content": "фото эксперта-круг 104px, имя h3, строка «Работает с 2016 года», три цифры доверия столбиком через линии border, кнопка button_secondary «Задать вопрос»",
+      "use": "блок «Кто будет работать с вами»"
+    },
+    "icon_button_circle": {
+      "bg": "surface_strong",
+      "color": "text",
+      "radius": "pill",
+      "size": "32px",
+      "hover": "фон border",
+      "use": "стрелки ленты, закрыть, поделиться",
+      "hit_area": "на телефоне зона нажатия 44×44px за счёт прозрачного отступа; видимый круг остаётся 32px"
+    },
+    "tabs_strip": {
+      "bg": "background",
+      "item": "иконка 24px над подписью 14px/500 text_muted, зазор 32px",
+      "active": "подпись text, линия 2px цвета text под пунктом",
+      "hover": "подпись text, линия 2px цвета border",
+      "mobile": "горизонтальная прокрутка с затуханием правого края",
+      "use": "сегменты «Для кого» или типы услуги"
+    },
+    "nav": {
+      "bg": "background",
+      "height": "80px",
+      "border_bottom": "1px solid border",
+      "left": "текстовый логотип клиента 20px/700 цветом primary или text",
+      "center": "2–3 якорные ссылки 16px/600 text, активная — линия 2px text снизу",
+      "right": "телефон 16px/600 text + button_pill «Оставить заявку»",
+      "mobile": "64px: логотип + button_pill"
+    },
+    "sticky_bottom_bar": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "padding": "12px 24px",
+      "content": "слева цена шрифтом price + строка 14px text_muted с подчёркиванием («от 4 900 ₽» / «312 отзывов»); справа button_reserve 48px по ширине текста",
+      "use": "телефон: появляется с первой прокрутки, прячется, пока карточка-предложение или нижняя форма в кадре и пока человек печатает (рецепт sticky-cta-mobile)"
+    },
+    "faq_item": {
+      "border_bottom": "1px solid border",
+      "padding": "20px 0",
+      "question": "18px/600 text, справа шеврон 16px в icon_button_circle",
+      "answer": "body text_body, раскрытие за 250ms"
+    },
+    "footer": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "padding": "48px 24px",
+      "columns": "3 колонки ссылок 14px text, заголовки 16px/500 — подвал того же цвета, что и страница, без контрастной заливки",
+      "legal": "нижняя полоса над линией border: реквизиты, «Политика обработки персональных данных», год — caption 13px text_muted"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Как страница объявления. 12 колонок. Колонки 1–7: заголовок H1 (display, до двух строк), под ним строка доверия (звезда цветом text · 4,9 · подчёркнутые «312 отзывов» · бейдж «Выбор клиентов»), лид 18px text_body в 2–3 строки и фотомозаика высотой 420px: одна большая фотография слева и две малые справа, зазоры 8px, радиус 14px только у внешних углов мозаики, в правом нижнем углу button_secondary «Показать все фото» — открывает сетку всех фото в <dialog> с закрытием по Esc и крестиком. Колонки 9–12: карточка-предложение с ценой, двумя полями и button_reserve во всю ширину; она видна на первом экране без прокрутки и липнет при прокрутке. Вариант centered_pill_form: H1 и лид по центру, под ними форма-пилюля «Имя | Телефон | круг-кнопка», чекбокс согласия под ней, ниже ряд из 4 фото-карточек.",
+    "section_order": [
+      "nav",
+      "hero",
+      "rating_proof",
+      "benefits",
+      "offers_cards",
+      "how",
+      "reviews",
+      "host",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "rating_proof": "rating_block по центру на белом, линии border сверху и снизу",
+      "benefits": "«Что вы получите» — amenity_list в 2 колонки, без карточек",
+      "offers_cards": "3–4 фото-карточки с ценой «от …» в сетке с зазором 16px; клик по карточке открывает форму с уже выбранным вариантом",
+      "how": "3–4 шага в ряд: номер 20px/600 в круге 40px цвета surface_strong, заголовок h3, текст body text_muted",
+      "reviews": "h2 с рейтингом «4,9 · 312 отзывов», сетка review 2×3, button_secondary «Все отзывы»",
+      "host": "host_card — эксперт или команда, фото и цифры доверия",
+      "faq": "5–7 вопросов faq_item, колонка 760px",
+      "lead_form": "повтор формы: слева h2 «Рассчитаем стоимость за 15 минут» и 3 строки выгод, справа offer_card без sticky"
+    },
+    "grid": "12 колонок, контейнер 1280px, зазор колонок 24px; сетки карточек — зазор 16px; 744–1128px — 8 колонок, карточки по 2",
+    "imagery": "Живые фотографии при дневном свете, тёплые тона, люди и детали места; без текста поверх фото и без тёмных градиентов-затемнений. Соотношения 1:1 и 4:3, всегда object-fit: cover и радиус 14px. Иконки — свои линейные SVG 24px, штрих 1.5px, скруглённые концы.",
+    "mobile_notes": "Меньше 744px: навигация 64px (логотип + пилюля «Заявка» 40px с зоной нажатия 44px). Вариант split_offer_card идёт в порядке мобильного объявления бренда: фото 4:3 во всю ширину экрана, без радиуса и боковых отступов, листается свайпом (scroll-snap), счётчик «1 / 5» в бейдже справа снизу → H1 34px → строка доверия → лид → карточка-предложение в потоке без тени (остаётся рамка). Вариант centered_pill_form: форма-пилюля раскладывается в стопку полей 56px одной группой и кнопку 48px во всю ширину. Фото-карточки — горизонтальная лента шагом 85% ширины с прилипанием (scroll-snap). Липкая нижняя панель с ценой и button_reserve появляется с первой прокрутки, как полоса брони у бренда. Боковые отступы 24px, секции 48px; главные кнопки 48px, круглые иконки-кнопки — с зоной нажатия 44px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "consent_152fz": true,
+    "style": "Как блок бронирования: два поля одной группой (общий радиус 8px, рамка 1px border_strong, внутренняя линия 1px border), у каждого плавающая подпись «Имя» / «Телефон» 12px/600 и значение 16px; фокус — рамка 2px цвета text без свечения; телефон с маской +7 (___) ___-__-__ и inputmode=tel. Кнопка button_reserve (растяжка Rausch) во всю ширину 48px с радиусом 8px: «Получить расчёт»; в ветке cta_color_role=accent — сплошная чернильная button_accent. Под кнопкой строка caption text_muted «Перезвоним за 15 минут. Это бесплатно». Ниже чекбокс согласия 20px (не отмечен заранее): «Я согласен(на) на обработку персональных данных по 152-ФЗ» и подчёркнутая ссылка «Политика обработки данных» цветом link. Кнопка активна всегда: без галочки или с пустым полем под полем появляется видимый текст ошибки цветом error с иконкой, фокус уходит на первое проблемное поле. Сбой сети — видимый текст с кнопкой «Отправить ещё раз», введённые данные не стираются.",
+    "success_state": "Содержимое карточки заменяется на месте, высота сохраняется: круг 56px цвета surface_strong с галочкой цвета success, заголовок h3 «Заявка принята», строка «Позвоним на +7 … в течение 15 минут» и button_text «Изменить номер». Фокус переходит на заголовок, область с aria-live=polite. Рецепт form-success."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "counter-up",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "fade-up-stagger": "карточки вариантов, шаги, отзывы, строки списка выгод; --reveal-dist 16px, --reveal-dur 360ms — тихий вариант. Первый экран (фотомозаика, карточка-предложение) не анимируется",
+    "counter-up": "только ряд цифр под рейтингом (отзывов, лет работы, повторных заказов) размером 20px/600 из rating_block.stats; число рейтинга 64px стоит сразу, без счёта — рейтинг, бегущий от нуля, читается как накрутка; полосу-акцент не рисовать",
+    "accordion-smooth": "частые вопросы в виде faq_item: только линия 1px снизу, без карточек, рамок и радиуса; шеврон в icon_button_circle",
+    "form-success": "ответ формы в карточке-предложении: круг 56px surface_strong с галочкой success, без круговой волны и без перелёта значка (ease_standard); вместо ссылки на примеры — button_text «Изменить номер»",
+    "sticky-cta-mobile": "панель sticky_bottom_bar: слева цена и подчёркнутые отзывы, справа button_reserve; data-after — фото первого экрана, чтобы панель появлялась с первой прокрутки; data-hide-on — карточка-предложение и нижняя форма"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_offer_card",
+        "centered_pill_form"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "card_photo_ratio": [
+        "1:1",
+        "4:3"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "single_shadow_tier",
+      "ink_stars"
+    ],
+    "default": {
+      "hero_layout": "split_offer_card",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "card_photo_ratio": "1:1"
+    },
+    "legend": {
+      "headline_scale": {
+        "xl": "52px / 34px",
+        "l": "40px / 32px"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "do": [
+    "Держать один яркий цвет — Rausch: сплошной #e7144a на пилюле и круге формы, растяжка gradient.cta только на кнопке брони (button_reserve), исходный #ff385c — только на мелких нетекстовых метках; не больше двух ярких мест на экран.",
+    "Давать вес фотографиями: крупные живые снимки с радиусом 14px, а заголовки оставлять умеренными — насыщенность 600.",
+    "Показывать доверие цифрой: рейтинг 64px цветом текста — единственный «громкий» шрифт на странице, звёзды тоже цветом текста.",
+    "Скруглять всё интерактивное: кнопки и поля 8px, карточки и фото 14px, форма-пилюля, бейджи и круглые кнопки — полностью.",
+    "Использовать одну тень на всю систему и только у плавающих элементов: карточка-предложение, форма-пилюля, бейдж на фото.",
+    "Разделять блоки линиями 1px #dddddd и воздухом 64px, а не цветными заливками.",
+    "Делать видимое кольцо фокуса с клавиатуры: 2px цвета текста с зазором 2px цвета фона."
+  ],
+  "dont": [
+    "Не заливать секции цветом бренда и не класть градиенты на фон — страница на 90% белая с тёмным текстом; единственный градиент — на кнопке брони.",
+    "Не ставить исходный #ff385c под белый текст: контраст 3,52 — для кнопок только #e7144a, #c8003a и растяжка gradient.cta.",
+    "Не красить звёзды и бейджи в жёлтый или «золото».",
+    "Не делать заголовки 800–900 и не набирать прописными с разрядкой — кроме микрометки «НОВОЕ».",
+    "Не наслаивать тени и не добавлять свечение полям при фокусе.",
+    "Не использовать логотип, иллюстрации-иконки и шрифт Airbnb — только свой текстовый логотип и простые линейные SVG.",
+    "Не прятать согласие на обработку данных, не отмечать его заранее и не отбрасывать заявку молча."
+  ],
+  "prompt_snippet": "Build a warm, photo-led lead landing in an Airbnb-like marketplace style. Light: canvas #ffffff, ink #222222, muted #6a6a6a, hairlines #dddddd, soft fill #f7f7f7, input borders #8a8a8a. Dark: #121212, surface #1c1c1e, text #dddddd, muted #a0a0a0. One bright colour, Rausch: solid #e7144a (hover #c8003a) with white text on the nav pill and form orb; the main booking-style CTA uses the sweep linear-gradient(to right, #e61e4d, #e31c5f, #d70466). No gradient backgrounds, at most two bright spots per screen. Font: self-hosted Manrope (Cyrillic) 400–700; H1 52/34px weight 600, tracking -0.02em; body 16px/1.5. Radii: 8px buttons and inputs, 14px cards and photos, pills for badges and the segmented form. One shadow tier, floating elements only. Split hero: headline, ink-star rating line and photo mosaic left; sticky offer card with price, name and phone right; mobile sticky price bar. Unchecked 152-FZ consent. No logos or emoji.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/airbnb/DESIGN.md; тёмная тема по meliwat/awesome-ios-design-md (MIT), design-md/travel/airbnb/DESIGN-expo.md",
+    "notes": "Шрифт Airbnb Cereal VF / Circular заменён на Manrope (OFL-1.1, кириллица). Фирменный Rausch #ff385c даёт с белым текстом только 3.52:1 — для кнопок он затемнён в OKLCH до #e7144a (4.57:1; оттенок 17° и насыщенность сохранены, изменена только светлота 0.658 → 0.594); наведение пересчитано тем же шагом светлоты, что у бренда, — #c8003a (5.97:1), потому что фирменный #e00b41 рядом с затемнённым цветом не отличим; исходный #ff385c оставлен только для нетекстовых меток. Фирменная растяжка кнопки брони (#e61e4d → #e31c5f → #d70466) сохранена без изменений: все точки держат белый текст ≥4.51:1. Рамка полей #b0b0b0 затемнена до #8a8a8a ради порога 3:1 для границ полей (WCAG 1.4.11). Тёмной темы у бренда в вебе нет: взята палитра его мобильного приложения (#121212 / #1c1c1e / #dddddd / #a0a0a0), акцент тот же, «чернильная» вторичная кнопка инвертирована в светлую. Заголовок первого экрана увеличен с 28px до 52px для рекламы при прежней умеренной насыщенности 600; микротексты 8–11px подняты до 10–12px ради читаемости кириллицы. Поисковая пилюля превращена в форму заявки «Имя | Телефон», блок бронирования — в карточку-предложение, раздел удобств — в список выгод; сердечко «в избранное» убрано (на лендинге сохранять некуда); добавлено согласие по 152-ФЗ."
+  }
+}

@@ -1,0 +1,876 @@
+{
+  "slug": "soft",
+  "name": "Мягкий",
+  "kind": "style",
+  "version": "1.0.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Тёплый льняной фон, тёпло-белые карточки со скруглением 24 px и пастельные полосы (пудра, шалфей, абрикос), на которых текст всегда тёмный. Заголовки — мягкая антиква Lora с одним словом курсивом, текст — округлый Nunito. Одна насыщенная кнопка-пилюля, фото специалиста в арке, цены «от» сразу на странице. Спокойно, бережно, без давления.",
+  "summary_en": "A warm linen canvas, warm-white 24px-radius cards and pastel bands (powder rose, sage, apricot) that always carry dark text. Headlines are set in the soft serif Lora with one italic word, body copy in rounded Nunito. One saturated pill button, the specialist's photo in an arch, and 'from' prices right on the page. Calm, caring, no pressure.",
+  "best_for": [
+    "медицинские клиники и стоматология",
+    "косметология и салоны красоты",
+    "детские центры, кружки и сады",
+    "психологи и психотерапевты",
+    "массаж, реабилитация, йога",
+    "ветеринарные клиники",
+    "семейные и женские услуги"
+  ],
+  "goals": [
+    "запись на приём",
+    "заявка на первую консультацию",
+    "звонок администратору",
+    "запись на пробное занятие",
+    "доверие к специалисту"
+  ],
+  "mood": [
+    "мягкий",
+    "тёплый",
+    "бережный",
+    "спокойный",
+    "светлый",
+    "заботливый"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#FAF6F1",
+        "surface": "#FFFDFA",
+        "text": "#2E2622",
+        "text_muted": "#6B5F58",
+        "border": "#E7DDD3",
+        "primary": "#A6475F",
+        "on_primary": "#FFFFFF",
+        "accent": "#F7D5BF",
+        "on_accent": "#4A2B1C",
+        "link": "#94405A",
+        "success": "#2F6A4C",
+        "error": "#B03A2E",
+        "primary_hover": "#8F3B51",
+        "accent_hover": "#F2C6AE",
+        "focus": "#A6475F",
+        "border_strong": "#8F8177",
+        "surface_raised": "#FFFFFF",
+        "sand": "#F3ECE4",
+        "tint_blush": "#F7E3DE",
+        "tint_apricot": "#FBE7D6",
+        "tint_butter": "#F8EFD3",
+        "tint_sage": "#E2EEE5",
+        "tint_sky": "#DEEBF3",
+        "tint_lavender": "#EAE5F3",
+        "on_tint": "#2E2622",
+        "on_tint_muted": "#6B5F58",
+        "success_bg": "#E2EEE5",
+        "error_bg": "#FBE4E0"
+      },
+      "dark": {
+        "background": "#1B1715",
+        "surface": "#25201D",
+        "text": "#F4EDE7",
+        "text_muted": "#B3A69D",
+        "border": "#3E3531",
+        "primary": "#F2A7B8",
+        "on_primary": "#3A1522",
+        "accent": "#F4C9A9",
+        "on_accent": "#3B2112",
+        "link": "#F4B3C2",
+        "success": "#8FD1A9",
+        "error": "#FF9C8F",
+        "primary_hover": "#F7C2CE",
+        "accent_hover": "#F8D7BF",
+        "focus": "#F2A7B8",
+        "border_strong": "#8A7C72",
+        "surface_raised": "#2F2925",
+        "sand": "#211C19",
+        "tint_blush": "#3A2A2B",
+        "tint_apricot": "#3A2D24",
+        "tint_butter": "#37321F",
+        "tint_sage": "#243229",
+        "tint_sky": "#212E36",
+        "tint_lavender": "#2C2838",
+        "on_tint": "#F4EDE7",
+        "on_tint_muted": "#B3A69D",
+        "success_bg": "#243229",
+        "error_bg": "#3B2320"
+      },
+      "notes": "Пастели (tint_*) — только фон полос, карточек, бейджей и подложек под фото. Текст на них — on_tint и on_tint_muted, проверено: 11–12.9:1 и 4.99–6:1 в обеих темах. На светлой теме пастель как цвет текста и белый текст на пастели запрещены (1.1–1.9:1); на тёмной теме пастельные primary и link — норма (6.7–11.4:1 на фоне, полосах и карточках). border — декоративная волосяная линия карточек; у полей ввода, чекбокса и вторичной кнопки контур border_strong (3.05–4.4:1 на всех поверхностях и пастелях обеих тем, WCAG 1.4.11). Тёмная тема тёплая, какао, а не чёрная: кнопка в ней становится пастельной с тёмной надписью, пастельные полосы — приглушёнными тонами той же гаммы."
+    },
+    "gradient": {
+      "hero": "radial-gradient(55% 65% at 92% 8%, color-mix(in srgb, var(--haze-1, #F0A7B8) var(--haze-strength, 18%), transparent) 0%, transparent 70%), radial-gradient(45% 60% at 4% 96%, color-mix(in srgb, var(--haze-2, #A3D5BF) var(--haze-strength, 18%), transparent) 0%, transparent 70%), radial-gradient(35% 45% at 58% 0%, color-mix(in srgb, var(--haze-3, #F4C9A9) var(--haze-strength, 18%), transparent) 0%, transparent 70%)",
+      "haze_strength": {
+        "light": "18%",
+        "dark": "15%"
+      },
+      "notes": "Дымка первого экрана — три пастельных пятна у краёв поверх background: --haze-1…3 берутся из haze выбранного пресета (запасные значения в строке — пресет rose), --haze-strength — 18% на светлой теме и 15% на тёмной. Замер по сетке с наложением пятен на 1440 и 390 px во всех четырёх пресетах: text_muted не ниже 5.16:1 на светлой и 5.12:1 на тёмной, primary (курсивное слово заголовка) не ниже 4.59:1. Сильнее 20% на тёмной теме не поднимать — приглушённый текст падает к 4.5. Живой вариант той же дымки — рецепт gradient-drift (см. motion_map); вместе со статичной дымкой его не накладывать — одно из двух."
+    },
+    "typography": {
+      "display": {
+        "family": "Lora",
+        "fallback": "Georgia, 'Times New Roman', serif",
+        "weight": 500,
+        "size_desktop": "60px",
+        "size_mobile": "36px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.015em",
+        "notes": "Обычный регистр предложения, не капс. Одно слово заголовка можно набрать Lora Italic 500 цветом primary (5.3:1 на фоне) — это подпись стиля, но не больше одного курсива на заголовок. text-wrap: balance; hyphens: auto при lang=\"ru\" — «психотерапевтическая» на 360 px иначе вылезет за край."
+      },
+      "display_rounded": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "58px",
+        "size_mobile": "36px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.02em",
+        "notes": "Второй голос заголовков для детских услуг и A/B-оси headline_voice=rounded. Тот же шрифт, что у текста, — лишнего файла не грузим. В этом режиме h2 тоже округлый (h2_rounded), курсива нет — выделенное слово набирается цветом primary; stat и quote остаются Lora."
+      },
+      "h2": {
+        "family": "Lora",
+        "fallback": "Georgia, serif",
+        "weight": 500,
+        "size_desktop": "42px",
+        "size_mobile": "28px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.01em"
+      },
+      "h2_rounded": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 800,
+        "size_desktop": "40px",
+        "size_mobile": "28px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.015em",
+        "notes": "Только при headline_voice=rounded (пресет kids)."
+      },
+      "h3": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "22px",
+        "size_mobile": "19px",
+        "line_height": 1.3,
+        "letter_spacing": "0em"
+      },
+      "lead": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.55,
+        "letter_spacing": "0em",
+        "notes": "Цвет text_muted, ширина не больше 52ch."
+      },
+      "body": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.65,
+        "letter_spacing": "0em",
+        "notes": "Аудитория стиля — в том числе люди 45+ и родители с телефоном в одной руке: 18 px на десктопе, не меньше 16 px на телефоне."
+      },
+      "label": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1.4,
+        "letter_spacing": "0em"
+      },
+      "button": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 700,
+        "size_desktop": "17px",
+        "size_mobile": "17px",
+        "line_height": 1.2,
+        "letter_spacing": "0.005em"
+      },
+      "caption": {
+        "family": "Nunito",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Текст согласия у формы и юридические строки — не меньше 13 px, цвет text_muted, не светлее."
+      },
+      "stat": {
+        "family": "Lora",
+        "fallback": "Georgia, serif",
+        "weight": 500,
+        "size_desktop": "56px",
+        "size_mobile": "34px",
+        "line_height": 1,
+        "letter_spacing": "-0.02em",
+        "notes": "font-variant-numeric: lining-nums tabular-nums; неразрывный пробел в разрядах: 4 800. На телефоне 34 px — меньше заголовка первого экрана (36 px), иначе цифры спорят с главным обещанием."
+      },
+      "quote": {
+        "family": "Lora",
+        "fallback": "Georgia, serif",
+        "weight": 400,
+        "size_desktop": "22px",
+        "size_mobile": "19px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Lora Italic для цитаты отзыва (там, где отзывы разрешены — см. niche_presets)."
+      }
+    },
+    "radius": {
+      "sm": "10px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "pill": "999px",
+      "arch": "999px 999px 32px 32px",
+      "notes": "Острых углов нет нигде. arch — маска фото специалиста на первом экране и в карточках людей (верх полукругом, низ 32 px)."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "120px",
+      "section_mobile": "72px",
+      "container": "1160px",
+      "gutter_mobile": "16px",
+      "gutter_desktop": "32px",
+      "card_padding_desktop": "32px",
+      "card_padding_mobile": "24px",
+      "grid_gap": "24px",
+      "stack_tight": "8px",
+      "stack_base": "16px",
+      "stack_loose": "32px",
+      "notes": "Воздуха больше, чем у деловых стилей: полосы 120/72 px. Внутри карточки — ритм 8/16/32."
+    },
+    "shadow": {
+      "card": "0 1px 2px rgba(74,43,28,.05), 0 10px 30px -12px rgba(74,43,28,.14)",
+      "raised": "0 2px 6px rgba(74,43,28,.06), 0 24px 48px -16px rgba(74,43,28,.22)",
+      "card_dark": "none",
+      "raised_dark": "0 24px 48px -16px rgba(0,0,0,.6)",
+      "ring_dark": "0 0 0 1px #3E3531",
+      "focus_ring": "0 0 0 4px color-mix(in srgb, var(--color-focus) 24%, transparent)",
+      "notes": "Тени тёплые (коричневый оттенок, а не серый) и рассеянные: карточка «лежит» на льне, а не парит. На тёмной теме тень не видна — её заменяет контур 1px border, поэтому card_dark = none (у card рамка уже есть, кольцо удвоило бы линию). ring_dark — только элементам без своей рамки: карточка-подпись поверх фото, выпадающие списки."
+    },
+    "motion": {
+      "fast": "180ms",
+      "base": "280ms",
+      "slow": "560ms",
+      "ease_standard": "cubic-bezier(.22,1,.36,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "reveal_distance": "12px",
+      "hover_lift": "-2px",
+      "press_scale": "0.98",
+      "notes": "Только мягкое замедление, без пружин, отскоков и перелёта. Появление — сдвиг 12 px и прозрачность. Аудитория стиля часто приходит встревоженной: движение успокаивает, а не зовёт."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Lora",
+      "fontsource": "lora",
+      "role": "display+h2+stat+quote",
+      "weights": [
+        400,
+        500
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "package": "@fontsource-variable/lora (wght 400–700, есть курсив с кириллицей)",
+      "replaces": "платные мягкие антиквы вроде Recoleta и Cooper (проприетарные, без кириллицы)"
+    },
+    {
+      "family": "Nunito",
+      "fontsource": "nunito",
+      "role": "body+ui+display_rounded",
+      "weights": [
+        400,
+        600,
+        700,
+        800
+      ],
+      "package": "@fontsource-variable/nunito (wght 200–1000, одна переменная гарнитура на все начертания)",
+      "replaces": "платные округлые гротески вроде Circular и Sofia Pro (проприетарные)"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "56px (min-height; 48px в шапке)",
+      "padding": "16px 28px",
+      "weight": 700,
+      "font": "button",
+      "shadow": "card",
+      "hover": "фон primary_hover за 180ms, тень card → raised, подъём translateY(-2px)",
+      "active": "scale(0.98), тень card",
+      "focus": "outline 3px solid focus, outline-offset 3px + focus_ring",
+      "disabled": "прозрачность 0.5, без тени, cursor not-allowed; текст причины рядом, а не только серость",
+      "notes": "Единственный насыщенный цвет на странице. Глагол результата: «Записаться на приём», «Подобрать время», «Прийти на пробное занятие». На телефоне — во всю ширину."
+    },
+    "button_secondary": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1.5px solid border_strong",
+      "radius": "pill",
+      "height": "56px (min-height)",
+      "padding": "16px 28px",
+      "weight": 700,
+      "hover": "фон основной пастели пресета (hero_tints[0]; в rose — tint_blush), контур text",
+      "focus": "как у button_primary",
+      "notes": "Второе действие рядом с главным: «Посмотреть цены», «Задать вопрос»."
+    },
+    "button_soft": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "height": "56px (min-height)",
+      "padding": "16px 28px",
+      "weight": 700,
+      "hover": "фон accent_hover",
+      "focus": "как у button_primary",
+      "notes": "Пастельная кнопка для A/B-оси cta_color_role=accent. На пастельной полосе не ставить — сольётся; только на background или surface. accent в этом стиле — ЗАЛИВКА (кнопка, бейдж, подложка), а не цвет текста: пастельные цифры и слова на светлом фоне дают 1.1–1.9:1."
+    },
+    "button_text": {
+      "color": "link",
+      "underline": "1px, отступ 0.2em, при наведении 2px",
+      "weight": 600,
+      "notes": "Ссылки в тексте всегда подчёркнуты — по одному цвету их не отличить."
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "lg",
+      "padding": "32px desktop / 24px mobile",
+      "border": "1px solid border",
+      "shadow": "card; в тёмной теме card_dark (none) — край даёт border",
+      "hover": "только у кликабельных: подъём -2px и тень raised за 280ms"
+    },
+    "card_tint": {
+      "bg": "tint_* (одна пастель на карточку)",
+      "color": "on_tint",
+      "radius": "lg",
+      "padding": "32px / 24px",
+      "border": "none",
+      "shadow": "none",
+      "icon": "круг 48px цвета surface с линейной SVG-иконкой 24px цвета text, штрих 1.75px, скруглённые концы",
+      "notes": "Подпись стиля: карточки преимуществ по очереди в разных пастелях пресета (не больше трёх разных на экране)."
+    },
+    "photo_arch": {
+      "radius": "arch",
+      "ratio": "4:5",
+      "backdrop": "круг или овал основной пастели пресета за фото, смещён на 24px вправо-вниз",
+      "overlay_card": "маленькая карточка surface_raised с тенью raised (в тёмной теме ring_dark + raised_dark) поверх нижнего края фото: имя, должность, стаж («Анна Смирнова · врач-стоматолог · стаж 12 лет»)",
+      "notes": "Только реальные фото специалистов и помещения. Стоковые «улыбки в камеру» снижают доверие в этих нишах. Фото первого экрана — обычный <img> с width/height, fetchpriority=\"high\", без loading=\"lazy\" (это LCP), AVIF/WebP до ~120 КБ."
+    },
+    "specialist_card": {
+      "photo": "photo_arch 4:5",
+      "name": "h3",
+      "role": "caption, text_muted",
+      "chips": "badge: стаж, специализация, «принимает детей»",
+      "cta": "button_secondary «Записаться к специалисту» — ведёт в форму с выбранным специалистом",
+      "notes": "В медицине добавить строку образования и номер сертификата/аккредитации мелким caption. Нет фото — круг основной пастели с инициалами (Lora 500, on_tint); не подставлять сток и сгенерированные портреты «врачей» — в медицине это вводит в заблуждение."
+    },
+    "price_list": {
+      "container": "card",
+      "row": "название услуги body 600 слева, цена справа «от 2 500 ₽» body 700 tabular-nums, разделитель 1px border",
+      "group_title": "label, text_muted, отступ 24px сверху",
+      "cta": "в конце списка button_text «Весь прайс» и button_primary",
+      "notes": "Цена снимает тревогу — показывать сразу, а не «по запросу». Не больше 8 строк на экране, остальное под раскрытием."
+    },
+    "slot_chips": {
+      "bg": "surface",
+      "border": "1.5px solid border_strong",
+      "radius": "pill",
+      "padding": "8px 16px",
+      "selected": "фон primary, текст on_primary",
+      "notes": "Выбор удобного времени («Утро», «День», «Вечер») вместо календаря. Конкретные «свободные окна сегодня» — только из реального расписания, не выдумывать."
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1.5px solid border_strong",
+      "radius": "md",
+      "height": "56px",
+      "padding": "14px 18px",
+      "font": "body 16px на телефоне (меньше — iOS увеличивает страницу)",
+      "label": "над полем, стиль label, цвет text",
+      "placeholder": "text_muted, только пример формата («+7 900 000-00-00»), не вместо подписи",
+      "focus": "контур 1.5px focus + focus_ring",
+      "error": "контур 1.5px error, текст ошибки цвета error под полем, связь через aria-describedby",
+      "autocomplete": "name / tel — браузер подставит сам"
+    },
+    "select": {
+      "as": "input",
+      "icon": "шеврон SVG 20px цвета text справа",
+      "notes": "«Какая услуга интересует» — необязательное поле; первый пункт «Пока не знаю, нужна консультация»."
+    },
+    "checkbox": {
+      "size": "22px",
+      "border": "1.5px solid border_strong",
+      "radius": "7px",
+      "checked": "фон primary, галочка on_primary",
+      "focus": "focus_ring",
+      "notes": "Согласие на обработку персональных данных. По умолчанию не отмечено, отдельно от рассылок."
+    },
+    "badge": {
+      "bg": "основная пастель пресета (hero_tints[0]; в rose — tint_blush)",
+      "color": "on_tint",
+      "radius": "pill",
+      "padding": "6px 14px",
+      "font": "label",
+      "dot": "точка 8px цвета primary перед текстом — необязательно",
+      "notes": "Надзаголовок первого экрана: «Детская стоматология · м. Беговая», «Первая встреча — 30 минут бесплатно»."
+    },
+    "stat": {
+      "number": "typography.stat, цвет primary или text; никогда accent и tint_*. primary на background и surface ≥ 5:1 во всех пресетах, на пастелях card_tint 4.4–5.7:1 — этого хватает только крупной цифре (≥ 24 px, порог 3:1), подписи и мелкие цифры на пастели — on_tint.",
+      "label": "caption или body; text_muted на полосе, on_tint_muted на card_tint",
+      "container": "card_tint или без карточки на полосе surface",
+      "notes": "Цифры доверия: стаж, число приёмов, семей, лет работы — только проверяемые, с неразрывным пробелом в разрядах."
+    },
+    "trust_row": {
+      "layout": "строка из 3–4 пунктов под кнопкой: иконка SVG 20px + caption",
+      "items": "стаж, лицензия/аккредитация, число приёмов или семей, рейтинг площадки со ссылкой",
+      "notes": "Только проверяемые факты. Рейтинг — со ссылкой на площадку и датой."
+    },
+    "steps": {
+      "number": "круг 44px основной пастели пресета, цифра Lora 500 20px цвета on_tint",
+      "line": "пунктир 1.5px border_strong между кругами (на телефоне — вертикально)",
+      "title": "h3",
+      "text": "body, text_muted",
+      "notes": "3–4 шага от заявки до результата: «Оставляете заявку → Администратор подбирает время → Первая встреча → План и цена до начала»."
+    },
+    "review_card": {
+      "bg": "surface",
+      "radius": "lg",
+      "quote": "typography.quote, курсив",
+      "author": "label + caption (имя, услуга, площадка со ссылкой)",
+      "notes": "Только реальные отзывы с источником. В медицине и косметологии не применяется — вместо него credentials_card (см. niche_presets)."
+    },
+    "credentials_card": {
+      "bg": "tint_sage (или основная пастель пресета)",
+      "radius": "lg",
+      "content": "лицензия (номер, дата, кем выдана, ссылка на реестр), образование специалистов, оборудование, стандарты стерилизации",
+      "notes": "Доверие в медицине строится на документах и людях, а не на благодарностях."
+    },
+    "legal_notice": {
+      "bg": "sand",
+      "color": "text",
+      "radius": "md",
+      "padding": "16px 20px",
+      "font": "body 600 (не caption!)",
+      "notes": "Для медицинских услуг: «Имеются противопоказания. Необходима консультация специалиста» — видимым текстом не меньше 5% площади рекламного блока (ст. 24 закона «О рекламе»), рядом с ценами и в подвале."
+    },
+    "faq_item": {
+      "divider": "1px solid border",
+      "question": "h3 (19px на телефоне)",
+      "icon": "круг 36px surface с плюсом 16px; при раскрытии вертикальная черта поворачивается на 90° и плюс становится минусом — как в рецепте accordion-smooth",
+      "answer": "body, text_muted, max-width 64ch",
+      "notes": "Вопросы тревоги: «Больно ли?», «Сколько стоит на самом деле?», «Можно ли с ребёнком?», «Что если не понравится?»."
+    },
+    "nav": {
+      "bg": "background с прозрачностью 88% + backdrop-filter: blur(12px)",
+      "height": "72px desktop / 60px mobile",
+      "link": "label, text",
+      "phone": "номер телефона ссылкой tel: — label 700, виден и на телефоне",
+      "cta": "button_primary высотой 48px",
+      "sticky": "да; при прокрутке — нижняя линия 1px border",
+      "notes": "На телефоне остаются название, телефон-иконка и кнопка записи; меню — в шторке."
+    },
+    "footer": {
+      "bg": "sand",
+      "color": "text_muted",
+      "headings": "label, text",
+      "padding": "56px 32px / 48px 16px",
+      "font": "caption",
+      "notes": "Адрес с картой-ссылкой, часы работы, телефон, реквизиты юрлица, лицензия, политика обработки данных. Для медицины — строка legal_notice."
+    }
+  },
+  "layout": {
+    "hero_pattern": "Полоса background с дымкой gradient.hero. Раскладка 6/6: слева бейдж (услуга + район/метро), заголовок display в 2–3 строки с одним словом курсивом, лид 20px цвета text_muted, строка цены «Первичная консультация — от 1 500 ₽», кнопки button_primary + button_secondary, под ними trust_row. Справа photo_arch специалиста или пространства на пастельном круге с карточкой-подписью поверх нижнего края. Без фото (и при form_position=hero) справа — большая card (surface, радиус xl, тень raised) с формой заявки: поля на белой карточке, а не на пастели.",
+    "hero_centered": "Вариант A/B hero_layout=centered: бейдж, заголовок, лид, цена и кнопки по центру колонкой до 760px; ниже — ряд из трёх фото специалистов в арках 4:5 (на телефоне — одно фото и подпись «и ещё N специалистов») или широкое фото помещения радиусом xl. trust_row — одной строкой по центру.",
+    "section_order": [
+      "nav",
+      "hero",
+      "trust_bar",
+      "benefits",
+      "services_prices",
+      "specialists",
+      "how",
+      "proof",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "band_rhythm": "hero — background с дымкой; trust_bar — surface: 3–4 цифры stat в ряд (counter-up); benefits — background с card_tint разных пастелей; services_prices — surface с price_list; specialists — полоса основной пастели пресета (hero_tints[0]) с белыми specialist_card; how — background со steps; proof (отзывы или credentials) — вторая пастель пресета (hero_tints[1]); faq — background; lead_form — большая card на полосе основной пастели; footer — sand. Две пастельные полосы подряд не ставить — между ними нейтральная.",
+    "grid": "12 колонок, контейнер 1160px, промежуток 24px; первый экран 6/6, преимущества 3 или 2×2, специалисты по 3, прайс 7/5 (список + карточка записи)",
+    "mobile_notes": "Одна колонка, поля 16px, полосы 72px. Первый экран: бейдж → заголовок 36px → лид → цена → кнопка 56px во всю ширину → trust_row в две строки → фото в арке шириной 80% по центру. Прайс остаётся списком без горизонтальной прокрутки, цена переносится под название при нехватке места. Специалисты — горизонтальная лента с маской-затуханием правого края и подсказкой листать. После ухода кнопки первого экрана — липкая кнопка записи (sticky-cta-mobile), которая прячется, когда форма в кадре. Телефон в шапке кликабельный.",
+    "niche_variants": {
+      "medicine": "proof = credentials_card вместо отзывов; legal_notice под прайсом и в подвале; before_after не ставить.",
+      "beauty": "proof = отзывы с площадок; перед proof — before_after, только для немедицинских процедур (волосы, ногти, брови без инъекций).",
+      "kids": "specialists → «Педагоги и врачи»; добавить блок «Безопасность» (кто забирает ребёнка, лицензия, камеры, медкабинет) перед faq.",
+      "psychology": "specialists → один специалист крупно: фото, образование, подход, супервизия; добавить блок «Как проходит первая встреча» вместо how; строка о конфиденциальности у формы."
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "optional_fields": [
+      "service",
+      "preferred_time",
+      "contact_method"
+    ],
+    "consent_152fz": true,
+    "consent_text": "Отметка «Согласен на обработку персональных данных» со ссылкой на политику обработки. Не отмечена по умолчанию, отдельно от рассылок.",
+    "style": "Большая card (радиус 32px, отступы 40/24px, тень raised) на полосе основной пастели пресета. Слева заголовок h2 «Запишитесь — подберём удобное время» и три строки «что будет дальше»; справа поля 56px с подписями над ними, между полями 16px, slot_chips «Утро / День / Вечер» вместо поля времени, кнопка button_primary 56px во всю ширину карточки, под ней caption: «Администратор перезвонит в течение 15 минут, с 9:00 до 21:00» и ссылка на политику. На телефоне — одна колонка, заголовок над карточкой.",
+    "sensitive_data": "Не спрашивать диагноз, жалобы, анамнез и данные ребёнка: это специальные категории персональных данных (ст. 10 152-ФЗ), для них нужно отдельное письменное согласие. Максимум — «Какая услуга интересует» списком.",
+    "error_state": "Отказ сервера — видимым текстом цвета error на подложке error_bg прямо под кнопкой, введённое остаётся в полях. Заявку с заполненными именем и телефоном не отбрасывать ни проверкой, ни ловушкой для ботов — принять и пометить.",
+    "success_state": "Содержимое карточки сменяется на месте без перезагрузки и без изменения высоты: круг 72px цвета success_bg с галочкой SVG цвета success, заголовок h3 «Заявка у нас», строка «Администратор перезвонит в течение 15 минут в рабочее время» (срок — реальный у клиента) и ссылка «Как подготовиться к первому визиту». «Спасибо» показывается только после ответа сервера {\"ok\": true}."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "image-reveal-clip",
+    "gradient-drift",
+    "counter-up",
+    "before-after-slider",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "gradient-drift": "только первый экран и только при motion_level=subtle, вместо статичной дымки gradient.hero: --gd-c1…3 = haze пресета; --gd-strength 24% на светлой теме, 14% на тёмной (там же .gd-blob--c { --gd-strength: 14% }) — замер в центре пятна ≥ 5.0:1 для text_muted; рецепт читает --background, --text, --surface, --border без префикса — задать их на .gd-scene из --color-*; кнопка паузы обязательна",
+    "fade-up-stagger": "карточки преимуществ, шаги, специалисты: --reveal-dist 12px, --reveal-dur 560ms, --reveal-ease cubic-bezier(.16,1,.3,1), --reveal-step 80ms, --reveal-max 400ms (не больше 6 элементов в волне)",
+    "image-reveal-clip": "фото специалистов и помещения ниже первого экрана: --irc-dur 560ms, --irc-zoom 1.04, --irc-ease cubic-bezier(.16,1,.3,1), --irc-radius 32px (у арки — 999px 999px 32px 32px); фото первого экрана не трогать",
+    "counter-up": "полоса trust_bar: стаж, число приёмов, семей, лет на рынке — только проверяемые; шрифт по typography.stat (Lora 500, 56/34 px) вместо размера рецепта, цвет primary, --cu-bar primary, --cu-dur 900ms, счёт один раз",
+    "before-after-slider": "только немедицинские услуги (волосы, ногти, брови без инъекций, уборка, ремонт детской); в медицине и медицинской косметологии запрещено; --radius-lg 24px",
+    "accordion-smooth": "частые вопросы: разделители border, ответ text_muted до 64ch, значок плюс → минус из рецепта в круге 36px surface",
+    "form-success": "ответ формы записи: .lead — радиус xl 32px; значок по success_state (круг 72px --color-success-bg, галочка --color-success, 5.35:1 и 7.59:1); анимацию lead-pop вести по cubic-bezier(.16,1,.3,1) вместо кривой с перелётом — стилю отскоки запрещены",
+    "sticky-cta-mobile": "липкая кнопка «Записаться» на телефоне, прячется, когда форма в кадре; круглую кнопку звонка (scta__alt, tel:) включить — звонок администратору одна из целей стиля"
+  },
+  "color_presets": {
+    "how_to_use": "Один пресет на страницу — по нише из niche_presets. Пресет переопределяет только перечисленные ключи в light и dark; остальные токены общие. «Основная пастель пресета» — первый ключ hero_tints, «вторая» — второй. haze — цвета --haze-1…3 для gradient.hero и --gd-c1…3 для gradient-drift. Все пары проверены по WCAG, числа в contrast.",
+    "rose": {
+      "label": "Пудровая роза (по умолчанию)",
+      "for": "бьюти, косметология, женские услуги, семейные клиники",
+      "hero_tints": [
+        "tint_blush",
+        "tint_apricot"
+      ],
+      "haze": [
+        "#F0A7B8",
+        "#A3D5BF",
+        "#F4C9A9"
+      ],
+      "light": {
+        "primary": "#A6475F",
+        "on_primary": "#FFFFFF",
+        "primary_hover": "#8F3B51",
+        "link": "#94405A",
+        "focus": "#A6475F",
+        "accent": "#F7D5BF",
+        "on_accent": "#4A2B1C"
+      },
+      "dark": {
+        "primary": "#F2A7B8",
+        "on_primary": "#3A1522",
+        "primary_hover": "#F7C2CE",
+        "link": "#F4B3C2",
+        "focus": "#F2A7B8",
+        "accent": "#F4C9A9",
+        "on_accent": "#3B2112"
+      },
+      "contrast": {
+        "light:on_primary/primary": 5.69,
+        "light:on_primary/primary_hover": 7.21,
+        "light:link/background": 6.22,
+        "light:primary/background": 5.29,
+        "dark:on_primary/primary": 8.39,
+        "dark:on_primary/primary_hover": 10.35,
+        "dark:link/background": 10.23
+      }
+    },
+    "sage": {
+      "label": "Шалфей",
+      "for": "медицина, стоматология, анализы, реабилитация, ветеринария",
+      "hero_tints": [
+        "tint_sage",
+        "tint_sky"
+      ],
+      "haze": [
+        "#A3D5BF",
+        "#A9CDE6",
+        "#F4C9A9"
+      ],
+      "light": {
+        "primary": "#3D6B5C",
+        "on_primary": "#FFFFFF",
+        "primary_hover": "#305749",
+        "link": "#33604F",
+        "focus": "#3D6B5C",
+        "accent": "#F7D5BF",
+        "on_accent": "#4A2B1C"
+      },
+      "dark": {
+        "primary": "#A3D5BF",
+        "on_primary": "#10271D",
+        "primary_hover": "#BDE3D2",
+        "link": "#A8D9C4",
+        "focus": "#A3D5BF",
+        "accent": "#F4C9A9",
+        "on_accent": "#3B2112"
+      },
+      "contrast": {
+        "light:on_primary/primary": 6.08,
+        "light:on_primary/primary_hover": 8.12,
+        "light:link/background": 6.67,
+        "light:primary/background": 5.65,
+        "dark:on_primary/primary": 9.64,
+        "dark:on_primary/primary_hover": 11.34,
+        "dark:link/background": 11.35
+      }
+    },
+    "lavender": {
+      "label": "Лаванда",
+      "for": "психологи, психотерапевты, коучи, сон и медитация",
+      "hero_tints": [
+        "tint_lavender",
+        "tint_sage"
+      ],
+      "haze": [
+        "#CDB9F0",
+        "#A3D5BF",
+        "#F0A7B8"
+      ],
+      "light": {
+        "primary": "#6B4F96",
+        "on_primary": "#FFFFFF",
+        "primary_hover": "#5A4180",
+        "link": "#614790",
+        "focus": "#6B4F96",
+        "accent": "#F7D5BF",
+        "on_accent": "#4A2B1C"
+      },
+      "dark": {
+        "primary": "#CDB9F0",
+        "on_primary": "#26193D",
+        "primary_hover": "#DCCFF5",
+        "link": "#D2C1F2",
+        "focus": "#CDB9F0",
+        "accent": "#F4C9A9",
+        "on_accent": "#3B2112"
+      },
+      "contrast": {
+        "light:on_primary/primary": 6.6,
+        "light:on_primary/primary_hover": 8.39,
+        "light:link/background": 6.94,
+        "light:primary/background": 6.13,
+        "dark:on_primary/primary": 9.15,
+        "dark:on_primary/primary_hover": 11.08,
+        "dark:link/background": 10.72
+      }
+    },
+    "coral": {
+      "label": "Коралл",
+      "for": "детские центры, кружки, частные сады, детская медицина",
+      "hero_tints": [
+        "tint_butter",
+        "tint_sky"
+      ],
+      "haze": [
+        "#F7B08F",
+        "#A9CDE6",
+        "#F4C9A9"
+      ],
+      "light": {
+        "primary": "#B2492E",
+        "on_primary": "#FFFFFF",
+        "primary_hover": "#983C25",
+        "link": "#9E4128",
+        "focus": "#B2492E",
+        "accent": "#D3E6F2",
+        "on_accent": "#16334A",
+        "accent_hover": "#C3DCEC"
+      },
+      "dark": {
+        "primary": "#F7B08F",
+        "on_primary": "#3D1B0C",
+        "primary_hover": "#FAC7AF",
+        "link": "#F8BA9E",
+        "focus": "#F7B08F",
+        "accent": "#A9CDE6",
+        "on_accent": "#12293B",
+        "accent_hover": "#C0DAEC"
+      },
+      "contrast": {
+        "light:on_primary/primary": 5.4,
+        "light:on_primary/primary_hover": 6.98,
+        "light:link/background": 6.02,
+        "light:primary/background": 5.02,
+        "light:on_accent/accent": 10.19,
+        "light:on_accent/accent_hover": 9.19,
+        "dark:on_primary/primary": 8.5,
+        "dark:on_primary/primary_hover": 10.18,
+        "dark:link/background": 10.6,
+        "dark:on_accent/accent": 8.93,
+        "dark:on_accent/accent_hover": 10.3
+      }
+    }
+  },
+  "niche_presets": {
+    "medicine": {
+      "palette": "sage",
+      "cta": "Записаться на приём",
+      "must": [
+        "лицензия на медицинскую деятельность: номер, дата, орган, ссылка на реестр",
+        "«Имеются противопоказания. Необходима консультация специалиста» — не меньше 5% площади рекламного блока (ст. 24 закона «О рекламе»)",
+        "врачи с образованием и стажем, цены «от»"
+      ],
+      "never": [
+        "отзывы-благодарности пациентов и истории излечения (ст. 24 закона «О рекламе»)",
+        "фото «до и после», обещания результата и «без боли гарантированно»",
+        "вопросы о диагнозе и жалобах в форме"
+      ]
+    },
+    "beauty": {
+      "palette": "rose",
+      "cta": "Записаться",
+      "must": [
+        "цены «от» и длительность процедуры",
+        "мастера с фото и стажем"
+      ],
+      "never": [
+        "инъекции, лазер, пилинги и аппаратная косметология — это медицинские услуги: для них действуют все правила medicine",
+        "чужие фото работ из интернета"
+      ]
+    },
+    "kids": {
+      "palette": "coral",
+      "headline_voice": "rounded",
+      "cta": "Записаться на пробное занятие",
+      "must": [
+        "обращаться к родителям, а не к ребёнку (ст. 6 закона «О рекламе»)",
+        "блок безопасности: кто и как забирает ребёнка, группа, медкабинет, лицензия на образовательную деятельность, если она нужна"
+      ],
+      "never": [
+        "лица детей без письменного согласия родителей",
+        "данные ребёнка в форме — только имя и телефон родителя, возраст можно списком"
+      ]
+    },
+    "psychology": {
+      "palette": "lavender",
+      "cta": "Записаться на первую встречу",
+      "must": [
+        "образование, подход, супервизия и формат встреч (очно/онлайн, длительность, цена)",
+        "строка о конфиденциальности у формы — только если это правда",
+        "выбор способа связи: звонок или сообщение"
+      ],
+      "never": [
+        "обещания результата («избавим от тревоги за 3 встречи»)",
+        "таймеры, «осталось 2 места» и прочее давление"
+      ]
+    }
+  },
+  "microcopy": {
+    "tone": "На «вы», спокойно и конкретно: что будет, сколько стоит, сколько длится. Без восклицательных знаков, без «лучшие в городе», без давления.",
+    "cta_examples": [
+      "Записаться на приём",
+      "Подобрать удобное время",
+      "Прийти на пробное занятие",
+      "Записаться на первую встречу",
+      "Задать вопрос администратору"
+    ],
+    "reassurance_lines": [
+      "Перезвоним в течение 15 минут в рабочее время",
+      "Цену называем до начала — без доплат на месте",
+      "Можно перенести запись за 2 часа без штрафа"
+    ],
+    "notes": "Строки-обещания ставить только если это правда у конкретного клиента."
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_arch",
+        "centered"
+      ],
+      "hero_media": [
+        "specialist",
+        "space"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_voice": [
+        "serif",
+        "rounded"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "price_visibility": [
+        "in_hero",
+        "section"
+      ],
+      "form_position": [
+        "hero",
+        "bottom"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ]
+    },
+    "fixed": [
+      "palette_preset",
+      "fonts",
+      "radius",
+      "warm_shadows",
+      "single_cta_color",
+      "legal_notices"
+    ],
+    "default": {
+      "hero_layout": "split_arch",
+      "hero_media": "specialist",
+      "cta_color_role": "primary",
+      "headline_voice": "serif",
+      "headline_scale": "xl",
+      "price_visibility": "in_hero",
+      "form_position": "hero",
+      "social_proof_position": "under_hero",
+      "motion_level": "subtle"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Ставить на тест одну ось за раз. Для этих ниш самые сильные рычаги обычно hero_media (живой специалист против помещения) и price_visibility (цена на первом экране против отдельного прайса)."
+  },
+  "do": [
+    "Один насыщенный цвет действия — primary выбранного пресета; пастели только для фонов полос, карточек, бейджей и подложек фото, текст на них всегда тёмный (on_tint).",
+    "Заголовки display и h2, цифры и цитаты — Lora (одно слово заголовка курсивом цвета primary); h3, текст и интерфейс — Nunito 400/600/700, тело 18 px. Для детских услуг — округлый голос: display_rounded и h2_rounded.",
+    "Скругляйте всё: карточки 24 px, поля 16 px, кнопки-пилюли, фото — арка или 32 px.",
+    "Показывайте живых людей: фото специалиста, имя, стаж, образование — это главный источник доверия в этих нишах.",
+    "Цены «от» и длительность — на первом экране или в прайсе сразу под ним.",
+    "Для медицинских услуг: лицензия и строка о противопоказаниях видимым текстом рядом с ценами и в подвале.",
+    "Движение только спокойное: проявление со сдвигом 12 px за 280–560 ms, счёт цифр не дольше 0,9 с и один раз, без пружин, отскоков и перелёта."
+  ],
+  "dont": [
+    "Не писать текст пастельным цветом на светлой теме и не ставить белый текст на пастель (1.1–1.9:1).",
+    "Не ставить больше трёх разных пастелей на один экран и две пастельные полосы подряд.",
+    "Не использовать в медицине и косметологии отзывы-благодарности, истории излечения и фото «до и после».",
+    "Не спрашивать в форме диагноз, жалобы и данные ребёнка — это специальные персональные данные.",
+    "Не давить: без таймеров, «осталось 2 места», мигания, тряски кнопок и всплывающих окон на входе.",
+    "Не заменять фон страницы и карточек холодным белым #FFFFFF и серыми тенями — стиль теряет тепло и выглядит как больничный бланк."
+  ],
+  "prompt_snippet": "Build a 'Soft'-style landing; expose tokens as --color-<key> variables, underscores as hyphens (--color-on-primary). Warm linen page #FAF6F1, cards #FFFDFA with 24px radius, a 1px #E7DDD3 hairline and diffuse warm-brown shadow. Pastel bands (powder #F7E3DE, sage #E2EEE5, apricot #FBE7D6) always carry dark text #2E2622, never two in a row. Headlines: Lora 500, 60px desktop / 36px mobile, one word in Lora Italic tinted primary. Body and UI: Nunito, 18px. One action color: berry-rose #A6475F pill buttons, 56px tall, white text; pick the niche preset (medicine sage #3D6B5C, psychology lavender #6B4F96, kids coral #B2492E). Hero split 6/6: badge, headline, lead, 'from' price and CTA left; specialist photo in an arch right. Medical pages: license and contraindication notice, no testimonials or before/after. Lead form: name, phone, unchecked 152-FZ consent; success replaces it in place. Gentle fades only, no bounce. Dark theme: cocoa #1B1715, cards #25201D, text #F4EDE7, CTA #F2A7B8 with #3A1522 text.",
+  "source": {
+    "inspired_by": "bergside/awesome-design-skills (MIT): skills/friendly/DESIGN.md (пастель и скругления), skills/cafe/DESIGN.md (тёплые нейтральные)",
+    "notes": "Из источников взяты только идеи: пастельная пара роза + мята (friendly: #F2D9DC и #D9F2D8) и тёплые кофейные нейтрали (cafe: #F9F7F5, #3E2B1E). Всё остальное собрано заново. У friendly кнопка — пастель #F2D9DC: белый текст на ней даёт 1.33:1, поэтому пастель ушла в фоны, а для действия подобран насыщенный тон той же розы #A6475F (5.69:1 с белым). Зелёный успеха #16A34A (3.3:1 на белом) и красный #DC2626 (4.49 на льне) заменены на #2F6A4C и #B03A2E. Шрифты источников: Space Mono и Poppins без кириллицы, Noto Serif Display кириллицу имеет, но это контрастная дисплейная антиква — для мягкого стиля холодна; взяты Lora (мягкая антиква с кириллическим курсивом) и Nunito (округлые окончания), обе OFL. Добавлены полная тёплая тёмная тема, четыре цветовых пресета под ниши с замером контраста и своей дымкой первого экрана, прайс, карточки специалистов с аркой, требования закона «О рекламе» для медицины и детских услуг и форма без чувствительных данных."
+  }
+}

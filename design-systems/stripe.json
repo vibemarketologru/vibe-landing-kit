@@ -1,0 +1,590 @@
+{
+  "slug": "stripe",
+  "name": "Stripe",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Stripe; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Белый холст, над которым в верхней трети первого экрана разлита сетчатая дымка из кремового, персикового, лавандового, индиго и рубинового. Тонкие заголовки весом 300 со сжатым трекингом, тёмно-синий текст вместо чёрного, одна индиго-пилюля на секцию, табличные цифры в деньгах и макеты интерфейса в карточках с мягкой синеватой тенью.",
+  "summary_en": "A white canvas with an atmospheric mesh of cream, peach, lavender, indigo and ruby washed across the top third of the hero. Thin weight-300 headlines with negative tracking, deep navy text instead of black, a single indigo pill CTA per section, tabular figures for money, and product UI mockups in cards with a soft blue-tinted shadow.",
+  "best_for": [
+    "финтех и платежи",
+    "SaaS и B2B-сервисы",
+    "эквайринг, онлайн-кассы, бухгалтерия",
+    "IT-интеграторы и разработка",
+    "сервисы для малого бизнеса",
+    "маркетплейсы и платформы"
+  ],
+  "goals": [
+    "заявки на подключение",
+    "запись на демо",
+    "расчёт стоимости",
+    "доверие к сложному продукту"
+  ],
+  "mood": [
+    "технологичный",
+    "светлый",
+    "спокойный",
+    "дорогой",
+    "точный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f6f9fc",
+        "text": "#0d253d",
+        "text_muted": "#61718a",
+        "border": "#e3e8ee",
+        "primary": "#533afd",
+        "on_primary": "#ffffff",
+        "accent": "#1c1e54",
+        "on_accent": "#ffffff",
+        "link": "#533afd",
+        "success": "#0e7a44",
+        "error": "#df1b41",
+        "text_secondary": "#273951",
+        "primary_hover": "#4434d4",
+        "primary_press": "#2e2b8c",
+        "border_input": "#7690ad",
+        "focus_ring": "#533afd",
+        "badge_bg": "#b9b9f9",
+        "badge_text": "#2e2b8c",
+        "surface_warm": "#f5e9d4",
+        "text_on_warm": "#0d253d",
+        "text_muted_on_warm": "#4e5d73",
+        "surface_featured": "#1c1e54",
+        "text_on_featured": "#ffffff",
+        "text_muted_on_featured": "#b9b9f9",
+        "mesh_cream": "#f5e9d4",
+        "mesh_peach": "#ffb37a",
+        "mesh_lavender": "#b9b9f9",
+        "mesh_indigo": "#533afd",
+        "mesh_ruby": "#ea2261",
+        "mesh_magenta": "#f96bee",
+        "accent_hover": "#2e2b8c",
+        "border_on_featured": "#3a3f8a"
+      },
+      "dark": {
+        "background": "#0a1c30",
+        "surface": "#10263f",
+        "text": "#f6f9fc",
+        "text_muted": "#a3b4c8",
+        "border": "#22405e",
+        "primary": "#665efd",
+        "on_primary": "#ffffff",
+        "accent": "#b9b9f9",
+        "on_accent": "#1c1e54",
+        "link": "#a9a4ff",
+        "success": "#3dd68c",
+        "error": "#ff6b8b",
+        "text_secondary": "#d3dce7",
+        "primary_hover": "#533afd",
+        "primary_press": "#4434d4",
+        "border_input": "#5b7ea3",
+        "focus_ring": "#b9b9f9",
+        "badge_bg": "#262a6b",
+        "badge_text": "#c9c7ff",
+        "surface_warm": "#2b2418",
+        "text_on_warm": "#f5e9d4",
+        "text_muted_on_warm": "#cdbd9f",
+        "surface_featured": "#1c1e54",
+        "text_on_featured": "#ffffff",
+        "text_muted_on_featured": "#b9b9f9",
+        "mesh_cream": "#f5e9d4",
+        "mesh_peach": "#ffb37a",
+        "mesh_lavender": "#b9b9f9",
+        "mesh_indigo": "#533afd",
+        "mesh_ruby": "#ea2261",
+        "mesh_magenta": "#f96bee",
+        "accent_hover": "#cfcffb",
+        "border_on_featured": "#3a3f8a"
+      }
+    },
+    "contrast_notes": "Пары, которые не проверяет check.mjs, посчитаны по WCAG: primary_hover/белый 7.81, primary_press/белый 11.41, accent_hover/on_accent 11.41 (тёмная 10.25), badge_text/badge_bg 6.18 (тёмная 8.06), text_muted_on_warm/surface_warm 5.57 (тёмная 8.31), text_muted_on_featured/surface_featured 8.34, text_secondary/background 11.73 (тёмная 12.41), link/surface 5.86 (тёмная 6.89), border_input/background 3.30 (тёмная 4.06 к фону, 3.62 к surface) — граница поля по WCAG 1.4.11, success/background 5.40 (тёмная 9.16), error/background 4.80 (тёмная 6.33; к surface 5.64). В тёмной теме у surface_featured обязательна рамка 1px primary: к фону он даёт только 1.12. Замер первого экрана в Chromium (1440, 1024 и 390 px, обе темы): заголовок и lead над дымкой ≥ 10, телефон в шапке на подложке 72% ≥ 10.2, а на прозрачной шапке 2.76; eyebrow цветом primary над лавандовым стопом 4.0, цветом text — 10.1, поэтому над дымкой он цвета text.",
+    "gradient": {
+      "hero": "radial-gradient(38% 110% at 4% 0%, #f5e9d4 0%, rgba(245,233,212,0) 75%), radial-gradient(32% 100% at 26% 0%, #ffb37a 0%, rgba(255,179,122,0) 72%), radial-gradient(34% 110% at 48% 0%, #b9b9f9 0%, rgba(185,185,249,0) 72%), radial-gradient(30% 110% at 73% 0%, #533afd 0%, rgba(83,58,253,0) 70%), radial-gradient(26% 100% at 97% 4%, #ea2261 0%, rgba(234,34,97,0) 70%), radial-gradient(22% 70% at 86% 42%, #f96bee 0%, rgba(249,107,238,0) 70%), #ffffff",
+      "hero_dark": "radial-gradient(38% 110% at 4% 0%, rgba(245,233,212,0.07) 0%, rgba(245,233,212,0) 75%), radial-gradient(32% 100% at 26% 0%, rgba(255,179,122,0.20) 0%, rgba(255,179,122,0) 72%), radial-gradient(34% 110% at 48% 0%, rgba(185,185,249,0.22) 0%, rgba(185,185,249,0) 72%), radial-gradient(30% 110% at 73% 0%, rgba(83,58,253,0.8) 0%, rgba(83,58,253,0) 70%), radial-gradient(26% 100% at 97% 4%, rgba(234,34,97,0.58) 0%, rgba(234,34,97,0) 70%), radial-gradient(22% 70% at 86% 42%, rgba(249,107,238,0.32) 0%, rgba(249,107,238,0) 70%), #0a1c30",
+      "soft": "radial-gradient(50% 90% at 10% 100%, rgba(255,179,122,0.45) 0%, rgba(255,179,122,0) 70%), radial-gradient(45% 90% at 50% 100%, rgba(185,185,249,0.55) 0%, rgba(185,185,249,0) 72%), radial-gradient(45% 90% at 90% 100%, rgba(83,58,253,0.35) 0%, rgba(83,58,253,0) 72%), #f6f9fc",
+      "soft_dark": "radial-gradient(50% 90% at 10% 100%, rgba(255,179,122,0.14) 0%, rgba(255,179,122,0) 70%), radial-gradient(45% 90% at 50% 100%, rgba(185,185,249,0.16) 0%, rgba(185,185,249,0) 72%), radial-gradient(45% 90% at 90% 100%, rgba(83,58,253,0.40) 0%, rgba(83,58,253,0) 72%), #0a1c30",
+      "mesh_mask": "linear-gradient(to bottom, #000 0%, #000 50%, transparent 100%)",
+      "hero_scrim": "linear-gradient(90deg, color-mix(in srgb, var(--background) 70%, transparent) 0%, transparent 58%)",
+      "usage": "Сетка — отдельный слой .hero-mesh (position:absolute; inset:0 0 auto 0; height:min(62vh,560px); z-index:-1) с mask-image из mesh_mask: к низу дымка растворяется в фоне. Слева светлые стопы (крем, персик, лаванда) — на них тёмный текст читается (ink/крем 12.96, ink/персик 8.88, ink/лаванда 8.43); индиго, рубин и пурпур собраны правее 55% ширины, там стоит макет. Поверх дымки текст только цветами text и text_secondary: тёмный текст на индиго и рубине запрещён (ink/#533afd = 2.51, ink/#ea2261 = 3.63), индиго-текст на лавандовом стопе даёт 4.0 — eyebrow и ссылки над дымкой набирать цветом text. hero_scrim — только если заголовок заходит правее 55% ширины. Мягкая версия soft — фон секции с формой заявки. Для живого движения — рецепт gradient-drift поверх статичной дымки и внутри её слоя (та же маска): --gd-c1:#ffb37a (левое верхнее пятно, под заголовком — только тёплый цвет), --gd-c2:#533afd (правое нижнее, за макетом), --gd-c3:#ea2261 (центр, 18%), --gd-strength:24%."
+    },
+    "typography": {
+      "display": {
+        "family": "Inter Tight",
+        "fallback": "'Inter Tight Variable', 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "56px",
+        "size_mobile": "36px",
+        "line_height": 1.06,
+        "letter_spacing": "-0.025em",
+        "note": "У бренда 1.03; для кириллицы 1.06, иначе Й и Ё задевают у/р/д строки выше"
+      },
+      "h2": {
+        "family": "Inter Tight",
+        "fallback": "'Inter Tight Variable', 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "48px",
+        "size_mobile": "30px",
+        "line_height": 1.12,
+        "letter_spacing": "-0.02em"
+      },
+      "h3": {
+        "family": "Inter Tight",
+        "fallback": "'Inter Tight Variable', 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "26px",
+        "size_mobile": "22px",
+        "line_height": 1.15,
+        "letter_spacing": "-0.01em"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0",
+        "note": "Подзаголовок первого экрана, цвет text_secondary. В тёмной теме вес 400: тонкий светлый текст на тёмном фоне «тает»"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0",
+        "note": "У бренда 1.4; русский текст длиннее — 1.55. Мельче 16px вес 300 не использовать. В тёмной теме вес 400: тонкий светлый текст на тёмном фоне «тает»"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.45,
+        "letter_spacing": "-0.005em",
+        "features": "tnum"
+      },
+      "eyebrow": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "15px",
+        "size_mobile": "14px",
+        "line_height": 1.3,
+        "letter_spacing": "0",
+        "color": "primary на background и surface (в тёмной теме link); поверх дымки первого экрана — text: индиго на лавандовом стопе даёт только 4.0",
+        "note": "Ярлык над заголовком секции обычным регистром, без капса и разрядки — так он выглядит у бренда"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1,
+        "letter_spacing": "0"
+      },
+      "stat": {
+        "family": "Inter Tight",
+        "fallback": "'Inter Tight Variable', 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "56px",
+        "size_mobile": "40px",
+        "line_height": 1,
+        "letter_spacing": "-0.03em",
+        "features": "tnum",
+        "note": "Цифры блока результатов и цена тарифа"
+      },
+      "tabular": {
+        "family": "Inter",
+        "fallback": "'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.4,
+        "letter_spacing": "-0.01em",
+        "features": "tnum",
+        "note": "Ячейки таблиц и макета интерфейса: суммы, проценты, даты. Вес 400 — мельче 16px вес 300 не используется"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "6px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "scale": [
+        2,
+        4,
+        8,
+        12,
+        16,
+        24,
+        32,
+        64,
+        96
+      ],
+      "section_desktop": "96px",
+      "section_mobile": "64px",
+      "container": "1200px",
+      "gutter_desktop": "24px",
+      "gutter_mobile": "16px",
+      "card_padding": "32px",
+      "card_padding_mobile": "24px",
+      "grid_gap": "24px"
+    },
+    "shadow": {
+      "card": "0 1px 3px rgba(0,55,112,0.08)",
+      "raised": "0 8px 24px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04)",
+      "mockup": "0 30px 60px -12px rgba(50,50,93,0.25), 0 18px 36px -18px rgba(0,0,0,0.30)",
+      "card_dark": "0 1px 2px rgba(0,0,0,0.40)",
+      "raised_dark": "0 12px 32px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.30)",
+      "mockup_dark": "0 30px 60px -12px rgba(0,0,0,0.60), 0 0 0 1px rgba(185,185,249,0.10)",
+      "focus": "0 0 0 3px color-mix(in srgb, var(--focus_ring) 30%, transparent)"
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "240ms",
+      "slow": "480ms",
+      "ease_standard": "cubic-bezier(.215,.61,.355,1)",
+      "ease_emphasized": "cubic-bezier(.25,1,.5,1)",
+      "note": "Движение спокойное и короткое: смещения до 24px, никаких пружин и отскоков"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Inter Tight",
+      "fontsource": "inter-tight",
+      "role": "display",
+      "weights": [
+        300,
+        400
+      ],
+      "replaces": "Söhne (sohne-var, Klim Type Foundry, проприетарный) — заголовки и крупные цифры",
+      "install": "npm i @fontsource-variable/inter-tight — раздача из своей папки, font-display: swap. Пакет регистрирует семейство 'Inter Tight Variable': его писать первым в font-family (одно 'Inter Tight' без статичного @fontsource/inter-tight молча уходит в запасной шрифт). Подмножества: cyrillic, latin (цифры и tnum) и latin-ext — знак ₽ (U+20BD) есть только в нём. Предзагрузить один файл — кириллический вариативный.",
+      "license": "OFL-1.1"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body",
+      "weights": [
+        300,
+        400
+      ],
+      "replaces": "Söhne (sohne-var, проприетарный) — текст, кнопки, поля формы, табличные цифры",
+      "install": "npm i @fontsource-variable/inter — семейство 'Inter Variable', подмножества cyrillic, latin и latin-ext (знак ₽), font-display: swap.",
+      "license": "OFL-1.1"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "10px 18px (высота 40px); на первом экране и в форме 14px 24px (48px)",
+      "font": "button",
+      "weight": 400,
+      "icon": "стрелка-шеврон 10×10 справа от текста, SVG stroke 2px currentColor, отступ 8px",
+      "hover": "фон primary_hover; у шеврона появляется черта-древко (opacity 0→1) и он сдвигается вправо на 3px — transform, 150ms ease_standard",
+      "active": "фон primary_press",
+      "focus": "outline 2px focus_ring, offset 2px",
+      "rule": "одна залитая кнопка на секцию"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "link",
+      "border": "1px solid primary (в тёмной теме link)",
+      "radius": "pill",
+      "padding": "как у button_primary",
+      "weight": 400,
+      "hover": "фон badge_bg с прозрачностью 35%, шеврон сдвигается на 3px"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "padding": "как у button_primary",
+      "weight": 400,
+      "hover": "фон accent_hover",
+      "use": "альтернативный цвет главной кнопки для оси A/B cta_color_role (светлая тема — тёмно-синяя пилюля, тёмная — лавандовая)"
+    },
+    "link_arrow": {
+      "color": "link",
+      "weight": 400,
+      "decoration": "без подчёркивания, при наведении подчёркивание 1px с отступом 3px",
+      "icon": "тот же шеврон, что у кнопки",
+      "use": "второстепенные действия: «Как это работает», «Смотреть тарифы»"
+    },
+    "card": {
+      "bg": "светлая тема — background на любой полосе; тёмная — surface на полосе background и background на полосе surface, чтобы карточка не сливалась с полосой",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "lg",
+      "padding": "32px (телефон 24px)",
+      "shadow": "card, при наведении raised — только если карточка кликабельна",
+      "icon": "линейная SVG-иконка 24px цветом badge_text в квадрате 40px с фоном badge_bg и радиусом md"
+    },
+    "card_featured": {
+      "bg": "surface_featured",
+      "color": "text_on_featured",
+      "muted": "text_muted_on_featured",
+      "border": "в тёмной теме 1px solid primary (к фону surface_featured даёт только 1.12)",
+      "radius": "lg",
+      "padding": "32px",
+      "cta": "button_primary — единственная залитая кнопка секции тарифов; у остальных тарифов button_secondary",
+      "use": "тариф «Лучший выбор» — единственная тёмно-синяя карточка на странице"
+    },
+    "card_warm": {
+      "bg": "surface_warm",
+      "color": "text_on_warm",
+      "muted": "text_muted_on_warm",
+      "radius": "lg",
+      "padding": "32px",
+      "use": "тёплая пауза между холодными секциями: отзыв, гарантия, кейс"
+    },
+    "mockup": {
+      "bg": "background (тёмная — surface)",
+      "radius": "xl",
+      "shadow": "mockup (тёмная — mockup_dark)",
+      "padding": "24px",
+      "font": "tabular",
+      "content": "собранный из HTML/SVG макет интерфейса С ЦИФРАМИ КЛИЕНТА: карточка «Заявки за неделю» с мини-графиком линией primary, таблица из 4–5 строк с суммами tnum и точками-статусами (success, mesh_ruby, mesh_peach), у каждой точки подпись словом («Оплачено», «Возврат», «Ожидает») — цвет не единственный признак. Плашка badge. Не больше двух слоёв макета, сдвиг 16–24px с наложением. Скриншоты чужих продуктов не использовать"
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "sm",
+      "height": "48px",
+      "padding": "12px 14px",
+      "font": "Inter 400 16px (не меньше 16px — иначе iOS приближает страницу)",
+      "label": "над полем, caption 13px weight 400, цвет text_secondary",
+      "placeholder": "text_muted, только пример формата: +7 900 000-00-00",
+      "focus": "рамка primary + shadow.focus",
+      "error": "рамка error + текст ошибки под полем цветом error, иконка-восклицание SVG 16px"
+    },
+    "checkbox_consent": {
+      "size": "20px",
+      "radius": "xs",
+      "border": "1px solid border_input",
+      "checked": "фон primary, галочка on_primary",
+      "label": "caption, цвет text_muted, ссылки на согласие и политику цветом link с подчёркиванием",
+      "default": "не отмечен"
+    },
+    "badge": {
+      "bg": "badge_bg",
+      "color": "badge_text",
+      "radius": "pill",
+      "padding": "4px 10px",
+      "font": "Inter 400 12px, tnum",
+      "use": "«Новое», «Хит», срок подключения; не больше одного бейджа в карточке"
+    },
+    "nav": {
+      "height": "64px",
+      "bg": "с первого пикселя — background с прозрачностью 72% и backdrop-filter: blur(12px): дымка просвечивает, а тёмный текст справа, над индиго-рубиновым краем, читается (замер: телефон 10.2 и выше вместо 2.76 на прозрачной шапке); после 24px прокрутки — 85% и нижняя линия 1px border",
+      "left": "текстовое название клиента (Inter Tight 400 20px), без чужих логотипов",
+      "center": "3–4 якорные ссылки, Inter 400 15px, цвет text",
+      "right": "телефон ссылкой tel: (tabular) + button_primary «Оставить заявку»",
+      "mobile": "бургер 44×44 справа, меню — шторка на весь экран с крупными ссылками 22px и кнопкой внизу"
+    },
+    "stat": {
+      "number": "typography.stat, tnum; цвет text, на тёмно-синей полосе — text_on_featured",
+      "label": "caption, text_muted (на тёмно-синей полосе text_muted_on_featured), до 6 слов",
+      "divider": "вертикальная линия 1px border (на тёмно-синей полосе border_on_featured) между цифрами на десктопе",
+      "rule": "только проверяемые цифры с источником в сноске"
+    },
+    "faq_item": {
+      "border": "нижняя линия 1px border",
+      "question": "Inter Tight 300, 22px (телефон 20px), цвет text; это <summary>, а не заголовок страницы, вес тот же, что у заголовков",
+      "icon": "плюс 16px, при раскрытии поворот на 45° (transform)",
+      "answer": "body, text_secondary, max-width 720px"
+    },
+    "footer": {
+      "bg": "background",
+      "color": "text_muted",
+      "font": "caption",
+      "padding": "64px 24px",
+      "content": "2–3 колонки ссылок, контакты tabular, строка реквизитов: название оператора ПДн, ИНН/ОГРН, ссылки «Политика обработки персональных данных» и «Согласие на обработку»"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Сетчатая дымка (gradient.hero) лежит отдельным слоем в верхних ~60% экрана и растворяется книзу. Раскладка 6/6: слева — eyebrow цветом text, заголовок display в 2–3 строки (до 60 знаков), lead в 1–2 предложения цветом text_secondary, ряд из button_primary и link_arrow, под ними строка доверия caption с цифрой tnum («Подключили 1 240 компаний»). Справа — mockup, частично заходящий на индиго-рубиновую часть дымки и на 40px за нижний край дымки: белые карточки с тенью «парят» над цветом. Заголовок стоит на светлой левой части дымки (крем, персик, лаванда) в пределах 55% ширины. Высота первого экрана — по содержимому, не 100vh.",
+    "section_order": [
+      "nav",
+      "hero",
+      "logos",
+      "benefits",
+      "product_mockup",
+      "how",
+      "numbers",
+      "proof",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_backgrounds": {
+      "hero": "background + gradient.hero",
+      "logos": "background",
+      "benefits": "surface",
+      "product_mockup": "background",
+      "how": "background",
+      "numbers": "surface_featured — тёмно-синяя полоса во всю ширину окна: цифры text_on_featured, подписи text_muted_on_featured, разделители border_on_featured (как «глобальный» блок цифр бренда)",
+      "proof": "surface_warm (card_warm на всю ширину контейнера)",
+      "pricing": "background",
+      "faq": "surface",
+      "lead_form": "gradient.soft",
+      "footer": "background"
+    },
+    "grid": "12 колонок, контейнер 1200px, промежуток 24px. Первый экран 6/6; преимущества — 3×2 карточки по 4 колонки; «как это работает» — 3–4 шага в ряд с номерами tnum и тонкой линией между ними; цифры — 4 по 3 колонки; тарифы — 3 по 4 колонки, средний card_featured; форма — карточка 6 колонок по центру или 5/7 (слева аргументы, справа форма).",
+    "mobile_notes": "Одна колонка, боковые поля 16px. Шапка 56px на той же полупрозрачной подложке, бургер 44×44. Дымка превращается в полосу 180–220px над заголовком (тот же градиент, mesh_mask), заголовок уже на белом. Заголовок 36px, h2 30px. Макет первого экрана упрощается до одной карточки с цифрами и уходит под кнопки. Кнопки на всю ширину, высота 48px. Тарифы — вертикальный список, «Лучший выбор» первым. Линия цифр — сетка 2×2. Лента логотипов — горизонтальная прокрутка или marquee. Внизу — липкая кнопка «Оставить заявку», которая скрывается, когда форма на экране.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — тарифы 2 в ряд, макет из двух слоёв",
+      "desktop": "≥1024px",
+      "wide": "≥1440px — дымка на всю ширину окна, контейнер прежний"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "company"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "company": "Компания (необязательно)"
+    },
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две разные ссылки на отдельные документы (с 1 сентября 2025 согласие оформляется отдельно от прочих документов). Неотмеченный чекбокс не блокирует кнопку: при нажатии рядом появляется текст «Отметьте согласие, чтобы мы могли связаться с вами». Маркетинговые рассылки — только вторым необязательным чекбоксом.",
+    "style": "Белая карточка (тёмная — surface) на фоне gradient.soft: радиус lg, рамка 1px border, тень raised, внутренний отступ 32px (телефон 24px), ширина до 560px. Над полями h3 «Оставьте заявку — перезвоним за 15 минут» и строка caption о рабочем времени tnum. Поля input друг под другом, промежуток 16px. Кнопка button_primary на всю ширину карточки, 48px, текст «Отправить заявку» с шевроном. Под кнопкой caption text_muted: «Не передаём данные третьим лицам». Маску телефона не навязывать до ввода — принимать любые цифры и +.",
+    "success_state": "Карточка не исчезает и не меняет высоту: содержимое сменяется по рецепту form-success — круг 56px цветом success с прорисованной галочкой, h3 «Заявка принята», текст «Перезвоним в течение 15 минут в рабочее время: пн–пт 9:00–19:00 (МСК)» с tnum, link_arrow «Пока ждёте — посмотрите, как это работает». Фокус переносится на заголовок (tabindex=-1), область с aria-live=polite.",
+    "error_state": "Отказ всегда видимым текстом на том же экране: под кнопкой цветом error «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Введённое не стирать. Скрытые ловушки для ботов не имеют права молча отбросить заявку с заполненными именем и телефоном — такую заявку принимать с пометкой."
+  },
+  "motion_recipes": [
+    "gradient-drift",
+    "fade-up-stagger",
+    "counter-up",
+    "tilt-card",
+    "marquee-logos",
+    "parallax-soft",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "gradient-drift": "пятна поверх статичной дымки первого экрана: --gd-c1 #ffb37a, --gd-c2 #533afd, --gd-c3 #ea2261, --gd-strength 24%; за формой — те же цвета с --gd-strength 18%. Кнопка паузы рецепта обязательна",
+    "fade-up-stagger": "карточки преимуществ, шаги, тарифы",
+    "counter-up": "блок цифр на тёмно-синей полосе; строку доверия первого экрана не анимировать — число видно сразу",
+    "marquee-logos": "полоса клиентов под первым экраном",
+    "parallax-soft": "не больше двух слоёв макета интерфейса на первом экране и в product_mockup, сдвиг не больше 24px; текст и кнопки неподвижны",
+    "accordion-smooth": "частые вопросы",
+    "form-success": "ответ формы заявки",
+    "sticky-cta-mobile": "липкая кнопка «Оставить заявку» на телефоне, прячется, когда форма в кадре",
+    "tilt-card": "только motion_level = rich и только на десктопе с мышью: три карточки тарифов в pricing, не больше одного ряда на страницу. data-tilt-max=\"4\" — движение у стиля спокойное; --tilt-radius: 12px (radius.lg); --tilt-shadow: rgba(0,55,112,.18) — та же синеватая тень, что у shadow.raised. Блик: в светлой теме --tilt-glare: transparent (text_muted к белой карточке 4.96 < 5.5), в тёмной и у card_featured (#1c1e54) — rgba(255,255,255,.06). Макеты интерфейса не наклонять — они уже двигаются parallax-soft."
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_mockup",
+        "split_form",
+        "centered"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "l",
+        "xl"
+      ],
+      "mesh_intensity": [
+        "full",
+        "soft"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "cta_label": [
+        "Оставить заявку",
+        "Получить расчёт"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "вес заголовков 300",
+      "кнопки-пилюли",
+      "табличные цифры",
+      "форма и согласие 152-ФЗ"
+    ],
+    "default": {
+      "hero_layout": "split_mockup",
+      "cta_color_role": "primary",
+      "headline_scale": "l",
+      "mesh_intensity": "full",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "cta_label": "Оставить заявку"
+    },
+    "legend": {
+      "split_mockup": "текст слева, макет справа (по умолчанию)",
+      "split_form": "текст слева, короткая форма (имя + телефон + согласие) справа в белой карточке поверх дымки",
+      "centered": "текст по центру в 8 колонках, макет под кнопками на всю ширину",
+      "l": "display 56/36px",
+      "xl": "display 68/40px, заголовок до 45 знаков",
+      "full": "gradient.hero",
+      "soft": "gradient.soft вместо hero, дымка вдвое ниже",
+      "none": "без анимаций",
+      "subtle": "fade-up-stagger + counter-up",
+      "rich": "subtle + gradient-drift + parallax-soft + marquee-logos + tilt-card"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "do": [
+    "Одна залитая индиго-пилюля на секцию; остальные действия — контурные кнопки и ссылки со сдвигающимся шевроном.",
+    "Заголовки только весом 300 со сжатым трекингом: -0.025em на 56px, -0.02em на 48px, -0.01em на 26px; иерархию строить размером, а не жирностью.",
+    "Сетчатую дымку ставить на первый экран и мягкой версией за форму заявки; индиго, рубин и пурпур — правее 55% ширины за макетом, поверх дымки текст только цветами text и text_secondary.",
+    "Все суммы, проценты, сроки и телефоны набирать с font-variant-numeric: tabular-nums и подключать подмножество latin-ext — знак ₽ живёт только в нём.",
+    "Первый экран и блок product_mockup подкреплять макетом интерфейса из HTML/SVG с цифрами клиента, а не стоковым фото; в карточках преимуществ — линейные SVG-иконки.",
+    "Текст — тёмно-синий #0d253d (в тёмной теме #f6f9fc); полосы чередовать background и surface, на страницу одна тёплая полоса surface_warm и одна тёмно-синяя полоса цифр surface_featured.",
+    "Согласие на обработку данных — отдельный неотмеченный чекбокс, ошибка отправки — видимым текстом у кнопки."
+  ],
+  "dont": [
+    "Не поднимать вес заголовков выше 300 и не набирать заголовки и ярлыки капсом.",
+    "Не заливать кнопки рубиновым, пурпурным или персиковым: эти цвета живут только в дымке и в точках-статусах макета.",
+    "Не набирать основной текст цветом primary и не ставить тёмный или индиго-текст на цветную часть дымки.",
+    "Не делать шапку полностью прозрачной над дымкой: телефон и ссылки справа попадают на индиго (2.8).",
+    "Не заменять пилюли прямоугольными кнопками и не делать кнопки ниже 40px (на телефоне ниже 48px).",
+    "Не делать дымку двухцветным линейным градиентом и не размывать её filter: blur на всю секцию.",
+    "Не использовать логотипы, иллюстрации и скриншоты Stripe или других чужих продуктов."
+  ],
+  "prompt_snippet": "Build a Russian-language lead-generation landing page in a Stripe-inspired style. Canvas #ffffff, alternating #f6f9fc bands, one warm #f5e9d4 testimonial band and one deep-navy #1c1e54 stats band; text navy #0d253d, never black. Hero: layered radial-gradient mesh (cream, peach #ffb37a, lavender #b9b9f9, indigo #533afd, ruby #ea2261) over the top 60% of the viewport, masked to fade into white; saturated stops stay right of 55% behind a floating HTML/SVG dashboard mockup (white 16px-radius card). Only navy text over the mesh; nav on a blurred 72% page-color backdrop. Type: 'Inter Tight Variable' 300 for headings (56px, 36px mobile, tracking -0.025em), 'Inter Variable' 300/400 for text, tabular-nums for every number, latin-ext subset for ₽. One filled indigo pill CTA per section with a sliding chevron. Lead form in a white card over a softer mesh: name, phone, optional company, unchecked 152-FZ consent, visible error text. Full dark theme, self-hosted fonts, reduced motion respected.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/stripe/DESIGN.md (в исходнике бренд записан как «Stripi»)",
+    "notes": "Перенесено: палитра (#533afd, #0d253d, #1c1e54, #f6f9fc, #f5e9d4, #e3e8ee, стопы дымки), тонкие заголовки 300 со сжатым трекингом, радиусы 4/6/8/12/16/пилюля, тени уровней 1–2, ритм 8px, табличные цифры, кнопки-пилюли, тёмно-синяя карточка лучшего тарифа, тёплая кремовая полоса, макеты интерфейса. Изменено: Söhne заменён на Inter Tight (заголовки) и Inter (текст) — OFL, с кириллицей; стилистический набор ss01 фирменного шрифта не переносится. Межстрочный интервал поднят для кириллицы (display 1.03→1.06, текст 1.4→1.55), текст мельче 16px весом 400. Тёмной маркетинговой темы у бренда нет — собрана из его же цветов: фон на базе ink, главная кнопка — фирменный #665efd (с белым 4.58; основной #533afd к тёмному фону даёт лишь 2.78), акцент — лавандовый #b9b9f9 с тёмно-синим текстом. Контраст: фирменная кнопка #533afd/белый = 6.19 — без правок; рамка поля #a8c3de давала 1.82 → #7690ad (3.30, WCAG 1.4.11); текст бейджа #4434d4 на #b9b9f9 давал 4.23 → фирменный #2e2b8c (6.18); прозрачная шапка над дымкой давала телефону 2.76 → подложка 72% с размытием; eyebrow цветом primary над дымкой 4.0 → цвет text; приглушённый текст взят фирменный #61718a (4.69 на surface) вместо #64748d (4.49). Семантических цветов в маркетинге бренда нет — success/error добавлены с AA-контрастом. Персиковый стоп дымки в исходнике без hex — подобран на глаз (#ffb37a). Тень mockup — многослойная синеватая тень в манере бренда для парящих макетов. Ярлык над заголовком — обычным регистром, как у бренда; блок цифр — на тёмно-синей полосе, как «глобальный» блок бренда. Шрифты подключаются вариативными пакетами Fontsource с семействами «… Variable» и подмножеством latin-ext ради знака ₽. Раскладка переделана под рекламный лендинг с формой заявки по 152-ФЗ."
+  }
+}

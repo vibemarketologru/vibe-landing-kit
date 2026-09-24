@@ -1,0 +1,808 @@
+{
+  "slug": "swiss",
+  "name": "Швейцарский",
+  "kind": "style",
+  "version": "1.0.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Интернациональный типографский стиль под рекламный лендинг: строгая 12-колоночная сетка, всё по левому краю, крупный гротеск против мелкого текста и много белого поля. Разделы открываются чёрной линейкой и моноширинным индексом 01, 02. Цвет один — сигнальный красный, и он появляется точечно: маркер, главная цифра, наведение на кнопку. Ноль скруглений, теней и градиентов.",
+  "summary_en": "The International Typographic Style tuned for an ad landing page: a strict 12-column grid, everything flush left, a large grotesque set against small body text, and a lot of white space. Sections open with a black rule and a monospaced index (01, 02). There is exactly one colour, a signal red, used sparingly: square markers, one key figure per screen, the button hover. Zero border radius, no shadows, no gradients.",
+  "best_for": [
+    "юридические услуги и адвокаты",
+    "консалтинг и аудит",
+    "бухгалтерия и налоги",
+    "B2B-услуги и производство",
+    "архитектурные и инженерные бюро",
+    "HR и подбор для компаний",
+    "IT-интеграторы и внедрение"
+  ],
+  "goals": [
+    "запись на консультацию",
+    "запрос расчёта или коммерческого предложения",
+    "звонок",
+    "запись на встречу",
+    "доверие к экспертизе"
+  ],
+  "mood": [
+    "строгий",
+    "точный",
+    "уверенный",
+    "светлый",
+    "редакционный",
+    "спокойный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#FFFFFF",
+        "surface": "#F3F3F1",
+        "surface_2": "#E9E9E6",
+        "text": "#0A0A0A",
+        "text_muted": "#595955",
+        "text_disabled": "#8C8C87",
+        "border": "#DADAD6",
+        "border_strong": "#0A0A0A",
+        "border_input": "#0A0A0A",
+        "primary": "#0A0A0A",
+        "primary_hover": "#DA291C",
+        "on_primary": "#FFFFFF",
+        "on_primary_hover": "#FFFFFF",
+        "accent": "#DA291C",
+        "accent_hover": "#B01E14",
+        "on_accent": "#FFFFFF",
+        "accent_text": "#C4221A",
+        "link": "#0A0A0A",
+        "link_hover_underline": "#DA291C",
+        "focus_ring": "#0A0A0A",
+        "selection_bg": "#DA291C",
+        "selection_text": "#FFFFFF",
+        "success": "#1B7A36",
+        "error": "#B3261E",
+        "band_bg": "#0A0A0A",
+        "band_text": "#F4F4F1",
+        "band_muted": "#A1A19B",
+        "band_accent": "#FF5A4B",
+        "band_border": "#2F2F2C",
+        "overlay": "#0A0A0A"
+      },
+      "dark": {
+        "background": "#0B0B0A",
+        "surface": "#161615",
+        "surface_2": "#20201E",
+        "text": "#F4F4F1",
+        "text_muted": "#A1A19B",
+        "text_disabled": "#6B6B67",
+        "border": "#2F2F2C",
+        "border_strong": "#F4F4F1",
+        "border_input": "#8A8A85",
+        "primary": "#F4F4F1",
+        "primary_hover": "#DA291C",
+        "on_primary": "#0B0B0A",
+        "on_primary_hover": "#FFFFFF",
+        "accent": "#DA291C",
+        "accent_hover": "#B01E14",
+        "on_accent": "#FFFFFF",
+        "accent_text": "#FF5A4B",
+        "link": "#F4F4F1",
+        "link_hover_underline": "#FF5A4B",
+        "focus_ring": "#F4F4F1",
+        "selection_bg": "#DA291C",
+        "selection_text": "#FFFFFF",
+        "success": "#4CC36E",
+        "error": "#FF6B5E",
+        "band_bg": "#161615",
+        "band_text": "#F4F4F1",
+        "band_muted": "#A1A19B",
+        "band_accent": "#FF5A4B",
+        "band_border": "#2F2F2C",
+        "overlay": "#000000"
+      },
+      "accent_variants": {
+        "note": "Палитра в A/B не меняется, но под нишу красный можно заменить ОДИН раз на всю страницу — целиком набором ниже. Все пары проверены: белый текст на акценте от 4.5, текст акцента от 4.5, акцент как фигура (квадрат, линейка, полоса прогресса) на background и surface обеих тем от 3:1. Красный читается как тревога у медицины и финансов, а части юристов кажется крикливым.",
+        "ultramarine": {
+          "use": "финансы, медицина, IT-консалтинг",
+          "light": {
+            "accent": "#1F3FD1",
+            "accent_hover": "#1732A8",
+            "accent_text": "#1F3FD1",
+            "primary_hover": "#1F3FD1",
+            "link_hover_underline": "#1F3FD1",
+            "selection_bg": "#1F3FD1",
+            "band_accent": "#7D93FF"
+          },
+          "dark": {
+            "accent": "#3653E8",
+            "accent_hover": "#1F3FD1",
+            "accent_text": "#7D93FF",
+            "primary_hover": "#3653E8",
+            "link_hover_underline": "#7D93FF",
+            "selection_bg": "#3653E8",
+            "band_accent": "#7D93FF"
+          },
+          "contrast": "белый на #1F3FD1 7.81, на #3653E8 5.90; #1F3FD1 на белом 7.81, на surface 7.03; #7D93FF на #0B0B0A 7.02, на #161615 6.46; #3653E8 как фигура (квадрат, линейка, полоса) на #0B0B0A 3.34, на #161615 3.07 — прежний #2E4BE0 давал 2.9995 и 2.76, то есть ниже 3:1"
+        },
+        "bordeaux": {
+          "use": "юристы, нотариусы, семейные офисы",
+          "light": {
+            "accent": "#8C1C23",
+            "accent_hover": "#6E141A",
+            "accent_text": "#8C1C23",
+            "primary_hover": "#8C1C23",
+            "link_hover_underline": "#8C1C23",
+            "selection_bg": "#8C1C23",
+            "band_accent": "#E0636A"
+          },
+          "dark": {
+            "accent": "#B8343D",
+            "accent_hover": "#8C1C23",
+            "accent_text": "#E0636A",
+            "primary_hover": "#B8343D",
+            "link_hover_underline": "#E0636A",
+            "selection_bg": "#B8343D",
+            "band_accent": "#E0636A"
+          },
+          "contrast": "белый на #8C1C23 9.11, на #B8343D 5.84; #8C1C23 на белом 9.11, на surface 8.20; #E0636A на #0B0B0A 5.78, на #161615 5.31; #B8343D как фигура на #0B0B0A 3.37, на #161615 3.10 — прежний #9E2A2F давал 2.65 и 2.44: квадраты-маркеры и линейка выделенного тарифа терялись на чёрном"
+        }
+      }
+    },
+    "contrast_notes": {
+      "light": "text/background 19.80; text/surface 17.82; text_muted/background 7.04, на surface 6.33, на surface_2 5.78; белый на primary 19.80; белый на красном (primary_hover и accent) 4.87; белый на accent_hover 6.90; accent_text/background 5.85, на surface 5.26; error/background 6.54; success/background 5.41; рамка поля border_input/background 19.80 (для рамок нужно от 3:1); band_text/band_bg 17.97, band_muted 7.62, band_accent 6.43; accent как фигура (квадрат, линейка, полоса прогресса) на background 4.87, на surface 4.38 — для графики нужно от 3:1.",
+      "dark": "text/background 17.87; text/surface 16.43, на surface_2 14.81; text_muted/background 7.58, на surface 6.97; on_primary/primary 17.87; белый на красном 4.87; accent_text/background 6.39, на surface 5.88; error/background 7.05; success/background 8.76; border_input/background 5.68, на surface 5.22; accent как фигура на background 4.05, на surface 3.72 (выделенный тариф и полоса band в тёмной теме стоят на surface).",
+      "traps": "Красный #DA291C как ТЕКСТ проходит только на белом (4.87): на surface он даёт 4.38, на тёмном фоне 4.05. Любой красный текст мельче 24px — только accent_text. Тёмный текст на красной кнопке запрещён (#0B0B0A на #DA291C = 4.05), поэтому у тёмной темы при наведении текст кнопки меняется на белый — это токен on_primary_hover. Светлые линейки border (#DADAD6, 1.40) — только декоративные разделители; рамку поля и чекбокса рисует border_input."
+    },
+    "typography": {
+      "scale_note": "Контраст размеров вместо цвета: заголовок 88px против текста 18px. Строки текста стоят на шаге 4px (18/28, 22/32, 24/32, 56/60). Заголовкам — text-wrap: balance и hyphens: auto с hyphenate-limit-chars: 12 5 5 (переносится только слово от 12 букв, иначе H2 на телефоне рвётся на «ситуа-цию»); абзацам — text-wrap: pretty, hyphens: auto, hyphenate-limit-chars: 10 4 4. Кнопкам, шапке, меткам полей и цифрам — hyphens: manual и white-space: nowrap у текста кнопки: без этого «Консультация» в шапке телефона ломается на три строки. Всё это работает только при <html lang=\"ru\">. В строку 328px (телефон 360) при 40px влезает слово до 15 букв — длиннее разрешать переносом, а не уменьшать кегль. На телефоне шаг 4px держат тексты: 16/24 (body), 18/28 (lead), 20/28 (h3), 22/28 (quote), 32/36 (h2); H1 40/42 — по оптике.",
+      "display": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "88px",
+        "size_mobile": "40px",
+        "size_fluid": "clamp(2.5rem, 1.325rem + 5.22vw, 5.5rem)",
+        "size_xl": "96px",
+        "size_l": "72px",
+        "length_limits": "в две строки колонок 1–11 (1083px) влезает: 96px — до 36 знаков, 88px — до 40, 72px — до 50 (замер Playwright на Geist 600: 49 знаков при 72px — две строки, при 88px — три). Длиннее 50 знаков заголовок сокращают, а не уменьшают. На телефоне 40px заголовок в 38–40 знаков занимает три-четыре строки — это норма стиля, кегль не уменьшают.",
+        "line_height": 1,
+        "line_height_mobile": 1.05,
+        "letter_spacing": "-0.035em",
+        "max_width": "none — ширину задают колонки 1–11; в ch не ограничивать: 18ch при 72px сжимают строку до 882px, и заголовок в 50 знаков уходит в три строки"
+      },
+      "h2": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "56px",
+        "size_mobile": "32px",
+        "size_fluid": "clamp(2rem, 1.39rem + 2.61vw, 3.5rem)",
+        "line_height": 1.07,
+        "line_height_mobile": 1.125,
+        "letter_spacing": "-0.03em",
+        "max_width": "22ch"
+      },
+      "h3": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.333,
+        "line_height_mobile": 1.4,
+        "letter_spacing": "-0.015em"
+      },
+      "lead": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "22px",
+        "size_mobile": "18px",
+        "line_height": 1.4545,
+        "line_height_mobile": 1.556,
+        "letter_spacing": "-0.01em",
+        "max_width": "48ch"
+      },
+      "body": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.556,
+        "line_height_mobile": 1.5,
+        "letter_spacing": "0",
+        "max_width": "64ch"
+      },
+      "small": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1.6,
+        "letter_spacing": "0"
+      },
+      "caption": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.54,
+        "letter_spacing": "0.01em"
+      },
+      "eyebrow": {
+        "family": "Geist Mono",
+        "fallback": "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+        "weight": 500,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.333,
+        "letter_spacing": "0.08em",
+        "transform": "uppercase"
+      },
+      "index": {
+        "family": "Geist Mono",
+        "fallback": "ui-monospace, 'SF Mono', Menlo, Consolas, monospace",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.43,
+        "letter_spacing": "0.02em",
+        "numeric": "tabular-nums"
+      },
+      "stat": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "80px",
+        "size_mobile": "52px",
+        "line_height": 1,
+        "letter_spacing": "-0.045em",
+        "numeric": "tabular-nums"
+      },
+      "quote": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "32px",
+        "size_mobile": "22px",
+        "line_height": 1.25,
+        "line_height_mobile": 1.273,
+        "letter_spacing": "-0.02em",
+        "punctuation": "hanging-punctuation: first; кавычки «ёлочки»"
+      },
+      "button": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.25,
+        "letter_spacing": "-0.005em"
+      },
+      "price": {
+        "family": "Geist",
+        "fallback": "'Geist Fallback', 'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.333,
+        "letter_spacing": "-0.02em",
+        "numeric": "tabular-nums",
+        "format": "от 45 000 ₽ — неразрывный пробел между разрядами и перед ₽"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "0px",
+      "md": "0px",
+      "lg": "0px",
+      "pill": "999px",
+      "note": "Скруглений нет ни у кнопок, ни у полей, ни у фото. pill — только точка статуса 8px и радиокнопка, и пишется в их собственном правиле (border-radius: 50%). CSS-переменную --radius-pill при этом объявлять 0px: из неё рецепт sticky-cta-mobile берёт радиус кнопок (см. tokens.css_vars)."
+    },
+    "spacing": {
+      "unit": 8,
+      "baseline": "4px",
+      "scale": [
+        4,
+        8,
+        16,
+        24,
+        32,
+        48,
+        64,
+        96,
+        144
+      ],
+      "section_desktop": "144px",
+      "section_tablet": "112px",
+      "section_mobile": "80px",
+      "section_header_gap": "64px (от линейки раздела до первого ряда содержимого; на телефоне 40px)",
+      "container": "1280px",
+      "content": "1184px",
+      "gutter_desktop": "48px",
+      "gutter_tablet": "32px",
+      "gutter_mobile": "16px",
+      "grid_gap": "24px",
+      "grid_gap_mobile": "16px",
+      "cell_padding": "24px 0 0 — ячейка сетки начинается от линейки сверху, боковых отступов нет",
+      "panel_padding": "40px (на телефоне 24px) — только у формы и выделенного тарифа"
+    },
+    "grid": {
+      "columns_desktop": 12,
+      "columns_tablet": 8,
+      "columns_mobile": 4,
+      "column_width_desktop": "76.67px при контенте 1184px и промежутке 24px",
+      "breakpoints": {
+        "mobile": "до 767px",
+        "tablet": "768–1199px",
+        "desktop": "от 1200px"
+      },
+      "splits": "асимметрия вместо половин: 5/7, 4/8, 3/9; текст всегда от левого края колонки, правый край рваный",
+      "css": ".grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;max-width:1184px;margin-inline:auto;padding-inline:48px;box-sizing:content-box} @media (max-width:1199px){.grid{grid-template-columns:repeat(8,minmax(0,1fr));padding-inline:32px}} @media (max-width:767px){.grid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:16px;padding-inline:16px}}"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "none",
+      "sticky_bar": "0 -1px 0 #DADAD6 (в тёмной теме 0 -1px 0 #2F2F2C)",
+      "note": "Глубины нет: иерархию держат размер, вес, линейки и белое поле."
+    },
+    "motion": {
+      "fast": "120ms",
+      "base": "200ms",
+      "slow": "360ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.05,.7,.1,1)",
+      "note": "Движение короткое и прямое: без пружин, перелётов, наклонов и параллакса. Смещения не больше 16px — кроме строк H1 в рецепте hero-text-reveal: они выезжают из-под своей маски, и за её пределами движения не видно."
+    },
+    "css_vars": "Имена CSS-переменных, которые читают рецепты motion. Каждый цвет темы — --color-<ключ, подчёркивание заменить дефисом>: --color-background, --color-surface, --color-text, --color-text-muted, --color-border, --color-border-input, --color-border-strong, --color-primary, --color-on-primary, --color-link, --color-success, --color-error. Короткие имена для трёх рецептов: --text-muted (counter-up, image-reveal-clip) и --accent (scroll-progress-bar через --spb-color). --radius-pill: 0px на :root. Тёмная тема подменяет значения в [data-theme=\"dark\"], имена не меняются. Без этих объявлений рецепты берут свои запасные синие цвета и скругления."
+  },
+  "fonts": [
+    {
+      "family": "Geist",
+      "fontsource": "geist",
+      "npm": "@fontsource-variable/geist",
+      "role": "display+body",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "variable": true,
+      "license": "OFL-1.1",
+      "css_note": "npm i @fontsource-variable/geist и import '@fontsource-variable/geist' в своей сборке — файлы шрифта отдаёт ваш сервер, без CDN. Пакет объявляет все подмножества через unicode-range, браузер скачивает только нужные. Не подключать подмножества по одному: знак ₽ (U+20BD) живёт в latin-ext, № — в cyrillic, и без latin-ext рубль нарисуется системным шрифтом. Для первого экрана preload одного файла: cyrillic-wght-normal.woff2. Цифры в ценах, таблицах и счётчиках — font-variant-numeric: tabular-nums (в шрифте есть tnum). Запасной шрифт без скачка раскладки: @font-face { font-family: 'Geist Fallback'; src: local('Arial'), local('Liberation Sans'), local('Helvetica'); size-adjust: 105.3%; ascent-override: 95.4%; descent-override: 28%; line-gap-override: 0%; } — числа сняты по кириллическому тексту 400-го начертания.",
+      "replaces": "Neue Haas Grotesk / Helvetica, Akzidenz-Grotesk, Univers, Suisse Int'l (проприетарные гротески швейцарской школы)"
+    },
+    {
+      "family": "Geist Mono",
+      "fontsource": "geist-mono",
+      "npm": "@fontsource/geist-mono",
+      "role": "mono: индексы разделов, надзаголовки, номер заявки",
+      "weights": [
+        400,
+        500
+      ],
+      "license": "OFL-1.1",
+      "css_note": "import '@fontsource/geist-mono/400.css' и '@fontsource/geist-mono/500.css'. Только короткие строки: индекс «01», надзаголовок «АРБИТРАЖ · МОСКВА», номер заявки. Абзацы моноширинным не набирать.",
+      "replaces": "Suisse Int'l Mono, ABC Diatype Mono (проприетарные)"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "none",
+      "height": "56px (в шапке 44px)",
+      "padding": "18px 24px",
+      "min_width": "240px на десктопе (кроме кнопки в шапке); на телефоне на всю ширину",
+      "weight": 500,
+      "font": "button, 16px",
+      "layout": "текст слева, стрелка справа (justify-content: space-between, промежуток от 24px): SVG-стрелка 16px, штрих 1.5px, концы квадратные",
+      "hover": "фон primary_hover (красный), текст on_primary_hover (белый), стрелка сдвигается на 4px вправо через transform; 120ms ease_standard. Единственный момент, когда главная кнопка становится красной — это и есть акцент.",
+      "active": "фон accent_hover, стрелка на месте",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "disabled": "фон surface_2, текст text_disabled, курсор not-allowed — только для действительно недоступного действия. Во время отправки кнопку НЕ блокировать атрибутом disabled (фокус слетает, рецепт form-success): aria-busy=\"true\", поверх надписи текст «Отправляем…» той же ширины и высоты, повторный клик гасит проверка состояния в скрипте",
+      "note": "Текст — глагол и результат: «Получить консультацию», «Запросить расчёт», «Разобрать ситуацию». Не «Узнать больше»."
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "none",
+      "height": "56px",
+      "padding": "18px 24px",
+      "weight": 500,
+      "hover": "фон accent_hover, стрелка +4px",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "use": "Главная кнопка в варианте A/B cta_color_role = accent. Красная кнопка — одна на экран; тогда красных маркеров рядом не ставить."
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1.5px solid border_strong",
+      "radius": "none",
+      "height": "56px вместе с рамкой 1.5px",
+      "padding": "16.5px 24px",
+      "weight": 500,
+      "hover": "инверсия: фон text, текст background; 120ms",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "use": "Второе действие рядом с главной кнопкой: «Смотреть цены», «Как мы работаем». Не больше одной на экран."
+    },
+    "link": {
+      "color": "link",
+      "decoration": "подчёркивание 1px currentColor, text-underline-offset 0.2em",
+      "hover": "подчёркивание 2px цветом link_hover_underline",
+      "arrow_link": "«Все услуги →»: 16px 500 без подчёркивания, стрелка сдвигается на 4px при наведении"
+    },
+    "section_header": {
+      "rule": "линейка 2px border_strong во всю ширину контента",
+      "layout": "под линейкой с отступом 24px: колонки 1–2 — index «02» и eyebrow с названием раздела; колонки 3–10 — h2; колонки 11–12 — по желанию arrow_link",
+      "gap_after": "64px до содержимого (телефон 40px)",
+      "mobile": "index и eyebrow в одну строку над h2",
+      "note": "Главный приём стиля: каждый раздел начинается одинаково, и страница читается как свёрстанный документ."
+    },
+    "index_marker": {
+      "square": "квадрат 8×8px цвета accent перед eyebrow, отступ 12px; единственная фигура стиля",
+      "number": "index Geist Mono «01», «02» цвета text_muted; у активного или главного пункта — accent_text"
+    },
+    "rule": {
+      "section": "2px border_strong",
+      "row": "1px border — между строками списков, таблиц, вопросов",
+      "hover_cell": "у ячейки сетки при наведении линейка сверху становится красной: box-shadow: inset 0 2px 0 accent — без сдвига раскладки"
+    },
+    "card": {
+      "bg": "transparent",
+      "border": "линейка 1px border сверху, без рамки по бокам",
+      "radius": "none",
+      "padding": "24px 0 0",
+      "anatomy": "index «01» → h3 → 2–3 строки body text_muted → price или arrow_link внизу",
+      "hover": "линейка сверху — accent 2px (inset box-shadow), заголовок без изменений; 120ms",
+      "note": "Это ячейка сетки, а не коробка: фона, тени и скругления нет."
+    },
+    "card_featured": {
+      "bg": "surface",
+      "border": "линейка 4px accent сверху",
+      "radius": "none",
+      "padding": "32px",
+      "badge": "eyebrow «ЧАЩЕ ВЫБИРАЮТ» с красным квадратом",
+      "use": "рекомендуемый тариф или главная услуга; одна на страницу"
+    },
+    "stat": {
+      "value": "stat 80px (телефон 52px), tabular-nums, цвет text; в полосе band — band_text, одна главная цифра — band_accent",
+      "unit": "единица отдельным <span> после цифры, мельче: 40% от цифры, weight 500 — только знаки и несклоняемые сокращения: «₽», «%», «+», «×», «ч», «мин», «млн». Слова («дел», «лет», «клиентов») уносить в label: при счёте counter-up иначе мелькает «1 дел», «3 дел»",
+      "label": "small 15px text_muted, до 24ch",
+      "rule": "линейка 1px сверху, отступ 24px",
+      "note": "Цифры только проверяемые и с периодом: цифра «340», подпись «дел в арбитраже с 2009 года»."
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "none",
+      "height": "56px",
+      "padding": "0 16px — высоту держат height 56px и box-sizing: border-box, иначе поле вырастает до 58px",
+      "font": "16px Geist 400 — меньше нельзя, иначе iOS увеличит страницу",
+      "label": "над полем, small 15px 500 цвета text, отступ 8px; обязательность — словом «(необязательно)» у необязательных, без звёздочек",
+      "placeholder": "text_muted, пример формата, а не подпись: «+7 900 000-00-00»",
+      "focus": "рамка становится 2px через box-shadow: inset 0 0 0 1px border_input + outline 2px solid focus_ring, outline-offset 2px; раскладка не прыгает",
+      "error": "рамка error 2px (inset box-shadow), под полем текст 13px цвета error с SVG-иконкой 16px: «Проверьте номер: не хватает цифр»; aria-invalid=true, aria-describedby на текст",
+      "textarea": "высота 128px, resize: vertical, padding 16px"
+    },
+    "checkbox": {
+      "size": "20×20px квадрат, рамка 1.5px border_input, радиус 0",
+      "checked": "заливка primary, галочка SVG цвета on_primary штрихом 2px (в тёмной теме заливка светлая, галочка тёмная — белая пропала бы)",
+      "hit_area": "вся строка с подписью кликабельна, высота не меньше 44px",
+      "focus": "outline 2px solid focus_ring, offset 2px"
+    },
+    "badge": {
+      "bg": "transparent",
+      "color": "text",
+      "radius": "none",
+      "padding": "0",
+      "font": "eyebrow Geist Mono 12px 500 uppercase, трекинг 0.08em",
+      "marker": "красный квадрат 8px слева",
+      "use": "надзаголовок первого экрана «АРБИТРАЖ · МОСКВА», метка «ЧАЩЕ ВЫБИРАЮТ». Плашек с фоном нет."
+    },
+    "nav": {
+      "height": "72px (телефон 56px)",
+      "bg": "background, сплошной; липкая; нижняя линейка 1px border",
+      "left": "название компании текстом: Geist 600, 18px, трекинг −0.02em (логотип клиента подставляет верстальщик, в каталоге его нет)",
+      "links": "до 4 якорей: 15px 500 text_muted, при наведении text с подчёркиванием",
+      "right": "телефон ссылкой tel: 15px 500 tabular-nums цвета text, рядом button_primary высотой 44px «Консультация» → #lead",
+      "mobile": "ниже 1024px ссылки прячутся в меню; на телефоне шапка — flex, а не сетка 4 колонок: слева название (16px, обрезка многоточием), справа иконка телефона 44×44 и компактная кнопка «Заявка» (padding 12px 16px = высота 44px, white-space: nowrap) — длинное «Консультация» в шапку телефона не ставить"
+    },
+    "price_table": {
+      "layout": "таблица на сетке: колонки 1–5 услуга (h3 20px) и одна строка состава (small text_muted), 6–8 срок, 9–10 формат, 11–12 цена price справа, tabular-nums",
+      "rows": "линейка 1px border между строками, отступ 24px сверху и снизу; шапка — eyebrow text_muted над линейкой 2px",
+      "featured_row": "красный квадрат перед названием и eyebrow «ЧАЩЕ ВЫБИРАЮТ» под ним",
+      "hover": "строка — фон surface, 120ms",
+      "mobile": "каждая строка — блок: услуга, под ней состав, ниже в одну строку срок слева и цена справа; горизонтальной прокрутки нет",
+      "note": "Цена всегда «от» и с тем, что в неё входит. Первая строка — бесплатный или самый дешёвый вход: «Консультация 30 минут — 0 ₽»."
+    },
+    "case_row": {
+      "layout": "колонки 1–4 задача, 5–8 что сделали, 9–12 результат (h3, цифра tabular-nums); сверху index «Дело 01» и отрасль eyebrow",
+      "rule": "1px border между кейсами",
+      "mobile": "три блока подряд с подписями «Задача», «Что сделали», «Результат»"
+    },
+    "team_card": {
+      "photo": "монохромный портрет 4:5, радиус 0, width/height в разметке; object-fit: cover",
+      "name": "h3 20px",
+      "role": "small text_muted",
+      "meta": "index Geist Mono: «Стаж 14 лет · 120 дел»",
+      "grid": "4 в ряд на десктопе, 2 на телефоне"
+    },
+    "testimonial": {
+      "quote": "quote 32px (телефон 22px), кавычки «ёлочки» висят за левым краем (hanging-punctuation: first; запасной путь text-indent: -0.45em)",
+      "person": "имя 15px 600, должность и компания 15px text_muted; фото не обязательно, если есть — квадрат 48px монохромный",
+      "layout": "2 отзыва в колонках 1–6 и 7–12, над ними линейка 1px"
+    },
+    "faq_item": {
+      "border": "линейка 1px border сверху, у последнего — и снизу",
+      "padding": "24px 0",
+      "question": "20px 500 text, до 48ch",
+      "icon": "плюс 20px штрихом 1.5px справа, концы квадратные; при раскрытии вертикальная черта поворачивается и ложится на горизонтальную — плюс становится минусом (как в рецепте accordion-smooth)",
+      "answer": "body text_muted до 64ch, отступ сверху 12px",
+      "layout": "раздел открывается обычным section_header (H2 в колонках 3–10); ниже вопросы в колонках 5–12, а в колонках 1–4 стоит липкая (position: sticky; top: 96px) врезка: «Не нашли ответ?» small text_muted, телефон ссылкой tel: 20px 500 tabular-nums и arrow_link «Задать вопрос» → #lead. На телефоне врезка уходит под список"
+    },
+    "band": {
+      "bg": "band_bg",
+      "color": "band_text",
+      "muted": "band_muted",
+      "accent": "band_accent — одна цифра или одно слово",
+      "rules": "линейки band_border",
+      "use": "полоса цифр и подвал. На светлой теме — чёрная полоса, на тёмной — ступень surface. Одна контрастная полоса на страницу, не считая подвала."
+    },
+    "sticky_cta": {
+      "bg": "background",
+      "border": "линейка 1px border сверху (shadow.sticky_bar)",
+      "padding": "12px 16px, снизу + env(safe-area-inset-bottom)",
+      "button": "button_primary на всю ширину, высота 52px",
+      "show": "только на телефоне, после ухода кнопки первого экрана и пока форма не в кадре (рецепт sticky-cta-mobile)"
+    },
+    "image": {
+      "style": "монохромные документальные фото: люди за работой, документы крупно, здание, производство. Если исходник цветной — filter: grayscale(1) contrast(1.05) на самом img",
+      "shape": "прямоугольник 4:5 (портреты) или 3:2 (сцены), радиус 0, всегда width и height в разметке",
+      "caption": "под фото: index «Рис. 1» Geist Mono 13px + подпись caption text_muted",
+      "note": "Цветное только одно: красный акцент интерфейса. Весы, молоток судьи, рукопожатия и стоковые офисы не используются."
+    },
+    "footer": {
+      "bg": "band_bg",
+      "color": "band_muted",
+      "padding": "96px 48px 48px (телефон 64px 16px 32px)",
+      "layout": "сетка 12: колонки 1–4 название и одна строка о компании band_text; 5–8 контакты (телефон, почта, адрес); 9–12 документы: политика обработки персональных данных, согласие, реквизиты (ООО/ИП, ИНН, ОГРН)",
+      "font": "small 15px; ссылки band_text с подчёркиванием",
+      "bottom": "линейка 1px band_border и строка caption: © год, название"
+    },
+    "icon": {
+      "style": "линейные SVG 16/20/24px, штрих 1.5px, концы и углы квадратные (stroke-linecap: square; stroke-linejoin: miter), цвет currentColor. Эмодзи не используются."
+    }
+  },
+  "layout": {
+    "theme_default": "light",
+    "theme_note": "Светлая тема основная: стиль вырос из печати на белой бумаге. Тёмная — полноценная, для A/B-оси theme и для IT-консалтинга или кибербезопасности. Внутри одного варианта теста тему не переключать по prefers-color-scheme, иначе результаты смешаются.",
+    "hero_pattern": "Выравнивание по левому краю сетки 12 колонок, фона и картинок нет. Верхний ряд: колонки 1–6 — badge с красным квадратом («АРБИТРАЖ · МОСКВА»), колонки 9–12 — caption text_muted «С 2009 года · 340 дел в арбитраже». Отступ секции сверху 48px. Ниже верхнего ряда с отступом 32px — H1 display 88px в колонках 1–11, строго две строки, text-wrap: balance. Отступ 48px, линейка 1px border на всю ширину. Под ней с отступом 24px: колонки 1–5 — lead 22px text_muted до 48ch (две-три строки), под ним с отступом 32px button_primary и caption «Ответим за 30 минут в рабочее время»; колонки 7–12 — три коротких факта в ряд по 2 колонки: stat 40px и подпись small, первая цифра — accent_text. Кнопка обязана быть видна без прокрутки на 1366×657 (замер Playwright, Geist 600, шапка 72px, lead в три строки: две строки 88px — низ кнопки на 605px, две строки 96px — 621px, три строки 88px — 693px, то есть под сгибом). Поэтому заголовок держат в две строки по лимитам typography.display.length_limits.",
+    "hero_variants": {
+      "type_only": "описан выше — вариант по умолчанию",
+      "split_photo": "колонки 1–7 — badge, H1 72px (в семи колонках 38–40 знаков — три строки; кнопка остаётся над сгибом, если lead не длиннее трёх строк), lead, кнопки, факты столбиком под кнопкой; колонки 8–12 — монохромный портрет 4:5 управляющего партнёра, верх фото на одной линии с верхом H1, подпись index под фото «Анна Королёва, управляющий партнёр». Фото — LCP-элемент: fetchpriority=high, без анимации появления.",
+      "hero_side_form": "колонки 1–7 — badge, H1 72px (в семи колонках 38–40 знаков — это уже три строки, кнопка при этом над сгибом, если lead не длиннее трёх строк), lead, факты; колонки 8–12 — панель surface с отступом 32px и формой из двух полей (имя, телефон) + согласие + button_primary на всю ширину."
+    },
+    "section_order": [
+      "nav",
+      "hero",
+      "proof_bar",
+      "problem",
+      "services",
+      "how",
+      "numbers",
+      "cases",
+      "team",
+      "pricing",
+      "testimonials",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "short_order": [
+      "nav",
+      "hero",
+      "proof_bar",
+      "services",
+      "how",
+      "cases",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_notes": {
+      "proof_bar": "сразу под hero, без section_header: eyebrow «КЛИЕНТЫ» и 4–6 названий компаний текстом (Geist 500 18px text_muted) в ряд, разделённых вертикальными линейками 1px; логотипы — только с разрешения клиентов и в монохроме. У юристов и адвокатов названия клиентов — только с письменного согласия (тайна и конфиденциальность); без него вместо названий — отрасли: «Банки · Девелоперы · Производство». Ленту не прокручивать: список стоит на месте.",
+      "problem": "section_header «01 · Когда к нам обращаются» + 4–6 строк: index, ситуация h3 в колонках 2–7, одна строка пояснения text_muted в колонках 8–12; между строками линейка 1px",
+      "services": "сетка 3×2 из card: index, h3, 2 строки, price «от …» внизу; одна ячейка может быть card_featured",
+      "how": "4 шага в ряд по 3 колонки: номер Geist 600 56px цвета text, h3, одна строка; последний шаг «Результат» с красным квадратом; на телефоне — столбик с линейками",
+      "numbers": "полоса band: 3–4 stat в ряд, одна цифра band_accent; подпись с периодом и источником",
+      "cases": "3 case_row; в результате — цифра и срок",
+      "team": "4 team_card; если людей меньше трёх — раздел убрать, а не растягивать",
+      "pricing": "price_table из 4–6 строк; первая — бесплатный вход; под таблицей caption «Точную стоимость назовём после разбора документов»",
+      "testimonials": "2 отзыва с полным именем и компанией; анонимные «Иван, клиент» не ставить",
+      "faq": "5–7 вопросов: сроки, цена, что если не получится, конфиденциальность, как проходит первая встреча, работаете ли удалённо",
+      "lead_form": "section_header с единственным H2 раздела «Разберём вашу ситуацию за 30 минут» + сетка 5/7 (см. lead_form.style); якорь #lead"
+    },
+    "grid": "12 колонок, контейнер 1280px с полями 48px (контент 1184px), промежуток 24px; планшет — 8 колонок и поля 32px; телефон — 4 колонки, промежуток и поля 16px. Все блоки начинаются от левого края колонки, пустые колонки справа — часть композиции, их не заполняют.",
+    "mobile_notes": "Поля 16px, горизонтальной прокрутки нет. H1 88 → 40px (или clamp из size_fluid), H2 56 → 32px, stat 80 → 52px, секции 144 → 80px. Сетка 4 колонки: все асимметричные пары становятся столбиком. Первый экран на телефоне идёт в порядке badge → caption «С 2009 года» → H1 → lead → кнопка → факты, и отступы в нём тесные, а не десктопные: сверху 24px, между badge и caption 8px, до H1 16px, от H1 до линейки 24px, от линейки до lead 16px, от lead до кнопки 24px. Замер (Playwright, Geist, шапка 56px, H1 40px в четыре строки, lead 18/28 в четыре строки): низ кнопки на 541px — над сгибом даже на iPhone SE в Safari (375×553); с десктопными отступами было бы 621px, то есть под сгибом. Lead на телефоне — до 110 знаков. Факты — строками с линейкой 1px, цифра 32px в колонке 96px слева, подпись справа; три факта в ряд на 358px ломают подписи по слогам. section_header — index и eyebrow в одну строку над H2. Кнопки на всю ширину, 56px. Таблица цен и кейсы превращаются в блоки без горизонтальной прокрутки. Шапка 56px: название, иконка телефона, кнопка «Заявка» (см. components.nav.mobile). После ухода кнопки первого экрана снизу появляется sticky_cta. Переносы — по правилу typography.scale_note (hyphenate-limit-chars), на кнопках переносов нет.",
+    "breakpoints": {
+      "mobile": "до 767px",
+      "tablet": "768–1199px",
+      "desktop": "от 1200px"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "comment"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "comment": "Коротко о ситуации или ник в Telegram (необязательно)"
+    },
+    "field_attrs": {
+      "name": "type=text, autocomplete=name, autocapitalize=words",
+      "phone": "type=tel, autocomplete=tel, inputmode=tel; маску до ввода не навязывать, принимать цифры, +, пробелы, скобки и дефисы, 8 и +7 в начале. Ник Telegram в это поле не просить: у inputmode=tel на iPhone нет знака @ — для ника есть комментарий",
+      "comment": "textarea 128px, maxlength 1000"
+    },
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две ссылки на отдельные документы (с 1 сентября 2025 года согласие оформляется отдельно от других документов). Неотмеченный чекбокс не блокирует кнопку: при нажатии рядом появляется текст «Отметьте согласие, чтобы мы могли с вами связаться». Согласие на рассылки — вторым необязательным чекбоксом, тоже снятым.",
+    "privacy_note": "Под комментарием строка caption: «Не пишите здесь паспортные данные и номера дел — документы попросим после звонка». Для юристов добавить «Сведения не передаём третьим лицам»; про адвокатскую тайну писать только если исполнитель — адвокат.",
+    "style": "Раздел с section_header: index, eyebrow «ЗАЯВКА» и H2 «Разберём вашу ситуацию за 30 минут» в колонках 3–10 — других H2 в разделе нет. Ниже сетка 5/7: колонки 1–5 — три пронумерованные строки «что будет после заявки» (index 01 перезвоним, 02 зададим 3–4 вопроса, 03 назовём варианты и цену); колонки 7–12 — форма без панели прямо на фоне: поля input 56px с рамкой 1px border_input, промежуток 24px, метки над полями, чекбокс согласия, button_primary на всю ширину колонки со стрелкой «Получить консультацию», под кнопкой caption text_muted «Ответим за 30 минут · пн–пт 9:00–19:00 (МСК)». На телефоне — столбик: H2, сразу форма, пункты «что будет» после формы.",
+    "rules": [
+      "Заявка сначала сохраняется, потом отправляется дальше",
+      "Ошибка показывается текстом под полем и в общей строке над кнопкой, а не только цветом: красный в стиле уже занят акцентом",
+      "Ловушка для ботов помечает заявку, но не отбрасывает её, если имя и контакт заполнены",
+      "Во время отправки кнопка пишет «Отправляем…» и не принимает повторный клик — проверкой состояния в скрипте, без атрибута disabled; при сбое — понятный текст, введённое не стирается, кнопка «Отправить ещё раз» и телефон для звонка"
+    ],
+    "success_state": "Форма сменяется блоком той же высоты (рецепт form-success с переопределениями из motion_map), всё по левому краю: линейка 2px border_strong, квадратный значок 40px цвета success с галочкой цвета background, заголовок h3 размером h2 «Заявка принята.», строка Geist Mono «№ 0142 · 24.09.2026, 14:32» (номер и время — из ответа сервера; нет номера — строку не выводить), текст «Юрист позвонит в течение 30 минут в рабочее время». Ниже — список «Что подготовить к звонку» из 2–3 пунктов. Фокус переносится на заголовок (tabindex=-1), область объявляется через aria-live=\"polite\".",
+    "error_state": "Под кнопкой цветом error с иконкой: «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Поля не очищаются."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "fade-up-stagger",
+    "counter-up",
+    "scroll-progress-bar",
+    "image-reveal-clip",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "hero-text-reveal": "Только H1 первого экрана: каждая смысловая половина заголовка — своя .htr-line (на телефоне половина может занять две строки — это нормально). Десктоп: @media (min-width: 641px) { :root { --htr-dur: 720ms; --htr-step: 80ms } }, телефонные 640/60 из рецепта не трогать. .htr-sub — на lead, .htr-cta — на блок кнопки с подписью; badge, caption и факты первого экрана не анимировать. В варианте split_photo фото не анимировать.",
+    "fade-up-stagger": "ячейки services, шаги how, строки cases и price_table — только ниже первого экрана; строгий режим: --reveal-dist: 16px, --reveal-dur: 360ms, --reveal-step: 60ms",
+    "counter-up": "Только полоса numbers: счёт один раз, итог в разметке. Факты первого экрана не считать — там число видно сразу (иначе прыжок в ноль и хуже LCP). Размер цифры — из typography.stat (80/52px, 600, −0.045em) вместо clamp рецепта, сетка .stats — колонками стиля. Полосу .stat__label::before удалить: у stat уже есть линейка 1px сверху. Единицу («₽», «%», «+») ставить отдельным <span> после .stat__num, а не в data-count-suffix: она на 40% мельче и не должна прыгать при счёте. Главная цифра — band_accent, остальные band_text.",
+    "scroll-progress-bar": "тонкая красная линия сверху: --spb-color: var(--accent), высота 2px (.spb{height:2px}), под липкой шапкой --spb-top: 72px (телефон 56px); режим data-until=\"#lead\"",
+    "image-reveal-clip": "портреты team и фото кейсов, если они есть: --irc-radius: 0px, --irc-dur: 640ms, --irc-zoom: 1.06, направление data-irc=\"right\" — по ходу чтения; не больше 6 картинок на страницу, подпись «Рис. 1» — в .irc__cap. Фото первого экрана (split_photo) — никогда.",
+    "accordion-smooth": "faq в колонках 5–12. Снять карточный вид рецепта: .faq__list { gap: 0; max-width: none; margin: 0 } .faq__item { border: 0; border-top: 1px solid var(--color-border); border-radius: 0; background: transparent }, у последнего ещё border-bottom; .faq__q { padding: 24px 0; font-size: 20px; font-weight: 500 } .faq__a { padding: 0 0 24px; max-width: 64ch }. Палочки значка — border-radius: 0 и толщина 1.5px (inset: 9.25px 2px); значок — плюс → минус из рецепта.",
+    "form-success": "Ответ формы заявки. Вид рецепта переопределить: .lead { border: 0; border-radius: 0; padding: 0; background: transparent; max-width: none }; заголовок .lead__h убрать — H2 стоит в section_header, aria-labelledby ведёт на него. Поля — height 56px, padding 0 16px, border-radius 0 и рамка var(--color-border-input), а не --color-border (#DADAD6 даёт 1.40:1, рамке поля нужно от 3:1); метки 15px 500 цвета text; чекбокс — по components.checkbox. .lead__btn — border-radius 0, min-height 56px, justify-content: space-between со стрелкой. Вместо трёх точек в .lead__dots — текст «Отправляем…» у левого края (justify-content: flex-start; padding-inline: 24px). Экран успеха по левому краю: .lead__done { justify-items: start; text-align: left }; .lead__badge — квадрат 40px, border-radius 0 и у волны ::after тоже; анимация lead-pop — по cubic-bezier(.2,0,0,1) вместо кривой с перелётом. Без конфетти.",
+    "sticky-cta-mobile": "По компоненту sticky_cta: data-after=\"#hero-cta\" (id у кнопки первого экрана), data-hide-on=\"#lead\". Под стиль: .scta { background: var(--color-background); box-shadow: none } — линейка сверху у рецепта уже есть; --radius-pill: 0px, иначе кнопки станут пилюлями; .scta__btn { min-height: 52px; justify-content: space-between; padding: 12px 16px } со стрелкой, текст «Получить консультацию». Кнопку звонка .scta__alt включить (звонок — цель стиля): квадрат 52×52, рамка var(--color-border-strong).",
+    "not_for_this_style": "marquee-logos — полоса клиентов в стиле стоит на месте; parallax-soft, tilt-card и magnetic-button — параллакс, наклон и пружина спорят с коротким прямым движением; cta-attention — пульсирующая кнопка ломает правило «красный точечно»; gradient-drift — градиентов в стиле нет; sticky-stack-cards — карточек-коробок нет, разделы держат линейки; before-after-slider — только если у производства или бюро есть собственные снимки «было — стало», в монохроме и без скруглений."
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "type_only",
+        "split_photo",
+        "hero_side_form"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "m",
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "form_position": [
+        "bottom",
+        "hero_side"
+      ],
+      "theme": [
+        "light",
+        "dark"
+      ],
+      "grid_lines": [
+        "hidden",
+        "hero"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius_zero",
+      "single_accent",
+      "grid_12",
+      "flush_left",
+      "section_rules"
+    ],
+    "default": {
+      "hero_layout": "type_only",
+      "cta_color_role": "primary",
+      "headline_scale": "m",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "form_position": "bottom",
+      "theme": "light",
+      "grid_lines": "hidden"
+    },
+    "legend": {
+      "headline_scale": "m — 88px, токены typography.display (по умолчанию, заголовок до 40 знаков); xl — display 96px (заголовок до 36 знаков); l — 72px (до 50 знаков); на телефоне все 40px",
+      "cta_color_role": "primary — чёрная кнопка, краснеет при наведении; accent — красная кнопка сразу, красных маркеров на первом экране тогда нет",
+      "motion_level": "none — только функциональные: accordion-smooth, form-success, sticky-cta-mobile и наведения; subtle — весь motion_map",
+      "grid_lines": "hero — в первом экране видны 12 колонок: вертикальные линии 1px цвета border через repeating-linear-gradient на фоне секции, pointer-events: none; сетка как орнамент"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Одна ось на тест. Первой проверять cta_color_role, второй — hero_layout (type_only против split_photo: лицо партнёра для юристов часто сильнее крупного шрифта)."
+  },
+  "voice": {
+    "tone": "Короткие утвердительные фразы, цифры вместо прилагательных, без восклицательных знаков и слов «лучший», «лидер», «профессионалы своего дела».",
+    "headline_formula": "услуга + конкретный результат или срок: до 40 знаков для масштаба по умолчанию, до 50 — для l; город и специализацию уносить в надзаголовок, а не в H1",
+    "legal_note": "Юристам и адвокатам нельзя обещать исход дела («выиграем», «гарантируем возврат»): это нарушает закон о рекламе и кодекс этики адвоката. Обещать можно срок ответа, порядок работы и цифры прошлой практики с периодом.",
+    "examples": {
+      "юристы": {
+        "eyebrow": "АРБИТРАЖ · МОСКВА",
+        "h1": "Взыскание долгов с компаний в арбитраже",
+        "lead": "Оценим шансы и сроки за 30 минут по вашим документам. Ведём дело до исполнительного листа и работы с приставами.",
+        "cta": "Разобрать ситуацию"
+      },
+      "консалтинг": {
+        "eyebrow": "УПРАВЛЕНЧЕСКИЙ УЧЁТ",
+        "h1": "Управленческий учёт под ключ за 6 недель",
+        "lead": "Соберём учёт из ваших таблиц и 1С: собственник каждую неделю видит прибыль по каждому направлению.",
+        "cta": "Запросить план работ"
+      },
+      "b2b": {
+        "eyebrow": "МЕТАЛЛОКОНСТРУКЦИИ ПОД ПРОЕКТ",
+        "h1": "Расчёт стоимости по чертежам за 1 день",
+        "lead": "Собственное производство в Подмосковье, монтаж бригадой завода, приёмка по акту.",
+        "cta": "Запросить расчёт"
+      }
+    }
+  },
+  "a11y": {
+    "focus": "видимый фокус у всех интерактивных элементов: outline 2px focus_ring с отступом; на полосе band — цвет band_text",
+    "targets": "кликабельная зона не меньше 44×44px, у кнопок 56px",
+    "language": "<html lang=\"ru\"> — иначе hyphens: auto не работает для кириллицы",
+    "color": "ни одно состояние не передаётся только цветом: ошибка — иконка и текст, выбранная строка — квадрат и надпись",
+    "motion": "все рецепты уважают prefers-reduced-motion; бесконечных анимаций в стиле нет"
+  },
+  "do": [
+    "Всё выравнивать по левому краю колонок 12-колоночной сетки: асимметрия 5/7 и 4/8, рваный правый край, пустые колонки оставлять пустыми; по правому краю — только цены и цифры в таблицах.",
+    "Строить иерархию размером и весом одного гротеска: заголовок 88px против текста 18px, начертания только 400, 500, 600; Geist Mono — лишь для индексов и надзаголовков.",
+    "Акцент — красный #DA291C (или один набор из accent_variants на всю страницу) — держать единственным цветом и ставить точечно: квадрат-маркер, одна главная цифра, полоса прогресса, наведение на кнопку — не больше трёх красных мест на экране; красный текст мельче 24px — только accent_text.",
+    "Открывать каждый раздел одинаково: линейка 2px, индекс «02», надзаголовок и H2 — и разделять строки линейками 1px, а не карточками.",
+    "Писать конкретно и проверяемо: срок ответа, цена «от» с составом, число дел с периодом, город.",
+    "Фото брать монохромные и документальные, прямоугольные, с подписью под кадром.",
+    "Держать кнопку первого экрана над сгибом: H1 в две строки на десктопе (до 40 знаков при 88px), на телефоне — тесные отступы первого экрана из layout.mobile_notes."
+  ],
+  "dont": [
+    "Не скруглять кнопки, поля, фото и ячейки и не добавлять тени, стекло и градиенты-заливки (линии сетки через repeating-linear-gradient в варианте grid_lines — разрешённое исключение).",
+    "Не вводить второй акцентный цвет и не заливать красным фон разделов и карточек; зелёный success и error — только для состояний формы.",
+    "Не центрировать заголовки, абзацы и экран «Заявка принята» и не выравнивать текст по ширине.",
+    "Не использовать швейцарский крест, флаг и надписи «Swiss made»: это стиль, а не страна происхождения, а крест защищён законом.",
+    "Не сообщать об ошибке только красной рамкой: у ошибки всегда иконка и текст, потому что красный в стиле уже занят акцентом.",
+    "Не ставить эмодзи, весы Фемиды, молоток судьи и стоковые рукопожатия.",
+    "Не вставлять рецепты motion как есть: у accordion-smooth, form-success и sticky-cta-mobile по умолчанию скругления, тени, центрирование и перелёт значка — сначала переопределения из motion_map."
+  ],
+  "prompt_snippet": "Build a light Swiss-style (International Typographic Style) ad landing page for a law firm, consultancy or B2B service. Strict 12-column grid: 1280px container, 48px margins, 24px gutters; everything flush left with a ragged right edge, asymmetric 5/7 and 4/8 splits, 144px between sections. One grotesque, self-hosted Geist Variable from npm with cyrillic and latin-ext subsets: headlines 600 at 88px (40px on phones), leading 1.0, tracking -0.035em; body 18/28 at 400; Geist Mono only for section indexes and uppercase eyebrows. Palette: white, ink #0A0A0A, muted #595955, hairlines #DADAD6 and one accent, signal red #DA291C, for square markers, one key figure and the button hover; small red text uses #C4221A. Zero radius, no shadows, no gradients, nothing centred. Every section opens with a 2px ink rule, a mono index and an H2. Black 56px buttons with a right arrow. Form: name, phone, optional note, unchecked 152-FZ consent.",
+  "source": {
+    "inspired_by": "bergside/awesome-design-skills (MIT), skills/minimal и skills/square — только общая идея сдержанной палитры; традиция International Typographic Style (Й. Мюллер-Брокманн, «Модульные системы в графическом дизайне», 1981)",
+    "notes": "Своя система, а не перенос: у bergside в skills/minimal и skills/square есть только палитра из семи hex-токенов без тёмной темы и названия шрифтов (Open Sans, Inter, Inconsolata; у square — фирменный Google Sans). Здесь добавлено: 12-колоночная сетка с точными размерами колонок и точками перелома, шкала кеглей на шаге 4px, полная тёмная тема с проверенным контрастом (text/background 19.80 и 17.87), правило «красный текст только accent_text», наборы замены акцента (ультрамарин, бордо) с контрастом, кириллический гротеск Geist (OFL-1.1; его авторы прямо ссылаются на Univers и Suisse) вместо проприетарных Helvetica, Akzidenz-Grotesk и Suisse Int'l, запасной шрифт с size-adjust против скачка раскладки, замечание про ₽ в latin-ext, раскладка рекламного лендинга с заявкой и согласием по 152-ФЗ, примеры текстов для трёх ниш с ограничениями рекламы юридических услуг, переопределения рецептов motion под нулевой радиус и левый край."
+  }
+}

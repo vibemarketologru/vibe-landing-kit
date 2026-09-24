@@ -1,0 +1,603 @@
+{
+  "slug": "intercom",
+  "name": "Intercom",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Intercom; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Тёплый кремовый фон вместо белого, угольный текст и белые карточки с тонкой линией вместо теней. Один гротеск в весе 500 со сжатым трекингом ведёт всю иерархию, кнопки прямоугольные со скруглением 8px. Главный герой каждого блока — макет продукта, а единственная цветная точка на странице — оранжевый акцент. Читается как спокойный продуктовый журнал о сервисе.",
+  "summary_en": "A warm cream canvas instead of white, charcoal type and white hairline-bordered cards instead of shadows. One grotesque at weight 500 with tight tracking carries the whole hierarchy; buttons are rectangles with an 8px radius. A product mockup is the protagonist of every section, and a single orange accent is the only chromatic point on the page. It reads like a calm, product-led service magazine.",
+  "best_for": [
+    "SaaS и облачные сервисы",
+    "клиентский сервис и поддержка",
+    "ИИ-ассистенты и чат-боты",
+    "CRM, хелпдески и мессенджеры для бизнеса",
+    "B2B-софт с демонстрацией продукта",
+    "агентства автоматизации и внедрения"
+  ],
+  "goals": [
+    "запись на демо",
+    "заявки",
+    "доверие через показ продукта",
+    "пробный период",
+    "запись на консультацию"
+  ],
+  "mood": [
+    "спокойный",
+    "редакционный",
+    "тёплый",
+    "продуктовый",
+    "сдержанный",
+    "уверенный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#f5f1ec",
+        "surface": "#ffffff",
+        "text": "#111111",
+        "text_muted": "#626260",
+        "border": "#d3cec6",
+        "primary": "#111111",
+        "on_primary": "#ffffff",
+        "accent": "#d24600",
+        "on_accent": "#ffffff",
+        "link": "#111111",
+        "success": "#08772f",
+        "error": "#c41c1c",
+        "surface_2": "#ebe7e1",
+        "border_input": "#857f77",
+        "primary_hover": "#2b2a28",
+        "primary_press": "#000000",
+        "accent_hover": "#b83d00",
+        "accent_brand": "#ff5600",
+        "accent_tint": "#ffe9de",
+        "on_accent_tint": "#9e3500",
+        "featured": "#111111",
+        "on_featured": "#ffffff",
+        "on_featured_muted": "#9c9fa5",
+        "inverse": "#000000",
+        "on_inverse": "#ffffff",
+        "on_inverse_muted": "#9c9fa5",
+        "success_icon": "#0bdf50",
+        "on_success_icon": "#111111",
+        "focus_ring": "#111111",
+        "mock_blue": "#65b5ff",
+        "mock_pink": "#ff2067",
+        "mock_lime": "#b3e01c",
+        "mock_cyan": "#03b2cb"
+      },
+      "dark": {
+        "background": "#141311",
+        "surface": "#1f1e1b",
+        "text": "#f5f1ec",
+        "text_muted": "#a8a39b",
+        "border": "#3a3834",
+        "primary": "#f5f1ec",
+        "on_primary": "#111111",
+        "accent": "#d24600",
+        "on_accent": "#ffffff",
+        "link": "#f5f1ec",
+        "success": "#0bdf50",
+        "error": "#ff7466",
+        "surface_2": "#2a2825",
+        "border_input": "#77726a",
+        "primary_hover": "#ffffff",
+        "primary_press": "#e0dbd3",
+        "accent_hover": "#b83d00",
+        "accent_brand": "#ff5600",
+        "accent_tint": "#2a1a12",
+        "on_accent_tint": "#ff9a6b",
+        "featured": "#f5f1ec",
+        "on_featured": "#111111",
+        "on_featured_muted": "#626260",
+        "inverse": "#302d29",
+        "on_inverse": "#f5f1ec",
+        "on_inverse_muted": "#a8a39b",
+        "success_icon": "#0bdf50",
+        "on_success_icon": "#111111",
+        "focus_ring": "#f5f1ec",
+        "mock_blue": "#65b5ff",
+        "mock_pink": "#ff2067",
+        "mock_lime": "#b3e01c",
+        "mock_cyan": "#03b2cb"
+      },
+      "notes": "primary — угольная кнопка по умолчанию; accent — оранжевая кнопка только в варианте A/B cta_color_role=accent и метки «ИИ»/«Новое». accent #d24600 — ТОЛЬКО заливка под белой надписью: текстом им не писать ни в одной теме (4.05 на креме, 3.66 на тёмной карточке). accent_brand #ff5600 — исходный оттенок бренда: точки, подчёркивания, значки и текст на тёмном фоне (5.82), но НЕ текст на светлом (2.84) и НЕ фон под белой надписью (3.19). border — только декоративные линии; рамка полей — border_input (≥3:1, WCAG 1.4.11). inverse — полоса с цитатой: в светлой теме чёрная, в тёмной поднимается на самый светлый слой #302d29 (чёрная на #141311 даёт 1.13 и не читается как полоса). on_featured_muted #9c9fa5 допустим только на угольном (7.12). mock_* — цвета графиков внутри макетов продукта, на фоны секций и кнопки не выходят."
+    },
+    "typography": {
+      "display": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif",
+        "weight": 500,
+        "size_desktop": "64px",
+        "size_mobile": "38px",
+        "line_height": 1.06,
+        "letter_spacing": "-0.03em",
+        "notes": "Главный голос: вес 500, никогда жирнее. Обычный регистр предложения. text-wrap: balance; hyphens: auto при lang=\"ru\"; на телефоне трекинг -0.02em. До 60 знаков в заголовке первого экрана."
+      },
+      "h2": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "48px",
+        "size_mobile": "30px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.025em"
+      },
+      "h3": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "22px",
+        "size_mobile": "20px",
+        "line_height": 1.25,
+        "letter_spacing": "-0.012em"
+      },
+      "lead": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.45,
+        "letter_spacing": "-0.01em",
+        "notes": "Лид под заголовком и вводные абзацы секций, цвет text_muted, ширина до 56ch."
+      },
+      "body": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.55,
+        "letter_spacing": "0em",
+        "notes": "Не меньше 16px в полях формы — иначе iOS увеличивает страницу. Текст в карточках — до 64ch."
+      },
+      "eyebrow": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.3,
+        "letter_spacing": "0em",
+        "notes": "Надзаголовок секции обычным регистром, без капса и разрядки. Цвет text_muted или on_accent_tint в бейдже."
+      },
+      "button": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "15px",
+        "size_mobile": "16px",
+        "line_height": 1.2,
+        "letter_spacing": "0em"
+      },
+      "caption": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.45,
+        "letter_spacing": "0em",
+        "notes": "Строка доверия, подписи, текст согласия у формы (не меньше 13px). 12px — только юридический текст в подвале."
+      },
+      "stat": {
+        "family": "Geist",
+        "fallback": "ui-sans-serif, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "56px",
+        "size_mobile": "36px",
+        "line_height": 1,
+        "letter_spacing": "-0.03em",
+        "notes": "Цифры результата в белых карточках: font-variant-numeric: tabular-nums lining-nums. Единица измерения («мин», «%», «₽») — размером h3 рядом с цифрой, чтобы в сетке 2×2 на телефоне число не переносилось. Цвет — text, не accent."
+      },
+      "mono": {
+        "family": "Geist Mono",
+        "fallback": "ui-monospace, 'SFMono-Regular', Menlo, monospace",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Только внутри макетов продукта (код, идентификаторы, время в чате). В заголовках, кнопках и тексте страницы — никогда."
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "6px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "xxl": "24px",
+      "pill": "999px",
+      "notes": "md — все кнопки и поля; lg — карточки; xl — рамки макетов продукта; xxl — большая карточка с формой; pill — только переключатели и аватары. Строки FAQ не скругляются: это список с линиями-разделителями."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "96px",
+      "section_mobile": "56px",
+      "container": "1280px",
+      "gutter_mobile": "16px",
+      "gutter_desktop": "32px",
+      "grid_gap": "24px",
+      "card_padding_desktop": "24px",
+      "card_padding_large": "32px",
+      "banner_padding_desktop": "48px",
+      "card_padding_mobile": "20px",
+      "scale": "4, 8, 12, 16, 24, 32, 48, 96"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 1px 2px rgba(17,17,17,.06), 0 12px 32px rgba(17,17,17,.10)",
+      "raised_dark": "0 0 0 1px #3a3834, 0 16px 40px rgba(0,0,0,.55)",
+      "notes": "Бренд сопротивляется теням: глубина — это белая карточка на кремовом фоне плюс линия 1px border. Тень raised — только у всплывающего: липкая кнопка на телефоне, модальное окно, выпадающий список."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "220ms",
+      "slow": "420ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "press": "без масштаба: фон уходит в primary_press",
+      "notes": "Движение редкое и короткое, как в журнале: появление по прокрутке и проявление макетов. Никаких парящих, наклоняющихся и магнитных элементов."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Geist",
+      "fontsource": "geist",
+      "role": "display+body+ui",
+      "weights": [
+        400,
+        500
+      ],
+      "replaces": "Saans (проприетарный гротеск бренда, вся иерархия: 500 в заголовках, 400 в тексте)",
+      "install": "npm i @fontsource-variable/geist — раздача из своей папки, подмножества cyrillic и latin, font-display: swap; предзагрузить один вариативный файл кириллицы",
+      "license": "OFL-1.1"
+    },
+    {
+      "family": "Geist Mono",
+      "fontsource": "geist-mono",
+      "role": "mono (только в макетах продукта)",
+      "weights": [
+        400
+      ],
+      "replaces": "SaansMono (проприетарный моноширинный бренда)",
+      "install": "npm i @fontsource/geist-mono — подключать, только если на странице есть макет с кодом или временем; иначе не грузить",
+      "license": "OFL-1.1"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "md",
+      "height": "48px (52px в форме и на телефоне)",
+      "padding": "12px 20px",
+      "weight": 500,
+      "font": "button",
+      "hover": "фон primary_hover за 150ms, стрелка справа сдвигается на 2px; форма и размер не меняются",
+      "active": "фон primary_press",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "notes": "Угольная прямоугольная кнопка — действие по умолчанию. В тёмной теме переворачивается в кремовую с угольной надписью. Не пилюля."
+    },
+    "button_secondary": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 20px",
+      "weight": 500,
+      "hover": "рамка цвета text, фон не меняется",
+      "focus": "outline 2px solid focus_ring, offset 3px",
+      "notes": "Белая кнопка на кремовом: «Посмотреть, как работает», «Скачать презентацию». Рядом с главной кнопкой — всегда эта, а не вторая заливная."
+    },
+    "button_tertiary": {
+      "bg": "transparent",
+      "color": "text",
+      "radius": "md",
+      "padding": "12px 4px",
+      "weight": 500,
+      "decoration": "подчёркивание 1px с отступом 4px, стрелка →",
+      "hover": "подчёркивание утолщается до 2px"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "md",
+      "height": "48px (52px в форме и на телефоне)",
+      "padding": "12px 20px",
+      "weight": 500,
+      "hover": "фон accent_hover",
+      "focus": "outline 2px solid focus_ring, offset 3px",
+      "notes": "Оранжевая кнопка — только в варианте A/B cta_color_role=accent, и тогда ВСЕ главные кнопки страницы оранжевые, а угольных заливных нет. Одна заливная кнопка на экран."
+    },
+    "link": {
+      "color": "link",
+      "decoration": "underline 1px, text-underline-offset 3px",
+      "hover": "подчёркивание 2px",
+      "notes": "Ссылки угольные с подчёркиванием, как в журнале; оранжевым текстом по светлому не писать."
+    },
+    "tabs": {
+      "container": "фон surface_2, радиус pill, внутренний отступ 4px",
+      "default": "фон прозрачный, текст text_muted, button 15px 500, padding 8px 16px, радиус pill",
+      "selected": "фон surface, текст text, рамка 1px border — выбранное «поднимается на белое»",
+      "notes": "Переключатель «месяц / год» в тарифах или «для кого» над примерами. Высота касания ≥40px."
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "lg",
+      "padding": "24px desktop / 20px mobile",
+      "border": "1px solid border",
+      "shadow": "none",
+      "title": "h3",
+      "text": "body, text_muted",
+      "notes": "Белая плитка на кремовом фоне — основная единица страницы. Иконка сверху — тонкая линейная SVG 24px цвета text, без цветных плашек."
+    },
+    "card_mockup": {
+      "bg": "surface",
+      "radius": "xl",
+      "padding": "24px (макет может уходить в край карточки справа и снизу)",
+      "border": "1px solid border",
+      "shadow": "none",
+      "content": "HTML/SVG-макет интерфейса продукта клиента: диалог с ответом, карточка заявки, отчёт с графиком цветами mock_*; время и код — mono",
+      "notes": "Герой каждой секции. Пропорции скриншота не искажать и не обрезать по смыслу; на телефоне — отдельный вертикальный макет, а не уменьшенный десктопный."
+    },
+    "card_tint": {
+      "bg": "surface_2",
+      "color": "text",
+      "radius": "lg",
+      "padding": "32px",
+      "border": "none",
+      "notes": "Тонированная карточка одного оффера: «Первый месяц — бесплатно», условия для стартапов, бонус за заявку. Одна на страницу."
+    },
+    "card_featured": {
+      "bg": "featured",
+      "color": "on_featured",
+      "muted": "on_featured_muted",
+      "radius": "lg",
+      "padding": "24px",
+      "cta": "bg on_featured, color featured — в светлой теме белая кнопка с угольной надписью, в тёмной угольная с кремовой; радиус md, высота 48px",
+      "notes": "Рекомендуемый тариф инвертируется: угольная карточка с белым текстом (в тёмной теме — кремовая с угольным). Метка «Чаще выбирают» — badge_accent."
+    },
+    "quote_strip": {
+      "bg": "inverse",
+      "color": "on_inverse",
+      "meta": "on_inverse_muted",
+      "padding": "96px 0 desktop / 56px 0 mobile",
+      "quote": "h2 500, до 3 строк, кавычки «ёлочки»",
+      "author": "аватар 44px радиус pill, имя body 500, должность и компания caption on_inverse_muted",
+      "notes": "Единственная полоса-инверсия на странице — уровень глубины 3 бренда: в светлой теме чёрная, в тёмной — светлый слой #302d29 с линиями 1px border сверху и снизу. Одна цитата крупно, без карусели. На телефоне цитата 24px вместо h2."
+    },
+    "stat": {
+      "container": "card",
+      "number": "typography.stat, цвет text, tabular-nums",
+      "label": "body, text_muted, до 2 строк",
+      "source": "caption text_muted: откуда цифра и дата замера",
+      "notes": "3–4 цифры в ряд белыми карточками; без цветных цифр."
+    },
+    "badge": {
+      "bg": "surface",
+      "color": "text_muted",
+      "border": "1px solid border",
+      "radius": "xs",
+      "padding": "4px 8px",
+      "font": "eyebrow 14px 500, обычный регистр"
+    },
+    "badge_accent": {
+      "bg": "accent_tint",
+      "color": "on_accent_tint",
+      "radius": "xs",
+      "padding": "4px 8px",
+      "font": "eyebrow 500",
+      "dot": "точка 6px цвета accent_brand перед текстом",
+      "notes": "Метка «ИИ», «Новое», «Чаще выбирают». Не больше двух на экран."
+    },
+    "logo_strip": {
+      "bg": "background",
+      "item": "логотипы клиентов высотой 24–28px, монохромно цветом text_muted, без рамок и плашек",
+      "caption": "над полосой caption text_muted: «Нам доверяют N компаний» — только проверяемая цифра клиента, с датой замера",
+      "notes": "Только логотипы клиентов лендинга и только с их разрешения; иначе — названия компаний текстом. До 6 логотипов — статичный ряд (так спокойнее для стиля), больше 6 или на телефоне — marquee-logos с паузой."
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "md",
+      "height": "48px (52px на телефоне)",
+      "padding": "12px 14px",
+      "font": "body 16px",
+      "label": "над полем, 14px 500, цвет text",
+      "placeholder": "text_muted, только пример формата, не вместо подписи",
+      "focus": "рамка 1.5px цвета text + outline 2px focus_ring с отступом 2px",
+      "error": "рамка 1.5px error, текст ошибки caption цвета error под полем, aria-describedby, aria-invalid=true"
+    },
+    "checkbox": {
+      "size": "20px",
+      "border": "1.5px solid text",
+      "radius": "xs",
+      "checked": "фон text, галочка SVG цвета background",
+      "notes": "Для согласия на обработку данных. По умолчанию не отмечен; область касания 44px вместе с подписью."
+    },
+    "faq_item": {
+      "bg": "background",
+      "divider": "1px solid border между вопросами и над первым",
+      "question": "кнопка во всю ширину, текст h3 (22px / 20px на телефоне) 500, отступы 24px по вертикали, фокус — outline 2px focus_ring с радиусом sm",
+      "icon": "плюс 20px линией 1.5px цвета text, поворот на 45° при раскрытии",
+      "answer": "body, text_muted, max-width 68ch",
+      "notes": "Список на кремовом фоне без карточек и скруглений; 5–7 вопросов, первым — о цене или сроках."
+    },
+    "nav": {
+      "bg": "background",
+      "height": "64px desktop / 56px mobile",
+      "link": "body 15px 400, text; активная — 500",
+      "right": "телефон body 500 + button_primary «Оставить заявку» высотой 40px (44px на телефоне)",
+      "sticky": "да; при прокрутке появляется нижняя линия 1px border, фон остаётся кремовым (без размытия и прозрачности)",
+      "notes": "На телефоне ссылки прячутся, остаются логотип клиента и кнопка заявки. Меню-бургер на рекламном лендинге не нужно."
+    },
+    "footer": {
+      "bg": "background",
+      "color": "text_muted",
+      "border_top": "1px solid border",
+      "padding": "64px 32px desktop / 48px 16px mobile",
+      "font": "caption",
+      "notes": "Реквизиты (ИНН/ОГРН), ссылки на Политику обработки ПДн и Согласие, контакты, год."
+    }
+  },
+  "layout": {
+    "hero_pattern": "Кремовый фон без картинок, градиентов и узоров. По умолчанию «заголовок + макет»: на 8 колонок слева — надзаголовок eyebrow (или badge_accent «ИИ»), заголовок display в 2–3 строки до 60 знаков, лид 20px цвета text_muted в 1–2 предложения, ряд из угольной button_primary и белой button_secondary, под ними строка доверия caption с цифрой и датой замера. Ниже на всю ширину контейнера — главный герой: card_mockup 16px с HTML/SVG-макетом продукта клиента (диалог с ответом, карточка заявки, отчёт); макет заходит под нижний край экрана на 80–120px, чтобы звать прокрутку. Высота первого экрана — по содержимому, не 100vh. Макет первого экрана — без анимации появления (это LCP); если он картинкой — fetchpriority=high, без loading=lazy, с width/height.",
+    "section_order": [
+      "nav",
+      "hero",
+      "logos",
+      "product_mockup",
+      "benefits",
+      "how",
+      "numbers",
+      "testimonial",
+      "offer",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_backgrounds": {
+      "hero": "background",
+      "logos": "background, без рамок",
+      "product_mockup": "background: слева h2 и 3 коротких довода, справа card_mockup (5/7)",
+      "benefits": "background: 3×2 белых card",
+      "how": "background: 3–4 шага белыми card с номером tabular-nums и тонкой линией 1px border между ними",
+      "numbers": "background: 3–4 stat в белых карточках",
+      "testimonial": "inverse — единственная чёрная полоса во всю ширину окна",
+      "offer": "background: одна card_tint во всю ширину контейнера",
+      "pricing": "background: 3 белых card, средняя card_featured",
+      "faq": "background: строки faq_item с разделителями",
+      "lead_form": "background: большая белая карточка радиусом xxl",
+      "footer": "background + линия сверху"
+    },
+    "band_rhythm": "Фон почти всей страницы один — кремовый; ритм создают белые карточки, отступы 96px между секциями и одна чёрная полоса с цитатой после цифр. Секции не красятся пастельными плашками.",
+    "grid": "12 колонок, контейнер 1280px, промежуток 24px. Первый экран: 8 колонок текста + макет на 12; вариант split — 7/5 с формой справа. Преимущества — 3 в ряд по 4 колонки; «как это работает» — 3–4 шага; цифры — 4 по 3 колонки; тарифы — 3 по 4 колонки; форма — карточка 12 колонок, внутри 5/7 (слева доводы, справа поля).",
+    "mobile_notes": "Одна колонка, боковые поля 16px, секции 56px. Заголовок 38px с трекингом -0.02em и hyphens: auto. Кнопки во всю ширину, 52px. Макет первого экрана заменяется вертикальным макетом телефона (не уменьшенным десктопным) и стоит после кнопок. Карточки 1 в ряд; цифры — сетка 2×2; тарифы — вертикальный список, рекомендуемый первым; полоса логотипов — marquee с паузой или сетка 3×2. Чёрная цитата остаётся, шрифт цитаты 24px. После ухода кнопки первого экрана выезжает липкая кнопка заявки с тенью raised и прячется, когда форма в кадре.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — карточки 2 в ряд, макет под текстом",
+      "desktop": "≥1024px — 3 в ряд",
+      "wide": "≥1440px — контейнер прежний 1280px, чёрная полоса во всю ширину окна"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "company"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "company": "Компания (необязательно)"
+    },
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две разные ссылки на отдельные документы (с 1 сентября 2025 согласие оформляется отдельным документом). Неотмеченный чекбокс не блокирует кнопку: при нажатии рядом появляется текст «Отметьте согласие, чтобы мы могли связаться с вами». Согласие на рекламные рассылки — только вторым необязательным чекбоксом.",
+    "style": "Большая белая карточка радиусом 24px (xxl) с рамкой 1px border, без тени, внутренний отступ 48px (телефон 20px). Внутри 5/7: слева h2 «Покажем, как это сработает у вас», три строки-довода с линейной галочкой и маленький card_mockup; справа поля друг под другом с промежутком 16px, подписи 14px 500 над полями, поля 48px с рамкой border_input и радиусом 8px. Кнопка на всю ширину колонки, 52px, угольная (или оранжевая в варианте accent), текст с глаголом результата «Получить демо» и стрелкой. Под кнопкой caption text_muted: срок ответа и «Не передаём данные третьим лицам». Маску телефона не навязывать до ввода — принимать любые цифры, пробелы и +.",
+    "success_state": "Карточка не исчезает и не меняет высоту: содержимое колонки с полями сменяется по рецепту form-success — круг 48px цвета success_icon с угольной галочкой, прорисованной слева направо, h3 «Заявка у нас», строка со сроком ответа из брифа клиента, например «Перезвоним в течение 15 минут в рабочее время: пн–пт 9:00–19:00 (МСК)», с tabular-nums и button_tertiary «Пока ждёте — посмотрите, как это выглядит в продукте» к секции с макетом. Фокус переносится на заголовок (tabindex=-1), область с aria-live=polite. Экран успеха показывается только после ответа сервера {\"ok\": true}.",
+    "error_state": "Отказ всегда видимым текстом на том же экране: под кнопкой цветом error «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Введённое не стирать. Скрытые ловушки для ботов, проверки и лимиты не имеют права молча отбросить заявку с заполненными именем и телефоном — такую заявку принимать с пометкой."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "image-reveal-clip",
+    "marquee-logos",
+    "counter-up",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "fade-up-stagger": "карточки преимуществ, шаги, тарифы — сдвиг не больше 16px, до 6 карточек в очереди",
+    "image-reveal-clip": "макеты продукта в секциях ниже первого экрана; макет первого экрана не анимируется",
+    "marquee-logos": "полоса клиентов под первым экраном — только если логотипов больше 6 или на телефоне; медленно, с паузой по наведению, фокусу и кнопке",
+    "counter-up": "цифры в карточках stat — один раз при появлении, только в уровне subtle",
+    "accordion-smooth": "частые вопросы",
+    "form-success": "ответ формы заявки",
+    "sticky-cta-mobile": "липкая кнопка «Оставить заявку» на телефоне, прячется, когда форма в кадре"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "stacked_mockup",
+        "split"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "form_position": [
+        "bottom",
+        "hero"
+      ],
+      "proof_style": [
+        "quote_strip",
+        "logo_strip"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "cream_canvas",
+      "no_card_shadows",
+      "single_orange_point"
+    ],
+    "default": {
+      "hero_layout": "stacked_mockup",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "form_position": "bottom",
+      "proof_style": "quote_strip",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. hero_layout: stacked_mockup — заголовок и под ним макет на всю ширину; split — 7/5 с формой в белой карточке справа (тогда form_position=hero). cta_color_role: primary — все главные кнопки угольные; accent — все оранжевые, угольных заливных на странице нет. headline_scale: xl = 64/38px, l = 52/34px. motion_level: none — остаются только функциональные accordion-smooth, form-success и sticky-cta-mobile; subtle — плюс fade-up-stagger, image-reveal-clip, counter-up и marquee-logos. Уровня rich у стиля нет: наклоны, магниты и параллакс ломают спокойный журнальный тон."
+  },
+  "do": [
+    "Кремовый фон #f5f1ec — основа всей страницы; карточки поднимаются на белый, глубина — сменой поверхности и линией 1px, без теней.",
+    "Героем каждого блока делайте макет продукта в белой рамке радиусом 16px; маркетинговая обвязка вокруг него тихая.",
+    "Один шрифт на всю иерархию: Geist 500 в заголовках со сжатым трекингом, 400 в тексте; иерархия — размером, весом и трекингом.",
+    "Кнопки и поля — прямоугольники со скруглением 8px, карточки — 12px; пилюля только у переключателей и аватаров.",
+    "Оранжевый — одна точка энергии на экран: либо кнопки в варианте A/B, либо метка «ИИ»; рядом с угольной заливной кнопкой его не ставить.",
+    "Надзаголовки пишите обычным регистром 14px 500 — без капса и разрядки.",
+    "Каждую цифру подписывайте источником и датой замера мелким текстом под ней."
+  ],
+  "dont": [
+    "Не заменять кремовый фон чистым белым и не красить секции пастельными плашками или градиентами.",
+    "Не ставить тени на карточки — тень raised только у всплывающего (липкая кнопка, окно).",
+    "Не делать кнопки-пилюли и не ставить угольную и оранжевую заливные кнопки в одном экране.",
+    "Не писать текст «кнопочным» оранжевым: #d24600 — только заливка под белой надписью (текстом 4.05 на креме), #ff5600 не класть под белую надпись (3.19) и не писать им по светлому (2.84); оранжевый текст — только в метке badge_accent цветом on_accent_tint.",
+    "Не выводить серые #7b7b78 и #9c9fa5 в текст на кремовом или белом — только #626260 и темнее; #9c9fa5 допустим лишь на угольном (карточка тарифа, чёрная полоса).",
+    "Не поднимать цвета графиков (голубой, розовый, лаймовый, бирюзовый) до цветов страницы — они живут только внутри макетов.",
+    "Не прятать согласие на обработку данных в предотмеченную галочку."
+  ],
+  "prompt_snippet": "Build a Russian lead-generation landing in an Intercom-inspired editorial style; expose tokens as CSS variables --color-<key>. Canvas: warm cream #F5F1EC, never pure white; content sits on white cards (12px radius, 1px #D3CEC6 hairline), no shadows or gradients. Sections are led by product mockups: HTML/SVG UI in white 16px-radius frames. Self-hosted Geist only: 500 headings (64px desktop, 38px mobile, tracking -0.03em, sentence case), 400 body, 14px sentence-case eyebrows. Buttons are 8px-radius rectangles, 48px, full-width 52px on mobile: charcoal #111111 primary, white secondary with #857F77 border. Orange #D24600 is the single colour point: fill only, never text; orange CTAs only in the accent A/B variant. One black quote strip; featured pricing card inverts. Lead form in a 24px-radius white card: name, phone, optional company, unchecked 152-FZ consent, visible errors. Motion: short fades and mockup reveals, none on the hero; honour prefers-reduced-motion. Dark: #141311 canvas, #1F1E1B cards, #302D29 quote strip, cream text/CTA.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/intercom/DESIGN.md",
+    "notes": "Перенесено: кремовый фон #f5f1ec как главная поверхность, белые карточки #ffffff с линией #d3cec6 вместо теней, угольный #111111 как системный цвет кнопок и текста, приглушённый #626260 (5.44 на креме — без правок), тонированная карточка #ebe7e1, чёрная полоса цитаты #000000 с серым #9c9fa5 (7.92), инвертированная угольная карточка рекомендуемого тарифа, ошибка #c41c1c (5.29), радиусы 4/6/8/12/16/24/пилюля, ритм 8px и секции 96px, контейнер 1280px, заголовки в весе 500 со сжатым трекингом, надзаголовки обычным регистром, переключатель-пилюля «выбранное поднимается на белое», цвета графиков — только внутри макетов. Шрифты: Saans (проприетарный) заменён на Geist (OFL-1.1, кириллица) — источник сам называет его бесплатной заменой; SaansMono — на Geist Mono (OFL-1.1). Контраст: фирменная пара Fin Orange #ff5600 с белым даёт 3.19 и не проходит 4.5 — оттенок затемнён минимально, при том же тоне 20° и насыщенности, по светлоте HSL с 50% до 41%: #d24600 (4.55 с белым), наведение #b83d00 (5.67); исходный #ff5600 оставлен как accent_brand для точек, значков и текста на тёмном фоне (5.82). Вариант «угольный текст на #ff5600» (5.92) отвергнут: бренд пишет по оранжевому белым. Серые #7b7b78 (3.78) и #9c9fa5 (2.36 на креме) выведены из текста на светлом. Линия #d3cec6 (1.57 к белому) оставлена декоративной, для рамок полей добавлен #857f77 (3.96, WCAG 1.4.11). Зелёный бренда #0bdf50 на креме даёт 1.6 — оставлен для значка успеха с угольной галочкой (10.51), для текста успеха взят #08772f (5.06). Правило источника «не ставить угольную и оранжевую кнопки в одном экране» превращено в ось A/B cta_color_role. Тёмной темы у бренда нет — собрана из его инверсных цветов: фон тёплый почти-чёрный #141311, карточки #1f1e1b, тонированная #2a2825, полоса цитаты поднята на #302d29 (чёрная на тёмном фоне не видна, 1.13), текст — кремовый #f5f1ec (16.51), приглушённый #a8a39b (7.41), главная кнопка переворачивается в кремовую с угольной надписью (16.79), рекомендуемый тариф — кремовый, оранжевая пара та же, ошибка #ff7466 (7.02), успех — фирменный #0bdf50 (10.33). Под кириллицу: заголовок первого экрана уменьшен с 72 до 64px, интерлиньяж поднят с 1.05 до 1.06, трекинг -2px переведён в -0.03em, подписи подняты с 12 до 13px (текст согласия). Раскладка переделана под рекламный лендинг: форма заявки по 152-ФЗ, строка доверия, липкая кнопка на телефоне, оси A/B. Ревью: цифры stat на телефоне 36px (единица отдельно), оранжевый #d24600 запрещён как текст (4.05/3.66), строки FAQ без скругления, у карточки тарифа кнопка из токенов, уровни motion_level расписаны."
+  }
+}

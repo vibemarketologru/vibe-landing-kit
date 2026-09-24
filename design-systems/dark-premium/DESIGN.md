@@ -1,0 +1,94 @@
+# Тёмный премиум
+
+> Собственный стиль Вайб-Маркетолога.
+
+Тёплый почти-чёрный фон #0B0A08 с двумя слоями поверхностей, единственный акцент — шампанское золото #C9A869, крупная антиква Cormorant в паре с чётким гротеском Manrope. Много воздуха, тонкие золотые линии вместо теней, настоящее фото объекта во весь экран с глубоким затемнением под текстом. Одна золотая прямоугольная кнопка на экран.
+
+**Подходит:** элитная и бизнес-недвижимость, новостройки и загородные посёлки, премиальные автомобили и автосалоны, частные клиники и эстетическая медицина, ивенты, свадьбы и закрытые мероприятия, рестораны, отели и частные клубы, ювелирные изделия и часы, юридические и финансовые услуги для состоятельных клиентов. **Цели:** заявка на просмотр или тест-драйв, запись на консультацию, запрос презентации, планировок или каталога, бронирование даты или места, доверие к дорогому продукту. **Настроение:** сдержанный, дорогой, ночной, тихая роскошь, уверенный, камерный.
+
+## Цвета
+
+| Роль | Светлая | Тёмная |
+|---|---|---|
+| background | `#F6F1E8` | `#0B0A08` |
+| surface | `#FFFDF8` | `#15130F` |
+| surface_raised | `#EFE8DB` | `#1D1A15` |
+| text | `#16130E` | `#F2ECE1` |
+| text_muted | `#5C5446` | `#A8A091` |
+| placeholder | `#6E6657` | `#8A8374` |
+| border | `#E2D9C8` | `#2A261F` |
+| border_strong | `#8C8272` | `#6E6555` |
+| border_gold | `#DCCDB2` | `#5D4F33` |
+| primary | `#A8844A` | `#C9A869` |
+| primary_hover | `#B8955A` | `#D6B97F` |
+| primary_pressed | `#A07E45` | `#B8965A` |
+| on_primary | `#16130E` | `#14110B` |
+| primary_ink | `#7A5A22` | `#C9A869` |
+| accent | `#16130E` | `#EFE8DB` |
+| accent_hover | `#2A251D` | `#F8F3EA` |
+| on_accent | `#F6F1E8` | `#0B0A08` |
+| link | `#7A5A22` | `#DCC08A` |
+| success | `#2E7049` | `#7CC39A` |
+| error | `#B3261E` | `#EE8272` |
+| footer | `#EFE8DB` | `#070605` |
+
+## Типографика
+
+| Роль | Шрифт | Вес | Десктоп | Телефон |
+|---|---|---|---|---|
+| display | Cormorant | 500 | 104px | 44px |
+| h2 | Cormorant | 500 | 64px | 34px |
+| h3 | Manrope | 600 | 24px | 20px |
+| lead | Manrope | 400 | 20px | 18px |
+| body | Manrope | 400 | 17px | 16px |
+| caption | Manrope | 400 | 13px | 13px |
+| eyebrow | Manrope | 600 | 12px | 12px |
+| button | Manrope | 600 | 16px | 16px |
+| stat | Cormorant | 500 | 88px | 44px |
+| price | Cormorant | 600 | 40px | 32px |
+| quote | Cormorant | 500 | 34px | 28px |
+| wordmark | Cormorant | 600 | 24px | 20px |
+
+## Раскладка лендинга
+
+По умолчанию photo_full: первый экран во весь экран — на десктопе height: 100svh в пределах 640–1000px, на телефоне min-height: 100svh без нижнего порога (содержимое не обрезается). Настоящее фото объекта (фасад вечером, вид из окна, автомобиль в студийном свете, зал с гостями), object-fit: cover, fetchpriority="high", без lazy и без анимации появления — это кандидат LCP. Затемнение — по gradient.notes: на десктопе photo_scrim, на телефоне photo_scrim_top + text_scrim под текстом. Текст прижат к низу слева в левых 6 колонках, отступ снизу 96px: eyebrow (где и когда: «Петровская набережная · сдача IV кв. 2027»), заголовок display до трёх строк, lead цветом text_muted до 52ch, пара кнопок — золотая главная и контурная, под ними строка доверия caption из трёх фактов через золотые вертикальные линии 1×16px. Вариант split: слева текст на gradient.hero (6 колонок), справа высокое фото 4:5 (6 колонок) — показывается сразу, без шторки (image-reveal-clip на картинку первого экрана не ставится). Вариант type_only: без фото, заголовок по центру крупнее на ступень, фон gradient.hero, пятно может плыть (gradient-drift) с кнопкой паузы.
+
+Порядок секций: hero → key_facts → story → gallery → features → offer → process → reviews → faq → lead_form → footer
+
+До 767px: поля страницы 16px, заголовок первого экрана 44px (hyphens:auto при lang="ru", text-wrap:balance), h2 34px, stat 44px, цитата 28px; отступы секций 88px, первого экрана снизу 40px. Первый экран — min-height: 100svh (не 100vh: адресная строка съедает высоту), фото 4:5 кадрируется object-position под главный объект и остаётся видно хотя бы на треть высоты экрана — иначе сократите заголовок и lead. В первом экране телефона: eyebrow, заголовок до трёх строк, lead до двух строк, главная кнопка во всю ширину 56px, второе действие — link_arrow под ней; строка доверия переезжает в key_facts сразу ниже. После первого экрана внизу появляется липкая панель с золотой кнопкой и кнопкой-телефоном (sticky-cta-mobile) и прячется, когда форма в кадре; у панели padding-bottom: env(safe-area-inset-bottom). Параллакс и магнитная кнопка на телефоне выключены. Горизонтального скролла нет ни на одном экране.
+
+## Форма заявки
+
+Карточка card_featured справа (6 колонок, на телефоне во всю ширину): золотая линия по верхней кромке, отступ 48px (24px на телефоне), скругление 4px. Сверху eyebrow «Частный показ», заголовок h2 уменьшенный до 40px (32px на телефоне) антиквой: «Запишитесь на просмотр». Поля 56px на фоне background с рамкой border_strong, между полями 16px; необязательный выбор времени — чипы. Кнопка — золотая button_primary во всю ширину карточки 56px «Записаться на просмотр». Под ней отметка согласия и строка caption: «Перезвоним в течение 15 минут в рабочее время. Без рассылок». Поля: name, phone. Согласие 152-ФЗ: да.
+
+## Делать
+
+- Держите тёплый почти-чёрный #0B0A08 и слои #15130F и #1D1A15 — глубина строится светлотой и тонкими линиями, а не тенями.
+- Золото — только для главного: одна золотая кнопка на экран (кнопка в шапке золотеет, когда первый экран ушёл из кадра), тонкие линии, бровки и ключевые цифры.
+- Заголовки — Cormorant 500 крупно (104/44px, до трёх строк и 38 знаков), текст и интерфейс — Manrope 400–600; цифры и цены всегда lining-nums tabular-nums.
+- Первый экран по умолчанию — настоящее фото объекта во весь экран; под любым текстом на фото затемнение не слабее 85%, под шапкой — не слабее 66%.
+- Оставляйте много воздуха: секции 144px на десктопе и 88px на телефоне, текст до 720px, не больше трёх карточек в ряд.
+- Доказывайте фактами: метры, сроки, мощность, дата — крупными цифрами с подписью и источником.
+- Двигайтесь спокойно: проявления 720–1100ms без пружин, одно в кадре за раз, отклик на наведение 180–320ms; у плывущего фона — кнопка паузы.
+
+## Не делать
+
+- Не используйте чистый чёрный #000000 фоном и чистый белый #FFFFFF текстом — на тёмном они режут глаз и выглядят дёшево.
+- Не заливайте золотом фоны, большие площади и длинный текст; не рисуйте «золото» металликом с бликами.
+- Не набирайте Cormorant мельче 28px и не пишите им абзацы — тонкие штрихи пропадают на тёмном фоне; исключение — название в шапке прописными 600.
+- Не пишите «элитный», «эксклюзивный», «роскошный», «лучший» — премиум доказывают цифрами и фактами.
+- Не ставьте стоковые фото, рендеры с водяными знаками, чужие логотипы и фирменные изображения других брендов.
+- Не кладите светлый текст на фото без затемнения и не проверяйте контраст на глаз.
+- Не прячьте цену и заявку: если цена «по запросу», кнопка запроса стоит рядом, а не в конце страницы.
+
+## Анимации
+
+`hero-text-reveal`, `image-reveal-clip`, `fade-up-stagger`, `counter-up`, `parallax-soft`, `gradient-drift`, `magnetic-button`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+
+## A/B-тест
+
+Менять: {"hero_layout":["photo_full","split","type_only"],"cta_color_role":["primary","accent"],"headline_scale":["xl","l"],"motion_level":["subtle","rich","none"],"social_proof_position":["under_hero","before_form"],"button_shape":["sharp","pill"],"button_case":["sentence","caps"],"theme":["dark","light"]}. Не трогать: palette_accent_variant, fonts, radius_cards_inputs, hairline_gold, photo_scrim_85, no_emoji.
+
+## Инструкция верстальщику
+
+Build a Russian-language lead-gen landing in the Dark Premium style. Warm near-black canvas #0B0A08, surfaces #15130F and #1D1A15, ivory text #F2ECE1, muted #A8A091, hairlines #2A261F. One accent: champagne gold #C9A869 with dark text #14110B, reserved for the single main CTA per viewport, thin lines, eyebrows and key numbers; the header CTA stays outlined over the hero. Headlines in Cormorant 500 (104px desktop, 44px mobile, max three lines of about 38 characters), body and UI in Manrope 400/600; lining tabular figures; self-host cyrillic, latin and latin-ext subsets for the ruble sign. Hero: full-bleed real photo, bottom-left text over a scrim at least 86% dark, a 56px gold button with 2px radius plus an outline button. 144px section spacing, max three cards per row, depth from lightness steps and gold hairlines instead of shadows. Form: name, phone, unticked 152-FZ consent, visible errors, inline success. Calm motion, no emoji, no CDNs.

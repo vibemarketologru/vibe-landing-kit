@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vibemarketolog": {
+      "type": "http",
+      "url": "https://lk.vibemarketolog.ru/mcp"
+    }
+  }
+}

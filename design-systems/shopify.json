@@ -1,0 +1,644 @@
+{
+  "slug": "shopify",
+  "name": "Shopify",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Shopify; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Две дорожки с общей типографикой. Тёмная кинематографичная: чёрный холст, фото предпринимателей во всю ширину и огромные тонкие заголовки весом 300 в море воздуха. Светлая транзакционная: белый и кремовый холст, мятные заливки алоэ и фисташки у лучшего тарифа. Кнопки только пилюли — чёрная на светлом, белая или с белым контуром на чёрном; одно действие на полосу.",
+  "summary_en": "Two canvas tracks sharing one type system. The cinematic track: pure black canvas, full-bleed merchant photography and giant thin weight-300 headlines floating in generous negative space. The transactional track: white and cream canvas with aloe and pistachio mint fills for the featured tier. Buttons are pills only — black on light, white or white-stroked on black — and one action per band.",
+  "best_for": [
+    "интернет-магазины и запуск e-commerce",
+    "D2C-бренды и производители со своим продуктом",
+    "выход на маркетплейсы и продажи в соцсетях",
+    "сервисы и агентства для предпринимателей",
+    "розница, шоурумы, локальные бренды одежды, мебели, косметики",
+    "обучение предпринимателей и акселераторы"
+  ],
+  "goals": [
+    "заявки на запуск магазина",
+    "запись на консультацию",
+    "бесплатный старт или пробный период",
+    "расчёт стоимости",
+    "доверие через истории реальных предпринимателей"
+  ],
+  "mood": [
+    "кинематографичный",
+    "редакционный",
+    "уверенный",
+    "контрастный",
+    "коммерческий",
+    "просторный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#fbfbf5",
+        "text": "#000000",
+        "text_muted": "#71717a",
+        "border": "#e4e4e7",
+        "primary": "#000000",
+        "on_primary": "#ffffff",
+        "accent": "#c1fbd4",
+        "on_accent": "#000000",
+        "link": "#000000",
+        "success": "#0a7a3b",
+        "error": "#c81e1e",
+        "text_secondary": "#3f3f46",
+        "text_muted_on_tint": "#52525b",
+        "primary_hover": "#3f3f46",
+        "primary_press": "#3f3f46",
+        "accent_hover": "#aeeec4",
+        "surface_band": "#d4f9e0",
+        "surface_featured": "#c1fbd4",
+        "text_on_featured": "#000000",
+        "text_muted_on_featured": "#52525b",
+        "surface_raised": "#ffffff",
+        "chip_bg": "#d4d4d8",
+        "chip_text": "#000000",
+        "border_input": "#8b8b94",
+        "border_strong": "#000000",
+        "focus_ring": "#000000",
+        "link_footer": "#52525b",
+        "photo_placeholder": "#e4e4e7"
+      },
+      "dark": {
+        "background": "#000000",
+        "surface": "#0a0a0a",
+        "text": "#ffffff",
+        "text_muted": "#a1a1aa",
+        "border": "#1e2c31",
+        "primary": "#ffffff",
+        "on_primary": "#000000",
+        "accent": "#c1fbd4",
+        "on_accent": "#000000",
+        "link": "#ffffff",
+        "success": "#86efac",
+        "error": "#ff7a7a",
+        "text_secondary": "#d4d4d8",
+        "text_muted_on_tint": "#a1a1aa",
+        "primary_hover": "#d4d4d8",
+        "primary_press": "#d4d4d8",
+        "accent_hover": "#aeeec4",
+        "surface_band": "#1e2c31",
+        "surface_featured": "#c1fbd4",
+        "text_on_featured": "#000000",
+        "text_muted_on_featured": "#52525b",
+        "surface_raised": "#1e2c31",
+        "chip_bg": "#1e2c31",
+        "chip_text": "#d4d4d8",
+        "border_input": "#8b8b94",
+        "border_strong": "#ffffff",
+        "focus_ring": "#ffffff",
+        "link_footer": "#9dabad",
+        "photo_placeholder": "#0a0a0a"
+      }
+    },
+    "contrast_notes": "Пары вне check.mjs посчитаны по WCAG. Светлая: text_secondary #3f3f46 на белом 10.44, на креме 10.06; text_muted #71717a на креме 4.65, но на алоэ и фисташке только 4.15/4.24 — поэтому на цветных заливках вторичный текст text_muted_on_tint #52525b (6.63/6.78); белый на primary_hover 10.44; чёрный на accent_hover 15.83; chip 14.21; success на креме 5.24, error на креме 5.52; border_input #8b8b94 к белому 3.38, к крему 3.25 (WCAG 1.4.11). Тёмная: text_muted и text_muted_on_tint #a1a1aa на surface 7.72, на surface_band и surface_raised #1e2c31 5.61; белый на surface_raised 14.39; text_secondary 13.40 на surface; чёрный на primary_hover #d4d4d8 14.21; link_footer #9dabad 8.86; chip_text на chip_bg 9.73; success 14.10 и error 7.84 на surface, error на surface_raised 5.70; border_input к чёрному 6.22, к surface_raised 4.26. Линия border #1e2c31 к чёрному даёт 1.46 — это декоративный волосок, границы полей и кнопок им не рисовать. Карточка алоэ в тёмной теме держит светлые цвета текста: чёрный 18.02, вторичный text_muted_on_featured #52525b 6.63 (text_muted_on_tint тёмной темы на алоэ не годится — он для полосы #1e2c31).",
+    "typography": {
+      "display": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 300,
+        "size_desktop": "88px",
+        "size_mobile": "42px",
+        "line_height": 1.04,
+        "letter_spacing": "0.015em",
+        "letter_spacing_mobile": "0",
+        "features": "font-optical-sizing: auto — от 32px браузер сам включает дисплейный срез Inter (ось opsz = 32)",
+        "note": "У бренда 96px, вес 330, межстрочный 1.0, трекинг +0.025em. Вес в вариативном файле можно ставить 330 как у бренда, в статическом — 300. Межстрочный поднят до 1.04, иначе Й и Ё задевают строку выше. Заголовок до 40 знаков, 2–3 строки"
+      },
+      "h2": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 300,
+        "size_desktop": "56px",
+        "size_mobile": "34px",
+        "line_height": 1.12,
+        "letter_spacing": "0",
+        "note": "Бренд: display-lg 55px и display-md 48px. На героических поверхностях не мельче 48px — ниже заголовок читается как подпись секции"
+      },
+      "h3": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "28px",
+        "size_mobile": "22px",
+        "line_height": 1.28,
+        "letter_spacing": "0.015em",
+        "note": "Название карточки и тарифа (heading-xl бренда)"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.56,
+        "letter_spacing": "0",
+        "note": "Подзаголовок первого экрана, цвет text_secondary, до 2 предложений. В вариативном файле вес 550 как у бренда"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0",
+        "note": "У бренда 16px/1.5 весом 420; русский текст длиннее — 1.6. В вариативном файле вес 420"
+      },
+      "body_strong": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0",
+        "note": "Выделение внутри абзаца, в вариативном — 550"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.5,
+        "letter_spacing": "0.02em",
+        "note": "Подписи, сноски, строка доверия, подвал"
+      },
+      "micro": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.5,
+        "letter_spacing": "0",
+        "note": "Мелкий шрифт тарифов и текст согласия. Мельче 13px — только капсовый eyebrow 12px; строчного текста мельче 13px на странице нет"
+      },
+      "eyebrow": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.2,
+        "letter_spacing": "0.06em",
+        "transform": "uppercase",
+        "color": "text_muted; внутри badge и chip — их цвет текста",
+        "note": "Надстрочник над крупным заголовком, 2–4 слова"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1,
+        "letter_spacing": "0"
+      },
+      "stat": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif",
+        "weight": 300,
+        "size_desktop": "72px",
+        "size_mobile": "44px",
+        "line_height": 1,
+        "letter_spacing": "0",
+        "features": "tnum",
+        "note": "Большие тонкие цифры блока результатов и цена тарифа (цена — 48px)"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "5px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "20px",
+      "pill": "9999px"
+    },
+    "spacing": {
+      "unit": 8,
+      "scale": [
+        2,
+        4,
+        8,
+        12,
+        16,
+        24,
+        32,
+        64,
+        128
+      ],
+      "section_desktop": "128px",
+      "section_mobile": "72px",
+      "section_transactional_desktop": "64px",
+      "section_transactional_mobile": "48px",
+      "container": "1440px",
+      "container_text": "760px",
+      "gutter_desktop": "40px",
+      "gutter_mobile": "16px",
+      "card_padding": "32px",
+      "card_padding_mobile": "24px",
+      "grid_gap": "24px",
+      "note": "Кинематографичные полосы (первый экран, преимущества, фото-витрина, отзывы) — 128px воздуха; транзакционные (тарифы, частые вопросы, форма) сжимаются до 64px, потому что там сравнивают и действуют"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 8px 8px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.1)",
+      "modal": "0 25px 50px -12px rgba(0,0,0,0.25)",
+      "card_dark": "0 1px 2px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.04)",
+      "raised_dark": "0 0 0 1px rgba(255,255,255,0.08), 0 1px 3px rgba(0,0,0,0.3), 0 5px 10px rgba(0,0,0,0.2)",
+      "focus": "0 0 0 3px color-mix(in srgb, var(--focus_ring) 25%, transparent)",
+      "note": "Светлая: обычная карточка плоская с волоском border; raised — фирменная стопка из четырёх крошечных теней (бумажный ореол) у тарифов и формы. Тёмная: у карточек только верхний внутренний блик card_dark; raised_dark — у формы и всплывающих слоёв. Больше никаких теней на чёрном"
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "300ms",
+      "slow": "700ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "note": "Движение редакционное и медленное: фото проявляются за 700–900ms, текст поднимается на 16–24px, без пружин и отскоков. Кнопки реагируют только сменой заливки за 150ms"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "display+body",
+      "weights": [
+        300,
+        400,
+        500,
+        600
+      ],
+      "replaces": "Neue Haas Grotesk Display (проприетарный) — все заголовки, цифры и цены. Текстовый Inter бренд использует сам, он открытый",
+      "install": "npm i @fontsource-variable/inter и подключить opsz.css (оси opsz 14–32 и wght 100–900) — раздача из своей папки, font-display: swap. Семейство в CSS: font-family: 'Inter Variable', 'Inter', 'Helvetica Neue', Arial, sans-serif; font-optical-sizing: auto. Предзагрузить один файл inter-cyrillic-opsz-normal.woff2 (≈30 КБ). Цифры, знаки препинания и ₽ лежат в латинских файлах (latin ≈73 КБ, latin-ext) — их не предзагружать, браузер возьмёт их сам по unicode-range. Фирменный стилистический набор ss03 не включать: в Inter ss03 означает круглые кавычки и запятые, это другой набор",
+      "license": "OFL-1.1"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "padding": "14px 24px",
+      "min_height": "44px",
+      "padding_large": "18px 28px",
+      "min_height_large": "52px — первый экран, форма, липкая кнопка и все кнопки на телефоне",
+      "font": "button",
+      "weight": 500,
+      "icon": "нет — только текст, 1–3 слова",
+      "hover": "фон primary_hover (светлая #3f3f46, тёмная #d4d4d8) за 150ms ease_standard, без подъёма и без тени",
+      "active": "transform: scale(.98)",
+      "focus": "outline 2px focus_ring, offset 3px",
+      "rule": "одна залитая пилюля на полосу; в светлой теме чёрная, в тёмной белая"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "светлая — 1px solid border_strong (#000000); тёмная — 2px solid border_strong (#ffffff)",
+      "radius": "pill",
+      "padding": "на толщину рамки меньше, чем у button_primary, чтобы размер совпал: светлая 13px 23px (крупная 17px 27px), тёмная 12px 22px (крупная 16px 26px)",
+      "min_height": "44px, крупная 52px",
+      "weight": 500,
+      "hover": "светлая — фон surface #fbfbf5 (на кремовой полосе — #ffffff); тёмная — фон rgba(255,255,255,0.08)",
+      "active": "transform: scale(.98)",
+      "use": "второе действие рядом с главным («Как это работает», «Позвонить»). В тёмной теме это фирменная кинематографичная пилюля бренда — при A/B cta_style=outline она становится главной кнопкой первого экрана"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "pill",
+      "padding": "как у button_primary",
+      "weight": 500,
+      "hover": "фон accent_hover #aeeec4",
+      "use": "кнопка формы при A/B cta_color_role=accent и действие «Начать бесплатно». В тёмной теме — только внутри транзакционных мест (форма, тарифы)"
+    },
+    "link": {
+      "color": "link",
+      "decoration": "в тексте — подчёркивание 1px с отступом 3px всегда; в навигации без подчёркивания, при наведении появляется",
+      "footer": "в подвале цвет link_footer (светлая #52525b, тёмная холодный #9dabad) с постоянным подчёркиванием",
+      "rule": "зелёные цвета текстом не использовать никогда"
+    },
+    "card": {
+      "bg": "светлая — background (на кремовой полосе тоже background); тёмная — surface #0a0a0a",
+      "color": "text",
+      "border": "светлая — 1px solid border; тёмная — без рамки, shadow.card_dark (верхний блик)",
+      "radius": "lg",
+      "padding": "32px",
+      "padding_mobile": "24px",
+      "shadow": "светлая — нет; кликабельная карточка при наведении получает shadow.raised",
+      "icon": "линейная SVG-иконка 24px, штрих 1.5px currentColor, без подложки"
+    },
+    "card_pricing": {
+      "bg": "светлая — background; тёмная — surface",
+      "border": "светлая — 1px solid border; тёмная — кольцо из raised_dark",
+      "shadow": "светлая — raised (стопка крошечных теней)",
+      "radius": "lg",
+      "padding": "32px",
+      "title": "h3 28px вес 500",
+      "price": "stat 48px вес 300 tnum, «₽/мес» caption text_muted",
+      "list": "4–6 пунктов body с галочкой SVG 16px цвета text",
+      "cta": "button_primary на всю ширину, прижата к низу карточки"
+    },
+    "card_featured": {
+      "bg": "surface_featured (алоэ #c1fbd4) в обеих темах",
+      "color": "text_on_featured #000000",
+      "muted": "text_muted_on_featured #52525b",
+      "border": "нет",
+      "radius": "lg",
+      "padding": "32px",
+      "cta": "чёрная пилюля #000000 с белым текстом — в том числе в тёмной теме",
+      "badge": "chip_bg #d4d4d8 с чёрным текстом «Выбирают чаще всего»",
+      "use": "лучший тариф — выделен заливкой, а не цветной рамкой; единственная алоэ-карточка на странице"
+    },
+    "card_band": {
+      "bg": "surface_band (светлая — фисташка #d4f9e0; тёмная — сине-зелёный #1e2c31)",
+      "color": "text (на фисташке #000000)",
+      "muted": "text_muted_on_tint (светлая #52525b, тёмная #a1a1aa)",
+      "radius": "lg",
+      "padding": "32px; на десктопе 48px 64px",
+      "use": "широкая полоса во весь контейнер: гарантия, отзыв или группа преимуществ другого рода. Одна на страницу"
+    },
+    "card_cinematic": {
+      "bg": "surface #0a0a0a (светлая тема — background с рамкой border)",
+      "color": "text",
+      "radius": "lg",
+      "padding": "0 у фото, 32px у текста",
+      "shadow": "card_dark",
+      "content": "сверху фото клиента 4:3 без рамок и без текста поверх, снизу h3 и 1–2 строки body text_muted; либо одна крупная фраза h2 без фото"
+    },
+    "photo_frame": {
+      "bg": "photo_placeholder",
+      "radius": "xl (20px), у фото, упирающегося в следующую полосу, — только верхние углы; во всю ширину окна — без радиуса",
+      "padding": "0",
+      "rules": "фото и есть содержание: без затемнений, градиентов и надписей поверх; object-fit: cover; обязательные width и height; <picture> с кадрированием 16:9 на десктопе и 4:5 на телефоне; AVIF/WebP",
+      "light": "в светлой теме фото первого экрана стоит внутри контейнера (не во всю ширину окна), радиус xl, без тени"
+    },
+    "input": {
+      "bg": "светлая — background; тёмная — background #000000 внутри карточки surface_raised",
+      "color": "text",
+      "border": "1px solid border_input #8b8b94",
+      "radius": "md",
+      "height": "52px",
+      "box_sizing": "border-box — рамка входит в 52px",
+      "padding": "14px 16px",
+      "font": "Inter 400 16px (не меньше 16px, иначе iOS приближает страницу)",
+      "label": "над полем, caption 14px вес 500, цвет text",
+      "placeholder": "text_muted, только пример формата: +7 900 000-00-00",
+      "focus": "рамка border_strong + shadow.focus",
+      "error": "рамка error, под полем текст ошибки caption цветом error и SVG-значок 16px"
+    },
+    "checkbox_consent": {
+      "size": "20px",
+      "radius": "xs",
+      "border": "1px solid border_input",
+      "checked": "фон primary, галочка on_primary",
+      "label": "micro 13px, цвет text_muted (на surface_raised тёмной темы — #a1a1aa), две ссылки подчёркнуты цветом link",
+      "default": "не отмечен",
+      "hit_area": "вся строка с текстом кликабельна, высота не меньше 44px"
+    },
+    "badge": {
+      "bg": "accent (алоэ); в тёмной теме — chip_bg",
+      "color": "#000000; в тёмной теме chip_text",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "eyebrow 12px вес 500 капсом, трекинг 0.06em",
+      "use": "категория или новинка над заголовком карточки: «Запуск за 14 дней», «Новое». Не больше одной на карточку"
+    },
+    "chip": {
+      "bg": "chip_bg",
+      "color": "chip_text",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "eyebrow",
+      "use": "нейтральная метка: срок, формат, город"
+    },
+    "nav": {
+      "height": "72px",
+      "bg": "светлая — background, после 24px прокрутки нижний волосок border; тёмная — background #000000 без линии",
+      "left": "название клиента текстом, Inter 500 20px, без логотипов",
+      "center": "3–4 якорные ссылки, Inter 400 15px, цвет text",
+      "right": "светлая — button_secondary «Позвонить» (tel:) и button_primary «Оставить заявку»; тёмная — обе контурные пилюли как у бренда, правая выделена весом 600, либо правая белая залитая при cta_style=filled",
+      "mobile": "бургер 44×44 справа; меню — шторка на весь экран того же холста, ссылки 24px вес 300, внизу пилюля на всю ширину"
+    },
+    "logo_strip": {
+      "content": "названия партнёров, маркетплейсов или площадок ТЕКСТОМ: Inter 500 20px, цвет text_muted, одна строка, одинаковая высота; чужие логотипы — только с разрешения владельца",
+      "layout": "5–7 имён в ряд с промежутком 48px; на телефоне — рецепт marquee-logos с кнопкой паузы",
+      "caption": "над строкой caption text_muted: «Продаём там, где ваши покупатели»"
+    },
+    "stat": {
+      "number": "typography.stat, цвет text, tnum",
+      "label": "caption text_muted, до 6 слов",
+      "layout": "3–4 цифры в ряд без карточек и без разделителей — только воздух",
+      "rule": "только проверяемые цифры, источник в сноске micro"
+    },
+    "testimonial": {
+      "quote": "h2 в размере 40px (телефон 26px) вес 300, без кавычек-картинок, типографские «ёлочки»",
+      "author": "caption: имя, роль, название магазина; фото автора 56px круглое — только реальное и с согласия",
+      "bg": "тёмная — background; светлая — card_band",
+      "rule": "одна большая цитата на полосу вместо сетки мелких отзывов"
+    },
+    "faq_item": {
+      "border": "нижний волосок 1px border",
+      "question": "20px вес 500 (heading-md), высота строки не меньше 56px",
+      "icon": "плюс 16px, при раскрытии поворот на 45° (transform)",
+      "answer": "body, text_secondary, max-width 760px"
+    },
+    "footer": {
+      "bg": "background своей дорожки",
+      "color": "text_muted",
+      "font": "caption",
+      "padding": "64px 24px",
+      "content": "3–4 колонки ссылок цветом link_footer, контакты, строка реквизитов: название оператора ПДн, ИНН/ОГРН, ссылки «Политика обработки персональных данных» и «Согласие на обработку персональных данных»"
+    }
+  },
+  "layout": {
+    "hero_pattern": "По умолчанию кинематографичная дорожка. Чёрный холст, первым идёт текст в чистом пространстве: eyebrow, заголовок display 88px вес 300 на 9 колонок слева (до 40 знаков, 2–3 строки), lead text_secondary до 560px, ряд из белой пилюли «Оставить заявку» и контурной «Как это работает», под ними строка доверия caption (пример: «Запустили 420 магазинов» — только проверяемое число клиента). Ниже, после 64px воздуха, — фото клиента во всю ширину окна высотой min(62vh, 640px): люди и товар в реальной обстановке, без надписей и затемнений поверх. Текст не лежит на фото никогда. Первый экран по содержимому, не 100vh; фото может быть видно наполовину — это приглашение прокрутить. Светлая дорожка устроена так же на белом, фото в контейнере с радиусом xl (20px), кнопка чёрная.",
+    "section_order": [
+      "nav",
+      "hero",
+      "logos",
+      "numbers",
+      "benefits",
+      "showcase",
+      "how",
+      "proof",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections": {
+      "logos": "logo_strip сразу под фото первого экрана, 64px сверху и снизу",
+      "numbers": "3–4 большие тонкие цифры stat в ряд, по центру полосы h2-подводка в одну строку",
+      "benefits": "3 card_cinematic в ряд (фото + заголовок + строка) либо чередование «фото 7 колонок / текст 5 колонок» на всю полосу — не больше трёх рядов",
+      "showcase": "фото-витрина: одно фото во всю ширину окна (photo_frame без радиуса) и под ним одна фраза h2 и ссылка-действие; параллакс только у фото",
+      "how": "3 шага в ряд: номер stat 48px text_muted tnum, h3, одна строка body; тонкий волосок border сверху каждого шага",
+      "proof": "testimonial — одна большая цитата; в светлой дорожке внутри card_band фисташкового цвета",
+      "pricing": "3 тарифа card_pricing по 4 колонки, средний card_featured; сверху h2 и переключатель «месяц / год» пилюлями",
+      "faq": "5–7 faq_item в колонке 760px",
+      "lead_form": "5/7: слева h2 «Запустим ваш магазин», 3 строки выгод с галочками и контакт tel:, справа карточка формы"
+    },
+    "section_backgrounds": {
+      "cinematic_dark": "все полосы background #000000; карточки surface #0a0a0a; форма — surface_raised #1e2c31; подвал #000000",
+      "transactional_light": "hero, logos, numbers, showcase, how, faq — background #ffffff; benefits и pricing — surface #fbfbf5 (кремовый холст тарифов бренда); proof — card_band #d4f9e0; lead_form — surface #fbfbf5 с белой карточкой формы; подвал background"
+    },
+    "grid": "12 колонок, контейнер 1440px с полями 40px, промежуток 24px; текстовая колонка 760px. Первый экран: текст 9 колонок, фото на всю ширину окна. Преимущества 3×4 колонки; шаги 3×4; тарифы 3×4 (1024–1439px — тоже 3, 768–1023px — 2 в ряд, лучший первым); форма 5/7.",
+    "imagery": "Только собственные фото клиента: предприниматель за работой, товар в руках, склад, мастерская, упаковка заказа — живой свет, реальные люди, спокойная цветокоррекция без фильтров. Стоковые фото с постановочными улыбками и 3D-иллюстрации ломают стиль. Нет фото — вариант первого экрана type_only: огромный заголовок и ряд цифр stat вместо картинки. Иконки — свои линейные SVG 24px, штрих 1.5px.",
+    "mobile_notes": "Одна колонка, поля 16px. Заголовок 42px без трекинга, h2 34px; длинные слова заголовка (больше 12 букв) проверять на ширине 360px — при переполнении переносить через &shy;. Фото первого экрана кадрируется в 4:5 и встаёт под кнопками на всю ширину экрана. Кнопки на всю ширину, 52px. Воздух между полосами 72px (у тарифов и формы 48px). Цифры — сетка 2×2. Лента партнёров — marquee-logos. Тарифы — стопкой, лучший первым. Навигация — бургер со шторкой того же холста. Внизу липкая пилюля «Оставить заявку», которая прячется, когда форма на экране.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — тарифы 2 в ряд, фото первого экрана 3:2",
+      "desktop": "1024–1439px",
+      "wide": "≥1440px — фото выходит за контейнер до краёв окна, контейнер прежний"
+    },
+    "theme_switch": "Бренд не смешивает холсты на одной странице: дорожка выбирается целиком атрибутом data-theme на <html> (light = транзакционная, dark = кинематографичная). Без атрибута — по prefers-color-scheme. Переключать тему частями страницы нельзя."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "comment"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "comment": "Что продаёте (необязательно)"
+    },
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две разные ссылки на отдельные документы (с 1 сентября 2025 согласие оформляется отдельным документом). Неотмеченный чекбокс не блокирует кнопку: при нажатии рядом появляется текст «Отметьте согласие, чтобы мы могли связаться с вами». Рассылки — только вторым необязательным чекбоксом.",
+    "style": "Светлая дорожка: белая карточка на кремовой полосе, радиус lg, shadow.raised (стопка крошечных теней), отступ 32px (телефон 24px), ширина до 560px. Тёмная: карточка surface_raised #1e2c31 с shadow.raised_dark, поля — чёрные с рамкой #8b8b94. Над полями h3 «Оставьте заявку — перезвоним за 15 минут» и caption о рабочем времени. Поля друг под другом через 16px, подпись над полем. Кнопка — пилюля на всю ширину 52px «Отправить заявку»: светлая — чёрная, тёмная — белая (при cta_color_role=accent — алоэ с чёрным текстом). Под кнопкой micro text_muted «Не передаём данные третьим лицам». Маску телефона не навязывать — принимать цифры, пробелы, скобки и +.",
+    "success_state": "Карточка не исчезает и не меняет высоту: содержимое сменяется по рецепту form-success — круг 64px цвета алоэ #c1fbd4 с прорисованной чёрной галочкой (в обеих темах), h3 «Заявка принята», текст «Перезвоним в течение 15 минут в рабочее время: пн–пт 9:00–19:00 (МСК)», ссылка «Пока ждёте — посмотрите тарифы». Фокус на заголовок (tabindex=-1), область с aria-live=polite.",
+    "error_state": "Отказ — всегда видимым текстом на том же экране: под кнопкой цветом error «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Введённое не стирать. Скрытая ловушка для ботов не имеет права молча выбросить заявку с заполненными именем и телефоном — такую заявку принимать с пометкой. Поле-ловушку закрывать от автозаполнения (autocomplete=off, tabindex=-1)."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "image-reveal-clip",
+    "fade-up-stagger",
+    "counter-up",
+    "marquee-logos",
+    "parallax-soft",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "hero-text-reveal": "строки тонкого заголовка первого экрана поднимаются по очереди, lead и пилюли идут следом классом htr-sub; без ожидания шрифтов. Других входных анимаций на первом экране нет: строка доверия и фото стоят сразу",
+    "image-reveal-clip": "фото в чередовании «фото / текст» преимуществ, фото-витрина и фото отзыва открываются шторкой снизу вверх (направление рецепта по умолчанию) за 800ms; --irc-radius: 20px, у фото во всю ширину окна — 0. Фото первого экрана НЕ скрывать — оно может быть LCP",
+    "fade-up-stagger": "карточки преимуществ (card_cinematic целиком, без отдельной шторки у фото — один приём на секцию), шаги, тарифы; --reveal-dist: 24px",
+    "counter-up": "большие тонкие цифры полосы numbers. На первом экране (строка доверия, цифры варианта type_only) числа стоят сразу, без счёта. Полоску над подписью из рецепта убрать (.stat__label::before { display: none }) — цифры стоят на чистом воздухе",
+    "marquee-logos": "лента названий партнёров на телефоне и при 7+ именах; --mq-bg = background, --mq-text = text_muted, кнопка паузы обязательна",
+    "parallax-soft": "только фото-витрина: класс px-layer на самом фото, --px-shift: 12px (полный ход 24px, на телефоне 8px); рамка с overflow: hidden, фото выше рамки на 24px и object-fit: cover, чтобы край не открывался; текст неподвижен",
+    "accordion-smooth": "частые вопросы",
+    "form-success": "ответ формы заявки. Круг рецепта .lead__badge (64px) перекрасить: background accent #c1fbd4, color #000000, у волны ::after border-color #c1fbd4. Переменную --color-success не трогать — ею пишется текст успеха",
+    "sticky-cta-mobile": "липкая пилюля «Оставить заявку» на телефоне высотой 52px, цвет primary своей дорожки; у главной кнопки первого экрана id=hero-cta, у блока формы id=lead — панель появляется после первой и прячется, когда форма в кадре"
+  },
+  "ab_axes": {
+    "vary": {
+      "canvas_track": [
+        "cinematic_dark",
+        "transactional_light"
+      ],
+      "hero_layout": [
+        "headline_above_photo",
+        "split_form",
+        "type_only"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "cta_style": [
+        "filled",
+        "outline"
+      ],
+      "headline_scale": [
+        "m",
+        "l",
+        "xl"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "cta_label": [
+        "Оставить заявку",
+        "Начать бесплатно"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "тонкие заголовки 300",
+      "кнопки только пилюли",
+      "одна дорожка холста на страницу",
+      "никакого текста поверх фото",
+      "форма и согласие 152-ФЗ"
+    ],
+    "default": {
+      "canvas_track": "cinematic_dark",
+      "hero_layout": "headline_above_photo",
+      "cta_color_role": "primary",
+      "cta_style": "filled",
+      "headline_scale": "m",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "cta_label": "Оставить заявку"
+    },
+    "legend": {
+      "cinematic_dark": "тёмная тема целиком: чёрный холст, белые пилюли, 128px воздуха",
+      "transactional_light": "светлая тема целиком: белый и кремовый холст, чёрные пилюли, алоэ у лучшего тарифа",
+      "headline_above_photo": "текст сверху в чистом пространстве, под ним фото во всю ширину окна (по умолчанию)",
+      "split_form": "текст 7 колонок слева, короткая форма (имя + телефон + согласие) справа в карточке формы; фото уходит в полосу showcase",
+      "type_only": "без фото: заголовок 96px на 10 колонок и под кнопками ряд из трёх цифр stat",
+      "primary": "главная кнопка — чёрная (светлая) или белая (тёмная) пилюля",
+      "accent": "главная кнопка — алоэ #c1fbd4 с чёрным текстом",
+      "filled": "главная кнопка первого экрана залитая",
+      "outline": "главная кнопка первого экрана — фирменная контурная пилюля (2px белый контур на чёрном, 1px чёрный на белом)",
+      "l": "display 72/40px, трекинг 0, заголовок до 48 знаков; если ось не тестируется — токены 88/42px",
+      "xl": "display 96/44px, трекинг +0.025em как у бренда, заголовок до 32 знаков",
+      "none": "без анимаций",
+      "subtle": "fade-up-stagger + counter-up",
+      "rich": "subtle + hero-text-reveal + image-reveal-clip + parallax-soft + marquee-logos",
+      "m": "display 88/42px — токены typography.display (по умолчанию)"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "do": [
+    "Выбирать одну дорожку холста на всю страницу: кинематографичную чёрную или транзакционную белую с кремом — и держать её до подвала.",
+    "Набирать крупные заголовки (первый экран, секции, цитаты) и цифры весом 300 и строить иерархию размером и воздухом: 88/42px на первом экране, 56/34px у секций, 128px между кинематографичными полосами; вес 500 — только у названий карточек, тарифов и вопросов.",
+    "Делать кнопки только пилюлями с текстом: на светлом чёрная залитая или с чёрным контуром, на тёмном белая или с белым контуром 2px; высота 44px, на первом экране, в форме и на телефоне 52px; одна залитая на полосу.",
+    "Ставить собственные фото клиента во всю ширину и отделять их от текста чистым пространством — текст стоит над фото или под ним, но не на нём.",
+    "Выделять лучший тариф заливкой алоэ #c1fbd4 с чёрным текстом, а не цветной рамкой; фисташку #d4f9e0 брать для одной широкой полосы.",
+    "Цены, сроки и цифры результатов набирать с tabular-nums и подкреплять сноской-источником.",
+    "Согласие 152-ФЗ — отдельный неотмеченный чекбокс, ошибка отправки — видимым текстом у кнопки."
+  ],
+  "dont": [
+    "Не вводить третий цвет холста: серые, бежевые и синие фоны секций в системе отсутствуют.",
+    "Не поднимать вес крупных заголовков и цифр выше 300 и не набирать заголовок первого экрана мельче 72px на десктопе и 40px на телефоне.",
+    "Не использовать алоэ и фисташку цветом текста и не ставить их фоном больших полос в тёмной теме.",
+    "Не класть текст, затемнения и градиенты поверх фотографий и не дробить фото на мелкие карточки уже 4 колонок с тенью на кинематографичной дорожке.",
+    "Не делать прямоугольные кнопки, кнопки с иконками-стрелками и кнопки ниже 44px (на телефоне ниже 52px).",
+    "Не использовать логотипы, фотографии и интерфейсы Shopify и других чужих продуктов, а также стоковые постановочные фото."
+  ],
+  "prompt_snippet": "Build a Russian-language lead-generation landing page in a Shopify-inspired style. Pick one canvas track per page: cinematic dark (#000000 canvas, #0a0a0a cards, white text, muted #a1a1aa, form card #1e2c31) or transactional light (#ffffff with #fbfbf5 cream bands, black text, muted #71717a). Self-host Inter Variable with optical sizing. Hero, section headings, quotes and figures weight 300 (hero 88px desktop, 42px mobile); only card and tariff titles weight 500. Hierarchy by size and air: 128px between cinematic bands, 64px around pricing, FAQ and form. Buttons are text-only pills, 44px tall (52px in hero, form and mobile): black on light, white or 2px white outline on dark, one filled pill per band. Aloe #c1fbd4 with black text marks only the featured tariff. The client's own photos run full-bleed below the headline, never under text or scrims. Lead form: name, phone, optional comment, separate unchecked 152-FZ consent, visible error text. Respect prefers-reduced-motion.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/shopify/DESIGN.md (в исходнике бренд записан как «Shopifi»)",
+    "notes": "Перенесено: две дорожки холста (чёрная кинематографичная и белая/кремовая транзакционная) без смешивания, палитра #000000, #0a0a0a, #1e2c31, #ffffff, #fbfbf5, алоэ #c1fbd4, фисташка #d4f9e0, лестница серых #d4d4d8–#3f3f46, холодные ссылки подвала #9dabad, тонкие заголовки 300 (у бренда 330) и трекинг +0.025em только у самого крупного размера, радиусы 4/5/8/12/20/пилюля, тени уровней 1–4 (верхний блик на тёмном, стопка из четырёх крошечных теней на светлом), ритм 8px и воздух 128px против 64px у транзакционных полос, пилюли как единственная форма кнопки, алоэ-заливка лучшего тарифа, фото во всю ширину без текста поверх, названия партнёров одной строкой. Изменено: Neue Haas Grotesk Display заменён на Inter с оптическим размером (дисплейный срез Inter Display — ближайший открытый аналог по самому исходнику), шрифт OFL с кириллицей; фирменный стилистический набор ss03 не переносится. Межстрочный интервал поднят для кириллицы (display 1.0→1.04, текст 1.5→1.6), текст 17px. Тёмная тема = кинематографичная дорожка бренда; в ней главная кнопка — белая залитая пилюля (у бренда на чёрном только контурная пилюля с белой обводкой 2px — сохранена как button_secondary и как вариант A/B cta_style=outline), форма на карточке #1e2c31. Отступление: у бренда зелёные живут только на светлой дорожке; в тёмной теме алоэ допущено в двух транзакционных местах — карточка лучшего тарифа и акцентная кнопка формы, потому что схема требует акцентную пару, а рекламному лендингу нужен сигнал «здесь действие». Контраст: фирменные пары без правок — чёрная пилюля/белый 21, алоэ/чёрный 18.02, #71717a на белом 4.83; на алоэ и фисташке #71717a даёт 4.15/4.24, поэтому вторичный текст там #52525b (6.63/6.78); рамки полей бренда #e4e4e7 (1.27) и #a1a1aa (2.56) не проходят WCAG 1.4.11 — минимально затемнено до #8b8b94 (3.38 к белому, 4.26 к #1e2c31); волосок #1e2c31 на чёрном 1.46 оставлен декоративным. Семантических success/error у бренда нет — добавлены с AA-контрастом. Раскладка переделана под рекламный лендинг с формой заявки по 152-ФЗ; фото — только собственные фото клиента."
+  }
+}

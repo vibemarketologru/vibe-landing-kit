@@ -1,0 +1,1234 @@
+{
+  "slug": "editorial",
+  "name": "Журнал",
+  "kind": "style",
+  "version": "1.0.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Лендинг как разворот журнала: тёплая бумага и чернила, крупная контрастная антиква с одним-тремя словами курсивом, тонкие линейки и номера разделов, рубрики капсом, колонки текста с буквицей. Главный герой — живая фотография с подписью. Один акцент-киноварь, прямые углы, цены списком с отточием, как в меню.",
+  "summary_en": "A landing page as a magazine spread: warm paper and ink, large high-contrast serif headlines with one to three words in italics, hairline rules and section numbers, uppercase kickers, text columns with a drop cap. Real photography with captions is the hero. One cinnabar accent, square corners, prices as a dotted-leader menu.",
+  "best_for": [
+    "рестораны, кафе, бары и кофейни",
+    "пекарни и кондитерские",
+    "эксперты, консультанты и частные практики",
+    "онлайн-курсы, интенсивы и авторские школы",
+    "бренды одежды, шоурумы и ателье",
+    "дизайн интерьера и фотостудии",
+    "гостиницы, загородные базы и гастро-туры"
+  ],
+  "goals": [
+    "бронь стола и запись",
+    "запись на консультацию",
+    "продажа курса и запись на поток",
+    "визит в шоурум и примерка",
+    "доверие к автору и бренду через историю"
+  ],
+  "mood": [
+    "журнальный",
+    "тёплый",
+    "дорогой без показной роскоши",
+    "спокойный",
+    "авторский",
+    "бумажный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#F5F0E7",
+        "surface": "#ECE4D6",
+        "text": "#1B1713",
+        "text_muted": "#5C5247",
+        "border": "#D8CDBC",
+        "primary": "#1B1713",
+        "on_primary": "#F8F4EC",
+        "accent": "#A3321F",
+        "on_accent": "#FFFFFF",
+        "link": "#8E2B1B",
+        "success": "#2E6A3A",
+        "error": "#B0281D",
+        "raised": "#FCFAF5",
+        "rule": "#1B1713",
+        "primary_hover": "#3A322A",
+        "primary_active": "#000000",
+        "accent_hover": "#86271A",
+        "link_hover": "#6E2014",
+        "focus_ring": "#A3321F",
+        "border_input": "#8A7E6F",
+        "highlight": "#EBD9B4",
+        "tint": "#E6DCC8",
+        "photo_placeholder": "#D9CDB9",
+        "success_bg": "#E2EBDD",
+        "error_bg": "#F6E1DA",
+        "disabled_bg": "#E3DACB",
+        "disabled_text": "#7D7266",
+        "on_photo": "#FFFFFF",
+        "selection": "#EBD9B4"
+      },
+      "dark": {
+        "background": "#14110E",
+        "surface": "#1E1A16",
+        "text": "#F2EBDF",
+        "text_muted": "#B9AE9F",
+        "border": "#3A332B",
+        "primary": "#F2EBDF",
+        "on_primary": "#14110E",
+        "accent": "#E2735B",
+        "on_accent": "#14110E",
+        "link": "#F0937D",
+        "success": "#7FC08C",
+        "error": "#F07F72",
+        "raised": "#27221D",
+        "rule": "#CFC6B8",
+        "primary_hover": "#DCD2C2",
+        "primary_active": "#FFFFFF",
+        "accent_hover": "#EC8A74",
+        "link_hover": "#F6B09F",
+        "focus_ring": "#E2735B",
+        "border_input": "#8C8171",
+        "highlight": "#3B301F",
+        "tint": "#2A241D",
+        "photo_placeholder": "#2E2821",
+        "success_bg": "#1C2A1F",
+        "error_bg": "#3A1E1A",
+        "disabled_bg": "#2A251F",
+        "disabled_text": "#8A7F71",
+        "on_photo": "#FFFFFF",
+        "selection": "#3B301F"
+      },
+      "contrast": {
+        "light:text/surface": 14.11,
+        "light:text/raised": 17.08,
+        "light:text/tint": 13.1,
+        "light:text_muted/surface": 6.04,
+        "light:text_muted/raised": 7.31,
+        "light:on_primary/primary_hover": 11.47,
+        "light:on_accent/accent_hover": 9.06,
+        "light:accent/background": 6.1,
+        "light:accent/surface": 5.48,
+        "light:link/surface": 6.62,
+        "light:success/success_bg": 5.3,
+        "light:error/error_bg": 5.27,
+        "light:border_input/raised": 3.8,
+        "light:focus_ring/background": 6.1,
+        "dark:text/surface": 14.59,
+        "dark:text/raised": 13.3,
+        "dark:text/tint": 12.95,
+        "dark:text_muted/surface": 7.92,
+        "dark:text_muted/raised": 7.22,
+        "dark:on_primary/primary_hover": 12.58,
+        "dark:on_accent/accent_hover": 7.57,
+        "dark:accent/background": 6.12,
+        "dark:accent/surface": 5.63,
+        "dark:link/surface": 7.55,
+        "dark:success/success_bg": 7.01,
+        "dark:error/error_bg": 5.78,
+        "dark:border_input/raised": 4.12,
+        "dark:focus_ring/background": 6.12
+      },
+      "notes": "В contrast — дополнительные пары сверх тех, что проверяет схема. Ключи сверх схемы: raised — бумага карточки формы и всплывающих слоёв; rule — чернильные линейки (в тёмной теме приглушены до #CFC6B8, чтобы 1px не «звенел» на чёрном); highlight — маркер под ключевой фразой и выделение текста; tint — вкладка для меню и заглушка без фото; photo_placeholder — фон под фото до загрузки (тот же тон, что средний тон снимка, чтобы не мигало); success_bg/error_bg — плашки состояний формы; on_photo — текст на фото только поверх gradient.photo_scrim. Акцент-киноварь — только рубрики, номера разделов, буквица, курсивные номера шагов, ссылки и вторая роль кнопки; большими площадями не заливать. Тёмная тема — «ночной выпуск»: тёплая сажа вместо чёрного, бумажная кнопка с чернильным текстом, акцент светлее на полтона."
+    },
+    "gradient": {
+      "photo_scrim": "linear-gradient(180deg, rgba(20,17,14,0) 38%, rgba(20,17,14,.55) 62%, rgba(20,17,14,.82) 100%)",
+      "photo_scrim_left": "linear-gradient(90deg, rgba(20,17,14,.82) 0%, rgba(20,17,14,.55) 42%, rgba(20,17,14,0) 72%)",
+      "paper_grain": "none",
+      "notes": "Градиенты — только подложка текста на фото в варианте обложки (hero_layout=cover). Одинаковы в обеих темах. Приёмка: самый светлый пиксель под строкой заголовка вместе с подложкой даёт с on_photo не меньше 4.5 — мерить по кадру, а не на глаз. Зерно бумаги CSS-фильтрами и SVG-шумом не рисовать: это нагрузка на каждый кадр прокрутки; зерно, если нужно, — в самом файле фотографии."
+    },
+    "typography": {
+      "display": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 500,
+        "size_desktop": "88px",
+        "size_mobile": "44px",
+        "line_height": 1.02,
+        "letter_spacing": "-0.02em",
+        "notes": "font-optical-sizing: auto — на крупном кегле Playfair сам берёт высококонтрастный дисплейный рисунок (ось opsz до 1200), это и есть «журнальная обложка». 1–3 слова в <em> курсивом 400 того же цвета — голос стиля. text-wrap: balance, до 14ch, 2–3 строки (до 4 — см. length_limits). Переносы в заголовке только ручные (&shy;), hyphens: manual. Обычный регистр предложения, никогда не капсом. При построчном проявлении маской — запас 0.14em сверху и снизу строки, иначе срежет Й, Ё и хвосты Д, Ц, Щ, у. Размер задавать через size_fluid: фиксированные 88px на ноутбуке 1024px в колонке 6/12 (456px) дают 5–6 строк.",
+        "size_fluid": "clamp(2.75rem, 1.2rem + 4.6vw, 5.5rem)",
+        "size_l": "72px / 38px — clamp(2.375rem, 1.1rem + 3.7vw, 4.5rem)",
+        "length_limits": "max-width 14ch держит одинаковый перенос на любом экране (88px — 616px, 44px — 308px): до 35 знаков — 3 строки, 36–48 знаков — 4 строки (тогда headline_scale = l), длиннее — сокращать, а не уменьшать кегль. Слово до 13 букв помещается в строку телефона на 44px («Забронировать» — 280px), «профессиональный» (369px) — нет: ставить &shy; или менять слово. Замер Playwright, Playfair 500 opsz."
+      },
+      "h2": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 500,
+        "size_desktop": "56px",
+        "size_mobile": "34px",
+        "line_height": 1.06,
+        "letter_spacing": "-0.015em",
+        "notes": "Заголовок раздела, до 22ch; курсив — не больше одного слова.",
+        "size_fluid": "clamp(2.125rem, 1.35rem + 2.6vw, 3.5rem)"
+      },
+      "h3": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "26px",
+        "size_mobile": "22px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.005em",
+        "notes": "Названия рубрик, блюд, тарифов, вопросов FAQ."
+      },
+      "h4": {
+        "family": "Source Serif 4",
+        "fallback": "'Source Serif 4 Variable', 'Source Serif Fallback', Georgia, 'PT Serif', serif",
+        "weight": 600,
+        "size_desktop": "20px",
+        "size_mobile": "19px",
+        "line_height": 1.3,
+        "letter_spacing": "0em",
+        "notes": "Подзаголовки внутри материала и карточки формы."
+      },
+      "lead": {
+        "family": "Source Serif 4",
+        "fallback": "'Source Serif 4 Variable', 'Source Serif Fallback', Georgia, 'PT Serif', serif",
+        "weight": 400,
+        "size_desktop": "23px",
+        "size_mobile": "19px",
+        "line_height": 1.45,
+        "letter_spacing": "0em",
+        "notes": "Лид (standfirst) под заголовком: 2–3 строки, до 44ch, цвет text. Одна мысль: что человек получит и почему это не обычное предложение."
+      },
+      "body": {
+        "family": "Source Serif 4",
+        "fallback": "'Source Serif 4 Variable', 'Source Serif Fallback', Georgia, 'PT Serif', serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.65,
+        "letter_spacing": "0em",
+        "notes": "Строка до 66ch, text-wrap: pretty, hyphens: auto при <html lang=\"ru\">, hanging-punctuation: first. Абзацы с отступом 0 и интервалом 0.9em. Курсив Source Serif — для названий и цитат внутри текста, не для целых абзацев."
+      },
+      "body_sans": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0em",
+        "notes": "Замена body при ab_axes.body_face = sans: основной текст гротеском, антиква остаётся в заголовках, лиде и цитатах."
+      },
+      "kicker": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.3,
+        "letter_spacing": "0.14em",
+        "notes": "Рубрика над заголовком: text-transform: uppercase (в HTML обычным регистром — экранные дикторы читают слова, а не буквы), цвет accent, перед ней линейка 24×1px того же цвета. Формула «Рубрика · деталь», до 36 знаков."
+      },
+      "label": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1.4,
+        "letter_spacing": "0em",
+        "notes": "Подписи полей, пункты меню навигации в обычном регистре, мелкие кнопки."
+      },
+      "nav": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 500,
+        "size_desktop": "13px",
+        "size_mobile": "14px",
+        "line_height": 1.2,
+        "letter_spacing": "0.1em",
+        "notes": "Ссылки шапки капсом с разрядкой; на телефоне в выпадающем листе — обычным регистром 18px."
+      },
+      "button": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1,
+        "letter_spacing": "0.06em",
+        "notes": "По умолчанию капсом (ab_axes.button_case = upper); вариант sentence — обычный регистр, 16px, разрядка 0."
+      },
+      "caption": {
+        "family": "Golos Text",
+        "fallback": "'Golos Text Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.45,
+        "letter_spacing": "0.01em",
+        "notes": "Подписи к фото («Что на снимке. Фото: имя»), строка доверия, согласие у формы. Цвет text_muted; строчными — не меньше 13px, капсом с разрядкой (строка выходных данных, бейдж) — не меньше 12px."
+      },
+      "masthead": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "26px",
+        "size_mobile": "22px",
+        "line_height": 1,
+        "letter_spacing": "-0.01em",
+        "notes": "Название компании в шапке набирается текстом, как название журнала. Если у клиента есть свой логотип — он, без обводок и плашек."
+      },
+      "stat": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 400,
+        "size_desktop": "80px",
+        "size_mobile": "44px",
+        "line_height": 1,
+        "letter_spacing": "-0.02em",
+        "notes": "font-variant-numeric: lining-nums tabular-nums — цифры одной высоты и ширины, счётчик не прыгает. «1 240» на 44px занимает 95px, поэтому на телефоне цифры в 2 колонки, а не в 3–4. Подпись под числом — caption 14px.",
+        "size_fluid": "clamp(2.75rem, 1.6rem + 3.4vw, 5rem)"
+      },
+      "index": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 400,
+        "size_desktop": "30px",
+        "size_mobile": "26px",
+        "line_height": 1,
+        "letter_spacing": "0em",
+        "notes": "Курсивные номера рубрик и шагов «01», «02» — font-style: italic, цвет accent, lining-nums."
+      },
+      "quote": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 400,
+        "size_desktop": "40px",
+        "size_mobile": "28px",
+        "line_height": 1.18,
+        "letter_spacing": "-0.01em",
+        "notes": "Выноска (pull quote) курсивом, до 120 знаков, кавычки-ёлочки висят за левым краем (text-indent: -0.42em).",
+        "size_fluid": "clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem)"
+      },
+      "testimonial": {
+        "family": "Source Serif 4",
+        "fallback": "'Source Serif 4 Variable', 'Source Serif Fallback', Georgia, 'PT Serif', serif",
+        "weight": 400,
+        "size_desktop": "21px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Текст отзыва курсивом, до 300 знаков; имя — label 600, роль — caption."
+      },
+      "dropcap": {
+        "family": "Playfair",
+        "fallback": "'Playfair Variable', 'Playfair Fallback', Georgia, 'Times New Roman', serif",
+        "weight": 600,
+        "size_desktop": "4.9em",
+        "size_mobile": "4.9em",
+        "line_height": 0.8,
+        "letter_spacing": "0em",
+        "notes": "Буквица первого абзаца материала: ::first-letter, цвет accent. @supports (initial-letter: 3) { initial-letter: 3; margin-right: .12em } иначе float: left; font-size: 4.9em; line-height: .8; padding: .06em .1em 0 0. Одна буквица на страницу."
+      },
+      "price": {
+        "family": "Source Serif 4",
+        "fallback": "'Source Serif 4 Variable', 'Source Serif Fallback', Georgia, 'PT Serif', serif",
+        "weight": 600,
+        "size_desktop": "19px",
+        "size_mobile": "18px",
+        "line_height": 1.3,
+        "letter_spacing": "0em",
+        "notes": "Цены в меню и прайсе: lining-nums tabular-nums, неразрывный пробел перед ₽ (12&nbsp;900&nbsp;₽)."
+      }
+    },
+    "radius": {
+      "none": "0",
+      "sm": "2px",
+      "md": "2px",
+      "lg": "4px",
+      "pill": "999px",
+      "notes": "Стиль прямоугольный: кнопки, поля, фото, карточки и форма — 0 (radius.none). sm/md 2px — только чекбокс и бейдж, lg 4px — всплывающие подсказки. pill — круглые кнопки-стрелки галереи 44px, точки листания и фото автора отзыва 48px."
+    },
+    "spacing": {
+      "unit": 8,
+      "baseline": 8,
+      "section_desktop": "128px",
+      "section_mobile": "72px",
+      "hero_top_desktop": "48px",
+      "hero_top_mobile": "24px",
+      "container": "1240px",
+      "text_max": "66ch",
+      "gutter_desktop": "40px",
+      "gutter_tablet": "24px",
+      "gutter_mobile": "16px",
+      "grid_gap": "32px",
+      "grid_gap_mobile": "20px",
+      "column_gap_text": "48px",
+      "rule_to_kicker": "20px",
+      "kicker_to_heading": "16px",
+      "heading_to_lead": "24px",
+      "card_padding_desktop": "40px",
+      "card_padding_mobile": "24px",
+      "notes": "Все вертикальные отступы кратны 8. Воздух между разделами — главное средство отделения: плашек и теней нет, есть линейка и 128px."
+    },
+    "rule": {
+      "hair": "1px solid border",
+      "ink": "1px solid rule",
+      "heavy": "3px solid rule",
+      "double": "3px double rule",
+      "leader": "1px dotted border_input",
+      "notes": "ink — начало каждого раздела и рамка формы; heavy — верх карточки формы и разворот «Цифры»; double — над колофоном; hair — между строками меню, FAQ и отзывами; leader — отточие между названием и ценой."
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 1px 0 rgba(27,23,19,.06), 0 24px 48px -28px rgba(27,23,19,.32)",
+      "sticky": "0 -1px 0 #1B1713, 0 -12px 32px -16px rgba(27,23,19,.22)",
+      "raised_dark": "0 0 0 1px #3A332B, 0 24px 48px -28px rgba(0,0,0,.72)",
+      "sticky_dark": "0 -1px 0 #3A332B, 0 -12px 32px -16px rgba(0,0,0,.6)",
+      "notes": "Стиль плоский, как печать: тень только у карточки формы и у липкой кнопки на телефоне. У фото, карточек и кнопок теней нет."
+    },
+    "motion": {
+      "fast": "160ms",
+      "base": "280ms",
+      "slow": "640ms",
+      "reveal": "900ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "ease_exit": "cubic-bezier(.4,0,1,1)",
+      "notes": "Журнал не прыгает: проявление и шторка медленные (640–900ms) и без пружин, отклик на наведение быстрый (160ms). Масштаб кнопок, наклон карточек, магнитные кнопки, бегущие строки и бесконечные фоны в стиле не используются."
+    },
+    "breakpoints": {
+      "mobile": "до 639px",
+      "tablet": "640–1023px",
+      "desktop": "1024px и шире",
+      "wide": "1440px и шире (контейнер не растёт, растут поля)"
+    },
+    "z": {
+      "header": 20,
+      "sticky_cta": 30,
+      "sheet": 40
+    }
+  },
+  "fonts": [
+    {
+      "family": "Playfair",
+      "fontsource": "playfair",
+      "role": "display+headings+stat+quote+dropcap",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "variable": "@fontsource-variable/playfair из npm, файлы opsz (оси opsz 5–1200, wght 300–900) — normal и italic; наборы cyrillic и latin, font-display: swap. Кириллица: 61 КБ прямое + 56 КБ курсив. Предзагружать только playfair-cyrillic-opsz-normal.woff2 — им набран заголовок первого экрана.",
+      "replaces": "журнальные антиквы Didot, Bodoni, Canela, GT Super, Tiempos Headline (проприетарные); Gelasio из исходника — без кириллицы",
+      "css_family": "Playfair Variable",
+      "import": "@fontsource-variable/playfair/opsz.css + @fontsource-variable/playfair/opsz-italic.css"
+    },
+    {
+      "family": "Source Serif 4",
+      "fontsource": "source-serif-4",
+      "role": "lead+body+testimonial+price",
+      "weights": [
+        400,
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "variable": "@fontsource-variable/source-serif-4 из npm, файлы wght: ось opsz в них закреплена на 14 — это текстовый рисунок, для лида 23px и текста 18px его хватает, файлы opsz (93 КБ против 36 КБ) не нужны. Normal и italic; наборы cyrillic и latin, font-display: swap. Кириллица: 36 КБ + 35 КБ.",
+      "replaces": "текстовые антиквы журналов Tiempos Text, Lyon Text, Publico Text (проприетарные)",
+      "css_family": "Source Serif 4 Variable",
+      "import": "@fontsource-variable/source-serif-4/wght.css + @fontsource-variable/source-serif-4/wght-italic.css"
+    },
+    {
+      "family": "Golos Text",
+      "fontsource": "golos-text",
+      "role": "ui+kicker+button+caption+form",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "styles": [
+        "normal"
+      ],
+      "variable": "@fontsource-variable/golos-text из npm, файл wght, наборы cyrillic и latin, font-display: swap. Кириллица: 22 КБ.",
+      "replaces": "гротески журнальной вёрстки Graphik, Söhne, Neue Haas (проприетарные); Ubuntu Mono из исходника — лицензия UFL-1.0, а не OFL",
+      "css_family": "Golos Text Variable",
+      "import": "@fontsource-variable/golos-text/wght.css"
+    }
+  ],
+  "font_loading": {
+    "budget": "Три семейства, пять файлов кириллицы ≈ 210 КБ; латиница подгружается по unicode-range, только если на странице есть латинские буквы.",
+    "self_host": "Только свой сервер: пакеты @fontsource-variable/* из npm, файлы woff2 копируются в сборку. Google Fonts и другие CDN не подключать — из мобильных сетей РФ они висят и блокируют отрисовку.",
+    "preload": "<link rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin href=\"/fonts/playfair-cyrillic-opsz-normal.woff2\"> — один файл, не больше.",
+    "fallback_metrics": "Под каждую антикву — @font-face «… Fallback» на Georgia с size-adjust, ascent-override и descent-override, сгенерированными при сборке пакетом fontaine или @capsizecss/metrics из npm (MIT), чтобы замена шрифта не двигала раскладку (CLS = 0). Числа не подбирать на глаз.",
+    "variation": "font-optical-sizing: auto на всех элементах с Playfair; font-synthesis: none — браузер не должен дорисовывать курсив и жирный, если файл не загрузился.",
+    "family_names": "Пакеты @fontsource-variable объявляют семейства с суффиксом: 'Playfair Variable', 'Source Serif 4 Variable', 'Golos Text Variable'. Поэтому в font-family первым идёт имя из токена, сразу за ним — имя с Variable (оно уже стоит первым в fallback). Для Playfair подключать именно opsz.css и opsz-italic.css: в обычном index.css ось opsz закреплена на 14, и заголовок 88px выйдет текстовым, без журнального контраста штрихов."
+  },
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "none",
+      "height": "52px (56px в первом экране, в форме и на телефоне; в липкой панели sticky_cta — 52px, чтобы панель не занимала лишнего)",
+      "padding": "0 28px",
+      "weight": 600,
+      "font": "button",
+      "icon": "стрелка → SVG 16px справа, отступ 12px, stroke 1.5px currentColor",
+      "hover": "фон primary_hover за 160ms, стрелка уезжает на 4px вправо (transform), форма не меняется",
+      "active": "фон primary_active, translateY(1px)",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "disabled": "фон disabled_bg, текст disabled_text, стрелка скрыта",
+      "notes": "Чернильный прямоугольник без скругления — единственная заливная кнопка на экране. Текст — глагол результата: «Забронировать стол», «Записаться на консультацию»."
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "none",
+      "height": "как у button_primary",
+      "padding": "0 28px",
+      "weight": 600,
+      "font": "button",
+      "hover": "фон accent_hover за 160ms",
+      "focus": "outline 2px solid rule, outline-offset 3px",
+      "notes": "Только при ab_axes.cta_color_role = accent: тогда ВСЕ главные кнопки страницы киноварные, а чернильных заливных нет. На фото-обложке главная кнопка — accent или бумажная (bg raised, color text)."
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid rule",
+      "radius": "none",
+      "height": "52px",
+      "padding": "0 24px",
+      "weight": 600,
+      "font": "button",
+      "hover": "заливка rule, текст background за 160ms (инверсия, как плашка в журнале)",
+      "focus": "outline 2px solid focus_ring, outline-offset 3px",
+      "notes": "В шапке («Бронь») и в тарифах, кроме главного."
+    },
+    "button_text": {
+      "color": "text",
+      "font": "label 600",
+      "decoration": "подчёркивание 1px, text-underline-offset 6px, цвет rule",
+      "icon": "стрелка → 14px",
+      "hover": "подчёркивание 2px и цвет accent за 160ms",
+      "notes": "Второе действие рядом с главной кнопкой («Смотреть меню →», «Программа курса →»). Не оформлять вторую кнопку рамкой в первом экране.",
+      "target": "зона нажатия не меньше 44px по высоте (padding-block), даже если текст 15px"
+    },
+    "link": {
+      "color": "link",
+      "decoration": "underline 1px, text-underline-offset 3px, text-decoration-color с прозрачностью 45%",
+      "hover": "link_hover, подчёркивание 100% цвета",
+      "visited": "не отличать",
+      "notes": "Ссылки в тексте — только с подчёркиванием, не только цветом."
+    },
+    "issue_line": {
+      "bg": "background",
+      "color": "text_muted",
+      "font": "caption капсом, разрядка 0.1em, 12px",
+      "height": "36px",
+      "border_bottom": "rule.hair",
+      "content": "выходные данные бизнеса: «Москва, Патриаршие пруды · ежедневно 12:00–00:00 · +7 495 000-00-00»",
+      "notes": "Работает как строка доверия и контакт. Телефон — ссылка tel:. На телефоне скрыта: адрес и часы есть в колофоне и у формы."
+    },
+    "nav": {
+      "bg": "background, непрозрачный",
+      "height": "72px desktop / 56px mobile",
+      "layout": "название (masthead) слева; 3–5 якорей по центру — nav капсом с разрядкой, промежуток 32px; справа button_secondary высотой 44px (меньше нельзя — правило a11y.targets) («Бронь», «Записаться»)",
+      "border_bottom": "rule.ink — всегда, как линейка под названием журнала",
+      "sticky": "position: sticky; top: 0; фон непрозрачный background — без размытия и полупрозрачности",
+      "active": "текущий раздел подчёркнут линией 2px accent под пунктом",
+      "mobile": "название + кнопка «Бронь»; бургер только если якорей больше трёх — открывает лист на весь экран с пунктами Playfair 28px и номерами 01–05",
+      "notes": "В варианте обложки шапка прозрачная поверх фото (текст и нижняя линейка цвета on_photo) и становится бумажной после первых 80px прокрутки."
+    },
+    "kicker": {
+      "color": "accent",
+      "font": "kicker",
+      "prefix": "линейка 24×1px accent с отступом 12px, по вертикали по центру строки",
+      "notes": "Над каждым заголовком раздела и первого экрана. Не больше 36 знаков. В тёмной теме тот же токен accent."
+    },
+    "section_opener": {
+      "anatomy": "линейка rule.ink во всю ширину контейнера → через 20px ряд: kicker слева, номер раздела справа («02 / 07», caption с tabular-nums) → h2 (колонки 1–8) → лид body или lead (колонки 1–7, text_muted)",
+      "notes": "Одинаковое начало у каждого раздела — ритм журнала и простая навигация глазами. Номер раздела совпадает с «Содержанием»."
+    },
+    "toc_strip": {
+      "layout": "полоса под первым экраном: 4–5 якорей в ряд, между ними вертикальные линейки rule.hair; в каждом — index курсивом («01») и название label 600 капсом с разрядкой 0.08em",
+      "border": "сверху и снизу rule.ink",
+      "height": "88px",
+      "hover": "название становится accent, номер сдвигается на 4px вправо",
+      "mobile": "сетка 2×2 или 2×3, линейки между строками; без горизонтальной прокрутки",
+      "notes": "«Содержание номера» — навигация по лендингу в духе журнала. Пункты — реальные разделы страницы: меню, шеф, цены, отзывы, бронь."
+    },
+    "figure": {
+      "image": "object-fit: cover, углы 0, без тени и рамки, фон photo_placeholder до загрузки",
+      "ratios": "4:5 (портрет, первый экран), 3:2 (горизонталь в материале), 1:1 (детали, лукбук), 21:9 (панорама зала — только на десктопе)",
+      "caption": "figcaption caption под снимком, отступ 12px: слева что на снимке, справа «Фото: имя» (если автор известен); линейка rule.hair над подписью",
+      "notes": "Каждое фото со своей подписью — это и есть журнальность. width и height в разметке, чтобы место было занято до загрузки. На телефоне автор снимка — отдельной строкой под подписью, а не справа."
+    },
+    "cover_photo": {
+      "height": "min(88svh, 880px)",
+      "layout": "фото во всю ширину экрана; текст в нижней левой трети (колонки 1–7) поверх gradient.photo_scrim; kicker цвета on_photo без линейки accent (линейка on_photo), заголовок display цвета on_photo, лид 20px, главная кнопка button_accent или бумажная",
+      "loading": "fetchpriority=\"high\", без loading=\"lazy\" и без анимации появления, <link rel=\"preload\" as=\"image\" imagesrcset> в <head>, AVIF/WebP, srcset 640/960/1440/1920/2560",
+      "notes": "Только при сильном собственном кадре, где низ снимка тёмный и спокойный. Лица и главный объект — в верхних двух третях, текст на них не кладётся."
+    },
+    "feature_item": {
+      "layout": "колонка без фона: сверху rule.ink, через 20px index курсивом accent, h3, текст body text_muted (до 3 строк)",
+      "grid": "3 в ряд (по 4 колонки), промежуток 32px",
+      "notes": "Преимущества как рубрики журнала: «01 Своя пекарня», «02 Сезонное меню», «03 Живой огонь». Иконки не нужны: номер и слово работают сильнее."
+    },
+    "story": {
+      "layout": "материал: колонки 1–8 — буквица + текст body в 2 колонки (column-count: 2, column-gap 48px, column-rule rule.hair) на ≥1024px; колонки 9–12 — «поля»: выноска quote и маленькое фото 1:1 с подписью",
+      "rules": "две колонки только если текст 180–400 слов и вся его высота помещается в один экран (≤ 60svh): иначе человек читает первую колонку до низа и прокручивает вверх за второй. Длиннее — одна колонка 66ch.",
+      "notes": "История шефа, автора курса или бренда. Лучший блок для доверия: личная интонация, одна цифра, одна цитата."
+    },
+    "pull_quote": {
+      "font": "quote",
+      "color": "text",
+      "border": "сверху и снизу rule.ink, отступ 24px",
+      "attribution": "caption капсом с разрядкой: «— Анна Орлова, шеф»",
+      "notes": "Одна выноска на раздел, цитата реального человека."
+    },
+    "dropcap": {
+      "color": "accent",
+      "font": "dropcap",
+      "notes": "Только у первого абзаца материала. Буква остаётся частью текста (::first-letter), в отдельный span не выносится."
+    },
+    "card": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "сверху rule.ink, остальные стороны — нет",
+      "radius": "none",
+      "padding": "24px 0 0",
+      "shadow": "none",
+      "notes": "Базовая карточка журнала — не плашка, а блок под линейкой: тариф, формат работы, отзыв, товар. Кликабельная карточка — ссылка целиком, при наведении заголовок получает подчёркивание."
+    },
+    "menu_list": {
+      "anatomy": "строка: название h3 (или h4 Source Serif 600 для длинных меню) → отточие rule.leader, растянутое flex: 1, по базовой линии → цена price; под названием описание body 16px text_muted курсивом, до 2 строк; между позициями rule.hair и 20px",
+      "grouping": "группы с kicker («Закуски», «Горячее», «Форматы работы»), по 3–8 позиций",
+      "mobile": "если название с ценой не помещается в строку — цена уходит под описание, отточие скрывается",
+      "notes": "Главная подача цен в стиле: меню ресторана, прайс эксперта, капсула бренда. Цена всегда видна, «от» — только когда правда."
+    },
+    "pricing_column": {
+      "layout": "2–3 колонки тарифов, разделённые вертикальными rule.hair, без фона и рамок; в колонке: kicker, h3 название, цена шрифтом stat 56px (40px на телефоне), список «что входит» с тире, кнопка",
+      "featured": "выбранный тариф — сверху rule.heavy и kicker «Чаще всего выбирают» (только если это правда по продажам), кнопка button_primary; у остальных button_secondary",
+      "mobile": "колонки друг под другом, выделенный первым",
+      "notes": "Для курсов и пакетов услуг. Разница тарифов — в первых строках списка, а не в конце."
+    },
+    "stat_row": {
+      "layout": "3–4 колонки, между ними вертикальные rule.hair, сверху rule.heavy",
+      "number": "stat",
+      "label": "caption 14px text_muted, до 2 строк",
+      "notes": "Только проверяемые цифры с периодом: «4,9 на Яндекс Картах · 1 240 отзывов», «с 2014 года», «1 800 выпускников с 2021 года». Бегут (counter-up) только количества; рейтинг и год стоят сразу итогом.",
+      "mobile": "2 колонки с вертикальной rule.hair между ними, ряды разделены rule.hair; при трёх цифрах третья — во всю ширину; число 44px"
+    },
+    "testimonial": {
+      "layout": "колонка под rule.hair: текст testimonial курсивом → имя label 600 → кто это caption; фото человека 48px в круге — только реальное и с согласием",
+      "grid": "3 в ряд или 2 широких",
+      "notes": "Отзывы как письма читателей. Ссылка на первоисточник (Карты, 2ГИС) — caption-ссылкой под отзывом."
+    },
+    "press_line": {
+      "layout": "строка «О нас писали»: kicker + названия изданий текстом Playfair italic 22px text_muted через « · », без логотипов",
+      "notes": "Только реальные публикации, каждая — ссылкой на материал. Нет публикаций — блока нет. Строка стоит на месте: бегущая лента (marquee) в стиле не используется."
+    },
+    "gallery": {
+      "layout": "фотоистория: асимметричная сетка — 7/5, затем 5/7, затем три 1:1 по 4 колонки; у каждого кадра подпись",
+      "mobile": "по одному кадру во всю ширину без полей, чередуя 4:5 и 3:2; подписи с полями 16px",
+      "notes": "Для HoReCa — блюда, зал, кухня; для одежды — лукбук; для экспертов — процесс работы. 5–9 кадров, не больше."
+    },
+    "badge": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid rule",
+      "radius": "sm",
+      "padding": "4px 8px",
+      "font": "kicker 12px, разрядка 0.1em",
+      "notes": "Метки «Новое», «Сезон», «Онлайн». Не больше одной на карточку."
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "none",
+      "height": "52px (56px на телефоне)",
+      "padding": "0 16px",
+      "font": "Golos Text 400 17px (16px минимум на телефоне — иначе iOS увеличивает страницу)",
+      "label": "label над полем, отступ 8px; необязательные — с пометкой «необязательно» caption",
+      "placeholder": "пример значения text_muted («+7 900 000-00-00»), не вместо подписи",
+      "focus": "рамка 1px цвета rule + outline 2px focus_ring снаружи с отступом 2px",
+      "error": "рамка error, текст ошибки caption цвета error под полем со значком SVG, aria-describedby",
+      "notes": "Телефон — type=\"tel\", autocomplete=\"tel\", inputmode=\"tel\"; имя — autocomplete=\"name\"."
+    },
+    "checkbox": {
+      "size": "20px",
+      "border": "1.5px solid border_input",
+      "radius": "sm",
+      "checked": "заливка primary, галочка SVG цвета on_primary",
+      "focus": "outline 2px focus_ring, offset 2px",
+      "notes": "Кликабельна вся строка с подписью, зона не меньше 44px по высоте."
+    },
+    "form_card": {
+      "bg": "raised",
+      "border": "rule.ink, сверху rule.heavy",
+      "radius": "none",
+      "padding": "40px desktop / 24px mobile",
+      "shadow": "raised (в тёмной теме raised_dark)",
+      "header": "kicker «Бронь» / «Заявка» → h3 → caption «Ответим за 15 минут в рабочее время» (только если правда)",
+      "notes": "Карточка формы — единственный «приподнятый» лист бумаги на странице."
+    },
+    "faq_item": {
+      "element": "<details>/<summary>",
+      "border": "сверху rule.hair, у последнего и снизу",
+      "question": "h3 уменьшенный: Playfair 500, 22px (20px на телефоне), line-height 1.25 — вопросы длиннее заголовков, отступ 24px по вертикали",
+      "icon": "плюс SVG 20px справа (линии 1.5px), при открытии поворот на 45° за 280ms (transform)",
+      "answer": "body text_muted, до 62ch, отступ снизу 24px",
+      "focus": "outline 2px focus_ring на summary",
+      "notes": "5–7 вопросов, которые реально задают перед покупкой: цена, сроки, отмена брони, парковка, возврат денег."
+    },
+    "sticky_cta": {
+      "bg": "background",
+      "border_top": "rule.ink",
+      "shadow": "sticky (sticky_dark в тёмной)",
+      "padding": "12px 16px + env(safe-area-inset-bottom)",
+      "button": "button_primary во всю ширину, 52px",
+      "show": "на телефоне — после ухода кнопки первого экрана, прячется, когда форма в кадре (рецепт sticky-cta-mobile)",
+      "notes": "Одна кнопка без второго действия."
+    },
+    "footer": {
+      "name": "колофон",
+      "border_top": "rule.double",
+      "layout": "3 колонки: название Playfair 22px и одна фраза; адрес, часы, телефон; реквизиты (ИП/ООО, ИНН, ОГРН) и ссылки на политику обработки персональных данных и оферту",
+      "font": "caption, ссылки — link",
+      "notes": "Как выходные данные журнала. Реквизиты обязательны: без них у рекламной страницы падает доверие, а модерация площадок может отклонить объявление."
+    }
+  },
+  "layout": {
+    "hero_pattern": "Разворот журнала (hero_layout = split). Сверху строка выходных данных (адрес, часы, телефон) и шапка с названием антиквой. Ниже 12 колонок: слева (1–6) рубрика-kicker с линейкой, заголовок display в 2–3 строки (до 14ch), где 1–3 ключевых слова курсивом; лид Source Serif 23px до 44ch; чернильная кнопка + текстовая ссылка со стрелкой; строка доверия caption (рейтинг с числом отзывов, год основания — только проверяемое). Справа (7–12) вертикальное фото 4:5 высотой до 78svh без скругления и тени, fetchpriority=\"high\", под ним подпись с автором. Верх заголовка и верх фото на одной линии. Под разворотом — полоса «Содержание» с курсивными номерами 01–05.",
+    "hero_variants": {
+      "split": "по умолчанию: текст слева, фото 4:5 справа — заголовок не зависит от фотографии, контраст гарантирован. LCP на компьютере — фото (самый крупный элемент экрана), на телефоне — заголовок: фото первого экрана всегда fetchpriority=\"high\", без lazy и без анимации появления",
+      "cover": "обложка: фото на всю ширину min(88svh, 880px), заголовок on_photo в нижней левой трети на gradient.photo_scrim; только при сильном собственном кадре с тёмным спокойным низом; LCP — фото, предзагрузка и fetchpriority=\"high\""
+    },
+    "section_order": [
+      "issue_line",
+      "nav",
+      "hero",
+      "toc",
+      "press",
+      "features",
+      "story",
+      "gallery",
+      "numbers",
+      "offer",
+      "testimonials",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_notes": {
+      "press": "только если есть реальные публикации, иначе раздел убрать и перенумеровать «Содержание»",
+      "features": "3 рубрики feature_item",
+      "story": "материал с буквицей, выноской и фото 3:2 — история шефа, автора, бренда; у экспертов — интервью «вопрос — ответ»; у курсов — программа как оглавление журнала",
+      "gallery": "фотоистория 5–9 кадров с подписями",
+      "numbers": "stat_row 3–4 проверяемые цифры",
+      "offer": "menu_list (HoReCa, эксперты, одежда) или pricing_column (курсы, пакеты)",
+      "testimonials": "2–3 отзыва-письма со ссылкой на первоисточник",
+      "faq": "5–7 вопросов перед покупкой",
+      "lead_form": "вкладка surface: слева обещание и шаги, справа form_card"
+    },
+    "band_rhythm": "Весь лендинг на бумаге background; разделы отделяются линейкой и 128px воздуха. Две «вкладки» другой бумаги (surface, во всю ширину экрана): предложение offer и форма lead_form — как вклейка в журнале. Тёмная тема: те же места, background #14110E и surface #1E1A16. Цветных плашек, градиентов и волн между разделами нет.",
+    "grid": "12 колонок, контейнер 1240px, поля 40px (планшет 24px, телефон 16px), промежуток 32px, базовая линия 8px. Асимметрия — основа журнала: 6/6 в первом экране, 7/5 и 5/7 в фотоистории, 8/4 в материале (правая колонка — «поля» с выноской), 4/4/4 у рубрик, 5/7 у формы. На широких экранах (≥1440px) контейнер не растёт, растут поля.",
+    "mobile_notes": "Одна колонка, поля 16px, разделы через 72px. Строка выходных данных скрыта; шапка 56px: название + кнопка «Бронь». Заголовок 44px (headline_scale = l — 38px), до 4 строк; курсив до 12 знаков включительно не переносится (white-space: nowrap у <em>), длиннее — nowrap не ставить. Цифры «Цифр» — в 2 колонки. Кнопка во всю ширину, 56px, под ней текстовая ссылка. Фото первого экрана — после кнопок, во всю ширину экрана без полей (margin-inline: -16px) 4:5, подпись с полями. «Содержание» — сетка 2×2. Текст в одну колонку, буквица на 3 строки, выноска 28px. Меню: цена под названием, если не помещается в строку. Тарифы друг под другом, выделенный первым. Форма после шагов, поля 56px. Липкая кнопка появляется после ухода кнопки первого экрана и прячется у формы. Горизонтальной прокрутки нет ни на одном экране — проверять document.documentElement.scrollWidth ≤ innerWidth на 360 и 390px."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "optional_fields": [
+      "date",
+      "guests",
+      "comment"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "date": "Дата и время — необязательно",
+      "guests": "Сколько гостей — необязательно",
+      "comment": "Что важно учесть — необязательно"
+    },
+    "field_notes": "Необязательные поля — только под нишу: дата и гости для брони (HoReCa), комментарий для экспертов. До кнопки не больше трёх строк полей: имя, телефон и одна строка ниши (дата и гости стоят в ней рядом на десктопе, на телефоне — друг под другом). Email не спрашивать, если перезваниваете.",
+    "consent_152fz": true,
+    "consent_text": "Чекбокс «Согласен на обработку персональных данных» со ссылкой на политику обработки — не отмечен заранее, отдельно от согласия на рассылки (если рассылка есть, у неё своя галочка). Текст caption 13px text_muted, ссылка link.",
+    "style": "Вкладка surface во всю ширину экрана, внутри 5/7. Слева: kicker «Бронь» или «Заявка», h2 с одним словом курсивом («Забронируйте стол <em>заранее</em>»), три шага «что будет после заявки» с курсивными номерами index accent, телефон ссылкой tel: для тех, кто хочет позвонить сам. Справа form_card: бумага raised, рамка 1px rule, сверху 3px rule, углы 0, отступ 40px (24px на телефоне), тень raised. Подписи Golos 500 15px над полями, поля 52px (56px на телефоне), рамка 1px border_input, промежуток 20px; дата и гости — в одну строку двумя колонками на десктопе. Чекбокс согласия. Кнопка во всю ширину карточки 56px — button_primary (или button_accent при cta_color_role = accent), текст — глагол результата. Под кнопкой caption: «Перезвоним в течение 15 минут в рабочее время» — только если правда.",
+    "submit_rules": "Заявка сначала сохраняется у приёмника, потом уходит владельцу (Telegram, почта, CRM). Ловушка для ботов и проверки не имеют права молча выбросить заявку с заполненными именем и телефоном: такую заявку принимаем и помечаем. Отправка — fetch с Accept: application/json; кнопка на время отправки disabled с текстом «Отправляем…» и aria-busy.",
+    "error_state": "Отказ сервера или сети — видимым текстом на плашке error_bg цвета error прямо над кнопкой («Не получилось отправить. Позвоните нам: +7 … или попробуйте ещё раз»), введённое остаётся в полях, кнопка снова активна, фокус на тексте ошибки. Ошибки полей — под полем, со значком, не только цветом.",
+    "success_state": "Карточка меняет содержимое на месте, высота не прыгает (min-height по прежней высоте): kicker «Заявка принята» цвета success с галочкой SVG, заголовок h3 «Спасибо, ждём вас» или «Заявка у нас», строка — что и когда произойдёт («Перезвоним в течение 15 минут и подтвердим бронь в SMS»), текстовая ссылка на меню или примеры работ. Показывается только после ответа сервера {\"ok\": true}; блок role=\"status\" aria-live=\"polite\", фокус на заголовок (tabindex=\"-1\"). Анимация — рецепт form-success с цветом success."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "image-reveal-clip",
+    "fade-up-stagger",
+    "scroll-progress-bar",
+    "parallax-soft",
+    "counter-up",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "hero-text-reveal": "только заголовок первого экрана и только при motion_level = rich: строки поднимаются из-под маски по очереди; --htr-dur: 900ms (motion.reveal), --htr-ease: ease_emphasized; запас маски 0.14em под Й и хвосты; заголовок виден без JS. Одновременно с ним на первом экране больше ничего не появляется — фото стоит на месте.",
+    "image-reveal-clip": "кадры фотоистории и фото материала ниже первого экрана, не больше 6 на страницу: шторка снизу вверх, --irc-dur: 900ms, --irc-zoom: 1.06, --irc-radius: 0. Фото первого экрана не анимировать никогда: на компьютере это LCP-элемент, и рецепт его сам не трогает.",
+    "fade-up-stagger": "рубрики feature_item, строки меню по группам, отзывы, колонки тарифов — сдвиг 16px, шаг 80ms, не больше 6 в волне",
+    "scroll-progress-bar": "полоса чтения 2px цвета accent (--spb-color) под липкой шапкой (--spb-top: 72px, на телефоне 56px) — «сколько осталось до конца материала»; на лендингах короче трёх экранов не ставить",
+    "parallax-soft": "только фото в материале и панорама 21:9, ход не больше 6% высоты кадра; без декоративных цветных пятен-слоёв из примера рецепта — слоем служит сама фотография; текст и форма не двигаются; на телефоне выключен",
+    "counter-up": "stat_row «Цифры»: бегут только количества (гостей, выпускников, отзывов) за 1200ms один раз при появлении, tabular-nums обязательны. Рейтинг «4,9» и год «с 2014» стоят сразу итогом — data-count-to у них не ставится: рейтинг, бегущий от нуля, читается как низкая оценка, а бегущий год — как сбой.",
+    "accordion-smooth": "FAQ на <details>, иконка-плюс поворачивается на 45°",
+    "form-success": "смена карточки формы на подтверждение; значок цвета success",
+    "sticky-cta-mobile": "липкая чернильная кнопка на телефоне, прячется у формы",
+    "levels": {
+      "none": "accordion-smooth, form-success, sticky-cta-mobile — только функциональные",
+      "subtle": "+ fade-up-stagger, image-reveal-clip (ниже первого экрана), counter-up, scroll-progress-bar",
+      "rich": "+ hero-text-reveal на заголовке первого экрана, parallax-soft на фото материала и панораме"
+    },
+    "not_for_this_style": "gradient-drift, tilt-card, magnetic-button, cta-attention, sticky-stack-cards — кричат и спорят с журнальной интонацией; marquee-logos — изданий в «О нас писали» обычно 3–5, лента с повторами выглядит пустой и суетливой, строка стоит на месте; before-after-slider — только у одежды и интерьера для реальных «было — стало» (перешив, стилизация, ремонт) и только собственные снимки."
+  },
+  "photography": {
+    "direction": "Фото как в журнале: естественный свет из окна или вечерний тёплый, живые моменты вместо позирования, детали и фактуры (руки, ткань, корка хлеба, пар над тарелкой), свободное пространство в кадре. Цвет тёплый и приглушённый, контраст мягкий, насыщенность −10–15%, без HDR и резкого повышения чёткости.",
+    "ratios": {
+      "cover": "4:5",
+      "wide": "3:2",
+      "detail": "1:1",
+      "panorama": "21:9 (только десктоп)",
+      "portrait_expert": "4:5, по пояс или по грудь, взгляд мимо камеры или в процесс работы"
+    },
+    "sequence": "Фотоистория строится как разворот: общий план → средний → деталь. Соседние кадры отличаются масштабом, а не только сюжетом.",
+    "captions": "У каждого фото подпись: что на снимке простыми словами («Бриошь с ревенём — выпекаем с 6 утра») и автор, если известен. Подпись несёт смысл, а не повторяет картинку.",
+    "alt": "alt описывает, что на снимке, для того, кто его не видит; у декоративных фрагментов alt=\"\".",
+    "delivery": "AVIF и WebP через <picture>, srcset 480/768/1200/1600 (обложка — до 2560), sizes по колонке; первый кадр — fetchpriority=\"high\" без lazy, остальные loading=\"lazy\" decoding=\"async\"; width и height в разметке; фон photo_placeholder до загрузки.",
+    "generated_images": "Сгенерированные кадры — только для атмосферы и иллюстраций (свет, фактура, пустой стол, ткань). Блюда меню, зал заведения, работы мастера, вещи коллекции и людей показывать ТОЛЬКО настоящими фотографиями клиента: сгенерированное блюдо, которого нет в меню, — недостоверная реклама.",
+    "prompt_en": "editorial magazine photograph, natural window light, warm muted palette, soft film grain, shallow depth of field, candid moment, generous negative space, no text, no logos, no watermark",
+    "niche_hints": {
+      "horeca": "руки повара, пар, зал до открытия, блюдо сверху на льняной скатерти; без бокалов и бутылок в главной роли",
+      "experts": "портрет в рабочей обстановке, руки с документами или эскизом, окно; без «офисной» улыбки в камеру",
+      "infoproducts": "автор в процессе, крупные планы результата учеников (с их согласием), рабочее место",
+      "fashion": "вещь в движении на улице города, фактура ткани крупно, посадка по фигуре; без ретуши, меняющей цвет и крой"
+    }
+  },
+  "color_presets": {
+    "how_to_use": "Один пресет на страницу, выбирается по нише (см. niche_presets) ДО теста и в A/B не меняется. Пресет переопределяет только accent, on_accent, accent_hover, link, link_hover и focus_ring в обеих темах; бумага, чернила, линейки и шрифты общие. Все пары проверены по WCAG, числа в contrast.",
+    "cinnabar": {
+      "label": "Киноварь (по умолчанию)",
+      "for": "универсально: эксперты, курсы, одежда, городские кафе",
+      "light": {
+        "accent": "#A3321F",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#86271A",
+        "link": "#8E2B1B",
+        "link_hover": "#6E2014",
+        "focus_ring": "#A3321F"
+      },
+      "dark": {
+        "accent": "#E2735B",
+        "on_accent": "#14110E",
+        "accent_hover": "#EC8A74",
+        "link": "#F0937D",
+        "link_hover": "#F6B09F",
+        "focus_ring": "#E2735B"
+      },
+      "contrast": {
+        "light:on_accent/accent": 6.92,
+        "light:accent/surface": 5.48,
+        "light:link/background": 7.37,
+        "dark:on_accent/accent": 6.12,
+        "dark:accent/raised": 5.13,
+        "dark:link/background": 8.22
+      }
+    },
+    "bordeaux": {
+      "label": "Бордо",
+      "for": "рестораны, винные бары (без рекламы алкоголя), бренды одежды, ювелирные мастерские",
+      "light": {
+        "accent": "#7A2233",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#5E1726",
+        "link": "#7A2233",
+        "link_hover": "#5E1726",
+        "focus_ring": "#7A2233"
+      },
+      "dark": {
+        "accent": "#E08A9A",
+        "on_accent": "#14110E",
+        "accent_hover": "#EAA2AF",
+        "link": "#EAA2AF",
+        "link_hover": "#EAA2AF",
+        "focus_ring": "#E08A9A"
+      },
+      "contrast": {
+        "light:on_accent/accent": 9.98,
+        "light:accent/surface": 7.91,
+        "light:link/background": 8.79,
+        "dark:on_accent/accent": 7.41,
+        "dark:accent/raised": 6.21,
+        "dark:link/background": 9.21
+      }
+    },
+    "olive": {
+      "label": "Олива",
+      "for": "фермерская кухня, кофейни, эко-продукты, флористика, загородные базы",
+      "light": {
+        "accent": "#55602A",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#434C1F",
+        "link": "#4B5524",
+        "link_hover": "#434C1F",
+        "focus_ring": "#55602A"
+      },
+      "dark": {
+        "accent": "#AEBB72",
+        "on_accent": "#14110E",
+        "accent_hover": "#C0CB8A",
+        "link": "#C0CB8A",
+        "link_hover": "#C0CB8A",
+        "focus_ring": "#AEBB72"
+      },
+      "contrast": {
+        "light:on_accent/accent": 6.79,
+        "light:accent/surface": 5.38,
+        "light:link/background": 7.05,
+        "dark:on_accent/accent": 9.09,
+        "dark:accent/raised": 7.62,
+        "dark:link/background": 10.89
+      }
+    },
+    "cobalt": {
+      "label": "Кобальт",
+      "for": "эксперты и консультанты, онлайн-школы, юристы и финансисты-частники",
+      "light": {
+        "accent": "#2C4A8E",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#223A72",
+        "link": "#2C4A8E",
+        "link_hover": "#223A72",
+        "focus_ring": "#2C4A8E"
+      },
+      "dark": {
+        "accent": "#8FA8E6",
+        "on_accent": "#14110E",
+        "accent_hover": "#A7BBEE",
+        "link": "#A7BBEE",
+        "link_hover": "#A7BBEE",
+        "focus_ring": "#8FA8E6"
+      },
+      "contrast": {
+        "light:on_accent/accent": 8.48,
+        "light:accent/surface": 6.72,
+        "light:link/background": 7.47,
+        "dark:on_accent/accent": 7.98,
+        "dark:accent/raised": 6.69,
+        "dark:link/background": 9.84
+      }
+    },
+    "forest": {
+      "label": "Хвоя",
+      "for": "психологи и коучи, велнес без медицины, туризм, детские студии",
+      "light": {
+        "accent": "#2D5C47",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#224837",
+        "link": "#2D5C47",
+        "link_hover": "#224837",
+        "focus_ring": "#2D5C47"
+      },
+      "dark": {
+        "accent": "#7FBF9E",
+        "on_accent": "#14110E",
+        "accent_hover": "#98CDB1",
+        "link": "#98CDB1",
+        "link_hover": "#98CDB1",
+        "focus_ring": "#7FBF9E"
+      },
+      "contrast": {
+        "light:on_accent/accent": 7.68,
+        "light:accent/surface": 6.09,
+        "light:link/background": 6.77,
+        "dark:on_accent/accent": 8.82,
+        "dark:accent/raised": 7.39,
+        "dark:link/background": 10.48
+      }
+    },
+    "ochre": {
+      "label": "Охра",
+      "for": "пекарни, кондитерские, кофейни, ремесленные мастерские",
+      "light": {
+        "accent": "#8A5A12",
+        "on_accent": "#FFFFFF",
+        "accent_hover": "#6F480E",
+        "link": "#7A4F10",
+        "link_hover": "#6F480E",
+        "focus_ring": "#8A5A12"
+      },
+      "dark": {
+        "accent": "#D9A554",
+        "on_accent": "#14110E",
+        "accent_hover": "#E3B66F",
+        "link": "#E3B66F",
+        "link_hover": "#E3B66F",
+        "focus_ring": "#D9A554"
+      },
+      "contrast": {
+        "light:on_accent/accent": 5.91,
+        "light:accent/surface": 4.68,
+        "light:link/background": 6.26,
+        "dark:on_accent/accent": 8.48,
+        "dark:accent/raised": 7.1,
+        "dark:link/background": 10.02
+      }
+    }
+  },
+  "niche_presets": {
+    "horeca": {
+      "palette": "bordeaux для ресторана, ochre для кофейни и пекарни, olive для фермерской кухни",
+      "hero": "split с фото блюда или зала 4:5; cover — если есть сильный интерьерный кадр с тёмным низом",
+      "section_order": [
+        "issue_line",
+        "nav",
+        "hero",
+        "toc",
+        "features",
+        "story",
+        "offer",
+        "gallery",
+        "testimonials",
+        "faq",
+        "lead_form",
+        "footer"
+      ],
+      "cta": "Забронировать стол",
+      "kicker": "Сезонное меню · Патриаршие",
+      "h1": "Ужин, который <em>запомнят</em> ваши гости",
+      "form": "name, phone, date, guests",
+      "must": [
+        "меню с ценами в рублях и выходом блюда (граммы), как в заведении",
+        "адрес со ссылкой на карты, часы работы, телефон ссылкой tel:",
+        "условия брони и депозита, если они есть",
+        "рейтинг на картах — с числом отзывов и ссылкой"
+      ],
+      "never": [
+        "алкоголь героем страницы: реклама алкоголя в интернете ограничена ст. 21 закона «О рекламе» — без бокалов и бутылок на обложке, без акций на напитки; винная карта — строкой в меню без призыва",
+        "сгенерированные или чужие фото блюд и зала",
+        "«лучший ресторан города» без источника"
+      ]
+    },
+    "experts": {
+      "palette": "cobalt для консультантов, юристов и финансистов; forest для психологов и коучей; cinnabar для дизайнеров и фотографов",
+      "hero": "split с портретом 4:5; кикер — специализация и стаж",
+      "section_order": [
+        "issue_line",
+        "nav",
+        "hero",
+        "toc",
+        "features",
+        "story",
+        "numbers",
+        "offer",
+        "testimonials",
+        "faq",
+        "lead_form",
+        "footer"
+      ],
+      "story": "интервью «вопрос — ответ»: вопросы Playfair 600 22px, ответы body; 3–5 вопросов, которые клиенты задают на первой встрече",
+      "cta": "Записаться на консультацию",
+      "kicker": "Налоговый консультант · 12 лет практики",
+      "h1": "Разберу ваши налоги <em>за один час</em>",
+      "form": "name, phone, comment",
+      "must": [
+        "образование, стаж, членство в ассоциациях — проверяемые, со ссылками",
+        "форматы и цены: длительность, онлайн или очно",
+        "что клиент получит на выходе встречи"
+      ],
+      "never": [
+        "обещания результата: юристам — исхода дела, финансистам — доходности",
+        "психологам — лечения и диагнозов: это медицинская деятельность",
+        "отзывы без согласия автора"
+      ]
+    },
+    "infoproducts": {
+      "palette": "cinnabar или cobalt",
+      "hero": "split с портретом автора или кадром процесса; в кикере — формат, длительность и дата старта",
+      "section_order": [
+        "issue_line",
+        "nav",
+        "hero",
+        "toc",
+        "features",
+        "story",
+        "numbers",
+        "offer",
+        "testimonials",
+        "faq",
+        "lead_form",
+        "footer"
+      ],
+      "story": "программа как оглавление журнала: модули с курсивными номерами 01–08, название h3, одна строка результата и длительность справа с отточием",
+      "cta": "Записаться на курс",
+      "kicker": "Курс · 6 недель · старт 14 октября",
+      "h1": "Научим готовить <em>как в бистро</em>",
+      "form": "name, phone",
+      "must": [
+        "что входит, сколько длится, формат занятий, кто ведёт",
+        "условия возврата денег",
+        "удостоверение или диплом о квалификации — только при образовательной лицензии; без неё — «сертификат участника» без слов «квалификация» и «диплом»"
+      ],
+      "never": [
+        "обещания дохода и трудоустройства, скриншоты заработка",
+        "ненастоящие таймеры и «осталось 3 места»",
+        "чужие работы под видом работ учеников"
+      ]
+    },
+    "fashion": {
+      "palette": "cinnabar или bordeaux",
+      "hero": "cover с кадром лукбука или split 4:5; в кикере — сезон и материал",
+      "section_order": [
+        "issue_line",
+        "nav",
+        "hero",
+        "toc",
+        "story",
+        "gallery",
+        "offer",
+        "testimonials",
+        "faq",
+        "lead_form",
+        "footer"
+      ],
+      "offer": "капсула: сетка figure 1:1 или 4:5 по 3 в ряд, под снимком название, состав, цена; или menu_list для пошива и ателье",
+      "cta": "Примерить в шоуруме",
+      "kicker": "Осень — зима 2026 · Шерсть",
+      "h1": "Пальто, в котором <em>тепло</em> зимой",
+      "form": "name, phone, comment (размер, рост)",
+      "must": [
+        "цены, размерная сетка, состав ткани",
+        "доставка и возврат: при покупке онлайн — отказ в течение 7 дней после получения (ст. 26.1 Закона о защите прав потребителей)",
+        "адрес и часы шоурума"
+      ],
+      "never": [
+        "чужие фото и кадры с показов других брендов",
+        "ретушь, меняющая цвет и посадку вещи",
+        "«последний размер», если это не так"
+      ]
+    }
+  },
+  "microcopy": {
+    "tone": "На «вы», спокойно, как хороший редактор: конкретные детали вместо прилагательных, без восклицательных знаков, без «лучший», «уникальный», «премиальный». Одна мысль на абзац.",
+    "headline_formula": "предмет + ощутимый результат или обстоятельство; курсивом — слово, ради которого читают (результат, время, чувство). До 35 знаков — три строки на любом экране; 36–48 — четыре строки и headline_scale = l; длиннее — сокращать. Сроки, даты и форматы — в kicker, а не в заголовке.",
+    "kicker_formula": "Рубрика · деталь (место, срок, формат). До 36 знаков. В HTML — обычным регистром, капс только через CSS.",
+    "section_kickers": [
+      "Меню",
+      "Кухня",
+      "Шеф",
+      "Программа",
+      "Автор",
+      "Коллекция",
+      "Цифры",
+      "Цены",
+      "Письма гостей",
+      "Вопросы",
+      "Бронь",
+      "Заявка"
+    ],
+    "cta_examples": [
+      "Забронировать стол",
+      "Записаться на консультацию",
+      "Записаться на курс",
+      "Получить программу",
+      "Примерить в шоуруме",
+      "Узнать о наличии"
+    ],
+    "reassurance_lines": [
+      "Перезвоним в течение 15 минут в рабочее время",
+      "Подтвердим бронь в SMS",
+      "Первую встречу можно перенести без штрафа",
+      "Вернём деньги, если курс не подойдёт в первую неделю"
+    ],
+    "notes": "Строки-обещания и цифры ставить только если это правда у конкретного клиента."
+  },
+  "a11y": {
+    "focus": "видимый фокус у всех интерактивных элементов: outline 2px focus_ring с отступом 2–3px; на фото-обложке — outline 2px on_photo",
+    "targets": "кликабельная зона не меньше 44×44px, кнопки 52–56px",
+    "language": "<html lang=\"ru\"> — иначе hyphens: auto не работает для кириллицы",
+    "italics": "курсив — не больше трёх слов в заголовке и одной цитаты на раздел; абзацы основного текста курсивом не набирать",
+    "columns": "колонки текста только на ≥1024px и только если текст помещается в один экран; порядок чтения совпадает с DOM",
+    "color": "ошибка — значок и текст, не только цвет; ссылки в тексте подчёркнуты",
+    "motion": "все рецепты уважают prefers-reduced-motion; бесконечных анимаций в стиле нет; hero-text-reveal только на заголовке первого экрана, фото первого экрана не анимируется",
+    "contrast_on_photo": "текст на фото только в варианте cover поверх gradient.photo_scrim; контраст мерить по самому светлому пикселю под строкой"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split",
+        "cover"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "body_face": [
+        "serif",
+        "sans"
+      ],
+      "button_case": [
+        "upper",
+        "sentence"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "color_preset",
+      "fonts_display",
+      "radius_none",
+      "rules_and_section_numbers",
+      "photo_captions",
+      "single_cta_color"
+    ],
+    "default": {
+      "hero_layout": "split",
+      "headline_scale": "xl",
+      "cta_color_role": "primary",
+      "body_face": "serif",
+      "button_case": "upper",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. headline_scale: xl — 88/44px (clamp(2.75rem, 1.2rem + 4.6vw, 5.5rem)), l — 72/38px (clamp(2.375rem, 1.1rem + 3.7vw, 4.5rem)). cta_color_role: primary — чернильная кнопка, accent — киноварная (меняются все главные кнопки разом). body_face: serif — текст Source Serif 4, sans — Golos Text (typography.body_sans), антиква остаётся в заголовках. button_case: upper — капс с разрядкой 0.06em, sentence — обычный регистр 16px. social_proof_position: under_hero — рейтинг и stat_row сразу после «Содержания», before_form — отзывы и цифры прямо перед формой. В одном тесте менять одну ось; первой проверять hero_layout или cta_color_role."
+  },
+  "do": [
+    "Заголовки — Playfair из файлов opsz с font-optical-sizing: auto и размером через clamp (88px на компьютере, 44px на телефоне), 1–3 слова курсивом того же цвета: это голос стиля.",
+    "Каждый раздел открывать линейкой 1px, рубрикой-kicker и номером раздела; отделять разделы воздухом 128/72px, а не плашками и тенями.",
+    "Делать фотографию героем: живые кадры с естественным светом в пропорциях 4:5, 3:2, 1:1 и подпись под каждым снимком.",
+    "Держать одну заливную кнопку на экран — чернильный прямоугольник (при cta_color_role = accent — киноварный) с глаголом результата; второе действие — текстовая ссылка со стрелкой.",
+    "Подавать цены списком с отточием, как меню или прайс в журнале, в рублях и с тем, что входит.",
+    "Набирать текст не шире 66ch; две колонки — только на ≥1024px и только если обе видны на одном экране.",
+    "Раздавать шрифты со своего сервера (cyrillic + latin, swap) и предзагружать один файл заголовка."
+  ],
+  "dont": [
+    "Не класть текст на фото без подложки photo_scrim и замера контраста и не ставить его на лица.",
+    "Не скруглять кнопки, поля, фото и карточки и не давать карточкам тени — тень только у формы и липкой кнопки.",
+    "Не набирать антиквой кнопки, поля, подписи и текст мельче 15px — это роль Golos Text.",
+    "Не набирать заголовки капсом и не разряжать антикву; капс с разрядкой — только у Golos Text: рубрики, навигация, кнопки, служебные подписи.",
+    "Не заливать киноварью фоны и большие площади: она для рубрик, номеров, буквицы, ссылок и — только при cta_color_role = accent — главных кнопок.",
+    "Не брать стоковые улыбки в камеру и картинки с вшитым текстом; не выдавать сгенерированные кадры за блюда, зал, работы и людей клиента.",
+    "Не придумывать «О нас писали», рейтинги, тиражи и «чаще всего выбирают» — только проверяемое."
+  ],
+  "prompt_snippet": "Build the landing as a magazine spread; expose tokens as CSS variables --color-<key>. Warm paper #F5F0E7, ink #1B1713, muted #5C5247, hairlines #D8CDBC, insert bands #ECE4D6; one cinnabar accent #A3321F for kickers, section numbers and the single drop cap; underlined links #8E2B1B. Self-host @fontsource-variable packages, cyrillic+latin, swap (families end in 'Variable'). Headlines: Playfair opsz files, font-optical-sizing:auto, 500, clamp(44px, …, 88px), line-height 1.02, max 14ch, one to three words in italics. Standfirst 23px and body 18px/1.65 in Source Serif 4, max 66ch; Golos Text for UI, uppercase tracked kickers, captions and buttons. Square corners, no card shadows; every section opens with a 1px ink rule, kicker and section number. Hero: 6/6 split, headline left, captioned 4:5 photo right, fetchpriority high, never animated; then a numbered contents strip. Prices as a dotted-leader menu. Lead form on raised paper: name, phone, unchecked consent. Dark: #14110E, text #F2EBDF, paper-coloured button, accent #E2735B.",
+  "source": {
+    "inspired_by": "bergside/awesome-design-skills (MIT), skills/editorial/DESIGN.md и SKILL.md",
+    "notes": "Из исходника взяты идея журнальной вёрстки, антиква в заголовках, моноширинно-строгие подписи и сетка 8pt. Изменено: Gelasio не имеет кириллицы (api.fontsource.org: latin, latin-ext, vietnamese) — заголовки на Playfair 2 (ось opsz 5–1200: на крупном кегле высококонтрастный дисплейный рисунок, на среднем плотнее), текст на Source Serif 4, интерфейс на Golos Text; Ubuntu Mono (лицензия UFL-1.0, не OFL) убран — рубрики и подписи набраны Golos Text капсом с разрядкой. Холодная пара #111111/#F1F1F1 заменена тёплой бумагой и чернилами с одним акцентом; тёмной темы в исходнике не было — собран «ночной выпуск» с бумажной кнопкой. Зелёный #16A34A даёт на белом 3.3 и для текста не годится — статусы подобраны заново (#2E6A3A, 5.71). Вместо общих правил исходника — точные токены, контрасты числами, шесть пресетов акцента, четыре нишевых пресета, раскладка рекламного лендинга с формой заявки и согласием по 152-ФЗ, линейки и номера разделов, меню с отточием, буквица, выноска, арт-дирекция фото и A/B-оси. Размеры заголовков сверены замером Playwright на Playfair opsz (перенос, длинные слова, цифры на телефоне). Шрифты проверены в Fontsource: subset cyrillic, лицензия OFL-1.1, начертания в наличии."
+  }
+}

@@ -1,0 +1,183 @@
+/* Apple — Vibe Landing Kit 1.0.0
+ * Описание эстетики по открытым материалам. Проект не аффилирован с Apple; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.
+ * Шрифты (раздавайте со своего домена, не с внешнего CDN):
+ *   Inter — npm i @fontsource-variable/inter (или @fontsource/inter), OFL; заменяет SF Pro Display и SF Pro Text (проприетарные шрифты Apple)
+ */
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f5f5f7;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-border: #d2d2d7;
+  --color-primary: #0066cc;
+  --color-on-primary: #ffffff;
+  --color-accent: #1d1d1f;
+  --color-on-accent: #ffffff;
+  --color-link: #0066cc;
+  --color-success: #1a7f37;
+  --color-error: #d70015;
+  --color-primary-hover: #0071e3;
+  --color-focus: #0071e3;
+  --color-input-border: #86868b;
+  --color-badge-text: #bf4800;
+  --color-tile-dark: #272729;
+  --color-tile-dark-text: #f5f5f7;
+  --color-tile-dark-muted: #a1a1a6;
+  --color-tile-dark-link: #2997ff;
+  --color-tile-dark-badge: #f56300;
+  --color-disabled-bg: #e8e8ed;
+  --color-disabled-text: #6e6e73;
+  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-size: 56px;
+  --display-weight: 600;
+  --display-size-desktop: 56px;
+  --display-size-mobile: 34px;
+  --display-line-height: 1.07;
+  --display-letter-spacing: -0.015em;
+  --font-h2: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h2-size: 40px;
+  --h2-weight: 600;
+  --h2-size-desktop: 40px;
+  --h2-size-mobile: 28px;
+  --h2-line-height: 1.1;
+  --h2-letter-spacing: -0.01em;
+  --font-h3: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h3-size: 21px;
+  --h3-weight: 600;
+  --h3-size-desktop: 21px;
+  --h3-size-mobile: 19px;
+  --h3-line-height: 1.19;
+  --h3-letter-spacing: 0em;
+  --font-lead: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lead-size: 28px;
+  --lead-weight: 400;
+  --lead-size-desktop: 28px;
+  --lead-size-mobile: 21px;
+  --lead-line-height: 1.2;
+  --lead-letter-spacing: 0em;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 17px;
+  --body-weight: 400;
+  --body-size-desktop: 17px;
+  --body-size-mobile: 17px;
+  --body-line-height: 1.47;
+  --body-letter-spacing: -0.012em;
+  --font-button: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --button-size: 17px;
+  --button-weight: 400;
+  --button-size-desktop: 17px;
+  --button-size-mobile: 17px;
+  --button-line-height: 1.18;
+  --button-letter-spacing: -0.012em;
+  --font-caption: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 400;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.43;
+  --caption-letter-spacing: -0.01em;
+  --font-fine_print: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fine_print-size: 12px;
+  --fine_print-weight: 400;
+  --fine_print-size-desktop: 12px;
+  --fine_print-size-mobile: 12px;
+  --fine_print-line-height: 1.33;
+  --fine_print-letter-spacing: 0em;
+  --font-number: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --number-size: 64px;
+  --number-weight: 600;
+  --number-size-desktop: 64px;
+  --number-size-mobile: 44px;
+  --number-line-height: 1;
+  --number-letter-spacing: -0.02em;
+  --radius-none: 0px;
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+  --space-unit: 8;
+  --space-section-desktop: 80px;
+  --space-section-mobile: 48px;
+  --space-container: 980px;
+  --space-container-wide: 1200px;
+  --space-gutter-mobile: 24px;
+  --space-grid-gap: 24px;
+  --space-rhythm: метка → заголовок 8px; заголовок → строка пояснения 12px; пояснение → кнопки 24px; кнопки → фото 48px (телефон 32px); над заголовком секции не меньше 64px воздуха (телефон — 48px);
+  --shadow-card: none;
+  --shadow-raised: none — поверх контента лежит матовое стекло (tokens.glass), а не тень;
+  --shadow-product: 3px 5px 30px 0 rgba(0, 0, 0, 0.22);
+  --shadow-product-dark: 3px 5px 30px 0 rgba(0, 0, 0, 0.6);
+  --shadow-focus-ring: 0 0 0 3px rgba(0, 113, 227, 0.3);
+  --motion-fast: 160ms;
+  --motion-base: 320ms;
+  --motion-slow: 640ms;
+  --motion-ease-standard: cubic-bezier(.25,.1,.25,1);
+  --motion-ease-emphasized: cubic-bezier(.28,.11,.32,1);
+  --motion-press-scale: 0.95;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #000000;
+    --color-surface: #1d1d1f;
+    --color-text: #f5f5f7;
+    --color-text-muted: #a1a1a6;
+    --color-border: #424245;
+    --color-primary: #0071e3;
+    --color-on-primary: #ffffff;
+    --color-accent: #f5f5f7;
+    --color-on-accent: #1d1d1f;
+    --color-link: #2997ff;
+    --color-success: #30d158;
+    --color-error: #ff453a;
+    --color-primary-hover: #0066cc;
+    --color-focus: #2997ff;
+    --color-input-border: #86868b;
+    --color-badge-text: #f56300;
+    --color-tile-dark: #272729;
+    --color-tile-dark-text: #f5f5f7;
+    --color-tile-dark-muted: #a1a1a6;
+    --color-tile-dark-link: #2997ff;
+    --color-tile-dark-badge: #f56300;
+    --color-disabled-bg: #2a2a2c;
+    --color-disabled-text: #a1a1a6;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #000000;
+  --color-surface: #1d1d1f;
+  --color-text: #f5f5f7;
+  --color-text-muted: #a1a1a6;
+  --color-border: #424245;
+  --color-primary: #0071e3;
+  --color-on-primary: #ffffff;
+  --color-accent: #f5f5f7;
+  --color-on-accent: #1d1d1f;
+  --color-link: #2997ff;
+  --color-success: #30d158;
+  --color-error: #ff453a;
+  --color-primary-hover: #0066cc;
+  --color-focus: #2997ff;
+  --color-input-border: #86868b;
+  --color-badge-text: #f56300;
+  --color-tile-dark: #272729;
+  --color-tile-dark-text: #f5f5f7;
+  --color-tile-dark-muted: #a1a1a6;
+  --color-tile-dark-link: #2997ff;
+  --color-tile-dark-badge: #f56300;
+  --color-disabled-bg: #2a2a2c;
+  --color-disabled-text: #a1a1a6;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 34px;
+    --h2-size: 28px;
+    --h3-size: 19px;
+    --lead-size: 21px;
+    --body-size: 17px;
+    --button-size: 17px;
+    --caption-size: 14px;
+    --fine_print-size: 12px;
+    --number-size: 44px;
+  }
+}

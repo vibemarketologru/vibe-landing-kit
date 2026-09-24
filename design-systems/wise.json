@@ -1,0 +1,527 @@
+{
+  "slug": "wise",
+  "name": "Wise",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Wise; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Сверхжирные заголовки в 900-м начертании, одна лаймовая кнопка-пилюля и шалфейно-серый фон, на котором лежат белые карточки со скруглением 24 px. Глубину даёт смена поверхностей, а не тени; цены показаны честной таблицей сравнения. Читается как спокойный скандинавский журнал о деньгах, а не как банк.",
+  "summary_en": "Ultra-heavy weight-900 headlines, a single lime-green pill button and a pale sage canvas carrying white 24px-radius cards. Depth comes from surface contrast rather than shadows, and pricing is shown as an honest comparison table. It reads like a calm Scandinavian money magazine, not a bank.",
+  "best_for": [
+    "финтех и переводы денег",
+    "платёжные и банковские сервисы",
+    "бухгалтерия и налоги",
+    "страхование",
+    "SaaS для малого бизнеса",
+    "услуги с прозрачной ценой"
+  ],
+  "goals": [
+    "заявки",
+    "расчёт стоимости",
+    "доверие через прозрачные цены",
+    "регистрация",
+    "запись на консультацию"
+  ],
+  "mood": [
+    "дружелюбный",
+    "прозрачный",
+    "уверенный",
+    "светлый",
+    "журнальный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#e8ebe6",
+        "surface": "#ffffff",
+        "text": "#0e0f0c",
+        "text_muted": "#454745",
+        "border": "#868685",
+        "primary": "#9fe870",
+        "on_primary": "#0e0f0c",
+        "accent": "#163300",
+        "on_accent": "#9fe870",
+        "link": "#163300",
+        "success": "#054d28",
+        "error": "#a72027",
+        "primary_hover": "#cdffad",
+        "tint": "#e2f6d5",
+        "on_tint": "#054d28",
+        "inverse": "#0e0f0c",
+        "on_inverse": "#9fe870",
+        "on_inverse_body": "#e8ebe6",
+        "inverse_cta": "#9fe870",
+        "on_inverse_cta": "#0e0f0c",
+        "success_icon": "#2ead4b",
+        "error_icon": "#d03238",
+        "warning": "#ffd11a",
+        "on_warning": "#4a3b1c"
+      },
+      "dark": {
+        "background": "#0e0f0c",
+        "surface": "#1e211b",
+        "text": "#e8ebe6",
+        "text_muted": "#a6aaa3",
+        "border": "#6b6f68",
+        "primary": "#9fe870",
+        "on_primary": "#0e0f0c",
+        "accent": "#e2f6d5",
+        "on_accent": "#163300",
+        "link": "#9fe870",
+        "success": "#2ead4b",
+        "error": "#f2777b",
+        "primary_hover": "#cdffad",
+        "tint": "#233a14",
+        "on_tint": "#c5edab",
+        "inverse": "#e8ebe6",
+        "on_inverse": "#0e0f0c",
+        "on_inverse_body": "#454745",
+        "inverse_cta": "#0e0f0c",
+        "on_inverse_cta": "#9fe870",
+        "success_icon": "#2ead4b",
+        "error_icon": "#f2777b",
+        "warning": "#ffd11a",
+        "on_warning": "#4a3b1c"
+      }
+    },
+    "typography": {
+      "display": {
+        "family": "Inter Tight",
+        "fallback": "Inter, system-ui, -apple-system, sans-serif",
+        "weight": 900,
+        "size_desktop": "80px",
+        "size_mobile": "36px",
+        "line_height": 0.95,
+        "letter_spacing": "0em",
+        "notes": "Главный голос бренда. Только 900, никогда легче; обычный регистр предложения, не капс. Между телефоном и компьютером — font-size: clamp(36px, 6.6vw, 80px). Длина слов решает масштаб (замер Inter Tight 900 в левой колонке 7/12 ≈ 658px и на экране 360px): до 12 букв — xl 80/36px; 13–15 букв — l 64/32px («Международные» при 80px занимает 696px); 16 и длиннее («Высокоэффективный») не влезают и в l — переписать заголовок. lang=\"ru\" + hyphens: auto + text-wrap: balance — только страховка. Интерлиньяж 0.95, а не 0.85 бренда: у «Й» верх на 0.95em над базовой линией, хвост «у» на 0.21em ниже — при 0.85 соседние строки сталкиваются. Маска hero-text-reveal уже даёт строке запас .15em — не уменьшать."
+      },
+      "h2": {
+        "family": "Inter Tight",
+        "fallback": "Inter, system-ui, sans-serif",
+        "weight": 900,
+        "size_desktop": "48px",
+        "size_mobile": "28px",
+        "line_height": 1,
+        "letter_spacing": "0em"
+      },
+      "h3": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.3,
+        "letter_spacing": "-0.02em"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0em"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "font-feature-settings: \"calt\" — как у бренда."
+      },
+      "label": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.43,
+        "letter_spacing": "0em"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "13px",
+        "line_height": 1.43,
+        "letter_spacing": "0em",
+        "notes": "12 px — только для юридического текста в подвале; текст согласия у формы — не меньше 13 px."
+      },
+      "stat": {
+        "family": "Inter Tight",
+        "fallback": "Inter, system-ui, sans-serif",
+        "weight": 900,
+        "size_desktop": "72px",
+        "size_mobile": "36px",
+        "line_height": 0.95,
+        "letter_spacing": "0em",
+        "notes": "Цифры в полосе результатов и в таблице сравнения: font-variant-numeric: tabular-nums lining-nums. На телефоне по две цифры в ряд, если в числе не больше 7 знаков («15 000+» при 36px = 143px в колонке 156px), иначе по одной в ряд. На телефоне цифра не крупнее заголовка первого экрана."
+      }
+    },
+    "radius": {
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "pill": "999px"
+    },
+    "spacing": {
+      "unit": 4,
+      "section_desktop": "96px",
+      "section_mobile": "48px",
+      "container": "1200px",
+      "gutter_mobile": "16px",
+      "gutter_desktop": "24px",
+      "card_padding_desktop": "32px",
+      "card_padding_mobile": "24px",
+      "grid_gap": "24px",
+      "grid_gap_mobile": "16px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 2px 4px rgba(14,15,12,.06), 0 12px 32px rgba(14,15,12,.10)",
+      "raised_dark": "0 0 0 1px #3a3e36, 0 16px 40px rgba(0,0,0,.55)",
+      "notes": "Карточки без теней: белая карточка на шалфейном фоне уже «приподнята». Тень raised — только у всплывающего: липкая кнопка на телефоне, уведомление, модальное окно."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "240ms",
+      "slow": "450ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.3,0,0,1)",
+      "press_scale": "0.98"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Inter Tight",
+      "fontsource": "inter-tight",
+      "role": "display",
+      "weights": [
+        900
+      ],
+      "replaces": "Wise Sans (проприетарный, 900 в заголовках)"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body+ui",
+      "weights": [
+        400,
+        600
+      ],
+      "replaces": "не заменяет: Inter — второй шрифт самого бренда и открыт по OFL"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "xl",
+      "height": "48px; 52px, когда кнопка во всю ширину (в calc_card и на телефоне)",
+      "padding": "12px 24px",
+      "weight": 600,
+      "font": "button",
+      "hover": "фон светлеет до primary_hover (#cdffad) за 150ms, форма не меняется",
+      "active": "scale(0.98)",
+      "focus": "outline 2px solid text, outline-offset 3px",
+      "notes": "Лаймовая пилюля — единственный цвет действия на странице и одна на экран. Текст на ней только тёмный. Скругление 24px: при высоте 48px это ровная пилюля."
+    },
+    "button_secondary": {
+      "bg": "background (на белой полосе) / surface (на шалфейной полосе)",
+      "color": "text",
+      "radius": "xl",
+      "height": "48px",
+      "padding": "12px 24px",
+      "weight": 600,
+      "hover": "фон темнеет на 4% (light) / светлеет на 6% (dark)",
+      "focus": "outline 2px solid text, offset 3px"
+    },
+    "button_tertiary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "xl",
+      "height": "48px",
+      "padding": "12px 24px",
+      "weight": 600,
+      "hover": "инверсия: фон text, текст background"
+    },
+    "button_icon": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "size": "40px",
+      "notes": "Круглая кнопка для плюса в вопросах и стрелок"
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "xl",
+      "padding": "32px desktop / 24px mobile",
+      "border": "none",
+      "shadow": "none",
+      "notes": "На белой полосе карточки берут bg background (шалфей). Правило бренда: шалфейная полоса — белые карточки, белая полоса — шалфейные."
+    },
+    "card_tint": {
+      "bg": "tint",
+      "color": "text",
+      "radius": "xl",
+      "padding": "32px / 24px",
+      "notes": "Мягко-зелёная карточка для одного выделенного преимущества в ряду"
+    },
+    "card_inverse": {
+      "bg": "inverse",
+      "heading": "on_inverse",
+      "color": "on_inverse_body",
+      "radius": "xl",
+      "padding": "32px / 24px",
+      "cta": "bg inverse_cta, color on_inverse_cta",
+      "notes": "Промо-момент и выделенный тариф. В светлой теме: чёрная карточка с лаймовым заголовком. В тёмной — полярность переворачивается: шалфейная карточка с чёрным текстом и чёрной кнопкой с лаймовой надписью."
+    },
+    "calc_card": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "xl",
+      "padding": "32px desktop / 24px mobile",
+      "notes": "Фирменный «конвертер валют», переделанный под лендинг: в нём живёт калькулятор выгоды или сама форма заявки. Одна такая карточка на экран. Остаётся белой с рамкой на любой полосе — это исключение из правила чередования поверхностей. Здесь же живёт единственная лаймовая кнопка первого экрана."
+    },
+    "input": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid text",
+      "radius": "md",
+      "height": "56px",
+      "padding": "12px 16px",
+      "font": "body 16px (не меньше — иначе iOS увеличивает страницу)",
+      "label": "над полем, стиль label, цвет text",
+      "placeholder": "text_muted, только пример формата, не вместо подписи",
+      "focus": "рамка 2px text + внешнее кольцо 3px primary",
+      "error": "рамка 2px error, текст ошибки error под полем, aria-describedby"
+    },
+    "checkbox": {
+      "size": "20px",
+      "border": "1.5px solid text",
+      "radius": "6px (отдельно от шкалы: sm 8px у квадрата 20px выглядит кругом)",
+      "checked": "фон text, галочка background",
+      "notes": "Для согласия на обработку данных. По умолчанию не отмечен."
+    },
+    "badge": {
+      "bg": "tint",
+      "color": "on_tint",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "label (14px 600)",
+      "notes": "Надзаголовок над оффером первого экрана и метки «Выгоднее» в таблице. На шалфейной полосе фон бейджа — surface: tint к шалфею 1.05:1, и плашка пропадает."
+    },
+    "compare_table": {
+      "container": "card, radius xl, overflow hidden",
+      "header": "caption 600, text_muted, фон background",
+      "row": "body, разделитель 1px border с прозрачностью 40%",
+      "our_column": "фон tint, цифры on_tint 600",
+      "others": "text_muted",
+      "notes": "Фирменный приём бренда — честное сравнение цены с альтернативами. Только проверяемые цифры с датой замера."
+    },
+    "stat": {
+      "number": "typography.stat, цвет on_inverse на полосе inverse",
+      "label": "caption, on_inverse_body; подпись говорит, что именно посчитано и за какой период"
+    },
+    "faq_item": {
+      "divider": "1px solid border",
+      "question": "h3 (20px на телефоне)",
+      "icon": "button_icon с плюсом, поворот на 45° при раскрытии",
+      "answer": "body, text_muted, max-width 68ch"
+    },
+    "nav": {
+      "bg": "surface (light) / background (dark)",
+      "height": "72px desktop / 60px mobile",
+      "link": "label 14px 600, text",
+      "cta": "button_primary высотой 40px справа (на телефоне 44px — палец)",
+      "sticky": "да; при прокрутке — нижняя линия 1px border",
+      "notes": "На телефоне ссылки прячутся, остаётся только кнопка заявки"
+    },
+    "footer": {
+      "bg": "inverse (light) / surface (dark)",
+      "color": "on_inverse_body (light) / text_muted (dark)",
+      "padding": "48px 24px",
+      "font": "caption",
+      "notes": "Реквизиты, ссылка на политику обработки данных, контакты"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Полоса во всю ширину цвета background (шалфей). Раскладка 7/5. Слева: бейдж-надзаголовок, заголовок display в 2–3 строки, лид 20px цвета text_muted, строка доверия caption (цифра клиентов, срок ответа) и при необходимости контурная кнопка button_tertiary («Как считаем цену»). Справа calc_card: короткий калькулятор выгоды с лаймовой кнопкой «Получить расчёт» или сразу форма заявки из двух полей — в ней единственная лаймовая пилюля первого экрана. Фото людей не нужны: вместо них цифры, иллюстрации SVG и макеты продукта внутри карточек.",
+    "section_order": [
+      "nav",
+      "hero",
+      "proof_bar",
+      "benefits",
+      "how",
+      "numbers",
+      "compare",
+      "testimonials",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "band_rhythm": "hero — шалфей; proof_bar — продолжение шалфея первого экрана: 3–4 факта текстом через разделители, без логотипов; benefits — белая полоса с шалфейными карточками (одна card_tint); how — шалфей с белыми карточками-шагами; numbers — inverse с цифрами stat; compare — белая; testimonials — шалфей; pricing — белая, выделенный тариф card_inverse; faq — шалфей; lead_form — белая полоса с calc_card; footer — inverse.",
+    "grid": "12 колонок, контейнер 1200px, промежуток 24px (на телефоне 16px); первый экран 7/5, карточки по 3 (преимущества) и по 2 (отзывы, тарифы до 3)",
+    "mobile_notes": "Всё в одну колонку, поля 16px. Первый экран: бейдж → заголовок 36px → лид → строка доверия → calc_card во всю ширину, её лаймовая кнопка 52px во всю ширину карточки. Полосы 48px сверху и снизу. Цифры stat по две в ряд, длинные числа — по одной. Таблица сравнения превращается в карточки «мы / альтернатива» без горизонтальной прокрутки. Когда кнопка calc_card уходит с экрана, появляется липкая лаймовая кнопка заявки. Проверка — экран 360px: ни одно слово заголовка не выходит за край.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — первый экран в одну колонку, calc_card шириной 8 колонок, карточки по 2",
+      "desktop": "≥1024px — первый экран 7/5",
+      "wide": "≥1440px — полосы во всю ширину окна, контейнер прежний 1200px"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "optional_fields": [
+      "comment"
+    ],
+    "consent_152fz": true,
+    "consent_text": "Отметка «Согласен на обработку персональных данных» со ссылкой на политику обработки. Не отмечена по умолчанию, отдельно от любых рассылок.",
+    "style": "Форма живёт в calc_card: белая карточка с рамкой 1px цвета text и скруглением 24px. Подписи 14px 600 над полями, поля 56px с рамкой 1px text и скруглением 12px, между полями 16px. Кнопка — лаймовая пилюля 52px во всю ширину карточки с глаголом результата («Получить расчёт»), под ней строка caption: срок ответа и что не будет спама.",
+    "error_state": "Отказ сервера — видимым текстом цвета error прямо под кнопкой, введённое остаётся в полях. Заявку с заполненными именем и телефоном не отбрасывать ни проверкой, ни ловушкой для ботов — принять и пометить.",
+    "success_state": "Содержимое карточки сменяется на месте без перезагрузки и без изменения высоты: круг 64px цвета primary с тёмной галочкой SVG, заголовок h3 «Заявка у нас», строка «Перезвоним в течение 15 минут в рабочее время» и ссылка на примеры. «Спасибо» показывается только после ответа сервера {\"ok\": true}."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "fade-up-stagger",
+    "counter-up",
+    "cta-attention",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split",
+        "centered"
+      ],
+      "hero_band": [
+        "sage",
+        "inverse"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "form_position": [
+        "hero",
+        "bottom"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "display_weight_900",
+      "single_accent",
+      "band_rhythm",
+      "cards_without_shadows",
+      "form_and_consent_152fz"
+    ],
+    "default": {
+      "hero_layout": "split",
+      "hero_band": "sage",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "form_position": "hero",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero"
+    },
+    "legend": {
+      "hero_layout": {
+        "split": "7/5: текст слева, calc_card справа (по умолчанию)",
+        "centered": "текст по центру в 8 колонках, calc_card под ним шириной 6 колонок"
+      },
+      "hero_band": {
+        "sage": "первый экран на шалфее (по умолчанию)",
+        "inverse": "первый экран на полосе inverse: заголовок on_inverse (лайм в светлой теме), лид on_inverse_body; calc_card остаётся белой с рамкой"
+      },
+      "cta_color_role": {
+        "primary": "лаймовая пилюля (по умолчанию)",
+        "accent": "тёмно-зелёная пилюля #163300 с лаймовой надписью (в тёмной теме #e2f6d5 с #163300) — на всей странице вместо лайма, а не рядом с ним. На полосе inverse кнопка всегда inverse_cta: accent к inverse 1.05–1.38:1, кнопка пропадёт"
+      },
+      "headline_scale": {
+        "xl": "display 80/36px (по умолчанию), слова до 12 букв",
+        "l": "display 64/32px; обязателен, если в заголовке слово из 13–15 букв. Слово из 16 букв и длиннее не влезает ни в один масштаб — заголовок переписать"
+      },
+      "form_position": {
+        "hero": "форма имя + телефон в calc_card первого экрана, внизу страницы — та же форма ещё раз",
+        "bottom": "в calc_card первого экрана калькулятор, его кнопка ведёт к форме внизу и переносит посчитанные значения"
+      },
+      "motion_level": {
+        "none": "без украшающего движения; form-success и sticky-cta-mobile остаются — это обратная связь, а не украшение",
+        "subtle": "все рецепты из motion_map"
+      },
+      "social_proof_position": {
+        "under_hero": "proof_bar сразу под первым экраном",
+        "before_form": "отзывы и цифры прямо перед формой, proof_bar убран"
+      }
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "do": [
+    "Одна лаймовая пилюля на экран — главное действие; на первом экране она живёт в calc_card, слева только строка доверия и при необходимости контурная кнопка.",
+    "Заголовки только Inter Tight 900 в обычном регистре с интерлиньяжем 0.95–1.0; остальной текст — Inter 400/600.",
+    "Скругление 24px у кнопок и карточек, 12px у полей; острых углов в интерфейсе нет.",
+    "Чередуйте полосы: шалфейная с белыми карточками, белая с шалфейными — глубина из смены поверхностей, без теней.",
+    "Покажите цену честно: таблица сравнения с альтернативами, у каждой цифры — источник и дата замера.",
+    "Делайте цифры героями: срок, экономия и цена — Inter Tight 900 с табличными цифрами, крупнее окружающего текста.",
+    "Проверяйте заголовок на экране 360px и в колонке 7/12: слово из 13–15 букв — масштаб l (64/32px), слово длиннее — переписать, а не переносить посреди слова."
+  ],
+  "dont": [
+    "Не добавлять второй яркий акцент: персиковый #ffc091 и голубой #38c8ff из палитры бренда — только внутри иллюстраций.",
+    "Не ставить лаймовую кнопку на зелёный фон (включая tint) и не писать лаймовым текстом по белому или шалфейному — 1.2–1.5:1.",
+    "Не набирать заголовки тоньше 900 и не заменять их нейтральным гротеском среднего веса.",
+    "Не использовать серый #868685 для текста — только для контуров; текст ошибки — error (#a72027, в тёмной теме #f2777b), яркий #d03238 — только для значков.",
+    "Не превращать зелёный бренда в цвет успеха: для статусов — отдельные success и error.",
+    "Не ставить на первый экран фото людей и сток: вместо них цифры, калькулятор и макет продукта.",
+    "Не прятать согласие на обработку данных в предотмеченную галочку."
+  ],
+  "prompt_snippet": "Build the landing in a Wise-inspired style; expose tokens as CSS variables --color-<key>; self-host fonts. Canvas is sage #E8EBE6; content sits in white #FFFFFF cards, 24px radius, no shadows: depth comes from surface contrast. Alternate full-bleed bands: sage with white cards, white with sage cards, plus a near-black #0E0F0C band with lime #9FE870 numbers. Headings: Inter Tight 900, line-height 0.95, sentence case, 80px desktop / 36px mobile; 64/32px when any word has 13+ letters. Body: Inter 400/600, 16px; lead 20px. One lime pill per screen: #9FE870 with #0E0F0C text, 48px tall, 24px radius, 2px dark focus outline; never lime text on light surfaces. Hero 7/5: badge, headline, lead and trust line left; right, a white card with a 1px #0E0F0C border holding name and phone, an unchecked consent box and the only lime button. Add an honest price comparison table. Dark theme: background #0E0F0C, cards #1E211B, text #E8EBE6.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/wise/DESIGN.md",
+    "notes": "Wise Sans (проприетарный) заменён на Inter Tight 900 (OFL, кириллица); Inter оставлен — бренд сам использует его как второй шрифт. Фирменная пара кнопки #9FE870/#0E0F0C даёт 13:1 — корректировать не пришлось; граница лаймовой кнопки к фону всего 1.2–1.5:1, кнопку опознают по тёмной надписи, поэтому светлый текст на лайм класть нельзя. Красный бренда #D03238 даёт 4.16 на шалфее — для текста ошибок взят его же тёмный вариант #A72027 (6.06), #D03238 оставлен для значков. Серый #868685 (3.0 на шалфее) выведен из текста и оставлен для контуров. Акцент светлой темы — фирменная пара ink-deep #163300 с лаймовым текстом из источника, а не новый цвет. Тёмной темы у бренда нет: собрана из его же чернильных полос — фон #0E0F0C, карточки #1E211B, текст шалфейный, лайм остаётся единственной кнопкой; инверсная полоса в тёмной теме переворачивается в шалфей с чёрным текстом (правило источника для выделенного тарифа), а акцент — бледно-зелёный #E2F6D5 с текстом #163300. Под длинные русские слова заголовок первого экрана уменьшен со 126 до 80px, на телефоне 36px (замер Inter Tight 900: при 88px в колонку 7/12 не влезало уже «Шумоизоляция» из 12 букв, при 80px влезают все слова до 12 букв, при 36px на экране 360 — до 14), интерлиньяж поднят с 0.85 до 0.95 (у «Й» 0.95em над базовой линией, у хвоста «у» 0.21em под ней), отступы полос увеличены с 48 до 96px под рекламный лендинг. Кнопка первого экрана перенесена в калькулятор/форму, чтобы лаймовая пилюля была одна на экран."
+  },
+  "motion_map": {
+    "hero-text-reveal": "заголовок первого экрана 2–3 строки; тяжёлый 900 под маской — главный момент движения на странице, других входных анимаций на первом экране нет",
+    "fade-up-stagger": "карточки преимуществ, шаги, отзывы и тарифы; calc_card первого экрана не анимировать — это LCP-зона и место кнопки",
+    "counter-up": "цифры stat на полосе inverse и строка доверия; только проверяемые числа с периодом",
+    "accordion-smooth": "частые вопросы: круглая кнопка с плюсом поворачивается на 45° за 240ms",
+    "form-success": "ответ формы в calc_card: лаймовый круг 64px с тёмной галочкой, высота карточки не меняется",
+    "sticky-cta-mobile": "липкая лаймовая кнопка на телефоне с тенью raised, прячется, когда calc_card с формой в кадре",
+    "cta-attention": "уровень subtle и только в варианте form_position = bottom: лаймовая пилюля калькулятора в calc_card первого экрана (она ведёт к форме, а не отправляет её) и кнопка «Выбрать» у рекомендуемого тарифа — не больше двух на страницу. При form_position = hero кнопка первого экрана — отправка формы, рецепт на неё не ставить. --cta-radius: 24px; надпись тёмная, поэтому блик светлый: --cta-shine: rgba(255,255,255,.6); свечение лаймом без тени: --cta-glow: color-mix(in srgb, #9fe870 35%, transparent), --cta-glow-shadow: transparent — теней у кнопок в стиле нет. В варианте cta_color_role = accent (лаймовая надпись на #163300, 9.45:1) блик по умолчанию .18."
+  }
+}

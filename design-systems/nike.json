@@ -1,0 +1,628 @@
+{
+  "slug": "nike",
+  "name": "Nike",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Nike; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Рекламный щит сверху, каталог снизу: огромный узкий лозунг заглавными прямо на фото во всю ширину, а под ним спокойная чёрно-белая витрина с одним серым #f5f5f5. Кнопки — только пилюли, главная чёрная; плитки и фото без скруглений и теней, между ними 8px. Цвет несёт только фотография, красный появляется лишь в цене со скидкой.",
+  "summary_en": "Billboard above, catalog below: a towering condensed uppercase slogan burned into full-bleed photography, sitting over a calm black-and-white retail chrome with a single soft gray #f5f5f5. Actions are pills only, the main one black; tiles and images have no radius and no shadow and sit 8px apart. Color lives only in the photography; red appears solely in sale prices.",
+  "best_for": [
+    "спорт и фитнес-клубы",
+    "одежда, обувь и снаряжение",
+    "школы и секции для детей и взрослых",
+    "марафоны, забеги и турниры",
+    "товарные запуски и распродажи",
+    "бренды с сильной фотографией"
+  ],
+  "goals": [
+    "заявки",
+    "запись на пробное занятие",
+    "регистрация на событие",
+    "продажа товара по акции",
+    "предзаказ новинки"
+  ],
+  "mood": [
+    "энергичный",
+    "уверенный",
+    "контрастный",
+    "журнальный",
+    "минималистичный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f5f5f5",
+        "text": "#111111",
+        "text_muted": "#707072",
+        "border": "#cacacb",
+        "primary": "#111111",
+        "on_primary": "#ffffff",
+        "accent": "#1151ff",
+        "on_accent": "#ffffff",
+        "link": "#111111",
+        "success": "#007d48",
+        "error": "#d30005",
+        "text_body": "#39393b",
+        "border_strong": "#707072",
+        "border_soft": "#e5e5e5",
+        "surface_hover": "#e5e5e5",
+        "primary_hover": "#707072",
+        "accent_hover": "#0034e3",
+        "sale": "#d30005",
+        "info_text": "#1151ff",
+        "inverse": "#111111",
+        "on_inverse": "#ffffff",
+        "on_inverse_muted": "#9e9ea0",
+        "on_image_cta": "#ffffff",
+        "on_on_image_cta": "#111111",
+        "on_image_cta_hover": "#e5e5e5",
+        "tile_violet": "#d6d1ff",
+        "tile_pink": "#ffb0dd",
+        "on_tile": "#111111",
+        "tile_teal": "#0a7281",
+        "on_tile_teal": "#ffffff",
+        "focus": "#111111"
+      },
+      "dark": {
+        "background": "#111111",
+        "surface": "#1e1e1f",
+        "text": "#ffffff",
+        "text_muted": "#9e9ea0",
+        "border": "#39393b",
+        "primary": "#ffffff",
+        "on_primary": "#111111",
+        "accent": "#1151ff",
+        "on_accent": "#ffffff",
+        "link": "#ffffff",
+        "success": "#1eaa52",
+        "error": "#ff5a5f",
+        "text_body": "#e5e5e5",
+        "border_strong": "#707072",
+        "border_soft": "#2a2a2c",
+        "surface_hover": "#2a2a2c",
+        "primary_hover": "#cacacb",
+        "accent_hover": "#0034e3",
+        "sale": "#ff5a5f",
+        "info_text": "#8aa0ff",
+        "inverse": "#f5f5f5",
+        "on_inverse": "#111111",
+        "on_inverse_muted": "#4b4b4d",
+        "on_image_cta": "#ffffff",
+        "on_on_image_cta": "#111111",
+        "on_image_cta_hover": "#e5e5e5",
+        "tile_violet": "#262138",
+        "tile_pink": "#3a0f28",
+        "on_tile": "#ffffff",
+        "tile_teal": "#0a7281",
+        "on_tile_teal": "#ffffff",
+        "focus": "#ffffff"
+      }
+    },
+    "gradient": {
+      "scrim_bottom": "linear-gradient(0deg, rgba(17,17,17,.78) 0%, rgba(17,17,17,.45) 38%, rgba(17,17,17,0) 68%)",
+      "scrim_bottom_mobile": "linear-gradient(0deg, rgba(17,17,17,.82) 0%, rgba(17,17,17,.55) 45%, rgba(17,17,17,0) 80%)",
+      "scrim_top": "linear-gradient(180deg, rgba(17,17,17,.6) 0%, rgba(17,17,17,0) 55%)",
+      "notes": "Не украшение, а подложка под белый текст на фото: бренд подбирает цвет лозунга под каждый кадр, агенту так нельзя — поэтому текст на фото всегда лежит на затемнении. Других градиентов в стиле нет. scrim_bottom_mobile — для кадра 4:5 на телефоне: там текст занимает большую долю высоты кадра."
+    },
+    "typography": {
+      "display": {
+        "family": "Sofia Sans Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 900,
+        "size_desktop": "96px",
+        "size_mobile": "44px",
+        "line_height": 0.92,
+        "letter_spacing": "-0.005em",
+        "text_transform": "uppercase",
+        "notes": "Только лозунг первого экрана. До 600px — 44px (на экранах уже 360px — 38px), шире — font-size: clamp(52px, 7.5vw, 96px); text-wrap: balance. Строки режутся по смыслу руками, каждая строка — отдельный блок, без дефисов: перенос в капсе читается как ошибка. 2–3 строки на компьютере и до 4 на телефоне, по 1–3 слова. Слово длиннее 12 букв в телефон не влезает («ПРОФЕССИОНАЛЬНЫЕ» при 44px — 388px при колонке 343px) — такой лозунг переписать короче."
+      },
+      "display_section": {
+        "family": "Sofia Sans Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 900,
+        "size_desktop": "64px",
+        "size_mobile": "36px",
+        "line_height": 0.92,
+        "letter_spacing": "-0.005em",
+        "text_transform": "uppercase",
+        "notes": "Лозунг второй плитки-кампании (campaign_band) и заголовок над формой заявки. До 600px — 36px, шире — clamp(44px, 5vw, 64px). Правила строк те же, что у display."
+      },
+      "h2": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "32px",
+        "size_mobile": "24px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.01em",
+        "notes": "Обычный регистр, без капса. Заголовок секции стоит сразу над контентом, без надзаголовков и декоративных отступов."
+      },
+      "h3": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.005em"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "18px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Одна строка под лозунгом, максимум две. Не шире 56ch."
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Цвет абзацев — text_body (#39393b), заголовков и цен — text."
+      },
+      "body_strong": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Название под плиткой, пункт меню, цена, вопрос в FAQ."
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.5,
+        "letter_spacing": "0em"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "'Helvetica Neue', Arial, system-ui, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "14px",
+        "line_height": 1.5,
+        "letter_spacing": "0em",
+        "notes": "Подписи под плитками, счётчики, текст согласия у формы (цвет text_muted). Бейджи — 12px 500. Юридический текст в подвале — 12px, не меньше (у бренда 9px)."
+      },
+      "stat": {
+        "family": "Sofia Sans Condensed",
+        "fallback": "'Arial Narrow', 'Roboto Condensed', system-ui, sans-serif",
+        "weight": 900,
+        "size_desktop": "72px",
+        "size_mobile": "40px",
+        "line_height": 0.9,
+        "letter_spacing": "0em",
+        "text_transform": "uppercase",
+        "notes": "Цифры полосы результатов и номера шагов: font-variant-numeric: tabular-nums lining-nums. Подпись под цифрой — caption, text_muted; на чёрной полосе inverse — цифра on_inverse, подпись on_inverse_muted."
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "4px",
+      "md": "24px",
+      "lg": "0px",
+      "pill": "999px",
+      "circle": "50%",
+      "notes": "Шкала не монотонная намеренно. lg — слот крупных контейнеров, и у этого стиля он 0: плитки, фото, карточки, плитка формы, шапка, подвал. md 24px — только поля ввода (фирменная геометрия поля поиска). sm 4px — только чекбокс. pill — все кнопки, чипы и бейджи; circle — иконки-кнопки 40px, значок успеха формы и точки."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "64px",
+      "section_mobile": "40px",
+      "container": "1440px",
+      "gutter_desktop": "48px",
+      "gutter_mobile": "16px",
+      "tile_gap": "8px",
+      "stack_gap": "8px",
+      "card_padding_desktop": "32px",
+      "card_padding_mobile": "24px",
+      "text_column": "720px",
+      "notes": "Плитки и фото стоят вплотную с зазором 8px (на телефоне 4px). Подписи под плиткой — сразу под картинкой, через 8px, без внутреннего отступа карточки."
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "inset 0 -1px 0 #e5e5e5",
+      "raised_dark": "inset 0 -1px 0 #2a2a2c",
+      "sticky_bottom_bar": "inset 0 1px 0 #e5e5e5",
+      "notes": "Теней в стиле нет. Единственный признак глубины — внутренняя линия 1px под липкой шапкой (или над липкой кнопкой на телефоне). Всё остальное делают фото и смена белого на серый."
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "250ms",
+      "slow": "500ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "press_scale": "0.97",
+      "notes": "Движения мало: страница собрана как печатный каталог. Резкий старт и мягкая остановка (ease_emphasized) — только у лозунга и открытия фото."
+    }
+  },
+  "fonts": [
+    {
+      "family": "Sofia Sans Condensed",
+      "fontsource": "sofia-sans-condensed",
+      "role": "display",
+      "weights": [
+        900
+      ],
+      "replaces": "Nike Futura ND (проприетарный узкий Futura Extra Bold для лозунгов). Предложенные в источнике Bebas Neue и Anton не подходят: в них нет кириллицы.",
+      "subsets": [
+        "latin",
+        "latin-ext",
+        "cyrillic"
+      ],
+      "load_note": "Подключать поднаборы latin + latin-ext + cyrillic из npm-пакета @fontsource (файлы кладутся к себе, без CDN): цифры, «», тире и минус лежат в latin, знак ₽ (U+20BD) — в latin-ext; с одним cyrillic цифры и цены уходят в системный шрифт с засечками. font-display: swap; лозунговый шрифт — <link rel=preload> для первого экрана."
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "headings+body+ui",
+      "weights": [
+        400,
+        500
+      ],
+      "replaces": "Helvetica Now Display / Helvetica Now Text (проприетарные); Inter рекомендован самим источником как замена",
+      "subsets": [
+        "latin",
+        "latin-ext",
+        "cyrillic"
+      ],
+      "load_note": "Подключать поднаборы latin + latin-ext + cyrillic из npm-пакета @fontsource (файлы кладутся к себе, без CDN): цифры, «», тире и минус лежат в latin, знак ₽ (U+20BD) — в latin-ext; с одним cyrillic цифры и цены уходят в системный шрифт с засечками. font-display: swap; лозунговый шрифт — <link rel=preload> для первого экрана."
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "pill",
+      "height": "48px (56px в форме, в липкой кнопке и под фото первого экрана на телефоне)",
+      "padding": "12px 24px",
+      "weight": 500,
+      "font": "button",
+      "hover": "фон переходит в primary_hover (#707072 в светлой теме, #cacacb в тёмной) за 150ms, форма и размер не меняются",
+      "active": "transform: scale(0.97) на 100ms",
+      "focus": "box-shadow: 0 0 0 2px background, 0 0 0 4px focus",
+      "notes": "Одна чёрная пилюля на экран — главное действие. В тёмной теме она белая с чёрной надписью."
+    },
+    "button_secondary": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "height": "48px",
+      "padding": "12px 24px",
+      "weight": 500,
+      "hover": "фон surface_hover",
+      "focus": "как у button_primary",
+      "notes": "Серая пилюля — вторая кнопка рядом с чёрной («Смотреть цены»). На сером фоне полосы — фон background."
+    },
+    "button_on_image": {
+      "bg": "on_image_cta",
+      "color": "on_on_image_cta",
+      "radius": "pill",
+      "height": "44px; в первом экране телефона её заменяет чёрная button_primary 56px во всю ширину сразу под фото",
+      "padding": "10px 24px",
+      "weight": 500,
+      "hover": "фон on_image_cta_hover (#e5e5e5) за 150ms",
+      "active": "transform: scale(0.97) на 100ms",
+      "focus": "box-shadow: 0 0 0 2px #111111, 0 0 0 4px #ffffff — двойное кольцо видно на любом кадре",
+      "position": "левый нижний угол плитки-кампании, отступ 32px (телефон 20px)",
+      "notes": "Белая пилюля поверх фото — главное действие внутри фото-плитки. Одинаковая в обеих темах."
+    },
+    "button_icon": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "pill",
+      "size": "40px (зона нажатия 48px)",
+      "notes": "Стрелки ленты фото, закрыть меню, плюс в FAQ"
+    },
+    "tile_media": {
+      "image_bg": "surface",
+      "radius": "none",
+      "shadow": "none",
+      "padding": "0",
+      "ratio": "1:1 для товара и результата, 4:5 для людей",
+      "meta": "под картинкой через 8px: название body_strong text, подпись caption text_muted, цена body_strong",
+      "hover": "картинка не увеличивается; подчёркивается только название",
+      "notes": "Фото и есть карточка. Никаких рамок, скруглений и внутренних отступов."
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "radius": "none",
+      "padding": "32px desktop / 24px mobile",
+      "border": "none",
+      "shadow": "none",
+      "notes": "Текстовая плитка для преимуществ, если фото нет: иконка SVG 32px цвета text, заголовок h3, абзац body text_body. Ставить плитки вплотную с зазором 8px."
+    },
+    "campaign_tile": {
+      "media": "фото во всю ширину контейнера: 16:9 на компьютере, 4:5 на телефоне (отдельный кадр через <picture>)",
+      "overlay": "gradient.scrim_bottom (на телефоне — scrim_bottom_mobile)",
+      "headline": "display или display_section, цвет #ffffff, в нижней левой трети",
+      "lead": "lead, #ffffff, одна строка",
+      "cta": "button_on_image",
+      "radius": "none",
+      "notes": "Фирменный приём бренда. Контраст белого текста проверять на самом светлом месте кадра под текстом — не меньше 4.5. На телефоне текст на фото — не выше нижних 45% кадра: если лозунг с lead туда не помещается, кнопка уходит под фото."
+    },
+    "card_inverse": {
+      "bg": "inverse",
+      "heading": "on_inverse",
+      "color": "on_inverse_muted",
+      "radius": "none",
+      "padding": "32px / 24px",
+      "cta": "пилюля 48px: фон on_inverse, текст inverse (в светлой теме белая с чёрной надписью, в тёмной — чёрная со светлой); hover — фон #e5e5e5 в светлой теме и #39393b в тёмной",
+      "notes": "Плитка выгоды («Для участников клуба»): чёрная в светлой теме, светло-серая с чёрным текстом в тёмной. button_on_image сюда не ставить: в тёмной теме белая пилюля сливается со светло-серой плиткой."
+    },
+    "card_tint": {
+      "bg": "tile_violet или tile_pink",
+      "color": "on_tile",
+      "radius": "none",
+      "padding": "32px / 24px",
+      "notes": "Не больше одной цветной плитки в ряду — для выделенного предложения. tile_teal с белым текстом — для ниш «природа, трейл, вода»."
+    },
+    "input": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "height": "56px",
+      "padding": "0 20px",
+      "font": "body 16px (не меньше — иначе iOS увеличивает страницу)",
+      "label": "над полем, caption 14px 500, цвет text",
+      "placeholder": "text_muted, только пример формата: +7 900 000-00-00",
+      "focus": "рамка остаётся 1px, до 2px её добирает box-shadow: inset 0 0 0 1px text — без сдвига раскладки; outline убирать только вместе с этой тенью",
+      "error": "рамка 2px error, текст ошибки caption цвета error под полем, aria-describedby",
+      "notes": "Геометрия фирменного поля поиска: мягкая пилюля 24px."
+    },
+    "chip": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "pill",
+      "height": "40px",
+      "padding": "8px 16px",
+      "active": "фон text, текст background, рамка text — полная инверсия без промежуточного состояния",
+      "notes": "Выбор услуги или размера в форме («Пробное», «Абонемент», «Персональные»). role=radio внутри role=radiogroup."
+    },
+    "checkbox": {
+      "size": "20px",
+      "border": "1.5px solid text",
+      "radius": "4px",
+      "checked": "фон text, галочка SVG цвета background",
+      "notes": "Согласие на обработку данных. По умолчанию не отмечен."
+    },
+    "badge": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "caption 12px 500",
+      "notes": "Метка поверх фото в левом верхнем углу: «Новинка», «Осталось 8 мест», «Только в мае»."
+    },
+    "price_row": {
+      "regular": "body_strong, text",
+      "sale": "цена со скидкой body_strong цвета sale → старая цена caption text_muted зачёркнутая → «−20%» caption цвета sale",
+      "notes": "Единственное место, где красный появляется вне ошибок. Без плашек и фона."
+    },
+    "stat": {
+      "number": "typography.stat, цвет text",
+      "label": "caption, text_muted",
+      "layout": "4 в ряд на компьютере, 2×2 на телефоне, между ними линия 1px border"
+    },
+    "faq_item": {
+      "divider": "1px solid border под каждой строкой",
+      "question": "Inter 500, 18px на компьютере / 16px на телефоне, text",
+      "padding": "24px 0",
+      "icon": "шеврон 20px справа, поворот на 180° при раскрытии",
+      "answer": "body, text_body, max-width 68ch, отступ снизу 24px",
+      "notes": "На <details>/<summary>, без карточек и фона."
+    },
+    "utility_bar": {
+      "bg": "surface",
+      "color": "text",
+      "height": "36px",
+      "font": "caption 12px 500",
+      "content": "справа: телефон · часы работы · «Ответим за 15 минут»",
+      "notes": "Узкая серая строка над шапкой — узнаваемая деталь бренда. На телефоне скрывается."
+    },
+    "promo_strip": {
+      "bg": "surface",
+      "color": "text",
+      "padding": "12px 16px",
+      "text": "одна строка по центру: body_strong 14px, под ней или рядом ссылка caption 12px text с подчёркиванием («Подробнее»)",
+      "notes": "Серая полоса сразу под шапкой с одним сообщением-условием: «Первая тренировка бесплатно — до конца месяца». Только реальное условие со сроком. Одно статичное сообщение, без автопрокрутки; не липкая. Видна и на телефоне."
+    },
+    "nav": {
+      "bg": "background",
+      "height": "64px desktop / 56px mobile",
+      "link": "body_strong 16px 500, text; активный — линия 2px text снизу, без заливки",
+      "cta": "button_primary высотой 40px справа, только на компьютере",
+      "sticky": "да; при прокрутке — shadow.raised",
+      "notes": "Слева — название компании текстом (Inter 500 20px), по центру 3–5 якорей, справа кнопка. На телефоне — название слева, справа кнопка меню 48px; шторка во всю высоту выезжает справа, пункты Inter 500 24px. Кнопку в шапке на телефоне не показывать — её роль берёт sticky_cta_mobile."
+    },
+    "sticky_cta_mobile": {
+      "bg": "background",
+      "shadow": "sticky_bottom_bar",
+      "padding": "12px 16px calc(12px + env(safe-area-inset-bottom))",
+      "cta": "button_primary 56px во всю ширину",
+      "notes": "Появляется, когда кнопка первого экрана ушла из виду, и прячется у формы заявки."
+    },
+    "footer": {
+      "bg": "background",
+      "border_top": "1px solid border",
+      "columns": "3–4 колонки: заголовок body_strong text, ссылки caption text_muted",
+      "legal": "строка 12px text_muted: реквизиты, ИНН/ОГРН, ссылка на политику обработки персональных данных",
+      "padding": "48px 0 32px"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Плитка-кампания во всю ширину контейнера (1440px; на телефоне — во всю ширину экрана без полей): фото 16:9 (на телефоне свой кадр 4:5 через <picture>), высота не меньше 70vh, с нижним затемнением scrim_bottom. В нижней левой трети — лозунг display 96px заглавными в 2–3 строки белым, под ним одна строка lead белым и белая пилюля «Записаться на пробное» (button_on_image) плюс текстовая ссылка «Смотреть цены» белым с подчёркиванием. Фото первого экрана — <img fetchpriority=\"high\"> без loading=\"lazy\" и без анимации появления: это LCP. Сразу под фото, на белом, без отступа — полоса доверия proof_strip: 3–4 факта в строку (caption 14px, text) или цифры stat итогом, без счётчика. Никаких надзаголовков, бейджей-плашек и иллюстраций: только фото, лозунг, кнопка.",
+    "hero_alt_stacked": "Вариант как на главной бренда: фото или беззвучное зацикленное видео 16:9 без текста, а под ним на белом по центру — caption-надпись («Новый сезон»), лозунг display ЧЁРНЫМ, строка lead и две пилюли рядом: чёрная (главная) и серая. Видео обязательно с кнопкой паузы и постером.",
+    "section_order": [
+      "utility_bar",
+      "nav",
+      "promo_strip",
+      "hero",
+      "proof_strip",
+      "benefits",
+      "campaign_band",
+      "how",
+      "gallery",
+      "pricing",
+      "testimonials",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_notes": "promo_strip — серая строка с одним условием акции под шапкой; proof_strip — белая строка фактов под первым экраном, а в варианте social_proof_position = before_form — единственная чёрная полоса inverse с 4 цифрами stat прямо перед формой; benefits — h2 и 3 плитки (tile_media с фото 4:5 или card без фото) вплотную с зазором 8px; campaign_band — вторая плитка-кампания во всю ширину, display_section 64px, белая пилюля ведёт к форме; how — 3–4 шага: крупная цифра stat, заголовок h3, строка body; gallery — горизонтальная лента фото 4:5 со стрелками button_icon (результаты, зал, товар), на телефоне видно полторы карточки; pricing — 2–3 плитки card на сером со строкой price_row: чёрная пилюля только у выделенного тарифа, у остальных — серые пилюли с фоном background (на сером плитки серая пилюля иначе пропадает); testimonials — цитаты lead (18px / 16px) text в две колонки, имя caption; faq — строки faq_item в колонке 720px; lead_form — серая полоса surface на всю ширину.",
+    "band_rhythm": "Почти всё на белом; серый #f5f5f5 — у строки utility_bar и promo_strip вокруг белой шапки, у подложки фото, плиток тарифов и полосы с формой. Чёрное — максимум одно на странице: полоса цифр перед формой или плитка выгоды card_inverse. Разделителей между секциями нет: секцию отделяет край фото или смена белого на серый.",
+    "grid": "12 колонок, контейнер 1440px, поля 48px, промежуток колонок 24px, промежуток плиток 8px. Первый экран — во всю ширину контейнера; ряды плиток по 3 (преимущества, тарифы) и по 4 (цифры, шаги); текстовые блоки — в колонке 720px по левому краю.",
+    "mobile_notes": "Одна колонка, поля 16px; фото первого экрана и плиток-кампаний — во всю ширину экрана, кадр 4:5. На фото остаются только лозунг 44px (на экранах уже 360px — 38px, до 4 строк) и строка lead — в нижних 45% кадра на затемнении scrim_bottom_mobile. Кнопка «Записаться на пробное» — button_primary 56px во всю ширину сразу под фото на белом, ссылка «Смотреть цены» под ней: вместе с кнопкой текст на фото поднимался бы в светлую часть кадра. Ленты фото листаются пальцем с видимым краем следующей карточки. Плитки идут одна под другой с зазором 4px. Секции 40px сверху и снизу. Строка utility_bar скрыта, promo_strip остаётся; меню — кнопка справа и шторка справа. После ухода кнопки первого экрана появляется sticky_cta_mobile."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "optional_fields": [
+      "service_chips",
+      "comment"
+    ],
+    "consent_152fz": true,
+    "consent_text": "Отметка «Согласен на обработку персональных данных» со ссылкой на политику обработки (caption 14px, text_muted, ссылка text с подчёркиванием). Не отмечена по умолчанию, отдельно от согласия на рассылку. Без отметки кнопка не блокируется: при нажатии рядом появляется понятная подсказка.",
+    "style": "Серая полоса surface во всю ширину. Раскладка 6/6: слева лозунг display_section 64px («ПЕРВАЯ ТРЕНИРОВКА — БЕСПЛАТНО»), под ним 3 строки «что будет дальше» body_strong с цифрами 1–2–3. Справа форма на белой плитке (background, radius 0, отступ 32px): чипы выбора услуги, затем поля 56px с подписями сверху и скруглением 24px, между полями 16px, согласие, чёрная пилюля 56px во всю ширину с глаголом результата («Записаться»), под ней caption text_muted: срок ответа и «без спама». На телефоне форма идёт сразу под лозунгом, плитка без боковых полей.",
+    "error_state": "Отказ сервера — видимым текстом цвета error прямо под кнопкой, введённое остаётся в полях, кнопка снова активна. Заявку с заполненными именем и телефоном не отбрасывать ни проверкой, ни ловушкой для ботов — принять и пометить.",
+    "success_state": "Содержимое белой плитки сменяется на месте, без перезагрузки и без скачка высоты: чёрный круг 64px с белой галочкой SVG, заголовок h3 «Заявка принята», строка body «Перезвоним в течение 15 минут в рабочее время» и серая пилюля «Вернуться к предложению». «Заявка принята» показывается только после ответа сервера {\"ok\": true}."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "image-reveal-clip",
+    "fade-up-stagger",
+    "counter-up",
+    "cta-attention",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "hero-text-reveal": "лозунг первого экрана построчно, каждая строка — .htr-line; --htr-ease: cubic-bezier(.16,1,.3,1) (ease_emphasized), --htr-step: 70ms. Запас маски .15em из рецепта не уменьшать — при интерлиньяже 0.92 он спасает «Й», «Ё», «Щ». Строка lead и белая пилюля — штатным follow; фото под лозунгом не анимировать (это LCP).",
+    "image-reveal-clip": "фото второй плитки-кампании (campaign_band) и фото 4:5 в преимуществах, не больше 4 на страницу; --irc-radius: 0px, --irc-zoom: 1.04, --irc-dur: 640ms. У плитки-кампании --irc-bg: #111111 — белый лозунг поверх читается и до открытия фото; у фото преимуществ --irc-bg: var(--color-surface). Фото первого экрана и лента gallery — без шторки.",
+    "fade-up-stagger": "текстовые плитки card без фото, шаги how и тарифы; строгий вариант: --reveal-dist: 16px, --reveal-dur: 360ms, --reveal-step: 60ms. В ленте gallery data-reveal — на саму ленту. Один приём на секцию: где фото открываются шторкой, карточки не выезжают.",
+    "counter-up": "только цифры ниже первого экрана — чёрная полоса перед формой (вариант social_proof_position = before_form). Под первым экраном цифры стоят итогом без счёта: на телефоне это ещё первый экран. Поверх рецепта: .stat__num — typography.stat (Sofia Sans Condensed 900, 72/40px, letter-spacing 0, uppercase), полосу-акцент .stat__label::before удалить — декоративных линий в стиле нет.",
+    "accordion-smooth": "частые вопросы строками без карточек: .faq__item { border: 0; border-bottom: 1px solid var(--color-border); border-radius: 0; background: transparent }, .faq__a { padding: 0 0 24px; color: var(--color-text-body) }; вместо плюса — шеврон 20px, поворот на 180° за 150ms.",
+    "form-success": "ответ в белой плитке формы: .lead { border: 0; border-radius: 0; background: var(--color-background); max-width: none; padding: 32px }; поля — высота 56px, border-radius 24px, рамка var(--color-border-strong), подписи цветом text и весом 500; кнопка — чёрная пилюля 56px. Значок — круг цвета text с галочкой цвета background вместо зелёного (--color-success: var(--color-text) внутри .lead__done): зелёный в стиле не появляется.",
+    "sticky-cta-mobile": "чёрная пилюля 56px во всю ширину на белой панели: .scta { background: var(--color-background); border-top-color: var(--color-border-soft) } — это линия sticky_bottom_bar, без размытия и теней; панель прячется, когда форма в кадре.",
+    "cta-attention": "уровень subtle: финальная чёрная пилюля перед формой и кнопка у товара со скидкой в pricing (цель «продажа товара по акции») — не больше двух на страницу. На белую пилюлю поверх фото первого экрана и на кнопку отправки формы не ставить. Свечения в стиле нет: --cta-glow: transparent; --cta-glow-shadow: transparent — остаются «вдох» до 1.03 и блик. На чёрной пилюле с белой надписью (18.88:1) блик по умолчанию .18; в тёмной теме пилюля белая с чёрной надписью — --cta-shine: transparent, остаётся только вдох."
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "burned_in",
+        "stacked_centered",
+        "split"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "hero_media": [
+        "photo",
+        "video_loop_with_pause"
+      ],
+      "form_position": [
+        "bottom",
+        "after_benefits"
+      ],
+      "motion_level": [
+        "none",
+        "subtle"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "flat_no_shadows",
+      "uppercase_condensed_display",
+      "pill_buttons"
+    ],
+    "default": {
+      "hero_layout": "burned_in",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "hero_media": "photo",
+      "form_position": "bottom",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. xl — лозунг 96px, l — 72px на компьютере (телефон 44 и 38px). split — фото 4:5 справа на 5 колонок, слева лозунг чёрным на белом. accent — синяя пилюля #1151ff вместо чёрной только в варианте теста; остальная страница не меняется. before_form — цифры уезжают из-под первого экрана на чёрную полосу перед формой и там считаются counter-up."
+  },
+  "voice": {
+    "tone": "Лозунг — вызов или приказ в 2–6 словах: глагол в повелительном наклонении или короткое утверждение («БЕГИ СВОИ 10 КМ», «СЕЗОН ОТКРЫТ»). Без восклицательных знаков, многоточий и слов «лучший», «уникальный». Под лозунгом — одна спокойная строка с фактами: что, где, когда, сколько. Кнопка — глагол результата: «Записаться», «Забрать место», «Оформить предзаказ».",
+    "headline_formula": "действие + цель или вызов; 2–4 строки по 1–3 слова, самое длинное слово до 12 букв; цифры цифрами («10 КМ», «30 ДНЕЙ»), между числом и словом неразрывный пробел.",
+    "legal_note": "Скидку и «бесплатно» писать только с реальным условием и сроком, цифры результатов — только проверяемые и с периодом (закон о рекламе). Обещать результат для здоровья и веса нельзя («минус 10 кг за месяц»); можно — формат, расписание, число тренеров, длительность занятия.",
+    "examples": {
+      "фитнес-клуб": {
+        "h1": "ПРИХОДИ НА ПЕРВУЮ ТРЕНИРОВКУ",
+        "lead": "Пробное занятие с тренером: 60 минут, бесплатно и без покупки абонемента.",
+        "cta": "Записаться на пробное"
+      },
+      "забег": {
+        "h1": "БЕГИ СВОИ 10 КМ",
+        "lead": "Городской забег 14 сентября, старт у набережной. Дистанции 5 и 10 км, медаль каждому финишёру.",
+        "cta": "Зарегистрироваться"
+      },
+      "распродажа": {
+        "h1": "СЕЗОН ЗАКРЫВАЕМ СКИДКАМИ",
+        "lead": "−30% на беговую обувь прошлой коллекции до 30 сентября, размеры 36–46.",
+        "cta": "Смотреть модели"
+      },
+      "детская секция": {
+        "h1": "ПЕРВЫЙ ГОЛ — В СУББОТУ",
+        "lead": "Футбол для детей 6–10 лет, группы до 12 человек, первое занятие бесплатно.",
+        "cta": "Записать ребёнка"
+      }
+    }
+  },
+  "do": [
+    "Одно главное действие на блок — чёрная пилюля; рядом допустима только серая, а поверх фото — белая пилюля в левом нижнем углу.",
+    "Лозунги — Sofia Sans Condensed 900 заглавными, интерлиньяж 0.92: первый экран (96/44px), вторая плитка-кампания и заголовок над формой (64/36px); тем же шрифтом — цифры результатов. Всё остальное — Inter 400/500 по шкале 12/14/16/18/20/24/32px, заголовки секций обычным регистром.",
+    "Цвет несёт фотография: кадры во всю ширину 16:9 (телефон 4:5), фото товара и результата 1:1 на сером #f5f5f5, плитки вплотную с зазором 8px (телефон 4px), подписи сразу под фото без карточки.",
+    "Белый текст на фото — всегда на нижнем затемнении scrim_bottom, контраст не меньше 4.5 в самом светлом месте под буквами.",
+    "Красный (#d30005, в тёмной теме #ff5a5f) — только в строке цены со скидкой и в тексте ошибки.",
+    "Лозунг режьте на строки руками по смыслу, слова до 12 букв, без дефисов; в маске строки (hero-text-reveal) держите запас .15em сверху и снизу — иначе при интерлиньяже 0.92 срежет «Й», «Ё» и хвосты «Д», «Щ», «Ц»."
+  ],
+  "dont": [
+    "Не добавлять тени, стекло, свечение и декоративные градиенты: страница плоская, глубину дают фото и смена белого на серый.",
+    "Не скруглять фото, плитки, карточки и форму и не делать прямоугольных кнопок: у кнопок только пилюля или круг, скругление 24px — только у полей ввода.",
+    "Не красить кнопки, ссылки и текст розовым, сиреневым или бирюзовым — это заливки плиток, а не цвета действия и текста.",
+    "Не ставить две сплошные чёрные пилюли в одном блоке (кнопка липкой шапки не в счёт) и две плитки-кампании одного размера рядом.",
+    "Не набирать узким шрифтом абзацы, подписи, кнопки и заголовки мельче 36px — там только Inter.",
+    "Не рисовать рамки полей и чипов светлой линией #cacacb (1.6:1) — для них #707072; светлая линия только для разделителей.",
+    "Не брать фирменные лозунги бренда и их переводы («Just Do It», «Просто сделай это»), галочку-логотип и её подобия — лозунг пишется под нишу клиента."
+  ],
+  "prompt_snippet": "Build the landing in a Nike-inspired style; expose tokens as CSS variables --color-<key>, underscores as hyphens. A full-bleed 16:9 hero photo (4:5 on mobile) with a bottom dark scrim and a huge white uppercase slogan in Sofia Sans Condensed 900, 96px desktop / 44px mobile, line-height 0.92, lower-left third, plus a white pill CTA (mobile: black full-width pill under the photo). Everything else: Inter 400/500, 12–32px, sentence case. Palette: black #111111, white #FFFFFF, gray #F5F5F5; body #39393B, muted #707072. Buttons are pills only: primary #111111 with white text, 48px, hover #707072, one per block; secondary gray. Photos, tiles, cards and the form have zero radius, no shadows, 8px gaps; only inputs get a 24px radius and a 1px #707072 border. Red #D30005 only for sale prices and errors. Lead form on a gray band with an unchecked 152-FZ consent. Dark theme: #111111 background, #1E1E1F surface, white text, white primary pill.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/nike/DESIGN.md",
+    "notes": "Шрифты: Nike Futura ND заменён на Sofia Sans Condensed 900 (OFL, кириллица) — Bebas Neue и Anton из рекомендаций источника без кириллицы, Oswald сравнивался на рендере и ближе к «готическому» рисунку, чем к геометрии Futura; Helvetica Now Display/Text заменены на Inter 400/500, как советует сам источник. Контраст: фирменная кнопка #111111/#FFFFFF даёт 18.9, приглушённый #707072 — 4.94 на белом и 4.53 на #F5F5F5, красный #D30005 — 5.57, синий #1151FF с белым — 5.76: корректировать фирменные пары не пришлось. Светлая линия #CACACB (1.64 на белом) оставлена только для разделителей, рамки полей и чипов переведены на #707072 (не меньше 3:1 по WCAG 1.4.11). Приглушённый текст запрещено класть на #E5E5E5 (3.92). Наведение у бренда не описано (Known Gaps): взят серый #707072 из его же палитры, белый текст на нём — 4.94. «Схлопывание» кнопки scale(0.5) opacity 0.5 из выгрузки заменено на scale(0.97). Тёмной темы у бренда нет: собрана из его чёрных плиток — фон #111111, поверхность #1E1E1F, текст белый, приглушённый — фирменный stone #9E9EA0 (7.06; источник сам отводит его под вторичный текст на тёмном), успех — фирменный success-bright #1EAA52; красный #D30005 на #111111 даёт только 3.4, поэтому ошибка и скидка в тёмной теме — #FF5A5F (6.19); главная кнопка становится белой пилюлей (приём самого бренда для кнопок на фото). Под рекламный лендинг: интерлиньяж лозунга 0.9 → 0.92 из-за «Й»/«Ё» над «Д»/«Щ», отступ секций 48px → 64/40px для текстовых блоков, юридическая строка 9px → 12px, добавлены затемнение под текст на фото, форма заявки с согласием по 152-ФЗ, чипы выбора услуги из фирменного фильтра, липкая кнопка на телефоне. Экспертная проверка 24-09-26: лозунг на телефоне 48 → 44px (замер в Chrome: «ПЕРСОНАЛЬНЫЕ» при 48px — 311px и не влезает в колонку 288px экрана 320), иерархия на телефоне 44/40/36; слот radius.lg переведён в 0 — это радиус контейнеров, а у стиля их нет; сиреневый текст в тёмной цветной плитке заменён на белый; кнопка чёрной плитки выгоды получила свою пару цветов (белая пилюля терялась на светлой плитке тёмной темы); меню на телефоне — справа, как у бренда; на телефоне кнопка первого экрана уехала под фото (на макете 390px лозунг, строка и кнопка вместе поднимались на 66% кадра, в светлую часть без затемнения), добавлено затемнение scrim_bottom_mobile; добавлены серая promo_strip под шапкой, motion_map с поправками рецептов под плоский стиль и voice с формулой лозунга."
+  }
+}

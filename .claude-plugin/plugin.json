@@ -1,0 +1,11 @@
+{
+  "name": "vibe-landing",
+  "displayName": "Vibe Landing Kit",
+  "description": "Рекламный лендинг для A/B-теста одной командой: дизайн-системы в духе мировых брендов с кириллицей, анимации с reduced-motion, семантика из Яндекс Вордстата, проверка качества.",
+  "version": "1.0.0",
+  "author": { "name": "Владимир Дорецкий, Вайб-Маркетолог", "url": "https://vibemarketolog.ru" },
+  "homepage": "https://github.com/vibemarketologru/vibe-landing-kit",
+  "repository": "https://github.com/vibemarketologru/vibe-landing-kit",
+  "license": "MIT",
+  "keywords": ["landing", "ab-test", "design-system", "wordstat", "yandex", "mcp", "russian"]
+}

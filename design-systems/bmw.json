@@ -1,0 +1,652 @@
+{
+  "slug": "bmw",
+  "name": "BMW",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с BMW; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Сдержанный корпоративный стиль автопроизводителя: белый холст, серые полосы и тёмно-синяя фото-полоса на первом экране. Один цвет действия — синий #1c69d4. Всё прямоугольное, без скруглений и теней: глубину дают цветовые блоки и фото. Один шрифт в двух весах: жирные заголовки 700 против тонкого текста 300, ссылки капсом с разрядкой, цифры — ячейками характеристик.",
+  "summary_en": "A measured corporate-automotive look: white canvas, soft grey bands and one dark navy photo band in the hero. A single action color, blue #1c69d4. Everything is rectangular with zero radius and no shadows: depth comes from color blocks and photography. One typeface in two weights: heavy 700 headlines against light 300 body, uppercase tracked links and numbers set as spec cells.",
+  "best_for": [
+    "автосалоны и дилерские центры",
+    "автосервис, детейлинг, шиномонтаж премиум-класса",
+    "инженерные и промышленные компании",
+    "техника, электроника, оборудование",
+    "недвижимость бизнес-класса",
+    "премиальные B2B-услуги и лизинг"
+  ],
+  "goals": [
+    "запись на тест-драйв, осмотр или консультацию",
+    "расчёт стоимости",
+    "подбор комплектации или пакета",
+    "доверие к дорогому продукту"
+  ],
+  "mood": [
+    "сдержанный",
+    "инженерный",
+    "премиальный",
+    "точный",
+    "светлый"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f7f7f7",
+        "text": "#262626",
+        "text_muted": "#6b6b6b",
+        "border": "#e6e6e6",
+        "primary": "#1c69d4",
+        "on_primary": "#ffffff",
+        "accent": "#1a2129",
+        "on_accent": "#ffffff",
+        "link": "#1c69d4",
+        "success": "#15803d",
+        "error": "#dc2626",
+        "text_secondary": "#3c3c3c",
+        "text_strong": "#1a1a1a",
+        "text_disabled": "#9a9a9a",
+        "surface_card": "#fafafa",
+        "surface_strong": "#ebebeb",
+        "border_strong": "#cccccc",
+        "border_input": "#8a8a8a",
+        "primary_hover": "#0653b6",
+        "primary_press": "#0653b6",
+        "primary_disabled": "#d6d6d6",
+        "on_primary_disabled": "#6b6b6b",
+        "focus_ring": "#1c69d4",
+        "band": "#1a2129",
+        "band_elevated": "#262e38",
+        "on_band": "#ffffff",
+        "on_band_muted": "#bbbbbb",
+        "link_on_band": "#6aa6f8",
+        "border_on_band": "#3a4450",
+        "panel_on_band": "#ffffff"
+      },
+      "dark": {
+        "background": "#1a2129",
+        "surface": "#262e38",
+        "text": "#f2f2f2",
+        "text_muted": "#bbbbbb",
+        "border": "#3a4450",
+        "primary": "#1c69d4",
+        "on_primary": "#ffffff",
+        "accent": "#ffffff",
+        "on_accent": "#1a2129",
+        "link": "#6aa6f8",
+        "success": "#4ade80",
+        "error": "#f87171",
+        "text_secondary": "#dcdcdc",
+        "text_strong": "#ffffff",
+        "text_disabled": "#7a8591",
+        "surface_card": "#222a33",
+        "surface_strong": "#2f3843",
+        "border_strong": "#4a5563",
+        "border_input": "#7a8591",
+        "primary_hover": "#0653b6",
+        "primary_press": "#0653b6",
+        "primary_disabled": "#2f3843",
+        "on_primary_disabled": "#9aa3ad",
+        "focus_ring": "#6aa6f8",
+        "band": "#0f1419",
+        "band_elevated": "#1a2129",
+        "on_band": "#ffffff",
+        "on_band_muted": "#bbbbbb",
+        "link_on_band": "#6aa6f8",
+        "border_on_band": "#3a4450",
+        "panel_on_band": "#262e38"
+      }
+    },
+    "contrast_notes": "Пары, которые не проверяет check.mjs, посчитаны по WCAG. Светлая: фирменная кнопка #1c69d4/белый 5.22 — без правок; primary_hover #0653b6/белый 7.19; text_secondary/background 11.03, на surface 10.30; text_muted на surface_card 5.11, на surface 4.97, но на surface_strong только 4.47 — туда приглушённый текст не ставить; link на surface 4.88, на surface_card 5.00; border_input/background 3.45, на surface 3.22 (WCAG 1.4.11); success/background 5.02, на surface 4.68; error/background 4.83, на surface 4.51; accent #1a2129 на surface 15.15. Тёмная полоса band: on_band/band 16.24, on_band_muted/band 8.46, link_on_band/band 6.51 — фирменный синий как ТЕКСТ на полосе даёт лишь 3.11, поэтому ссылки там светло-синие; синяя кнопка как заливка на полосе 3.11 (≥3 для 1.4.11). Затемнение фото: слой 0.80 над белым участком снимка даёт #484d54 — белый 8.52, #bbbbbb 4.44, #6aa6f8 3.42; у тёмного варианта (#0f1419, 0.80) — #3f4347, белый 9.98. Отсюда правило: поверх фото только белый текст. Тёмная тема: text/background 14.50, на surface 12.26; text_secondary/background 11.84, на surface 10.01; text_muted на surface 7.15; link на surface 5.50; border_input/background 4.32, на surface 3.65; error на surface 4.96; success на surface 7.88; on_band_muted/band 9.64; синяя кнопка к фону 3.11, к surface 2.63 — внутри карточки surface подпись кнопки держит контраст 5.22, рамку не добавлять. text_disabled 2.81 в светлой — только для неактивных элементов, не для информации.",
+    "gradient": {
+      "hero_scrim": "linear-gradient(90deg, rgba(26,33,41,0.90) 0%, rgba(26,33,41,0.80) 50%, rgba(26,33,41,0) 80%)",
+      "hero_scrim_dark": "linear-gradient(90deg, rgba(15,20,25,0.92) 0%, rgba(15,20,25,0.80) 50%, rgba(15,20,25,0) 80%)",
+      "photo_to_band": "linear-gradient(180deg, rgba(26,33,41,0) 55%, #1a2129 100%)",
+      "photo_to_band_dark": "linear-gradient(180deg, rgba(15,20,25,0) 55%, #0f1419 100%)",
+      "usage": "Это не декоративные градиенты, а затемнение фото под текстом: у бренда градиентов в интерфейсе нет. hero_scrim кладётся слоем ::after поверх фото первого экрана и полосы с формой. Текстовый блок стоит в левых 6 колонках и не шире 640px — при любой ширине окна от 1024px его правый край не заходит дальше 50% ширины, где затемнение не слабее 0.80. Даже над белым участком фото под текстом получается #484d54: белый держит 8.52, а приглушённый #bbbbbb только 4.44 и светло-синий #6aa6f8 3.42. Поэтому ПОВЕРХ ФОТО весь текст белый (on_band) — надзаголовок, заголовок, подзаголовок, доводы и ссылки (ссылки с подчёркиванием); on_band_muted и link_on_band — только на сплошной заливке band. photo_to_band — нижний край фото на телефоне, где текст стоит уже на сплошной полосе под картинкой. Заливать градиентом кнопки, карточки и фон секций запрещено."
+    },
+    "typography": {
+      "display": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "64px",
+        "size_mobile": "40px",
+        "line_height": 1.08,
+        "letter_spacing": "0",
+        "note": "У бренда 1.05; для кириллицы 1.08, иначе Й и Ё задевают строку выше. Трекинг не сжимать — буквы у бренда стоят свободно. text-wrap: balance; между числом и словом неразрывный пробел («за 1&nbsp;день»), иначе цифра повисает в конце строки"
+      },
+      "h2": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "48px",
+        "size_mobile": "30px",
+        "line_height": 1.12,
+        "letter_spacing": "0"
+      },
+      "display_md": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "32px",
+        "size_mobile": "26px",
+        "line_height": 1.18,
+        "letter_spacing": "0",
+        "note": "Заголовок полосы с формой и подсекций; 24px — заголовок внутри панели формы"
+      },
+      "h3": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.3,
+        "letter_spacing": "0",
+        "note": "Заголовок группы карточек, шагов, вопроса FAQ"
+      },
+      "title": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.35,
+        "letter_spacing": "0",
+        "note": "Название в карточке (model-card бренда)"
+      },
+      "lead": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.5,
+        "letter_spacing": "0",
+        "note": "Подзаголовок первого экрана. Поверх фото — on_band (белый: #bbbbbb над светлым участком снимка даёт лишь 4.44), на сплошной полосе band (телефон) — on_band_muted, на белом — text_secondary"
+      },
+      "body": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0",
+        "note": "У бренда 16px/1.55 весом Light; кириллица весом 300 читается легче на 17px/1.6. Цвет абзацев text_secondary"
+      },
+      "body_sm": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 300,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1.55,
+        "letter_spacing": "0",
+        "note": "Подпись карточки, подвал. У бренда 14px; вес 300 мельче 15px не использовать"
+      },
+      "caption": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.45,
+        "letter_spacing": "0.02em",
+        "note": "Подписи полей, согласие, мета. У бренда 12px/0.5px; для текста согласия 152-ФЗ не меньше 13px"
+      },
+      "label_upper": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "13px",
+        "size_mobile": "12px",
+        "line_height": 1.3,
+        "letter_spacing": "0.1em",
+        "transform": "uppercase",
+        "note": "Ссылки «ПОДРОБНЕЕ ›», надзаголовки, вкладки, подписи ячеек характеристик. Не длиннее трёх слов"
+      },
+      "button": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "15px",
+        "size_mobile": "15px",
+        "line_height": 1,
+        "letter_spacing": "0.02em",
+        "note": "Текст кнопки с заглавной буквы, не капсом. У бренда 14px; кириллица на глаз мельче — 15px"
+      },
+      "nav": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "14px",
+        "size_mobile": "22px",
+        "line_height": 1.4,
+        "letter_spacing": "0.02em",
+        "note": "На телефоне — крупные ссылки в полноэкранном меню"
+      },
+      "stat": {
+        "family": "Onest",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 700,
+        "size_desktop": "40px",
+        "size_mobile": "32px",
+        "line_height": 1,
+        "letter_spacing": "0",
+        "features": "pnum",
+        "note": "Число в ячейке характеристик и цена пакета. Цифры пропорциональные (font-variant-numeric: proportional-nums): у Onest табличная единица шире остальных и даёт просвет — «15 мин» читается как «1 5 мин». tabular-nums — только у бегущего счёта counter-up, в телефонах и в таблицах цен"
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "0px",
+      "md": "0px",
+      "lg": "0px",
+      "icon": "50%",
+      "note": "Шкала двоичная: прямоугольно всё — кнопки, карточки, поля, чипы, панель формы, фото, бейджи, липкая кнопка на телефоне. Круг только у иконки-кнопки 44px (бургер, стрелки слайдера, «наверх») и у значка успеха формы. Радиусы 2–12px из исходника редкие исключения, на лендинге не нужны — поэтому sm/md/lg тоже 0"
+    },
+    "spacing": {
+      "unit": 8,
+      "scale": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64,
+        80
+      ],
+      "section_desktop": "80px",
+      "section_mobile": "56px",
+      "container": "1440px",
+      "container_text": "720px",
+      "gutter_desktop": "48px",
+      "gutter_tablet": "32px",
+      "gutter_mobile": "16px",
+      "card_padding": "24px",
+      "card_padding_mobile": "20px",
+      "grid_gap": "24px",
+      "note": "Ритм плотнее, чем у спортивных брендов: полосы 80px, внутри карточек 24px. Контейнер широкий, но абзацы не шире 720px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "none",
+      "overlay": "0 12px 32px rgba(0,0,0,0.16)",
+      "overlay_dark": "0 12px 32px rgba(0,0,0,0.50)",
+      "focus": "0 0 0 2px var(--background), 0 0 0 4px var(--focus_ring)",
+      "note": "Бренд не использует теней вовсе: глубина — только контраст цветовых блоков (белое против тёмно-синего) и свет на фотографии. overlay разрешён лишь слоям, которые висят над страницей: выпадающее меню, липкая кнопка на телефоне, плашка cookie"
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "240ms",
+      "slow": "480ms",
+      "ease_standard": "cubic-bezier(.4,0,.2,1)",
+      "ease_emphasized": "cubic-bezier(.2,0,0,1)",
+      "note": "Движение инженерное: короткое, прямое, без пружин, отскоков и наклонов. Смещения до 16px, фото открываются шторкой, текст не масштабируется"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Onest",
+      "fontsource": "onest",
+      "role": "display+body+ui",
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "replaces": "BMW Type Next Latin и BMW Type Next Latin Light (фирменные, лицензированы только для BMW и публично не распространяются)",
+      "why": "Гротеск с чуть квадратными округлостями и широкой постановкой — ближе всего к «машинной» пластике фирменного шрифта; как и у бренда, вся иерархия держится на одном семействе в весах 700 и 300",
+      "alternative": "Inter (fontsource: inter, OFL-1.1, кириллица) в тех же весах 700/300 — нейтральнее; его называет заменой исходник. Смешивать с Onest на одной странице нельзя",
+      "install": "npm i @fontsource-variable/onest — раздавать из своей папки, font-display: swap. Подключить подмножества cyrillic, latin (в нём цифры и функция tnum) и latin-ext (знак ₽ U+20BD есть только в нём). Предзагрузить один файл — кириллический вариативный",
+      "license": "OFL-1.1"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "none",
+      "height": "48px",
+      "padding": "14px 32px",
+      "font": "button",
+      "weight": 700,
+      "hover": "фон primary_hover, 150ms ease_standard; без подъёма, тени и увеличения",
+      "active": "фон primary_press",
+      "focus": "outline 2px focus_ring, offset 2px; на тёмной полосе outline 2px on_band",
+      "disabled": "фон primary_disabled, текст on_primary_disabled",
+      "rule": "одна синяя кнопка на экран; на телефоне во всю ширину"
+    },
+    "button_secondary": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "none",
+      "height": "48px",
+      "padding": "13px 31px",
+      "font": "button",
+      "hover": "рамка цветом text",
+      "use": "второе действие рядом с синей кнопкой на светлом фоне"
+    },
+    "button_on_band": {
+      "bg": "transparent",
+      "color": "on_band",
+      "border": "1px solid on_band",
+      "radius": "none",
+      "height": "48px",
+      "padding": "13px 31px",
+      "font": "button",
+      "hover": "фон on_band с прозрачностью 10%",
+      "use": "второе действие на тёмной фото-полосе («Смотреть пакеты»)"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "none",
+      "height": "48px",
+      "padding": "14px 32px",
+      "font": "button",
+      "hover": "светлая тема — фон band_elevated (#262e38); тёмная — фон text_secondary (#dcdcdc)",
+      "use": "альтернативный цвет главной кнопки для A/B (тёмно-синяя в светлой теме, белая в тёмной) и активный чип"
+    },
+    "link_upper": {
+      "color": "text (на полосе on_band)",
+      "font": "label_upper",
+      "icon": "шеврон «›» SVG 8×12, stroke 1.5px currentColor, отступ 8px",
+      "hover": "цвет link (на полосе link_on_band), шеврон сдвигается на 3px — transform, 150ms",
+      "use": "«ПОДРОБНЕЕ ›» в карточках, «ВСЕ ВОПРОСЫ ›», вторичные переходы"
+    },
+    "text_link": {
+      "color": "link",
+      "decoration": "подчёркивание 1px с отступом 3px всегда: синий к серому тексту абзаца даёт меньше 3:1, без черты ссылку не отличить",
+      "use": "ссылки внутри абзацев, согласие и политика в форме",
+      "scope": "Цвет ссылок на тёмной полосе (link_on_band) задавать селектором a:not([class]) или отдельным классом: общее правило вида «.band a» перекрывает цвет подписи у кнопки-ссылки, и белый текст на синей кнопке становится голубым"
+    },
+    "card": {
+      "bg": "background (в тёмной теме surface)",
+      "color": "text",
+      "border": "нет",
+      "radius": "none",
+      "shadow": "нет",
+      "photo": "подложка surface_card на всю ширину карточки, кадр 16:10, предмет целиком на светлом студийном фоне, без отступов вокруг",
+      "padding": "24px под фото (телефон 20px)",
+      "content": "title 18px 700 → одна строка body_sm цветом text_secondary → link_upper «ПОДРОБНЕЕ ›»",
+      "hover": "если карточка кликабельна целиком — фото увеличивается до 1.03 внутри overflow:hidden за 480ms; текст и карточка не двигаются",
+      "use": "преимущества, услуги, пакеты сеткой 4 в ряд (model-card бренда)"
+    },
+    "spec_cell": {
+      "number": "typography.stat, цвет text (на полосе on_band), пропорциональные цифры",
+      "label": "label_upper цветом text_muted (на полосе on_band_muted), под числом, до трёх слов",
+      "divider": "вертикальная линия 1px border между ячейками; на телефоне сетка 2×2 с горизонтальной линией",
+      "padding": "24px",
+      "rule": "только проверяемые цифры клиента: срок, гарантия, число клиентов, время ответа"
+    },
+    "option_tile": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "none",
+      "padding": "16px 24px",
+      "selected": "рамка 2px primary при padding 15px 23px — плитка не прыгает; справа квадратная галочка 16px цветом primary",
+      "focus": "outline 2px focus_ring, offset 2px",
+      "use": "выбор пакета или комплектации в духе конфигуратора; выбранный пакет подставляется скрытым полем в форму заявки"
+    },
+    "chip": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "none",
+      "padding": "8px 14px, min-height 40px",
+      "font": "caption 13px 400",
+      "active": "фон accent, текст on_accent, рамка accent (у бренда — чернила с белым текстом)",
+      "use": "необязательный выбор в форме: «Удобное время звонка: утро / день / вечер»"
+    },
+    "category_tab": {
+      "color": "text_muted",
+      "font": "label_upper",
+      "padding": "12px 0",
+      "active": "цвет text и черта 2px цветом text снизу",
+      "use": "переключатель внутри секции: «Частным клиентам / Компаниям»"
+    },
+    "input": {
+      "bg": "background (на полосе — внутри панели panel_on_band)",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "none",
+      "height": "48px",
+      "padding": "14px 16px",
+      "font": "Onest 400 16px — введённый текст весом 400, а не 300: тонкие цифры телефона плохо читаются; меньше 16px нельзя, иначе iOS приближает страницу",
+      "label": "над полем, caption 13px 400, цвет text_secondary",
+      "placeholder": "text_muted, только пример формата: +7 900 000-00-00",
+      "focus": "рамка цветом text и box-shadow inset 0 0 0 1px text — как у бренда «рамка утолщается до чернил», без сдвига раскладки",
+      "error": "рамка error, под полем текст ошибки цветом error с SVG-иконкой 16px"
+    },
+    "checkbox_consent": {
+      "size": "24px (WCAG 2.5.8); кликабельна вся строка с подписью — label охватывает чекбокс",
+      "radius": "none",
+      "border": "1px solid border_input",
+      "checked": "фон primary, галочка on_primary; допустим нативный чекбокс с accent-color: primary",
+      "label": "caption, цвет text_secondary, «Согласие» и «Политика» — две отдельные ссылки text_link",
+      "default": "не отмечен"
+    },
+    "badge": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "none",
+      "padding": "4px 8px",
+      "font": "label_upper 12px",
+      "use": "«НОВИНКА», «ХИТ», «В НАЛИЧИИ» — не больше одного на карточке, в левом верхнем углу фото"
+    },
+    "nav": {
+      "height": "64px",
+      "bg": "background, нижняя линия 1px border, без тени и размытия; липкая",
+      "left": "текстовое название клиента, Onest 700 18px — без чужих знаков",
+      "center": "3–4 якорные ссылки typography.nav цветом text; активная — цвет link",
+      "right": "телефон ссылкой tel: с tabular-nums + button_primary высотой 40px «Оставить заявку»",
+      "mobile": "бургер — иконка-кнопка 44×44; меню на весь экран цветом background, ссылки 22px, внизу синяя кнопка во всю ширину"
+    },
+    "icon": {
+      "style": "линейные SVG 24px, stroke 1.5px, углы и концы прямые, currentColor",
+      "rule": "без заливок, цветных кругов-подложек и эмодзи"
+    },
+    "faq_item": {
+      "border": "линия 1px border сверху и снизу",
+      "question": "h3 20px 700, цвет text",
+      "icon": "плюс 16px из двух прямых линий 1.5px справа; при раскрытии вертикальная линия поворачивается и плюс становится минусом (transform) — значок рецепта accordion-smooth без скруглений",
+      "answer": "body 300, text_secondary, max-width 720px",
+      "padding": "вопрос 24px 0, без боковых отступов и подложки"
+    },
+    "cookie_notice": {
+      "bg": "background",
+      "border": "1px solid border",
+      "radius": "none",
+      "shadow": "overlay",
+      "padding": "24px",
+      "font": "body_sm 300",
+      "action": "button_secondary «Понятно»",
+      "position": "низ слева, ширина до 420px; на телефоне во всю ширину над липкой кнопкой (--scta-offset)"
+    },
+    "footer": {
+      "bg": "surface",
+      "color": "text_secondary",
+      "font": "body_sm",
+      "padding": "64px 48px (телефон 48px 16px)",
+      "content": "3–4 колонки ссылок заголовками label_upper, контакты с tabular-nums; ниже линия 1px border и строка caption text_muted: оператор персональных данных, ИНН/ОГРН, ссылки «Политика обработки персональных данных» и «Согласие на обработку»"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Фото-полоса на всю ширину окна: снимок продукта или услуги клиента на заливке band, object-fit: cover, кадрирование под 21:9. Высота clamp(480px, calc(100svh − 184px), 720px), а не 100vh: под полосой должна поместиться строка характеристик (около 112px), и на ноутбуке 1366×768 она видна без прокрутки. Слева затемнение gradient.hero_scrim. Текстовый блок — левые 6 колонок, не шире 640px, прижат к низу полосы с отступом 64px; ВСЕ тексты поверх фото белые (on_band): надзаголовок label_upper («ЗАПИСЬ НА ТЕСТ-ДРАЙВ»), заголовок display в 2–3 строки (до 40 знаков при xl, до 50 при l), lead в 1–2 предложения, ряд button_primary + button_on_band. Сразу под полосой — строка характеристик на background: 3–4 spec_cell во всю ширину контейнера с линиями 1px между ними. Фото первого экрана грузится сразу: fetchpriority=\"high\", без loading=\"lazy\".",
+    "section_order": [
+      "nav",
+      "hero",
+      "spec_strip",
+      "benefits",
+      "feature_split",
+      "how",
+      "proof",
+      "packages",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_backgrounds": {
+      "hero": "band + фото + gradient.hero_scrim",
+      "spec_strip": "background, нижняя линия 1px border",
+      "benefits": "surface (карточки на background)",
+      "feature_split": "background: фото 7 колонок вровень с краем экрана, текст 5 колонок",
+      "how": "surface: 3–4 шага в ряд, номер шага stat цветом primary, между шагами линия 1px",
+      "proof": "background: отзывы или кейсы карточками card, фото клиента на подложке surface_card",
+      "packages": "surface: 2–3 option_tile в ряд с ценой stat, выбор переносится в форму",
+      "faq": "background",
+      "lead_form": "band + фото + gradient.hero_scrim (роль cta-band-photo бренда); тексты левой колонки стоят на фото — только on_band",
+      "footer": "surface"
+    },
+    "rhythm": "Тёмная полоса первого экрана → светлые секции, где background и surface чередуются → тёмная полоса с формой → серый подвал. Две тёмные полосы подряд не ставить; тёмных полос на странице не больше двух.",
+    "grid": "Контейнер до 1440px, поля 48px, 12 колонок с промежутком 24px. Первый экран — текст 6 колонок (не шире 640px) поверх фото. Строка характеристик — 4 ячейки по 3 колонки. Преимущества — 4 карточки по 3 колонки (или 3 по 4). Фото + текст — 7/5. Шаги — 4 по 3. Пакеты — 3 по 4. Форма — 6/6: слева заголовок display_md и 3 довода с линейными иконками (всё белым), справа панель формы 480–520px.",
+    "mobile_notes": "Одна колонка, поля 16px. Первый экран: фото сверху 4:3 с нижним краем gradient.photo_to_band, текст ниже на сплошной полосе band — поверх фото на телефоне текст не ставить. Заголовок 40px, h2 30px. Кнопки во всю ширину, 48px, друг под другом. Характеристики — сетка 2×2. Карточки — по одной, фото 16:9 вместо 16:10, чтобы лента была короче. Пакеты — вертикальный список, рекомендуемый первым. Панель формы — во всю ширину под заголовком, фото полосы скрыто. Липкая синяя кнопка «Оставить заявку» снизу, прячется, когда форма в кадре.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — карточки 2 в ряд, фото + текст друг под другом, форма под заголовком",
+      "desktop": "1024–1439px",
+      "wide": "≥1440px — контейнер 1440px, фото полос по-прежнему на всю ширину окна"
+    },
+    "photography": "Только собственные снимки клиента: продукт в среде, естественный свет, горизонт ровный, без коллажей и рамок. Первый экран 21:9 (на телефоне 4:3), карточки 16:10 на подложке surface_card, фото + текст 3:2. Без скруглений, теней и обводок. Фото автомобилей и знаков чужих брендов не использовать."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "call_time"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "call_time": "Когда удобно позвонить (необязательно): утро / день / вечер — тремя чипами"
+    },
+    "hidden_fields": "package — пакет, выбранный в секции packages; utm_* и адрес страницы для A/B",
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две разные ссылки на отдельные документы (с 1 сентября 2025 согласие оформляется отдельно от прочих документов). Неотмеченный чекбокс не блокирует кнопку: при нажатии под ним появляется текст «Отметьте согласие, чтобы мы могли связаться с вами». Рассылки — только вторым необязательным чекбоксом.",
+    "style": "Белая прямоугольная панель panel_on_band (в тёмной теме #262e38) на тёмной фото-полосе: без радиуса, без тени, внутренний отступ 40px (телефон 24px), ширина 480–520px — глубину даёт только контраст белого и тёмно-синего. Сверху заголовок 24px 700 «Оставьте заявку» и строка caption с временем ответа. Поля input друг под другом через 16px, ниже чипы времени звонка, чекбокс согласия. Кнопка button_primary во всю ширину панели, 48px, «Отправить заявку». Под кнопкой — зарезервированное место (min-height 20px) для текста ошибки из error_state, чтобы панель не прыгала. Маску телефона не навязывать до ввода — принимать цифры, пробелы, скобки и +.",
+    "success_state": "Панель не исчезает и не меняет высоту: содержимое сменяется по рецепту form-success — круг 56px цветом success с прорисованной белой галочкой, заголовок 24px «Заявка принята», текст «Перезвоним в течение 15 минут в рабочее время: пн–пт 9:00–20:00 (МСК)» с tabular-nums и link_upper «СМОТРЕТЬ ПАКЕТЫ ›». Фокус переносится на заголовок (tabindex=-1), область с aria-live=polite.",
+    "error_state": "Отказ всегда видимым текстом на том же экране: под кнопкой цветом error «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Введённое не стирать. Скрытая ловушка для ботов не имеет права молча выбросить заявку с заполненными именем и телефоном — такую заявку принимать с пометкой."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "image-reveal-clip",
+    "before-after-slider",
+    "counter-up",
+    "parallax-soft",
+    "scroll-progress-bar",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile",
+    "hero-text-reveal"
+  ],
+  "motion_map": {
+    "fade-up-stagger": "карточки преимуществ, шаги, пакеты; --reveal-dist:16px, --reveal-dur:360ms, --reveal-step:60ms — строгий вариант",
+    "image-reveal-clip": "фото в блоке фото + текст и в карточках кейсов, шторка слева направо (data-irc=\"right\"); --irc-radius:0px, --irc-zoom:1.04, --irc-dur:640ms; фото первого экрана не трогать",
+    "counter-up": "строка характеристик и блок цифр ниже первого экрана. На ноутбуке строка стоит в первом экране — рецепт сам покажет итог без счёта; бегущий счёт увидят на телефоне. Поверх рецепта: .stat__num{font-size:40px;font-weight:700;letter-spacing:0} (телефон 32px), .stat__label{font:700 13px/1.3 Onest;letter-spacing:.1em;text-transform:uppercase;color:text_muted}, .stat__label::before{display:none} — полосы-акцента у ячеек бренда нет, .stats{gap:0} и линия 1px border слева у ячеек. Рецепт включает tabular-nums (без них дрожит ширина), а табличная единица Onest даёт просвет — число, начинающееся с 1, оставлять без data-count-to и с proportional-nums. Цены пакетов не считать — цену читают сразу",
+    "parallax-soft": "только фото первого экрана и полосы с формой, --px-shift не больше 16px (телефон 8px); фото — слой .px-layer с запасом по высоте на сдвиг (inset: -16px 0), иначе у края откроется заливка полосы; текст и панель формы стоят на месте",
+    "scroll-progress-bar": "линия 2px вверху под липкой шапкой: .spb{height:2px}, --spb-color #1c69d4, --spb-top 64px; режим «до формы» (data-until=\"#lead\")",
+    "accordion-smooth": "частые вопросы; поверх рецепта привести к faq_item: .faq__item{border:0;border-top:1px solid border;border-radius:0;background:transparent}, последний — ещё линия снизу; .faq__q{padding:24px 0;font-weight:700;font-size:20px;border-radius:0}; .faq__icon::before/::after{border-radius:0}; подсветка наведения .faq__q::before — не больше opacity .04",
+    "form-success": "ответ формы заявки; поверх рецепта привести к панели бренда: .lead{--color-surface: panel_on_band;border:0;border-radius:0;max-width:520px;padding:40px} (телефон 24px); поля — border-radius:0, рамка border_input; .lead__btn{border-radius:0;min-height:48px;font-weight:700}; .lead__badge{width:56px;height:56px} — круглым остаётся только значок успеха",
+    "sticky-cta-mobile": "липкая синяя кнопка «Оставить заявку» на телефоне; --radius-pill:0px и .scta__btn{font-weight:700} — прямоугольная, прячется, когда форма в кадре (data-hide-on=\"#lead\")",
+    "hero-text-reveal": "только в уровне motion_level=rich: строки заголовка первого экрана, --htr-dur:640ms, --htr-step:60ms; других входных анимаций на первом экране в это время нет",
+    "before-after-slider": "кейсы детейлинга, полировки, кузовного ремонта и отделки: 1–2 слайдера в блоке proof, оба снимка одного ракурса 16:10 (--ba-ratio: 16 / 10), --radius-lg: 0px — прямоугольно, как всё в стиле; ручка — круг 44px, как иконка-кнопка бренда, линия 2px белая. Перетаскивание работает на любом motion_level — это проверка результата руками, а не украшение; подсказка-проезд — только subtle и rich. Только собственные снимки клиента, без автомобилей и логотипов BMW."
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "photo_band",
+        "split_light",
+        "form_in_hero"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "l",
+        "xl"
+      ],
+      "spec_strip": [
+        "on",
+        "off"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "cta_label": [
+        "Оставить заявку",
+        "Записаться на консультацию"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "веса 700 и 300 (400 только в подписях, меню и введённом тексте), без 500 и 600",
+      "отсутствие теней",
+      "одна синяя кнопка на экран",
+      "форма и согласие 152-ФЗ"
+    ],
+    "default": {
+      "hero_layout": "photo_band",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "spec_strip": "on",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "cta_label": "Оставить заявку"
+    },
+    "legend": {
+      "photo_band": "тёмная фото-полоса с текстом слева поверх затемнения (по умолчанию)",
+      "split_light": "светлый первый экран в духе hero-photo-band бренда: слева на background заголовок text, lead и кнопки, справа фото 7 колонок вровень с краем окна; тёмной остаётся только полоса с формой",
+      "form_in_hero": "тёмная фото-полоса, справа сразу белая панель формы (имя, телефон, согласие); внизу страницы форма повторяется",
+      "l": "display 56/36px, заголовок до 50 знаков",
+      "xl": "display 64/40px, заголовок до 40 знаков",
+      "on": "строка характеристик под первым экраном",
+      "off": "без строки, характеристики уходят в блок how",
+      "none": "без декоративного движения; раскрытие вопросов, смена формы на ответ и липкая кнопка на телефоне остаются, но без переходов",
+      "subtle": "fade-up-stagger + counter-up + form-success",
+      "rich": "subtle + image-reveal-clip + parallax-soft + hero-text-reveal + scroll-progress-bar"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "voice": "Тексты короткие и точные, как паспорт изделия: существительное и цифра вместо прилагательных («Тест-драйв за 1 день», «Гарантия 5 лет»). Без восклицательных знаков и превосходных степеней. Кнопки — глагол действия с заглавной буквы, ссылки-ярлыки капсом не длиннее трёх слов. Между числом и словом — неразрывный пробел (1&nbsp;день, 15&nbsp;минут, 24&nbsp;900&nbsp;₽), чтобы цифра не повисала в конце строки заголовка.",
+  "do": [
+    "Делать прямоугольным всё: кнопки, карточки, поля, чипы, фото и панель формы — радиус 0; круг только у иконки-кнопки 44px и значка успеха.",
+    "Строить иерархию на двух весах одного семейства: заголовки, кнопки и ярлыки — 700, абзацы — 300 цветом text_secondary; трекинг заголовков 0.",
+    "Держать одну синюю #1c69d4 кнопку на экран; остальные действия — контурные кнопки и ярлыки капсом с разрядкой и шевроном «›».",
+    "Чередовать полосы: тёмная фото-полоса первого экрана, светлые секции background/surface, тёмная полоса с белой панелью формы, серый подвал.",
+    "Давать глубину только цветовыми блоками и фотографией: фото во всю ширину 21:9 или 16:9, в карточках — предмет на подложке #fafafa 16:10.",
+    "Показывать цифры ячейками характеристик: крупное число 700 пропорциональными цифрами, под ним ярлык капсом, между ячейками линия 1px.",
+    "Оформлять согласие 152-ФЗ отдельным неотмеченным чекбоксом, а ошибку отправки — видимым текстом у кнопки."
+  ],
+  "dont": [
+    "Не скруглять кнопки, карточки и поля и не делать кнопки-пилюли.",
+    "Не добавлять тени карточкам, кнопкам и фото, не делать свечение и градиентные заливки: тень только у висящих слоёв (меню, липкая кнопка, плашка cookie), градиент — только затемнение фото под текстом.",
+    "Не вводить второй цвет действия: красные и оранжевые акценты, трёхцветная полоса M и значки бренда запрещены.",
+    "Не использовать веса 500 и 600, не набирать абзацы жирным и не сжимать трекинг заголовков.",
+    "Не ставить синий #1c69d4 текстом на тёмную полосу (3.11) и приглушённый #bbbbbb поверх фото (4.44): над снимком весь текст белый, #6aa6f8 — только на сплошной заливке; приглушённый текст не класть на #ebebeb.",
+    "Не использовать фото автомобилей BMW, логотипы, названия моделей и фирменный шрифт — только снимки продукта клиента."
+  ],
+  "prompt_snippet": "Build a Russian-language lead-generation landing page inspired by BMW's corporate site: measured, engineered, flat. White canvas #ffffff with #f7f7f7 bands, ink #262626, paragraphs #3c3c3c, a single action color: blue #1c69d4 (hover #0653b6), one blue button per screen. Zero radius everywhere; circles only for 44px icon buttons. No shadows: depth comes from color blocks and photography. Onest only: 700 for headings, buttons and uppercase tracked labels (\"ПОДРОБНЕЕ ›\"), 300 for paragraphs, tracking 0. Hero: full-bleed photo on navy #1a2129 with a left scrim, every word over the photo pure white, 64px headline, blue CTA plus white-outline button; directly below, spec cells with a bold number, uppercase label and 1px dividers. 4-up cards with photos on a #fafafa plate. A final navy band holds a white rectangular form: name, phone, unchecked 152-FZ consent, visible errors. Add the dark theme, self-hosted fonts, reduced motion.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/bmw/DESIGN.md (корпоративный сайт; вариант BMW M из design-md/bmw-m не использовался)",
+    "notes": "Перенесено: палитра исходника без изменений — синий #1c69d4 и нажатие #0653b6, чернила #262626, текст #3c3c3c и #1a1a1a, приглушённый #6b6b6b, поверхности #ffffff/#f7f7f7/#fafafa/#ebebeb, линии #e6e6e6/#cccccc, тёмно-синие полосы #1a2129 и #262e38, #bbbbbb на тёмном, error #dc2626; нулевой радиус везде, отсутствие теней, ритм 8px и полосы 80px, контраст весов 700/300 без 500, ярлыки капсом с разрядкой 1.5px, карточка модели (фото на #fafafa + название + «ПОДРОБНЕЕ ›»), ячейки характеристик, плитка конфигуратора с рамкой 2px, чипы, вкладки, поле с утолщением рамки до чернил, серый подвал. Изменено: BMW Type Next Latin (фирменный) заменён на Onest — OFL-1.1 с кириллицей, одно семейство в весах 300/400/700; исходник предлагал Inter — он указан как запасной. Межстрочные для кириллицы подняты (display 1.05→1.08, текст 16/1.55→17/1.6), мелкий текст весом 300 не меньше 15px, кнопки 14→15px, подписи 12→13px. Контраст: фирменная кнопка #1c69d4/белый = 5.22 — прошла без правок; зелёный #22c55e давал с белым 2.28 → #15803d (5.02); рамка поля #e6e6e6 давала 1.26 → #8a8a8a (3.45, WCAG 1.4.11); синий как текст на тёмно-синей полосе давал 3.11 → там ссылки #6aa6f8 (6.51). Тёмной темы у бренда нет — собрана из его же тёмных поверхностей: фон #1a2129, карточки #262e38, полоса глубже #0f1419, текст #f2f2f2, приглушённый фирменный #bbbbbb; синяя кнопка остаётся #1c69d4, акцент инвертирован в белую кнопку с тёмно-синим текстом. Трёхцветная полоса M и значок бренда не переносятся — это фирменные знаки. Затемнение фото — функциональный слой для читаемости, в исходнике градиентов нет. Раскладка переделана под рекламный лендинг: строка характеристик под первым экраном, пакеты в духе конфигуратора, тёмная полоса с белой панелью формы заявки по 152-ФЗ."
+  }
+}

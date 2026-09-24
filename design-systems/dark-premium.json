@@ -1,0 +1,735 @@
+{
+  "slug": "dark-premium",
+  "name": "Тёмный премиум",
+  "kind": "style",
+  "version": "1.0.0",
+  "disclaimer": "Собственный стиль Вайб-Маркетолога.",
+  "summary": "Тёплый почти-чёрный фон #0B0A08 с двумя слоями поверхностей, единственный акцент — шампанское золото #C9A869, крупная антиква Cormorant в паре с чётким гротеском Manrope. Много воздуха, тонкие золотые линии вместо теней, настоящее фото объекта во весь экран с глубоким затемнением под текстом. Одна золотая прямоугольная кнопка на экран.",
+  "summary_en": "A warm near-black canvas #0B0A08 with two surface layers, a single noble accent in champagne gold #C9A869, and large Cormorant serif headlines paired with the crisp Manrope sans. Generous whitespace, thin gold hairlines instead of shadows, a full-bleed real photo of the object with a deep scrim under the text. One gold rectangular button per viewport.",
+  "best_for": [
+    "элитная и бизнес-недвижимость",
+    "новостройки и загородные посёлки",
+    "премиальные автомобили и автосалоны",
+    "частные клиники и эстетическая медицина",
+    "ивенты, свадьбы и закрытые мероприятия",
+    "рестораны, отели и частные клубы",
+    "ювелирные изделия и часы",
+    "юридические и финансовые услуги для состоятельных клиентов"
+  ],
+  "goals": [
+    "заявка на просмотр или тест-драйв",
+    "запись на консультацию",
+    "запрос презентации, планировок или каталога",
+    "бронирование даты или места",
+    "доверие к дорогому продукту"
+  ],
+  "mood": [
+    "сдержанный",
+    "дорогой",
+    "ночной",
+    "тихая роскошь",
+    "уверенный",
+    "камерный"
+  ],
+  "tokens": {
+    "color": {
+      "default_mode": "dark",
+      "mode_note": "Стиль тёмный по умолчанию: страница открывается в тёмной палитре независимо от системной темы (<meta name=\"color-scheme\" content=\"dark\">, <meta name=\"theme-color\" content=\"#0B0A08\">). Светлая палитра — «дневная» версия для A/B-теста и для одной светлой полосы-вставки на страницу (планировки, комплектации, характеристики).",
+      "light": {
+        "background": "#F6F1E8",
+        "surface": "#FFFDF8",
+        "surface_raised": "#EFE8DB",
+        "text": "#16130E",
+        "text_muted": "#5C5446",
+        "placeholder": "#6E6657",
+        "border": "#E2D9C8",
+        "border_strong": "#8C8272",
+        "border_gold": "#DCCDB2",
+        "primary": "#A8844A",
+        "primary_hover": "#B8955A",
+        "primary_pressed": "#A07E45",
+        "on_primary": "#16130E",
+        "primary_ink": "#7A5A22",
+        "accent": "#16130E",
+        "accent_hover": "#2A251D",
+        "on_accent": "#F6F1E8",
+        "link": "#7A5A22",
+        "success": "#2E7049",
+        "error": "#B3261E",
+        "footer": "#EFE8DB"
+      },
+      "dark": {
+        "background": "#0B0A08",
+        "surface": "#15130F",
+        "surface_raised": "#1D1A15",
+        "text": "#F2ECE1",
+        "text_muted": "#A8A091",
+        "placeholder": "#8A8374",
+        "border": "#2A261F",
+        "border_strong": "#6E6555",
+        "border_gold": "#5D4F33",
+        "primary": "#C9A869",
+        "primary_hover": "#D6B97F",
+        "primary_pressed": "#B8965A",
+        "on_primary": "#14110B",
+        "primary_ink": "#C9A869",
+        "accent": "#EFE8DB",
+        "accent_hover": "#F8F3EA",
+        "on_accent": "#0B0A08",
+        "link": "#DCC08A",
+        "success": "#7CC39A",
+        "error": "#EE8272",
+        "footer": "#070605"
+      },
+      "roles_note": "primary — шампанское золото: главная кнопка (одна на экран), тонкие линии, «бровки» над заголовками, ключевые цифры. primary_ink — золото для мелкого текста: в тёмной палитре совпадает с primary, в светлой темнее (#7A5A22), потому что светлое золото на слоновой кости даёт только 3.08:1. accent — слоновая кость в тёмной палитре и чернила в светлой: монохромная кнопка для варианта Б и второстепенных действий. border — декоративная волосяная линия; border_strong — рамка полей ввода и чекбоксов (не меньше 3:1 к фону, WCAG 1.4.11); border_gold — рамка выделенной карточки и карточки при наведении (золото 40% поверх surface, сведено к hex).",
+      "contrast_note": "Проверено по WCAG: тёмная — text/background 16.83, text/surface 15.78, text/surface_raised 14.75, text_muted/background 7.64, text_muted/surface_raised 6.69, on_primary/primary 8.33 (hover 9.96, pressed 6.77), on_accent/accent 16.24, link/background 11.26, золото как текст на фоне 8.75, border_strong/surface 3.23, placeholder/surface 4.93. Светлая — text/background 16.47, text/surface 18.22, text_muted/background 6.64, on_primary/primary 5.35 (pressed 4.91), on_accent/accent 16.47, link/background 5.63, border_strong/background 3.36, placeholder/background 5.04. Граница кнопки к фону (WCAG 1.4.11): тёмная 8.75, светлая 3.08. В форме (карточка surface_raised): text_muted 6.69 / 6.13, error 6.67 / 5.36, success 8.37 / 4.88, border_strong 3.02 / 3.10 — тёмная / светлая.",
+      "variants": {
+        "note": "Акцент меняется под нишу целиком одной группой ключей (primary, primary_hover, primary_pressed, on_primary, primary_ink, link, border_gold) вместе с effects (свечение, золотая линия, сияние первого экрана, кольцо фокуса); нейтральные цвета остаются. Внутри одного A/B-теста вариант акцента не меняют. Контраст каждой пары проверен, включая primary к фону не меньше 3:1 (граница кнопки, WCAG 1.4.11).",
+        "champagne": {
+          "use_for": "недвижимость, премиум-услуги, ювелирные изделия — по умолчанию",
+          "dark": {
+            "primary": "#C9A869",
+            "primary_hover": "#D6B97F",
+            "primary_pressed": "#B8965A",
+            "on_primary": "#14110B",
+            "primary_ink": "#C9A869",
+            "link": "#DCC08A",
+            "border_gold": "#5D4F33"
+          },
+          "light": {
+            "primary": "#A8844A",
+            "primary_hover": "#B8955A",
+            "primary_pressed": "#A07E45",
+            "on_primary": "#16130E",
+            "primary_ink": "#7A5A22",
+            "link": "#7A5A22",
+            "border_gold": "#DCCDB2"
+          },
+          "effects": {
+            "glow_primary": "0 0 0 1px rgba(201,168,105,.45), 0 18px 48px -18px rgba(201,168,105,.30)",
+            "hairline": "linear-gradient(90deg, rgba(201,168,105,0) 0%, #C9A869 50%, rgba(201,168,105,0) 100%)",
+            "hero": "radial-gradient(90% 70% at 78% 8%, rgba(201,168,105,0.16) 0%, rgba(201,168,105,0) 62%)",
+            "focus": "0 0 0 2px #0B0A08, 0 0 0 4px #DCC08A",
+            "focus_light": "0 0 0 2px #F6F1E8, 0 0 0 4px #7A5A22"
+          }
+        },
+        "platinum": {
+          "use_for": "автомобили, техника, яхты, мужская аудитория — холодный металл",
+          "dark": {
+            "primary": "#C4C8CE",
+            "primary_hover": "#D2D6DB",
+            "primary_pressed": "#B3B8BF",
+            "on_primary": "#0E1013",
+            "primary_ink": "#C4C8CE",
+            "link": "#D4D8DE",
+            "border_gold": "#50545A"
+          },
+          "light": {
+            "primary": "#2B2F35",
+            "primary_hover": "#3A3F46",
+            "primary_pressed": "#1F2227",
+            "on_primary": "#F4F5F6",
+            "primary_ink": "#4E555E",
+            "link": "#4E555E",
+            "border_gold": "#C9CCD0"
+          },
+          "cool_neutrals_dark": {
+            "background": "#0A0B0D",
+            "surface": "#131518",
+            "surface_raised": "#1B1E22",
+            "text": "#EEF0F2",
+            "text_muted": "#A0A6AE",
+            "border": "#262A2F",
+            "border_strong": "#646B74",
+            "placeholder": "#858B94",
+            "footer": "#060708"
+          },
+          "cool_neutrals_note": "Для платины нейтрали остужаются целиком, в обеих палитрах: тёмная — text/background 17.23, text_muted/background 8.03, border_strong/surface 3.39, placeholder/surface_raised 4.87; светлая — text/background 16.9, text_muted/background 6.34, border_strong/surface_raised 3.05, графитовая кнопка к фону 12.23. Затемнение фото тогда цвета #0A0B0D (rgba(10,11,13,…) с теми же долями). Тёплые и холодные нейтрали на одной странице не смешивать.",
+          "effects": {
+            "glow_primary": "0 0 0 1px rgba(196,200,206,.45), 0 18px 48px -18px rgba(196,200,206,.30)",
+            "hairline": "linear-gradient(90deg, rgba(196,200,206,0) 0%, #C4C8CE 50%, rgba(196,200,206,0) 100%)",
+            "hero": "radial-gradient(90% 70% at 78% 8%, rgba(196,200,206,0.12) 0%, rgba(196,200,206,0) 62%)",
+            "focus": "0 0 0 2px #0A0B0D, 0 0 0 4px #D4D8DE",
+            "focus_light": "0 0 0 2px #F3F4F6, 0 0 0 4px #4E555E"
+          },
+          "cool_neutrals_light": {
+            "background": "#F3F4F6",
+            "surface": "#FCFCFD",
+            "surface_raised": "#E8EAED",
+            "text": "#111317",
+            "text_muted": "#535A63",
+            "placeholder": "#636A73",
+            "border": "#DCDFE3",
+            "border_strong": "#7F8690",
+            "footer": "#E8EAED"
+          }
+        },
+        "copper": {
+          "use_for": "ивенты, рестораны, отели, винные и гастрономические проекты — тёплый вечерний свет",
+          "dark": {
+            "primary": "#C98A5E",
+            "primary_hover": "#D69B70",
+            "primary_pressed": "#B97B50",
+            "on_primary": "#14100C",
+            "primary_ink": "#D69B70",
+            "link": "#E0A57C",
+            "border_gold": "#5E4331"
+          },
+          "light": {
+            "primary": "#B67A50",
+            "primary_hover": "#C28C64",
+            "primary_pressed": "#AE744C",
+            "on_primary": "#14100C",
+            "primary_ink": "#8A5530",
+            "link": "#8A5530",
+            "border_gold": "#E5CDB9"
+          },
+          "effects": {
+            "glow_primary": "0 0 0 1px rgba(201,138,94,.45), 0 18px 48px -18px rgba(201,138,94,.30)",
+            "hairline": "linear-gradient(90deg, rgba(201,138,94,0) 0%, #C98A5E 50%, rgba(201,138,94,0) 100%)",
+            "hero": "radial-gradient(90% 70% at 78% 8%, rgba(201,138,94,0.16) 0%, rgba(201,138,94,0) 62%)",
+            "focus": "0 0 0 2px #0B0A08, 0 0 0 4px #E0A57C",
+            "focus_light": "0 0 0 2px #F6F1E8, 0 0 0 4px #8A5530"
+          },
+          "light_note": "Светлая медь затемнена с #BF855C до #B67A50: прежний тон давал к фону слоновой кости 2.78:1 — кнопка сливалась со страницей. Теперь к фону 3.17, тёмный текст на кнопке 5.31, при нажатии 4.87."
+        }
+      }
+    },
+    "gradient": {
+      "hero": "radial-gradient(90% 70% at 78% 8%, rgba(201,168,105,.16) 0%, rgba(201,168,105,0) 62%)",
+      "photo_scrim": "linear-gradient(180deg, rgba(11,10,8,.72) 0px, rgba(11,10,8,.66) 88px, rgba(11,10,8,0) 240px), linear-gradient(90deg, rgba(11,10,8,.92) 0%, rgba(11,10,8,.86) 50%, rgba(11,10,8,0) 82%)",
+      "photo_scrim_top": "linear-gradient(180deg, rgba(11,10,8,.72) 0px, rgba(11,10,8,.66) 88px, rgba(11,10,8,0) 240px)",
+      "photo_scrim_side": "linear-gradient(90deg, rgba(11,10,8,.92) 0%, rgba(11,10,8,.86) 50%, rgba(11,10,8,0) 82%)",
+      "text_scrim": "linear-gradient(180deg, rgba(11,10,8,0) 0px, rgba(11,10,8,.86) 120px, rgba(11,10,8,.92) 100%)",
+      "hairline_gold": "linear-gradient(90deg, rgba(201,168,105,0) 0%, #C9A869 50%, rgba(201,168,105,0) 100%)",
+      "card_sheen": "linear-gradient(135deg, rgba(242,236,225,.05) 0%, rgba(242,236,225,0) 42%)",
+      "notes": "gradient.hero — только золотое сияние без собственного фона: кладётся поверх background текущей палитры, поэтому работает в обеих; в худшей точке (центр пятна) text 13+:1, text_muted 5.9+:1. Фото первого экрана. Десктоп от 1024px: photo_scrim (это photo_scrim_top + photo_scrim_side одним свойством), весь текстовый блок — в левых 6 колонках, где затемнение не слабее 86%; заголовку можно зайти в седьмую — крупному тексту хватает 3:1. Телефон и планшет: на фото только photo_scrim_top, а text_scrim кладётся псевдоэлементом текстового блока (position:absolute; top:-120px; bottom:0; left и right: calc(50% − 50vw); z-index:-1 при isolation:isolate; у первого экрана overflow:clip) — плотность 86% начинается ровно у верхней кромки текста при любой высоте экрана, а процент от высоты первого экрана этого не гарантирует. Худший случай — белый участок снимка: при 85% text 11.38:1, text_muted 5.16:1, золото 5.92:1; при 75% text_muted падает до 3.58 — мало. Под шапкой затемнение 66–72%: text 5.4+:1 — хватает для текста шапки, но не для text_muted и золота (меньше 3:1), поэтому в шапке над фото нет приглушённого текста и золотой кнопки. Золото — только тонкой линией (hairline_gold 1px) и мягким свечением, никогда не заливкой-металликом с бликами. Сияние первого экрана — одно пятно в правом верхнем углу; в варианте type_only при motion_level=rich его можно заставить плыть рецептом gradient-drift с насыщенностью пятна не выше 20% (при 28% text_muted падает до 4.58)."
+    },
+    "typography": {
+      "display": {
+        "family": "Cormorant",
+        "fallback": "'Cormorant Garamond', Georgia, 'Times New Roman', serif",
+        "weight": 500,
+        "size_desktop": "104px",
+        "size_mobile": "44px",
+        "line_height": 1.02,
+        "letter_spacing": "-0.01em",
+        "notes": "Один на страницу, в первом экране, не больше трёх строк и до 38 знаков с пробелами (замер по файлам шрифта: 38 знаков при 104px и ширине 14ch и при 44px на экране 360–390px укладываются в три строки; 48 знаков уже дают четыре) — длиннее переходите на headline_scale l. max-width 14ch. Между 390 и 1440px размер плавный (fluid). У Cormorant высота строчных 0.386 кегля против 0.54 у Manrope — визуально он мельче примерно на 30%, поэтому размеры крупнее привычных. lang=\"ru\" + hyphens:auto + text-wrap:balance. Если строка начинается с Й или Ё — padding-top 0.08em; при проявлении маской (hero-text-reveal) у строки padding-bottom 0.14em, иначе маска режет хвосты «у», «р», «д». Чтобы подмена шрифта не сдвигала первый экран, у запасного шрифта выровняйте метрики (size-adjust, ascent-override) замером ширины строки и проверьте CLS = 0.",
+        "fluid": "clamp(44px, calc(21.7px + 5.71vw), 104px)"
+      },
+      "h2": {
+        "family": "Cormorant",
+        "fallback": "'Cormorant Garamond', Georgia, serif",
+        "weight": 500,
+        "size_desktop": "64px",
+        "size_mobile": "34px",
+        "line_height": 1.06,
+        "letter_spacing": "-0.005em",
+        "notes": "Открывает каждую секцию, над ним «бровка» eyebrow. text-wrap:balance, max-width 18ch.",
+        "fluid": "clamp(34px, calc(22.9px + 2.86vw), 64px)"
+      },
+      "h3": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1.3,
+        "letter_spacing": "-0.01em",
+        "notes": "Заголовки карточек, шагов, лотов — гротеском: антиква мельче 28px теряет тонкие штрихи на тёмном."
+      },
+      "lead": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.6,
+        "letter_spacing": "0em",
+        "notes": "Подзаголовок первого экрана и вводные абзацы секций, цвет text_muted, max-width 52ch."
+      },
+      "body": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "17px",
+        "size_mobile": "16px",
+        "line_height": 1.65,
+        "letter_spacing": "0em",
+        "notes": "Не тоньше 400: светлый текст на тёмном и так кажется жирнее, а 300 на телефоне рассыпается. -webkit-font-smoothing: antialiased. Длина строки до 66 знаков."
+      },
+      "caption": {
+        "family": "Manrope",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+        "weight": 400,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.5,
+        "letter_spacing": "0.01em",
+        "notes": "Сноски, источник цифр, согласие на обработку данных, реквизиты. Цвет text_muted."
+      },
+      "eyebrow": {
+        "family": "Manrope",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "12px",
+        "size_mobile": "12px",
+        "line_height": 1.4,
+        "letter_spacing": "0.18em",
+        "notes": "text-transform: uppercase, цвет primary_ink. Перед ним допустима золотая линия 24×1px с отступом 12px. Две–пять слов: «Сдача IV квартал 2027», «Частный показ»."
+      },
+      "button": {
+        "family": "Manrope",
+        "fallback": "system-ui, sans-serif",
+        "weight": 600,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.25,
+        "letter_spacing": "0.01em",
+        "notes": "Обычный регистр по умолчанию; прописные с трекингом 0.08em и 14px — только как вариант A/B (button_case = caps)."
+      },
+      "stat": {
+        "family": "Cormorant",
+        "fallback": "'Cormorant Garamond', Georgia, serif",
+        "weight": 500,
+        "size_desktop": "88px",
+        "size_mobile": "44px",
+        "line_height": 1,
+        "letter_spacing": "-0.01em",
+        "notes": "Обязательно font-variant-numeric: lining-nums tabular-nums: цифры Cormorant по умолчанию старостильные (разной высоты), и «1 250» выглядит как опечатка; проверено по таблице GSUB — вместе lnum и tnum дают табличные прописные цифры. На телефоне не крупнее заголовка первого экрана: в сетке 2×2 ячейка около 156px. Единица измерения — caption рядом, не тем же кеглем.",
+        "fluid": "clamp(44px, calc(27.7px + 4.19vw), 88px)"
+      },
+      "price": {
+        "family": "Cormorant",
+        "fallback": "'Cormorant Garamond', Georgia, serif",
+        "weight": 600,
+        "size_desktop": "40px",
+        "size_mobile": "32px",
+        "line_height": 1.1,
+        "letter_spacing": "0em",
+        "notes": "lining-nums tabular-nums. Разряды и пробел перед ₽ — неразрывный пробел U+00A0 (так форматирует Intl.NumberFormat('ru-RU')): «от 38 500 000 ₽» или «от 38,5 млн ₽». Узкого пробела U+202F нет ни в Cormorant, ни в Manrope — браузер подставит его из системного шрифта. Знак ₽ лежит в подмножестве latin-ext — без него браузер подставит системный шрифт."
+      },
+      "quote": {
+        "family": "Cormorant",
+        "fallback": "'Cormorant Garamond', Georgia, serif",
+        "weight": 500,
+        "size_desktop": "34px",
+        "size_mobile": "28px",
+        "line_height": 1.3,
+        "letter_spacing": "0em",
+        "notes": "font-style: italic — курсив Cormorant 500 с кириллицей есть в Fontsource. Не мельче 28px и на телефоне: тонкий курсив мельче рассыпается на тёмном. Только для отзыва, одна цитата на экран, кавычки-ёлочки «», до 220 знаков."
+      },
+      "wordmark": {
+        "family": "Cormorant",
+        "fallback": "Georgia, serif",
+        "weight": 600,
+        "size_desktop": "24px",
+        "size_mobile": "20px",
+        "line_height": 1,
+        "letter_spacing": "0.12em",
+        "notes": "Текстовое название вашей компании в шапке, прописными 600 — единственное место, где Cormorant мельче 28px: у прописных высота 0.625 кегля, штрихи держатся. Это набор, а не логотип: свой знак клиента подставляется файлом клиента."
+      }
+    },
+    "radius": {
+      "none": "0px",
+      "sm": "2px",
+      "md": "4px",
+      "lg": "8px",
+      "pill": "999px",
+      "notes": "Архитектурные прямоугольники: кнопки 2px, поля и карточки 4px, окна и крупные панели 8px, фото — 0. Таблетка 999px — только у бейджей и чипов выбора."
+    },
+    "spacing": {
+      "unit": 8,
+      "section_desktop": "144px",
+      "section_mobile": "88px",
+      "hero_padding_bottom_desktop": "96px",
+      "hero_padding_bottom_mobile": "40px",
+      "container": "1280px",
+      "container_text": "720px",
+      "gutter_desktop": "32px",
+      "gutter_mobile": "16px",
+      "grid_gap": "32px",
+      "grid_gap_mobile": "16px",
+      "card_padding": "40px",
+      "card_padding_mobile": "24px",
+      "stack_tight": "12px",
+      "stack": "24px",
+      "stack_loose": "48px"
+    },
+    "shadow": {
+      "card": "none",
+      "raised": "0 30px 80px -24px rgba(0,0,0,.75), 0 0 0 1px #2A261F",
+      "glow_primary": "0 0 0 1px rgba(201,168,105,.45), 0 18px 48px -18px rgba(201,168,105,.30)",
+      "focus": "0 0 0 2px #0B0A08, 0 0 0 4px #DCC08A",
+      "card_light": "0 1px 2px rgba(22,19,14,.06), 0 0 0 1px #E2D9C8",
+      "focus_light": "0 0 0 2px #F6F1E8, 0 0 0 4px #7A5A22",
+      "notes": "На тёмном тени почти не видны — глубину дают слои светлоты (#0B0A08 → #15130F → #1D1A15) и волосяные линии. glow_primary — только у выделенной карточки и у золотой кнопки при наведении. raised — у всплывающих окон и липкой панели на телефоне. Значения даны для шампанского; для платины и меди glow_primary, focus и focus_light берите из tokens.color.variants.<вариант>.effects."
+    },
+    "motion": {
+      "fast": "180ms",
+      "base": "320ms",
+      "slow": "720ms",
+      "reveal": "1100ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "ease_inout": "cubic-bezier(.65,0,.35,1)",
+      "notes": "Дорогое не суетится: движение на треть медленнее обычного интерфейса, без пружин, подпрыгиваний и вращений. Одно проявление в кадре за раз. При prefers-reduced-motion остаются только смены прозрачности до 200ms."
+    },
+    "texture": {
+      "grain": "необязательно: зерно 3% — статичной фоновой картинкой секции (inline SVG feTurbulence в data-URI, до 2 КБ), без mix-blend-mode и без position:fixed, иначе страница тормозит при прокрутке на телефоне"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Cormorant",
+      "fontsource": "cormorant",
+      "role": "display: заголовок первого экрана, h2, крупные цифры, цены, цитата, текстовое название в шапке",
+      "weights": [
+        500,
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "subsets": [
+        "cyrillic",
+        "latin",
+        "latin-ext"
+      ],
+      "install": "npm i @fontsource/cormorant — подключать локально, без CDN: 500 normal (cyrillic + latin + latin-ext), 600 normal, 500 italic. Файл 500 cyrillic — <link rel=\"preload\" as=\"font\" type=\"font/woff2\" crossorigin>, font-display: swap.",
+      "replaces": "проприетарные антиквы люкс-сегмента: Canela, GT Super, Chronicle Display, Didot-гарнитуры"
+    },
+    {
+      "family": "Manrope",
+      "fontsource": "manrope",
+      "role": "body: текст, h3, кнопки, поля, подписи, бровки, подвал",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "subsets": [
+        "cyrillic",
+        "latin",
+        "latin-ext"
+      ],
+      "install": "npm i @fontsource/manrope — подключать локально, без CDN. Подмножества: cyrillic (буквы и №), latin (цифры, «ёлочки», тире), latin-ext (знак ₽ U+20BD) — проверено по файлам шрифта.",
+      "replaces": "проприетарные гротески премиальных брендов: Neue Haas Grotesk, Graphik, Söhne"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "sm",
+      "height": "56px (44px в шапке)",
+      "padding": "18px 32px",
+      "font": "button",
+      "weight": 600,
+      "hover": "фон primary_hover за 180ms и мягкое свечение shadow.glow_primary; стрелка SVG 16px справа от текста сдвигается на 4px вправо (transform)",
+      "active": "primary_pressed + translateY(1px)",
+      "focus": "shadow.focus (в светлой палитре — focus_light)",
+      "disabled": "не используем: кнопка всегда активна, ошибки показываем текстом у полей",
+      "notes": "Одна золотая кнопка на экран (кнопка в шапке золотеет только после первого экрана). Текст — действие и выгода: «Записаться на просмотр», «Забронировать тест-драйв», «Получить подборку лотов». Не «Отправить» и не «Узнать больше»."
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid text_muted",
+      "radius": "sm",
+      "height": "56px",
+      "padding": "17px 31px",
+      "font": "button",
+      "weight": 600,
+      "hover": "рамка и текст становятся primary_ink за 180ms",
+      "focus": "shadow.focus",
+      "notes": "Контурная кнопка рядом с главной: «Смотреть планировки», «Каталог комплектаций». Одна не стоит.",
+      "on_photo": "в шапке и поверх фото первого экрана рамка цвета text: text_muted на затемнении 66–72% даёт меньше 3:1"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "sm",
+      "height": "56px",
+      "padding": "18px 32px",
+      "font": "button",
+      "weight": 600,
+      "hover": "accent_hover",
+      "focus": "shadow.focus",
+      "notes": "Кнопка цвета слоновой кости (в светлой палитре — чернильная). Вариант Б A/B-теста (cta_color_role = accent) и главная кнопка на золотой или светлой полосе, где золото теряется."
+    },
+    "link_arrow": {
+      "color": "primary_ink",
+      "font": "button",
+      "underline": "псевдоэлемент 1px цвета primary под текстом с отступом 6px",
+      "hover": "линия дорастает от 40% до 100% ширины через transform: scaleX за 320ms, стрелка сдвигается на 4px",
+      "notes": "Третичное действие в карточках: «Запросить планировку», «Подробнее о программе»."
+    },
+    "card": {
+      "bg": "surface",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "md",
+      "padding": "40px (24px на телефоне)",
+      "shadow": "none",
+      "hover": "рамка border_gold и слой gradient.card_sheen за 320ms; карточка не подпрыгивает",
+      "notes": "Иконка — линейная SVG 28px, штрих 1.25px, цвет primary_ink; заголовок h3; две–три строки body цветом text_muted. Не больше трёх карточек в ряд."
+    },
+    "card_featured": {
+      "bg": "surface_raised",
+      "color": "text",
+      "border": "1px solid border_gold",
+      "radius": "md",
+      "padding": "48px (24px на телефоне)",
+      "shadow": "glow_primary",
+      "top_line": "полоса 1px gradient.hairline_gold по верхней кромке",
+      "notes": "Одна на экран: рекомендуемый пакет, лот месяца или карточка с формой заявки. Бейдж «Рекомендуем» сверху слева."
+    },
+    "listing_card": {
+      "bg": "surface",
+      "radius": "md (фото внутри — none)",
+      "media": "фото 4:5 или 3:2 сверху во всю ширину карточки, object-fit: cover, лёгкое увеличение 1.04 при наведении (transform, 720ms)",
+      "body": "eyebrow (район, корпус, год), h3 (название лота или комплектации), строка характеристик caption через тонкие вертикальные разделители border («84 м² | 12 этаж | вид на реку»), цена price цветом text, link_arrow «Запросить планировку»",
+      "notes": "Для квартир, домов, автомобилей, пакетов мероприятия. Если цена «по запросу» — вместо цены link_arrow «Узнать цену», а не пустое место."
+    },
+    "stat": {
+      "font": "stat",
+      "color": "text",
+      "unit": "caption цветом text_muted справа от числа или под ним",
+      "separator": "вертикальная линия 1px border между соседними цифрами",
+      "notes": "Только настоящие цифры с источником мелким шрифтом: срок сдачи, высота потолков, мощность, лет практики, число гостей. Выдуманные цифры запрещены."
+    },
+    "eyebrow": {
+      "font": "eyebrow",
+      "color": "primary_ink",
+      "decoration": "золотая линия 24×1px слева с отступом 12px",
+      "notes": "Над каждым h2 и над заголовком первого экрана."
+    },
+    "divider_gold": {
+      "height": "1px",
+      "bg": "gradient.hairline_gold",
+      "width": "120px под h2 или во всю ширину контейнера между крупными блоками",
+      "notes": "Главный декоративный элемент стиля вместо теней и рамок."
+    },
+    "input": {
+      "bg": "background (в карточке формы surface_raised — поле темнее карточки)",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "md",
+      "height": "56px",
+      "padding": "17px 18px",
+      "font": "body, 16px (меньше 16px — iOS увеличивает страницу при фокусе)",
+      "label": "видимая подпись над полем Manrope 500 14px цветом text_muted, не только плейсхолдер",
+      "placeholder": "цвет placeholder, пример формата: «+7 900 000-00-00»",
+      "focus": "рамка primary + shadow.focus",
+      "error": "рамка error 1px + текст caption 600 цветом error под полем с SVG-иконкой 16px; введённое не стирается",
+      "notes": "box-sizing: border-box; line-height 20px, а не 1.65 из body — иначе поле выходит выше 56px. Телефон — type=\"tel\", inputmode=\"tel\", autocomplete=\"tel\"; имя — autocomplete=\"name\".",
+      "line_height": "20px"
+    },
+    "chip": {
+      "bg": "transparent",
+      "color": "text",
+      "border": "1px solid border_strong",
+      "radius": "pill",
+      "height": "44px (display:inline-flex; align-items:center)",
+      "padding": "0 18px",
+      "font": "button, 14px",
+      "selected": "рамка primary, текст primary_ink, фон surface_raised, SVG-галочка 14px слева",
+      "notes": "Выбор удобного времени («Утро», «День», «Вечер») или формата («В офисе продаж», «Онлайн-показ») в форме. Это radio-группа с видимой подписью, стрелки клавиатуры работают."
+    },
+    "badge": {
+      "bg": "transparent",
+      "color": "primary_ink",
+      "border": "1px solid border_gold",
+      "radius": "pill",
+      "padding": "5px 12px",
+      "font": "eyebrow (12px)",
+      "notes": "«Рекомендуем», «Осталось 3 лота», «Новый сезон». Только правда: если лотов не три — не пишите «три»."
+    },
+    "quote": {
+      "font": "quote",
+      "color": "text",
+      "rule": "вертикальная линия 1px primary слева или золотая линия 48px над цитатой",
+      "attribution": "имя и роль caption цветом text_muted; фото автора 56px кругом — только с его согласия",
+      "notes": "Одна цитата на экран, крупно, без звёздочек-рейтингов."
+    },
+    "nav": {
+      "bg": "прозрачный поверх первого экрана (читаемость даёт gradient.photo_scrim_top); после прокрутки на 24px — rgba(11,10,8,.72) + backdrop-filter: blur(14px) и волосяная линия border снизу; без поддержки backdrop-filter — сплошной #0B0A08. В светлой теме после первого экрана — rgba(246,241,232,.84) с тем же размытием и тёмным текстом.",
+      "color": "text",
+      "height": "72px (60px на телефоне)",
+      "font": "button, 15px",
+      "notes": "Слева — текстовое название компании (typography.wordmark) или файл логотипа клиента. В центре 3–4 якоря на секции. Справа — телефон ссылкой tel: и кнопка 44px «Записаться»: пока первый экран в кадре — контурная (button_secondary, рамка text), когда он ушёл из кадра — золотая button_primary; так на экране всегда одна золотая кнопка. На телефоне якоря уходят в меню, остаются кнопка-телефон 44×44 и бургер 44×44."
+    },
+    "footer": {
+      "bg": "footer",
+      "color": "text_muted",
+      "font": "body, 14px",
+      "padding": "96px 32px 48px (64px 16px 32px на телефоне)",
+      "notes": "Адрес офиса продаж или шоурума, часы работы, телефон, реквизиты (ИНН, ОГРН), ссылки на политику обработки персональных данных и текст согласия. Сверху — divider_gold во всю ширину."
+    }
+  },
+  "layout": {
+    "hero_pattern": "По умолчанию photo_full: первый экран во весь экран — на десктопе height: 100svh в пределах 640–1000px, на телефоне min-height: 100svh без нижнего порога (содержимое не обрезается). Настоящее фото объекта (фасад вечером, вид из окна, автомобиль в студийном свете, зал с гостями), object-fit: cover, fetchpriority=\"high\", без lazy и без анимации появления — это кандидат LCP. Затемнение — по gradient.notes: на десктопе photo_scrim, на телефоне photo_scrim_top + text_scrim под текстом. Текст прижат к низу слева в левых 6 колонках, отступ снизу 96px: eyebrow (где и когда: «Петровская набережная · сдача IV кв. 2027»), заголовок display до трёх строк, lead цветом text_muted до 52ch, пара кнопок — золотая главная и контурная, под ними строка доверия caption из трёх фактов через золотые вертикальные линии 1×16px. Вариант split: слева текст на gradient.hero (6 колонок), справа высокое фото 4:5 (6 колонок) — показывается сразу, без шторки (image-reveal-clip на картинку первого экрана не ставится). Вариант type_only: без фото, заголовок по центру крупнее на ступень, фон gradient.hero, пятно может плыть (gradient-drift) с кнопкой паузы.",
+    "band_rhythm": "Основа — тёмные полосы background, секции с карточками на surface во всю ширину для смены светлоты. Одна светлая полоса-вставка на страницу (палитра light целиком) для планировок, комплектаций или характеристик — она даёт ритм и выглядит как лист каталога. Между полосами без градиентов-переходов, только divider_gold. В варианте theme=light наоборот: основа светлая, а вставка — одна тёмная полоса.",
+    "section_order": [
+      "hero",
+      "key_facts",
+      "story",
+      "gallery",
+      "features",
+      "offer",
+      "process",
+      "reviews",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "sections_notes": {
+      "key_facts": "Сразу под первым экраном: 3–4 цифры stat в ряд через вертикальные линии, под каждой подпись caption. На телефоне — сетка 2×2. Источник цифр мелким шрифтом.",
+      "story": "Сетка 5/7: слева eyebrow, h2 и два коротких абзаца; справа высокое фото 4:5, проявление шторкой, на десктопе мягкий параллакс фото. Второй такой блок — зеркально.",
+      "gallery": "Асимметричная сетка во всю ширину: первая строка 7/5 колонок, вторая 4/4/4, промежуток 8px, фото без скруглений, подписи caption под фото. На телефоне — лента со scroll-snap, карточка 85% ширины, следующая выглядывает; маска-затухание правого края снимается на последнем кадре.",
+      "features": "Карточки card 3 в ряд (2 на планшете, 1 на телефоне): линейная SVG-иконка, h3, две строки. Шесть карточек максимум.",
+      "offer": "Лоты, комплектации или пакеты: listing_card 3 в ряд, рекомендуемый — card_featured с бейджем. Удобно ставить на светлую полосу-вставку. Над сеткой — фильтр чипами, если лотов больше шести.",
+      "process": "3–4 шага: номера 01–04 гарнитурой Cormorant 64px (40px на телефоне) цветом text_muted (lining-nums), h3 и строка текста; шаги соединены горизонтальной золотой линией 1px на десктопе и вертикальной на телефоне.",
+      "reviews": "Одна крупная цитата по центру (quote) и под ней переключатель из 3–4 отзывов кнопками «Назад»/«Вперёд» 44×44; без автопрокрутки.",
+      "faq": "Аккордеон на <details>, строки разделены линией border, плюс из двух линий 1px цветом primary справа, раскрытие плавное. 5–8 вопросов: цена, сроки, ипотека или кредит, что входит, как проходит просмотр.",
+      "lead_form": "Сетка 6/6 на фоне gradient.hero: слева eyebrow, h2 («Частный показ в удобное для вас время»), три пункта «что будет после заявки» с золотыми номерами и карточка персонального менеджера (фото 64px кругом, имя, роль — только с согласия); справа форма в card_featured."
+    },
+    "niche_adaptations": {
+      "недвижимость": "Акцент champagne. Первый экран — фасад в сумерках или вид из окна. Секции: «Расположение» (своя схема района SVG, не скриншот чужих карт), «Планировки» на светлой полосе, «Ипотека и рассрочка» — если называете ставку или платёж, рядом банк и остальные условия, влияющие на стоимость (закон о рекламе требует этого для финансовых услуг). Кнопки: «Записаться на просмотр», «Получить планировки и цены». Цифры: срок сдачи, этажность, высота потолков, минут до центра. В форме — чипы «В офисе продаж» / «Онлайн-показ».",
+      "авто": "Акцент platinum, можно с cool_neutrals_dark. Первый экран — автомобиль сбоку или в три четверти в студийном свете на тёмном фоне. Секции: «Комплектации» (listing_card с ценой), «Тест-драйв», «Трейд-ин и кредит». Кнопки: «Записаться на тест-драйв», «Рассчитать кредит». Цифры: мощность, разгон до 100, запас хода, гарантия. Только собственные фото из шоурума; эмблемы производителя не выносить отдельной графикой.",
+      "премиум-услуги": "Акцент champagne. Первый экран — вариант split с портретом специалиста или интерьером кабинета. Секции: «Специалисты», «Результаты», «Конфиденциальность». Кнопка: «Записаться на консультацию». Цифры: лет практики, число клиентов, рейтинг с источником. Для медицины под первым экраном и у формы обязательна строка по закону о рекламе: «Имеются противопоказания. Необходима консультация специалиста» — не мельче caption, цветом text_muted, не прячется в подвал.",
+      "ивенты": "Акцент copper. Первый экран — зал в тёплом свете; дата — в eyebrow («14 декабря · Москва») и крупно цифрами stat в key_facts. Секции: «Программа» (таймлайн шагами process), «Площадка», «Пакеты участия» (listing_card), «Как добраться». Кнопки: «Забронировать место», «Запросить приглашение». В форме — поле «Сколько гостей» (число) и чипы с датами."
+    },
+    "grid": "12 колонок, контейнер 1280px, промежуток 32px; текстовая колонка до 720px; первый экран и галерея — во всю ширину окна; карточки 3 в ряд (2 на планшете 768–1023px, 1 на телефоне).",
+    "mobile_notes": "До 767px: поля страницы 16px, заголовок первого экрана 44px (hyphens:auto при lang=\"ru\", text-wrap:balance), h2 34px, stat 44px, цитата 28px; отступы секций 88px, первого экрана снизу 40px. Первый экран — min-height: 100svh (не 100vh: адресная строка съедает высоту), фото 4:5 кадрируется object-position под главный объект и остаётся видно хотя бы на треть высоты экрана — иначе сократите заголовок и lead. В первом экране телефона: eyebrow, заголовок до трёх строк, lead до двух строк, главная кнопка во всю ширину 56px, второе действие — link_arrow под ней; строка доверия переезжает в key_facts сразу ниже. После первого экрана внизу появляется липкая панель с золотой кнопкой и кнопкой-телефоном (sticky-cta-mobile) и прячется, когда форма в кадре; у панели padding-bottom: env(safe-area-inset-bottom). Параллакс и магнитная кнопка на телефоне выключены. Горизонтального скролла нет ни на одном экране.",
+    "imagery": "Только свои фото и рендеры клиента: вечерний тёплый свет, низкий ключ, приглушённая насыщенность, много тени. Пропорции: первый экран 16:9 (телефон 4:5 через <picture>), истории 4:5, галерея 3:2 и 4:5. Форматы AVIF/WebP с srcset (первый экран 960w, 1600w, 2400w при sizes=\"100vw\"; вариант 1600w в AVIF до 250 КБ — иначе фото тормозит LCP), размеры width/height прописаны — без сдвигов раскладки. Без стоковых людей в костюмах, водяных знаков, чужих логотипов и фирменных изображений других брендов.",
+    "copy_notes": "Простыми словами, спокойным тоном, на «вы» со строчной. Премиум доказывают фактами, а не прилагательными: вместо «элитный», «эксклюзивный», «роскошный» — метры, сроки, материалы, имена архитекторов и мастеров. Заголовок первого экрана — что человек получает, до 38 знаков («Вид на Неву, 7 минут до Эрмитажа»), подзаголовок — главное условие или срок. Кавычки «ёлочки», тире «—», числа с неразрывными пробелами."
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone"
+    ],
+    "optional_fields": [
+      "preferred_time",
+      "comment"
+    ],
+    "consent_152fz": true,
+    "consent_text": "Отдельная отметка «Согласен на обработку персональных данных» со ссылками на текст согласия и политику обработки. Не отмечена по умолчанию, не совмещена с согласием на рассылку, подпись 13px цветом text_muted, сам чекбокс 20×20 с рамкой border_strong и золотой галочкой.",
+    "style": "Карточка card_featured справа (6 колонок, на телефоне во всю ширину): золотая линия по верхней кромке, отступ 48px (24px на телефоне), скругление 4px. Сверху eyebrow «Частный показ», заголовок h2 уменьшенный до 40px (32px на телефоне) антиквой: «Запишитесь на просмотр». Поля 56px на фоне background с рамкой border_strong, между полями 16px; необязательный выбор времени — чипы. Кнопка — золотая button_primary во всю ширину карточки 56px «Записаться на просмотр». Под ней отметка согласия и строка caption: «Перезвоним в течение 15 минут в рабочее время. Без рассылок».",
+    "error_state": "Ошибка поля — рамка error, под полем текст caption 600 цветом error с SVG-иконкой, фокус переходит к первому ошибочному полю, введённое не стирается. Без отметки согласия — видимая подсказка у отметки. Отказ сервера — видимый текст на той же карточке: «Не получилось отправить. Попробуйте ещё раз или позвоните: +7 …», данные в полях остаются. Молча форма не отказывает никогда: ловушка для ботов только помечает заявку, но не выбрасывает её, если имя и телефон заполнены.",
+    "success_state": "form-success: карточка остаётся, поля гаснут за 320ms, на их месте — SVG-галочка в круге 56px с золотой линией 1.5px, заголовок антиквой «Заявка принята», строка «Перезвоним на +7 … в течение 15 минут» (номер из формы) и link_arrow «Посмотреть галерею». Фокус переносится на заголовок, область с aria-live=\"polite\"."
+  },
+  "motion_recipes": [
+    "hero-text-reveal",
+    "image-reveal-clip",
+    "fade-up-stagger",
+    "counter-up",
+    "parallax-soft",
+    "gradient-drift",
+    "magnetic-button",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "levels": {
+      "none": "без анимаций, кроме смены состояния формы",
+      "subtle": "по умолчанию: hero-text-reveal, fade-up-stagger, counter-up, accordion-smooth, form-success, sticky-cta-mobile",
+      "rich": "subtle + image-reveal-clip, parallax-soft, gradient-drift и magnetic-button по правилам ниже"
+    },
+    "speed": "Проявления секций (fade-up-stagger, image-reveal-clip, accordion-smooth) медленнее рецептов на треть — токены slow 720ms и reveal 1100ms, одно проявление в кадре за раз. hero-text-reveal, form-success и отклик на наведение и нажатие — со скоростью рецептов.",
+    "hero-text-reveal": "subtle и выше: заголовок первого экрана со скоростью рецепта — обязан уложиться примерно в секунду, иначе растёт LCP; фото первого экрана не анимировать",
+    "image-reveal-clip": "только rich: фото историй и галереи, не больше шести; фото первого экрана — никогда",
+    "fade-up-stagger": "subtle и выше: key_facts, карточки offer, шаги process — медленнее рецепта на треть",
+    "counter-up": "только для количеств (метры, минуты, лет практики, гостей), не для годов, дат и цен: «2027», досчитанный от нуля, выглядит нелепо",
+    "parallax-soft": "только rich и только на десктопе: фото блока story, ход до 40px",
+    "gradient-drift": "только rich и только в варианте hero_layout = type_only: пятно gradient.hero не насыщеннее 20%, кнопка паузы обязательна",
+    "magnetic-button": "только rich: главная кнопка первого экрана и кнопка формы — сдвиг до 6px и без увеличения: дорогое не пружинит",
+    "accordion-smooth": "частые вопросы, раскрытие медленнее рецепта на треть",
+    "form-success": "со скоростью рецепта: галочка в круге 56px с золотой линией 1.5px — полностью в lead_form.success_state",
+    "sticky-cta-mobile": "золотая кнопка button_primary на телефоне; прячется, когда форма в кадре"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "photo_full",
+        "split",
+        "type_only"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "motion_level": [
+        "subtle",
+        "rich",
+        "none"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "button_shape": [
+        "sharp",
+        "pill"
+      ],
+      "button_case": [
+        "sentence",
+        "caps"
+      ],
+      "theme": [
+        "dark",
+        "light"
+      ]
+    },
+    "fixed": [
+      "palette_accent_variant",
+      "fonts",
+      "radius_cards_inputs",
+      "hairline_gold",
+      "photo_scrim_85",
+      "no_emoji"
+    ],
+    "default": {
+      "hero_layout": "photo_full",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "motion_level": "subtle",
+      "social_proof_position": "under_hero",
+      "button_shape": "sharp",
+      "button_case": "sentence",
+      "theme": "dark"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. headline_scale: xl — 104/44px для заголовка до 38 знаков, l — 80/38px для 39–55 знаков. cta_color_role: primary — золотая кнопка, accent — кнопка слоновой кости. button_shape: sharp — 2px, pill — 999px у кнопок (поля и карточки не меняются). button_case: caps — прописные 14px с трекингом 0.08em. theme: light — дневная палитра целиком; первый экран с фото и шапка над ним остаются тёмными (data-theme=\"dark\" на секции, затемнение то же), шапка после первого экрана — светлая по nav.bg."
+  },
+  "do": [
+    "Держите тёплый почти-чёрный #0B0A08 и слои #15130F и #1D1A15 — глубина строится светлотой и тонкими линиями, а не тенями.",
+    "Золото — только для главного: одна золотая кнопка на экран (кнопка в шапке золотеет, когда первый экран ушёл из кадра), тонкие линии, бровки и ключевые цифры.",
+    "Заголовки — Cormorant 500 крупно (104/44px, до трёх строк и 38 знаков), текст и интерфейс — Manrope 400–600; цифры и цены всегда lining-nums tabular-nums.",
+    "Первый экран по умолчанию — настоящее фото объекта во весь экран; под любым текстом на фото затемнение не слабее 85%, под шапкой — не слабее 66%.",
+    "Оставляйте много воздуха: секции 144px на десктопе и 88px на телефоне, текст до 720px, не больше трёх карточек в ряд.",
+    "Доказывайте фактами: метры, сроки, мощность, дата — крупными цифрами с подписью и источником.",
+    "Двигайтесь спокойно: проявления 720–1100ms без пружин, одно в кадре за раз, отклик на наведение 180–320ms; у плывущего фона — кнопка паузы."
+  ],
+  "dont": [
+    "Не используйте чистый чёрный #000000 фоном и чистый белый #FFFFFF текстом — на тёмном они режут глаз и выглядят дёшево.",
+    "Не заливайте золотом фоны, большие площади и длинный текст; не рисуйте «золото» металликом с бликами.",
+    "Не набирайте Cormorant мельче 28px и не пишите им абзацы — тонкие штрихи пропадают на тёмном фоне; исключение — название в шапке прописными 600.",
+    "Не пишите «элитный», «эксклюзивный», «роскошный», «лучший» — премиум доказывают цифрами и фактами.",
+    "Не ставьте стоковые фото, рендеры с водяными знаками, чужие логотипы и фирменные изображения других брендов.",
+    "Не кладите светлый текст на фото без затемнения и не проверяйте контраст на глаз.",
+    "Не прячьте цену и заявку: если цена «по запросу», кнопка запроса стоит рядом, а не в конце страницы."
+  ],
+  "prompt_snippet": "Build a Russian-language lead-gen landing in the Dark Premium style. Warm near-black canvas #0B0A08, surfaces #15130F and #1D1A15, ivory text #F2ECE1, muted #A8A091, hairlines #2A261F. One accent: champagne gold #C9A869 with dark text #14110B, reserved for the single main CTA per viewport, thin lines, eyebrows and key numbers; the header CTA stays outlined over the hero. Headlines in Cormorant 500 (104px desktop, 44px mobile, max three lines of about 38 characters), body and UI in Manrope 400/600; lining tabular figures; self-host cyrillic, latin and latin-ext subsets for the ruble sign. Hero: full-bleed real photo, bottom-left text over a scrim at least 86% dark, a 56px gold button with 2px radius plus an outline button. 144px section spacing, max three cards per row, depth from lightness steps and gold hairlines instead of shadows. Form: name, phone, unticked 152-FZ consent, visible errors, inline success. Calm motion, no emoji, no CDNs.",
+  "source": {
+    "inspired_by": "bergside/awesome-design-skills (MIT): skills/refined, skills/dramatic, skills/premium",
+    "notes": "Из bergside взяты только направления: refined — изящная антиква, dramatic — тёмный фон и высокий контраст, premium — точность отступов. Всё конкретное заменено: синий и фиолетовый акценты — на шампанское золото с тёмным текстом на кнопке (8.33:1); холодный #09090B — на тёплый #0B0A08 с двумя слоями поверхностей; Playfair Display и Outfit — на Cormorant и Manrope (OFL-1.1, кириллица). По файлам шрифтов проверено: знак ₽ лежит в подмножестве latin-ext, «ёлочки» и тире — в latin, цифры Cormorant по умолчанию старостильные (нужен lnum), высота строчных Cormorant 0.386 против 0.54 у Manrope, lnum+tnum вместе дают табличные прописные цифры, узкого пробела U+202F нет ни в одном из двух шрифтов (поэтому разряды — U+00A0). Ревизия: мобильные размеры сведены к 44/34px по замеру строк, затемнение фото привязано к тексту, светлая медь затемнена до 3:1 к фону, добавлены эффекты под каждый акцент и холодные нейтрали для светлой платины. Добавлены: полная светлая «дневная» палитра, три варианта акцента (шампанское, платина, медь) с проверенным контрастом, расчёт затемнения фото, рамка полей 3:1 по WCAG 1.4.11, форма по 152-ФЗ с видимыми ошибками и без молчаливых отказов, раскладка рекламного лендинга и адаптации под недвижимость, авто, премиум-услуги и ивенты."
+  }
+}

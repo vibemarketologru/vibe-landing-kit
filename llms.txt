@@ -1,0 +1,17 @@
+# Vibe Landing Kit
+
+> Каталог для ИИ-агентов: дизайн-системы в духе мировых брендов и собственные стили (токены светлой и тёмной темы с проверенным контрастом, OFL-шрифты с кириллицей, секции рекламного лендинга, оси A/B-теста), анимационные рецепты с prefers-reduced-motion и плагин Claude Code, который собирает лендинг для A/B-теста одной командой вместе с семантикой из Яндекс Вордстата через MCP Вайб-Маркетолога.
+
+## Каталог
+- [catalog.json](catalog.json): список дизайн-систем и анимаций
+- [design-systems/](design-systems/): записи JSON, theme.css, DESIGN.md
+- [motion/](motion/): рецепты анимаций
+
+## Для агента
+- [skills/landing-ab/SKILL.md](skills/landing-ab/SKILL.md): маршрут и чек-лист качества
+- [AGENTS.md](AGENTS.md)
+
+## API и MCP
+- MCP: https://lk.vibemarketolog.ru/mcp (OAuth 2.1 или ключ oc_)
+- REST: https://lk.vibemarketolog.ru/api/agent/design-systems, /api/agent/motion, /api/agent/semantics
+- Документация: https://lk.vibemarketolog.ru/docs/agent-api

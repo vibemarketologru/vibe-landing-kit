@@ -1,0 +1,104 @@
+# Intercom
+
+> Описание эстетики по открытым материалам. Проект не аффилирован с Intercom; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.
+
+Тёплый кремовый фон вместо белого, угольный текст и белые карточки с тонкой линией вместо теней. Один гротеск в весе 500 со сжатым трекингом ведёт всю иерархию, кнопки прямоугольные со скруглением 8px. Главный герой каждого блока — макет продукта, а единственная цветная точка на странице — оранжевый акцент. Читается как спокойный продуктовый журнал о сервисе.
+
+**Подходит:** SaaS и облачные сервисы, клиентский сервис и поддержка, ИИ-ассистенты и чат-боты, CRM, хелпдески и мессенджеры для бизнеса, B2B-софт с демонстрацией продукта, агентства автоматизации и внедрения. **Цели:** запись на демо, заявки, доверие через показ продукта, пробный период, запись на консультацию. **Настроение:** спокойный, редакционный, тёплый, продуктовый, сдержанный, уверенный.
+
+## Цвета
+
+| Роль | Светлая | Тёмная |
+|---|---|---|
+| background | `#f5f1ec` | `#141311` |
+| surface | `#ffffff` | `#1f1e1b` |
+| text | `#111111` | `#f5f1ec` |
+| text_muted | `#626260` | `#a8a39b` |
+| border | `#d3cec6` | `#3a3834` |
+| primary | `#111111` | `#f5f1ec` |
+| on_primary | `#ffffff` | `#111111` |
+| accent | `#d24600` | `#d24600` |
+| on_accent | `#ffffff` | `#ffffff` |
+| link | `#111111` | `#f5f1ec` |
+| success | `#08772f` | `#0bdf50` |
+| error | `#c41c1c` | `#ff7466` |
+| surface_2 | `#ebe7e1` | `#2a2825` |
+| border_input | `#857f77` | `#77726a` |
+| primary_hover | `#2b2a28` | `#ffffff` |
+| primary_press | `#000000` | `#e0dbd3` |
+| accent_hover | `#b83d00` | `#b83d00` |
+| accent_brand | `#ff5600` | `#ff5600` |
+| accent_tint | `#ffe9de` | `#2a1a12` |
+| on_accent_tint | `#9e3500` | `#ff9a6b` |
+| featured | `#111111` | `#f5f1ec` |
+| on_featured | `#ffffff` | `#111111` |
+| on_featured_muted | `#9c9fa5` | `#626260` |
+| inverse | `#000000` | `#302d29` |
+| on_inverse | `#ffffff` | `#f5f1ec` |
+| on_inverse_muted | `#9c9fa5` | `#a8a39b` |
+| success_icon | `#0bdf50` | `#0bdf50` |
+| on_success_icon | `#111111` | `#111111` |
+| focus_ring | `#111111` | `#f5f1ec` |
+| mock_blue | `#65b5ff` | `#65b5ff` |
+| mock_pink | `#ff2067` | `#ff2067` |
+| mock_lime | `#b3e01c` | `#b3e01c` |
+| mock_cyan | `#03b2cb` | `#03b2cb` |
+
+## Типографика
+
+| Роль | Шрифт | Вес | Десктоп | Телефон |
+|---|---|---|---|---|
+| display | Geist | 500 | 64px | 38px |
+| h2 | Geist | 500 | 48px | 30px |
+| h3 | Geist | 500 | 22px | 20px |
+| lead | Geist | 400 | 20px | 18px |
+| body | Geist | 400 | 16px | 16px |
+| eyebrow | Geist | 500 | 14px | 14px |
+| button | Geist | 500 | 15px | 16px |
+| caption | Geist | 400 | 13px | 13px |
+| stat | Geist | 500 | 56px | 36px |
+| mono | Geist Mono | 400 | 13px | 12px |
+
+## Раскладка лендинга
+
+Кремовый фон без картинок, градиентов и узоров. По умолчанию «заголовок + макет»: на 8 колонок слева — надзаголовок eyebrow (или badge_accent «ИИ»), заголовок display в 2–3 строки до 60 знаков, лид 20px цвета text_muted в 1–2 предложения, ряд из угольной button_primary и белой button_secondary, под ними строка доверия caption с цифрой и датой замера. Ниже на всю ширину контейнера — главный герой: card_mockup 16px с HTML/SVG-макетом продукта клиента (диалог с ответом, карточка заявки, отчёт); макет заходит под нижний край экрана на 80–120px, чтобы звать прокрутку. Высота первого экрана — по содержимому, не 100vh. Макет первого экрана — без анимации появления (это LCP); если он картинкой — fetchpriority=high, без loading=lazy, с width/height.
+
+Порядок секций: nav → hero → logos → product_mockup → benefits → how → numbers → testimonial → offer → pricing → faq → lead_form → footer
+
+Одна колонка, боковые поля 16px, секции 56px. Заголовок 38px с трекингом -0.02em и hyphens: auto. Кнопки во всю ширину, 52px. Макет первого экрана заменяется вертикальным макетом телефона (не уменьшенным десктопным) и стоит после кнопок. Карточки 1 в ряд; цифры — сетка 2×2; тарифы — вертикальный список, рекомендуемый первым; полоса логотипов — marquee с паузой или сетка 3×2. Чёрная цитата остаётся, шрифт цитаты 24px. После ухода кнопки первого экрана выезжает липкая кнопка заявки с тенью raised и прячется, когда форма в кадре.
+
+## Форма заявки
+
+Большая белая карточка радиусом 24px (xxl) с рамкой 1px border, без тени, внутренний отступ 48px (телефон 20px). Внутри 5/7: слева h2 «Покажем, как это сработает у вас», три строки-довода с линейной галочкой и маленький card_mockup; справа поля друг под другом с промежутком 16px, подписи 14px 500 над полями, поля 48px с рамкой border_input и радиусом 8px. Кнопка на всю ширину колонки, 52px, угольная (или оранжевая в варианте accent), текст с глаголом результата «Получить демо» и стрелкой. Под кнопкой caption text_muted: срок ответа и «Не передаём данные третьим лицам». Маску телефона не навязывать до ввода — принимать любые цифры, пробелы и +. Поля: name, phone, company. Согласие 152-ФЗ: да.
+
+## Делать
+
+- Кремовый фон #f5f1ec — основа всей страницы; карточки поднимаются на белый, глубина — сменой поверхности и линией 1px, без теней.
+- Героем каждого блока делайте макет продукта в белой рамке радиусом 16px; маркетинговая обвязка вокруг него тихая.
+- Один шрифт на всю иерархию: Geist 500 в заголовках со сжатым трекингом, 400 в тексте; иерархия — размером, весом и трекингом.
+- Кнопки и поля — прямоугольники со скруглением 8px, карточки — 12px; пилюля только у переключателей и аватаров.
+- Оранжевый — одна точка энергии на экран: либо кнопки в варианте A/B, либо метка «ИИ»; рядом с угольной заливной кнопкой его не ставить.
+- Надзаголовки пишите обычным регистром 14px 500 — без капса и разрядки.
+- Каждую цифру подписывайте источником и датой замера мелким текстом под ней.
+
+## Не делать
+
+- Не заменять кремовый фон чистым белым и не красить секции пастельными плашками или градиентами.
+- Не ставить тени на карточки — тень raised только у всплывающего (липкая кнопка, окно).
+- Не делать кнопки-пилюли и не ставить угольную и оранжевую заливные кнопки в одном экране.
+- Не писать текст «кнопочным» оранжевым: #d24600 — только заливка под белой надписью (текстом 4.05 на креме), #ff5600 не класть под белую надпись (3.19) и не писать им по светлому (2.84); оранжевый текст — только в метке badge_accent цветом on_accent_tint.
+- Не выводить серые #7b7b78 и #9c9fa5 в текст на кремовом или белом — только #626260 и темнее; #9c9fa5 допустим лишь на угольном (карточка тарифа, чёрная полоса).
+- Не поднимать цвета графиков (голубой, розовый, лаймовый, бирюзовый) до цветов страницы — они живут только внутри макетов.
+- Не прятать согласие на обработку данных в предотмеченную галочку.
+
+## Анимации
+
+`fade-up-stagger`, `image-reveal-clip`, `marquee-logos`, `counter-up`, `accordion-smooth`, `form-success`, `sticky-cta-mobile` — рецепты: GET /api/agent/motion/{slug}
+
+## A/B-тест
+
+Менять: {"hero_layout":["stacked_mockup","split"],"cta_color_role":["primary","accent"],"headline_scale":["xl","l"],"form_position":["bottom","hero"],"proof_style":["quote_strip","logo_strip"],"motion_level":["none","subtle"],"social_proof_position":["under_hero","before_form"]}. Не трогать: palette, fonts, radius, cream_canvas, no_card_shadows, single_orange_point.
+
+## Инструкция верстальщику
+
+Build a Russian lead-generation landing in an Intercom-inspired editorial style; expose tokens as CSS variables --color-<key>. Canvas: warm cream #F5F1EC, never pure white; content sits on white cards (12px radius, 1px #D3CEC6 hairline), no shadows or gradients. Sections are led by product mockups: HTML/SVG UI in white 16px-radius frames. Self-hosted Geist only: 500 headings (64px desktop, 38px mobile, tracking -0.03em, sentence case), 400 body, 14px sentence-case eyebrows. Buttons are 8px-radius rectangles, 48px, full-width 52px on mobile: charcoal #111111 primary, white secondary with #857F77 border. Orange #D24600 is the single colour point: fill only, never text; orange CTAs only in the accent A/B variant. One black quote strip; featured pricing card inverts. Lead form in a 24px-radius white card: name, phone, optional company, unchecked 152-FZ consent, visible errors. Motion: short fades and mockup reveals, none on the hero; honour prefers-reduced-motion. Dark: #141311 canvas, #1F1E1B cards, #302D29 quote strip, cream text/CTA.

@@ -1,0 +1,679 @@
+{
+  "slug": "cal",
+  "name": "Cal.com",
+  "kind": "brand",
+  "version": "1.0.0",
+  "disclaimer": "Описание эстетики по открытым материалам. Проект не аффилирован с Cal.com; товарные знаки принадлежат их владельцам. Логотипы и фирменные шрифты не используются.",
+  "summary": "Белый холст, почти чёрные прямоугольные кнопки с радиусом 8px и плотные геометрические заголовки со сжатым трекингом. Вместо иллюстраций — живые фрагменты интерфейса в карточках: календарь, слоты времени, форма записи. Серые карточки без теней утверждают, белые с тонкой рамкой показывают продукт; переключатели «пилюля в пилюле», а тёмный подвал закрывает страницу.",
+  "summary_en": "A white canvas, near-black rectangular buttons with an 8px radius and dense geometric headlines with tight tracking. Instead of illustrations, real interface fragments sit inside cards: a calendar, time slots, a booking form. Shadowless light-gray cards make claims, white hairline cards show the product; pill-in-pill switchers, and a dark footer closes every page.",
+  "best_for": [
+    "онлайн-запись и сервисы бронирования",
+    "консультации: юристы, бухгалтеры, психологи",
+    "B2B SaaS и IT-сервисы",
+    "онлайн-школы и репетиторы",
+    "клиники, салоны и студии с записью",
+    "агентства и студии, которые продают через созвон"
+  ],
+  "goals": [
+    "запись на звонок или консультацию",
+    "заявки",
+    "запись на демо",
+    "бронирование удобного времени"
+  ],
+  "mood": [
+    "дружелюбный",
+    "аккуратный",
+    "монохромный",
+    "деловой",
+    "спокойный"
+  ],
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "#ffffff",
+        "surface": "#f5f5f5",
+        "text": "#111111",
+        "text_muted": "#69707e",
+        "border": "#e5e7eb",
+        "primary": "#111111",
+        "on_primary": "#ffffff",
+        "accent": "#1c6ef5",
+        "on_accent": "#ffffff",
+        "link": "#111111",
+        "success": "#0b7f58",
+        "error": "#d42424",
+        "text_secondary": "#374151",
+        "surface_soft": "#f8f9fa",
+        "surface_strong": "#e5e7eb",
+        "border_soft": "#f3f4f6",
+        "border_input": "#858a94",
+        "primary_hover": "#242424",
+        "primary_disabled": "#e5e7eb",
+        "on_primary_disabled": "#69707e",
+        "accent_hover": "#1659d1",
+        "focus_ring": "#111111",
+        "surface_inverse": "#101010",
+        "surface_inverse_elevated": "#1a1a1a",
+        "text_on_inverse": "#ffffff",
+        "text_muted_on_inverse": "#a1a1aa",
+        "border_on_inverse": "#2a2a2a",
+        "badge_bg": "#f5f5f5",
+        "badge_text": "#111111",
+        "badge_accent_bg": "#eff6ff",
+        "badge_accent_text": "#1d4ed8",
+        "star": "#e46905",
+        "avatar_orange": "#fb923c",
+        "avatar_pink": "#ec4899",
+        "avatar_violet": "#8d5ff6",
+        "avatar_emerald": "#34d399",
+        "avatar_text": "#111111",
+        "day_available_bg": "#e5e7eb",
+        "day_available_text": "#111111",
+        "footer_bg": "#101010",
+        "footer_text": "#a1a1aa",
+        "footer_heading": "#ffffff"
+      },
+      "dark": {
+        "background": "#101010",
+        "surface": "#1a1a1a",
+        "text": "#ffffff",
+        "text_muted": "#a1a1aa",
+        "border": "#2a2a2a",
+        "primary": "#ffffff",
+        "on_primary": "#111111",
+        "accent": "#1c6ef5",
+        "on_accent": "#ffffff",
+        "link": "#ffffff",
+        "success": "#34d399",
+        "error": "#f87171",
+        "text_secondary": "#d4d4d8",
+        "surface_soft": "#161616",
+        "surface_strong": "#262626",
+        "border_soft": "#1f1f1f",
+        "border_input": "#737373",
+        "primary_hover": "#e5e5e5",
+        "primary_disabled": "#262626",
+        "on_primary_disabled": "#a1a1aa",
+        "accent_hover": "#1659d1",
+        "focus_ring": "#ffffff",
+        "surface_inverse": "#ffffff",
+        "surface_inverse_elevated": "#f5f5f5",
+        "text_on_inverse": "#111111",
+        "text_muted_on_inverse": "#69707e",
+        "border_on_inverse": "#e5e7eb",
+        "badge_bg": "#262626",
+        "badge_text": "#ffffff",
+        "badge_accent_bg": "#172554",
+        "badge_accent_text": "#bfdbfe",
+        "star": "#fb923c",
+        "avatar_orange": "#fb923c",
+        "avatar_pink": "#ec4899",
+        "avatar_violet": "#8d5ff6",
+        "avatar_emerald": "#34d399",
+        "avatar_text": "#111111",
+        "day_available_bg": "#262626",
+        "day_available_text": "#ffffff",
+        "footer_bg": "#0a0a0a",
+        "footer_text": "#a1a1aa",
+        "footer_heading": "#ffffff"
+      }
+    },
+    "contrast_notes": "Пары, которые не проверяет check.mjs, посчитаны по WCAG. Светлая: text_secondary/фон 10.31 (на surface 9.45), text_muted/surface 4.56 (на surface_soft 4.72), кнопка при наведении 15.52, accent_hover/белый 6.21, border_input/фон 3.47 (на surface 3.18) — граница поля по WCAG 1.4.11, badge_accent 6.16, star/фон 3.32 (на surface 3.05) — только значки, оценка дублируется текстом, success/фон 5.01 (на surface 4.60), error/фон 5.15 (на surface 4.72), подвал: footer_text 7.42, заголовки 19.03; доступный день календаря 15.25; инициалы на аватарах 4.59–9.82; галочка на круге success 5.01. Тёмная: text_secondary 12.87, text_muted/surface 6.79, border_input 4.01 (на surface 3.67), текст на белом тарифе muted 4.98 (на #f5f5f5 4.56), badge_accent 10.34, star 8.41, success 9.90, error 6.88, подвал 7.72. Синий accent к тёмному фону 4.17 — контур кнопки виден и без рамки. Линия border (#e5e7eb / #2a2a2a) декоративная, 1.24–1.33: границы полей держит только border_input. Дополнительно (проверка 24-09-26): тёмная — белый текст на day_available_bg 15.13, кнопка при наведении #e5e5e5 14.99, text_muted на surface_strong 5.90, success на surface 9.05, error на surface 6.29.",
+    "typography": {
+      "display": {
+        "family": "Manrope",
+        "fallback": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 800,
+        "size_desktop": "64px",
+        "size_mobile": "34px",
+        "line_height": 1.08,
+        "letter_spacing": "-0.04em",
+        "note": "Заголовок первого экрана. Замер по метрикам Manrope 800: при 64px в колонке 7/12 (690px) строка вмещает 17–20 знаков — это до 45 знаков в 3 строки; длиннее — ступень l (56px, до 55 знаков). На телефоне 34px: 13–16 знаков в строке 328px, 3–4 строки допустимы; трекинг на телефоне -0.03em — на малом кегле сжатая кириллица слипается. Самое длинное слово на 34px — до 16 букв («Консультирование» ≈ 308px), 17 и больше («Стоматологическая») — снизить до 32px или перестроить фразу; переносы hyphens не включать. У бренда интерлиньяж 1.05 — для кириллицы 1.08, иначе Й и Ё задевают строку выше"
+      },
+      "h2": {
+        "family": "Manrope",
+        "fallback": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 800,
+        "size_desktop": "48px",
+        "size_mobile": "30px",
+        "line_height": 1.1,
+        "letter_spacing": "-0.03em",
+        "note": "Заголовки полос. Трекинг -0.03em, а не -0.035em: на 48px у кириллицы (п, н, и, ш — прямоугольные знаки) слова при более плотном трекинге сливаются в блоки"
+      },
+      "h3": {
+        "family": "Manrope",
+        "fallback": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 800,
+        "size_desktop": "28px",
+        "size_mobile": "22px",
+        "line_height": 1.2,
+        "letter_spacing": "-0.02em",
+        "note": "Заголовок полосы-призыва, цена тарифа, заголовок формы"
+      },
+      "title": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "18px",
+        "size_mobile": "17px",
+        "line_height": 1.4,
+        "letter_spacing": "0",
+        "note": "Заголовки карточек, название тарифа (22px), шаги. Шрифт заголовков в карточки не ставить — граница Manrope/Inter строгая"
+      },
+      "lead": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "20px",
+        "size_mobile": "18px",
+        "line_height": 1.55,
+        "letter_spacing": "0",
+        "note": "Подзаголовок первого экрана и полос, цвет text_secondary, ширина до 52ch"
+      },
+      "body": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 400,
+        "size_desktop": "16px",
+        "size_mobile": "16px",
+        "line_height": 1.6,
+        "letter_spacing": "0",
+        "note": "Цвет text_secondary; у бренда интерлиньяж 1.5 — русский текст длиннее, поэтому 1.6"
+      },
+      "caption": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "13px",
+        "size_mobile": "13px",
+        "line_height": 1.45,
+        "letter_spacing": "0"
+      },
+      "button": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 600,
+        "size_desktop": "14px",
+        "size_mobile": "16px",
+        "line_height": 1,
+        "letter_spacing": "0",
+        "note": "14px в шапке (кнопка 40px), 16px на первом экране и в форме (кнопка 48px). line-height 1.0 — высоту даёт padding, см. components.button_primary"
+      },
+      "nav_link": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "22px",
+        "line_height": 1.4,
+        "letter_spacing": "0",
+        "note": "На телефоне — ссылки в шторке меню"
+      },
+      "stat": {
+        "family": "Manrope",
+        "fallback": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 800,
+        "size_desktop": "48px",
+        "size_mobile": "36px",
+        "line_height": 1,
+        "letter_spacing": "-0.04em",
+        "features": "tnum",
+        "note": "Цифры результатов и цена. Цифры Manrope лежат в подмножестве latin (там же tnum), знак ₽ — в latin-ext: без этих подмножеств цифры и рубль уйдут в системный шрифт. Знак ₽ в крупной цене не ставить — он идёт припиской caption"
+      },
+      "tabular": {
+        "family": "Inter",
+        "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+        "weight": 500,
+        "size_desktop": "14px",
+        "size_mobile": "15px",
+        "line_height": 1.4,
+        "letter_spacing": "0",
+        "features": "tnum",
+        "note": "Числа календаря, слоты времени, телефон в шапке, суммы в макетах"
+      }
+    },
+    "radius": {
+      "xs": "4px",
+      "sm": "6px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "pill": "9999px",
+      "full": "50%",
+      "usage": "md — кнопки, поля, ячейки календаря, слоты; lg — карточки; xl — только главный макет первого экрана и карточка формы; pill — переключатель «пилюля в пилюле» и бейджи; full — аватары и круглые кнопки-стрелки"
+    },
+    "spacing": {
+      "unit": 4,
+      "scale": [
+        4,
+        8,
+        12,
+        16,
+        24,
+        32,
+        48,
+        64,
+        96
+      ],
+      "section_desktop": "96px",
+      "section_mobile": "64px",
+      "container": "1200px",
+      "gutter_desktop": "24px",
+      "gutter_mobile": "16px",
+      "card_padding": "32px",
+      "card_padding_mobile": "24px",
+      "grid_gap": "24px",
+      "nav_height": "64px"
+    },
+    "shadow": {
+      "card": "0 1px 2px rgba(0,0,0,0.05)",
+      "raised": "0 4px 12px rgba(0,0,0,0.08)",
+      "mockup": "0 1px 2px rgba(0,0,0,0.05), 0 16px 40px -12px rgba(0,0,0,0.14)",
+      "pill_active": "0 1px 2px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.04)",
+      "card_dark": "0 0 0 1px #2a2a2a",
+      "raised_dark": "0 0 0 1px #2a2a2a, 0 8px 24px rgba(0,0,0,0.5)",
+      "mockup_dark": "0 0 0 1px #2a2a2a, 0 24px 48px -12px rgba(0,0,0,0.7)",
+      "pill_active_dark": "0 0 0 1px #333333",
+      "focus": "0 0 0 2px var(--background), 0 0 0 4px var(--focus_ring)",
+      "note": "Серые карточки теней не имеют вовсе; тень card — только у белых карточек с рамкой, raised — у тарифов и при наведении на кликабельную карточку. В тёмной теме глубину даёт рамка 1px, а не тень"
+    },
+    "motion": {
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "400ms",
+      "ease_standard": "cubic-bezier(.2,0,0,1)",
+      "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+      "note": "Движение тихое: появление снизу на 16–24px, смена фона кнопки за 150ms. Без пружин, свечения, увеличения карточек и параллакса"
+    }
+  },
+  "fonts": [
+    {
+      "family": "Manrope",
+      "fontsource": "manrope",
+      "role": "display",
+      "weights": [
+        800
+      ],
+      "replaces": "Cal Sans (фирменный геометрический шрифт заголовков; открыт по OFL, но без кириллицы — для русских заголовков не подходит)",
+      "install": "npm i @fontsource-variable/manrope — раздача из своей папки, font-display: swap. Подмножества cyrillic + latin (цифры и tnum) + latin-ext (знак ₽); index.css пакета подключает их через unicode-range — лишнее браузер не скачает. Предзагрузить один файл: кириллица, вариативный",
+      "license": "OFL-1.1"
+    },
+    {
+      "family": "Inter",
+      "fontsource": "inter",
+      "role": "body+ui",
+      "weights": [
+        400,
+        500,
+        600
+      ],
+      "replaces": "не заменяет: Inter — второй шрифт самого бренда (текст, кнопки, меню) и открыт по OFL",
+      "install": "npm i @fontsource-variable/inter — подмножества cyrillic, latin и latin-ext (знак ₽ в приписке цены), font-display: swap",
+      "license": "OFL-1.1"
+    }
+  ],
+  "components": {
+    "button_primary": {
+      "bg": "primary",
+      "color": "on_primary",
+      "radius": "md",
+      "padding": "16px 24px",
+      "height": "48px (16px шрифт × line-height 1.0 + 2 × 16px); display inline-flex, align-items center",
+      "size_compact": "padding 13px 20px, высота 40px, шрифт 14px — только кнопка в шапке",
+      "font": "button",
+      "weight": 600,
+      "icon": "необязательно: стрелка вправо 16px, SVG stroke 1.75px currentColor, отступ 8px",
+      "hover": "фон primary_hover за 150ms; больше ничего не меняется — без подъёма, тени и свечения",
+      "active": "фон primary_hover, сдвиг вниз на 1px (transform)",
+      "disabled": "фон primary_disabled, текст on_primary_disabled; кнопку отправки формы не отключать — см. lead_form",
+      "focus": "shadow.focus (двойное кольцо: фон, затем focus_ring)",
+      "rule": "одна залитая кнопка на полосу; чёрная, прямоугольная, не пилюля"
+    },
+    "button_secondary": {
+      "bg": "background (тёмная тема — surface)",
+      "color": "text",
+      "border": "1px solid border",
+      "shadow": "card",
+      "radius": "md",
+      "padding": "15px 24px (плюс рамка 1px с двух сторон = 48px)",
+      "weight": 600,
+      "hover": "фон surface_soft",
+      "use": "второе действие рядом с главной кнопкой: «Как это работает», «Смотреть цены»",
+      "height": "48px (в шапке 40px, как у button_primary)"
+    },
+    "button_accent": {
+      "bg": "accent",
+      "color": "on_accent",
+      "radius": "md",
+      "padding": "16px 24px",
+      "weight": 600,
+      "hover": "фон accent_hover",
+      "use": "только ветка A/B cta_color_role=accent: проверка гипотезы «цветная кнопка заметнее». Бренд монохромный, в контрольной ветке кнопка чёрная",
+      "height": "48px (в шапке 40px, как у button_primary)"
+    },
+    "button_icon": {
+      "bg": "background",
+      "color": "text",
+      "border": "1px solid border",
+      "radius": "full",
+      "size": "36px видимый круг, область касания 44×44px (прозрачный отступ)",
+      "use": "стрелки месяца в календаре, листание отзывов"
+    },
+    "link": {
+      "color": "link",
+      "decoration": "подчёркивание всегда: 1px currentColor, отступ 3px; при наведении толщина 2px",
+      "rule": "ссылки монохромные, как у бренда, поэтому подчёркивание обязательно — цветом ссылку от текста не отличить"
+    },
+    "nav": {
+      "height": "64px",
+      "bg": "background; после 8px прокрутки — нижняя линия 1px border (без размытия и прозрачности)",
+      "left": "текстовое название клиента: Manrope 800 20px, трекинг -0.03em, цвет text; чужих логотипов нет",
+      "center": "3–4 якорные ссылки nav_link, цвет text_secondary, активная — text",
+      "right": "телефон ссылкой tel: (tabular) + button_primary 40px «Записаться»",
+      "mobile": "бургер 44×44 справа; меню — шторка на весь экран, ссылки 22px, кнопка 48px внизу"
+    },
+    "pill_switch": {
+      "wrapper": "фон surface_soft (тёмная — surface), радиус pill, внутренний отступ 6px, рамка 1px border_soft",
+      "segment": "nav_link, цвет text_muted, отступ 8px 14px, радиус pill, минимальная высота 36px (с обёрткой — 48px)",
+      "active": "фон background (тёмная — surface_strong), цвет text, тень pill_active (тёмная — pill_active_dark); подложка переезжает к выбранному сегменту через transform за 200ms",
+      "use": "фирменный элемент: переключатель периода тарифа «Разово / Абонемент», «Частным / Бизнесу», вкладки блока «как это работает». Семантика — role=tablist или radiogroup, стрелки клавиатуры переключают"
+    },
+    "card_feature": {
+      "bg": "surface",
+      "color": "text",
+      "border": "нет",
+      "shadow": "нет",
+      "radius": "lg",
+      "padding": "32px (телефон 24px)",
+      "icon": "линейная SVG-иконка 20px цветом text в квадрате 40px: фон background, рамка 1px border, радиус md",
+      "title": "typography.title",
+      "text": "body, text_secondary",
+      "meaning": "серая карточка = утверждение («Перезвоним за 15 минут»)"
+    },
+    "card_mockup": {
+      "bg": "background (тёмная — surface)",
+      "border": "1px solid border",
+      "shadow": "card (тёмная — card_dark)",
+      "radius": "lg",
+      "padding": "24px",
+      "content": "фрагмент интерфейса, собранный вёрсткой из HTML/SVG с цифрами клиента: расписание недели, смета из 4–5 строк с суммами tabular, список заявок с точками-статусами (success, star, accent), уведомление «Запись подтверждена». Скриншоты чужих продуктов не использовать",
+      "meaning": "белая карточка с рамкой = «посмотрите на сам продукт»"
+    },
+    "hero_mockup": {
+      "bg": "background (тёмная — surface)",
+      "border": "1px solid border",
+      "shadow": "mockup (тёмная — mockup_dark)",
+      "radius": "xl",
+      "padding": "24px (телефон 16px)",
+      "content": "в ветке split_booking — booking_widget, он же форма заявки; в ветке split_mockup — card_mockup крупнее, с результатом услуги"
+    },
+    "booking_widget": {
+      "header": "круг-аватар 36px с инициалами того, кто перезвонит (заливка avatar_*, текст avatar_text), имя caption text_muted, название title «Консультация 15 минут», строка с SVG-иконками 16px цветом text_muted: часы «15 минут», трубка «Звонок или видео»",
+      "calendar": "над сеткой — месяц (title) и две button_icon-стрелки; сетка 7 колонок, промежуток 4px, дни недели caption text_muted; число tabular, радиус md. Ячейка 36px в первом экране (7 × 36 + 6 × 4 = 276px) и 44px в широкой полосе lead_form. Доступный день — фон day_available_bg, текст day_available_text weight 600; выбранный — фон primary, текст on_primary; недоступный — text_muted без фона, aria-disabled; сегодня — точка 4px под числом. Телефон: вместо сетки — лента 7 ближайших рабочих дней, чипы 56×64px (день недели caption + число tabular), лента прокручивается по горизонтали, видно 5 дней",
+      "slots": "колонка кнопок высотой 44px: рамка 1px border, радиус md, текст tabular, 24-часовой формат «14:30», шаг 30 минут в рабочие часы клиента. Первая — «Как можно скорее», выбрана по умолчанию. Выбранный слот — фон primary, текст on_primary, aria-pressed=true",
+      "fields": "ниже слотов (десктоп — третьей колонкой): имя, телефон, чекбокс согласия, button_primary на всю ширину",
+      "layout": "первый экран (5 колонок, 486px, внутри 438px): шапка сверху, под ней календарь 276px и колонка слотов ≈146px рядом (видно 5 слотов, остальные — прокрутка внутри колонки), поля и кнопка — под ними на всю ширину. Отдельная полоса lead_form (карточка 880px, внутри 832px): три колонки — шапка 220px | календарь с ячейками 44px (332px) | слоты и поля, промежутки 24px",
+      "honesty": "слот — желаемое время звонка, а не бронь. Занятые слоты, счётчики «осталось 2 окна» и таймеры не рисовать; без JS виджет превращается в обычную форму «имя + телефон»"
+    },
+    "card_testimonial": {
+      "bg": "surface",
+      "radius": "lg",
+      "padding": "24px",
+      "top": "аватар 36px (фото клиента с согласия или инициалы на заливке avatar_*), имя title 16px, роль caption text_muted",
+      "rating": "5 звёзд SVG 14px цветом star + скрытый текст «Оценка 5 из 5»",
+      "quote": "body, text_secondary, до 280 знаков, без кавычек-ёлочек крупным шрифтом"
+    },
+    "card_pricing": {
+      "bg": "background (тёмная — surface)",
+      "border": "1px solid border",
+      "shadow": "card (тёмная — card_dark)",
+      "radius": "lg",
+      "padding": "32px",
+      "name": "title 22px",
+      "price": "stat в размере 36px, приписка «₽ / месяц» caption text_muted",
+      "list": "4–6 пунктов body с галочкой 16px цветом text",
+      "cta": "button_secondary на всю ширину"
+    },
+    "card_pricing_featured": {
+      "bg": "surface_inverse",
+      "color": "text_on_inverse",
+      "muted": "text_muted_on_inverse",
+      "border": "нет (тёмная тема — нет: белая карточка сама сигнал)",
+      "radius": "lg",
+      "padding": "32px",
+      "cta": "кнопка-инверсия: фон text_on_inverse, текст surface_inverse, радиус md",
+      "rule": "инверсия и есть сигнал «рекомендуем»: без цветной рамки, бейджа «Хит» и увеличения. В светлой теме карточка тёмная, в тёмной — белая"
+    },
+    "input": {
+      "bg": "background (тёмная — background внутри карточки surface)",
+      "color": "text",
+      "border": "1px solid border_input",
+      "radius": "md",
+      "height": "48px",
+      "padding": "12px 14px",
+      "font": "Inter 400 16px — не меньше 16px, иначе iOS приближает страницу",
+      "label": "над полем, caption, цвет text",
+      "placeholder": "text_muted, только пример формата: +7 900 000-00-00",
+      "focus": "рамка text + shadow.focus",
+      "error": "рамка error, под полем caption цветом error с иконкой-восклицанием SVG 14px, aria-describedby на текст ошибки"
+    },
+    "checkbox_consent": {
+      "size": "18px в области касания 44px (вся строка подписи — label)",
+      "radius": "xs",
+      "border": "1px solid border_input",
+      "checked": "фон primary, галочка on_primary",
+      "label": "caption, цвет text_muted, ссылки «Согласие» и «Политика» — link с подчёркиванием",
+      "default": "не отмечен"
+    },
+    "badge": {
+      "bg": "badge_bg",
+      "color": "badge_text",
+      "radius": "pill",
+      "padding": "4px 12px",
+      "font": "caption",
+      "variant_accent": "badge_accent_bg / badge_accent_text + точка 6px цветом accent слева — «Новое», «Запись открыта на октябрь»",
+      "rule": "одна акцентная плашка на экран; над заголовком первого экрана — как eyebrow"
+    },
+    "trust_line": {
+      "avatars": "3–4 аватара 32px внахлёст на -8px, обводка 2px background, заливки avatar_* с инициалами",
+      "rating": "звёзды star + «4,9 из 5» tabular, текст caption text_muted: «по 312 отзывам на Яндекс Картах» — только проверяемая цифра с источником"
+    },
+    "stat": {
+      "number": "typography.stat, цвет text, tabular-nums",
+      "label": "caption text_muted, до 6 слов",
+      "layout": "4 цифры в ряд без карточек, разделены вертикальной линией 1px border на десктопе"
+    },
+    "cta_band": {
+      "bg": "surface",
+      "radius": "lg",
+      "padding": "48px (телефон 24px)",
+      "title": "h3, по центру",
+      "cta": "button_primary 48px по центру",
+      "use": "короткий призыв посреди страницы после отзывов; форма заявки — отдельной полосой ниже"
+    },
+    "faq_item": {
+      "border": "нижняя линия 1px border",
+      "question": "title 18px, цвет text, отступ 20px 0",
+      "icon": "шеврон 16px справа, при раскрытии поворот на 180° (transform)",
+      "answer": "body, text_secondary, ширина до 720px"
+    },
+    "footer": {
+      "bg": "footer_bg",
+      "color": "footer_text",
+      "heading": "footer_heading, title 14px",
+      "font": "body 14px",
+      "padding": "64px сверху и снизу",
+      "content": "название клиента Manrope 800 20px цветом footer_heading; 2–3 колонки ссылок; контакты tabular; строка реквизитов оператора персональных данных: название, ИНН/ОГРН, ссылки «Политика обработки персональных данных» и «Согласие на обработку» (подчёркнутые, цвет footer_heading)",
+      "rule": "в светлой теме это единственная тёмная полоса — она закрывает страницу; в тёмной теме подвал темнее фона (#0a0a0a) и отделён линией 1px border"
+    }
+  },
+  "layout": {
+    "hero_pattern": "Белый первый экран без градиентов и фоновых картинок, раскладка 7/5. Слева: badge (акцентный вариант) как надзаголовок, заголовок display в 2–3 строки, lead цветом text_secondary до 52ch, ряд кнопок button_primary 48px «Записаться на звонок» + button_secondary «Как это работает», под ними trust_line. Справа: hero_mockup с радиусом 16px, тонкой рамкой и мягкой тенью; внутри — booking_widget, который и есть форма заявки. Виджет — главный визуальный заряд страницы вместо иллюстрации. Верхний отступ 64px под шапкой, нижний 96px; высота экрана — по содержимому, не 100vh.",
+    "section_order": [
+      "nav",
+      "hero",
+      "logos",
+      "benefits",
+      "how",
+      "numbers",
+      "proof",
+      "cta_band",
+      "pricing",
+      "faq",
+      "lead_form",
+      "footer"
+    ],
+    "section_backgrounds": {
+      "hero": "background",
+      "logos": "background, отделены от первого экрана линией border_soft",
+      "benefits": "background + card_feature (серые карточки на белом)",
+      "how": "surface_soft + card_mockup (белые макеты на светло-сером)",
+      "numbers": "background, без карточек",
+      "proof": "background + card_testimonial",
+      "cta_band": "background, внутри контейнера — cta_band серым блоком",
+      "pricing": "surface_soft + card_pricing и один card_pricing_featured, над сеткой — pill_switch периода",
+      "faq": "background",
+      "lead_form": "surface_soft, по центру — booking_widget в карточке hero_mockup шириной 880px",
+      "footer": "footer_bg"
+    },
+    "band_rhythm": "Две соседние полосы не повторяют один режим: белая → белая с серыми карточками → светло-серая с белыми макетами → белая → … → тёмный подвал. В тёмной теме тот же ритм: background ↔ surface_soft, карточки surface с рамкой border.",
+    "grid": "12 колонок, контейнер 1200px, промежуток 24px (колонка 78px). Первый экран 7/5 (690 + 486px); логотипы — ряд из 5–6 монохромных знаков клиентов высотой 24px (цвет text_muted, только с разрешения клиента) или строка названий текстом; преимущества 3×2 по 4 колонки; «как это работает» — pill_switch сверху и 3 шага card_mockup по 4 колонки; цифры — 4 по 3 колонки; отзывы 3 в ряд; тарифы 3 по 4 колонки, средний featured; FAQ — 8 колонок по центру; форма — карточка 880px по центру",
+    "mobile_notes": "Одна колонка, боковые поля 16px. Заголовок 34px (трекинг -0.03em, слово длиннее 16 букв — 32px), h2 30px. Под кнопками и trust_line идёт виджет записи: вместо сетки месяца — лента из 7 дней с горизонтальной прокруткой, слоты — сетка 2 колонки по 44px, поля и кнопка ниже. Кнопки первого экрана на всю ширину, 48px. Преимущества и отзывы — по одной карточке в столбик; pill_switch прокручивается по горизонтали, если сегменты не влезают. Тарифы — список, рекомендуемый первым. Цифры — сетка 2×2 без разделителей. Липкая кнопка «Записаться» снизу, прячется, когда форма на экране. Подвал — одна колонка.",
+    "breakpoints": {
+      "mobile": "<768px",
+      "tablet": "768–1023px — первый экран в одну колонку, виджет записи под текстом шириной до 640px (календарь с ячейками 44px и слоты рядом, поля под ними), карточки по 2 в ряд",
+      "desktop": "≥1024px",
+      "wide": "≥1440px — контейнер прежний 1200px, растут только поля"
+    }
+  },
+  "lead_form": {
+    "fields": [
+      "name",
+      "phone",
+      "preferred_time"
+    ],
+    "required": [
+      "name",
+      "phone"
+    ],
+    "field_labels": {
+      "name": "Как к вам обращаться",
+      "phone": "Телефон",
+      "preferred_time": "Когда удобно поговорить (необязательно)"
+    },
+    "consent_152fz": true,
+    "consent_text": "Я даю согласие на обработку персональных данных на условиях Согласия и Политики обработки персональных данных",
+    "consent_rules": "Отдельный чекбокс, по умолчанию не отмечен; «Согласие» и «Политика» — две разные ссылки на отдельные документы (с 1 сентября 2025 согласие оформляется отдельным документом). Неотмеченный чекбокс не блокирует кнопку: при нажатии под ним появляется текст «Отметьте согласие, чтобы мы могли связаться с вами», фокус переходит на чекбокс. Маркетинговые рассылки — только вторым необязательным чекбоксом.",
+    "style": "Форма живёт внутри booking_widget: карточка background (тёмная — surface), рамка 1px border, радиус xl, тень mockup, отступ 24px. Сверху шапка виджета, затем выбор дня и слота (слот «Как можно скорее» выбран заранее — выбирать время необязательно), затем поля input друг под другом с промежутком 16px, чекбокс согласия и button_primary 48px на всю ширину: «Записаться на звонок». Под кнопкой caption text_muted: «Перезвоним в выбранное время по Москве. Данные не передаём третьим лицам». Выбранные день и слот уходят скрытым полем preferred_time текстом («чт, 26 сентября, 14:30» или «как можно скорее»). Маску телефона не навязывать до ввода — принимать любые цифры, пробелы, скобки и +.",
+    "success_state": "Карточка не исчезает и не меняет высоту: содержимое сменяется по рецепту form-success в духе страницы подтверждения записи — круг 48px цветом success с прорисованной галочкой on_primary, h3 «Заявка принята», затем таблица из трёх строк (подпись caption text_muted слева, значение body text справа, линии border_soft): «Что — Консультация 15 минут», «Когда — чт, 26 сентября, 14:30 (МСК)» или «Как можно скорее, в рабочее время пн–пт 9:00–19:00», «Кто позвонит — имя специалиста». Ниже button_secondary «Добавить в календарь» (файл .ics собирается в браузере, только если выбран конкретный слот) и link «Пока ждёте — посмотрите цены». Фокус переносится на заголовок (tabindex=-1), область с aria-live=polite.",
+    "error_state": "Отказ всегда видимым текстом на том же экране: под кнопкой цветом error «Не получилось отправить. Данные сохранены — нажмите ещё раз или позвоните: +7 …». Введённое и выбранный слот не стирать. Скрытые ловушки для ботов не имеют права молча отбросить заявку с заполненными именем и телефоном — такую заявку принимать с пометкой."
+  },
+  "motion_recipes": [
+    "fade-up-stagger",
+    "hero-text-reveal",
+    "counter-up",
+    "marquee-logos",
+    "accordion-smooth",
+    "form-success",
+    "sticky-cta-mobile"
+  ],
+  "motion_map": {
+    "fade-up-stagger": "карточки преимуществ, шаги, отзывы, тарифы. Строгий вариант: --reveal-dist 16px, --reveal-dur 360ms, --reveal-ease cubic-bezier(.16,1,.3,1) (ease_emphasized). Виджет записи и заголовок первого экрана не прятать",
+    "hero-text-reveal": "только ветка motion_level=rich: строки заголовка первого экрана; виджет записи при этом виден сразу, без анимации",
+    "counter-up": "блок цифр. Вид цифры — из typography.stat, а не из рецепта: Manrope 800, 48px (телефон 36px), трекинг -0.04em, цвет text; подпись caption text_muted. Полосу-акцент ::before удалить — у бренда её нет. Считать только проверяемые числа",
+    "marquee-logos": "строка логотипов клиентов, только если их больше 6 (иначе статичный ряд): монохромные знаки высотой 24px цветом text_muted, 40 px/с. Переменные --mq-* из токенов: bg — background, surface — surface_soft, text — text, muted — text_muted, border — border, focus — focus_ring. Кнопку паузы сделать прямоугольной (радиус md), а не пилюлей",
+    "accordion-smooth": "частые вопросы. Механику рецепта оставить, вид перестроить под бренд: пункты не карточками — без рамки, фона и радиуса, gap 0, только нижняя линия 1px border; вопрос typography.title 18px, отступ 20px 0; значок — шеврон 16px text_muted, при раскрытии поворот на 180° (transform) и цвет text — вместо плюса-минуса рецепта",
+    "form-success": "ответ формы внутри booking_widget. Из рецепта взять механику состояний (idle → sending → sent | error в одной ячейке сетки, фокус на заголовок, текст ошибки у кнопки), вид — из токенов: карточка радиус xl 16px, поля радиус md 8px с рамкой border_input, фокус shadow.focus, кнопка button_primary. У чекбокса согласия убрать атрибут required: согласие проверяет скрипт видимым текстом (lead_form.consent_rules), ссылки «Согласие» и «Политика» — две. Вместо абзаца «спасибо» — таблица подтверждения из lead_form.success_state, значок — круг 48px цветом success с галочкой on_primary",
+    "sticky-cta-mobile": "липкая кнопка «Записаться» на телефоне: data-after=\"#hero-cta\", data-hide-on=\"#hero-booking, #lead\" — прячется, пока в кадре виджет первого экрана или нижняя форма. Панель — фон background, сверху линия 1px border, без тени рецепта; внутри button_primary 48px на всю ширину, радиус md; круглая кнопка звонка слева — button_icon, если клиент принимает звонки"
+  },
+  "ab_axes": {
+    "vary": {
+      "hero_layout": [
+        "split_booking",
+        "split_mockup",
+        "centered"
+      ],
+      "form_mode": [
+        "with_slots",
+        "contacts_only"
+      ],
+      "cta_color_role": [
+        "primary",
+        "accent"
+      ],
+      "headline_scale": [
+        "xl",
+        "l"
+      ],
+      "social_proof_position": [
+        "under_hero",
+        "before_form"
+      ],
+      "motion_level": [
+        "none",
+        "subtle",
+        "rich"
+      ],
+      "cta_label": [
+        "Записаться на звонок",
+        "Получить расчёт"
+      ]
+    },
+    "fixed": [
+      "palette",
+      "fonts",
+      "radius",
+      "прямоугольные кнопки 8px, не пилюли",
+      "вес заголовков 800 одной ступенью",
+      "тёмные поверхности только в подвале и рекомендуемом тарифе",
+      "форма и согласие 152-ФЗ"
+    ],
+    "default": {
+      "hero_layout": "split_booking",
+      "form_mode": "with_slots",
+      "cta_color_role": "primary",
+      "headline_scale": "xl",
+      "social_proof_position": "under_hero",
+      "motion_level": "subtle",
+      "cta_label": "Записаться на звонок"
+    },
+    "legend": {
+      "split_booking": "по умолчанию: текст слева, справа виджет записи — он же форма",
+      "split_mockup": "справа макет результата (card_mockup), форма — только полосой lead_form внизу",
+      "centered": "текст по центру в 8 колонках (792px), виджет записи под кнопками — карточка 880px",
+      "with_slots": "день и слот времени в форме (слот необязателен)",
+      "contacts_only": "только имя, телефон и согласие — проверка, не мешает ли выбор времени",
+      "primary": "чёрная кнопка бренда",
+      "accent": "синяя кнопка #1c6ef5 — гипотеза «цвет заметнее», отступление от монохрома только в этой ветке",
+      "l": "display 56/32px, заголовок до 55 знаков — для длинных формулировок ниши",
+      "xl": "по умолчанию: display 64/34px, заголовок до 45 знаков (3 строки в колонке 690px)",
+      "none": "без анимаций; смена формы на подтверждение и липкая кнопка на телефоне остаются, но без переходов",
+      "subtle": "fade-up-stagger + counter-up + accordion-smooth",
+      "rich": "subtle + hero-text-reveal + marquee-logos"
+    },
+    "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А."
+  },
+  "do": [
+    "Действия монохромные: главная кнопка — чёрный прямоугольник #111111 с радиусом 8px и надписью Inter 600; в тёмной теме — белый с чёрной надписью.",
+    "Manrope 800 — только заголовки первого экрана и полос, цифры и название в шапке; трекинг от -0.04em на 64px до -0.02em на 28px. Заголовки карточек, текст, кнопки и меню — Inter; иерархию строить размером, а не жирностью.",
+    "Показывать продукт, а не рисовать его: в карточках — фрагменты интерфейса из HTML/SVG с цифрами клиента (виджет записи, расписание, смета).",
+    "Держать два вида карточек: серая #f5f5f5 без тени — утверждение, белая с рамкой 1px — «посмотрите сами».",
+    "Чередовать режимы полос: белая → серые карточки → светло-серая с белыми макетами → … → тёмный подвал закрывает страницу.",
+    "Переключатели делать «пилюлей в пилюле»: серая подложка с отступом 6px, активный сегмент белый с тонкой тенью.",
+    "Форму строить как виджет записи: слот «Как можно скорее» выбран заранее, согласие — отдельный неотмеченный чекбокс, ошибка — видимым текстом у кнопки."
+  ],
+  "dont": [
+    "Не заливать главную кнопку синим, пастелью или градиентом вне ветки A/B и не превращать кнопки в пилюли.",
+    "Не набирать шрифтом заголовков абзацы и подписи, а заголовки полос — шрифтом Inter.",
+    "Не делать радиус карточек больше 16px и не добавлять стекло, неон и тяжёлые тени.",
+    "Не ставить тёмные карточки куда попало: тёмное в светлой теме — только подвал и рекомендуемый тариф.",
+    "Не рисовать в слотах ложный дефицит: занятые окна, «осталось 2 места», таймеры.",
+    "Не усложнять наведение: без подъёма, увеличения и свечения — кнопка только меняет тон фона.",
+    "Не использовать логотип, скриншоты и иллюстрации Cal.com или других чужих продуктов."
+  ],
+  "prompt_snippet": "Build a Russian lead-generation landing in a Cal.com-inspired style. White canvas; text #111111, body #374151, muted #69707e, hairlines #e5e7eb. Hero and section headings: Manrope 800, tracking -0.04em at 64px easing to -0.02em at 28px; card titles, body and UI: Inter 400–600, tabular numbers. Monochrome actions: #111111 buttons, 8px radius, 48px tall, never pills or gradients; blue #1c6ef5 only in one badge or as an A/B arm. Hero 7/5: badge, headline, lead, two buttons, avatar-and-stars trust line; right, a white 16px card with hairline and soft shadow holding an HTML booking widget (day grid, time slots, contact fields) that is the lead form. Claim cards #f5f5f5, 12px, no shadow; product cards white with hairline. Pill-in-pill switchers. Dark theme: #101010 page, #1a1a1a cards, white button with black text. Only footer and featured tier invert. Slot defaults to 'as soon as possible'; unchecked 152-FZ consent; visible errors; self-hosted fonts; reduced motion respected.",
+  "source": {
+    "inspired_by": "VoltAgent/awesome-design-md (MIT), design-md/cal/DESIGN.md",
+    "notes": "Перенесено: палитра (#111111 для кнопок и заголовков, #374151 текст, #f5f5f5 серые карточки, #f8f9fa подложка, #e5e7eb линии, #101010/#1a1a1a/#a1a1aa подвала), радиусы 4/6/8/12/16/пилюля/круг, тени 0 1px 2px и 0 4px 12px, ритм полос 96px и базовый шаг 4px, контейнер 1200px, раскладка первого экрана 7/5, серые карточки против белых с рамкой, «пилюля в пилюле», аватары 36px с пастельными заливками, звёзды оценки, тёмный рекомендуемый тариф без бейджа, тёмный подвал. Шрифты: Cal Sans открыт по OFL, но в Fontsource у него только latin/latin-ext/vietnamese — кириллицы нет, поэтому заголовки на Manrope (OFL, кириллица; исходник сам называет его близкой заменой). Сравнение на одном макете: Manrope 800 с трекингом -0.04em ближе всего к плотности Cal Sans (600 и 700 выглядят светлее и шире), поэтому единый вес заголовков 800 вместо фирменных 600. Inter оставлен — это второй шрифт бренда, OFL. Контраст: фирменная кнопка #111111/белый 18.88 — без правок. Синий бренда #3b82f6 с белым давал 3.68 → минимально затемнён по светлоте до #1c6ef5 (4.57); используется только в бейджах и в ветке A/B. Приглушённый #6b7280 на сером #f5f5f5 давал 4.43 → #69707e (4.56, на белом 4.98). Третичный серый #898989 (3.50) из текста убран. Семантика бренда #10b981 (2.54) и #ef4444 (3.76) для текста не годятся → #0b7f58 (5.01) и #d42424 (5.15); в тёмной теме — #34d399 и #f87171. Звёзды #fb923c на белом 2.26 → #e46905 (3.32, графика ≥3). Пастель #8b5cf6 с чёрными инициалами 4.46 → #8d5ff6 (4.59). Граница полей: волосяная #e5e7eb (1.24) не видна → #858a94 (3.47). Тёмной маркетинговой темы у бренда нет, тёмный только подвал — тема собрана из его токенов: фон #101010, карточки #1a1a1a, текст белый, приглушённый #a1a1aa; главная кнопка инвертируется в белую с чёрной надписью, а рекомендуемый тариф — в белую карточку (инверсия остаётся сигналом), подвал темнее фона (#0a0a0a) с линией. Под рекламный лендинг: фрагмент интерфейса бренда (календарь записи) превращён в форму заявки — виджет с необязательным слотом «Как можно скорее», согласием по 152-ФЗ и подтверждением в виде таблицы записи; кнопки на первом экране и в форме подняты с 40 до 48px, поля — до 48px и 16px шрифта; интерлиньяж поднят для кириллицы (заголовки 1.05→1.08, текст 1.5→1.6). Ложный дефицит в слотах запрещён. Проверка 24-09-26: высоты кнопок сведены с padding при line-height 1.0; пределы заголовка и длина слова на телефоне взяты замером по метрикам Manrope 800; h2 трекинг -0.035 → -0.03em; календарь в первом экране — ячейки 36px (44px не помещались в колонку 5/12); указано подмножество latin-ext со знаком ₽; рецепты движения переведены на токены стиля (FAQ линиями с шевроном, форма без required у согласия, липкая кнопка без тени)."
+  }
+}
