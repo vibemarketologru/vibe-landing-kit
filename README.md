@@ -246,7 +246,7 @@ flowchart LR
 | **Claude Code — только MCP** | `claude mcp add --transport http vibemarketolog https://lk.vibemarketolog.ru/mcp` |
 | **ChatGPT, Claude.ai** | коннектор `https://lk.vibemarketolog.ru/mcp` — [видео-инструкции](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit) |
 | **Cursor, Windsurf, VS Code** | `mcp.json` с адресом сервера и ключом — [инструкция](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit#other) |
-| **Свой код** | REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings`, `/landings/check`, `/chatbots` — [документация](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit) |
+| **Свой код** | REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings`, `/landings/check`, `/chatbots`, `/uploads/image`, `/uploads/links`, `/media/check`, `/media/loop` — [документация](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit) |
 
 Вход — через кабинет [Вайб-Маркетолога](https://vibemarketolog.ru?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit): новым пользователям начисляется бонус на баланс.
 

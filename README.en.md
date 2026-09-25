@@ -82,7 +82,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 - Claude Code: `claude mcp add --transport http vibemarketolog https://lk.vibemarketolog.ru/mcp`, then `/mcp` → Authenticate.
 - ChatGPT / Claude.ai / Cursor: [step-by-step videos](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit).
-- REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings` — [docs](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit).
+- REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings`, `/landings/check`, `/chatbots`, `/uploads/image`, `/uploads/links`, `/media/check`, `/media/loop` — [docs](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit).
 
 The catalog, the passport, edits and test results are free. Keywords, media and the launch are paid from a ruble balance, per action, no subscription.
 
