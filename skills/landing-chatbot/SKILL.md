@@ -46,7 +46,8 @@ description: Use when a landing page or site needs an AI consultant, a chat widg
 (без тела — векторы; с `url` и `single` — обучение по странице или сайту) → `PATCH /chatbots/{id}/widget`
 → `GET /chatbots/{id}/embed`. Диалоги: `GET /chatbots/{id}/conversations[/{cid}]`, `POST …/reply`.
 Статьи базы знаний (`POST /chatbots/{id}/articles`, бесплатно) видны посетителю во вкладке FAQ
-виджета, но в ответы ИИ не попадают — для ответов нужен `knowledge`.
+виджета и сразу становятся знанием бота — он отвечает по ним без отдельного `train`. Для
+коротких фактов (цены, адреса, часы) по-прежнему удобнее `knowledge` — по одному пункту.
 
 ## Как бот дружит с A/B-тестом
 
