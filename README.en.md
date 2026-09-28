@@ -76,12 +76,12 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 - **Design systems** (`design-systems/*.json`, `theme.css`, `DESIGN.md`): role-based color tokens for light and dark themes with contrast checked in both, mobile and desktop type scale, OFL fonts with Cyrillic instead of proprietary brand fonts, landing-page section order, a lead form with consent, A/B axes, brand media rules, do/don't and a ready prompt snippet.
 - **Motion recipes** (`motion/*.json`): HTML + CSS + vanilla JS, `transform`/`opacity` only, `prefers-reduced-motion` mode (kept, removed, softened to a fade), pause for infinite animations.
-- **Claude Code plugin**: `/landing` command, 12 skills and the MCP server. ChatGPT and Claude.ai get the same skills as MCP prompts.
+- **Claude Code plugin**: `/landing` command, 12 skills and the MCP server. ChatGPT and Claude.ai get the route and brief through the `landing_guide` tool (their chats do not show MCP prompts to the model).
 
 ## Connect
 
 - Claude Code: `claude mcp add --transport http vibemarketolog https://lk.vibemarketolog.ru/mcp`, then `/mcp` → Authenticate.
-- ChatGPT / Claude.ai / Cursor: [step-by-step videos](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit).
+- ChatGPT / Claude.ai / Cursor: [step-by-step videos](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit); what to type in ChatGPT step by step (in Russian) — [docs/chatgpt-step-by-step.md](docs/chatgpt-step-by-step.md).
 - REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings`, `/landings/check`, `/chatbots`, `/uploads/image`, `/uploads/links`, `/media/check`, `/media/loop` — [docs](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit).
 
 The catalog, the passport, edits and test results are free. Keywords, media and the launch are paid from a ruble balance, per action, no subscription.

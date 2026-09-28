@@ -97,7 +97,7 @@ flowchart LR
 
 ## Библиотека навыков
 
-<table><tr><td valign="middle">12 навыков ведут агента по всей работе — от формулировки гипотезы до рекламы под варианты. В Claude Code они ставятся плагином, в ChatGPT, Claude.ai и Cursor приходят с MCP-сервера готовыми сценариями. Всё авторское проверено на живых страницах: формулы выборки пересчитаны и сверены симуляцией, шаблоны формы и сплита открыты в браузере, законы сверены с первоисточниками.</td><td width="170" align="center"><img src="assets/mascot-sdk.webp" width="150" alt="Маскот-разработчик за кодом"></td></tr></table>
+<table><tr><td valign="middle">12 навыков ведут агента по всей работе — от формулировки гипотезы до рекламы под варианты. В Claude Code они ставятся плагином, в ChatGPT, Claude.ai и Cursor их выдаёт MCP-сервер: инструмент <code>landing_guide</code> отдаёт маршрут и бриф с живыми ценами. Всё авторское проверено на живых страницах: формулы выборки пересчитаны и сверены симуляцией, шаблоны формы и сплита открыты в браузере, законы сверены с первоисточниками.</td><td width="170" align="center"><img src="assets/mascot-sdk.webp" width="150" alt="Маскот-разработчик за кодом"></td></tr></table>
 
 | Навык | Что даёт |
 |---|---|
@@ -127,7 +127,7 @@ flowchart LR
 | Видео `muted playsinline` и постер со смыслом | в режиме энергосбережения автозапуска нет вовсе — остаётся только постер |
 | Safari 27: `sizes="auto"`, привязка прокрутки | картинки нужного размера и страница без прыжков при догрузке |
 
-Отдельной «адаптации под iOS 27» в CSS не существует: достаточно пережить Liquid Glass из Safari 26 и взять новые возможности Safari 27. Паспорт проверяет это автоматически — на сервере (`landing_check`) и у вас на компьютере: `node tools/passport.mjs index.html b.html` (Playwright, 36 проверок, без сети и денег). Что видно только на живом телефоне — в конце навыка протокол на 10 минут.
+Отдельной «адаптации под iOS 27» в CSS не существует: достаточно пережить Liquid Glass из Safari 26 и взять новые возможности Safari 27. Паспорт проверяет это автоматически — на сервере (`landing_check`) и у вас на компьютере: `node tools/passport.mjs index.html b.html` (Playwright, 49 видов проверок — в отчёт попадают те, что касаются страницы; без сети и денег). Что видно только на живом телефоне — в конце навыка протокол на 10 минут.
 
 ## Чат-бот с ИИ на лендинге
 
@@ -238,7 +238,7 @@ flowchart LR
 
 ## Подключение
 
-<table><tr><td valign="middle">Один MCP-сервер для всех: в Claude Code — плагином или одной командой, в ChatGPT и Claude — коннектором по адресу, в Cursor — строкой в настройках. Маршрут лендинга приходит и в ChatGPT с Claude.ai: сервер отдаёт все навыки библиотеки как готовые сценарии (MCP prompts).</td><td width="170" align="center"><img src="assets/mascot-sdk.webp" width="150" alt="Маскот-разработчик за кодом"></td></tr></table>
+<table><tr><td valign="middle">Один MCP-сервер для всех: в Claude Code — плагином или одной командой, в ChatGPT и Claude — коннектором по адресу, в Cursor — строкой в настройках. Маршрут лендинга приходит и в ChatGPT с Claude.ai: их чаты не показывают модели MCP prompts, поэтому маршрут и бриф отдаёт инструмент <code>landing_guide</code>.</td><td width="170" align="center"><img src="assets/mascot-sdk.webp" width="150" alt="Маскот-разработчик за кодом"></td></tr></table>
 
 | Где | Как |
 |---|---|
@@ -247,6 +247,8 @@ flowchart LR
 | **ChatGPT, Claude.ai** | коннектор `https://lk.vibemarketolog.ru/mcp` — [видео-инструкции](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit) |
 | **Cursor, Windsurf, VS Code** | `mcp.json` с адресом сервера и ключом — [инструкция](https://lk.vibemarketolog.ru/connect?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit#other) |
 | **Свой код** | REST: `/api/agent/design-systems`, `/motion`, `/semantics`, `/landings`, `/landings/check`, `/chatbots`, `/uploads/image`, `/uploads/links`, `/media/check`, `/media/loop` — [документация](https://lk.vibemarketolog.ru/docs/agent-api?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit) |
+
+**Пошагово в ChatGPT:** что писать в чат на каждом шаге и что должно получиться — [docs/chatgpt-step-by-step.md](docs/chatgpt-step-by-step.md).
 
 Вход — через кабинет [Вайб-Маркетолога](https://vibemarketolog.ru?utm_source=github&utm_medium=readme&utm_campaign=vibe-landing-kit): новым пользователям начисляется бонус на баланс.
 
@@ -264,7 +266,7 @@ flowchart LR
 | Про-версия победителя | до 4 500 ₽ |
 | Отчёт Метрики, анализ кампаний Директа | 19 ₽ / 29–99 ₽ |
 
-Оплата — с рублёвого баланса, только за сделанное, без подписки. Перед каждым платным шагом агент называет цену; дневной лимит подключения по умолчанию 500 ₽ и меняется в кабинете. Типичный лендинг из галереи: медиа 60–600 ₽ и 990 ₽ за запуск.
+Оплата — с рублёвого баланса, только за сделанное, без подписки. Перед каждым платным шагом агент называет цену; дневной лимит подключения по умолчанию 1 500 ₽ и меняется в кабинете. Типичный лендинг из галереи: медиа 60–600 ₽ и 990 ₽ за запуск.
 
 ## Партнёрская программа
 
