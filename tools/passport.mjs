@@ -425,20 +425,35 @@ function probeFull(isMobile) {
 
 // Липкий слой не должен закрывать поле, когда оно внизу экрана и в фокусе (клавиатура)
 async function probeFocus() {
-  const field = [...document.querySelectorAll('form input, form textarea')].find(el => /^(text|tel|email|search|)$/i.test(el.type || '') || el.tagName === 'TEXTAREA');
+  // Скрытые поля и tabindex=-1 (ловушка для ботов) не берём; поле первого экрана к нижней кромке
+  // не подвести — берём первое, которое можно (как серверный паспорт, 28-09-26).
+  const fields = [...document.querySelectorAll('form input, form textarea')].filter(el => {
+    if (!(el.tagName === 'TEXTAREA' || /^(text|tel|email|search)$/i.test(el.type || ''))) return false;
+    if (el.tabIndex < 0 || el.disabled || el.readOnly) return false;
+    const s = getComputedStyle(el); if (s.visibility === 'hidden' || s.display === 'none' || parseFloat(s.opacity) < 0.1) return false;
+    const r = el.getBoundingClientRect(); return r.width >= 20 && r.height >= 16;
+  });
+  const field = fields.find(el => scrollY + el.getBoundingClientRect().bottom >= innerHeight - 6) || fields[0];
   if (!field) return null;
-  const r0 = field.getBoundingClientRect(); if (r0.width < 1) return null;
-  window.scrollBy({ top: r0.bottom - (innerHeight - 6), behavior: 'instant' });
+  window.scrollTo({ top: Math.max(0, scrollY + field.getBoundingClientRect().bottom - (innerHeight - 6)), left: 0, behavior: 'instant' });
   await new Promise(r => setTimeout(r, 350));
   field.focus({ preventScroll: true });
   await new Promise(r => setTimeout(r, 200));
-  const r = field.getBoundingClientRect(); const x = r.left + Math.min(r.width / 2, 40), y = r.top + r.height / 2;
-  const hit = document.elementFromPoint(x, y); let res = null;
-  if (hit && hit !== field && !field.contains(hit) && !(hit.tagName === 'LABEL' && hit.control === field)) {
+  const r = field.getBoundingClientRect(), y = r.top + r.height / 2;
+  const label = field.labels && field.labels[0] ? (field.labels[0].innerText || '').replace(/\s+/g, ' ').trim() : '';
+  const name = (label || field.getAttribute('placeholder') || field.getAttribute('aria-label') || field.name || field.id || field.type || '').slice(0, 40);
+  // Поле так и не у кромки (страница короче) — судить не о чем: ни «закрыто», ни «чисто».
+  if (r.bottom > innerHeight + 2 || r.top < 0) { field.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); return null; }
+  let res = null;
+  for (const x of [r.left + Math.min(r.width / 2, 40), r.left + r.width / 2, r.right - Math.min(r.width / 2, 40)]) {
+    const hit = document.elementFromPoint(x, y);
+    if (!hit || hit === field || field.contains(hit) || (hit.tagName === 'LABEL' && hit.control === field)) continue;
+    if (hit.closest && hit.closest('[id^="lqd-ext-chatbot"]')) continue;
     for (let n = hit; n && n.nodeType === 1; n = n.parentElement) { const p = getComputedStyle(n).position; if (p === 'fixed' || p === 'sticky') { res = n.tagName.toLowerCase() + (n.id ? '#' + n.id : '') + (n.className && typeof n.className === 'string' && n.className.trim() ? '.' + n.className.trim().split(/\s+/).slice(0, 2).join('.') : ''); break; } }
+    if (res) break;
   }
   field.blur(); window.scrollTo({ top: 0, behavior: 'instant' });
-  return { field: field.name || field.id || field.type, covered: res };
+  return { field: name, covered: res };
 }
 
 function probeReduce() {
