@@ -190,7 +190,7 @@ flowchart LR
 | Файл, приложенный в чат: одноразовая ссылка загрузки для человека | `upload_link` | бесплатно |
 | Проверка речи в ролике и петля видео на сервере | `media_check`, `video_loop` | бесплатно |
 | Запуск: адрес, заявки, A/B-тест, проверочная заявка. Паспорт не пройден — деньги не списываются | `landing_launch` | 990 ₽ |
-| Правки варианта A или Б | `landing_update` | бесплатно |
+| Правки запущенной страницы из чата: картинка, видео, озвучка, текст, блоки — кусками в A, Б или сразу в оба; паспорт до сохранения, «верни как было» на шаг назад | `landing_source`, `landing_update` | бесплатно |
 | Итоги: люди, заявки, конверсия; план теста закрепляется при запуске, победителя сервер объявляет только по плану; интервал разницы, проверка перекоса A/Б (SRM), история версий | `landing_status` | бесплатно |
 | Продажи по вариантам: заявки уходят лидами в Битрикс24 с меткой варианта, в статусе — сделки «Успешно» с суммой | `landing_update` c `crm=bitrix` | бесплатно |
 | Про-версия победителя: полный сайт по выигравшему варианту | `landing_pro` | до 4 500 ₽ |
@@ -390,7 +390,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Hypothesis launch
 
-`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
+`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_source` + `landing_update` (free: edit the live page piece by piece in A, B or both, passport before saving, rollback) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
 
 ## Skills library
 

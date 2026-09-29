@@ -45,7 +45,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Hypothesis launch
 
-`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
+`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_source` + `landing_update` (free: edit the live page piece by piece in A, B or both, passport before saving, rollback) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
 
 ## Skills library
 
