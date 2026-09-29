@@ -26,8 +26,10 @@ def gallery(lang):
     for x in show:
         t = x['en'] if lang == 'en' else x['ru']
         a, b = x['url'] + '?v=a', x['url'] + '?v=b'
-        pic = (f'<a href="{x["url"]}"><img src="{x["shot_desktop"]}" width="560" alt="{h(t["alt"])}"></a>'
-               f'<a href="{x["url"]}"><img src="{x["shot_mobile"]}" width="130" alt="{h(t["alt_m"])}"></a>')
+        # Одна витрина «компьютер + телефон» (assets/gallery/<slug>-pair.webp): два отдельных
+        # скриншота в узкой ячейке GitHub вставали друг под другом с пустотой рядом.
+        pair = x['shot_desktop'].replace('-desktop.', '-pair.')
+        pic = f'<a href="{x["url"]}"><img src="{pair}" width="460" alt="{h(t["alt"])}. {h(t["alt_m"])}"></a>'
         demand = (f'{x["freq"]:,}'.replace(',', '\u202f') + (' показов/мес' if lang == 'ru' else ' searches/mo')) if x.get('freq') else ''
         style = f'<a href="design-systems/{x["style"]}/DESIGN.md">{h(x["style_name"])}</a>'
         if lang == 'ru':
@@ -111,11 +113,11 @@ def intro(html, img, alt, w=170):
 
 ru = f'''<div align="center">
 
-<img src="assets/mascot-website.webp" alt="Кот-маскот Вайб-Маркетолога собирает сайт" width="260">
+<img src="assets/hero.webp" alt="Кот-маскот Вайб-Маркетолога запускает A/B-тест: два варианта лендинга, трафик 50/50, заявки и реклама" width="100%">
 
 # Vibe Landing Kit
 
-**Лендинг для A/B-теста рекламы — от брифа до работающей гипотезы одной командой агенту.**
+**Гипотеза под ключ: одна фраза агенту — лендинг, A/B-тест, заявки в Telegram и реклама в Яндекс Директе.**
 Атмосферный первый экран с картинкой или видео на всю ширину, персонаж с русской речью, заявки в Telegram,
 A/B-тест на одном адресе, паспорт качества и чат-бот с ИИ. {N_DS} дизайн-систем в духе мировых брендов, {N_M} анимаций, {N_SK} навыков, семантика Вордстата.
 Для Claude Code, ChatGPT, Claude и Cursor.
@@ -227,7 +229,7 @@ flowchart LR
 
 ## Реклама в Яндекс Директ
 
-{intro('Когда страница запущена, агент готовит рекламу под варианты и сам отправляет её в кабинет Директа пользователя. Объявление обещает ровно то, что первый экран его варианта: A ведёт на <code>?v=a</code>, Б — на <code>?v=b</code>, две кампании с одинаковыми ключами и равным бюджетом. В Директ кампания уходит <b>черновиком</b>: показы начинаются, только когда человек сам отправит её на модерацию, — случайно потратить рекламный бюджет нельзя.', 'assets/sticker-semantics.webp', 'Кот с лупой разбирает ключевые запросы')}
+{intro('Когда страница запущена, агент готовит рекламу под варианты и сам отправляет её в кабинет Директа пользователя. Объявление обещает ровно то, что первый экран его варианта: A ведёт на <code>?v=a</code>, Б — на <code>?v=b</code>, две кампании с одинаковыми ключами и равным бюджетом. В Директ кампания уходит <b>черновиком</b>: показы начинаются, только когда человек сам отправит её на модерацию, — случайно потратить рекламный бюджет нельзя.', 'assets/sticker-direct.webp', 'Кот с мегафоном запускает объявления A и Б в цель')}
 
 | Шаг | Инструмент | Цена |
 |---|---|---|
@@ -345,11 +347,11 @@ flowchart LR
 
 en = f'''<div align="center">
 
-<img src="assets/mascot-website.webp" alt="Vibe Marketolog cat mascot building a website" width="240">
+<img src="assets/hero.webp" alt="Vibe Marketolog cat mascot launching an A/B test: two landing variants, 50/50 traffic, leads and ads" width="100%">
 
 # Vibe Landing Kit
 
-**An A/B-test landing page for your ad campaign — from brief to a live hypothesis in one command to your AI agent.**
+**Hypothesis testing, done for you: one sentence to your AI agent — a landing page, an A/B test, leads in Telegram and ads in Yandex Direct.**
 A full-bleed first screen with an image or video, a recurring character speaking Russian, leads delivered to Telegram,
 an A/B test on one URL, a quality passport and an AI chatbot. {N_DS} brand-inspired design systems, {N_M} motion recipes, {N_SK} skills, Yandex Wordstat keywords.
 For Claude Code, ChatGPT, Claude and Cursor.
