@@ -62,7 +62,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 | [`landing-mobile`](skills/landing-mobile/SKILL.md) | Phones: a 30-point checklist, iOS 26/27, Android, VK and Telegram in-app browsers |
 | [`landing-law-ru`](skills/landing-law-ru/SKILL.md) | 152-FZ, advertising law, ad moderation — consent and policy templates |
 | [`landing-chatbot`](skills/landing-chatbot/SKILL.md) | AI chatbot on the page: trained on the FAQ and site, widget in the style colors |
-| [`ad-match`](skills/ad-match/SKILL.md) | Ads for the variants: the ad promises what the first screen shows; auto-stop rules |
+| [`ad-match`](skills/ad-match/SKILL.md) | Ads for the variants: the ad promises what the first screen shows; A and B campaigns pushed straight into Yandex Direct; auto-stop rules |
 
 ## Phones: iOS 26/27 and Android
 
@@ -71,6 +71,10 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 ## AI chatbot on the landing page
 
 `chatbot_create_site` (free) → `chatbot_learn` / `chatbot_learn_site` (5 ₽ per FAQ item, 10 ₽ per page, 4 ₽ per crawled page up to 30) → `chatbot_widget` (free; one `<script>` line, placed identically in A and B) → answers from 2 ₽, no subscription → `chatbot_conversations` for dialogs and operator replies.
+
+## Yandex Direct ads
+
+Once the page is live, the agent prepares ads for each variant and pushes them into the user's Yandex Direct account: ads for A link to `?v=a`, ads for B to `?v=b`. `direct_import_campaign` (free) saves a draft from the agent's own structure and checks Direct limits; `direct_create_campaign` (49 ₽) builds one with AI from the page URL; `direct_publish_campaign` (99 ₽) sends it to Direct **as a draft** — ads start only after the user submits it for moderation. Edits to a live campaign (bids, budget, keywords, negatives, ad text, resume) cost 9 ₽, pausing is free.
 
 ## What is inside
 

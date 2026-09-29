@@ -59,7 +59,7 @@ SKILLS = [  # порядок = порядок работы; описание —
     ('landing-mobile', 'Телефон: чек-лист из 30 пунктов, iOS 26/27, Android, встроенные браузеры ВК и Telegram', 'Phones: a 30-point checklist, iOS 26/27, Android, VK and Telegram in-app browsers'),
     ('landing-law-ru', '152-ФЗ, закон о рекламе, модерация Директа и ВК — шаблоны согласия и политики', '152-FZ, advertising law, ad moderation — consent and policy templates'),
     ('landing-chatbot', 'Чат-бот с ИИ на странице: обучение по FAQ и сайту, виджет в цвет стиля', 'AI chatbot on the page: trained on the FAQ and site, widget in the style colors'),
-    ('ad-match', 'Реклама под варианты: объявление обещает то же, что первый экран; автостоп', 'Ads for the variants: the ad promises what the first screen shows; auto-stop rules'),
+    ('ad-match', 'Реклама под варианты: объявление обещает то же, что первый экран; кампании A и Б — прямо в кабинет Директа; автостоп', 'Ads for the variants: the ad promises what the first screen shows; A and B campaigns pushed straight into Yandex Direct; auto-stop rules'),
 ]
 N_SK = len(SKILLS)
 
@@ -225,6 +225,21 @@ flowchart LR
 | Ответ посетителю | — | от 2 ₽ за ответ, без абонплаты |
 | Диалоги, ответ от имени оператора | `chatbot_conversations`, `chatbot_status` | бесплатно |
 
+## Реклама в Яндекс Директ
+
+{intro('Когда страница запущена, агент готовит рекламу под варианты и сам отправляет её в кабинет Директа пользователя. Объявление обещает ровно то, что первый экран его варианта: A ведёт на <code>?v=a</code>, Б — на <code>?v=b</code>, две кампании с одинаковыми ключами и равным бюджетом. В Директ кампания уходит <b>черновиком</b>: показы начинаются, только когда человек сам отправит её на модерацию, — случайно потратить рекламный бюджет нельзя.', 'assets/sticker-semantics.webp', 'Кот с лупой разбирает ключевые запросы')}
+
+| Шаг | Инструмент | Цена |
+|---|---|---|
+| Подготовить черновик: группы, ключевые фразы, объявления со своей ссылкой, минус-слова, быстрые ссылки, регион, бюджет. Лимиты Директа проверяются сразу, в Яндекс ещё ничего не уходит | `direct_import_campaign` | бесплатно |
+| Или собрать кампанию ИИ по адресу страницы | `direct_create_campaign` | 49 ₽ |
+| Отправить черновик в кабинет Директа | `direct_publish_campaign` | 99 ₽ |
+| Правка живой кампании: ставки, бюджет, ключи, минус-слова, текст объявления, запуск после паузы | `direct_set_bids`, `direct_set_budget`, `direct_add_keywords`, `direct_add_negatives`, `direct_update_ad`, `direct_resume_campaign` | 9 ₽ |
+| Пауза кампании или объявлений | `direct_pause_campaign`, `direct_pause_ads` | бесплатно |
+| Анализ, поисковые запросы, слив бюджета, прогноз, отчёт | `direct_analyze`, `direct_search_queries`, `direct_waste`, `direct_forecast`, `campaign_report` | 29–99 ₽ |
+
+Кабинет Директа подключается один раз в [кабинете Вайб-Маркетолога](https://lk.vibemarketolog.ru/agi) → «Подключения». Действие, которое у черновика не имеет смысла (запустить, бюджет, который Директ не удержал), отказывает без платы. Второй заголовок объявления Директ сейчас не сохраняет — главное агент пишет в заголовок и текст.
+
 ## Что внутри
 
 ### Дизайн-системы
@@ -380,6 +395,10 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 ## AI chatbot on the landing page
 
 `chatbot_create_site` (free) → `chatbot_learn` / `chatbot_learn_site` (5 ₽ per FAQ item, 10 ₽ per page, 4 ₽ per crawled page up to 30) → `chatbot_widget` (free; one `<script>` line, placed identically in A and B) → answers from 2 ₽, no subscription → `chatbot_conversations` for dialogs and operator replies.
+
+## Yandex Direct ads
+
+Once the page is live, the agent prepares ads for each variant and pushes them into the user's Yandex Direct account: ads for A link to `?v=a`, ads for B to `?v=b`. `direct_import_campaign` (free) saves a draft from the agent's own structure and checks Direct limits; `direct_create_campaign` (49 ₽) builds one with AI from the page URL; `direct_publish_campaign` (99 ₽) sends it to Direct **as a draft** — ads start only after the user submits it for moderation. Edits to a live campaign (bids, budget, keywords, negatives, ad text, resume) cost 9 ₽, pausing is free.
 
 ## What is inside
 
