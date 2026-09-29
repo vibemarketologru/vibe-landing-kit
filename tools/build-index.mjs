@@ -8,7 +8,7 @@ const readDir = dir => (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter(f 
   .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
 
 export function buildIndex(root) {
-  const version = '1.3.0';
+  const version = '1.3.1';
   const design_systems = readDir(path.join(root, 'design-systems'))
     .sort((a, b) => (KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind)) || a.slug.localeCompare(b.slug))
     .map(d => ({ slug: d.slug, name: d.name, kind: d.kind, summary: d.summary, best_for: d.best_for, goals: d.goals, mood: d.mood }));

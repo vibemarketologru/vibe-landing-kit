@@ -9,7 +9,7 @@
 A/B-тест на одном адресе, паспорт качества и чат-бот с ИИ. 29 дизайн-систем в духе мировых брендов, 26 анимаций, 12 навыков, семантика Вордстата.
 Для Claude Code, ChatGPT, Claude и Cursor.
 
-[![Версия](https://img.shields.io/badge/версия-1.3.0-6D28D9?style=flat-square)](CHANGELOG.md)
+[![Версия](https://img.shields.io/badge/версия-1.3.1-6D28D9?style=flat-square)](CHANGELOG.md)
 [![Лицензия](https://img.shields.io/badge/лицензия-MIT-8B5CF6?style=flat-square)](LICENSE)
 [![Живых лендингов](https://img.shields.io/badge/живых_лендингов-7-A480EF?style=flat-square)](#живые-лендинги)
 [![Дизайн-систем](https://img.shields.io/badge/дизайн--систем-29-A480EF?style=flat-square)](#дизайн-системы)
