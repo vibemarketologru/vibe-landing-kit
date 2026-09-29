@@ -1,0 +1,506 @@
+{
+ "slug": "elama",
+ "name": "eLama",
+ "kind": "brand",
+ "version": "1.0.0",
+ "disclaimer": "Эстетика в духе eLama по открытым материалам сайта elama.ru. Вайб-Маркетолог — партнёр eLama, но запись не является официальным фирменным руководством; товарный знак eLama принадлежит правообладателю. Логотип, маскот и фирменные шрифты (Navigo, Coolvetica) не используются.",
+ "summary": "Дружелюбный рекламный сервис: белые карточки на бледно-голубом, фирменный синий на кнопках, жёлтая наклонённая наклейка над заголовком и жёлтый маркер под главными словами. Заголовки — плотный тяжёлый гротеск, текст — мягкий геометрический. Переключатель аудиторий «Предпринимателям / Агентствам / Маркетологам» и глянцевые 3D-иконки.",
+ "summary_en": "A friendly ad-tech service look: white cards on a pale blue wash, the signature blue on buttons, a tilted yellow sticker above the headline and a yellow marker under key words. Headlines in a dense heavy grotesque, text in a soft geometric sans. An audience switcher (entrepreneurs / agencies / marketers) and glossy 3D icons.",
+ "best_for": [
+  "рекламные и маркетинговые сервисы",
+  "агентства интернет-рекламы",
+  "обучение маркетингу и курсы",
+  "SaaS для малого бизнеса",
+  "партнёрские программы и акции",
+  "сервисы для фрилансеров"
+ ],
+ "goals": [
+  "регистрация",
+  "заявка на бесплатную настройку",
+  "запись на вебинар",
+  "подключение партнёра"
+ ],
+ "mood": [
+  "дружелюбный",
+  "понятный",
+  "энергичный",
+  "светлый",
+  "полезный"
+ ],
+ "tokens": {
+  "color": {
+   "light": {
+    "background": "#ffffff",
+    "surface": "#f5f7ff",
+    "text": "#292e3d",
+    "text_muted": "#525c7a",
+    "border": "#e0e3eb",
+    "primary": "#3a64f8",
+    "on_primary": "#ffffff",
+    "accent": "#ffd850",
+    "on_accent": "#292e3d",
+    "link": "#2b50d9",
+    "success": "#037a32",
+    "error": "#c42430",
+    "primary_hover": "#2f55e0",
+    "accent_hover": "#ffcf2e",
+    "surface_tint": "#ebeffe",
+    "border_strong": "#858fad",
+    "sticker": "#ffd850",
+    "on_sticker": "#292e3d",
+    "marker": "#ffd850",
+    "band_navy": "#1d2654",
+    "on_band_navy": "#ffffff",
+    "on_band_navy_muted": "#c9d3fb",
+    "tab_track": "#ebeffe",
+    "primary_alt": "#6a3fd6",
+    "on_primary_alt": "#ffffff",
+    "focus": "#2b50d9"
+   },
+   "dark": {
+    "background": "#121524",
+    "surface": "#1c2033",
+    "text": "#eef1fb",
+    "text_muted": "#a9b1cc",
+    "border": "#2b3150",
+    "primary": "#6b8bfa",
+    "on_primary": "#0b1026",
+    "accent": "#ffd850",
+    "on_accent": "#1d1d39",
+    "link": "#9db2ff",
+    "success": "#5fd88a",
+    "error": "#ff7d86",
+    "primary_hover": "#8aa3ff",
+    "accent_hover": "#ffe27a",
+    "surface_tint": "#232a45",
+    "border_strong": "#7c86a8",
+    "sticker": "#ffd850",
+    "on_sticker": "#1d1d39",
+    "marker": "#ffd850",
+    "band_navy": "#0b0f22",
+    "on_band_navy": "#ffffff",
+    "on_band_navy_muted": "#c9d3fb",
+    "tab_track": "#232a45",
+    "primary_alt": "#a68bff",
+    "on_primary_alt": "#0b1026",
+    "focus": "#9db2ff"
+   },
+   "notes": "Синий #3a64f8 — заливка кнопок под белый текст (4.82:1, наведение #2f55e0 — 6.01:1); для слов — link #2b50d9 (6.46:1). В тёмной теме синий светлее (#6b8bfa) и держит тёмный текст 6.0:1. Жёлтый #ffd850 — только наклейка, маркер под словом и акцентная кнопка с тёмным текстом (9.78:1), текстом не ставится. text_muted 6.62:1 на белом и 5.77:1 на голубой подложке. Полоса band_navy с белым — 14.41:1. primary_alt — фиолетовый для совпадающей ниши: белый на нём 6.37:1, в тёмной 6.95:1."
+  },
+  "gradient": {
+   "hero": "radial-gradient(70% 60% at 15% 10%, #fbf6fe 0%, rgba(251,246,254,0) 60%), radial-gradient(60% 60% at 90% 30%, #ebeffe 0%, rgba(235,239,254,0) 65%), #ffffff",
+   "hero_dark": "radial-gradient(60% 60% at 90% 20%, rgba(107,139,250,0.18), rgba(107,139,250,0) 65%), #121524"
+  },
+  "typography": {
+   "display": {
+    "family": "Onest",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 800,
+    "size_desktop": "64px",
+    "size_mobile": "38px",
+    "line_height": 1.02,
+    "letter_spacing": "-0.03em",
+    "note": "плотно, без курсива; ключевые 1–3 слова — на жёлтом маркере"
+   },
+   "h2": {
+    "family": "Onest",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 800,
+    "size_desktop": "44px",
+    "size_mobile": "30px",
+    "line_height": 1.08,
+    "letter_spacing": "-0.025em"
+   },
+   "h3": {
+    "family": "Onest",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 700,
+    "size_desktop": "24px",
+    "size_mobile": "21px",
+    "line_height": 1.2,
+    "letter_spacing": "-0.01em"
+   },
+   "lead": {
+    "family": "Mulish",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 400,
+    "size_desktop": "19px",
+    "size_mobile": "17px",
+    "line_height": 1.55,
+    "letter_spacing": "0"
+   },
+   "body": {
+    "family": "Mulish",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 400,
+    "size_desktop": "17px",
+    "size_mobile": "16px",
+    "line_height": 1.6,
+    "letter_spacing": "0"
+   },
+   "sticker": {
+    "family": "Mulish",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 700,
+    "size_desktop": "16px",
+    "size_mobile": "14px",
+    "line_height": 1.1,
+    "letter_spacing": "0",
+    "note": "наклейка над заголовком: rotate(-6deg), pill, фон sticker"
+   },
+   "stat": {
+    "family": "Onest",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 800,
+    "size_desktop": "48px",
+    "size_mobile": "36px",
+    "line_height": 1.0,
+    "letter_spacing": "-0.02em"
+   },
+   "caption": {
+    "family": "Mulish",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 500,
+    "size_desktop": "14px",
+    "size_mobile": "14px",
+    "line_height": 1.45,
+    "letter_spacing": "0"
+   },
+   "button": {
+    "family": "Mulish",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "weight": 600,
+    "size_desktop": "16px",
+    "size_mobile": "16px",
+    "line_height": 1.2,
+    "letter_spacing": "0"
+   }
+  },
+  "radius": {
+   "xs": "6px",
+   "sm": "8px",
+   "md": "16px",
+   "lg": "24px",
+   "pill": "999px",
+   "note": "Кнопки — 8px, почти прямоугольные; карточки и панели — 16px; наклейка и вкладки-сегменты — pill и 12px."
+  },
+  "spacing": {
+   "unit": 8,
+   "section_desktop": "112px",
+   "section_mobile": "64px",
+   "container": "1160px",
+   "gutter_mobile": "16px",
+   "card_padding": "32px",
+   "card_gap": "16px"
+  },
+  "shadow": {
+   "card": "0 1px 2px rgba(41,46,61,0.04), 0 8px 24px -12px rgba(58,100,248,0.18)",
+   "raised": "0 24px 48px -24px rgba(41,46,61,0.25)",
+   "raised_dark": "0 24px 48px -20px rgba(0,0,0,0.7)",
+   "focus": "0 0 0 2px #ffffff, 0 0 0 4px #2b50d9",
+   "focus_dark": "0 0 0 2px #121524, 0 0 0 4px #9db2ff",
+   "note": "Мягкие голубоватые тени у белых карточек на подложке; без жёстких контуров."
+  },
+  "motion": {
+   "fast": "150ms",
+   "base": "250ms",
+   "slow": "500ms",
+   "ease_standard": "cubic-bezier(.2,0,0,1)",
+   "ease_emphasized": "cubic-bezier(.3,1.2,.4,1)",
+   "note": "Живо, но коротко: маркер проводится под словом, подложка вкладок переезжает, наклейка может слегка «прилипнуть» при загрузке (без повторов)."
+  }
+ },
+ "fonts": [
+  {
+   "family": "Onest",
+   "fontsource": "onest",
+   "role": "display+headings+numbers",
+   "weights": [
+    700,
+    800
+   ],
+   "license": "OFL-1.1",
+   "install": "npm i @fontsource-variable/onest — самохостинг, font-display: swap, подмножества cyrillic и latin",
+   "replaces": "Coolvetica (проприетарный)",
+   "why": "плотный современный гротеск с хорошей кириллицей: при 800 и трекинге −0,03em даёт тот же тяжёлый сжатый заголовок, что Coolvetica у eLama"
+  },
+  {
+   "family": "Mulish",
+   "fontsource": "mulish",
+   "role": "body+ui",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL-1.1",
+   "install": "npm i @fontsource-variable/mulish — самохостинг, font-display: swap, подмножества cyrillic и latin",
+   "replaces": "Navigo (проприетарный)",
+   "why": "мягкий геометрический гротеск с округлыми формами — ближайший свободный родственник Navigo; спокоен в интерфейсе и мелком тексте"
+  }
+ ],
+ "components": {
+  "button_primary": {
+   "bg": "primary",
+   "color": "on_primary",
+   "radius": "sm",
+   "height": "50px",
+   "padding": "0 24px",
+   "font": "button",
+   "hover": "фон primary_hover",
+   "use": "«Зарегистрироваться», «Настроить бесплатно»"
+  },
+  "button_secondary": {
+   "bg": "surface_tint",
+   "color": "link",
+   "radius": "sm",
+   "height": "50px",
+   "padding": "0 22px",
+   "font": "button",
+   "hover": "фон #dfe6fd",
+   "use": "«Смотреть тарифы», «Узнать больше»"
+  },
+  "button_accent": {
+   "bg": "accent",
+   "color": "on_accent",
+   "radius": "sm",
+   "height": "50px",
+   "padding": "0 24px",
+   "font": "button",
+   "hover": "фон accent_hover",
+   "use": "акции и вариант cta_color_role=accent"
+  },
+  "button_on_band": {
+   "bg": "#ffffff",
+   "color": "#1d2654",
+   "radius": "sm",
+   "height": "50px",
+   "hover": "прозрачность .92",
+   "use": "кнопка на тёмно-синей полосе"
+  },
+  "sticker": {
+   "bg": "sticker",
+   "color": "on_sticker",
+   "radius": "pill",
+   "padding": "6px 14px",
+   "transform": "rotate(-6deg)",
+   "position": "над первым словом заголовка, частично заходит на его верхнюю линию",
+   "use": "одно слово-обещание: «бесплатно», «за 1 день», «новое»; одна наклейка на экран"
+  },
+  "marker": {
+   "style": "жёлтая подложка marker под 1–3 словами заголовка или подзаголовка: background по нижним 70% строки, radius 6px, box-decoration-break: clone",
+   "use": "главная выгода: «Бесплатно настроим»"
+  },
+  "segmented_tabs": {
+   "track": "tab_track, radius 12px, padding 6px",
+   "item": "Mulish 500 15px text_muted; активный — белая плашка surface с тенью card и цветом text",
+   "use": "переключатель аудиторий «Предпринимателям / Агентствам / Маркетологам» над блоком выгод; содержимое меняется без перезагрузки (tabs-indicator)"
+  },
+  "card": {
+   "bg": "background",
+   "color": "text",
+   "radius": "md",
+   "padding": "32px",
+   "shadow": "card",
+   "hover": "тень raised за 250ms",
+   "use": "выгоды, инструменты, тарифы — на подложке surface"
+  },
+  "icon_3d": {
+   "style": "глянцевые объёмные иконки 3D (папка, стрелка роста, самолётик, круглые значки-приложения) в синих, жёлтых и мятных тонах, мягкий свет сверху",
+   "rule": "генерировать свои; логотипы Яндекса, VK, Telegram и маскот eLama не использовать",
+   "use": "правая часть карточки выгоды и первого экрана"
+  },
+  "input": {
+   "bg": "background",
+   "color": "text",
+   "border": "1px solid border",
+   "radius": "sm",
+   "height": "50px",
+   "font": "body"
+  },
+  "nav": {
+   "bg": "background",
+   "height": "72px",
+   "items": "4–6 пунктов Mulish 500 15px, выпадающие меню со стрелкой; справа «Вход» текстом и button_primary «Регистрация» 40px"
+  }
+ },
+ "layout": {
+  "hero_pattern": "Вариант left_sticker (по умолчанию): фон gradient.hero (сиреневато-голубая дымка), слева наклейка sticker над H1 Onest 800 64px в 2 строки, под ним одна button_primary (id=hero-cta). Ниже — большая белая панель radius lg: сверху segmented_tabs аудиторий, внутри слева h2 с маркером на первых словах («Бесплатно настроим первую кампанию…»), строка text_muted, справа композиция icon_3d. Вариант centered: H1 и наклейка по центру, две кнопки, панель с вкладками ниже на всю ширину контейнера.",
+  "section_order": [
+   "nav",
+   "hero",
+   "audience_tabs",
+   "tools",
+   "how",
+   "numbers",
+   "pricing",
+   "partners",
+   "webinars",
+   "faq",
+   "lead_form",
+   "footer"
+  ],
+  "sections": {
+   "tools": "сетка белых карточек 3×2 на подложке surface: иконка 3D, h3, 2 строки, ссылка «Подробнее»",
+   "how": "3 шага горизонтально с номером в синем круге и тонкой линией",
+   "numbers": "полоса band_navy: 3–4 цифры stat белым с подписью on_band_navy_muted",
+   "pricing": "карточки тарифов; переключатель «месяц / год» (tabs-indicator); рекомендуемый — рамка 2px primary и наклейка «выгодно»",
+   "partners": "рекламные системы текстом-списком или нейтральными значками без чужих логотипов",
+   "webinars": "карточки ближайших вебинаров с датой крупно",
+   "faq": "5–7 вопросов на белой панели, рецепт accordion-smooth"
+  },
+  "grid": "12 колонок, контейнер 1160px, зазор 16px; карточки 3 в ряд, 2 на 768–1023px, 1 на телефоне",
+  "mobile_notes": "До 767px: наклейка над H1 38px, кнопка во всю ширину; вкладки аудиторий — горизонтальная лента сегментов со скроллом и маской справа; icon_3d под текстом, до 240px высотой; липкая кнопка по sticky-cta-mobile."
+ },
+ "lead_form": {
+  "fields": [
+   "name",
+   "phone",
+   "email"
+  ],
+  "consent_152fz": true,
+  "style": "Белая панель radius lg на подложке surface: заголовок h3 с маркером на слове «бесплатно», поля 50px с рамкой border и радиусом 8px, чекбокс не отмечен заранее: «Согласен(на) на обработку персональных данных по 152-ФЗ» и ссылка на политику цветом link; button_primary во всю ширину. Ошибки — текстом 14px error под полем.",
+  "success_state": "Панель меняется на месте: иконка 3D-галочка, h3 «Заявка принята», строка «Специалист свяжется в течение рабочего дня», ссылка «Пока посмотрите вебинары». Фокус на заголовке, aria-live=polite."
+ },
+ "motion_recipes": [
+  "marker-highlight",
+  "tabs-indicator",
+  "fade-up-stagger",
+  "accordion-smooth",
+  "sticky-cta-mobile"
+ ],
+ "motion_map": {
+  "levels": {
+   "none": "только функциональное: tabs-indicator без переезда подложки, accordion-smooth, sticky-cta-mobile",
+   "subtle": "по умолчанию: весь motion_map",
+   "rich": "subtle + наклейка «прилипает» при загрузке (scale 1.08 → 1 за 250ms один раз)"
+  },
+  "marker-highlight": "1–3 слова в H1 первого экрана или в h2 панели: --mh-color: var(--color-marker); --mh-top: 30%; --mh-bottom: 0; проводится один раз слева направо. Не больше одного маркера на экран",
+  "tabs-indicator": "переключатель аудиторий в панели первого экрана и «месяц / год» в тарифах: --tbi-track: var(--color-tab-track); --tbi-pill: var(--color-surface); --tbi-dur: 250ms",
+  "fade-up-stagger": "карточки tools и шаги how: --reveal-dist: 16px; --reveal-dur: 480ms; --reveal-step: 70ms",
+  "accordion-smooth": "faq на белой панели, разделители border, значок-стрелка цветом link",
+  "sticky-cta-mobile": "data-after=\"#hero-cta\", data-hide-on=\"#lead\"; синяя кнопка radius 8px",
+  "not_for_this_style": "svg-line-draw — вместо линий маркер; parallax-soft и tilt-card — 3D-иконки уже объёмные, движение лишнее; gradient-drift — дымка фона стоит"
+ },
+ "media": {
+  "hero": "Композиция из глянцевых 3D-иконок (папка с документами, жёлтая стрелка роста, бумажный самолётик, круглые значки-приложения) справа в белой панели; фон — светлая дымка. Своими генерациями, без чужих логотипов.",
+  "video_in_flow": "Короткая запись экрана интерфейса без звука (5–10 с петлёй) в карточке инструмента с кнопкой паузы; вебинар — по кнопке в <dialog> с субтитрами.",
+  "imagery": "3D-иконки и скриншоты интерфейса на белых карточках; люди — только в блоке вебинаров и отзывов (эксперты с именами).",
+  "character": "Маскот eLama не используем (это знак правообладателя); для своего продукта в этом стиле — свой маскот в той же 3D-подаче или без персонажа.",
+  "audio": "Не нужна: страница короткая и сканируется глазами.",
+  "avoid": [
+   "логотип и маскот eLama, логотипы Яндекса, VK и Telegram",
+   "тёмные тяжёлые фоны на весь экран в светлой теме",
+   "фотостоки с офисными улыбками",
+   "больше одной наклейки и одного маркера на экран",
+   "жёлтый как цвет текста"
+  ],
+  "geometry": {
+   "hero_desktop": "композиция 3D 1:1 справа в панели",
+   "hero_mobile": "композиция 4:3 под текстом",
+   "card": "иконка 3D 96px в карточке",
+   "gallery": "скриншоты 16:10 в карточках",
+   "logo_strip": "рекламные системы текстом или нейтральными значками"
+  }
+ },
+ "states": {
+  "button": {
+   "hover": "primary_hover; secondary — фон светлее голубого; accent — accent_hover",
+   "focus_visible": "shadow.focus — кольцо 2px link с белым зазором",
+   "active": "scale(0.98)",
+   "disabled": "фон border, текст text_muted; кнопку заявки не блокировать",
+   "loading": "подпись «Отправляем…», aria-busy=true"
+  },
+  "input": {
+   "focus": "рамка 2px primary",
+   "error": "рамка 2px error, текст 14px error под полем, aria-invalid=true",
+   "disabled": "фон surface, текст text_muted"
+  }
+ },
+ "signature": [
+  "Жёлтая наклейка-пилюля, наклонённая на −6°, над первым словом заголовка",
+  "Жёлтый маркер под 1–3 главными словами",
+  "Переключатель аудиторий сегментами «Предпринимателям / Агентствам / Маркетологам» в белой панели первого экрана",
+  "Белые карточки 16px с мягкой голубой тенью на бледно-голубой подложке и глянцевые 3D-иконки"
+ ],
+ "voice": {
+  "tone": "дружелюбно и по делу, на «вы», без жаргона: «Бесплатно настроим первую кампанию»",
+  "headline_formula": "польза + для кого + условие: «Инструменты, которые помогают с интернет-рекламой» с наклейкой «бесплатные»",
+  "rules": "короткие фразы, глаголы действия, цифры выгоды; англицизмы только там, где это название системы"
+ },
+ "type_features": {
+  "prices": "font-variant-numeric: lining-nums tabular-nums; «₽» через неразрывный пробел",
+  "headlines": "text-wrap: balance; маркер — отдельный <mark> с box-decoration-break: clone"
+ },
+ "ab_axes": {
+  "vary": {
+   "hero_layout": [
+    "left_sticker",
+    "centered"
+   ],
+   "cta_color_role": [
+    "primary",
+    "accent"
+   ],
+   "headline_scale": [
+    "xl",
+    "l"
+   ],
+   "motion_level": [
+    "none",
+    "subtle",
+    "rich"
+   ],
+   "social_proof_position": [
+    "under_hero",
+    "before_form"
+   ],
+   "audience_tabs": [
+    "on",
+    "off"
+   ]
+  },
+  "fixed": [
+   "palette",
+   "fonts",
+   "radius",
+   "sticker_style",
+   "card_shadow"
+  ],
+  "default": {
+   "hero_layout": "left_sticker",
+   "cta_color_role": "primary",
+   "headline_scale": "xl",
+   "motion_level": "subtle",
+   "social_proof_position": "under_hero",
+   "audience_tabs": "on"
+  },
+  "legend": {
+   "hero_layout": "left_sticker — заголовок слева с наклейкой, панель с вкладками ниже; centered — всё по центру",
+   "cta_color_role": "primary — синяя кнопка; accent — жёлтая с тёмным текстом",
+   "audience_tabs": "on — выгоды разложены по аудиториям вкладками; off — одна общая сетка выгод"
+  },
+  "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось. Для сервисов с несколькими аудиториями первой проверять audience_tabs."
+ },
+ "do": [
+  "Ставить одну жёлтую наклейку над заголовком и один маркер под главной выгодой — не больше на экран.",
+  "Держать белые карточки на бледно-голубой подложке с мягкой голубой тенью.",
+  "Раскладывать выгоды по аудиториям переключателем-сегментами, если аудиторий несколько.",
+  "Писать коротко и дружелюбно на «вы», с цифрами выгоды.",
+  "Генерировать свои 3D-иконки в синих и жёлтых тонах без чужих логотипов.",
+  "В совпадающей нише (рекламные сервисы, агентства) брать primary_alt — фиолетовый вместо синего, без наклейки в том же месте — 135-ФЗ ст. 14.6."
+ ],
+ "dont": [
+  "Не использовать логотип и маскот eLama и не выдавать страницу за сайт eLama.",
+  "Не ставить жёлтый текстом — только наклейка, маркер и кнопка с тёмным текстом.",
+  "Не перегружать экран: две наклейки или два маркера рядом ломают акцент.",
+  "Не заливать светлую тему тёмными полосами подряд — одна полоса band_navy на страницу.",
+  "Не прятать согласие на обработку данных и не отмечать его заранее."
+ ],
+ "prompt_snippet": "Build a friendly ad-tech lead landing in the spirit of eLama (no logos or mascot). Light: white background #ffffff with a soft lilac-blue radial wash, pale blue surface #f5f7ff for sections, white cards with 16px radius and a soft blue shadow, navy text #292e3d, muted #525c7a. Primary blue #3a64f8 buttons with white text and 8px radius; links #2b50d9. Yellow #ffd850 only for a pill sticker tilted -6deg above the headline and a highlighter marker under 1-3 key words. Self-hosted Onest 800 with tight tracking for headlines 64/38px and Mulish 400-700 for body 17px. Hero: sticker, two-line headline, one blue button, then a large white panel with a segmented audience switcher and glossy self-generated 3D icons. Navy numbers band, tabbed pricing month/year, unchecked 152-FZ consent. Never set text in yellow.",
+ "source": {
+  "inspired_by": "открытые материалы сайта elama.ru (главная страница, 29-09-2026): цвета из публичных стилей сайта, раскладка первого экрана",
+  "notes": "Фирменные шрифты Navigo и Coolvetica проприетарны — заменены на Mulish и Onest (OFL-1.1, кириллица). Добавлены тёмная тема с проверенным контрастом, primary_alt для совпадающей ниши, форма по 152-ФЗ и motion_map. Логотип, маскот-лама и фирменные иллюстрации не используются."
+ }
+}

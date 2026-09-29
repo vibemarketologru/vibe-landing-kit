@@ -6,7 +6,7 @@
 
 **Hypothesis testing, done for you: one sentence to your AI agent — a landing page, an A/B test, leads in Telegram and ads in Yandex Direct.**
 A full-bleed first screen with an image or video, a recurring character speaking Russian, leads delivered to Telegram,
-an A/B test on one URL, a quality passport and an AI chatbot. 29 brand-inspired design systems, 26 motion recipes, 12 skills, Yandex Wordstat keywords.
+an A/B test on one URL, a quality passport and an AI chatbot. 31 brand-inspired design systems, 26 motion recipes, 12 skills, Yandex Wordstat keywords.
 For Claude Code, ChatGPT, Claude and Cursor.
 
 [Русский](README.md) · **English**

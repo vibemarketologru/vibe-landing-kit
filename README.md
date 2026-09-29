@@ -6,13 +6,13 @@
 
 **Гипотеза под ключ: одна фраза агенту — лендинг, A/B-тест, заявки в Telegram и реклама в Яндекс Директе.**
 Атмосферный первый экран с картинкой или видео на всю ширину, персонаж с русской речью, заявки в Telegram,
-A/B-тест на одном адресе, паспорт качества и чат-бот с ИИ. 29 дизайн-систем в духе мировых брендов, 26 анимаций, 12 навыков, семантика Вордстата.
+A/B-тест на одном адресе, паспорт качества и чат-бот с ИИ. 31 дизайн-систем в духе мировых брендов, 26 анимаций, 12 навыков, семантика Вордстата.
 Для Claude Code, ChatGPT, Claude и Cursor.
 
-[![Версия](https://img.shields.io/badge/версия-1.3.1-6D28D9?style=flat-square)](CHANGELOG.md)
+[![Версия](https://img.shields.io/badge/версия-1.4.0-6D28D9?style=flat-square)](CHANGELOG.md)
 [![Лицензия](https://img.shields.io/badge/лицензия-MIT-8B5CF6?style=flat-square)](LICENSE)
 [![Живых лендингов](https://img.shields.io/badge/живых_лендингов-7-A480EF?style=flat-square)](#живые-лендинги)
-[![Дизайн-систем](https://img.shields.io/badge/дизайн--систем-29-A480EF?style=flat-square)](#дизайн-системы)
+[![Дизайн-систем](https://img.shields.io/badge/дизайн--систем-31-A480EF?style=flat-square)](#дизайн-системы)
 [![Навыков](https://img.shields.io/badge/навыков-12-A480EF?style=flat-square)](#библиотека-навыков)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-плагин-2B8A3E?style=flat-square)](#подключение)
 [![MCP](https://img.shields.io/badge/MCP-ChatGPT_·_Claude_·_Cursor-1E6FD9?style=flat-square)](https://lk.vibemarketolog.ru/connect)
@@ -192,6 +192,7 @@ flowchart LR
 | [BMW](design-systems/bmw/DESIGN.md) | автосалоны и дилерские центры, автосервис, детейлинг, шиномонтаж премиум-класса, инженерные и промышленные компании | Onest |
 | [Cal.com](design-systems/cal/DESIGN.md) | онлайн-запись и сервисы бронирования, консультации: юристы, бухгалтеры, психологи, B2B SaaS и IT-сервисы | Manrope, Inter |
 | [Clay](design-systems/clay/DESIGN.md) | детские центры и развивающие занятия, частные детские сады и школы, кружки, студии, летние лагеря | M PLUS Rounded 1c, Inter |
+| [eLama](design-systems/elama/DESIGN.md) | рекламные и маркетинговые сервисы, агентства интернет-рекламы, обучение маркетингу и курсы | Onest, Mulish |
 | [ElevenLabs](design-systems/elevenlabs/DESIGN.md) | эстетическая медицина и косметология, дерматология и трихология, психотерапия и психологическая помощь | Spectral, Inter |
 | [IBM](design-systems/ibm/DESIGN.md) | промышленное оборудование и производство, инжиниринг, проектирование и монтаж инженерных систем, логистика, склады и грузоперевозки для бизнеса | IBM Plex Sans, IBM Plex Mono, IBM Plex Serif |
 | [Intercom](design-systems/intercom/DESIGN.md) | SaaS и облачные сервисы, клиентский сервис и поддержка, ИИ-ассистенты и чат-боты | Geist, Geist Mono |
@@ -206,6 +207,7 @@ flowchart LR
 | [Stripe](design-systems/stripe/DESIGN.md) | финтех и платежи, SaaS и B2B-сервисы, эквайринг, онлайн-кассы, бухгалтерия | Inter Tight, Inter |
 | [Tesla](design-systems/tesla/DESIGN.md) | автосалоны, автоподбор и продажа авто с пробегом, новостройки и коттеджные посёлки, загородные дома под ключ | Montserrat, Inter |
 | [Uber](design-systems/uber/DESIGN.md) | клининг и уборка квартир и офисов, переезды, грузчики, вывоз мусора, доставка цветов, продуктов, стройматериалов | Wix Madefor Display, Wix Madefor Text |
+| [Вайб-Маркетолог · Русский код](design-systems/vibemarketolog/DESIGN.md) | отечественный софт и импортозамещение, ИИ-сервисы и цифровые сотрудники для бизнеса, российские производители и «сделано в России» | PT Serif, Golos Text |
 | [Vodafone](design-systems/vodafone/DESIGN.md) | интернет-провайдеры и домашнее ТВ, мобильная связь и тарифы для бизнеса, акции, распродажи и сезонные предложения | Geologica |
 | [Wise](design-systems/wise/DESIGN.md) | финтех и переводы денег, платёжные и банковские сервисы, бухгалтерия и налоги | Inter Tight, Inter |
 | [Zapier](design-systems/zapier/DESIGN.md) | малый бизнес и услуги для предпринимателей, бухгалтерия, налоги, регистрация ИП и ООО, окна, натяжные потолки, двери, жалюзи | Wix Madefor Display, Inter |

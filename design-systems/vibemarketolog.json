@@ -1,0 +1,540 @@
+{
+ "slug": "vibemarketolog",
+ "name": "Вайб-Маркетолог · Русский код",
+ "kind": "brand",
+ "version": "1.0.0",
+ "disclaimer": "Собственный стиль Вайб-Маркетолога. Без государственных символов: флаги, гербы и гимны в рекламе запрещены (ч. 6 ст. 5 закона № 38-ФЗ «О рекламе»).",
+ "summary": "Технологии с русскими корнями. Чернёный или льняной фон, неоновый зелёный бренда на главных кнопках, кобальт гжели и киноварь вышивки — вторые голоса. Заголовки — PT Serif, наследник гражданского шрифта, текст — Golos Text. Буквица, полоса-оберег из ромбов, суверенная полоса фактов. Без госсимволики, по-русски.",
+ "summary_en": "Technology with Russian roots. A blackened or linen background, the brand's neon green on primary buttons, Gzhel cobalt and embroidery vermilion as second voices. Headlines in PT Serif, heir of the civil typeface; text in Golos Text. A drop initial, a rhombus 'amulet' ornament band and a 'sovereign facts' strip. No state symbols; Russian-first copy.",
+ "best_for": [
+  "отечественный софт и импортозамещение",
+  "ИИ-сервисы и цифровые сотрудники для бизнеса",
+  "российские производители и «сделано в России»",
+  "B2B и поставщики для госзаказа и тендеров",
+  "туризм по России и народные промыслы",
+  "образование и просветительские проекты",
+  "агросектор и фермерская продукция"
+ ],
+ "goals": [
+  "заявка на внедрение",
+  "запись на демо",
+  "доверие к отечественному продукту",
+  "коммерческое предложение"
+ ],
+ "mood": [
+  "технологичный",
+  "уверенный",
+  "свой",
+  "торжественный без пафоса",
+  "честный"
+ ],
+ "tokens": {
+  "color": {
+   "light": {
+    "background": "#f5f1e8",
+    "surface": "#fffdf8",
+    "text": "#11161f",
+    "text_muted": "#4f5663",
+    "border": "#ddd6c7",
+    "primary": "#22c55e",
+    "on_primary": "#06170d",
+    "accent": "#1e3fa8",
+    "on_accent": "#ffffff",
+    "link": "#1a3a9c",
+    "success": "#16753c",
+    "error": "#b3261e",
+    "primary_hover": "#1fb455",
+    "accent_hover": "#18348c",
+    "surface_strong": "#ece5d6",
+    "border_strong": "#6b6558",
+    "initial": "#b3261e",
+    "ornament": "#b3261e",
+    "ornament_gold": "#b8892b",
+    "band_cobalt": "#1b2f78",
+    "on_band_cobalt": "#ffffff",
+    "on_band_cobalt_muted": "#d7def7",
+    "band_ink": "#0d1117",
+    "on_band_ink": "#f5f1e8",
+    "on_band_ink_muted": "#c9c4b8",
+    "band_kinovar": "#9e211a",
+    "on_band_kinovar": "#ffffff",
+    "focus": "#1a3a9c",
+    "glow": "#22c55e"
+   },
+   "dark": {
+    "background": "#0b0e13",
+    "surface": "#141922",
+    "text": "#f3efe4",
+    "text_muted": "#aeb3bd",
+    "border": "#262d38",
+    "primary": "#39e27a",
+    "on_primary": "#04120a",
+    "accent": "#3355d6",
+    "on_accent": "#ffffff",
+    "link": "#9cb5ff",
+    "success": "#5fe08f",
+    "error": "#ff8a7a",
+    "primary_hover": "#2fcf6c",
+    "accent_hover": "#2946b8",
+    "surface_strong": "#1c2330",
+    "border_strong": "#8a93a3",
+    "initial": "#e0b24a",
+    "ornament": "#e0b24a",
+    "ornament_gold": "#e0b24a",
+    "band_cobalt": "#182a6b",
+    "on_band_cobalt": "#ffffff",
+    "on_band_cobalt_muted": "#c9d3f5",
+    "band_ink": "#05070a",
+    "on_band_ink": "#f3efe4",
+    "on_band_ink_muted": "#b9b4a7",
+    "band_kinovar": "#7a1a14",
+    "on_band_kinovar": "#ffffff",
+    "focus": "#39e27a",
+    "glow": "#39e27a"
+   },
+   "notes": "Бренд — неоновый зелёный: заливка под тёмный текст (8.11:1, в тёмной 11.25:1), текстом по фону не ставится. Кобальт гжели — второй голос: белый на #1e3fa8 9.01:1, в тёмной 6.16:1; ссылки кобальтом 8.75:1 и #9cb5ff 9.63:1. initial — буквица киноварью 5.8:1 на льне, золотом 9.79:1 на чернёном: это текст, контраст ≥ 4.5 проверен. ornament/ornament_gold — полоса-оберег, декор (текст по ней не ставится). Полосы: кобальт 12.18:1 (приглушённый 9.09), чернёная 16.79:1, киноварь 7.82:1. text_muted 6.55:1 на льне и 5.89:1 на surface_strong. Три цвета подряд полосами бело-сине-красного НЕ ставятся (см. dont)."
+  },
+  "gradient": {
+   "glow": "radial-gradient(60% 80% at 20% 100%, rgba(34,197,94,0.22), rgba(34,197,94,0) 70%)",
+   "glow_dark": "radial-gradient(60% 80% at 20% 100%, rgba(57,226,122,0.28), rgba(57,226,122,0) 70%)"
+  },
+  "typography": {
+   "display": {
+    "family": "PT Serif",
+    "fallback": "Georgia, 'Times New Roman', serif",
+    "weight": 700,
+    "size_desktop": "64px",
+    "size_mobile": "40px",
+    "line_height": 1.06,
+    "letter_spacing": "-0.01em",
+    "note": "одно слово можно курсивом (<em>, PT Serif Italic 700) — цветом текста; кавычки «ёлочки»"
+   },
+   "h2": {
+    "family": "PT Serif",
+    "fallback": "Georgia, 'Times New Roman', serif",
+    "weight": 700,
+    "size_desktop": "44px",
+    "size_mobile": "30px",
+    "line_height": 1.1,
+    "letter_spacing": "-0.005em"
+   },
+   "h3": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 600,
+    "size_desktop": "22px",
+    "size_mobile": "20px",
+    "line_height": 1.25,
+    "letter_spacing": "0"
+   },
+   "lead": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 400,
+    "size_desktop": "20px",
+    "size_mobile": "18px",
+    "line_height": 1.55,
+    "letter_spacing": "0"
+   },
+   "body": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 400,
+    "size_desktop": "17px",
+    "size_mobile": "16px",
+    "line_height": 1.6,
+    "letter_spacing": "0"
+   },
+   "initial": {
+    "family": "PT Serif",
+    "fallback": "Georgia, 'Times New Roman', serif",
+    "weight": 700,
+    "size_desktop": "72px",
+    "size_mobile": "56px",
+    "line_height": 0.9,
+    "letter_spacing": "0",
+    "note": "буквица первого абзаца лида: float left, 3 строки, цвет initial"
+   },
+   "stat": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 700,
+    "size_desktop": "56px",
+    "size_mobile": "40px",
+    "line_height": 1.0,
+    "letter_spacing": "-0.02em",
+    "note": "«за 24 часа», «14 990 ₽», «152-ФЗ»"
+   },
+   "eyebrow": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 600,
+    "size_desktop": "13px",
+    "size_mobile": "12px",
+    "line_height": 1.3,
+    "letter_spacing": "0.12em",
+    "text_transform": "uppercase",
+    "note": "факты через точку: «ДАННЫЕ В РОССИИ · ОПЛАТА ПО СБП · ДОГОВОР С ООО»"
+   },
+   "caption": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 500,
+    "size_desktop": "14px",
+    "size_mobile": "14px",
+    "line_height": 1.45,
+    "letter_spacing": "0"
+   },
+   "button": {
+    "family": "Golos Text",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "weight": 600,
+    "size_desktop": "16px",
+    "size_mobile": "16px",
+    "line_height": 1.2,
+    "letter_spacing": "0.01em"
+   }
+  },
+  "radius": {
+   "xs": "4px",
+   "sm": "8px",
+   "md": "14px",
+   "lg": "22px",
+   "pill": "999px",
+   "note": "Кнопки — прямоугольник 8px (строгость), не пилюля; карточки 14px; бейджи фактов — pill."
+  },
+  "spacing": {
+   "unit": 8,
+   "section_desktop": "120px",
+   "section_mobile": "64px",
+   "container": "1200px",
+   "gutter_mobile": "16px",
+   "card_padding": "28px",
+   "card_gap": "24px",
+   "ornament_height": "14px"
+  },
+  "shadow": {
+   "card": "none",
+   "raised": "0 20px 48px -28px rgba(13,17,23,0.45)",
+   "raised_dark": "0 20px 48px -20px rgba(0,0,0,0.8)",
+   "glow": "0 0 0 1px rgba(57,226,122,0.35), 0 8px 32px -8px rgba(57,226,122,0.45)",
+   "focus": "0 0 0 2px #f5f1e8, 0 0 0 4px #1a3a9c",
+   "focus_dark": "0 0 0 2px #0b0e13, 0 0 0 4px #39e27a",
+   "note": "Плоско и строго: карточки держит рамка border. Свечение glow — только у главной кнопки в тёмной теме и за ключевой цифрой."
+  },
+  "motion": {
+   "fast": "160ms",
+   "base": "280ms",
+   "slow": "640ms",
+   "ease_standard": "cubic-bezier(.2,0,0,1)",
+   "ease_emphasized": "cubic-bezier(.16,1,.3,1)",
+   "note": "Сдержанно: орнамент прорисовывается линией, цифры досчитывают один раз; без пружин и мерцания."
+  }
+ },
+ "fonts": [
+  {
+   "family": "PT Serif",
+   "fontsource": "pt-serif",
+   "role": "display+headings+initial",
+   "weights": [
+    400,
+    700
+   ],
+   "styles": [
+    "normal",
+    "italic"
+   ],
+   "license": "OFL-1.1",
+   "install": "npm i @fontsource/pt-serif — 700 и 700-italic, самохостинг, font-display: swap, подмножества cyrillic и latin",
+   "why": "из семейства «Общедоступные шрифты Российской Федерации» (ParaType, 2009–2010, к 300-летию реформы гражданского шрифта Петра I): книжная антиква с русскими корнями и честной кириллицей — торжественно, но без стилизации «под старину»"
+  },
+  {
+   "family": "Golos Text",
+   "fontsource": "golos-text",
+   "role": "body+ui+numbers",
+   "weights": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "license": "OFL-1.1",
+   "install": "npm i @fontsource-variable/golos-text — самохостинг, font-display: swap, подмножества cyrillic и latin",
+   "why": "шрифт, сделанный для портала Госуслуг: его читают каждый день миллионы людей, он свой и нейтральный; ровные цифры для цен и сроков"
+  }
+ ],
+ "components": {
+  "button_primary": {
+   "bg": "primary",
+   "color": "on_primary",
+   "radius": "sm",
+   "height": "52px",
+   "padding": "0 28px",
+   "font": "button",
+   "hover": "фон primary_hover; в тёмной теме — shadow.glow",
+   "use": "одно главное действие: «Получить демо», «Подключить за 24 часа»"
+  },
+  "button_secondary": {
+   "bg": "transparent",
+   "color": "text",
+   "border": "1.5px solid border_strong",
+   "radius": "sm",
+   "height": "52px",
+   "padding": "0 24px",
+   "font": "button",
+   "hover": "фон surface_strong",
+   "use": "«Как это работает», «Скачать КП (PDF)»"
+  },
+  "button_accent": {
+   "bg": "accent",
+   "color": "on_accent",
+   "radius": "sm",
+   "height": "52px",
+   "padding": "0 28px",
+   "font": "button",
+   "hover": "фон accent_hover",
+   "use": "вторая по весу кнопка и вариант cta_color_role=accent"
+  },
+  "button_on_band": {
+   "bg": "on_band_cobalt",
+   "color": "#1b2f78",
+   "radius": "sm",
+   "height": "52px",
+   "hover": "прозрачность .9",
+   "use": "кнопка на полосе кобальта или киновари: белая заливка, текст цветом полосы"
+  },
+  "card": {
+   "bg": "surface",
+   "color": "text",
+   "border": "1px solid border",
+   "radius": "md",
+   "padding": "28px",
+   "hover": "рамка border_strong за 160ms, без подъёма",
+   "use": "возможности, тарифы, шаги внедрения"
+  },
+  "ornament_band": {
+   "height": "14px",
+   "pattern": "повторяющийся ромб-оберег (ромб с крючками по углам и точкой в центре) инлайн-SVG в background-image, шаг 28px, цвет ornament (киноварь на льне, золото на чернёном)",
+   "use": "разделитель между крупными разделами и рамка над формой; не больше двух на страницу",
+   "a11y": "aria-hidden, декоративный"
+  },
+  "initial": {
+   "style": "первая буква лида или первого абзаца «о компании» — PT Serif 700, 3 строки, цвет initial, отступ справа 8px",
+   "use": "один раз на странице, как в книге"
+  },
+  "sovereign_strip": {
+   "style": "полоса surface_strong с 3–5 бейджами-фактами (pill, рамка border_strong, иконка-линия 1.5px): «Данные хранятся в России», «Оплата по СБП и картой «Мир»», «Договор с российским юрлицом», «Работает с Яндекс Директом и VK Рекламой», «Согласие по 152-ФЗ»",
+   "rule": "только правдивые и проверяемые факты; нет факта — нет бейджа",
+   "use": "под первым экраном или перед формой"
+  },
+  "badge": {
+   "bg": "surface_strong",
+   "color": "text",
+   "radius": "pill",
+   "padding": "6px 12px",
+   "font": "caption",
+   "use": "факты, статус «в реестре отечественного ПО» — только если это правда и есть номер записи"
+  },
+  "input": {
+   "bg": "surface",
+   "color": "text",
+   "border": "1px solid border_strong",
+   "radius": "xs",
+   "height": "52px",
+   "font": "body",
+   "use": "поля формы; от 16px, чтобы iOS не увеличивал"
+  },
+  "nav": {
+   "bg": "background",
+   "height": "68px",
+   "items": "3–5 пунктов Golos Text 500 15px, справа button_primary 44px",
+   "sticky": "да, с тонкой нижней рамкой border после прокрутки"
+  }
+ },
+ "layout": {
+  "hero_pattern": "Вариант split (по умолчанию): слева eyebrow из фактов, H1 PT Serif 64px в 2–3 строки, лид с буквицей, две кнопки (главная — id=hero-cta), строка caption «Подключаем за 24 часа · договор · СБП». Справа кадр 4:5 — человек за работой в современном российском интерьере или интерфейс продукта на экране; в тёмной теме за кадром — радиальное свечение gradient.glow_dark. Под первым экраном — ornament_band. Вариант centered_band: полоса band_ink во всю ширину, H1 по центру светлым, под ним sovereign_strip в строку и одна кнопка.",
+  "section_order": [
+   "nav",
+   "hero",
+   "sovereign_strip",
+   "problem",
+   "how",
+   "capabilities",
+   "numbers",
+   "pricing",
+   "reviews",
+   "faq",
+   "lead_form",
+   "footer"
+  ],
+  "sections": {
+   "problem": "h2 «Реклама съедает вечера?» и три боли карточками — словами клиента",
+   "how": "3–4 шага с номером stat цветом link и тонкой линией между ними; рецепт svg-line-draw — линия-путь прорисовывается",
+   "capabilities": "сетка карточек 3×2: что умеет продукт, глагол + результат",
+   "numbers": "полоса band_cobalt: 3 цифры stat белым (counter-up) с подписью on_band_cobalt_muted",
+   "pricing": "1–3 тарифа карточками; цена stat, «в месяц», что входит списком; рекомендуемый — рамка 2px primary",
+   "reviews": "отзывы с именем, должностью и городом — только настоящие",
+   "faq": "5–7 вопросов: договор, где хранятся данные, как отключить, что если не подойдёт",
+   "lead_form": "над формой ornament_band; слева h2 и 3 пункта «что будет после заявки», справа форма"
+  },
+  "grid": "12 колонок, контейнер 1200px, зазор 24px; карточки 3 в ряд, 2 на 768–1023px, 1 на телефоне",
+  "mobile_notes": "До 767px: eyebrow, H1 40px, лид без буквицы (буквица — от 768px), кнопки во всю ширину столбиком, кадр 4:5 ниже текста; sovereign_strip — горизонтальная лента бейджей с маской на правом краю; ornament_band остаётся (он лёгкий); липкая кнопка по sticky-cta-mobile."
+ },
+ "lead_form": {
+  "fields": [
+   "name",
+   "phone_or_telegram",
+   "company"
+  ],
+  "consent_152fz": true,
+  "style": "Карточка surface с рамкой border и радиусом md на полосе surface_strong: поля «Имя», «Телефон или Telegram», «Компания (необязательно)» с рамкой border_strong; чекбокс 20px не отмечен заранее: «Согласен(на) на обработку персональных данных по 152-ФЗ» и ссылка «Политика обработки данных» цветом link; под кнопкой строка caption «Данные хранятся в России». Кнопка активна всегда: ошибки — видимым текстом 14px цветом error под полем.",
+  "success_state": "Карточка меняется на месте: галочка success в круге, h3 «Заявка у нас», строка «Свяжемся в течение рабочего дня — в Telegram или по телефону», button_secondary «Как проходит внедрение». Фокус на заголовке, aria-live=polite."
+ },
+ "motion_recipes": [
+  "svg-line-draw",
+  "fade-up-stagger",
+  "counter-up",
+  "accordion-smooth",
+  "sticky-cta-mobile",
+  "form-field-feedback"
+ ],
+ "motion_map": {
+  "levels": {
+   "none": "только функциональное: accordion-smooth, sticky-cta-mobile",
+   "subtle": "по умолчанию: весь motion_map",
+   "rich": "subtle + прорисовка орнамента над формой при появлении (svg-line-draw по контуру ромбов)"
+  },
+  "svg-line-draw": "подчёркивание одного слова в H1 и линия-путь между шагами how: --sld-color: var(--color-primary); --sld-width: 3px; --sld-dur: 900ms; в тёмной теме линия светится (filter: drop-shadow цветом glow). Не больше двух линий на экран",
+  "fade-up-stagger": "карточки capabilities, шаги how, отзывы: --reveal-dist: 14px; --reveal-dur: 520ms; --reveal-step: 80ms",
+  "counter-up": "три цифры на полосе numbers: досчитывают один раз, --cu-dur: 1200ms; цены в тарифах не анимировать — цена стоит сразу",
+  "accordion-smooth": "faq: строки с тонкой линией border сверху, вопрос Golos Text 600 19px, значок плюс цветом link",
+  "sticky-cta-mobile": "data-after=\"#hero-cta\", data-hide-on=\"#lead\"; кнопка primary с радиусом 8px",
+  "form-field-feedback": "поля radius 4px; ошибка без встряски",
+  "not_for_this_style": "gradient-drift и tilt-card — игривость спорит с уверенностью; marquee-logos — логотипы партнёров не едут, стоят сеткой; hero-word-rotator — заголовок стоит, как в книге"
+ },
+ "media": {
+  "hero": "Человек за работой в современном российском интерьере (офис, производство, мастерская, магазин) при естественном свете или интерфейс продукта на ноутбуке крупно; в тёмной теме — неоновое зелёное свечение за кадром. Кадр 4:5 справа от текста.",
+  "video_in_flow": "Беззвучная петля 6–10 с в разделе how (агент ведёт кампанию, приходит заявка в Telegram) с кнопкой паузы; ролик-знакомство со звуком — по кнопке в <dialog> с русскими субтитрами.",
+  "imagery": "Документальная съёмка людей и дел, узнаваемо российская среда без открыточных штампов; иллюстрации — тонкие линии 1.5px, орнамент только геометрический (ромб, крест-оберег, ёлочка). Народные росписи — как мотив цвета (кобальт гжели, киноварь и золото хохломы), а не копия чужого узора.",
+  "character": "Уместен реальный человек — основатель или специалист внедрения — одним лицом в how и в ролике; маскот не нужен.",
+  "audio": "Уместна: «Как это работает — 2 минуты голосом» кнопкой у раздела how, русский голос без акцента.",
+  "avoid": [
+   "флаги, гербы, гимн и их стилизации, в том числе полосы белый-синий-красный подряд (ч. 6 ст. 5 закона о рекламе)",
+   "религиозные символы и объекты культурного наследия как фон для продажи",
+   "матрёшки, балалайки, медведи и прочая открыточная клюква",
+   "вязь и «древнерусские» шрифты в тексте — только геометрический орнамент",
+   "военная и силовая символика",
+   "иностранные слова без русского эквивалента в интерфейсе (закон № 168-ФЗ)"
+  ],
+  "geometry": {
+   "hero_desktop": "4:5 справа, высота до 600px",
+   "hero_mobile": "4:5 во всю ширину под текстом",
+   "card": "16:10 интерфейс или 4:3 фото",
+   "portrait": "4:5",
+   "gallery": "3:2",
+   "logo_strip": "клиенты монохромно цветом text_muted, высота 24px, без флагов"
+  }
+ },
+ "states": {
+  "button": {
+   "hover": "primary: фон primary_hover; accent: accent_hover; контурная: фон surface_strong",
+   "focus_visible": "shadow.focus — кольцо 2px link с зазором цвета фона (в тёмной — зелёное)",
+   "active": "scale(0.98)",
+   "disabled": "фон surface_strong, текст text_muted; кнопку заявки не блокировать — ошибки объясняются текстом",
+   "loading": "подпись «Отправляем…», ширина кнопки зафиксирована, aria-busy=true"
+  },
+  "input": {
+   "focus": "рамка 2px link",
+   "error": "рамка 2px error, под полем текст 14px error, aria-invalid=true",
+   "disabled": "фон surface_strong, текст text_muted"
+  }
+ },
+ "signature": [
+  "Полоса-оберег из геометрических ромбов (киноварь на льне, золото на чернёном) между крупными разделами и над формой",
+  "Буквица киноварью или золотом в первом абзаце и заголовки PT Serif — книжная традиция в технологичной странице",
+  "Неоновый зелёный бренда на главной кнопке и свечение за ключевой цифрой; кобальт гжели — вторые кнопки и полоса цифр",
+  "Суверенная полоса фактов: данные в России, оплата по СБП, договор — бейджами, только правда"
+ ],
+ "voice": {
+  "tone": "уверенно, по-деловому и по-русски: «Подключим за сутки», «Данные — в России»",
+  "headline_formula": "результат для клиента + срок или цена: «Цифровой сотрудник ведёт рекламу за вас — от 14 990 ₽ в месяц»",
+  "rules": "без англицизмов там, где есть русское слово (лендинг → страница, лид → заявка, дедлайн → срок) — закон № 168-ФЗ; без пафоса и слов «великий», «державный»; факты вместо эпитетов; «ё» пишем"
+ },
+ "type_features": {
+  "prices": "font-variant-numeric: lining-nums tabular-nums; неразрывный пробел в «14 990 ₽» и перед ₽",
+  "quotes": "«ёлочки» снаружи, „лапки“ внутри; тире — длинное с пробелами",
+  "initial": "::first-letter у .lead--initial: float: left; font: 700 72px/0.9 'PT Serif'; color: var(--color-initial); margin: 6px 8px 0 0 — только от 768px"
+ },
+ "ab_axes": {
+  "vary": {
+   "hero_layout": [
+    "split",
+    "centered_band"
+   ],
+   "cta_color_role": [
+    "primary",
+    "accent"
+   ],
+   "headline_scale": [
+    "xl",
+    "l"
+   ],
+   "motion_level": [
+    "none",
+    "subtle",
+    "rich"
+   ],
+   "social_proof_position": [
+    "under_hero",
+    "before_form"
+   ],
+   "sovereign_strip": [
+    "under_hero",
+    "before_form"
+   ]
+  },
+  "fixed": [
+   "palette",
+   "fonts",
+   "ornament_band",
+   "initial",
+   "radius"
+  ],
+  "default": {
+   "hero_layout": "split",
+   "cta_color_role": "primary",
+   "headline_scale": "xl",
+   "motion_level": "subtle",
+   "social_proof_position": "under_hero",
+   "sovereign_strip": "under_hero"
+  },
+  "legend": {
+   "hero_layout": "split — текст слева, кадр справа; centered_band — чернёная полоса с заголовком по центру и фактами в строку",
+   "cta_color_role": "primary — неоновый зелёный; accent — кобальт",
+   "sovereign_strip": "under_hero — факты доверия сразу под первым экраном; before_form — перед заявкой"
+  },
+  "notes": "Вариант А — ab_axes.default; вариант Б меняет ровно одну ось, остальное как в А. Для B2B и отечественного софта первой проверять sovereign_strip (доверие до или у формы), для потребительских продуктов — оффер заголовка при неизменном стиле."
+ },
+ "do": [
+  "Ставить неоновый зелёный заливкой главной кнопки под тёмный текст; кобальт — вторые действия и полоса цифр.",
+  "Разделять крупные разделы полосой-оберегом из геометрических ромбов — не больше двух на страницу.",
+  "Писать по-русски: русские слова вместо англицизмов в интерфейсе и оффере (закон № 168-ФЗ), «ёлочки», длинное тире.",
+  "Показывать в полосе доверия только проверяемые факты: где хранятся данные, как платить, с кем договор.",
+  "Одна буквица на страницу — в первом абзаце лида, от 768px.",
+  "Форма — с согласием по 152-ФЗ без предотметки и ссылкой на политику; рекламу маркировать erid по закону о рекламе.",
+  "В совпадающей нише (зелёные финтех-бренды) сдвигать основной цвет к кобальту (cta_color_role=accent) — 135-ФЗ ст. 14.6."
+ ],
+ "dont": [
+  "Не использовать флаги, гербы, гимн и их стилизации, полосы белый-синий-красный подряд — это запрещено в рекламе (ч. 6 ст. 5 № 38-ФЗ).",
+  "Не ставить религиозные символы и объекты культурного наследия фоном для продажи.",
+  "Не набирать неоновым зелёным текст и цены на светлом фоне — только заливки.",
+  "Не превращать стиль в «клюкву»: без матрёшек, медведей, вязи и псевдодревнерусских шрифтов.",
+  "Не писать пафосом («великая держава», «исконно») — уверенность в фактах.",
+  "Не прятать согласие на обработку данных и не блокировать кнопку заявки без объяснения."
+ ],
+ "prompt_snippet": "Build a confident Russian-rooted tech lead landing. Light theme: linen background #f5f1e8, surface #fffdf8, ink text #11161f, muted #4f5663; dark theme: blackened #0b0e13, surface #141922, text #f3efe4. Brand neon green #22c55e (dark #39e27a) only as primary button fill with near-black text; Gzhel cobalt #1e3fa8 for secondary buttons and a full-width numbers band; vermilion #b3261e (gold #e0b24a in dark) for a drop initial and a geometric rhombus ornament band used at most twice. Self-hosted PT Serif 700 for headlines 64/40px and Golos Text 400–700 for body 17px. Split hero with fact eyebrow, two 8px-radius buttons and a 4:5 photo with a soft green glow in dark mode; a 'sovereign facts' badge strip (data stored in Russia, SBP payments, contract) with true facts only. Russian-first copy, unchecked 152-FZ consent. Never use flags, coats of arms, tricolour stripes, religious symbols or folk clichés.",
+ "source": {
+  "inspired_by": "собственная разработка Вайб-Маркетолога",
+  "notes": "Бренд: неоновая зелёная волна платформы (цвет, не знак — логотип в кит не входит). Народные мотивы взяты цветом и геометрией: кобальт гжели, киноварь и золото хохломы, ромб-оберег вышивки — без копирования росписей. Шрифты: PT Serif («Общедоступные шрифты РФ», ParaType, OFL-1.1) и Golos Text (OFL-1.1). Правовые ограничения: ч. 6 ст. 5 закона № 38-ФЗ «О рекламе» (госсимволы), закон № 168-ФЗ о защите русского языка (с 1 марта 2026), 152-ФЗ (согласие), маркировка рекламы erid."
+ }
+}

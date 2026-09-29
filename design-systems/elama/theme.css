@@ -1,0 +1,217 @@
+/* eLama — Vibe Landing Kit 1.0.0
+ * Эстетика в духе eLama по открытым материалам сайта elama.ru. Вайб-Маркетолог — партнёр eLama, но запись не является официальным фирменным руководством; товарный знак eLama принадлежит правообладателю. Логотип, маскот и фирменные шрифты (Navigo, Coolvetica) не используются.
+ * Шрифты уже подключены ниже (@font-face) с lk.vibemarketolog.ru — работают на лендинге из любого чата
+ * без файлов. На своём хостинге можно раздать свои копии (не с внешнего CDN):
+ *   Onest — npm i @fontsource-variable/onest (или @fontsource/onest), OFL; заменяет Coolvetica (проприетарный)
+ *   Mulish — npm i @fontsource-variable/mulish (или @fontsource/mulish), OFL; заменяет Navigo (проприетарный)
+ */
+@font-face{font-family:'Onest';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Onest';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/cyrillic-ext-700-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Onest';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Onest';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Onest';font-style:normal;font-weight:800;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Onest';font-style:normal;font-weight:800;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/cyrillic-ext-800-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Onest';font-style:normal;font-weight:800;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Onest';font-style:normal;font-weight:800;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/onest/latin-ext-800-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-ext-400-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-ext-500-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-ext-600-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/cyrillic-ext-700-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mulish';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/mulish/latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root {
+  --color-background: #ffffff;
+  --color-surface: #f5f7ff;
+  --color-text: #292e3d;
+  --color-text-muted: #525c7a;
+  --color-border: #e0e3eb;
+  --color-primary: #3a64f8;
+  --color-on-primary: #ffffff;
+  --color-accent: #ffd850;
+  --color-on-accent: #292e3d;
+  --color-link: #2b50d9;
+  --color-success: #037a32;
+  --color-error: #c42430;
+  --color-primary-hover: #2f55e0;
+  --color-accent-hover: #ffcf2e;
+  --color-surface-tint: #ebeffe;
+  --color-border-strong: #858fad;
+  --color-sticker: #ffd850;
+  --color-on-sticker: #292e3d;
+  --color-marker: #ffd850;
+  --color-band-navy: #1d2654;
+  --color-on-band-navy: #ffffff;
+  --color-on-band-navy-muted: #c9d3fb;
+  --color-tab-track: #ebeffe;
+  --color-primary-alt: #6a3fd6;
+  --color-on-primary-alt: #ffffff;
+  --color-focus: #2b50d9;
+  --font-display: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --display-size: 64px;
+  --display-weight: 800;
+  --display-size-desktop: 64px;
+  --display-size-mobile: 38px;
+  --display-line-height: 1.02;
+  --display-letter-spacing: -0.03em;
+  --font-h2: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --h2-size: 44px;
+  --h2-weight: 800;
+  --h2-size-desktop: 44px;
+  --h2-size-mobile: 30px;
+  --h2-line-height: 1.08;
+  --h2-letter-spacing: -0.025em;
+  --font-h3: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --h3-size: 24px;
+  --h3-weight: 700;
+  --h3-size-desktop: 24px;
+  --h3-size-mobile: 21px;
+  --h3-line-height: 1.2;
+  --h3-letter-spacing: -0.01em;
+  --font-lead: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --lead-size: 19px;
+  --lead-weight: 400;
+  --lead-size-desktop: 19px;
+  --lead-size-mobile: 17px;
+  --lead-line-height: 1.55;
+  --lead-letter-spacing: 0;
+  --font-body: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --body-size: 17px;
+  --body-weight: 400;
+  --body-size-desktop: 17px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0;
+  --font-sticker: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --sticker-size: 16px;
+  --sticker-weight: 700;
+  --sticker-size-desktop: 16px;
+  --sticker-size-mobile: 14px;
+  --sticker-line-height: 1.1;
+  --sticker-letter-spacing: 0;
+  --font-stat: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --stat-size: 48px;
+  --stat-weight: 800;
+  --stat-size-desktop: 48px;
+  --stat-size-mobile: 36px;
+  --stat-line-height: 1;
+  --stat-letter-spacing: -0.02em;
+  --font-caption: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 500;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.45;
+  --caption-letter-spacing: 0;
+  --font-button: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --button-size: 16px;
+  --button-weight: 600;
+  --button-size-desktop: 16px;
+  --button-size-mobile: 16px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --space-unit: 8;
+  --space-section-desktop: 112px;
+  --space-section-mobile: 64px;
+  --space-container: 1160px;
+  --space-gutter-mobile: 16px;
+  --space-card-padding: 32px;
+  --space-card-gap: 16px;
+  --shadow-card: 0 1px 2px rgba(41,46,61,0.04), 0 8px 24px -12px rgba(58,100,248,0.18);
+  --shadow-raised: 0 24px 48px -24px rgba(41,46,61,0.25);
+  --shadow-raised-dark: 0 24px 48px -20px rgba(0,0,0,0.7);
+  --shadow-focus: 0 0 0 2px #ffffff, 0 0 0 4px #2b50d9;
+  --shadow-focus-dark: 0 0 0 2px #121524, 0 0 0 4px #9db2ff;
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+  --motion-slow: 500ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.3,1.2,.4,1);
+  --gradient-hero: radial-gradient(70% 60% at 15% 10%, #fbf6fe 0%, rgba(251,246,254,0) 60%), radial-gradient(60% 60% at 90% 30%, #ebeffe 0%, rgba(235,239,254,0) 65%), #ffffff;
+  --gradient-hero-dark: radial-gradient(60% 60% at 90% 20%, rgba(107,139,250,0.18), rgba(107,139,250,0) 65%), #121524;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #121524;
+    --color-surface: #1c2033;
+    --color-text: #eef1fb;
+    --color-text-muted: #a9b1cc;
+    --color-border: #2b3150;
+    --color-primary: #6b8bfa;
+    --color-on-primary: #0b1026;
+    --color-accent: #ffd850;
+    --color-on-accent: #1d1d39;
+    --color-link: #9db2ff;
+    --color-success: #5fd88a;
+    --color-error: #ff7d86;
+    --color-primary-hover: #8aa3ff;
+    --color-accent-hover: #ffe27a;
+    --color-surface-tint: #232a45;
+    --color-border-strong: #7c86a8;
+    --color-sticker: #ffd850;
+    --color-on-sticker: #1d1d39;
+    --color-marker: #ffd850;
+    --color-band-navy: #0b0f22;
+    --color-on-band-navy: #ffffff;
+    --color-on-band-navy-muted: #c9d3fb;
+    --color-tab-track: #232a45;
+    --color-primary-alt: #a68bff;
+    --color-on-primary-alt: #0b1026;
+    --color-focus: #9db2ff;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #121524;
+  --color-surface: #1c2033;
+  --color-text: #eef1fb;
+  --color-text-muted: #a9b1cc;
+  --color-border: #2b3150;
+  --color-primary: #6b8bfa;
+  --color-on-primary: #0b1026;
+  --color-accent: #ffd850;
+  --color-on-accent: #1d1d39;
+  --color-link: #9db2ff;
+  --color-success: #5fd88a;
+  --color-error: #ff7d86;
+  --color-primary-hover: #8aa3ff;
+  --color-accent-hover: #ffe27a;
+  --color-surface-tint: #232a45;
+  --color-border-strong: #7c86a8;
+  --color-sticker: #ffd850;
+  --color-on-sticker: #1d1d39;
+  --color-marker: #ffd850;
+  --color-band-navy: #0b0f22;
+  --color-on-band-navy: #ffffff;
+  --color-on-band-navy-muted: #c9d3fb;
+  --color-tab-track: #232a45;
+  --color-primary-alt: #a68bff;
+  --color-on-primary-alt: #0b1026;
+  --color-focus: #9db2ff;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 38px;
+    --h2-size: 30px;
+    --h3-size: 21px;
+    --lead-size: 17px;
+    --body-size: 16px;
+    --sticker-size: 14px;
+    --stat-size: 36px;
+    --caption-size: 14px;
+    --button-size: 16px;
+  }
+}

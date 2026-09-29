@@ -1,0 +1,245 @@
+/* Вайб-Маркетолог · Русский код — Vibe Landing Kit 1.0.0
+ * Собственный стиль Вайб-Маркетолога. Без государственных символов: флаги, гербы и гимны в рекламе запрещены (ч. 6 ст. 5 закона № 38-ФЗ «О рекламе»).
+ * Шрифты уже подключены ниже (@font-face) с lk.vibemarketolog.ru — работают на лендинге из любого чата
+ * без файлов. На своём хостинге можно раздать свои копии (не с внешнего CDN):
+ *   PT Serif — npm i @fontsource-variable/pt-serif (или @fontsource/pt-serif), OFL; курсив — отдельным файлом (wght-italic.css / *-italic.css)
+ *   Golos Text — npm i @fontsource-variable/golos-text (или @fontsource/golos-text), OFL
+ */
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-400-italic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-ext-400-italic.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-ext-400-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-ext-400-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-700-italic.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-ext-700-italic.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-700-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'PT Serif';font-style:italic;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-ext-700-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/cyrillic-ext-700-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/pt-serif/latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-ext-400-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-ext-500-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-ext-600-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/cyrillic-ext-700-normal.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:700;font-display:swap;src:url(https://lk.vibemarketolog.ru/fonts/ds/golos-text/latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root {
+  --color-background: #f5f1e8;
+  --color-surface: #fffdf8;
+  --color-text: #11161f;
+  --color-text-muted: #4f5663;
+  --color-border: #ddd6c7;
+  --color-primary: #22c55e;
+  --color-on-primary: #06170d;
+  --color-accent: #1e3fa8;
+  --color-on-accent: #ffffff;
+  --color-link: #1a3a9c;
+  --color-success: #16753c;
+  --color-error: #b3261e;
+  --color-primary-hover: #1fb455;
+  --color-accent-hover: #18348c;
+  --color-surface-strong: #ece5d6;
+  --color-border-strong: #6b6558;
+  --color-initial: #b3261e;
+  --color-ornament: #b3261e;
+  --color-ornament-gold: #b8892b;
+  --color-band-cobalt: #1b2f78;
+  --color-on-band-cobalt: #ffffff;
+  --color-on-band-cobalt-muted: #d7def7;
+  --color-band-ink: #0d1117;
+  --color-on-band-ink: #f5f1e8;
+  --color-on-band-ink-muted: #c9c4b8;
+  --color-band-kinovar: #9e211a;
+  --color-on-band-kinovar: #ffffff;
+  --color-focus: #1a3a9c;
+  --color-glow: #22c55e;
+  --font-display: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --display-size: 64px;
+  --display-weight: 700;
+  --display-size-desktop: 64px;
+  --display-size-mobile: 40px;
+  --display-line-height: 1.06;
+  --display-letter-spacing: -0.01em;
+  --font-h2: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --h2-size: 44px;
+  --h2-weight: 700;
+  --h2-size-desktop: 44px;
+  --h2-size-mobile: 30px;
+  --h2-line-height: 1.1;
+  --h2-letter-spacing: -0.005em;
+  --font-h3: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h3-size: 22px;
+  --h3-weight: 600;
+  --h3-size-desktop: 22px;
+  --h3-size-mobile: 20px;
+  --h3-line-height: 1.25;
+  --h3-letter-spacing: 0;
+  --font-lead: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --lead-size: 20px;
+  --lead-weight: 400;
+  --lead-size-desktop: 20px;
+  --lead-size-mobile: 18px;
+  --lead-line-height: 1.55;
+  --lead-letter-spacing: 0;
+  --font-body: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body-size: 17px;
+  --body-weight: 400;
+  --body-size-desktop: 17px;
+  --body-size-mobile: 16px;
+  --body-line-height: 1.6;
+  --body-letter-spacing: 0;
+  --font-initial: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --initial-size: 72px;
+  --initial-weight: 700;
+  --initial-size-desktop: 72px;
+  --initial-size-mobile: 56px;
+  --initial-line-height: 0.9;
+  --initial-letter-spacing: 0;
+  --font-stat: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --stat-size: 56px;
+  --stat-weight: 700;
+  --stat-size-desktop: 56px;
+  --stat-size-mobile: 40px;
+  --stat-line-height: 1;
+  --stat-letter-spacing: -0.02em;
+  --font-eyebrow: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --eyebrow-size: 13px;
+  --eyebrow-weight: 600;
+  --eyebrow-size-desktop: 13px;
+  --eyebrow-size-mobile: 12px;
+  --eyebrow-line-height: 1.3;
+  --eyebrow-letter-spacing: 0.12em;
+  --eyebrow-text-transform: uppercase;
+  --font-caption: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --caption-size: 14px;
+  --caption-weight: 500;
+  --caption-size-desktop: 14px;
+  --caption-size-mobile: 14px;
+  --caption-line-height: 1.45;
+  --caption-letter-spacing: 0;
+  --font-button: 'Golos Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --button-size: 16px;
+  --button-weight: 600;
+  --button-size-desktop: 16px;
+  --button-size-mobile: 16px;
+  --button-line-height: 1.2;
+  --button-letter-spacing: 0.01em;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --space-unit: 8;
+  --space-section-desktop: 120px;
+  --space-section-mobile: 64px;
+  --space-container: 1200px;
+  --space-gutter-mobile: 16px;
+  --space-card-padding: 28px;
+  --space-card-gap: 24px;
+  --space-ornament-height: 14px;
+  --shadow-card: none;
+  --shadow-raised: 0 20px 48px -28px rgba(13,17,23,0.45);
+  --shadow-raised-dark: 0 20px 48px -20px rgba(0,0,0,0.8);
+  --shadow-glow: 0 0 0 1px rgba(57,226,122,0.35), 0 8px 32px -8px rgba(57,226,122,0.45);
+  --shadow-focus: 0 0 0 2px #f5f1e8, 0 0 0 4px #1a3a9c;
+  --shadow-focus-dark: 0 0 0 2px #0b0e13, 0 0 0 4px #39e27a;
+  --motion-fast: 160ms;
+  --motion-base: 280ms;
+  --motion-slow: 640ms;
+  --motion-ease-standard: cubic-bezier(.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(.16,1,.3,1);
+  --gradient-glow: radial-gradient(60% 80% at 20% 100%, rgba(34,197,94,0.22), rgba(34,197,94,0) 70%);
+  --gradient-glow-dark: radial-gradient(60% 80% at 20% 100%, rgba(57,226,122,0.28), rgba(57,226,122,0) 70%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-background: #0b0e13;
+    --color-surface: #141922;
+    --color-text: #f3efe4;
+    --color-text-muted: #aeb3bd;
+    --color-border: #262d38;
+    --color-primary: #39e27a;
+    --color-on-primary: #04120a;
+    --color-accent: #3355d6;
+    --color-on-accent: #ffffff;
+    --color-link: #9cb5ff;
+    --color-success: #5fe08f;
+    --color-error: #ff8a7a;
+    --color-primary-hover: #2fcf6c;
+    --color-accent-hover: #2946b8;
+    --color-surface-strong: #1c2330;
+    --color-border-strong: #8a93a3;
+    --color-initial: #e0b24a;
+    --color-ornament: #e0b24a;
+    --color-ornament-gold: #e0b24a;
+    --color-band-cobalt: #182a6b;
+    --color-on-band-cobalt: #ffffff;
+    --color-on-band-cobalt-muted: #c9d3f5;
+    --color-band-ink: #05070a;
+    --color-on-band-ink: #f3efe4;
+    --color-on-band-ink-muted: #b9b4a7;
+    --color-band-kinovar: #7a1a14;
+    --color-on-band-kinovar: #ffffff;
+    --color-focus: #39e27a;
+    --color-glow: #39e27a;
+  }
+}
+:root[data-theme="dark"] {
+  --color-background: #0b0e13;
+  --color-surface: #141922;
+  --color-text: #f3efe4;
+  --color-text-muted: #aeb3bd;
+  --color-border: #262d38;
+  --color-primary: #39e27a;
+  --color-on-primary: #04120a;
+  --color-accent: #3355d6;
+  --color-on-accent: #ffffff;
+  --color-link: #9cb5ff;
+  --color-success: #5fe08f;
+  --color-error: #ff8a7a;
+  --color-primary-hover: #2fcf6c;
+  --color-accent-hover: #2946b8;
+  --color-surface-strong: #1c2330;
+  --color-border-strong: #8a93a3;
+  --color-initial: #e0b24a;
+  --color-ornament: #e0b24a;
+  --color-ornament-gold: #e0b24a;
+  --color-band-cobalt: #182a6b;
+  --color-on-band-cobalt: #ffffff;
+  --color-on-band-cobalt-muted: #c9d3f5;
+  --color-band-ink: #05070a;
+  --color-on-band-ink: #f3efe4;
+  --color-on-band-ink-muted: #b9b4a7;
+  --color-band-kinovar: #7a1a14;
+  --color-on-band-kinovar: #ffffff;
+  --color-focus: #39e27a;
+  --color-glow: #39e27a;
+}
+@media (max-width: 640px) {
+  :root {
+    --display-size: 40px;
+    --h2-size: 30px;
+    --h3-size: 20px;
+    --lead-size: 18px;
+    --body-size: 16px;
+    --initial-size: 56px;
+    --stat-size: 40px;
+    --eyebrow-size: 12px;
+    --caption-size: 14px;
+    --button-size: 16px;
+  }
+}
