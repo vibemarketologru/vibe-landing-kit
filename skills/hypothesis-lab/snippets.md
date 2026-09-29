@@ -2,7 +2,9 @@
 
 Всё — ванильный JavaScript без зависимостей: работает в Node (`node ab.mjs`) и в консоли браузера.
 Проверено 24.09.2026: числа совпадают с таблицами `SKILL.md`, сплит — в Chromium (40 новых
-посетителей, закрепление кукой после перезагрузки, `?v=b`, бот видит A без куки).
+посетителей, закрепление кукой после перезагрузки, `?v=b`, бот видит A без куки). 29.09.2026: `?v=` стал
+предпросмотром (не назначает и не считается), рекламные связки — `?ad=a` / `?ad=b` отдельным замером — так же, как на
+сервере Вайб-Маркетолога.
 
 ## 1. Калькулятор: выборка, z-тест, интервал, проверка сплита, бюджет
 
@@ -76,19 +78,24 @@ SRM z = 0.17 | бюджет 5→7 % при клике 35 ₽: 154490 ₽
   var TEST = 'ab_offer_1';          // своё имя на каждый тест
   var YM_ID = 12345678;             // номер счётчика Метрики
   var DAYS = 30;
-  var v = null;
+  var v = null, mode = 'test';
   try {
-    var m = document.cookie.match('(?:^|; )' + TEST + '=([ab])');
-    var forced = (new URLSearchParams(location.search).get('v') || '').toLowerCase();
+    var q = new URLSearchParams(location.search);
+    var m = document.cookie.match('(?:^|; )' + TEST + '=(d?)([ab])');
+    var preview = (q.get('v') || '').toLowerCase();   // ?v=a|b — ПРЕДПРОСМОТР: не назначает и не считается
+    var ad = (q.get('ad') || '').toLowerCase();       // ?ad=a|b — рекламная связка «объявление A → страница A»
     var bot = /bot|crawl|spider|slurp|yandex|google|bing|headless|lighthouse|telegrambot|vkshare|whatsapp/i.test(navigator.userAgent);
-    if (forced === 'a' || forced === 'b') v = forced;          // ?v=a / ?v=b — для проверки и для ссылок из объявлений
-    else if (m) v = m[1];                                        // вернувшийся посетитель видит свой вариант
+    if (preview === 'a' || preview === 'b') { v = preview; mode = 'preview'; }
+    else if (ad === 'a' || ad === 'b') { v = ad; mode = 'bundle'; }
+    else if (m) { v = m[2]; mode = m[1] ? 'bundle' : 'test'; }   // вернувшийся посетитель видит свой вариант
     else v = bot ? 'a' : (Math.random() < 0.5 ? 'a' : 'b');      // роботы и превью мессенджеров — всегда A
-    if (!bot) document.cookie = TEST + '=' + v + '; max-age=' + DAYS * 86400 + '; path=/; SameSite=Lax';
+    if (!bot && mode !== 'preview') document.cookie = TEST + '=' + (mode === 'bundle' ? 'd' : '') + v + '; max-age=' + DAYS * 86400 + '; path=/; SameSite=Lax';
   } catch (e) { v = 'a'; }
   document.documentElement.setAttribute('data-ab', v);
-  window.AB = { test: TEST, variant: v, ym: YM_ID };
-  if (typeof ym === 'function') { var p = {}; p[TEST] = v; ym(YM_ID, 'params', p); }   // параметр визита
+  window.AB = { test: TEST, variant: v, mode: mode, ym: YM_ID };
+  // Параметр визита: в отчёте чистого теста берите только mode = test; bundle — отдельный замер
+  // рекламных связок, preview — ваши собственные проверки, их из выборки исключают.
+  if (typeof ym === 'function') { var p = {}; p[TEST] = v; p[TEST + '_mode'] = mode; ym(YM_ID, 'params', p); }
 })();
 </script>
 <style>
@@ -115,7 +122,7 @@ SRM z = 0.17 | бюджет 5→7 % при клике 35 ₽: 154490 ₽
 <script>
   document.querySelectorAll('input[name="ab_variant"]').forEach(function (i) { i.value = AB.variant; });
   // вызвать ПОСЛЕ ответа сервера «заявка принята», а не по клику на кнопку
-  function onLeadSent() { var p = {}; p[AB.test] = AB.variant; ym(AB.ym, 'reachGoal', 'lead', p); }
+  function onLeadSent() { if (AB.mode === 'preview') return; var p = {}; p[AB.test] = AB.variant; p[AB.test + '_mode'] = AB.mode; ym(AB.ym, 'reachGoal', 'lead', p); }
 </script>
 ```
 

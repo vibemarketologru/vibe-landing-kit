@@ -191,7 +191,8 @@ flowchart LR
 | Проверка речи в ролике и петля видео на сервере | `media_check`, `video_loop` | бесплатно |
 | Запуск: адрес, заявки, A/B-тест, проверочная заявка. Паспорт не пройден — деньги не списываются | `landing_launch` | 990 ₽ |
 | Правки варианта A или Б | `landing_update` | бесплатно |
-| Итоги: визиты, заявки, конверсия, вердикт, сколько ещё нужно | `landing_status` | бесплатно |
+| Итоги: люди, заявки, конверсия; план теста закрепляется при запуске, победителя сервер объявляет только по плану; интервал разницы, проверка перекоса A/Б (SRM), история версий | `landing_status` | бесплатно |
+| Продажи по вариантам: заявки уходят лидами в Битрикс24 с меткой варианта, в статусе — сделки «Успешно» с суммой | `landing_update` c `crm=bitrix` | бесплатно |
 | Про-версия победителя: полный сайт по выигравшему варианту | `landing_pro` | до 4 500 ₽ |
 
 ## Библиотека навыков
@@ -229,18 +230,23 @@ flowchart LR
 
 ## Реклама в Яндекс Директ
 
-{intro('Когда страница запущена, агент готовит рекламу под варианты и сам отправляет её в кабинет Директа пользователя. Объявление обещает ровно то, что первый экран его варианта: A ведёт на <code>?v=a</code>, Б — на <code>?v=b</code>, две кампании с одинаковыми ключами и равным бюджетом. В Директ кампания уходит <b>черновиком</b>: показы начинаются, только когда человек сам отправит её на модерацию, — случайно потратить рекламный бюджет нельзя.', 'assets/sticker-direct.webp', 'Кот с мегафоном запускает объявления A и Б в цель')}
+{intro('Когда страница запущена, агент готовит рекламу и сам проводит её через кабинет Директа пользователя — от черновика до старта показов. Чистый тест страницы: нейтральные объявления на общий адрес, вариант назначает сервер. Рекламные связки «объявление A → страница A»: ссылки <code>?ad=a</code> и <code>?ad=b</code>, отдельный замер. Каждый шаг отдельный: черновик → модерация <b>с предохранителем</b> (дата начала уходит на 30 дней вперёд, одобрение показы не включает) → проверка из самого Директа и план запуска → «да» человека → старт с согласованной даты.', 'assets/sticker-direct.webp', 'Кот с мегафоном запускает объявления A и Б в цель')}
 
 | Шаг | Инструмент | Цена |
 |---|---|---|
 | Подготовить черновик: группы, ключевые фразы, объявления со своей ссылкой, минус-слова, быстрые ссылки, регион, бюджет. Лимиты Директа проверяются сразу, в Яндекс ещё ничего не уходит | `direct_import_campaign` | бесплатно |
 | Или собрать кампанию ИИ по адресу страницы | `direct_create_campaign` | 49 ₽ |
 | Отправить черновик в кабинет Директа | `direct_publish_campaign` | 99 ₽ |
-| Правка живой кампании: ставки, бюджет, ключи, минус-слова, текст объявления, запуск после паузы | `direct_set_bids`, `direct_set_budget`, `direct_add_keywords`, `direct_add_negatives`, `direct_update_ad`, `direct_resume_campaign` | 9 ₽ |
+| Отправить объявления на модерацию: дата начала уходит вперёд, показов не будет; можно сразу привязать счётчик Метрики | `direct_moderate` | бесплатно |
+| Проверка из самого Директа: стадия, ссылки отвечают, бюджет, счётчики, блокеры; план запуска | `direct_campaign_inspect`, `direct_launch_preflight` | бесплатно |
+| Включить показы по согласованному плану | `direct_launch` | 9 ₽ |
+| Цель заявки в Метрике без дублей (событие после записи заявки сервером) | `metrika_create_goal` | бесплатно |
+| Проверка подключения: права ключа, Директ, Метрика, Вордстат, Битрикс24 | `connection_health` | бесплатно |
+| Правка живой кампании: ставки (в выбранной группе), бюджет, ключи (в выбранную группу), минус-слова, текст объявления, запуск после паузы | `direct_set_bids`, `direct_set_budget`, `direct_add_keywords`, `direct_add_negatives`, `direct_update_ad`, `direct_resume_campaign` | 9 ₽ |
 | Пауза кампании или объявлений | `direct_pause_campaign`, `direct_pause_ads` | бесплатно |
 | Анализ, поисковые запросы, слив бюджета, прогноз, отчёт | `direct_analyze`, `direct_search_queries`, `direct_waste`, `direct_forecast`, `campaign_report` | 29–99 ₽ |
 
-Кабинет Директа подключается один раз в [кабинете Вайб-Маркетолога](https://lk.vibemarketolog.ru/agi) → «Подключения». Действие, которое у черновика не имеет смысла (запустить, бюджет, который Директ не удержал), отказывает без платы. Второй заголовок объявления Директ сейчас не сохраняет — главное агент пишет в заголовок и текст.
+Кабинет Директа подключается один раз в [кабинете Вайб-Маркетолога](https://lk.vibemarketolog.ru/agi) → «Подключения». Действие, которое у черновика не имеет смысла, отказывает без платы. При ручных ставках Директ считает дневной бюджет недельным — в отдельный день расход может быть выше. Второй заголовок объявления Директ сейчас не сохраняет — главное агент пишет в заголовок и текст. Номера объявлений приходят строками: они длиннее безопасного целого JavaScript.
 
 ## Что внутри
 
@@ -309,7 +315,7 @@ flowchart LR
 | Запуск гипотезы: адрес, заявки, A/B-тест | 990 ₽ |
 | Про-версия победителя | до 4 500 ₽ |
 | Отчёт Метрики, анализ кампаний Директа | 19 ₽ / 29–99 ₽ |
-| Яндекс Директ: подготовить черновик кампании · отправить в Директ · правка живой кампании · пауза | бесплатно · 99 ₽ · 9 ₽ · бесплатно |
+| Яндекс Директ: черновик · отправить в Директ · модерация · проверка перед стартом · старт показов · правка живой кампании · пауза | бесплатно · 99 ₽ · бесплатно · бесплатно · 9 ₽ · 9 ₽ · бесплатно |
 
 Оплата — с рублёвого баланса, только за сделанное, без подписки. Перед каждым платным шагом агент называет цену; дневной лимит подключения по умолчанию 1 500 ₽ и меняется в кабинете. Типичный лендинг из галереи: медиа 60–600 ₽ и 990 ₽ за запуск.
 
@@ -384,7 +390,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Hypothesis launch
 
-`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free) → `landing_pro` (4,500 ₽, full site from the winning variant).
+`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
 
 ## Skills library
 
@@ -400,7 +406,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Yandex Direct ads
 
-Once the page is live, the agent prepares ads for each variant and pushes them into the user's Yandex Direct account: ads for A link to `?v=a`, ads for B to `?v=b`. `direct_import_campaign` (free) saves a draft from the agent's own structure and checks Direct limits; `direct_create_campaign` (49 ₽) builds one with AI from the page URL; `direct_publish_campaign` (99 ₽) sends it to Direct **as a draft** — ads start only after the user submits it for moderation. Edits to a live campaign (bids, budget, keywords, negatives, ad text, resume) cost 9 ₽, pausing is free.
+Once the page is live, the agent takes the campaign through the user's Yandex Direct account step by step. A clean page test sends neutral ads to the shared URL; ad-to-page bundles use `?ad=a` / `?ad=b` and are measured separately (`?v=` is preview only). `direct_import_campaign` (free) saves a draft and checks Direct limits; `direct_publish_campaign` (99 ₽) sends it **as a draft**; `direct_moderate` (free) submits ads for moderation with a safety lock — the start date moves 30 days ahead, so approval does not start ads; `direct_launch_preflight` (free) reads the campaign back from Direct and issues a launch plan; after the user says yes, `direct_launch` (9 ₽) sets the agreed start date. Edits to a live campaign cost 9 ₽, pausing is free, `connection_health` checks every connection for free.
 
 ## What is inside
 

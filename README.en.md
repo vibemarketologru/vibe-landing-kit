@@ -45,7 +45,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Hypothesis launch
 
-`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free) → `landing_pro` (4,500 ₽, full site from the winning variant).
+`landing_check` (free passport in a real browser) → `landing_launch` (990 ₽: URL, lead delivery to cabinet/Telegram/email, 50/50 A/B test with a significance verdict, a test lead) → `landing_update` (free) → `landing_status` (free: a test plan fixed at launch, the server declares a winner only once the plan is met, confidence interval, sample-ratio check, version history; sales per variant from Bitrix24 with `crm=bitrix`) → `landing_pro` (4,500 ₽, full site from the winning variant).
 
 ## Skills library
 
@@ -74,7 +74,7 @@ The `landing-media` skill: a composed still by **gpt-image-2.5** (plus a vertica
 
 ## Yandex Direct ads
 
-Once the page is live, the agent prepares ads for each variant and pushes them into the user's Yandex Direct account: ads for A link to `?v=a`, ads for B to `?v=b`. `direct_import_campaign` (free) saves a draft from the agent's own structure and checks Direct limits; `direct_create_campaign` (49 ₽) builds one with AI from the page URL; `direct_publish_campaign` (99 ₽) sends it to Direct **as a draft** — ads start only after the user submits it for moderation. Edits to a live campaign (bids, budget, keywords, negatives, ad text, resume) cost 9 ₽, pausing is free.
+Once the page is live, the agent takes the campaign through the user's Yandex Direct account step by step. A clean page test sends neutral ads to the shared URL; ad-to-page bundles use `?ad=a` / `?ad=b` and are measured separately (`?v=` is preview only). `direct_import_campaign` (free) saves a draft and checks Direct limits; `direct_publish_campaign` (99 ₽) sends it **as a draft**; `direct_moderate` (free) submits ads for moderation with a safety lock — the start date moves 30 days ahead, so approval does not start ads; `direct_launch_preflight` (free) reads the campaign back from Direct and issues a launch plan; after the user says yes, `direct_launch` (9 ₽) sets the agreed start date. Edits to a live campaign cost 9 ₽, pausing is free, `connection_health` checks every connection for free.
 
 ## What is inside
 
