@@ -320,7 +320,7 @@ flowchart LR
 - `node tools/check.mjs .` — проверка каталога: контраст WCAG в обеих темах, кириллица и лицензия шрифтов через Fontsource, reduced-motion и свойства анимаций, блок `media`, согласованность ссылок.
 - `node tools/passport.mjs index.html b.html` — паспорт лендинга у вас на компьютере: те же блокирующие проверки, что у `landing_check`, плюс мобильные (Playwright, код выхода 1 — есть блокирующие).
 - `python3 tools/build-readme.py` — этот README из `catalog.json` и `showcase.json`.
-- Схема записи — [SCHEMA.md](SCHEMA.md), правила для агентов — [AGENTS.md](AGENTS.md), [llms.txt](llms.txt).
+- Схема записи — [SCHEMA.md](SCHEMA.md), правила для агентов — [AGENTS.md](AGENTS.md), [llms.txt](llms.txt), установка сервера агентом (Cline, Windsurf) — [llms-install.md](llms-install.md).
 
 ## Лицензии и товарные знаки
 
